@@ -1,0 +1,18 @@
+services:
+
+  db:
+    container_name: container-pg
+    image: pgvector/pgvector:0.6.1-pg16
+    restart: always
+    hostname: localhost
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
