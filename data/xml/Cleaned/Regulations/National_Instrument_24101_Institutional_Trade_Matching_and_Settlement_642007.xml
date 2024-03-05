@@ -1,0 +1,2638 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This information is licensed under the Queen's Printer License of British Columbia found: www.bclaws.ca/standards/2014/QP-License_1.0.html. Please review the license terms carefully. --><reg:regulation xmlns:reg="http://www.gov.bc.ca/2013/legislation/regulation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:fun="http://www.bclaws.ca/xslt/functions" xmlns:act="http://www.gov.bc.ca/2013/legislation/act" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xsi:schemaLocation="http://www.gov.bc.ca/2013/legislation/regulation  http://standards.qp.gov.bc.ca/standards/2013/regulation_1.0.xsd" id="64_2007">
+  <reg:amend effective="2007-04-01" regnum="64/2007" added="2007-05-01"/>
+  <reg:amend effective="2009-09-28" regnum="226/2009" added="2009-10-20"/>
+  <reg:amend effective="2010-07-01" regnum="222/2010" added="2010-09-21"/>
+  <reg:amend effective="2014-09-22" regnum="176/2014" bullId="2014bull33" added="2014-11-19"/>
+  <reg:amend effective="2015-01-11" regnum="238/2014" bullId="2014bull43" added="2015-03-13"/>
+  <reg:amend effective="2017-09-05" regnum="167/2014" bullId="2017bull23" hasGreenSheet="no" added="2017-10-30"/>
+  <reg:regnum>64/2007</reg:regnum>
+  <reg:oic>British Columbia Securities Commission</reg:oic>
+  <reg:deposited>March 15, 2007</reg:deposited>
+  <reg:effective>October 1, 2007,<in:br/>sections 3.2 and 3.4 and Parts 4 and 6 only;<in:br/>
+                 remainder effective April 1, 2007</reg:effective>
+  <reg:acttitle>Securities Act</reg:acttitle>
+  <reg:title>National Instrument 24-101<in:br/><in:em> Institutional Trade Matching and Settlement</in:em></reg:title>
+  <reg:amsincluded>[includes amendments up to B.C. Reg. 167/2017, September 5, 2017]</reg:amsincluded>
+  <reg:regpitid>64_2007_pit</reg:regpitid>
+  <reg:content>
+    <bcl:part id="d2e45">
+      <bcl:num>1</bcl:num>
+      <bcl:text>Definitions and Interpretation</bcl:text>
+      <bcl:section id="d2e54">
+        <bcl:marginalnote>Definitions</bcl:marginalnote>
+        <bcl:num>1.1</bcl:num>
+        <bcl:text>In this Instrument,</bcl:text>
+        <bcl:definition id="d2e65">
+          <bcl:text>
+            <in:term>clearing agency</in:term> means a recognized clearing agency that operates as a securities settlement system as defined in section 1.1 of National Instrument 24-102 <in:em>Clearing Agency Requirements</in:em>;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e105">
+          <bcl:text>
+            <in:term>custodian</in:term> means a person or company that holds securities
+            for the benefit of another under a custodial agreement or other custodial
+            arrangement;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e114">
+          <bcl:text>
+            <in:term>DAP/RAP trade</in:term> means a trade in a security</bcl:text>
+          <bcl:paragraph id="d2e123">
+            <bcl:num>a</bcl:num>
+            <bcl:text>executed for a client trading account that permits settlement on a delivery
+              against payment or receipt against payment basis through the facilities of a clearing
+              agency, and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e132">
+            <bcl:num>b</bcl:num>
+            <bcl:text>for which settlement is completed on behalf of the client by a custodian other than the dealer that executed the trade;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e142">
+          <bcl:text>
+            <in:term>institutional investor</in:term> means a client of a dealer that has
+            been granted DAP/RAP trading privileges by the dealer;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e151">
+          <bcl:text>
+            <in:term>marketplace</in:term> has the same meaning as in National Instrument
+            21-101 <in:em>Marketplace Operation</in:em>;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e163">
+          <bcl:text>
+            <in:term>matching service utility</in:term> means a person or company that
+            provides centralized facilities for matching, but does not include a clearing
+            agency;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e181">
+          <bcl:text>
+            <in:term>registered firm</in:term> means a person or company registered under
+            securities legislation as a dealer or adviser;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e190">
+          <bcl:text>
+            <in:term>trade-matching agreement</in:term> means, for trades executed with or
+            on behalf of an institutional investor, a written agreement entered into among
+            trade-matching parties setting out the roles and responsibilities of the trade-matching
+            parties in matching those trades and including, without limitation, a term by which the
+            trade-matching parties agree to establish, maintain and enforce policies and procedures
+            designed to achieve matching as soon as practical after a trade is executed;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e200">
+          <bcl:text>
+            <in:term>trade-matching party</in:term> means, for a trade executed with or on
+            behalf of an institutional investor,</bcl:text>
+          <bcl:paragraph id="d2e209">
+            <bcl:num>a</bcl:num>
+            <bcl:text>a registered adviser acting for the institutional investor in processing the
+              trade,</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e218">
+            <bcl:num>b</bcl:num>
+            <bcl:text>if a registered adviser is not acting for the institutional investor in
+              processing the trade, the institutional investor unless the institutional investor
+              is</bcl:text>
+            <bcl:subparagraph id="d2e227">
+              <bcl:num>i</bcl:num>
+              <bcl:text>an individual, or</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e236">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>a person or company with total securities under administration or management
+                not exceeding $10 million,</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e245">
+            <bcl:num>c</bcl:num>
+            <bcl:text>a registered dealer executing or clearing the trade, or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e255">
+            <bcl:num>d</bcl:num>
+            <bcl:text>a custodian of the institutional investor settling the trade;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e264">
+          <bcl:text>
+            <in:term>trade-matching statement</in:term> means, for trades executed with or
+            on behalf of an institutional investor, a signed written statement of a trade-matching
+            party confirming that it has established, maintains and enforces policies and procedures
+            designed to achieve matching as soon as practical after a trade is executed;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e273">
+          <bcl:text>
+            <in:term>T</in:term> means the day on which a trade is executed;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e282">
+          <bcl:text>
+            <in:term>T+1</in:term> means the next business day following T;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e291">
+          <bcl:text>
+            <in:term>T+2</in:term> means the second business day following T.</bcl:text>
+        </bcl:definition>
+        <bcl:hnote>[am. B.C. Regs. 226/2009, Sch. G, s. 1; 222/2010, s. 1; 167/2017, s. 2.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e314">
+        <bcl:marginalnote>Interpretation — trade matching and Eastern Time</bcl:marginalnote>
+        <bcl:num>1.2</bcl:num>
+        <bcl:subsection id="d2e322">
+          <bcl:num>1</bcl:num>
+          <bcl:text>In this Instrument, matching is the process by which</bcl:text>
+          <bcl:paragraph id="d2e331">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the details and settlement instructions of an executed DAP/RAP trade are
+              reported, verified, confirmed and affirmed or otherwise agreed to among the
+              trade-matching parties, and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e340">
+            <bcl:num>b</bcl:num>
+            <bcl:text>unless the process is effected through the facilities of a clearing agency,
+              the matched details and settlement instructions are reported to a clearing
+              agency.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e350">
+          <bcl:num>2</bcl:num>
+          <bcl:text>For the purposes of this Instrument, in Qu<in:eacute/>bec, a clearing agency includes a clearing house and a settlement system within the meaning of the <in:doc>Securities Act</in:doc> (Qu<in:eacute/>bec).</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 3.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e378">
+      <bcl:num>2</bcl:num>
+      <bcl:text>Application</bcl:text>
+      <bcl:section id="d2e387">
+        <bcl:marginalnote>Application</bcl:marginalnote>
+        <bcl:num>2.1</bcl:num>
+        <bcl:text>This Instrument does not apply to</bcl:text>
+        <bcl:paragraph id="d2e398">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a trade in a security of an issuer that has not been previously issued or for
+            which a prospectus is required to be sent or delivered to the purchaser under securities
+            legislation,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e407">
+          <bcl:num>b</bcl:num>
+          <bcl:text>a trade in a security to the issuer of the security,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e417">
+          <bcl:num>c</bcl:num>
+          <bcl:text>a trade made in connection with a take-over bid, issuer bid, amalgamation,
+            merger, reorganization, arrangement or similar transaction,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e426">
+          <bcl:num>d</bcl:num>
+          <bcl:text>a trade made in accordance with the terms of conversion, exchange or exercise of
+            a security previously issued by an issuer,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e435">
+          <bcl:num>e</bcl:num>
+          <bcl:text>a trade that is a securities lending, repurchase, reverse repurchase or similar
+            financing transaction,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e444">
+          <bcl:num>f</bcl:num>
+          <bcl:text>a purchase governed by Part 9, or a redemption governed by Part 10, of National Instrument 81-102 <in:em>Investment Funds</in:em>,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e456">
+          <bcl:num>g</bcl:num>
+          <bcl:text>a trade to be settled outside Canada,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e465">
+          <bcl:num>h</bcl:num>
+          <bcl:text>a trade in an option, futures contract or similar derivative, or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e475">
+          <bcl:num>i</bcl:num>
+          <bcl:text>a trade in a negotiable promissory note, commercial paper or similar short-term
+            debt obligation that, in the normal course, would settle in Canada on T.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[am. B.C. Regs. 222/2010, s. 2; 176/2014, Sch. F, s. 1 (b); 167/2017, s. 4.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e489">
+      <bcl:num>3</bcl:num>
+      <bcl:text>Trade Matching Requirements</bcl:text>
+      <bcl:section id="d2e498">
+        <bcl:marginalnote>Matching deadlines for registered dealer</bcl:marginalnote>
+        <bcl:num>3.1</bcl:num>
+        <bcl:subsection id="d2e506">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A registered dealer must not execute a DAP/RAP trade with or on behalf of an institutional investor unless the dealer has established, maintains and enforces policies and procedures designed to achieve matching as soon as practical after such a trade is executed and in any event no later than 12 p.m. (noon) Eastern Time on T+1.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e515">
+          <bcl:num>2</bcl:num>
+          <bcl:text>Repealed. [B.C. Reg. 167/2017, s. 5 (b).]</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Regs. 222/2010, s. 3; 167/2017, s. 5.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e528">
+        <bcl:marginalnote>Pre-DAP/RAP trade execution documentation requirement for
+          dealers</bcl:marginalnote>
+        <bcl:num>3.2</bcl:num>
+        <bcl:text>A registered dealer must not open an account to execute a DAP/RAP trade for an institutional investor or accept an order to execute a DAP/RAP trade for the account of an institutional investor unless its policies and procedures are designed to encourage each trade-matching party to</bcl:text>
+        <bcl:paragraph id="d2e539">
+          <bcl:num>a</bcl:num>
+          <bcl:text>enter into a trade-matching agreement with the dealer, or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e548">
+          <bcl:num>b</bcl:num>
+          <bcl:text>provide a trade-matching statement to the dealer.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 222/2010, s. 4; am. B.C. Reg. 167/2017, s. 6.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e562">
+        <bcl:marginalnote>Matching deadlines for registered adviser</bcl:marginalnote>
+        <bcl:num>3.3</bcl:num>
+        <bcl:subsection id="d2e570">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A registered adviser must not give an order to a dealer to execute a DAP/RAP trade on behalf of an institutional investor unless the adviser has established, maintains and enforces policies and procedures designed to achieve matching as soon as practical after such a trade is executed and in any event no later than 12 p.m. (noon) Eastern Time on T+1.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e579">
+          <bcl:num>2</bcl:num>
+          <bcl:text>Repealed. [B.C. Reg. 167/2017, s. 7 (b).]</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Regs. 222/2010, s. 5; 167/2017, s. 7.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e592">
+        <bcl:marginalnote>Pre-DAP/RAP trade execution documentation requirement for
+          advisers</bcl:marginalnote>
+        <bcl:num>3.4</bcl:num>
+        <bcl:text>A registered adviser must not open an account to execute a DAP/RAP trade for an
+          institutional investor or give an order to a dealer to execute a DAP/RAP trade for the
+          account of an institutional investor unless its policies and procedures are designed to
+          encourage each trade-matching party to</bcl:text>
+        <bcl:paragraph id="d2e603">
+          <bcl:num>a</bcl:num>
+          <bcl:text>enter into a trade-matching agreement with the adviser, or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e612">
+          <bcl:num>b</bcl:num>
+          <bcl:text>provide a trade-matching statement to the adviser.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 222/2010, s. 6; am. B.C. Reg. 167/2017, s. 8.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e626">
+      <bcl:num>4</bcl:num>
+      <bcl:text>Reporting by Registered Firms</bcl:text>
+      <bcl:section id="d2e636">
+        <bcl:marginalnote>Exception reporting requirement</bcl:marginalnote>
+        <bcl:num>4.1</bcl:num>
+        <bcl:text>A registered firm must deliver Form 24-101F1 to the securities regulatory authority no later than 45 days after the end of a calendar quarter if</bcl:text>
+        <bcl:paragraph id="d2e647">
+          <bcl:num>a</bcl:num>
+          <bcl:text>less than 90 per cent of the DAP/RAP trades executed by or for the registered
+            firm during the quarter matched within the time required in Part 3,
+            or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e656">
+          <bcl:num>b</bcl:num>
+          <bcl:text>the DAP/RAP trades executed by or for the registered firm during the quarter
+            that matched within the time required in Part 3 represent less than 90 per cent of the
+            aggregate value of the securities purchased and sold in those trades.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 222/2010, s. 7; am. B.C. Reg. 167/2017, s. 8.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e670">
+      <bcl:num>5</bcl:num>
+      <bcl:text>Reporting Requirements for Clearing Agencies</bcl:text>
+      <bcl:section id="d2e679">
+        <bcl:marginalnote>Requirements for clearing agencies</bcl:marginalnote>
+        <bcl:num>5.1</bcl:num>
+        <bcl:text>A clearing agency must deliver Form 24-101F2 to the securities regulatory authority no later than 30 days after the end of a calendar quarter.</bcl:text>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 9.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e690">
+      <bcl:num>6</bcl:num>
+      <bcl:text>Requirements for Matching Service Utilities</bcl:text>
+      <bcl:section id="d2e699">
+        <bcl:marginalnote>Initial information reporting</bcl:marginalnote>
+        <bcl:num>6.1</bcl:num>
+        <bcl:subsection id="d2e707">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A person or company must not carry on business as a matching service utility
+            unless</bcl:text>
+          <bcl:paragraph id="d2e716">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the person or company has delivered Form 24-101F3 to the securities regulatory
+              authority, and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e725">
+            <bcl:num>b</bcl:num>
+            <bcl:text>at least 90 days have passed since the person or company delivered Form
+              24-101F3.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e735">
+          <bcl:num>2</bcl:num>
+          <bcl:text>During the 90 day period referred to in subsection (1), if there is a
+            significant change to the information in the delivered Form 24-101F3, the person or
+            company must inform the securities regulatory authority in writing immediately of that
+            significant change by delivering an amendment to Form 24-101F3 in the manner set out in
+            Form 24-101F3.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 10.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e745">
+        <bcl:marginalnote>Anticipated change to operations</bcl:marginalnote>
+        <bcl:num>6.2</bcl:num>
+        <bcl:text>At least 45 days before implementing a significant change to any item set out in
+          Form 24-101F3, a matching service utility must deliver an amendment to the information in
+          the manner set out in Form 24-101F3.</bcl:text>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 10.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e758">
+        <bcl:marginalnote>Ceasing to carry on business as a matching service
+          utility</bcl:marginalnote>
+        <bcl:num>6.3</bcl:num>
+        <bcl:subsection id="d2e766">
+          <bcl:num>1</bcl:num>
+          <bcl:text>If a matching service utility intends to cease carrying on business as a
+            matching service utility, it must deliver a report on Form 24-101F4 to the securities
+            regulatory authority at least 30 days before ceasing to carry on that
+            business.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e775">
+          <bcl:num>2</bcl:num>
+          <bcl:text>If a matching service utility involuntarily ceases to carry on business as a
+            matching service utility, it must deliver a report on Form 24-101F4 as soon as
+            practical after it ceases to carry on that business.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 10.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e785">
+        <bcl:marginalnote>Ongoing information reporting and record keeping</bcl:marginalnote>
+        <bcl:num>6.4</bcl:num>
+        <bcl:subsection id="d2e793">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A matching service utility must deliver Form 24-101F5 to the securities
+            regulatory authority no later than 30 days after the end of a calendar
+            quarter.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e802">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A matching service utility must keep such books, records and other documents as
+            are reasonably necessary to properly record its business.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 10.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e812">
+        <bcl:marginalnote>System requirements</bcl:marginalnote>
+        <bcl:num>6.5</bcl:num>
+        <bcl:text>For all of its core systems supporting trade matching, a matching service utility
+          must</bcl:text>
+        <bcl:paragraph id="d2e823">
+          <bcl:num>a</bcl:num>
+          <bcl:text>consistent with prudent business practice, on a reasonably frequent basis, and,
+            in any event, at least annually,</bcl:text>
+          <bcl:subparagraph id="d2e832">
+            <bcl:num>i</bcl:num>
+            <bcl:text>make reasonable current and future capacity estimates,</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e842">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>conduct capacity stress tests of those systems to determine the ability of the
+              systems to process transactions in an accurate, timely and efficient
+              manner,</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e851">
+            <bcl:num>iii</bcl:num>
+            <bcl:text>implement reasonable procedures to review and keep current the testing
+              methodology of those systems,</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e860">
+            <bcl:num>iv</bcl:num>
+            <bcl:text>review the vulnerability of those systems and data centre computer operations
+              to internal and external threats, including breaches of security, physical hazards and
+              natural disasters, and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e869">
+            <bcl:num>v</bcl:num>
+            <bcl:text>maintain adequate contingency and business continuity plans;</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e878">
+          <bcl:num>b</bcl:num>
+          <bcl:text>annually cause to be performed an independent review and written report, in
+            accordance with generally accepted auditing standards, of the stated internal control
+            objectives of those systems; and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e887">
+          <bcl:num>c</bcl:num>
+          <bcl:text>promptly notify the securities regulatory authority of a material failure of
+            those systems.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 10.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e897">
+      <bcl:num>7</bcl:num>
+      <bcl:text>Trade Settlement</bcl:text>
+      <bcl:section id="d2e906">
+        <bcl:marginalnote>Trade settlement by registered dealer</bcl:marginalnote>
+        <bcl:num>7.1</bcl:num>
+        <bcl:subsection id="d2e914">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A registered dealer must not execute a trade unless the dealer has established, maintains and enforces policies and procedures designed to facilitate settlement of the trade on a date that is no later than the standard settlement date for the type of security traded prescribed by an SRO or the marketplace on which the trade would be executed.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e923">
+          <bcl:num>2</bcl:num>
+          <bcl:text>
+            Subsection (1) does not apply to a trade for which terms of settlement
+            have been expressly agreed to by the counterparties to the trade at or before the trade
+            was executed.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 10.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e933">
+      <bcl:num>8</bcl:num>
+      <bcl:text>Requirements of Self-regulatory Organizations and Others</bcl:text>
+      <bcl:section id="d2e943">
+        <bcl:marginalnote>Rule requirements for clearing agencies or matching service utilities</bcl:marginalnote>
+        <bcl:num>8.1</bcl:num>
+        <bcl:text>A clearing agency or matching service utility must have rules or other
+          instruments or procedures that are consistent with the requirements of Parts 3 and 7.</bcl:text>
+        <bcl:hnote>[am. B.C. Reg. 167/2017, s. 10.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e954">
+        <bcl:marginalnote>Application to members of a self-regulatory organization</bcl:marginalnote>
+        <bcl:num>8.2</bcl:num>
+        <bcl:text>A requirement of this Instrument does not apply to a member of an SRO if the
+          member complies with a rule or other instrument of the SRO that deals with the same
+          subject matter as the requirement and that has been approved, non-disapproved, or
+          non-objected to by the securities regulatory authority and published by the
+          SRO.</bcl:text>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e965">
+      <bcl:num>9</bcl:num>
+      <bcl:text>Exemption</bcl:text>
+      <bcl:section id="d2e974">
+        <bcl:marginalnote>Exemption</bcl:marginalnote>
+        <bcl:num>9.1</bcl:num>
+        <bcl:subsection id="d2e982">
+          <bcl:num>1</bcl:num>
+          <bcl:text>The regulator or the securities regulatory authority may grant an exemption from
+            this Instrument, in whole or in part, subject to such conditions or restrictions as may
+            be imposed in the exemption.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e991">
+          <bcl:num>2</bcl:num>
+          <bcl:text>Despite subsection (1), in Ontario, only the regulator may grant such an
+            exemption.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1000">
+          <bcl:num>3</bcl:num>
+          <bcl:text>Except in Ontario, an exemption referred to in subsection (1) is granted under
+            the statute referred to in Appendix B of National Instrument 14-101 Definitions opposite
+            the name of the local jurisdiction.</bcl:text>
+        </bcl:subsection>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e1010">
+      <bcl:num>10</bcl:num>
+      <bcl:text>Effective Dates and Transition</bcl:text>
+      <bcl:section id="d2e1019">
+        <bcl:marginalnote>Effective dates</bcl:marginalnote>
+        <bcl:num>10.1</bcl:num>
+        <bcl:subsection id="d2e1027">
+          <bcl:num>1</bcl:num>
+          <bcl:text>Except as provided in subsections (2) and (3), this Instrument comes into
+            force on April 1, 2007.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1036">
+          <bcl:num>2</bcl:num>
+          <bcl:text>The following come into force on October 1, 2007:</bcl:text>
+          <bcl:paragraph id="d2e1045">
+            <bcl:num>a</bcl:num>
+            <bcl:text>
+              section 3.2;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1055">
+            <bcl:num>b</bcl:num>
+            <bcl:text>
+              section 3.4;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1064">
+            <bcl:num>c</bcl:num>
+            <bcl:text>
+              Part
+                4;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1073">
+            <bcl:num>d</bcl:num>
+            <bcl:text>
+              Part
+                6.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1082">
+          <bcl:num>3</bcl:num>
+          <bcl:text>Despite paragraph (2) (d), Part 6 comes into force in Ontario on the later
+            of</bcl:text>
+          <bcl:paragraph id="d2e1091">
+            <bcl:num>a</bcl:num>
+            <bcl:text>October 1, 2007, and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1100">
+            <bcl:num>b</bcl:num>
+            <bcl:text>the day on which Rule 24-501 <in:em>Designation as Market Participant</in:em>
+              comes into force.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+      </bcl:section>
+      <bcl:section id="d2e1114">
+        <bcl:marginalnote>Transition</bcl:marginalnote>
+        <bcl:num>10.2</bcl:num>
+        <bcl:subsection id="d2e1122">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A reference to "the end of T" in subsections 3.1 (1) and 3.3 (1)
+            shall each be read as a reference to "12:00 p.m. (noon) on T+1" for trades executed
+            before July 1, 2008.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1131">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A reference to "the end of T+1" in subsections 3.1 (2) and 3.3 (2)
+            shall each be read as a reference to "12:00 p.m. (noon) on T+2" for trades executed
+            before July 1, 2008.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1140">
+          <bcl:num>3</bcl:num>
+          <bcl:text>A reference to "95 percent" in sections 4.1 (a) and (b) shall each be read as a
+            reference to:</bcl:text>
+          <bcl:paragraph id="d2e1150">
+            <bcl:num>a</bcl:num>
+            <bcl:text>"80 percent", for trades executed after September 30, 2007, but before January
+              1, 2008;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1159">
+            <bcl:num>b</bcl:num>
+            <bcl:text>"90 percent", for trades executed after December 31, 2007, but before July 1,
+              2008;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1168">
+            <bcl:num>c</bcl:num>
+            <bcl:text>"70 percent", for trades executed after June 30, 2008, but before January 1,
+              2009;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1177">
+            <bcl:num>d</bcl:num>
+            <bcl:text>"80 percent", for trades executed after December 31, 2008, but before July 1,
+              2009; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1186">
+            <bcl:num>e</bcl:num>
+            <bcl:text>"90 percent", for trades executed after June 30, 2009, but before January 1,
+              2010.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1195">
+          <bcl:num>4</bcl:num>
+          <bcl:text>A person or company need not comply with section 6.1 if that person or
+            company</bcl:text>
+          <bcl:paragraph id="d2e1205">
+            <bcl:num>a</bcl:num>
+            <bcl:text>is already carrying on business as a matching service utility on the date that
+              Part 6
+              comes into force, and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1214">
+            <bcl:num>b</bcl:num>
+            <bcl:text>delivers Form 24-101F3 to the securities regulatory authority within 45 days
+              after Part
+                6 comes into force.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+      </bcl:section>
+    </bcl:part>
+    <bcl:schedule id="d1e1264">
+      <bcl:scheduletitle>Form 24-101F1</bcl:scheduletitle>
+      <bcl:centertext>[en. B.C. Reg. 222/2010, s. 8; am. B.C. Regs. 238/2014, App. D, s. 4; 167/2017, ss. 11 to 13.]</bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Registered Firm</in:strong>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Exception Report of<in:br/> DAP/RAP Trade Reporting and Matching</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>
+        <in:strong>CALENDAR QUARTER PERIOD COVERED:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>From: ...................................... to:
+          ......................................</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>REGISTERED FIRM IDENTIFICATION AND CONTACT INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>1. Full name of registered firm (if sole proprietor, last, first and middle
+          name):</bcl:lefttext>
+      <bcl:lefttext>2. Name(s) under which business is conducted, if different from item
+          1:</bcl:lefttext>
+      <bcl:lefttext>3a. Address of registered firm's principal place of business:</bcl:lefttext>
+      <bcl:lefttext>3b. Indicate below the jurisdiction of your principal regulator within the
+        meaning of NI 31-103 <in:em>Registration Requirements, Exemptions and Ongoing Registrant Obligations</in:em>:</bcl:lefttext>
+      <bcl:indent1>[ ] Alberta</bcl:indent1>
+      <bcl:indent1>[ ] British Columbia</bcl:indent1>
+      <bcl:indent1>[ ] Manitoba</bcl:indent1>
+      <bcl:indent1>[ ] New Brunswick</bcl:indent1>
+      <bcl:indent1>[ ] Newfoundland &amp; Labrador</bcl:indent1>
+      <bcl:indent1>[ ] Northwest Territories</bcl:indent1>
+      <bcl:indent1>[ ] Nova Scotia</bcl:indent1>
+      <bcl:indent1>[ ] Nunavut</bcl:indent1>
+      <bcl:indent1>[ ] Ontario</bcl:indent1>
+      <bcl:indent1>[ ] Prince Edward Island</bcl:indent1>
+      <bcl:indent1>[ ] Québec</bcl:indent1>
+      <bcl:indent1>[ ] Saskatchewan</bcl:indent1>
+      <bcl:indent1>[ ] Yukon</bcl:indent1>
+      <bcl:lefttext>3c. Indicate below all jurisdictions in which you are
+          registered:</bcl:lefttext>
+      <bcl:indent1>[ ] Alberta</bcl:indent1>
+      <bcl:indent1>[ ] British Columbia</bcl:indent1>
+      <bcl:indent1>[ ] Manitoba</bcl:indent1>
+      <bcl:indent1>[ ] New Brunswick</bcl:indent1>
+      <bcl:indent1>[ ] Newfoundland &amp; Labrador</bcl:indent1>
+      <bcl:indent1>[ ] Northwest Territories</bcl:indent1>
+      <bcl:indent1>[ ] Nova Scotia</bcl:indent1>
+      <bcl:indent1>[ ] Nunavut</bcl:indent1>
+      <bcl:indent1>[ ] Ontario</bcl:indent1>
+      <bcl:indent1>[ ] Prince Edward Island</bcl:indent1>
+      <bcl:indent1>[ ] Québec</bcl:indent1>
+      <bcl:indent1>[ ] Saskatchewan</bcl:indent1>
+      <bcl:indent1>[ ] Yukon</bcl:indent1>
+      <bcl:lefttext>4. Mailing address, if different from business address:</bcl:lefttext>
+      <bcl:lefttext>5. Type of business: [ ] Dealer [ ] Adviser</bcl:lefttext>
+      <bcl:lefttext>6. Category of registration:</bcl:lefttext>
+      <bcl:lefttext>7. (a) Registered Firm NRD number:</bcl:lefttext>
+      <bcl:lefttext>   (b) If the registered firm is a participant of a clearing agency, the
+      registered firm's CUID number:</bcl:lefttext>
+      <bcl:lefttext>8. Contact employee name:</bcl:lefttext>
+      <bcl:lefttext>   Telephone number:</bcl:lefttext>
+      <bcl:lefttext>   Email address:</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>INSTRUCTIONS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Deliver this form for both equity and debt DAP/RAP trades together with Exhibits A, B and C pursuant to section 4.1 of the Instrument, covering the calendar quarter indicated above, within 45 days of the end of the calendar quarter if</bcl:lefttext>
+      <bcl:indent2>(a)	less than 90 per cent of the equity or debt DAP/RAP trades executed by or for you during the quarter matched within the time required in Part 3 of the Instrument, or</bcl:indent2>
+      <bcl:indent2>(b)	the equity or debt DAP/RAP trades executed by or for you during the quarter that matched within the time required in Part 3 of the Instrument represent less than 90 per cent of the aggregate value of the securities purchased and sold in those trades.</bcl:indent2>
+      <bcl:lefttext>Include DAP/RAP trades in an exchange-traded fund (ETF) security in the equity DAP/RAP trades statistics. Exhibit A(1) applies only to trades in equity and ETF securities. Exhibit A(2) applies only to trades in debt and other fixed-income securities.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>EXHIBITS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit A – DAP/RAP trade statistics for the quarter</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>If applicable, complete Table 1 or 2, or both, below for each calendar quarter. Deadline means noon Eastern time on T+1.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:em>(1) 	Equity DAP/RAP trades (includes ETF trades)</in:em>
+      </bcl:lefttext>
+      <oasis:table style="2" id="d1e1469">
+        <oasis:tgroup cols="12">
+          <oasis:colspec colnum="1" colname="c1"/>
+          <oasis:colspec colnum="2" colname="c2"/>
+          <oasis:colspec colnum="3" colname="c3"/>
+          <oasis:colspec colnum="4" colname="c4"/>
+          <oasis:colspec colnum="5" colname="c5"/>
+          <oasis:colspec colnum="6" colname="c6"/>
+          <oasis:colspec colnum="7" colname="c7"/>
+          <oasis:colspec colnum="8" colname="c8"/>
+          <oasis:colspec colnum="9" colname="c9"/>
+          <oasis:colspec colnum="10" colname="c10"/>
+          <oasis:colspec colnum="11" colname="c11"/>
+          <oasis:colspec colnum="12" colname="c12"/>
+          <oasis:thead>
+            <oasis:trow>
+              <oasis:entry colname="c1" colspan="4" align="center" valign="top">
+                <oasis:line>
+                  <in:em>
+                    <in:strong>Entered into the clearing<in:br/> agency by deadline<in:br/> <in:br/> (to be completed by dealers<in:br/> only)</in:strong>
+                  </in:em>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" colspan="8" align="center" valign="top">
+                <oasis:line>
+                  <in:em>
+                    <in:strong>Matched<in:br/> <in:br/> (to be completed by dealers and advisers)</in:strong>
+                  </in:em>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:thead>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong># of<in:br/> trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong>$ value of<in:br/> trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong># of trades<in:br/> matched</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong>$ value of<in:br/> trades<in:br/> matched</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong># of trades<in:br/> matched by<in:br/> deadline</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c10" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c11" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong>$ value of<in:br/> trades<in:br/> matched by<in:br/> deadline</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c12" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c10" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c11" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c12" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>
+        <in:em>(2) 	Debt DAP/RAP trades</in:em>
+      </bcl:lefttext>
+      <oasis:table style="2" id="d1e1730">
+        <oasis:tgroup cols="12">
+          <oasis:colspec colnum="1" colname="c1"/>
+          <oasis:colspec colnum="2" colname="c2"/>
+          <oasis:colspec colnum="3" colname="c3"/>
+          <oasis:colspec colnum="4" colname="c4"/>
+          <oasis:colspec colnum="5" colname="c5"/>
+          <oasis:colspec colnum="6" colname="c6"/>
+          <oasis:colspec colnum="7" colname="c7"/>
+          <oasis:colspec colnum="8" colname="c8"/>
+          <oasis:colspec colnum="9" colname="c9"/>
+          <oasis:colspec colnum="10" colname="c10"/>
+          <oasis:colspec colnum="11" colname="c11"/>
+          <oasis:colspec colnum="12" colname="c12"/>
+          <oasis:thead>
+            <oasis:trow>
+              <oasis:entry colname="c1" colspan="4" align="center" valign="top">
+                <oasis:line>
+                  <in:em>
+                    <in:strong>Entered into the clearing<in:br/> agency by deadline<in:br/> <in:br/> (to be completed by dealers<in:br/> only)</in:strong>
+                  </in:em>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" colspan="8" align="center" valign="top">
+                <oasis:line>
+                  <in:em>
+                    <in:strong>Matched<in:br/> <in:br/> (to be completed by dealers and advisers)</in:strong>
+                  </in:em>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:thead>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong># of<in:br/> trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong>$ value of<in:br/> trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong># of trades<in:br/> matched</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong>$ value of<in:br/> trades<in:br/> matched</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong># of trades<in:br/> matched by<in:br/> deadline</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c10" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c11" align="center" valign="center" width="80">
+                <oasis:line>
+                  <in:strong>$ value of<in:br/> trades<in:br/> matched by<in:br/> deadline</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c12" align="center" valign="center" width="30">
+                <oasis:line>
+                  <in:strong>%</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c10" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c11" align="center" valign="center" width="80">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c12" align="center" valign="center" width="30">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:centertext> </bcl:centertext>
+      <oasis:table style="2" id="d1e1989">
+        <oasis:tgroup cols="1">
+          <oasis:colspec colname="c1" colnum="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" width="750" align="left">
+                <oasis:line>
+                  <in:strong>Legend</in:strong>
+                  <in:br/> <in:br/>"# of Trades" is the total number of transactions in the calendar quarter;<in:br/> "$ Value of Trades" is the total value of the transactions (purchases and sales) in the calendar quarter.</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>
+        <in:strong>Exhibit B - Reasons for not meeting exception reporting thresholds</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Describe the circumstances or underlying causes that resulted in or contributed to the failure to achieve the percentage target for matched equity and/or debt DAP/RAP trades within the maximum time prescribed by Part 3 of the Instrument. Reasons given could be one or more matters within your control or due to another trade-matching party or service provider. If you have insufficient information to determine the percentages, the reason for this should be provided. See also Companion Policy 24-101 to the Instrument.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit C – Steps to address delays</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Describe what specific steps you are taking to resolve delays in the equity and/or debt DAP/RAP trade reporting and matching process in the future. Indicate when each of these steps is expected to be implemented. The steps being taken could be internally focused, such as implementing a new system or procedure, or externally focused, such as meeting with a trade-matching party to determine what action should be taken by that party. If you have insufficient information to determine the percentages, the steps being taken to obtain this information should be provided. See also Companion Policy 24-101 to the Instrument.</bcl:lefttext>
+      <bcl:centertext>
+        <in:strong>CERTIFICATE OF REGISTERED FIRM</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>The undersigned certifies that the information given in this report on behalf
+          of the registered firm is true and correct.</bcl:lefttext>
+      <bcl:lefttext>DATED at .................................................... this
+          ............. day of .................................., 20......</bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name of registered firm – type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name of director, officer or partner – type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Signature of director, officer or partner)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Official capacity – type or print)</in:em></bcl:lefttext>
+    </bcl:schedule>
+    <bcl:schedule id="d1e2086">
+      <bcl:scheduletitle>Form 24-101F2</bcl:scheduletitle>
+      <bcl:centertext>[am. B.C. Reg. 167/2017, ss. 14 and15.]</bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Clearing Agency</in:strong>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Quarterly Operations Report of<in:br/> Institutional Trade Reporting and
+            Matching</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>
+        <in:strong>CALENDAR QUARTER PERIOD COVERED:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>From: ...................................... to:
+          ......................................</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>IDENTIFICATION AND CONTACT INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>1. Full name of clearing agency:</bcl:lefttext>
+      <bcl:lefttext>2. Name(s) under which business is conducted, if different from item
+          1:</bcl:lefttext>
+      <bcl:lefttext>3. Address of clearing agency's principal place of business:</bcl:lefttext>
+      <bcl:lefttext>4. Mailing address, if different from business address:</bcl:lefttext>
+      <bcl:lefttext>5. Contact employee name:</bcl:lefttext>
+      <bcl:lefttext>   Telephone number:</bcl:lefttext>
+      <bcl:lefttext>   Email address:</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>INSTRUCTIONS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Deliver this form together with all exhibits pursuant to section 5.1 of the Instrument, covering the calendar quarter indicated above, within 30 days of the end of the calendar quarter.</bcl:lefttext>
+      <bcl:lefttext>Include client trades in an exchange-traded fund (ETF) security in the equity trades statistics.</bcl:lefttext>
+      <bcl:lefttext>Exhibits must be provided in an electronic file, in the following file format: "CSV" (Comma Separated Variable).</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>EXHIBITS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>1. DATA REPORTING</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit A – Aggregate matched trade statistics</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>For client trades, provide the information to complete Tables 1 and 2 below
+          for each month in the quarter. These two tables can be integrated into one report. Provide
+          separate aggregate information for trades that have been reported or entered into your
+          facilities as matched trades by a matching service utility.</bcl:lefttext>
+      <bcl:lefttext>Month/Year: ................................. (MMM/YYYY)</bcl:lefttext>
+      <bcl:lefttext>Table 1 — Equity trades:</bcl:lefttext>
+      <oasis:table style="2" id="d1e2187">
+        <oasis:tgroup cols="9">
+          <oasis:colspec colname="c1" colnum="1" align="center" border="1"/>
+          <oasis:colspec colname="c2" colnum="2" align="center" border="1"/>
+          <oasis:colspec colname="c3" colnum="3" align="center" border="1"/>
+          <oasis:colspec colname="c4" colnum="4" align="center" border="1"/>
+          <oasis:colspec colname="c5" colnum="5" align="center" border="1"/>
+          <oasis:colspec colname="c6" colnum="6" align="center" border="1"/>
+          <oasis:colspec colname="c7" colnum="7" align="center" border="1"/>
+          <oasis:colspec colname="c8" colnum="8" align="center" border="1"/>
+          <oasis:colspec colname="c9" colnum="9" align="center" border="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" rowspan="2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="2" nameend="5" colspan="4">
+                <oasis:line>
+                  <in:strong>Entered into clearing agency by dealers</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" namest="6" nameend="9" colspan="4">
+                <oasis:line>
+                  <in:strong>Matched in clearing agency by custodians</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>&gt;T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>Total</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>Table 2 — Debt trades:</bcl:lefttext>
+      <oasis:table style="2" id="d1e2612">
+        <oasis:tgroup cols="9">
+          <oasis:colspec colname="c1" colnum="1" align="center" border="1"/>
+          <oasis:colspec colname="c2" colnum="2" align="center" border="1"/>
+          <oasis:colspec colname="c3" colnum="3" align="center" border="1"/>
+          <oasis:colspec colname="c4" colnum="4" align="center" border="1"/>
+          <oasis:colspec colname="c5" colnum="5" align="center" border="1"/>
+          <oasis:colspec colname="c6" colnum="6" align="center" border="1"/>
+          <oasis:colspec colname="c7" colnum="7" align="center" border="1"/>
+          <oasis:colspec colname="c8" colnum="8" align="center" border="1"/>
+          <oasis:colspec colname="c9" colnum="9" align="center" border="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" rowspan="2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="2" nameend="5" colspan="4">
+                <oasis:line>
+                  <in:strong>Entered into clearing agency by dealers</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" namest="6" nameend="9" colspan="4">
+                <oasis:line>
+                  <in:strong>Matched in clearing agency by custodians</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>&gt;T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>Total</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d1e3034">
+        <oasis:tgroup cols="1">
+          <oasis:colspec colname="c1" colnum="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" width="860" align="left">
+                <oasis:line>
+                  <in:strong>Legend</in:strong>
+                  <in:br/>"# of Trades" is the total number of transactions in the month;<in:br/> "$ Value of Trades" is the total value of the transactions (purchases and sales) in the month.</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>
+        <in:strong>Exhibit B — Individual matched trade statistics</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Using the format below, for each participant of the clearing agency, provide
+          the percent of client trades during the quarter that have been entered and matched by the
+          participant within the time required in Part 3 of the Instrument. The percentages given should
+          relate to both the number of client trades that have been matched within the time and the
+          aggregate value of the securities purchased and sold in the client trades that have been
+          matched within the time.</bcl:lefttext>
+      <oasis:table style="2" id="d1e3069">
+        <oasis:tgroup cols="5">
+          <oasis:colspec colname="c1" colnum="1" align="center" border="1"/>
+          <oasis:colspec colname="c2" colnum="2" align="center" border="1"/>
+          <oasis:colspec colname="c3" colnum="3" align="center" border="1"/>
+          <oasis:colspec colname="c4" colnum="4" align="center" border="1"/>
+          <oasis:colspec colname="c5" colnum="5" align="center" border="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" rowspan="2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="2" nameend="5" align="center" colspan="4">
+                <oasis:line>
+                  <in:strong>Percentage matched within timelines</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" namest="1" nameend="2" align="center" colspan="2">
+                <oasis:line>
+                  <in:strong>Equity trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="3" nameend="4" align="center" colspan="2">
+                <oasis:line>
+                  <in:strong>Debt trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center">
+                <oasis:line>
+                  <in:strong>Participant</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center">
+                <oasis:line>
+                  <in:strong>By # of transactions</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center">
+                <oasis:line>
+                  <in:strong>By Value</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center">
+                <oasis:line>
+                  <in:strong>By # of transactions</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center">
+                <oasis:line>
+                  <in:strong>By Value</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:centertext>
+        <in:strong>CERTIFICATE OF CLEARING AGENCY</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>The undersigned certifies that the information given in this report on behalf
+          of the clearing agency is true and correct.</bcl:lefttext>
+      <bcl:lefttext>DATED at .................................................... this
+          ............. day of .................................., 20......</bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of clearing agency — type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of director, officer or partner — type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Signature
+            of director, officer or partner)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Official
+            capacity — type or print)</in:em></bcl:lefttext>
+    </bcl:schedule>
+    <bcl:schedule id="d1e3280">
+      <bcl:scheduletitle>Form 24-101F3</bcl:scheduletitle>
+      <bcl:centertext>[am. B.C. Reg. 167/2017, s. 16.]</bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Matching Service Utility<in:br/> Notice of Operations</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>
+        <in:strong>DATE OF COMMENCEMENT INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Effective date of commencement of operations:
+          ..................................... (DD/MMM/YYYY)</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>TYPE OF INFORMATION:</in:strong>    [ ] INITIAL SUBMISSION    [
+          ] AMENDMENT</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>MATCHING SERVICE UTILITY IDENTIFICATION AND CONTACT INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>1. Full name of matching service utility:</bcl:lefttext>
+      <bcl:lefttext>2. Name(s) under which business is conducted, if different from item
+          1:</bcl:lefttext>
+      <bcl:lefttext>3. Address of matching service utility's principal place of
+          business:</bcl:lefttext>
+      <bcl:lefttext>4. Mailing address, if different from business address:</bcl:lefttext>
+      <bcl:lefttext>5. Contact employee name:</bcl:lefttext>
+      <bcl:lefttext>   Telephone number:</bcl:lefttext>
+      <bcl:lefttext>   Email address:</bcl:lefttext>
+      <bcl:lefttext>6. Legal counsel:</bcl:lefttext>
+      <bcl:lefttext>   Firm name:</bcl:lefttext>
+      <bcl:lefttext>   Telephone number:</bcl:lefttext>
+      <bcl:lefttext>   Email address:</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>GENERAL INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>7. Website address:</bcl:lefttext>
+      <bcl:lefttext>8. Date of financial year-end:
+          ................................................. (DD/MMM/YYYY)</bcl:lefttext>
+      <bcl:lefttext>9. Indicate the form of your legal status (e.g., corporation, limited or
+          general partnership), the date of formation, and the jurisdiction under which you were
+          formed:</bcl:lefttext>
+      <oasis:table style="3" id="d1e3368">
+        <oasis:tgroup cols="5">
+          <oasis:colspec colname="c1" colnum="1"/>
+          <oasis:colspec colname="c2" colnum="2"/>
+          <oasis:colspec colname="c3" colnum="3"/>
+          <oasis:colspec colname="c4" colnum="4"/>
+          <oasis:colspec colname="c5" colnum="5"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>Legal status:</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>[ ]</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>CORPORATION</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>[ ]</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>PARTNERSHIP</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>[ ]</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>OTHER (SPECIFY):</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:indent1>(a) Date of formation: .................................................
+          (DD/MMM/YYYY)</bcl:indent1>
+      <bcl:indent1>(b) Jurisdiction and manner of formation:</bcl:indent1>
+      <bcl:lefttext>10. Specify the general types of securities for which information is being or
+          will be received and processed by you for transmission of matched trades to a clearing
+          agency (e.g. exchange-traded domestic equity and debt securities, exchange-traded foreign
+          equity and debt securities, equity and debt securities traded
+          over-the-counter).</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>INSTRUCTIONS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Deliver this form together with all exhibits pursuant to section 6.1 of the Instrument.</bcl:lefttext>
+      <bcl:lefttext>For each exhibit, include your name, the date of delivery of the exhibit and
+          the date as of which the information is accurate (if different from the date of the
+          delivery). If any exhibit required is not applicable, a full statement describing why the
+          exhibit is not applicable must be furnished in lieu of the exhibit. To the extent
+          information requested for an exhibit is identical to the information requested in another
+          form that you have filed or delivered under National Instrument 21-101 <in:em>Marketplace
+            Operation</in:em>, simply attach a copy of that other form and indicate in this form
+          where such information can be found in that other form.</bcl:lefttext>
+      <bcl:lefttext>If you are delivering an amendment to Form 24-101F3 pursuant to section 6.1
+          (2) or 6.2 of the Instrument, and the amended information relates to an exhibit that was
+          delivered with such form, provide a description of the change and complete and deliver an
+          updated exhibit.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>EXHIBITS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>1. CORPORATE GOVERNANCE</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit A — Constating documents</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a copy of your constating documents, including corporate bylaws and
+          other similar documents, as amended from time to time.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit B — Ownership</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>List any person or company that owns 10 percent or more of your voting
+          securities or that, either directly or indirectly, through agreement or otherwise, may
+          control your management. Provide the full name and address of each person or company and
+          attach a copy of the agreement or, if there is no written agreement, briefly describe the
+          agreement or basis through which the person or company exercises or may exercise control
+          or direction.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit C — Officials</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a list of the partners, officers, directors or persons performing
+          similar functions who presently hold or have held their offices or positions during the
+          current and previous calendar year, indicating the following for each:</bcl:lefttext>
+      <bcl:indent1>1. Name.</bcl:indent1>
+      <bcl:indent1>2. Title.</bcl:indent1>
+      <bcl:indent1>3. Dates of commencement and expiry of present term of office or position and
+          length of time the office or position held.</bcl:indent1>
+      <bcl:indent1>4. Type of business in which each is primarily engaged and current
+          employer.</bcl:indent1>
+      <bcl:indent1>5. Type of business in which each was primarily engaged in the preceding five
+          years, if different from that set out in item 4.</bcl:indent1>
+      <bcl:indent1>6. Whether the person is considered to be an independent
+          director.</bcl:indent1>
+      <bcl:lefttext>
+        <in:strong>Exhibit D — Organizational structure</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a narrative or graphic description of your organizational
+          structure.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit E — Affiliated entities</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>For each person or company affiliated to you, provide the following
+          information:</bcl:lefttext>
+      <bcl:indent1>1. Name and address of affiliated entity.</bcl:indent1>
+      <bcl:indent1>2. Form of organization (e.g., association, corporation,
+          partnership).</bcl:indent1>
+      <bcl:indent1>3. Name of jurisdiction and statute under which organized. </bcl:indent1>
+      <bcl:indent1>4. Date of incorporation in present form.</bcl:indent1>
+      <bcl:indent1>5. Brief description of nature and extent of affiliation or contractual or
+          other agreement with you.</bcl:indent1>
+      <bcl:indent1>6. Brief description of business services or functions.</bcl:indent1>
+      <bcl:indent1>7. If a person or company has ceased to be affiliated with you during the
+          previous year or ceased to have a contractual or other agreement relating to your
+          operations during the previous year, provide a brief statement of the reasons for
+          termination of the relationship. </bcl:indent1>
+      <bcl:lefttext>
+        <in:strong>2. FINANCIAL VIABILITY</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit F — Audited financial statements</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide your audited financial statements for the latest financial year and a
+          report prepared by an independent auditor.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>3. FEES</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit G — Fee list, fee structure</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a complete list of all fees and other charges imposed, or to be
+          imposed, by you for use of your services as a matching service utility, including the cost
+          of establishing a connection to your systems.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>4. ACCESS</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit H — Users</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a list of all users or subscribers for which you provide or propose to
+          provide the services of a matching service utility. Identify the type(s) of business of
+          each user or subscriber (e.g., custodian, dealer, adviser or other party). <in:br/> If
+          applicable, for each instance during the past year in which any user or subscriber of your
+          services has been prohibited or limited in respect of access to such services, indicate
+          the name of each such user or subscriber and the reason for the prohibition or
+          limitation.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit I — User contract</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a copy of each form of agreement governing the terms by which users or
+          subscribers may subscribe to your services of a matching service utility.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>5. SYSTEMS AND OPERATIONS</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit J — System description</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Describe the manner of operation of your systems for performing your services
+          of a matching service utility (including, without limitation, systems that collect and
+          process trade execution details and settlement instructions for matching of trades). This
+          description should include the following:</bcl:lefttext>
+      <bcl:indent1>1. The hours of operation of the systems, including communication with a
+          clearing agency.</bcl:indent1>
+      <bcl:indent1>2. Locations of operations and systems (e.g., countries and cities where
+          computers are operated, primary and backup).</bcl:indent1>
+      <bcl:indent1>3. A brief description in narrative form of each service or function performed
+          by you.</bcl:indent1>
+      <bcl:lefttext>
+        <in:strong>6. SYSTEMS COMPLIANCE</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit K — Security</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a brief description of the processes and procedures implemented by you
+          to provide for the security of any system used to perform your services of a matching
+          service utility.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit L — Capacity planning and measurement</in:strong>
+      </bcl:lefttext>
+      <bcl:indent1>1. Provide a brief description of capacity planning/performance measurement
+          techniques and system and stress testing methodologies.</bcl:indent1>
+      <bcl:indent1>2. Provide a brief description of testing methodologies with users or
+          subscribers. For example, when are user/subscriber tests employed? How extensive are these
+          tests?</bcl:indent1>
+      <bcl:lefttext>
+        <in:strong>Exhibit M — Business continuity</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a brief description of your contingency and business continuity plans
+          in the event of a catastrophe.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit N — Material systems failures</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a brief description of policies and procedures in place for reporting
+          to regulators material systems failures. Material systems failures include serious
+          incidents that result in the interruption of the matching of trades for more than thirty
+          minutes during normal business hours.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit O — Independent systems audit</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>1. Briefly describe your plans to provide an annual independent audit of your
+          systems.</bcl:lefttext>
+      <bcl:lefttext>2. If applicable, provide a copy of the last external systems operations audit
+          report.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>7. INTEROPERABILITY</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit P — Interoperability agreements</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>List all other matching service utilities for which you have entered into an
+          interoperability agreement. Provide a copy of all such agreements.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>8. OUTSOURCING</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit Q — Outsourcing firms</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>For each person or company (outsourcing firm) with whom or which you have an
+          outsourcing agreement or arrangement relating to your services of a matching service
+          utility, provide the following information:</bcl:lefttext>
+      <bcl:indent1>1. Name and address of the outsourcing firm.</bcl:indent1>
+      <bcl:indent1>2. Brief description of business services or functions of the outsourcing
+          firm.</bcl:indent1>
+      <bcl:indent1>3. Brief description of the outsourcing firm's contingency and business
+          continuity plans in the event of a catastrophe.</bcl:indent1>
+      <bcl:centertext>
+        <in:strong>CERTIFICATE OF MATCHING SERVICE UTILITY</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>The undersigned certifies that the information given in this report on behalf
+          of the matching service utility is true and correct.</bcl:lefttext>
+      <bcl:lefttext>DATED at .................................................... this
+          ............. day of .................................., 20......</bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of matching service utility – type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of director, officer or partner – type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>.................................................................................................................................................................................<in:br/><in:em>(Signature
+            of director, officer or partner)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Official
+            capacity – type or print)</in:em></bcl:lefttext>
+    </bcl:schedule>
+    <bcl:schedule id="d1e3797">
+      <bcl:scheduletitle>Form 24-101F4</bcl:scheduletitle>
+      <bcl:centertext>[am. B.C. Reg. 167/2017, s. 17.]</bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Matching Service Utility<in:br/> Notice of Cessation of Operations</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>
+        <in:strong>DATE OF CESSATION INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <oasis:table style="3" id="d1e3819">
+        <oasis:tgroup cols="3">
+          <oasis:colspec colname="c1" colnum="1"/>
+          <oasis:colspec colname="c2" colnum="2"/>
+          <oasis:colspec colname="c3" colnum="3"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>Type of information:</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>[ ]</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>VOLUNTARY CESSATION</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>[ ]</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>INVOLUNTARY CESSATION</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>Effective date of operations cessation:
+          ........................................ (DD/MMM/YYYY)</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>MATCHING SERVICE UTILITY IDENTIFICATION AND CONTACT INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>1. Full name of matching service utility:</bcl:lefttext>
+      <bcl:lefttext>2. Name(s) under which business is conducted, if different from item
+          1:</bcl:lefttext>
+      <bcl:lefttext>3. Address of matching service utility's principal place of
+          business:</bcl:lefttext>
+      <bcl:lefttext>4. Mailing address, if different from business address:</bcl:lefttext>
+      <bcl:lefttext>5. Legal counsel:</bcl:lefttext>
+      <bcl:lefttext>   Firm name:</bcl:lefttext>
+      <bcl:lefttext>   Telephone number:</bcl:lefttext>
+      <bcl:lefttext>   Email address:</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>INSTRUCTIONS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Deliver this form together with all exhibits pursuant to section 6.3 of
+          the Instrument.</bcl:lefttext>
+      <bcl:lefttext>For each exhibit, include your name, the date of delivery of the exhibit and
+          the date as of which the information is accurate (if different from the date of the
+          delivery). If any exhibit required is not applicable, a full statement describing why the
+          exhibit is not applicable must be furnished in lieu of the exhibit.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>EXHIBITS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit A</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide the reasons for your cessation of business.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit B</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a list of all the users or subscribers for which you provided services
+          during the last 30 days prior to you ceasing business. Identify the type(s) of business of
+          each user or subscriber (e.g., custodian, dealer, adviser, or other party).</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit C</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>List all other matching service utilities for which an interoperability
+          agreement was in force immediately prior to cessation of business.</bcl:lefttext>
+      <bcl:centertext>
+        <in:strong>CERTIFICATE OF MATCHING SERVICE UTILITY</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>The undersigned certifies that the information given in this report on behalf
+          of the matching service utility is true and correct.</bcl:lefttext>
+      <bcl:lefttext>DATED at .................................................... this
+          ............. day of .................................., 20......</bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of matching service utility – type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of director, officer or partner – type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Signature
+            of director, officer or partner)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Official
+            capacity – type or print)</in:em></bcl:lefttext>
+    </bcl:schedule>
+    <bcl:schedule id="d1e3996">
+      <bcl:scheduletitle>Form 24-101F5</bcl:scheduletitle>
+      <bcl:centertext>[am. B.C. Reg. 167/2017, ss. 18 and 19.]</bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Matching Service Utility</in:strong>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Quarterly Operations Report of <in:br/> Institutional Trade Reporting and
+            Matching</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>
+        <in:strong>CALENDAR QUARTER PERIOD COVERED:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>From: ..................................... to:
+          .....................................</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>MATCHING SERVICE UTILITY IDENTIFICATION AND CONTACT INFORMATION:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>1. Full name of matching service utility:</bcl:lefttext>
+      <bcl:lefttext>2. Name(s) under which business is conducted, if different from item
+          1:</bcl:lefttext>
+      <bcl:lefttext>3. Address of matching service utility's principal place of
+          business:</bcl:lefttext>
+      <bcl:lefttext>4. Mailing address, if different from business address:</bcl:lefttext>
+      <bcl:lefttext>5. Contact employee name:</bcl:lefttext>
+      <bcl:lefttext>   Telephone number:</bcl:lefttext>
+      <bcl:lefttext>   Email address:</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>INSTRUCTIONS:</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Deliver this form together with all exhibits pursuant to section 6.4 of
+          the Instrument, covering the calendar quarter indicated above, within 30 days of the end
+          of the calendar quarter.</bcl:lefttext>
+      <bcl:lefttext>Include DAP/RAP trades in an exchange-traded fund (ETF) security in the equity DAP/RAP trades statistics.</bcl:lefttext>
+      <bcl:lefttext>Exhibits must be reported in an electronic file, in the following format:
+          "CSV" (Comma Separated Variable) (e.g., the format produced by Microsoft
+          Excel).</bcl:lefttext>
+      <bcl:lefttext>If any information specified is not available, a full statement describing why
+          the information is not available must be separately furnished.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>EXHIBITS</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>1. SYSTEMS REPORTING</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit A — External systems audit</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>If an external audit report on your core systems was prepared during the
+          quarter, provide a copy of the report.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit B — Material systems failures reporting</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide a brief summary of all material systems failures that occurred during
+          the quarter and for which you were required to notify the securities regulatory authority
+          under section 6.5
+            (c) of the Instrument.</bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>2. DATA REPORTING</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>
+        <in:strong>Exhibit C — Aggregate matched trade statistics</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Provide the information to complete Tables 1 and 2 below for each month in the
+          quarter. These two tables can be integrated into one report.</bcl:lefttext>
+      <bcl:lefttext>Month/Year: ................................... (MMM/YYYY)</bcl:lefttext>
+      <bcl:lefttext>Table 1 — Equity trades:</bcl:lefttext>
+      <oasis:table style="2" id="d1e4128">
+        <oasis:tgroup cols="9">
+          <oasis:colspec colname="c1" colnum="1" align="center" border="1"/>
+          <oasis:colspec colname="c2" colnum="2" align="center" border="1"/>
+          <oasis:colspec colname="c3" colnum="3" align="center" border="1"/>
+          <oasis:colspec colname="c4" colnum="4" align="center" border="1"/>
+          <oasis:colspec colname="c5" colnum="5" align="center" border="1"/>
+          <oasis:colspec colname="c6" colnum="6" align="center" border="1"/>
+          <oasis:colspec colname="c7" colnum="7" align="center" border="1"/>
+          <oasis:colspec colname="c8" colnum="8" align="center" border="1"/>
+          <oasis:colspec colname="c9" colnum="9" align="center" border="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" rowspan="2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="2" nameend="5" colspan="4">
+                <oasis:line>
+                  <in:strong>Entered into matching service utility by
+                      dealer-users/subscribers</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" namest="6" nameend="9" colspan="4">
+                <oasis:line>
+                  <in:strong>Matched in matching service utility by other
+                      users/subscribers</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>&gt;T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>Total</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>Table 2 — Debt trades:</bcl:lefttext>
+      <oasis:table style="2" id="d1e4553">
+        <oasis:tgroup cols="9">
+          <oasis:colspec colname="c1" colnum="1" align="center" border="1"/>
+          <oasis:colspec colname="c2" colnum="2" align="center" border="1"/>
+          <oasis:colspec colname="c3" colnum="3" align="center" border="1"/>
+          <oasis:colspec colname="c4" colnum="4" align="center" border="1"/>
+          <oasis:colspec colname="c5" colnum="5" align="center" border="1"/>
+          <oasis:colspec colname="c6" colnum="6" align="center" border="1"/>
+          <oasis:colspec colname="c7" colnum="7" align="center" border="1"/>
+          <oasis:colspec colname="c8" colnum="8" align="center" border="1"/>
+          <oasis:colspec colname="c9" colnum="9" align="center" border="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" rowspan="2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="2" nameend="5" colspan="4">
+                <oasis:line>
+                  <in:strong>Entered into matching service utility by
+                      dealer-users/subscribers</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" namest="6" nameend="9" colspan="4">
+                <oasis:line>
+                  <in:strong>Matched in matching service utility by other
+                      users/subscribers</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>
+                  <in:strong># of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line>
+                  <in:strong>$ Value of Trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line>
+                  <in:strong>% Industry</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>&gt;T+2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>Total</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c9">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d1e4975">
+        <oasis:tgroup cols="1">
+          <oasis:colspec colname="c1" colnum="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" width="990" align="left">
+                <oasis:line>
+                  <in:strong>Legend</in:strong>
+                  <in:br/> "# of Trades" is the total number of transactions in the month;<in:br/> "$ Value of Trades" is the total value of the transactions (purchases and sales) in the month.</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>
+        <in:strong>Exhibit D — Individual matched trade statistics</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>Using the format below, provide the percent of trades during the quarter for
+          each user or subscriber that have been entered and matched within the time required in
+            Part 3 of
+          the Instrument. The percentages given should relate to both the number of trades that have
+          been matched within the time and the aggregate value of the securities purchased and sold
+          in the trades that have been matched within the time.</bcl:lefttext>
+      <oasis:table style="2" id="d1e5010">
+        <oasis:tgroup cols="5">
+          <oasis:colspec colname="c1" colnum="1" align="center" border="1"/>
+          <oasis:colspec colname="c2" colnum="2" align="center" border="1"/>
+          <oasis:colspec colname="c3" colnum="3" align="center" border="1"/>
+          <oasis:colspec colname="c4" colnum="4" align="center" border="1"/>
+          <oasis:colspec colname="c5" colnum="5" align="center" border="1"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" rowspan="2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="2" nameend="5" align="center" colspan="4">
+                <oasis:line>
+                  <in:strong>Percentage matched within timelines</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" namest="1" nameend="2" align="center" colspan="2">
+                <oasis:line>
+                  <in:strong>Equity trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" namest="3" nameend="4" align="center" colspan="2">
+                <oasis:line>
+                  <in:strong>Debt trades</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center">
+                <oasis:line>
+                  <in:strong>User/Subscriber</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center">
+                <oasis:line>
+                  <in:strong>By # of transactions</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center">
+                <oasis:line>
+                  <in:strong>By value</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center">
+                <oasis:line>
+                  <in:strong>By # of transactions</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center">
+                <oasis:line>
+                  <in:strong>By value</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:centertext>
+        <in:strong>CERTIFICATE OF MATCHING SERVICE UTILITY</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>The undersigned certifies that the information given in this report on behalf
+          of the matching service utility is true and correct.</bcl:lefttext>
+      <bcl:lefttext>DATED at .................................................... this
+          ............. day of .................................., 20......</bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of matching service utility — type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Name
+            of director, officer or partner — type or print)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Signature
+            of director, officer or partner)</in:em></bcl:lefttext>
+      <bcl:lefttext>............................................................................................................................................................<in:br/><in:em>(Official
+            capacity — type or print)</in:em></bcl:lefttext>
+    </bcl:schedule>
+    <reg:provisionsnote>[Provisions relevant to the enactment of this regulation: <bcl:link resource="leg" xlink:href="/legislation/96418_01" xlink:type="locator"><in:doc>Securities Act</in:doc></bcl:link>, R.S.B.C. 1996, c. 418, section 184]</reg:provisionsnote>
+  </reg:content>
+</reg:regulation>

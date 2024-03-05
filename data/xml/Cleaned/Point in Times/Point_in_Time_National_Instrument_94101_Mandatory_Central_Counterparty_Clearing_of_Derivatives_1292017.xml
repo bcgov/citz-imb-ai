@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This information is licensed under the Queen's Printer License of British Columbia found: www.bclaws.ca/standards/2014/QP-License_1.0.html. Please review the license terms carefully. --><reg_pit xmlns:reg="http://www.gov.bc.ca/2013/legislation/regulation" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:fun="http://www.bclaws.ca/xslt/functions" xmlns:act="http://www.gov.bc.ca/2013/legislation/act" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="129_2017_pit" xsi:noNamespaceSchemaLocation="https://styles.qp.gov.bc.ca/media/REGS-PIT-XSD.xsd">
+  <acttitle>Securities Act</acttitle>
+  <title>National Instrument 94-101 <in:em>Mandatory Central Counterparty Clearing of Derivatives</in:em></title>
+  <regnum>129/2017</regnum>
+  <change section="1">
+    <changenote eff="September 1, 2022">Section 1 definitions of "investment fund", "prudentially regulated entity" and "reference period" added by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <changenote eff="September 1, 2022">Section 1 (2) BEFORE amended by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:subsection id="d0e194">
+      <bcl:num>2</bcl:num>
+      <bcl:text>In this Instrument, a person or company is an affiliated entity of another person or company if one of them controls the other or each of them is controlled by the same person or company.</bcl:text>
+    </bcl:subsection>
+    <changenote eff="September 1, 2022">Section 1 (3) BEFORE repealed by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:subsection id="d0e103">
+      <bcl:num>3</bcl:num>
+      <bcl:text>In this Instrument, a person or company (the first party) is considered to control another person or company (the second party) if any of the following apply:</bcl:text>
+      <bcl:paragraph id="d0e211">
+        <bcl:num>a</bcl:num>
+        <bcl:text>the first party beneficially owns or directly or indirectly exercises control or direction over securities of the second party carrying votes which, if exercised, would entitle the first party to elect a majority of the directors of the second party unless the first party holds the voting securities only to secure an obligation;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d0e220">
+        <bcl:num>b</bcl:num>
+        <bcl:text>the second party is a partnership, other than a limited partnership, and the first party holds more than 50% of the interests of the partnership;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d0e229">
+        <bcl:num>c</bcl:num>
+        <bcl:text>the second party is a limited partnership and the general partner of the limited partnership is the first party;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d0e238">
+        <bcl:num>d</bcl:num>
+        <bcl:text>the second party is a trust and a trustee of the trust is the first party.</bcl:text>
+      </bcl:paragraph>
+    </bcl:subsection>
+  </change>
+  <change section="3">
+    <changenote eff="September 1, 2022">Section 3 (0.1) and (0.2) were added by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <changenote eff="September 1, 2022">Section 3 (1) (b) (ii) BEFORE amended by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:subparagraph id="d0e423">
+      <bcl:num>ii</bcl:num>
+      <bcl:text>has had, at any time after the date on which this Instrument comes into force, a month-end gross notional amount under all outstanding derivatives exceeding $1 000 000 000 excluding derivatives to which paragraph 7 (1) (a) applies;</bcl:text>
+    </bcl:subparagraph>
+    <changenote eff="September 1, 2022">Section 3 (1) (c) (i) and (ii)BEFORE amended by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:subparagraph id="d0e441">
+      <bcl:num>i</bcl:num>
+      <bcl:text>is a local counterparty in any jurisdiction of Canada, other than a counterparty to which paragraph (b) applies, and</bcl:text>
+    </bcl:subparagraph>
+    <bcl:subparagraph id="d0e450">
+      <bcl:num>ii</bcl:num>
+      <bcl:text>has had, at any time after the date on which this Instrument comes into force, a month-end gross notional amount under all outstanding derivatives, combined with each affiliated entity that is a local counterparty in any jurisdiction of Canada, exceeding $500 000 000 000 excluding derivatives to which paragraph 7 (1) (a) applies.</bcl:text>
+    </bcl:subparagraph>
+    <changenote eff="September 1, 2022">Section 3 (1) (c) (iii) was added by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <changenote eff="September 1, 2022">Section 3 (2) BEFORE amended by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:subsection id="d0e461">
+      <bcl:num>2</bcl:num>
+      <bcl:text>Unless paragraph (1) (a) applies, a local counterparty to which paragraph (1) (b) or (1) (c) applies is not required to submit a mandatory clearable derivative for clearing to a regulated clearing agency if the transaction in the mandatory clearable derivative was executed before the 90th day after the end of the month in which the month-end gross notional amount first exceeded the amount specified in subparagraph (1) (b) (ii) or (1) (c) (ii), as applicable.</bcl:text>
+    </bcl:subsection>
+  </change>
+  <change section="6">
+    <changenote eff="September 1, 2022">Section 6 BEFORE amended by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:section id="d0e567">
+      <bcl:num>6</bcl:num>
+      <bcl:text>This Instrument does not apply to the following counterparties:</bcl:text>
+    </bcl:section>
+  </change>
+  <change section="7">
+    <changenote eff="September 1, 2022">Section 7 BEFORE amended by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:section id="d0e633">
+      <bcl:marginalnote>Intragroup exemption</bcl:marginalnote>
+      <bcl:num>7</bcl:num>
+      <bcl:subsection id="d0e641">
+        <bcl:num>1</bcl:num>
+        <bcl:text>A local counterparty is exempt from section 3, with respect to a mandatory clearable derivative, if all of the following apply:</bcl:text>
+        <bcl:paragraph id="d0e649">
+          <bcl:num>a</bcl:num>
+          <bcl:text>the mandatory clearable derivative is between a counterparty and an affiliated entity of the counterparty and each of the counterparty and the affiliated entity are consolidated as part of the same audited consolidated financial statements prepared in accordance with "accounting principles" as defined in National Instrument 52-107 <in:em>Acceptable Accounting Principles and Auditing Standards</in:em>;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d0e661">
+          <bcl:num>b</bcl:num>
+          <bcl:text>both counterparties to the mandatory clearable derivative agree to rely on this exemption;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d0e670">
+          <bcl:num>c</bcl:num>
+          <bcl:text>the mandatory clearable derivative is subject to a centralized risk management program reasonably designed to assist in monitoring and managing the risks associated with the derivative between the counterparties through evaluation, measurement and control procedures;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d0e679">
+          <bcl:num>d</bcl:num>
+          <bcl:text>there is a written agreement between the counterparties setting out the terms of the mandatory clearable derivative between the counterparties.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+      <bcl:subsection id="d0e689">
+        <bcl:num>2</bcl:num>
+        <bcl:text>No later than the 30th day after a local counterparty first relies on subsection (1) in respect of a mandatory clearable derivative with a counterparty, the local counterparty must deliver electronically to the regulator or securities regulatory authority a completed Form 94-101F1 <in:em>Intragroup Exemption</in:em>.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d0e701">
+        <bcl:num>3</bcl:num>
+        <bcl:text>No later than the 10th day after a local counterparty becomes aware that the information in a previously delivered Form 94-101F1 <in:em>Intragroup Exemption</in:em> is no longer accurate, the local counterparty must deliver or cause to be delivered electronically to the regulator or securities regulatory authority an amended Form 94-101F1 <in:em>Intragroup Exemption</in:em>.</bcl:text>
+      </bcl:subsection>
+    </bcl:section>
+  </change>
+  <change section="8">
+    <changenote eff="September 1, 2022">Section 8 (d) and (e) BEFORE amended by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:paragraph id="d0e755">
+      <bcl:num>d</bcl:num>
+      <bcl:text>the mandatory clearable derivative is entered into by the same counterparties as the existing derivatives; </bcl:text>
+    </bcl:paragraph>
+    <bcl:paragraph id="d0e764">
+      <bcl:num>e</bcl:num>
+      <bcl:text>the multilateral portfolio compression exercise is conducted by an independent third-party.</bcl:text>
+    </bcl:paragraph>
+  </change>
+  <change part="4">
+    <changenote eff="September 1, 2022">Part 4 BEFORE repealed by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:part id="d0e819">
+      <bcl:num>4</bcl:num>
+      <bcl:text>Mandatory Clearable Derivatives</bcl:text>
+      <bcl:section id="d0e828">
+        <bcl:marginalnote>Submission of information on derivatives clearing services provided by a regulated clearing agency</bcl:marginalnote>
+        <bcl:num>10</bcl:num>
+        <bcl:text>No later than the 10th day after a regulated clearing agency first offers clearing services for a derivative or class of derivatives, the regulated clearing agency must deliver electronically to the regulator or securities regulatory authority a completed Form 94-101F2 <in:em>Derivatives Clearing Services</in:em>, identifying the derivative or class of derivatives.</bcl:text>
+      </bcl:section>
+    </bcl:part>
+  </change>
+  <change appendix="A">
+    <changenote eff="April 12, 2022">Appendix A BEFORE re-enacted by BC Reg <amendingreg>104/2022</amendingreg>, effective April 12, 2022.</changenote>
+    <bcl:schedule id="d0e927">
+      <bcl:scheduletitle>Appendix A</bcl:scheduletitle>
+      <bcl:centertext>
+        <in:strong>to National Instrument 94-101<in:br/><in:em>Mandatory Central Counterparty Clearing of Derivatives</in:em></in:strong>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Mandatory Clearable Derivatives</in:strong>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:em>(Section 1(1))</in:em>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Interest Rate Swaps</in:strong>
+      </bcl:centertext>
+      <oasis:table style="2" id="d0e954">
+        <oasis:tgroup cols="7">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Type</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Floating index</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Settlement currency</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Maturity</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Settlement currency type</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Optionality</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Notional type</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Fixed-to-float</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>CDOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>CAD</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>28 days to 30 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Fixed-to-float</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>LIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>USD</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>28 days to 50 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Fixed-to-float</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>EURIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>EUR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>28 days to 50 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Fixed-to-float</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>LIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>GBP</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>28 days to 50 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Basis</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>LIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>USD</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>28 days to 50 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Basis</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>EURIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>EUR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>28 days to 50 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Basis</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>LIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>GBP</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>28 days to 50 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Overnight index swap</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>CORRA</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>CAD</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>7 days to 2 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Overnight index swap</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>FedFunds</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>USD</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>7 days to 3 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Overnight index swap</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>EONIA</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>EUR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>7 days to 3 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Overnight index swap</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>SONIA</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>GBP</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>7 days to 3 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:centertext>
+        <in:strong>Forward Rate Agreements</in:strong>
+      </bcl:centertext>
+      <oasis:table style="2" id="d0e1531">
+        <oasis:tgroup cols="7">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Type</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Floating index</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Settlement currency</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Maturity</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Settlement currency type</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Optionality</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Notional type</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Forward rate agreement</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>LIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>USD</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>3 days to 3 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Forward rate agreement</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>EURIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>EUR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>3 days to 3 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Forward rate agreement</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>LIBOR</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line>GBP</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line>3 days to 3 years</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line>Single currency</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="left" valign="top">
+                <oasis:line>No</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="left" valign="top">
+                <oasis:line>Constant or variable</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+    </bcl:schedule>
+  </change>
+  <change appendix="B">
+    <changenote eff="April 12, 2022">Appendix B BEFORE re-enacted by BC Reg <amendingreg>104/2022</amendingreg>, effective April 12, 2022.</changenote>
+    <bcl:schedule id="d0e1745">
+      <bcl:scheduletitle>Appendix B</bcl:scheduletitle>
+      <bcl:centertext>
+        <in:strong/>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:strong>to National Instrument 94-101<in:br/><in:em>Mandatory Central Counterparty Clearing of Derivatives</in:em></in:strong>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:strong>Laws, Regulations or Instruments of Foreign Jurisdictions Applicable for Substituted Compliance</in:strong>
+      </bcl:centertext>
+      <bcl:centertext>
+        <in:em>(Subsection 3(5))</in:em>
+      </bcl:centertext>
+      <oasis:table style="2" id="d0e1771">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Foreign jurisdiction</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Laws, regulations or instruments</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>European Union</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>Regulation (EU) No 648/2012 of the European Parliament and of the Council of 4 July 2012 on OTC derivatives, central counterparties and trade repositories</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>United States of America</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>Clearing Requirement and Related Rules, 17 C.F.R. pt. 50</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+    </bcl:schedule>
+  </change>
+  <change form="94-101F1">
+    <changenote eff="September 1, 2022">Form 94-101F1 BEFORE repealed by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:schedule id="d0e2953">
+      <bcl:scheduletitle>Form 94-101F1</bcl:scheduletitle>
+      <bcl:centertext>
+        <in:strong>
+          <in:em>Intragroup Exemption</in:em>
+        </in:strong>
+      </bcl:centertext>
+      <oasis:table style="3" id="d0e1847">
+        <oasis:tgroup cols="3">
+          <oasis:colspec colname="c1" colnum="1"/>
+          <oasis:colspec colname="c2" colnum="2"/>
+          <oasis:colspec colname="c3" colnum="3"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" width="200">
+                <oasis:line>
+                  <in:strong>Type of Filing:</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" width="200">
+                <oasis:line>
+                  <in:strong>[ ] INITIAL</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" width="200">
+                <oasis:line>
+                  <in:strong>[ ] AMENDMENT</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>
+        <in:strong>Section 1 — Information on the entity delivering this Form</in:strong>
+      </bcl:lefttext>
+      <bcl:indent1>1. Provide the following information with respect to the entity delivering this Form:</bcl:indent1>
+      <bcl:indent2>Full legal name:</bcl:indent2>
+      <bcl:indent2>Name under which it conducts business, if different:</bcl:indent2>
+      <bcl:indent1> </bcl:indent1>
+      <bcl:indent2>Head office</bcl:indent2>
+      <bcl:indent2>Address:</bcl:indent2>
+      <bcl:indent2>Mailing address (if different):</bcl:indent2>
+      <bcl:indent2>Telephone:</bcl:indent2>
+      <bcl:indent2>Website:</bcl:indent2>
+      <bcl:indent1> </bcl:indent1>
+      <bcl:indent2>Contact employee</bcl:indent2>
+      <bcl:indent2>Name and title:</bcl:indent2>
+      <bcl:indent2>Telephone:</bcl:indent2>
+      <bcl:indent2>E-mail:</bcl:indent2>
+      <bcl:indent1> </bcl:indent1>
+      <bcl:indent2>Other offices</bcl:indent2>
+      <bcl:indent2>Address:</bcl:indent2>
+      <bcl:indent2>Telephone:</bcl:indent2>
+      <bcl:indent2>E-mail:</bcl:indent2>
+      <bcl:indent1> </bcl:indent1>
+      <bcl:indent2>Canadian counsel (if applicable)</bcl:indent2>
+      <bcl:indent2>Firm name:</bcl:indent2>
+      <bcl:indent2>Contact name:</bcl:indent2>
+      <bcl:indent2>Telephone:</bcl:indent2>
+      <bcl:indent2>E-mail:</bcl:indent2>
+      <bcl:indent1>2. In addition to providing the information required in item 1, if this Form is delivered for the purpose of reporting a name change on behalf of the entity referred to in item 1, provide the following information:</bcl:indent1>
+      <bcl:indent2>Previous full legal name:</bcl:indent2>
+      <bcl:indent2>Previous name under which the entity conducted business, if different:</bcl:indent2>
+      <bcl:lefttext>
+        <in:strong>Section 2 — Combined notification on behalf of counterparties within the group to which the entity delivering this Form belongs</in:strong>
+      </bcl:lefttext>
+      <bcl:indent1>1. For the mandatory clearable derivatives to which this Form relates, provide all of the following information in the table below:</bcl:indent1>
+      <bcl:indent2>(a) the legal entity identifier of each counterparty in the same manner as required under the following instruments:</bcl:indent2>
+      <bcl:indent3>(i) in Alberta, British Columbia, New Brunswick, Newfoundland and Labrador, the Northwest Territories, Nova Scotia, Nunavut, Prince Edward Island, Saskatchewan and Yukon, Multilateral Instrument 96-101 <in:em>Trade Repositories and Derivatives Data Reporting</in:em>;</bcl:indent3>
+      <bcl:indent3>(ii) in Manitoba, Manitoba Securities Commission Rule 91-507 <in:em>Trade Repositories and Derivatives Data Reporting</in:em>;</bcl:indent3>
+      <bcl:indent3>(iii) in Ontario, Ontario Securities Commission Rule 91-507 <in:em>Trade Repositories and Derivatives Data Reporting</in:em>;</bcl:indent3>
+      <bcl:indent3>(iv) in Qu<in:eacute>é</in:eacute>bec, Regulation 91-507 respecting <in:em>Trade Repositories and Derivatives Data Reporting</in:em>;</bcl:indent3>
+      <bcl:indent2>(b) whether each counterparty is a local counterparty in a jurisdiction of Canada.</bcl:indent2>
+      <oasis:table style="2" id="d0e2012">
+        <oasis:tgroup cols="5">
+          <oasis:thead>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Pairs</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>LEI of <in:br/>counterparty 1</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Jurisdiction(s) <in:br/>of Canada in which <in:br/>counterparty 1 is a <in:br/>local counterparty</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>LEI of <in:br/>counterparty 2</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center" valign="top">
+                <oasis:line>
+                  <in:strong>Jurisdiction(s) of <in:br/>Canada in which <in:br/>counterparty 2 is a <in:br/>local counterparty</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:thead>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="left" valign="top">
+                <oasis:line> </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:indent1>2. Describe the ownership and control structure of the counterparties identified in item 1.</bcl:indent1>
+      <bcl:lefttext>
+        <in:strong>Section 3 — Certification</in:strong>
+      </bcl:lefttext>
+      <bcl:lefttext>I certify that I am authorized to deliver this Form on behalf of the entity delivering this Form and on behalf of the counterparties identified in Section 2 of this Form and that the information in this Form is true and correct.</bcl:lefttext>
+      <bcl:lefttext>DATED at .................................................... this............. day of .................................., 20......</bcl:lefttext>
+      <bcl:lefttext>.............................................................................................................................................<in:br/>(Print name of authorized person)</bcl:lefttext>
+      <bcl:lefttext>.............................................................................................................................................<in:br/>(Print title of authorized person)</bcl:lefttext>
+      <bcl:lefttext>.............................................................................................................................................<in:br/>(Signature of authorized person)</bcl:lefttext>
+      <bcl:lefttext>.............................................................................................................................................<in:br/>(E-mail)</bcl:lefttext>
+      <bcl:lefttext>.............................................................................................................................................<in:br/>(Phone number)</bcl:lefttext>
+    </bcl:schedule>
+  </change>
+  <change form="94-101F2">
+    <changenote eff="September 1, 2022">Form 94-101F2 BEFORE repealed by BC Reg <amendingreg>104/2022</amendingreg>, effective September 1, 2022.</changenote>
+    <bcl:schedule id="d0e2225">
+      <bcl:scheduletitle>Form 94-101F2</bcl:scheduletitle>
+      <bcl:centertext>
+        <in:strong>
+          <in:em>Derivatives Clearing Services</in:em>
+        </in:strong>
+      </bcl:centertext>
+      <oasis:table style="3" id="d0e2237">
+        <oasis:tgroup cols="3">
+          <oasis:colspec colname="c1" colnum="1"/>
+          <oasis:colspec colname="c2" colnum="2"/>
+          <oasis:colspec colname="c3" colnum="3"/>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" width="200">
+                <oasis:line>
+                  <in:strong>Type of Filing:</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" width="200">
+                <oasis:line>
+                  <in:strong>[ ] INITIAL</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" width="200">
+                <oasis:line>
+                  <in:strong>[ ] AMENDMENT</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>
+        <in:strong>Section 1 — Regulated clearing agency information</in:strong>
+      </bcl:lefttext>
+      <bcl:indent1>1. Full name of regulated clearing agency:</bcl:indent1>
+      <bcl:indent1>2. Contact information of person authorized to deliver this form</bcl:indent1>
+      <bcl:indent2>Name and title:</bcl:indent2>
+      <bcl:indent2>Telephone:</bcl:indent2>
+      <bcl:indent2>E-mail:</bcl:indent2>
+      <bcl:lefttext>
+        <in:strong>Section 2 — Description of derivatives</in:strong>
+      </bcl:lefttext>
+      <bcl:indent1>1. Identify each derivative or class of derivatives for which the regulated clearing agency offers clearing services in respect of which a Form 94-101F2 has not previously been delivered.</bcl:indent1>
+      <bcl:indent1>2. For each derivative or class of derivatives referred to in item 1, describe all significant attributes of the derivative or class of derivatives including</bcl:indent1>
+      <bcl:indent2>(a) the standard practices for managing life-cycle events associated with the derivative or class of derivatives, as defined in the following instruments:</bcl:indent2>
+      <bcl:indent3>(i) in Alberta, British Columbia, New Brunswick, Newfoundland and Labrador, the Northwest Territories, Nova Scotia, Nunavut, Prince Edward Island, Saskatchewan and Yukon, Multilateral Instrument 96-101 <in:em>Trade Repositories and Derivatives Data Reporting</in:em>;</bcl:indent3>
+      <bcl:indent3>(ii) in Manitoba, Manitoba Securities Commission Rule 91-507 <in:em>Trade Repositories and Derivatives Data Reporting</in:em>;</bcl:indent3>
+      <bcl:indent3>(iii) in Ontario, Ontario Securities Commission Rule 91-507 <in:em>Trade Repositories and Derivatives Data Reporting</in:em>;</bcl:indent3>
+      <bcl:indent3>(iv) in Qu<in:eacute>é</in:eacute>bec, Regulation 91-507 respecting <in:em>Trade Repositories and Derivatives Data Reporting</in:em>,</bcl:indent3>
+      <bcl:indent2>(b) the extent to which the transaction is confirmable electronically,</bcl:indent2>
+      <bcl:indent2>(c) the degree of standardization of the contractual terms and operational processes,</bcl:indent2>
+      <bcl:indent2>(d) the market for the derivative or class of derivatives, including its participants, and</bcl:indent2>
+      <bcl:indent2>(e) the availability of pricing and liquidity of the derivative or class of derivatives within Canada and internationally.</bcl:indent2>
+      <bcl:indent1>3. Describe the impact of providing clearing services for each derivative or class of derivatives referred to in item 1 on the regulated clearing agency's risk management framework and financial resources, including the protection of the regulated clearing agency on the default of a participant and the effect of the default on the other participants.</bcl:indent1>
+      <bcl:indent1>4. Describe the impact, if any, on the regulated clearing agency's ability to comply with its regulatory obligations should the regulator or securities regulatory authority determine a derivative or class of derivatives referred to in item 1 to be a mandatory clearable derivative.</bcl:indent1>
+      <bcl:indent1>5. Describe the clearing services offered for each derivative or class of derivatives referred to in item 1.</bcl:indent1>
+      <bcl:indent1>6. If applicable, attach a copy of every notice the regulated clearing agency provided to its participants for consultation on the launch of the clearing service for a derivative or class of derivatives referred to in item 1 and a summary of concerns received in response to the notice.</bcl:indent1>
+      <bcl:lefttext>
+        <in:strong>Section 3 — Certification</in:strong>
+      </bcl:lefttext>
+      <bcl:centertext>
+        <in:strong>CERTIFICATE OF REGULATED CLEARING AGENCY</in:strong>
+      </bcl:centertext>
+      <bcl:lefttext>I certify that I am authorized to deliver this Form on behalf of the regulated clearing agency named below and that the information in this Form is true and correct.</bcl:lefttext>
+      <bcl:lefttext>DATED at ................................. this ........................... day of .................................., 20......</bcl:lefttext>
+      <bcl:lefttext>....................................................................................................................................................<in:br/>(Print name of regulated clearing agency)</bcl:lefttext>
+      <bcl:lefttext>....................................................................................................................................................<in:br/>(Print name of authorized person)</bcl:lefttext>
+      <bcl:lefttext>....................................................................................................................................................<in:br/>(Print title of authorized person)</bcl:lefttext>
+      <bcl:lefttext>....................................................................................................................................................<in:br/>(Signature of authorized person)</bcl:lefttext>
+    </bcl:schedule>
+  </change>
+</reg_pit>

@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This information is licensed under the Queen's Printer License of British Columbia found: www.bclaws.ca/standards/2014/QP-License_1.0.html. Please review the license terms carefully. --><reg:regulation xmlns:reg="http://www.gov.bc.ca/2013/legislation/regulation" xmlns:act="http://www.gov.bc.ca/2013/legislation/act" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" xmlns:fun="http://www.bclaws.ca/xslt/functions" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="138_2023" xsi:schemaLocation="http://www.gov.bc.ca/2013/legislation/regulation    http://standards.qp.gov.bc.ca/standards/2013/regulation_1.0.xsd">
+  <reg:amend effective="2023-06-09" regnum="138/2023" bullId="2023bull22" hasGreenSheet="no" added="2023-07-26"/>
+  <reg:regnum>138/2023</reg:regnum>
+  <reg:oic>British Columbia Securities Commission</reg:oic>
+  <reg:deposited>June 8, 2023</reg:deposited>
+  <reg:effective>June 9, 2023</reg:effective>
+  <reg:acttitle>Securities Act</reg:acttitle>
+  <reg:title>National Instrument 13-103 <in:em>System for Electronic Data Analysis and Retrieval + (SEDAR+)</in:em></reg:title>
+  <reg:content>
+    <bcl:section id="d2e25">
+      <bcl:marginalnote>Definitions and interpretation</bcl:marginalnote>
+      <bcl:num>1</bcl:num>
+      <bcl:subsection id="d2e31">
+        <bcl:num>1</bcl:num>
+        <bcl:text>In this Instrument:</bcl:text>
+        <bcl:definition id="d2e37">
+          <bcl:text>
+            <in:term>deliver</in:term> includes deposit, furnish, provide, send or submit;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e44">
+          <bcl:text>
+            <in:term>document</in:term> includes information and material that is required or permitted to be filed with or delivered to a securities regulatory authority or regulator;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e51">
+          <bcl:text>
+            <in:term>profile</in:term> means a set of information providing a profile of a person or company;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e59">
+          <bcl:text>
+            <in:term>SEDAR+</in:term> means the system for the transmission of documents known as the System for Electronic Data Analysis and Retrieval +.</bcl:text>
+        </bcl:definition>
+      </bcl:subsection>
+      <bcl:subsection id="d2e67">
+        <bcl:num>2</bcl:num>
+        <bcl:text>In this Instrument, a reference to a document that is permitted to be filed includes an application for a decision of the regulator or securities regulatory authority.</bcl:text>
+      </bcl:subsection>
+    </bcl:section>
+    <bcl:section id="d2e75">
+      <bcl:marginalnote>Transmission of documents through SEDAR+</bcl:marginalnote>
+      <bcl:num>2</bcl:num>
+      <bcl:text>Subject to section 3, if a person or company is required or permitted, under securities legislation or under a decision of the securities regulatory authority or regulator, to file a document with, or deliver a document to, the securities regulatory authority or regulator, the person or company must file or deliver the document by transmitting it through SEDAR+.</bcl:text>
+    </bcl:section>
+    <bcl:section id="d2e84">
+      <bcl:marginalnote>Transmission of documents outside of SEDAR+</bcl:marginalnote>
+      <bcl:num>3</bcl:num>
+      <bcl:text>Unless a decision made under securities legislation provides for filing or delivery through SEDAR+, a person or company must not file or deliver the following through SEDAR+:</bcl:text>
+      <bcl:paragraph id="d2e92">
+        <bcl:num>a</bcl:num>
+        <bcl:text>a document required or permitted to be filed with or delivered to the securities regulatory authority or regulator in connection with a hearing, compliance review, proceeding or investigation;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e99">
+        <bcl:num>b</bcl:num>
+        <bcl:text>a letter required to be delivered under subsection 4.11 (8) or (9) of National Instrument 51-102 <in:em>Continuous Disclosure Obligations</in:em>;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e110">
+        <bcl:num>c</bcl:num>
+        <bcl:text>a Form 51-102F3 <in:em>Material Change Report</in:em> filed on a confidential basis under subsection 7.1 (2) of National Instrument 51-102 <in:em>Continuous Disclosure Obligations</in:em>, subsection 11.2 (2) of National Instrument 81-106 <in:em>Investment Fund Continuous Disclosure</in:em> or, in Ontario, subsection 75 (3) of the <in:doc>Securities Act</in:doc> (Ontario);</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e127">
+        <bcl:num>d</bcl:num>
+        <bcl:text>a notice under subsection 7.1 (5) of National Instrument 51-102 <in:doc>Continuous Disclosure Obligations</in:doc>, subsection 11.2 (4) of National Instrument 81-106 <in:doc>Investment Fund Continuous Disclosure</in:doc> or, in Ontario, subsection 75 (4) of the <in:doc>Securities Act</in:doc> (Ontario);</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e142">
+        <bcl:num>e</bcl:num>
+        <bcl:text>a notice under subsection 13.2 (2) of National Instrument 51-102 <in:em>Continuous Disclosure Obligations</in:em>;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e152">
+        <bcl:num>f</bcl:num>
+        <bcl:text>a notice under subsection 5 (1) or 6 (1) of National Instrument 52-108 <in:em>Auditor Oversight</in:em>;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e162">
+        <bcl:num>g</bcl:num>
+        <bcl:text>a Form 62-104F1 <in:em>Take-Over Bid Circular</in:em> filed by an offeror in respect of a take-over bid to acquire securities of an issuer that is not a reporting issuer and that has not filed a profile under subsection 4 (1);</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e172">
+        <bcl:num>h</bcl:num>
+        <bcl:text>a notice under subsection 18.6 (2) of National Instrument 81-106 <in:em>Investment Fund Continuous Disclosure</in:em>;</bcl:text>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e183">
+        <bcl:num>i</bcl:num>
+        <bcl:text>a document that a person or company is required or permitted to file or deliver pursuant to a provision of, or a decision of the securities regulatory authority or regulator issued in respect of, securities legislation listed in Column A of the Appendix, other than the exceptions listed in Column B of the Appendix.</bcl:text>
+      </bcl:paragraph>
+    </bcl:section>
+    <bcl:section id="d2e191">
+      <bcl:marginalnote>Profile requirements</bcl:marginalnote>
+      <bcl:num>4</bcl:num>
+      <bcl:subsection id="d2e197">
+        <bcl:num>1</bcl:num>
+        <bcl:text>Before a person or company transmits a document through SEDAR+ for the first time, the person or company must file a profile by transmitting it through SEDAR+.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e204">
+        <bcl:num>2</bcl:num>
+        <bcl:text>If information contained in a profile becomes inaccurate, the person or company must file an updated profile with the accurate information by transmitting it through SEDAR+ at the earlier of</bcl:text>
+        <bcl:paragraph id="d2e210">
+          <bcl:num>a</bcl:num>
+          <bcl:text>the next time the person or company transmits a document through SEDAR+ after the date on which the person or company knew or reasonably should have known that the information contained in the profile is inaccurate, and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e217">
+          <bcl:num>b</bcl:num>
+          <bcl:text>10 days after the date on which the person or company knew or reasonably should have known that the information contained in the profile is inaccurate.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+    </bcl:section>
+    <bcl:section id="d2e226">
+      <bcl:marginalnote>Payment of fees</bcl:marginalnote>
+      <bcl:num>5</bcl:num>
+      <bcl:subsection id="d2e232">
+        <bcl:num>1</bcl:num>
+        <bcl:text>At the time that a person or company transmits a document through SEDAR+, a person or company must pay through SEDAR+</bcl:text>
+        <bcl:paragraph id="d2e238">
+          <bcl:num>a</bcl:num>
+          <bcl:text>the prescribed fee for that document, other than a fee prescribed under Multilateral Instrument 13-102 <in:em>System Fees</in:em> or, in Manitoba, an equivalent regulation, to the securities regulatory authority or regulator, and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e248">
+          <bcl:num>b</bcl:num>
+          <bcl:text>the fee for that document prescribed under Multilateral Instrument 13-102 <in:em>System Fees</in:em> or, in Manitoba, an equivalent regulation, to the person or company's principal regulator if the principal regulator is the securities regulatory authority in the local jurisdiction.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+      <bcl:subsection id="d2e259">
+        <bcl:num>2</bcl:num>
+        <bcl:text>For the purposes of subsection (1), if the person or company is transmitting through SEDAR+ a document to which Multilateral Instrument 11-102 <in:em>Passport System</in:em> applies, "principal regulator" has the meaning set out in Part 3, 4, 4A, 4B or 4C of Multilateral Instrument 11-102 <in:em>Passport System</in:em>, as applicable.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e271">
+        <bcl:num>3</bcl:num>
+        <bcl:text>For the purposes of subsection (1), if the person or company is transmitting through SEDAR+ a document to which Multilateral Instrument 11-102 <in:em>Passport System</in:em> does not apply, the principal regulator is the securities regulatory authority or regulator that would be the principal regulator if Part 3 of Multilateral Instrument 11-102 <in:em>Passport System</in:em> applied.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e284">
+        <bcl:num>4</bcl:num>
+        <bcl:text>Despite subsection (3), if the person or company is transmitting through SEDAR+ a Form 45-106F1 <in:em>Report of Exempt Distribution</in:em>, and the person or company does not have a head office in Canada or is an investment fund with an investment fund manager that does not have a head office in Canada, the principal regulator is the securities regulatory authority or regulator of the jurisdiction with which the person or company has the most significant connection.</bcl:text>
+      </bcl:subsection>
+    </bcl:section>
+    <bcl:section id="d2e296">
+      <bcl:marginalnote>Temporary hardship exemption</bcl:marginalnote>
+      <bcl:num>6</bcl:num>
+      <bcl:subsection id="d2e302">
+        <bcl:num>1</bcl:num>
+        <bcl:text>If technical difficulties prevent a person or company from transmitting a document through SEDAR+ within the time required or permitted under securities legislation, the person or company may file the document with or deliver the document to the securities regulatory authority or regulator outside of SEDAR+ no later than 2 business days after the date on or by which the person or company was required or permitted to file the document with, or deliver the document to, the securities regulatory authority or regulator.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e309">
+        <bcl:num>2</bcl:num>
+        <bcl:text>A person or company must include the following legend in capital letters at the top of the first page of a document filed or delivered outside of SEDAR+ in reliance on subsection (1):</bcl:text>
+        <bcl:paragraph id="d2e240">
+          <bcl:text>IN ACCORDANCE WITH SECTION 6 OF NATIONAL INSTRUMENT 13-103 <in:em>SYSTEM FOR ELECTRONIC DATA ANALYSIS AND RETRIEVAL + (SEDAR+)</in:em>, THIS <in:em>[SPECIFY DOCUMENT]</in:em> IS BEING FILED OR DELIVERED OUTSIDE OF SEDAR+ UNDER A TEMPORARY HARDSHIP EXEMPTION.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+      <bcl:subsection id="d2e321">
+        <bcl:num>3</bcl:num>
+        <bcl:text>If a person or company files or delivers a document to the securities regulatory authority or regulator in the manner and within the time prescribed by this section, the person or company is exempt from the requirement to file or deliver the document by the date prescribed in securities legislation.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e329">
+        <bcl:num>4</bcl:num>
+        <bcl:text>If a person or company files or delivers a document to the securities regulatory authority or regulator outside of SEDAR+ in reliance on this section, the person or company must transmit the document to the securities regulatory authority or regulator through SEDAR+ as soon as practicable and in any event within 3 business days of the date on which the technical difficulties have been resolved, and must include the following legend in capital letters at the top of the first page of the document: </bcl:text>
+        <bcl:paragraph id="d2e242">
+          <bcl:text>THIS DOCUMENT IS A COPY OF <in:em>[SPECIFY DOCUMENT]</in:em> FILED WITH OR DELIVERED TO <in:em>[LIST ALL SECURITIES REGULATORY AUTHORITIES OR REGULATORS WITH WHOM THE DOCUMENT WAS FILED OR TO WHOM IT WAS DELIVERED]</in:em> ON <in:em>[DATE]</in:em> UNDER A TEMPORARY HARDSHIP EXEMPTION UNDER SECTION 6 OF NATIONAL INSTRUMENT 13-103 <in:em>SYSTEM FOR ELECTRONIC DATA ANALYSIS AND RETRIEVAL + (SEDAR+)</in:em>.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+    </bcl:section>
+    <bcl:section id="d2e346">
+      <bcl:marginalnote>Decisions</bcl:marginalnote>
+      <bcl:num>7</bcl:num>
+      <bcl:subsection id="d2e352">
+        <bcl:num>1</bcl:num>
+        <bcl:text>Despite paragraph 3 (i), if a decision made under securities legislation requires a person or company to file a document with, or deliver a document to, the securities regulatory authority or regulator through the System for Electronic Document Analysis and Retrieval (SEDAR), the person or company must file or deliver the document by transmitting it through SEDAR+.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e359">
+        <bcl:num>2</bcl:num>
+        <bcl:text>In British Columbia, subsection (1) does not apply.</bcl:text>
+      </bcl:subsection>
+    </bcl:section>
+    <bcl:section id="d2e367">
+      <bcl:marginalnote>Exemptions</bcl:marginalnote>
+      <bcl:num>8</bcl:num>
+      <bcl:subsection id="d2e373">
+        <bcl:num>1</bcl:num>
+        <bcl:text>The securities regulatory authority or regulator may grant an exemption from this Instrument, in whole or in part, subject to such conditions or restrictions as may be imposed in the exemption.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e380">
+        <bcl:num>2</bcl:num>
+        <bcl:text>Despite subsection (1), in Ontario only the regulator may grant an exemption from this Instrument.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e387">
+        <bcl:num>3</bcl:num>
+        <bcl:text>Except in Alberta and Ontario, an exemption referred to in subsection (1) is granted under the statute referred to in Appendix B of National Instrument 14-101 <in:em>Definitions</in:em> opposite the name of the local jurisdiction.</bcl:text>
+      </bcl:subsection>
+    </bcl:section>
+    <bcl:schedule id="d2e398">
+      <bcl:scheduletitle>Appendix</bcl:scheduletitle>
+      <bcl:schedulesubtitle>to National Instrument 13-103 <in:em>System for Electronic Data Analysis and Retrieval + (SEDAR+)</in:em></bcl:schedulesubtitle>
+      <bcl:centertext>Securities legislation pursuant to which documents must not be transmitted through SEDAR+ (Paragraph 3 (i))</bcl:centertext>
+      <oasis:table style="2" id="d2e406">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>National and multilateral instruments pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Part 4A Registration and Part 4B Application to Become a Designated Rating Organization of Multilateral Instrument 11-102 <in:em>Passport System</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 21-101 <in:em>Marketplace Operation</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 23-101 <in:em>Trading Rules</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 23-102 <in:em>Use of Client Brokerage Commissions</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 23-103 <in:em>Electronic Trading and Direct Electronic Access to Marketplace</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 24-101 <in:em>Institutional Trade Matching and Settlement</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 24-102 <in:em>Clearing Agency Requirements</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 25-101 <in:em>Designated Rating Organizations</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 31-102 <in:em>National Registration Database</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 31-103 <in:em>Registration Requirements, Exemptions and Ongoing Registrant Obligations</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Multilateral Instrument 32-102 <in:em>Registration Exemptions for Non-Resident Investment Fund Managers</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 33-105 <in:em>Underwriting Conflicts</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 33-109 <in:em>Registration Information</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 35-101 <in:em>Conditional Exemption from Registration for United States Broker-Dealers and Agents</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Multilateral Instrument 45-108 <in:em>Crowdfunding</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing or delivering a document under section 15, section 16 or section 17<in:br/><in:br/> An issuer filing an application for an exemption under section 44</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 45-110 <in:em>Start-up Crowdfunding Registration and Prospectus Exemptions</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing a document under section 6<in:br/><in:br/> An issuer filing an application for an exemption under section 7</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 52-107 <in:em>Acceptable Accounting Principles and Auditing Standards</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an exemption under subsection 5.1 (1)</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 55-102 <in:em>System for Electronic Disclosure by Insiders (SEDI)</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an exemption under subsection 6.1 (1)</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 55-104 <in:em>Insider Reporting Requirements and Exemptions</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an exemption under subsection 10.1 (1)</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Multilateral Instrument 91-101 <in:em>Derivatives: Product Determination</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Multilateral Instrument 91-102 <in:em>Prohibition of Binary Options</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Multilateral Instrument 91-506 <in:em>Derivatives: Product Determination</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Multilateral Instrument 91-507 <in:em>Trade Repositories and Derivatives Data Reporting</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 94-101 <in:em>Mandatory Central Counterparty Clearing of Derivatives</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>National Instrument 94-102 <in:em>Derivatives: Customer Clearing and Protection of Customer Collateral and Positions</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Multilateral Instrument 96-101 <in:em>Trade Repositories and Derivatives Data Reporting</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e840">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>British Columbia securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption orders (Part 1) — section 3.1 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an order under section 3.1<in:br/><in:br/> An issuer required or permitted to file or deliver a document pursuant to an exemption order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designations (Part 1) — section 3.2 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person filing an application under paragraph 3.2 (1) (b) for an order that a person or a person within a class of persons is a mutual fund, a non-redeemable investment fund or a reporting issuer<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to a designation order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Benchmark Administrators, Clearing Agencies, Exchanges, Information Processors, Quotation and Trade Reporting Systems, Self-Regulatory Bodies and Trade Repositories (Part 4) — sections 23 — 33 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Registration (Part 5) — sections 34 — 41 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption order by commission or executive director (Part 6) — section 48 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person filing an application for an exemption from the prospectus requirement</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Trading in Derivatives (Part 8) — sections 58 — 60 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Initial and subsequent insider report — section 87 of the Securities Act R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption order by commission or executive director (Part 12) — section 91 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 91 for an exemption order other than an application for an exemption from the insider reporting requirement<in:br/><in:br/> An issuer required or permitted to file or deliver a document pursuant to an exemption order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing and inspection of records (Part 20) — section 169 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 169</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Discretion to revoke or vary decision (Part 20) — section 171 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 171<in:br/><in:br/> An issuer required or permitted to file or deliver a document pursuant to an order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Administrative powers respecting commission rules (Part 20) — section 187 of the <in:doc>Securities Act</in:doc> R.S.B.C. 1996, c 418</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 187<in:br/><in:br/> An issuer required or permitted to file or deliver a document pursuant to an order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e1054">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Alberta securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Form 4 Report by a Registered Owner of Securities Beneficially Owned by an Insider Under Section 183 of the <in:doc>Securities Act</in:doc> — section 17 of <in:doc>Alberta Securities Commission Rules</in:doc> (General)</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation orders — section 10 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 10</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Regulation, Recognition and Designation of Entities and Benchmarks — Part 4 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Surrender of registration — section 78 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Further Information — section 82 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Trading in Securities and Derivatives Generally — Part 7 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Discretionary exemptions — section 144 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company filing an application for relief from the prospectus requirement</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Applications to the Commission — section 179 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 179</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>General Exemption — section 213 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 213, other than a registrant<in:br/><in:br/> An issuer transmitting a document pursuant to a blanket order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Revoke or vary decisions — section 214 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 214</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing and confidentiality — section 221 of the <in:doc>Securities Act</in:doc> RSA 2000, c S-4</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 221</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Alberta Securities Commission Rule 13-501 <in:em>Fees</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing any of the following: 
+                  <in:br/>• an application under section 3 
+                  <in:br/>• Form 13-501F1 <in:em>Class 1 Reporting Issuers and Class 3B Reporting Issuers — Participation Fee</in:em><in:br/>• Form 13-501F2 <in:em>Class 2 Reporting Issuers — Participation Fee</in:em><in:br/>• Form 13-501F3 <in:em>Adjustment of Fee Payment for Class 2 Reporting Issuer</in:em><in:br/>• Form 13-501F4 <in:em>Class 3A Reporting Issuers — Participation Fee</in:em><in:br/>• Form 13-501F5 <in:em>Investment Fund — Participation Fee</in:em><in:br/>• Form 13-501F6 <in:em>Subsidiary Exemption Notice</in:em></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Alberta Securities Commission Rule 91-504 <in:em>Strip Bonds</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company filing an application for exemption under section 4.1, other than a person or company that is a registrant, or would be a registrant but for reliance on the rule</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Compensation fund or contingency trust fund — section 6 of <in:doc>Alberta Securities Commission Rules</in:doc> (General)</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Trading in Securities and Derivatives Generally — Part 4 of <in:doc>Alberta Securities Commission Rules</in:doc> (General)</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e1362">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Saskatchewan securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation — section 11.1 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an order pursuant to section 11.1</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Recognition of Entities (Part V) — sections 21-25 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation of Entities (Part V.1) of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Voluntary surrender of registration — section 29 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Trading in Securities and Derivatives (Part IX) of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Saskatchewan General Ruling/Order 91-906 <in:em>Strip Bonds</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company other than a registrant filing an application pursuant to Saskatchewan General Ruling/Order 91-906 Strip Bonds</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Order relieving reporting issuer of status as reporting issuer, section 92 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an order pursuant to section 92</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Applications to the Commission-section 101 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Part XVIII-Enforcement-section 135.6 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2 Financial compensation</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Order re exemption or declaration-section 83 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application pursuant to section 83</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing in other Jurisdictions-section 130 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application pursuant to section 130</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing and Inspection of material-section 152 (1) of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application pursuant to section 152</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Revoke or vary decisions-section 158 (3) of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application pursuant to section 158 (3)</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>General Exemption-section 160 of <in:doc>The Securities Act, 1988</in:doc> SS 1988-89, c S-42.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application pursuant to section 160</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e1626">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Manitoba securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption by commission — section 20 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 20</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Blanket Order — section 20 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company required or permitted to file or deliver a document through SEDAR pursuant to the blanket order.<in:br/><in:br/> An issuer required or permitted to file or deliver a document pursuant to the blanket order.</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Self-regulatory organizations (Part IV.1) — sections 31.1, 31.3 and 31.4 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Trade repositories and clearing agencies (Part IV.2) — sections 31.6, 31.11 and 31.12 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Trading in derivatives (Part VIII.1) — section 79.1 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designating a person or company as an insider — section 108.1 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company filing an application for an order that an issuer or class of issuers is, or is not, a mutual fund or a non-redeemable investment fund</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption and extension orders — section 116 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 116</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Audit oversight bodies (Part XX) — sections 204 and 206 of the <in:doc>Securities Act</in:doc> C.C.S.M. c.S50</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e1794">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Ontario securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Relieving orders — subsection 1 (10) of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an order under subsection 1 (10)</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation — subsection 1 (11) of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an order under subsection 1 (11)</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exchanges, alternative trading systems, self-regulatory organizations, clearing agencies, quotation and trade reporting systems, information processors — Part VIII of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Credit rating organizations — Part IX of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Benchmarks — Part X of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Registration — Part XI of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Disclosure of trade information to the Commission — subsection 36 (2) of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption order — subsection 74 (1) of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company filing an application for relief from the prospectus requirement<in:br/><in:br/> An issuer required or permitted to file or deliver a document pursuant to an exemption order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Insider reporting — section 107 of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Report of transfer by insider — section 109 of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing in other jurisdictions — section 121 of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 121</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing and inspection of material — section 140 of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 140</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Class order exemption — subsection 143.11 (2) of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company required or permitted to file or deliver a document through SEDAR pursuant to a class order<in:br/><in:br/> An issuer required or permitted to file or deliver a document pursuant to a class order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Revocation or variation of decision — section 144 of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 144</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption — section 147 of the <in:doc>Securities Act</in:doc>, RSO 1990, c S.5</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 147</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 11-501 <in:em>Electronic Delivery of Documents to the Ontario Securities Commission</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 13-502 <in:em>Fees</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing any of the following: 
+                  <in:br/>• Form 13-502F1 <in:em>Class 1 and Class 3B Reporting Issuers — Participation Fee</in:em><in:br/>• Form 13-502F2 <in:em>Class 2 Reporting Issuers — Participation Fee</in:em><in:br/>• Form 13-502F2A <in:em>Adjustment of Fee for Class 2 Reporting Issuers</in:em><in:br/>• Form 13-502F3A <in:em>Class 3A Reporting Issuers — Participation Fee</in:em><in:br/>• Form 13-502F6 <in:em>Subsidiary Exemption Notice</in:em><in:br/>• an application under section 8.1</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 31-505 <in:em>Conditions of Registration</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 32-501 <in:em>Direct Purchase Plans</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 32-505 <in:em>Conditional Exemption from Registration for United States Broker-Dealers and Advisers Servicing U.S. Clients from Ontario</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 35-502 <in:em>Non-Resident Advisers</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under OSC Rule 35-502</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 91-501 <in:em>Strip Bonds</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company other than a registrant filing an application under OSC Rule 91-501</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 91-502 <in:em>Trades in Recognized Options</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>OSC Rule 91-507 <in:em>Trade Repositories and Derivatives Data Reporting</in:em></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e2236">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Québec securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Insider reports — sections 89 to 98 of the <in:doc>Securities Act</in:doc>, CQLR, c. V-1.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Surrender of registration — section 153 of the <in:doc>Securities Act</in:doc>, CQLR, c. V-1.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Self-Regulatory Organizations, Securities Exchange or Clearing Activities, Credit rating Organization, Benchmarks and Benchmark Administrators — sections 169 to 186.6 of the <in:doc>Securities Act</in:doc>, CQLR, c. V-1.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption order by the Autorité des marchés financiers — section 263 of the <in:doc>Securities Act</in:doc>, CQLR, c. V-1.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an exemption<in:br/><in:br/> 
+                  A person filing an application for an exemption from the prospectus requirement<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to an exemption order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Blanket order by Autorité des marchés financiers — section 263 of the <in:doc>Securities Act</in:doc>, CQLR, c. V-1.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer required or permitted to file or deliver a document pursuant to a blanket order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation — section 272.2 of the <in:doc>Securities Act</in:doc>, CQLR, c. V-1.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person filing an application to be designated a non-redeemable investment fund, a mutual fund or a reporting issuer<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to a designation order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>
+                  <in:doc>Derivatives Act</in:doc>, CQLR, c. I-14.01</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>
+                  <in:doc>An Act Respecting the Regulation of the Financial Sector</in:doc>, CQLR, c. A-33.2</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e2402">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>New Brunswick securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designations — section 1.1 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application for an order under section 1.1 (1)<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to a designation order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Self-Regulated Organizations and other regulated entities — sections 35-39 of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption orders — section 44.02 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Further information — section 50 of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Surrender of registration — section 51 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption order — section 55 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person filing an application that also includes relief from the prospectus requirement</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Derivatives — section 70.5 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Prospectus and distribution — section 80 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person required or permitted to file or deliver a document through SEDAR pursuant to an exemption order<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to an exemption order.</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Continuous Disclosure — section 92 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 92 for an exemption from the insider reporting requirement<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to an exemption order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Insider trading and self-dealing — section 148 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person required or permitted to file or deliver a document through SEDAR pursuant to an exemption order<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to an exemption order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing and inspection of material — section 198 of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 198</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Powers to revoke or vary decision — section 205.1 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 205.1 (1)<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to an order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>General — Exemption order — section 208 (1) of the <in:doc>Securities Act</in:doc> SNB 2004, c S-5.5.</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 208 (1)<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to an order</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e2651">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Nova Scotia securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Recognition of self-regulatory organizations — section 30 of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation — section 30 A of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company filing an application under section 30 A to be designated a mutual fund, non-redeemable investment fund or reporting issuer</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation of credit rating agencies — sections 30 EA and 30 F of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Recognition of exchanges, quotation and trade reporting systems, clearing agencies, derivatives trading facilities, and derivative trade repositories — section 30 I of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation of benchmarks and benchmark administrators — sections 30 N and 30 O of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Voluntary surrender or suspension of registration — section 33 of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Discretionary exemptions — section 79 of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company filing an application for relief from the prospectus requirement</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Commission orders — section 98 of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 98</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Relieving orders — section 121 of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 121</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption Order — section 128 of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 128</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing and confidentiality — subsection 148 (2) of the Securities Act, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under subsection 148 (2)</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Revocation or variation of a decision — section 151 of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 151</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Discretionary exemptions — section 151A of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 151A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Blanket order — section 151A of the <in:doc>Securities Act</in:doc>, RSNS 1989, c. 418, as amended</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company required or permitted to file or deliver a document through SEDAR pursuant to the blanket order.<in:br/><in:br/> 
+                  An issuer required or permitted to file or deliver a document pursuant to the blanket order.</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e2914">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Prince Edward Island securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Recognition orders — sections 72 and 73 of the <in:doc>Securities Act</in:doc> Chapter S-3.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation orders — sections 6 and 71 of the <in:doc>Securities Act</in:doc> Chapter S-3.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Authorization orders — section 76 of the <in:doc>Securities Act</in:doc> Chapter S-3.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption orders — section 16 of the <in:doc>Securities Act</in:doc> Chapter S-3.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Superintendent orders — subsection 15 (1) of the <in:doc>Securities Act</in:doc> Chapter S-3.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Insider filings — subsection 104 (2) and section 105 of the <in:doc>Securities Act</in:doc> Chapter S-3.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exchanges and quotation and trade reporting systems — section 70 of the <in:doc>Securities Act</in:doc> Chapter S-3.1</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e3066">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Newfoundland and Labrador securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Trading in Securities Generally — Part XII of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemptions from Registration Requirements — Part XI of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>A person or company filing an application for relief from the prospectus requirement</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption — section 142.1 of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 142.1</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Surrender of registration — section 28 of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Self-regulation — Part VIII of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Investigations and Examinations — Part VI of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Applications to superintendent — section 93 of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 93</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Further information — section 32 of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Filing and inspection of material — section 140 of the <in:doc>Securities Act</in:doc> RSNL 1990, c S-13</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="left" valign="top">
+                <oasis:line>An issuer filing an application under section 140</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e3250">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Yukon securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Recognition orders — sections 72 and 73 of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation orders — sections 6 and 71 of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Authorization orders — section 76 of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption orders — section 16 of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Superintendent orders — subsection 15 (1) of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation of credit rating organizations — section 83.1 of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Insider filings — subsection 104 (2) and section 105 of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exchanges and quotation and trade reporting systems — section 70 of the <in:doc>Securities Act</in:doc> S.Y. 2007, c.16</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e3418">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Nunavut securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Recognition orders — sections 72 and 73 of the <in:doc>Securities Act</in:doc>, SNu 2008, c 12</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation orders — sections 6 and 71 of the <in:doc>Securities Act</in:doc>, SNu 2008, c 12</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Authorization orders — section 76 of the <in:doc>Securities Act</in:doc>, SNu 2008, c 12</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption orders — section 16 of the <in:doc>Securities Act</in:doc>, SNu 2008, c 12</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Superintendent orders — subsection 15 (1) of the <in:doc>Securities Act</in:doc>, SNu 2008, c 12</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation of credit rating organizations — section 83.1 of the <in:doc>Securities Act</in:doc>, SNu 2008, c 12</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Insider filings — subsection 104 (2) and section 105 of the <in:doc>Securities Act</in:doc>, SNu 2008, c 12</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <oasis:table style="2" id="d2e3570">
+        <oasis:tgroup cols="2">
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center" valign="top" width="700">
+                <oasis:line>Column A<in:br/><in:strong>Northwest Territories securities legislation pursuant to which documents<in:br/> must not be filed or delivered through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c1" align="center" valign="top" width="400">
+                <oasis:line>Column B<in:br/><in:strong>Exceptions to Column A: Filers who must file or<in:br/> deliver the document through SEDAR+</in:strong></oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Recognition orders — sections 72 and 73 of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation orders — sections 6 and 71 of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Authorization orders — section 76 of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exemption orders — section 16 of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Superintendent orders — subsection 15 (1) of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Designation of credit rating organizations — section 83.1 of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Insider filings — subsection 104 (2) and section 105 of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="left" valign="top">
+                <oasis:line>Exchanges and quotation and trade reporting systems — section 70 of the <in:doc>Securities Act</in:doc>, SNWT 2008, c. 10</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center" valign="top">
+                <oasis:line>N/A</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+    </bcl:schedule>
+    <reg:provisionsnote>[Provisions relevant to the enactment of this regulation: <bcl:link resource="leg" xlink:href="/legislation/96418_01" xlink:type="locator"><in:doc>Securities Act</in:doc></bcl:link>, R.S.B.C. 1996, c. 418, s. 184.]</reg:provisionsnote>
+  </reg:content>
+</reg:regulation>

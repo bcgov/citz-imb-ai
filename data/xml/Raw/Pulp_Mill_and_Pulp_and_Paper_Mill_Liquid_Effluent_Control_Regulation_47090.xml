@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This information is licensed under the Queen's Printer License of British Columbia found: www.bclaws.ca/standards/2014/QP-License_1.0.html. Please review the license terms carefully. --><reg:regulation xmlns:reg="http://www.gov.bc.ca/2013/legislation/regulation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:fun="http://www.bclaws.ca/xslt/functions" xmlns:act="http://www.gov.bc.ca/2013/legislation/act" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xsi:schemaLocation="http://www.gov.bc.ca/2013/legislation/regulation  http://standards.qp.gov.bc.ca/standards/2013/regulation_1.0.xsd" id="41_470_90">
+  <reg:amend regnum="106/91"/>
+  <reg:amend regnum="265/91"/>
+  <reg:amend regnum="13/92"/>
+  <reg:amend regnum="518/95"/>
+  <reg:amend regnum="188/2002"/>
+  <reg:amend effective="2004-07-08" regnum="321/2004" bullId="2004bull25" hasGreenSheet="no" added="2004-07-30"/>
+  <reg:amend effective="2018-04-01" regnum="46/2018" bullId="2018bull10" hasGreenSheet="no" added="2018-06-27"/>
+  <reg:regnum>470/90</reg:regnum>
+  <reg:oic>O.C. 1941/90</reg:oic>
+  <reg:deposited>December 13, 1990</reg:deposited>
+  <reg:acttitle>Environmental Management Act</reg:acttitle>
+  <reg:title>Pulp Mill and Pulp and Paper Mill Liquid Effluent Control Regulation</reg:title>
+  <reg:amsincluded>[includes amendments up to B.C. Reg. 46/2018, April 1, 2018]</reg:amsincluded>
+  <bcl:ccollect value="statreg_vsis_solo"/>
+  <reg:content>
+    <bcl:section id="d2e40">
+      <bcl:marginalnote>Interpretation</bcl:marginalnote>
+      <bcl:num>1</bcl:num>
+      <bcl:subsection id="d2e48">
+        <bcl:num>1</bcl:num>
+        <bcl:text>In this regulation:</bcl:text>
+        <bcl:definition id="d2e57">
+          <bcl:text>
+            <in:term>Act</in:term> means the <bcl:link resource="leg" xlink:href="/legislation/03053_00" xlink:type="locator"><in:doc>Environmental Management Act</in:doc></bcl:link>;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e69">
+          <bcl:text>
+            <in:term>ADt</in:term> means an air dry tonne of pulp product where the weight of the pulp product is corrected to reflect the weight that the pulp product would be if the pulp were composed of 10% water and 90% fibre;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e79">
+          <bcl:text>
+            <in:term>AOX</in:term> means halogenated organic compounds that are adsorbable by activated carbon;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e88">
+          <bcl:text>
+            <in:term>CBPROD</in:term> means, subject to subsection (2), the 90th percentile of the daily production rate of bleached pulp produced from an on-site bleach plant with the use of chlorine or chlorine compounds, or both chlorine and chlorine compounds, expressed as ADt, determined by the use of statistical methods, and using a period of time approved by a director for determination of the 90th percentile of the rate of chlorine or chlorine compound bleached pulp production;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e97">
+          <bcl:text>
+            <in:term>compliance sampling method</in:term> means the technique used to collect samples which are subsequently analyzed to determine if the effluent satisfies the quality standards established under sections 2, 3 and 6;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e106">
+          <bcl:text>
+            <in:term>EFF</in:term> means, subject to subsection (2), the 90th percentile of the rate of effluent, expressed as m<in:sup>3</in:sup>/day, including any sanitary effluent combined with process effluent, discharged from a pulp or paper or pulp and paper mill, determined by the use of statistical methods, and using a period of time approved by a director for determination of the 90th percentile of the rate of discharge of effluent;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e118">
+          <bcl:text>
+            <in:term>permittee</in:term> means a person who holds a permit issued under section 14 of the Act;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e127">
+          <bcl:text>
+            <in:term>phase I</in:term> means a compliance sampling period commencing on the date this regulation comes into force and expiring on the date that phase II commences;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e137">
+          <bcl:text>
+            <in:term>phase II</in:term> means a compliance sampling period commencing on a date specified in writing by the director;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e146">
+          <bcl:text>
+            <in:term>PROD</in:term> means, subject to subsection (2), the 90th percentile of the daily production rate of a pulp or paper or pulp and paper mill, expressed as ADt, determined by the use of statistical methods, and using a period of time approved by a director for determination of the 90th percentile of the rate of production;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e155">
+          <bcl:text>
+            <in:term>96 h LC50 toxicity</in:term> means the calculated concentration of effluent that is lethal to 50% of the test fish (rainbow trout (Oncorhynchus mykiss)) during a 96 hour exposure.</bcl:text>
+        </bcl:definition>
+      </bcl:subsection>
+      <bcl:subsection id="d2e164">
+        <bcl:num>2</bcl:num>
+        <bcl:text>If there is an insufficient number of days of production to perform a valid 90th percentile calculation of CBPROD, EFF or PROD, the director may use the mill's chlorine or chlorine compound bleached pulp production design figure, effluent flow design figure or production design figure respectively as values for CBPROD, EFF or PROD until such time as these parameters may be calculated in accordance with subsection (1).</bcl:text>
+      </bcl:subsection>
+      <bcl:hnote>[am. B.C. Regs. 13/92, s. 1; 321/2004, s. 25 (a) to (e).]</bcl:hnote>
+    </bcl:section>
+    <bcl:section id="d2e177">
+      <bcl:marginalnote>Prohibitions</bcl:marginalnote>
+      <bcl:num>2</bcl:num>
+      <bcl:subsection id="d2e185">
+        <bcl:num>1</bcl:num>
+        <bcl:text>A permittee that operates a bleached kraft pulp mill that uses chlorine or chlorine compounds to bleach the pulp shall not discharge effluent into the environment if the amount of AOX in the effluent exceeds the lesser of</bcl:text>
+        <bcl:paragraph id="d2e194">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a monthly average of 0.6 kg of AOX/ADt of pulp produced in the bleach plant, or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e203">
+          <bcl:num>b</bcl:num>
+          <bcl:text>the maximum AOX discharge rate, expressed in kg/ADt, authorized by a permit issued under section 14 of the Act.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+      <bcl:subsection id="d2e213">
+        <bcl:num>1.1</bcl:num>
+        <bcl:text>A permittee that operates a bleached sulphite pulp mill or pulp and paper mill that uses chlorine or chlorine compounds to bleach the pulp shall not discharge effluent into the environment if the amount of AOX in the effluent exceeds the lesser of</bcl:text>
+        <bcl:paragraph id="d2e222">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a monthly average of 1.0 kg of AOX/ADt of pulp produced in the bleach plant, or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e231">
+          <bcl:num>b</bcl:num>
+          <bcl:text>the maximum AOX discharge rate, expressed in kg/ADt, authorized by a permit issued under section 14 of the Act.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+      <bcl:subsection id="d2e240">
+        <bcl:num>2</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 321/2004, s. 25 (f).]</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e249">
+        <bcl:num>3</bcl:num>
+        <bcl:text>No permittee shall discharge effluent into the environment from an operation that produces pulp or paper unless the quality of the effluent is equal to or better than the quality requirement specified in Column 3 of Schedule 2.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e258">
+        <bcl:num>4</bcl:num>
+        <bcl:text>
+          Subsection (3) does not apply to the pulp and paper mill operations at Port Alberni existing on July 6, 2004 or to the pulp mill operation at Port Alice existing on July 6, 2004.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e268">
+        <bcl:num>5</bcl:num>
+        <bcl:text>The pulp and paper mill operations at Port Alberni existing on July 6, 2004 shall not discharge effluent into the environment from those operations unless the quality of the effluent is equal to or better than the quality requirement in Column 4 of Schedule 2.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e277">
+        <bcl:num>6</bcl:num>
+        <bcl:text>The pulp mill operation at Port Alice existing on July 6, 2004 shall not discharge effluent into the environment from that operation unless the quality of the effluent is equal to or better than the quality requirement in Column 5 of Schedule 2.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e286">
+        <bcl:num>7) to (9</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 188/2002, s. 1 (c).]</bcl:text>
+      </bcl:subsection>
+      <bcl:hnote>[am. B.C. Regs. 13/92, s. 2; 188/2002, s. 1; 321/2004, s. 25 (d) and (f).]</bcl:hnote>
+    </bcl:section>
+    <bcl:section id="d2e299">
+      <bcl:marginalnote>Sampling methods for compliance determination</bcl:marginalnote>
+      <bcl:num>3</bcl:num>
+      <bcl:subsection id="d2e307">
+        <bcl:num>1</bcl:num>
+        <bcl:text>The compliance sampling method used to determine the effluent flow rate and temperature shall be as specified in writing by a director.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e316">
+        <bcl:num>2</bcl:num>
+        <bcl:text>The compliance sampling method used to provide an effluent sample for determination of the 96 h LC50 toxicity shall consist of a grab sample.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e325">
+        <bcl:num>3</bcl:num>
+        <bcl:text>The compliance sampling method used to provide effluent samples for determination of the 5 day biochemical oxygen demand (BOD<in:sub>5</in:sub>), the total suspended solids (TSS) and the AOX during phase I shall consist of collecting an effluent sample during a period of 24 hours by taking</bcl:text>
+        <bcl:paragraph id="d2e338">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a continuous sample of the effluent being discharged from each effluent outfall,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e347">
+          <bcl:num>b</bcl:num>
+          <bcl:text>a composite of equal samples from each effluent outfall at least every 15 minutes, or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e356">
+          <bcl:num>c</bcl:num>
+          <bcl:text>a composite of samples from each effluent outfall at least every 15 minutes in an amount proportionate to the amount of the effluent.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+      <bcl:subsection id="d2e365">
+        <bcl:num>4</bcl:num>
+        <bcl:text>The compliance sampling method used to provide effluent samples for determination of BOD<in:sub>5</in:sub>, TSS and AOX during phase II shall be as specified in writing by the director.</bcl:text>
+      </bcl:subsection>
+      <bcl:hnote>[am. B.C. Reg. 321/2004, s. 25 (b).]</bcl:hnote>
+    </bcl:section>
+    <bcl:section id="d2e381">
+      <bcl:marginalnote>Repealed</bcl:marginalnote>
+      <bcl:num>4</bcl:num>
+      <bcl:text>Repealed. [B.C. Reg. 321/2004, s. 25 (g).]</bcl:text>
+    </bcl:section>
+    <bcl:section id="d2e393">
+      <bcl:marginalnote>Sampling and reporting schedule</bcl:marginalnote>
+      <bcl:num>5</bcl:num>
+      <bcl:subsection id="d2e401">
+        <bcl:num>1</bcl:num>
+        <bcl:text>In accordance with section 3, each permittee that produces pulp or paper shall sample each effluent outfall at the following minimum frequencies:</bcl:text>
+        <bcl:paragraph id="d2e410">
+          <bcl:num>a</bcl:num>
+          <bcl:text>5 times per week for TSS;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e419">
+          <bcl:num>b</bcl:num>
+          <bcl:text>3 times per week for BOD<in:sub>5</in:sub>;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e432">
+          <bcl:num>c</bcl:num>
+          <bcl:text>for a pulp mill that bleaches pulp with chlorine or a chlorine compound, once a week for AOX;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e441">
+          <bcl:num>d</bcl:num>
+          <bcl:text>once per month for toxicity;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e450">
+          <bcl:num>e</bcl:num>
+          <bcl:text>continuous or daily grab for temperature;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e459">
+          <bcl:num>f</bcl:num>
+          <bcl:text>daily for flow.</bcl:text>
+        </bcl:paragraph>
+      </bcl:subsection>
+      <bcl:subsection id="d2e468">
+        <bcl:num>2) and (3</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 321/2004, s. 25 (g).]</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e477">
+        <bcl:num>4</bcl:num>
+        <bcl:text>A director may specify an alternate sampling schedule for non-process effluent outfalls to replace the requirements outlined in subsection (1).</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e487">
+        <bcl:num>5</bcl:num>
+        <bcl:text>Each permittee must submit to a director monitoring data collected under subsection (1) or  (4) within 30 days of the end of the month in which the data is collected.</bcl:text>
+      </bcl:subsection>
+      <bcl:hnote>[am. B.C. Regs. 13/92, s. 4; 188/2002, s. 2; 321/2004, s. 25 (e) and (g) to (j).]</bcl:hnote>
+    </bcl:section>
+    <bcl:section id="d2e501">
+      <bcl:marginalnote>Waiver</bcl:marginalnote>
+      <bcl:num>6</bcl:num>
+      <bcl:subsection id="d2e509">
+        <bcl:num>1</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 321/2004, s. 25 (g).]</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e518">
+        <bcl:num>2</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 13/92, s. 5.]</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e527">
+        <bcl:num>3</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 321/2004, s. 25 (g).]</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e537">
+        <bcl:num>4</bcl:num>
+        <bcl:text>If, in the opinion of a director, a permittee is unable to comply with a requirement of this regulation because of</bcl:text>
+        <bcl:paragraph id="d2e546">
+          <bcl:num>a</bcl:num>
+          <bcl:text>an act of God or natural disaster,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e555">
+          <bcl:num>b</bcl:num>
+          <bcl:text>an act of war, terrorism or vandalism,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e564">
+          <bcl:num>c</bcl:num>
+          <bcl:text>a labour dispute or work stoppage, or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e573">
+          <bcl:num>d</bcl:num>
+          <bcl:text>an unforeseen mechanical breakdown,</bcl:text>
+        </bcl:paragraph>
+        <bcl:text>the director may, in writing, grant a waiver from all or part of this regulation for a period not exceeding 90 days.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e586">
+        <bcl:num>5</bcl:num>
+        <bcl:text>The power under subsection (4) may be exercised only once in respect of the same incident.</bcl:text>
+      </bcl:subsection>
+      <bcl:hnote>[am. B.C. Regs. 13/92, s. 5; 321/2004, s. 25 (e), (g) and (k).]</bcl:hnote>
+    </bcl:section>
+    <bcl:section id="d2e599">
+      <bcl:marginalnote>Compliance</bcl:marginalnote>
+      <bcl:num>7</bcl:num>
+      <bcl:text>Analytical and arithmetic methods used to evaluate compliance with the requirements of this regulation shall be approved by the director.</bcl:text>
+    </bcl:section>
+    <bcl:section id="d2e611">
+      <bcl:marginalnote>Repealed</bcl:marginalnote>
+      <bcl:num>8–8.1</bcl:num>
+      <bcl:text>Repealed. [B.C. Reg. 188/2002, s. 3.]</bcl:text>
+    </bcl:section>
+    <bcl:section id="d2e623">
+      <bcl:marginalnote>Offence and penalty</bcl:marginalnote>
+      <bcl:num>9</bcl:num>
+      <bcl:subsection id="d2e631">
+        <bcl:num>1</bcl:num>
+        <bcl:text>A person who contravenes section 3 or 5 (1) or (4) commits an offence and is liable to a penalty not exceeding $200 000.</bcl:text>
+      </bcl:subsection>
+      <bcl:subsection id="d2e640">
+        <bcl:num>2</bcl:num>
+        <bcl:text>A person who, with intent to mislead, submits false monitoring data under section 5 (5) commits an offence and is liable to a penalty not exceeding $200 000.</bcl:text>
+      </bcl:subsection>
+      <bcl:hnote>[am. B.C. Regs. 188/2002, s. 4; 321/2004, s. 25 (l).]</bcl:hnote>
+    </bcl:section>
+    <bcl:section id="d2e653">
+      <bcl:marginalnote>Annual charges</bcl:marginalnote>
+      <bcl:num>10</bcl:num>
+      <bcl:text>For the purpose of calculating the annual charge under the Permit and Approval Fees and Charges Regulation, B.C. Reg. 299/92, the maximum authorized discharge rate and concentration is the following:</bcl:text>
+      <bcl:paragraph id="d2e664">
+        <bcl:num>a</bcl:num>
+        <bcl:text>for a bleached kraft pulp mill, the lesser of</bcl:text>
+        <bcl:subparagraph id="d2e673">
+          <bcl:num>i</bcl:num>
+          <bcl:text>0.6 kg of AOX/ADt, or</bcl:text>
+        </bcl:subparagraph>
+        <bcl:subparagraph id="d2e683">
+          <bcl:num>ii</bcl:num>
+          <bcl:text>the maximum AOX discharge rate, expressed in kg/ADt, authorized by a permit issued under section 14 of the Act;</bcl:text>
+        </bcl:subparagraph>
+      </bcl:paragraph>
+      <bcl:paragraph id="d2e692">
+        <bcl:num>b</bcl:num>
+        <bcl:text>for a bleached sulphite pulp mill, the lesser of</bcl:text>
+        <bcl:subparagraph id="d2e701">
+          <bcl:num>i</bcl:num>
+          <bcl:text>1.0 kg of AOX/ADt, or</bcl:text>
+        </bcl:subparagraph>
+        <bcl:subparagraph id="d2e710">
+          <bcl:num>ii</bcl:num>
+          <bcl:text>the maximum AOX discharge rate, expressed in kg/ADt, authorized by a permit issued under section 14 of the Act.</bcl:text>
+        </bcl:subparagraph>
+      </bcl:paragraph>
+      <bcl:hnote>[en. B.C. Reg 188/2002, s. 5; am. B.C. Regs. 321/2004, s. 25 (d) and (m); 46/2018, App. 3, s. 6.]</bcl:hnote>
+    </bcl:section>
+    <bcl:schedule id="d0e759">
+      <bcl:scheduletitle>Schedule 1</bcl:scheduletitle>
+      <bcl:centertext>Repealed. [B.C. Reg. 321/2004, s. 25 (n).]</bcl:centertext>
+    </bcl:schedule>
+    <bcl:schedule id="d0e768">
+      <bcl:scheduletitle>Schedule 2</bcl:scheduletitle>
+      <bcl:centertext>
+        <in:em>(Section 2)</in:em>
+      </bcl:centertext>
+      <bcl:centertext>[en. B.C. Reg. 518/95; am. B.C. Reg. 321/2004, s. 25 (o).]</bcl:centertext>
+      <oasis:table style="2" id="d0e782">
+        <oasis:tgroup cols="8" width="660">
+          <oasis:colspec colname="c1" colnum="1" align="center" border="1"/>
+          <oasis:colspec colname="c2" colnum="2" align="center" border="1"/>
+          <oasis:colspec colname="c3" colnum="3" align="center" border="1"/>
+          <oasis:colspec colname="c4" colnum="4" align="center" border="1"/>
+          <oasis:colspec colname="c5" colnum="5" align="center" border="1"/>
+          <oasis:colspec colname="c6" colnum="6" align="center" border="1"/>
+          <oasis:colspec colname="c7" colnum="7" align="center" border="1"/>
+          <oasis:colspec colname="c8" colnum="8" align="center" border="1"/>
+          <oasis:thead>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center">
+                <oasis:line>
+                  <in:strong>Column 1</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center">
+                <oasis:line>
+                  <in:strong>Column 2</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" namest="1" nameend="2" align="center" colspan="2">
+                <oasis:line>
+                  <in:strong>Column 3<in:br/> Quality Requirements</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" namest="1" nameend="2" align="center" colspan="2">
+                <oasis:line>
+                  <in:strong>Column 4 — Special<in:br/> Quality Requirements<in:br/>— Port Alberni</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" namest="1" nameend="2" align="center" colspan="2">
+                <oasis:line>
+                  <in:strong>Column 5 — Special<in:br/> Quality Requirements<in:br/>— Port Alice</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1" align="center">
+                <oasis:line>
+                  <in:strong>Characteristic</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2" align="center">
+                <oasis:line>
+                  <in:strong>Units</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3" align="center">
+                <oasis:line>
+                  <in:strong>Monthly Average*</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4" align="center">
+                <oasis:line>
+                  <in:strong>Daily Max.</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5" align="center">
+                <oasis:line>
+                  <in:strong>Monthly Average*</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6" align="center">
+                <oasis:line>
+                  <in:strong>Daily Max.</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7" align="center">
+                <oasis:line>
+                  <in:strong>Monthly Average*</in:strong>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8" align="center">
+                <oasis:line>
+                  <in:strong>Daily Max.</in:strong>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:thead>
+          <oasis:tbody>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>TSS</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>mg/l</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e958">
+                    <oasis:tgroup cols="5">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:colspec colname="c4" colnum="4" align="center" border="0"/>
+                      <oasis:colspec colname="c5" colnum="5" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" rowspan="3">
+                            <oasis:line>11.25</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line>  x  </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center">
+                            <oasis:line>
+                              <in:em>PROD</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c4" align="center" rowspan="3">
+                            <oasis:line>  x  </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c5" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1042">
+                    <oasis:tgroup cols="5">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:colspec colname="c4" colnum="4" align="center" border="0"/>
+                      <oasis:colspec colname="c5" colnum="5" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" rowspan="3">
+                            <oasis:line>18.75</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center">
+                            <oasis:line>
+                              <in:em>PROD</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c4" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c5" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1126">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>6092</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1191">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>10154</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1256">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>16200</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1321">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>27300</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>BOD<in:sub>5</in:sub></oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>mg/l</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1403">
+                    <oasis:tgroup cols="5">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:colspec colname="c4" colnum="4" align="center" border="0"/>
+                      <oasis:colspec colname="c5" colnum="5" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" rowspan="3">
+                            <oasis:line>7.5</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center">
+                            <oasis:line>
+                              <in:em>PROD</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c4" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c5" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1487">
+                    <oasis:tgroup cols="5">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:colspec colname="c4" colnum="4" align="center" border="0"/>
+                      <oasis:colspec colname="c5" colnum="5" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" rowspan="3">
+                            <oasis:line>7.5</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center">
+                            <oasis:line>
+                              <in:em>PROD</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c4" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c5" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1571">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>3385</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1636">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>5641</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1701">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>3635</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line>
+                  <oasis:table style="1" id="d0e1766">
+                    <oasis:tgroup cols="3">
+                      <oasis:colspec colname="c1" colnum="1" align="center" border="0"/>
+                      <oasis:colspec colname="c2" colnum="2" align="center" border="0"/>
+                      <oasis:colspec colname="c3" colnum="3" align="center" border="0"/>
+                      <oasis:tbody>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>7270</oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c2" align="center" rowspan="3">
+                            <oasis:line> x </oasis:line>
+                          </oasis:entry>
+                          <oasis:entry colname="c3" align="center" rowspan="3">
+                            <oasis:line>1000</oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center" width="50">
+                            <oasis:line>
+                              <in:hr/>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                        <oasis:trow>
+                          <oasis:entry colname="c1" align="center">
+                            <oasis:line>
+                              <in:em>EFF</in:em>
+                            </oasis:line>
+                          </oasis:entry>
+                        </oasis:trow>
+                      </oasis:tbody>
+                    </oasis:tgroup>
+                  </oasis:table>
+                </oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+            <oasis:trow>
+              <oasis:entry colname="c1">
+                <oasis:line>Acute Toxicity:<in:br/> 96 h LC50 toxicity</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c2">
+                <oasis:line>% effluent volume</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c3">
+                <oasis:line>100%</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c4">
+                <oasis:line>100%</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c5">
+                <oasis:line>100%</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c6">
+                <oasis:line>100%</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c7">
+                <oasis:line>100%</oasis:line>
+              </oasis:entry>
+              <oasis:entry colname="c8">
+                <oasis:line>100%</oasis:line>
+              </oasis:entry>
+            </oasis:trow>
+          </oasis:tbody>
+        </oasis:tgroup>
+      </oasis:table>
+      <bcl:lefttext>* Monthly average value is the arithmetic average of the test values collected during the calendar month.</bcl:lefttext>
+    </bcl:schedule>
+    <bcl:schedule id="d0e1888">
+      <bcl:scheduletitle>Schedule 3</bcl:scheduletitle>
+      <bcl:centertext>Repealed. [B.C. Reg. 321/2004, s. 25 (n).]</bcl:centertext>
+    </bcl:schedule>
+  </reg:content>
+</reg:regulation>

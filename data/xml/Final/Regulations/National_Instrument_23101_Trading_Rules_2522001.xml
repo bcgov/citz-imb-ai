@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This information is licensed under the Queen's Printer License of British Columbia found: www.bclaws.ca/standards/2014/QP-License_1.0.html. Please review the license terms carefully. --><reg:regulation xmlns:reg="http://www.gov.bc.ca/2013/legislation/regulation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:fun="http://www.bclaws.ca/xslt/functions" xmlns:act="http://www.gov.bc.ca/2013/legislation/act" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xsi:schemaLocation="http://www.gov.bc.ca/2013/legislation/regulation  http://standards.qp.gov.bc.ca/standards/2013/regulation_1.0.xsd" id="252_2001_00">
+  <reg:amend regnum="492/2003"/>
+  <reg:amend added="2007-04-04" effective="2007-03-01" regnum="48/2007"/>
+  <reg:amend added="2008-10-09" effective="2008-09-12" regnum="250/2008"/>
+  <reg:amend added="2010-02-11" effective="2010-01-28" regnum="31/2010"/>
+  <reg:amend added="2011-03-21" effective="2011-02-01" regnum="31/2010"/>
+  <reg:amend effective="2012-07-06" regnum="201/2012" bullId="2012bull26" hasGreenSheet="no" added="2013-05-24"/>
+  <reg:amend effective="2013-05-31" regnum="179/2013" bullId="2013bull17" hasGreenSheet="no" added="2013-10-28"/>
+  <reg:amend effective="2015-10-01" regnum="179/2015" bullId="2015bull32" hasGreenSheet="no" added="2016-02-23"/>
+  <reg:amend effective="2016-07-06" regnum="163/2016" bullId="2016bull23" hasGreenSheet="no" added="2016-08-02"/>
+  <reg:amend effective="2016-10-01" regnum="163/2016" bullId="2016bull23" hasGreenSheet="no" added="2016-09-30"/>
+  <reg:amend effective="2017-04-10" regnum="134/2017" bullId="2017bull11" hasGreenSheet="no" added="2017-05-15"/>
+  <reg:regnum>252/2001</reg:regnum>
+  <reg:oic>British Columbia Securities Commission</reg:oic>
+  <reg:deposited>October 29, 2001</reg:deposited>
+  <reg:effective>December 1, 2001</reg:effective>
+  <reg:acttitle>Securities Act</reg:acttitle>
+  <reg:title>National Instrument 23-101 <in:br/><in:em>Trading Rules</in:em></reg:title>
+  <reg:amsincluded>[includes amendments up to B.C. Reg. 134/2017, April 10, 2017]</reg:amsincluded>
+  <reg:regpitid>252_2001_pit</reg:regpitid>
+  <reg:content>
+    <bcl:part id="d2e49">
+      <bcl:num>1</bcl:num>
+      <bcl:text>Definition and Interpretation</bcl:text>
+      <bcl:section id="d2e58">
+        <bcl:marginalnote>Definition</bcl:marginalnote>
+        <bcl:num>1.1</bcl:num>
+        <bcl:text>In this Instrument</bcl:text>
+        <bcl:definition id="d2e69">
+          <bcl:text>
+            <in:term>automated trading functionality</in:term> means the ability to</bcl:text>
+          <bcl:paragraph id="d2e78">
+            <bcl:num>a</bcl:num>
+            <bcl:text>immediately allow an incoming order that has been entered on the marketplace electronically to be marked as immediate-or-cancel;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e88">
+            <bcl:num>b</bcl:num>
+            <bcl:text>immediately and automatically execute an order marked as immediate-or-cancel against the displayed volume;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e97">
+            <bcl:num>c</bcl:num>
+            <bcl:text>immediately and automatically cancel any unexecuted portion of an order marked as immediate-or-cancel without routing the order elsewhere;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e106">
+            <bcl:num>d</bcl:num>
+            <bcl:text>immediately and automatically transmit a response to the sender of an order marked as immediate-or-cancel indicating the action taken with respect to the order; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e115">
+            <bcl:num>e</bcl:num>
+            <bcl:text>immediately and automatically display information that updates the displayed orders on the marketplace to reflect any change to their material terms;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e124">
+          <bcl:text>
+            <in:term>best execution</in:term> means the most advantageous execution terms reasonably available under the circumstances;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e133">
+          <bcl:text>
+            <in:term>calculated-price order</in:term> means an order for the purchase or sale of an exchange-traded security, other than an option, that is entered on a marketplace and for which the price of the security</bcl:text>
+          <bcl:paragraph id="d2e143">
+            <bcl:num>a</bcl:num>
+            <bcl:text>is not known at the time of order entry; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e152">
+            <bcl:num>b</bcl:num>
+            <bcl:text>is not based, directly or indirectly, on the quoted price of an exchange-traded security at the time the commitment to execute the order was made;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e161">
+          <bcl:text>
+            <in:term>closing-price order</in:term> means an order for the purchase or sale of an exchange-traded security, other than an option, that is</bcl:text>
+          <bcl:paragraph id="d2e170">
+            <bcl:num>a</bcl:num>
+            <bcl:text>entered on a marketplace on a trading day; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e179">
+            <bcl:num>b</bcl:num>
+            <bcl:text>subject to the conditions that</bcl:text>
+            <bcl:subparagraph id="d2e188">
+              <bcl:num>i</bcl:num>
+              <bcl:text>the order be executed at the closing sale price of that security on that marketplace for that trading day; and</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e198">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>the order be executed subsequent to the establishment of the closing price;</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e207">
+          <bcl:text>
+            <in:term>directed-action order</in:term> means an order for the purchase or sale of an exchange-traded security, other than an option, that,</bcl:text>
+          <bcl:paragraph id="d2e216">
+            <bcl:num>a</bcl:num>
+            <bcl:text>when entered on or routed to a marketplace, is to be immediately</bcl:text>
+            <bcl:subparagraph id="d2e225">
+              <bcl:num>i</bcl:num>
+              <bcl:text>executed against a displayed order with any remainder to be booked or cancelled; or</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e234">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>placed in an order book;</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e243">
+            <bcl:num>b</bcl:num>
+            <bcl:text>is marked as a directed-action order; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e253">
+            <bcl:num>c</bcl:num>
+            <bcl:text>is entered on or routed to a marketplace</bcl:text>
+            <bcl:subparagraph id="d0e256">
+              <bcl:num>i</bcl:num>
+              <bcl:text>to execute against a best-priced displayed order, or</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d0e265">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>at the same time that another order is entered on or routed to a marketplace to execute against any protected order with a better price than the entered or routed order;</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e262">
+          <bcl:text>
+            <in:term>NI 21-101</in:term> means National Instrument 21-101 <in:em>Marketplace Operation</in:em>;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e274">
+          <bcl:text>
+            <in:term>non-standard order</in:term> means an order for the purchase or sale of an exchange-traded security, other than an option, that is entered on a marketplace and is subject to non-standardized terms or conditions related to settlement that have not been set by the marketplace on which the security is listed or quoted;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e283">
+          <bcl:text>
+            <in:term>protected bid</in:term> means a bid for an exchange-traded security, other than an option</bcl:text>
+          <bcl:paragraph id="d2e292">
+            <bcl:num>a</bcl:num>
+            <bcl:text>that is displayed on a marketplace that provides automated trading functionality and</bcl:text>
+            <bcl:subparagraph id="d0e315">
+              <bcl:num>i</bcl:num>
+              <bcl:text>the marketplace meets or exceeds the market share threshold as set for the purposes of this definition by the regulator, or in Qu<in:eacute/>bec, the securities regulatory authority; or</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d0e326">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>if the marketplace is a recognized exchange, the bid is for a security listed by and traded on that recognized exchange; and</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e301">
+            <bcl:num>b</bcl:num>
+            <bcl:text>about which information is required to be provided pursuant to Part 7 of NI 21-101 to an information processor or, if there is no information processor, to an information vendor that meets the standards set by a regulation services provider;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e311">
+          <bcl:text>
+            <in:term>protected offer</in:term> means an offer for an exchange-traded security, other than an option,</bcl:text>
+          <bcl:paragraph id="d2e320">
+            <bcl:num>a</bcl:num>
+            <bcl:text>that is displayed on a marketplace that provides automated trading functionality and</bcl:text>
+            <bcl:subparagraph id="d0e362">
+              <bcl:num>i</bcl:num>
+              <bcl:text>the marketplace meets or exceeds the market share threshold as set for the purposes of this definition by the regulator, or in Qu<in:eacute/>bec, the securities regulatory authority; or</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d0e373">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>if the marketplace is a recognized exchange, the offer is for a security listed by and traded on that recognized exchange; and</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e329">
+            <bcl:num>b</bcl:num>
+            <bcl:text>about which information is required to be provided pursuant to Part 7 of NI 21-101 to an information processor or, if there is no information processor, to an information vendor that meets the standards set by a regulation services provider;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e338">
+          <bcl:text>
+            <in:term>protected order</in:term> means a protected bid or protected offer;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d2e347">
+          <bcl:text>
+            <in:term>trade-through</in:term> means the execution of an order at a price that is,</bcl:text>
+          <bcl:paragraph id="d2e356">
+            <bcl:num>a</bcl:num>
+            <bcl:text>in the case of a purchase, higher than any protected offer, or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e366">
+            <bcl:num>b</bcl:num>
+            <bcl:text>in the case of a sale, lower than any protected bid.</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:hnote>[am. B.C. Regs. 250/2008, Sch. B, s. 1; 31/2010, Sch. B, s. 1 and Sch. C, s. 1; 163/2016, Sch. A, s. 2 and Sch. B, s. 2.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e379">
+        <bcl:marginalnote>Interpretation — NI 21-101</bcl:marginalnote>
+        <bcl:num>1.2</bcl:num>
+        <bcl:text>Terms defined or interpreted in NI 21-101 and used in this Instrument have the respective meanings ascribed to them in NI 21-101.</bcl:text>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e391">
+      <bcl:num>2</bcl:num>
+      <bcl:text>Application of this Instrument</bcl:text>
+      <bcl:section id="d2e400">
+        <bcl:marginalnote>Application of this Instrument</bcl:marginalnote>
+        <bcl:num>2.1</bcl:num>
+        <bcl:text>A person or company is exempt from subsection 3.1 (1) and Parts 4 and 5 if the person or company complies with similar requirements established by</bcl:text>
+        <bcl:paragraph id="d2e411">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a recognized exchange that monitors and enforces the requirements set under subsection 7.1 (1) directly;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e420">
+          <bcl:num>b</bcl:num>
+          <bcl:text>a recognized quotation and trade reporting system that monitors and enforces requirements set under subsection 7.3 (1) directly; or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e430">
+          <bcl:num>c</bcl:num>
+          <bcl:text>a regulation services provider.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[am. B.C. Reg. 492/2003, s. 2.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e444">
+      <bcl:num>3</bcl:num>
+      <bcl:text>Manipulation and Fraud</bcl:text>
+      <bcl:section id="d2e453">
+        <bcl:marginalnote>Manipulation and fraud</bcl:marginalnote>
+        <bcl:num>3.1</bcl:num>
+        <bcl:subsection id="d2e461">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A person or company must not, directly or indirectly, engage in, or participate in any transaction or series of transactions, or method of trading relating to a trade in or acquisition of a security or any act, practice or course of conduct, if the person or company knows, or ought reasonably to know, that the transaction or series of transactions, or method of trading or act, practice or course of conduct</bcl:text>
+          <bcl:paragraph id="d2e470">
+            <bcl:num>a</bcl:num>
+            <bcl:text>results in or contributes to a misleading appearance of trading activity in, or an artificial price for, a security or a derivative of that security; or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e479">
+            <bcl:num>b</bcl:num>
+            <bcl:text>perpetrates a fraud on any person or company.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e489">
+          <bcl:num>2</bcl:num>
+          <bcl:text>In Alberta, British Columbia, Ontario, Québec and Saskatchewan, instead of subsection (1), the provisions of the <in:doc>Securities Act</in:doc> (Alberta), the <bcl:link resource="leg" xlink:href="/legislation/96418_01" xlink:type="locator"><in:doc>Securities Act</in:doc></bcl:link> (British Columbia), the <in:doc>Securities Act</in:doc> (Ontario), the <in:doc>Securities Act</in:doc> and the <in:doc>Derivatives Act</in:doc> (Québec) and <in:doc>The Securities Act</in:doc>, 1988 (Saskatchewan), respectively, relating to manipulation and fraud apply.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Regs. 48/2007, Sch. B, s. 2; 31/2010, Sch. B, s. 2; 179/2015, Sch. B, s. 2.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e521">
+      <bcl:num>4</bcl:num>
+      <bcl:text>Best Execution</bcl:text>
+      <bcl:section id="d2e530">
+        <bcl:marginalnote>Application of this Part</bcl:marginalnote>
+        <bcl:num>4.1</bcl:num>
+        <bcl:text>This Part does not apply to a dealer that is carrying on business as an ATS in compliance with section 6.1 of NI 21-101.</bcl:text>
+      </bcl:section>
+      <bcl:section id="d2e542">
+        <bcl:marginalnote>Best execution</bcl:marginalnote>
+        <bcl:num>4.2</bcl:num>
+        <bcl:text>A dealer and an adviser must make reasonable efforts to achieve best execution when acting for a client.</bcl:text>
+        <bcl:hnote>[en. B.C. Reg. 250/2008, Sch. B, s. 2.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e557">
+        <bcl:marginalnote>Order and trade information</bcl:marginalnote>
+        <bcl:num>4.3</bcl:num>
+        <bcl:text>To satisfy the requirements in section 4.2, a dealer or adviser must make reasonable efforts to use facilities providing information regarding orders and trades.</bcl:text>
+        <bcl:hnote>[en. B.C. Reg. 250/2008, Sch. B, s. 3; am. B.C. Reg. 179/2015, Sch. B, s. 2.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e573">
+      <bcl:num>5</bcl:num>
+      <bcl:text>Regulatory Halts</bcl:text>
+      <bcl:section id="d2e582">
+        <bcl:marginalnote>Regulatory halts</bcl:marginalnote>
+        <bcl:num>5.1</bcl:num>
+        <bcl:text>If a regulation services provider, a recognized exchange, recognized quotation and trade reporting system or an exchange or quotation and trade reporting system that has been recognized for the purposes of this Instrument and NI 21-101 makes a decision to prohibit trading in a particular security for a regulatory purpose, a person or company must not execute a trade for the purchase or sale of that security during the period in which the prohibition is in place.</bcl:text>
+        <bcl:hnote>[am. B.C. Regs. 250/2008, Sch. B, s. 4; 179/2015, Sch. B, s. 3.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e597">
+      <bcl:num>6</bcl:num>
+      <bcl:text>Order Protection</bcl:text>
+      <bcl:section id="d2e606">
+        <bcl:marginalnote>Marketplace requirements for order protection</bcl:marginalnote>
+        <bcl:num>6.1</bcl:num>
+        <bcl:subsection id="d2e614">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace must establish, maintain and ensure compliance with written policies and procedures that are reasonably designed</bcl:text>
+          <bcl:paragraph id="d2e623">
+            <bcl:num>a</bcl:num>
+            <bcl:text>to prevent trade-throughs on that marketplace other than the trade-throughs referred to in section 6.2; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e632">
+            <bcl:num>b</bcl:num>
+            <bcl:text>to ensure that the marketplace, when executing a transaction that results in a trade-through referred to in section 6.2, is doing so in compliance with this Part.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e642">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A marketplace must regularly review and monitor the effectiveness of the policies and procedures required under subsection (1) and must promptly remedy any deficiencies in those policies and procedures.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e651">
+          <bcl:num>3</bcl:num>
+          <bcl:text>At least 45 days before implementation, a marketplace must file with the securities regulatory authority and, if applicable, its regulation services provider the policies and procedures, and any significant changes to those policies and procedures, established under subsection (1).</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 31/2010, Sch. C, s. 2; am. B.C. Reg. 179/2015, Sch. B, s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e664">
+        <bcl:marginalnote>List of trade-throughs</bcl:marginalnote>
+        <bcl:num>6.2</bcl:num>
+        <bcl:text>For the purposes of paragraph 6.1 (1) (a), the permitted trade-throughs are:</bcl:text>
+        <bcl:paragraph id="d2e675">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a trade-through that occurs when the marketplace has reasonably concluded that the marketplace displaying the protected order that was traded through was experiencing a failure, malfunction or material delay of its systems or equipment or ability to disseminate marketplace data;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e684">
+          <bcl:num>b</bcl:num>
+          <bcl:text>the execution of a directed-action order;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e694">
+          <bcl:num>c</bcl:num>
+          <bcl:text>a trade-through by a marketplace that simultaneously routes a directed-action order to execute against the total displayed volume of any protected order that is traded through;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e703">
+          <bcl:num>d</bcl:num>
+          <bcl:text>a trade-though if, immediately before the trade-through, the marketplace displaying the protected order that is traded through displays as its best price a protected order with a price that is equal or inferior to the price of the trade-through;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e712">
+          <bcl:num>e</bcl:num>
+          <bcl:text>a trade-through that results when executing</bcl:text>
+          <bcl:subparagraph id="d2e721">
+            <bcl:num>i</bcl:num>
+            <bcl:text>a non-standard order;</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e730">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>a calculated-price order; or</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e739">
+            <bcl:num>iii</bcl:num>
+            <bcl:text>a closing-price order;</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e749">
+          <bcl:num>f</bcl:num>
+          <bcl:text>a trade-through that was executed at a time when the best protected bid for the security traded through was higher than the best protected offer.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 31/2010, Sch. C, s. 2; am. B.C. Reg. 201/2012, Sch. B, s. 1.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e762">
+        <bcl:marginalnote>Systems or equipment failure, malfunction or material delay</bcl:marginalnote>
+        <bcl:num>6.3</bcl:num>
+        <bcl:subsection id="d2e770">
+          <bcl:num>1</bcl:num>
+          <bcl:text>If a marketplace experiences a failure, malfunction or material delay of its systems, equipment or its ability to disseminate marketplace data, the marketplace must immediately notify</bcl:text>
+          <bcl:paragraph id="d2e779">
+            <bcl:num>a</bcl:num>
+            <bcl:text>all other marketplaces;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e788">
+            <bcl:num>b</bcl:num>
+            <bcl:text>all regulation services providers;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e798">
+            <bcl:num>c</bcl:num>
+            <bcl:text>its marketplace participants; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e807">
+            <bcl:num>d</bcl:num>
+            <bcl:text>any information processor or, if there is no information processor, any information vendor that disseminates its data under Part 7 of NI 21-101.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e816">
+          <bcl:num>2</bcl:num>
+          <bcl:text>If executing a transaction described in paragraph 6.2 (a), and a notification has not been sent under subsection (1), the marketplace that is executing the transaction or routing the order for execution must immediately notify the following of the failure, malfunction or material delay:</bcl:text>
+          <bcl:paragraph id="d2e825">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the marketplace that it reasonably concluded is experiencing a failure, malfunction or material delay of its systems or equipment or its ability to disseminate marketplace data;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e834">
+            <bcl:num>b</bcl:num>
+            <bcl:text>all regulation services providers;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e843">
+            <bcl:num>c</bcl:num>
+            <bcl:text>its marketplace participants; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e853">
+            <bcl:num>d</bcl:num>
+            <bcl:text>any information processor disseminating information under Part 7 of NI 21-101.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e862">
+          <bcl:num>3</bcl:num>
+          <bcl:text>If a marketplace participant reasonably concludes that a marketplace displaying a protected order is experiencing a failure, malfunction or material delay of its systems or equipment or its ability to disseminate marketplace data, and routes an order to execute against a protected order on another marketplace displaying an inferior price, the marketplace participant must notify the following of the failure, malfunction or material delay:</bcl:text>
+          <bcl:paragraph id="d2e871">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the marketplace that may be experiencing a failure, malfunction or material delay of its systems or equipment or its ability to disseminate marketplace data; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e880">
+            <bcl:num>b</bcl:num>
+            <bcl:text>all regulation services providers.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 31/2010, Sch. C, s. 2; am. B.C. Regs. 179/2015, Sch. B, s. 4; 163/2016, Sch. A, ss. 3 and 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e894">
+        <bcl:marginalnote>Marketplace participant requirements for order protection</bcl:marginalnote>
+        <bcl:num>6.4</bcl:num>
+        <bcl:subsection id="d2e902">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace participant must not enter a directed-action order unless the marketplace participant has established, and maintains and ensures compliance with, written policies and procedures that are reasonably designed</bcl:text>
+          <bcl:paragraph id="d2e911">
+            <bcl:num>a</bcl:num>
+            <bcl:text>to prevent trade-throughs other than the trade-throughs listed below:</bcl:text>
+            <bcl:subparagraph id="d2e920">
+              <bcl:num>i</bcl:num>
+              <bcl:text>a trade-through that occurs when the marketplace participant has reasonably concluded that the marketplace displaying the protected order that was traded through was experiencing a failure, malfunction or material delay of its systems or equipment or ability to disseminate marketplace data;</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e930">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>a trade-through by a marketplace participant that simultaneously routes a directed-action order to execute against the total displayed volume of any protected order that is traded through;</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e939">
+              <bcl:num>iii</bcl:num>
+              <bcl:text>a trade-through if, immediately before the trade-through, the marketplace displaying the protected order that is traded through displays as its best price a protected order with a price that is equal or inferior to the price of the trade-through transaction;</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e948">
+              <bcl:num>iv</bcl:num>
+              <bcl:text>a trade-through that results when executing</bcl:text>
+              <bcl:clause id="d2e957">
+                <bcl:num>A</bcl:num>
+                <bcl:text>a non-standard order;</bcl:text>
+              </bcl:clause>
+              <bcl:clause id="d2e966">
+                <bcl:num>B</bcl:num>
+                <bcl:text>a calculated-price order; or</bcl:text>
+              </bcl:clause>
+              <bcl:clause id="d2e975">
+                <bcl:num>C</bcl:num>
+                <bcl:text>a closing-price order;</bcl:text>
+              </bcl:clause>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e985">
+              <bcl:num>v</bcl:num>
+              <bcl:text>a trade-through that was executed at a time when the best protected bid for the security traded through was higher than the best protected offer; and</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e994">
+            <bcl:num>b</bcl:num>
+            <bcl:text>to ensure that when executing a trade-through listed in subparagraphs (a) (i) to (a) (v), it is doing so in compliance with this Part.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1003">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A marketplace participant that enters a directed-action order must regularly review and monitor the effectiveness of the policies and procedures required under subsection (1) and must promptly remedy any deficiencies in those policies and procedures.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 31/2010, Sch. C, s. 2; am. B.C. Reg. 179/2015, Sch. B, s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1016">
+        <bcl:marginalnote>Locked or crossed orders</bcl:marginalnote>
+        <bcl:num>6.5</bcl:num>
+        <bcl:text>A marketplace participant or a marketplace that routes or reprices orders must not intentionally enter a displayed order on a marketplace that is subject to section 7.1 of NI 21-101, at a price that,</bcl:text>
+        <bcl:paragraph id="d2e1027">
+          <bcl:num>a</bcl:num>
+          <bcl:text>in the case of an order to purchase, is the same as or higher than the best protected offer; or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1036">
+          <bcl:num>b</bcl:num>
+          <bcl:text>in the case of an order to sell, is the same as or lower than the best protected bid.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 163/2016, Sch. A, s. 5.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1050">
+        <bcl:marginalnote>Trading hours</bcl:marginalnote>
+        <bcl:num>6.6</bcl:num>
+        <bcl:text>A marketplace must set the hours of trading to be observed by marketplace participants.</bcl:text>
+        <bcl:hnote>[en. B.C. Reg. 31/2010, Sch. C, s. 2; am. B.C. Reg. 179/2015, Sch. B, s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d0e1106">
+        <bcl:marginalnote>Trading fees</bcl:marginalnote>
+        <bcl:num>6.6.1</bcl:num>
+        <bcl:subsection id="d0e1114">
+          <bcl:num>1</bcl:num>
+          <bcl:text>In this section</bcl:text>
+          <bcl:definition id="d0e1167">
+            <bcl:text>
+              <in:term>exchange-traded fund</in:term> means a mutual fund</bcl:text>
+            <bcl:paragraph id="d0e1125">
+              <bcl:num>a</bcl:num>
+              <bcl:text>the units of which are listed securities or quoted securities, and</bcl:text>
+            </bcl:paragraph>
+            <bcl:paragraph id="d0e1134">
+              <bcl:num>b</bcl:num>
+              <bcl:text>that is in continuous distribution in accordance with applicable securities legislation; and</bcl:text>
+            </bcl:paragraph>
+          </bcl:definition>
+          <bcl:definition id="d0e1193">
+            <bcl:text>
+              <in:term>inter-listed security</in:term> means an exchange-traded security that is also listed on an exchange that is registered as a "national securities exchange" in the United States of America under section 6 of the 1934 Act.</bcl:text>
+          </bcl:definition>
+        </bcl:subsection>
+        <bcl:subsection id="d0e1144">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A marketplace that is subject to section 7.1 of NI 21-101 must not charge a fee for executing an order that was entered to execute against a displayed order on the marketplace that,</bcl:text>
+          <bcl:paragraph id="d0e1152">
+            <bcl:num>a</bcl:num>
+            <bcl:text>in the case of an order involving an inter-listed security,</bcl:text>
+            <bcl:subparagraph id="d0e1218">
+              <bcl:num>i</bcl:num>
+              <bcl:text>is greater than $0.0030 per security traded for an equity security, or per unit traded for an exchange-traded fund, if the execution price of each security or unit traded is greater than or equal to $1.00, and</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d0e1227">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>is greater than $0.0004 per security traded for an equity security, or per unit traded for an exchange-traded fund, if the execution price of each security or unit traded is less than $1.00; or</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d0e1161">
+            <bcl:num>b</bcl:num>
+            <bcl:text>in the case of an order involving a security that is not an inter-listed security,</bcl:text>
+            <bcl:subparagraph id="d0e1245">
+              <bcl:num>i</bcl:num>
+              <bcl:text>is greater than $0.0017 per security traded for an equity security, or per unit traded for an exchange-traded fund, if the execution price of each security or unit traded is greater than or equal to $1.00, and</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d0e1254">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>is greater than $0.0004 per security traded for an equity security, or per unit traded for an exchange-traded fund, if the execution price of each security or unit traded is less than $1.00.</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d0e1265">
+          <bcl:num>3</bcl:num>
+          <bcl:text>A recognized exchange must maintain a list of inter-listed securities that are listed on the exchange as of the last day of each calendar quarter.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d0e1274">
+          <bcl:num>4</bcl:num>
+          <bcl:text>A recognized exchange must publicly disclose on its website the list referred to in subsection (3)</bcl:text>
+          <bcl:paragraph id="d0e1282">
+            <bcl:num>a</bcl:num>
+            <bcl:text>within 7 days after the last day of each calendar quarter, and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d0e1291">
+            <bcl:num>b</bcl:num>
+            <bcl:text>for a period of at least 12 months commencing on the date it is publicly disclosed on the website.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 134/2017, s. 2.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d0e1305">
+        <bcl:marginalnote>Ceasing to be inter-listed security – fee transition period</bcl:marginalnote>
+        <bcl:num>6.6.2</bcl:num>
+        <bcl:text>If a security ceases to be an inter-listed security, paragraph 6.6.1 (2) (b) does not apply if</bcl:text>
+        <bcl:paragraph id="d0e1316">
+          <bcl:num>a</bcl:num>
+          <bcl:text>less than 35 days has passed since the first date, following the cessation, the list referred to in subsection 6.6.1 (4) was publicly disclosed, and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d0e1325">
+          <bcl:num>b</bcl:num>
+          <bcl:text>the fee charged is in compliance with paragraph 6.6.1 (2) (a) as if the security were still an inter-listed security.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 134/2017, s. 3.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1065">
+        <bcl:marginalnote>Anti-avoidance</bcl:marginalnote>
+        <bcl:num>6.7</bcl:num>
+        <bcl:text>A person or company must not send an order to an exchange, quotation and trade reporting system or alternative trading system that does not carry on business in Canada in order to avoid executing against better-priced protected orders.</bcl:text>
+        <bcl:hnote>[en. B.C. Reg. 31/2010, Sch. C, s. 2; am. B.C. Regs. 179/2015, Sch. B, s. 5; 163/2016, Sch. A, s. 7.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1080">
+        <bcl:marginalnote>Application of this Part</bcl:marginalnote>
+        <bcl:num>6.8</bcl:num>
+        <bcl:text>In Qu<in:eacute/>bec, this Part, except for paragraph 6.3 (1) (c), does not apply to standardized derivatives.</bcl:text>
+        <bcl:hnote>[en. B.C. Reg. 31/2010, Sch. C, s. 2; am. B.C. Reg. 179/2015, Sch. B, s. 6.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e1097">
+      <bcl:num>7</bcl:num>
+      <bcl:text>Monitoring and Enforcement of Requirements Set by a Recognized Exchange <in:br/>and a Recognized Quotation and Trade Reporting System</bcl:text>
+      <bcl:section id="d2e1109">
+        <bcl:marginalnote>Requirements for a recognized exchange</bcl:marginalnote>
+        <bcl:num>7.1</bcl:num>
+        <bcl:subsection id="d2e1117">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A recognized exchange must set requirements governing the conduct of its members, including requirements that the members will conduct trading activities in compliance with this Instrument.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1126">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A recognized exchange must monitor the conduct of its members and enforce the requirements set under subsection (1), either</bcl:text>
+          <bcl:paragraph id="d2e1135">
+            <bcl:num>a</bcl:num>
+            <bcl:text>directly, or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1145">
+            <bcl:num>b</bcl:num>
+            <bcl:text>indirectly through a regulation services provider.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d1e1199">
+          <bcl:num>3</bcl:num>
+          <bcl:text>If a recognized exchange has entered into a written agreement under section 7.2, the recognized exchange must adopt requirements, as determined necessary by the regulation services provider, that govern the recognized exchange and the conduct of the exchange's members, and that enable the regulation services provider to effectively monitor trading on the exchange and across marketplaces.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 7.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1155">
+        <bcl:marginalnote>Agreement between a recognized exchange and a regulation services provider</bcl:marginalnote>
+        <bcl:num>7.2</bcl:num>
+        <bcl:text>A recognized exchange that monitors the conduct of its members indirectly through a regulation services provider must enter into a written agreement with the regulation services provider which provides that the regulation services provider will</bcl:text>
+        <bcl:paragraph id="d2e1166">
+          <bcl:num>a</bcl:num>
+          <bcl:text>monitor the conduct of the members of the recognized exchange,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1175">
+          <bcl:num>b</bcl:num>
+          <bcl:text>monitor the compliance of the recognized exchange with the requirements set under subsection 7.1 (3), and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1185">
+          <bcl:num>c</bcl:num>
+          <bcl:text>enforce the requirements set under subsection 7.1 (1).</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 179/2015, Sch. B, s. 8.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e1252">
+        <bcl:marginalnote>Obligations of a recognized exchange to a regulation services provider</bcl:marginalnote>
+        <bcl:num>7.2.1</bcl:num>
+        <bcl:text>A recognized exchange that has entered into a written agreement with a regulation services provider must</bcl:text>
+        <bcl:paragraph id="d1e1263">
+          <bcl:num>a</bcl:num>
+          <bcl:text>transmit to the regulation services provider the information required under Part 11 of NI 21-101 and any information reasonably required by the regulation services provider, in the form and manner requested by the regulation services provider, to effectively monitor</bcl:text>
+          <bcl:subparagraph id="d1e1271">
+            <bcl:num>i</bcl:num>
+            <bcl:text>the conduct of and trading by marketplace participants on and across marketplaces, including the compliance of marketplace participants with the requirements set under subsection 7.1 (1), and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e1280">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>the conduct of the recognized exchange, including the compliance of the recognized exchange with the requirements set under subsection 7.1 (3), and</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e1290">
+          <bcl:num>b</bcl:num>
+          <bcl:text>comply with all orders or directions made by the regulation services provider.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 179/2015, Sch. B, s. 8.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1225">
+        <bcl:marginalnote>Requirements for a recognized quotation and trade reporting system</bcl:marginalnote>
+        <bcl:num>7.3</bcl:num>
+        <bcl:subsection id="d2e1233">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A recognized quotation and trade reporting system must set requirements governing the conduct of its users, including requirements that the users will conduct trading activities in compliance with this Instrument.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1242">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A recognized quotation and trade reporting system must monitor the conduct of its users and enforce the requirements set under subsection (1) either</bcl:text>
+          <bcl:paragraph id="d2e1251">
+            <bcl:num>a</bcl:num>
+            <bcl:text>directly; or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1261">
+            <bcl:num>b</bcl:num>
+            <bcl:text>indirectly through a regulation services provider.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d1e1348">
+          <bcl:num>3</bcl:num>
+          <bcl:text>If a recognized quotation and trade reporting system has entered into a written agreement under section 7.4, the recognized quotation and trade reporting system must adopt requirements, as determined necessary by the regulation services provider, that govern the recognized quotation and trade reporting system and the conduct of the quotation and trade reporting system's users, and that enable the regulation services provider to effectively monitor trading on the recognized quotation and trade reporting system and across marketplaces.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 9.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1271">
+        <bcl:marginalnote>Agreement between a recognized quotation and trade reporting system and a regulation services provider</bcl:marginalnote>
+        <bcl:num>7.4</bcl:num>
+        <bcl:text>A recognized quotation and trade reporting system that monitors the conduct of its users indirectly through a regulation services provider must enter into a written agreement with the regulation services provider which provides that the regulation services provider will</bcl:text>
+        <bcl:paragraph id="d2e1282">
+          <bcl:num>a</bcl:num>
+          <bcl:text>monitor the conduct of the users of the recognized quotation and trade reporting system,</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1291">
+          <bcl:num>b</bcl:num>
+          <bcl:text>monitor the compliance of the recognized quotation and trade reporting system with the requirements set under subsection 7.3 (3), and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1301">
+          <bcl:num>c</bcl:num>
+          <bcl:text>enforce the requirements set under subsection 7.3 (1).</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 179/2015, Sch. B, s. 10.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e1401">
+        <bcl:marginalnote>Obligations of a quotation and trade reporting system to a regulation services provider</bcl:marginalnote>
+        <bcl:num>7.4.1</bcl:num>
+        <bcl:text>A recognized quotation and trade reporting system that has entered into a written agreement with a regulation services provider must</bcl:text>
+        <bcl:paragraph id="d1e1412">
+          <bcl:num>a</bcl:num>
+          <bcl:text>transmit to the regulation services provider the information required under Part 11 of NI 21-101 and any information reasonably required by the regulation services provider in the form and manner requested by the regulation services provider to effectively monitor</bcl:text>
+          <bcl:subparagraph id="d1e1420">
+            <bcl:num>i</bcl:num>
+            <bcl:text>the conduct of and trading by marketplace participants on and across marketplaces, including the compliance of marketplace participants with the requirements set under subsection 7.3 (1), and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e1429">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>the conduct of the recognized quotation and trade reporting system, including the compliance of the recognized quotation and trade reporting system with the requirements set under subsection 7.3 (3), and</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e1439">
+          <bcl:num>b</bcl:num>
+          <bcl:text>comply with all orders or directions made by the regulation services provider.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 179/2015, Sch. B, s. 10.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1341">
+        <bcl:marginalnote>Co-ordination of monitoring and enforcement</bcl:marginalnote>
+        <bcl:num>7.5</bcl:num>
+        <bcl:text>A regulation services provider, recognized exchange, or recognized quotation and trade reporting system must enter into a written agreement with all other regulation services providers, recognized exchanges, and recognized quotation and trade reporting systems to coordinate monitoring and enforcement of the requirements set under Parts 7 and 8.</bcl:text>
+        <bcl:hnote>[am. B.C. Regs. 31/2010, Sch. B, s. 6; 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e1356">
+      <bcl:num>8</bcl:num>
+      <bcl:text>Monitoring and Enforcement Requirements for an ATS</bcl:text>
+      <bcl:section id="d2e1366">
+        <bcl:marginalnote>Pre-condition to trading on an ATS </bcl:marginalnote>
+        <bcl:num>8.1</bcl:num>
+        <bcl:text>An ATS must not execute a subscriber's order to buy or sell securities unless the ATS has executed and is subject to the written agreements required by sections 8.3 and 8.4.</bcl:text>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1378">
+        <bcl:marginalnote>Requirements set by a regulation services provider for an ATS</bcl:marginalnote>
+        <bcl:num>8.2</bcl:num>
+        <bcl:subsection id="d2e1386">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A regulation services provider must set requirements governing an ATS and its subscribers, including requirements that the ATS and its subscribers will conduct trading activities in compliance with this Instrument.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1395">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A regulation services provider must monitor the conduct of an ATS and its subscribers and must enforce the requirements set under subsection (1).</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1405">
+        <bcl:marginalnote>Agreement between an ATS and a regulation services provider</bcl:marginalnote>
+        <bcl:num>8.3</bcl:num>
+        <bcl:text>An ATS and a regulation services provider must enter into a written agreement that provides</bcl:text>
+        <bcl:paragraph id="d2e1416">
+          <bcl:num>a</bcl:num>
+          <bcl:text>that the ATS will conduct its trading activities in compliance with the requirements set under subsection 8.2 (1);</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1425">
+          <bcl:num>b</bcl:num>
+          <bcl:text>that the regulation services provider will monitor the conduct of the ATS and its subscribers;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1435">
+          <bcl:num>c</bcl:num>
+          <bcl:text>that the regulation services provider will enforce the requirements set under subsection 8.2 (1);</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1444">
+          <bcl:num>d</bcl:num>
+          <bcl:text>that the ATS will transmit to the regulation services provider the information required by Part 11 of NI 21-101 and any other information reasonably required to effectively monitor</bcl:text>
+          <bcl:subparagraph id="d2e1453">
+            <bcl:num>i</bcl:num>
+            <bcl:text>the conduct of and trading by marketplace participants on and across marketplaces, and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e1462">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>the conduct of the ATS; and</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1471">
+          <bcl:num>e</bcl:num>
+          <bcl:text>that the ATS will comply with all orders or directions made by the regulation services provider.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[am. B.C. Regs. 31/2010, Sch. B, s. 7; 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1484">
+        <bcl:marginalnote>Agreement between an ATS and its subscriber</bcl:marginalnote>
+        <bcl:num>8.4</bcl:num>
+        <bcl:text>An ATS and its subscriber must enter into a written agreement that provides</bcl:text>
+        <bcl:paragraph id="d2e1495">
+          <bcl:num>a</bcl:num>
+          <bcl:text>that the subscriber will conduct its trading activities in compliance with the requirements set under subsection 8.2 (1);</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1504">
+          <bcl:num>b</bcl:num>
+          <bcl:text>that the subscriber acknowledges that the regulation services provider will monitor the conduct of the subscriber and enforce the requirements set under subsection 8.2 (1);</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1514">
+          <bcl:num>c</bcl:num>
+          <bcl:text>that the subscriber will comply with all orders or directions made by the regulation services provider in its capacity as a regulation services provider, including orders excluding the subscriber from trading on any marketplace.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[am. B.C. Regs. 492/2003, s. 3 (a); 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1527">
+        <bcl:marginalnote>Repealed</bcl:marginalnote>
+        <bcl:num>8.5</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 492/2003, s. 3 (b).]</bcl:text>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e1539">
+      <bcl:num>9</bcl:num>
+      <bcl:text>Monitoring and Enforcement Requirements for an Inter-dealer Bond Broker</bcl:text>
+      <bcl:section id="d2e1549">
+        <bcl:marginalnote>Requirements set by a regulation services provider for an inter-dealer bond broker</bcl:marginalnote>
+        <bcl:num>9.1</bcl:num>
+        <bcl:subsection id="d2e1557">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A regulation services provider must set requirements governing an inter-dealer bond broker, including requirements that the inter-dealer bond broker will conduct trading activities in compliance with this Instrument.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1566">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A regulation services provider must monitor the conduct of an inter-dealer bond broker and must enforce the requirements set under subsection (1).</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1576">
+        <bcl:marginalnote>Agreement between an inter-dealer bond broker and a regulation services provider</bcl:marginalnote>
+        <bcl:num>9.2</bcl:num>
+        <bcl:text>An inter-dealer bond broker and a regulation services provider must enter into a written agreement that provides</bcl:text>
+        <bcl:paragraph id="d2e1587">
+          <bcl:num>a</bcl:num>
+          <bcl:text>that the inter-dealer bond broker will conduct its trading activities in compliance with the requirements set under subsection 9.1 (1);</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1596">
+          <bcl:num>b</bcl:num>
+          <bcl:text>that the regulation services provider will monitor the conduct of the inter-dealer bond broker;<in:sup/></bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1607">
+          <bcl:num>c</bcl:num>
+          <bcl:text>that the regulation services provider will enforce the requirements set under subsection 9.1 (1); and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1616">
+          <bcl:num>d</bcl:num>
+          <bcl:text>that the inter-dealer bond broker will comply with all orders or directions made by the regulation services provider.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1626">
+        <bcl:marginalnote>Exemption for an inter-dealer bond broker</bcl:marginalnote>
+        <bcl:num>9.3</bcl:num>
+        <bcl:subsection id="d2e1634">
+          <bcl:num>1</bcl:num>
+          <bcl:text>Sections 9.1 and 9.2 do not apply to an inter-dealer bond broker, if the inter-dealer bond broker complies with the requirements of IIROC Rule 2800 Code of Conduct for Corporation Dealer Member Firms Trading in Wholesale Domestic Debt Markets, as amended.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1643">
+          <bcl:num>2</bcl:num>
+          <bcl:text>Repealed. [B.C. Reg. 492/2003, s. 4.]</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Regs. 492/2003, s. 4; 31/2010, Sch. B, s. 8.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e1656">
+      <bcl:num>10</bcl:num>
+      <bcl:text>Monitoring and Enforcement Requirements for a Dealer <in:br/>Executing Trades of Unlisted Debt Securities Outside of a Marketplace</bcl:text>
+      <bcl:section id="d2e1667">
+        <bcl:marginalnote>Requirements set by a regulation services provider for a dealer executing trades of unlisted debt securities outside of a marketplace</bcl:marginalnote>
+        <bcl:num>10.1</bcl:num>
+        <bcl:subsection id="d2e1675">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A regulation services provider must set requirements governing a dealer executing trades of unlisted debt securities outside of a marketplace, including requirements that the dealer will conduct trading activities in compliance with this Instrument.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1684">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A regulation services provider must monitor the conduct of a dealer executing trades of unlisted debt securities outside of a marketplace and must enforce the requirements set under subsection (1).</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 11.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1694">
+        <bcl:marginalnote>Agreement between a dealer executing trades of unlisted debt securities outside of a marketplace and a regulation services provider</bcl:marginalnote>
+        <bcl:num>10.2</bcl:num>
+        <bcl:text>A dealer executing trades of unlisted debt securities outside of a marketplace must enter into a written agreement with a regulation services provider that provides</bcl:text>
+        <bcl:paragraph id="d2e1705">
+          <bcl:num>a</bcl:num>
+          <bcl:text>that the dealer will conduct its trading activities in compliance with the requirements set under subsection 10.1 (1);</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1714">
+          <bcl:num>b</bcl:num>
+          <bcl:text>that the regulation services provider will monitor the conduct of the dealer;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1724">
+          <bcl:num>c</bcl:num>
+          <bcl:text>that the regulation services provider will enforce the requirements set under subsection 10.1 (1); and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e1733">
+          <bcl:num>d</bcl:num>
+          <bcl:text>that the dealer will comply with all orders or directions made by the regulation services provider.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[am. B.C. Reg. 179/2015, Sch. B, s. 12.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1744">
+        <bcl:marginalnote>Repealed</bcl:marginalnote>
+        <bcl:num>10.3</bcl:num>
+        <bcl:text>Repealed. [B.C. Reg. 492/2003, s. 5.]</bcl:text>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e1756">
+      <bcl:num>11</bcl:num>
+      <bcl:text>Audit Trail Requirements</bcl:text>
+      <bcl:section id="d2e1765">
+        <bcl:marginalnote>Application of this Part</bcl:marginalnote>
+        <bcl:num>11.1</bcl:num>
+        <bcl:subsection id="d2e1773">
+          <bcl:num>1</bcl:num>
+          <bcl:text>This Part does not apply to a dealer that is carrying on business as an ATS in compliance with section 6.1 of NI 21-101.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e1782">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A dealer or inter-dealer bond broker is exempt from the requirements in section 11.2 if the dealer or inter-dealer bond broker complies with similar requirements, for any securities specified, established by a regulation services provider and approved by the applicable securities regulatory authority.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Regs. 48/2007, Sch. B, s. 4 (a); 179/2013, s. (k).]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e1795">
+        <bcl:marginalnote>Audit trail requirements for dealers and inter-dealer bond brokers</bcl:marginalnote>
+        <bcl:num>11.2</bcl:num>
+        <bcl:subsection id="d2e1803">
+          <bcl:num>1</bcl:num>
+          <bcl:text>
+            <in:em>Recording Requirements for Receipt or Origination of an Order</in:em> — Immediately following the receipt or origination of an order for equity, fixed income and other securities identified by a regulation services provider, a dealer and inter-dealer bond broker must record in electronic form specific information relating to that order including,</bcl:text>
+          <bcl:paragraph id="d2e1815">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the order identifier;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1824">
+            <bcl:num>b</bcl:num>
+            <bcl:text>the dealer or inter-dealer bond broker identifier;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1834">
+            <bcl:num>c</bcl:num>
+            <bcl:text>the type, issuer, class, series and symbol of the security;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1843">
+            <bcl:num>d</bcl:num>
+            <bcl:text>the face amount or unit price of the order, if applicable;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1852">
+            <bcl:num>e</bcl:num>
+            <bcl:text>the number of securities to which the order applies;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1861">
+            <bcl:num>f</bcl:num>
+            <bcl:text>the strike date and strike price, if applicable;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1870">
+            <bcl:num>g</bcl:num>
+            <bcl:text>whether the order is a buy or sell order;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1879">
+            <bcl:num>h</bcl:num>
+            <bcl:text>whether the order is a short sale order, if applicable;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1889">
+            <bcl:num>i</bcl:num>
+            <bcl:text>whether the order is a market order, limit order or other type of order, and if the order is not a market order, the price at which the order is to trade;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1898">
+            <bcl:num>j</bcl:num>
+            <bcl:text>the date and time the order is first originated or received by the dealer or inter-dealer bond broker;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1907">
+            <bcl:num>k</bcl:num>
+            <bcl:text>whether the account is a retail, wholesale, employee, proprietary or any other type of account;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1916">
+            <bcl:num>l</bcl:num>
+            <bcl:text>the client account number or client identifier;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1925">
+            <bcl:num>m</bcl:num>
+            <bcl:text>the date and time that the order expires;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1934">
+            <bcl:num>n</bcl:num>
+            <bcl:text>whether the order is an intentional cross;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1944">
+            <bcl:num>o</bcl:num>
+            <bcl:text>whether the order is a jitney and if so, the underlying broker identifier;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1953">
+            <bcl:num>p</bcl:num>
+            <bcl:text>any client instructions or consents respecting the handling or trading of the order, if applicable;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1962">
+            <bcl:num>q</bcl:num>
+            <bcl:text>the currency of the order;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1971">
+            <bcl:num>r</bcl:num>
+            <bcl:text>an insider marker;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1980">
+            <bcl:num>s</bcl:num>
+            <bcl:text>any other markers required by a regulation services provider;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1989">
+            <bcl:num>t</bcl:num>
+            <bcl:text>each unique client identifier assigned to a client accessing the marketplace using direct electronic access; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e1999">
+            <bcl:num>u</bcl:num>
+            <bcl:text>whether the order is a directed-action order.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e2008">
+          <bcl:num>2</bcl:num>
+          <bcl:text>
+            <in:em>Recording Requirements for Transmission of an Order</in:em> — Immediately following the transmission of an order for securities to a dealer, inter-dealer bond broker or a marketplace, a dealer or inter-dealer bond broker transmitting the order must add to the record of the order maintained in accordance with this section specific information relating to that order including,</bcl:text>
+          <bcl:paragraph id="d2e2020">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the dealer or inter-dealer bond broker identifier assigned to the dealer or inter-dealer bond broker transmitting the order and the identifier assigned to the dealer, inter-dealer bond broker or marketplace to which the order is transmitted; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2029">
+            <bcl:num>b</bcl:num>
+            <bcl:text>the date and time the order is transmitted.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e2038">
+          <bcl:num>3</bcl:num>
+          <bcl:text>
+            <in:em>Recording Requirements for Variation, Correction or Cancellation of an Order</in:em> — Immediately following the variation, correction or cancellation of an order for securities, a dealer or inter-dealer bond broker must add to the record of the order maintained in accordance with this section specific information relating to that order including,</bcl:text>
+          <bcl:paragraph id="d2e2047">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the date and time the variation, correction or cancellation was originated or received;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2057">
+            <bcl:num>b</bcl:num>
+            <bcl:text>whether the order was varied, corrected or cancelled on the instructions of the client, the dealer or the inter-dealer bond broker;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2066">
+            <bcl:num>c</bcl:num>
+            <bcl:text>in the case of variation or correction, any of the information required by subsection (1) which has been changed; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2075">
+            <bcl:num>d</bcl:num>
+            <bcl:text>the date and time the variation, correction or cancellation of the order is entered.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e2084">
+          <bcl:num>4</bcl:num>
+          <bcl:text>
+            <in:em>Recording Requirements for Execution of an Order</in:em> — Immediately following the execution of an order for securities, the dealer or inter-dealer bond broker must add to the record maintained in accordance with this section specific information relating to that order including,</bcl:text>
+          <bcl:paragraph id="d2e2096">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the identifier of the marketplace where the order was executed or the identifier of the dealer or inter-dealer bond broker executing the order if the order was not executed on a marketplace;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2105">
+            <bcl:num>b</bcl:num>
+            <bcl:text>the date and time of the execution of the order;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2115">
+            <bcl:num>c</bcl:num>
+            <bcl:text>whether the order was fully or partially executed;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2124">
+            <bcl:num>d</bcl:num>
+            <bcl:text>the number of securities bought or sold;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2133">
+            <bcl:num>e</bcl:num>
+            <bcl:text>whether the transaction was a cross;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2142">
+            <bcl:num>f</bcl:num>
+            <bcl:text>whether the dealer has executed the order as principal;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2151">
+            <bcl:num>g</bcl:num>
+            <bcl:text>the commission charged and all other transaction fees; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e2160">
+            <bcl:num>h</bcl:num>
+            <bcl:text>the price at which the order was executed, including mark-up or mark-down.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e2170">
+          <bcl:num>5) and (6</bcl:num>
+          <bcl:text>Repealed. [B.C. Reg. 250/2008, Sch. B, s. 5.]</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e2179">
+          <bcl:num>7</bcl:num>
+          <bcl:text>
+            <in:em>Record preservation requirements</in:em> — A dealer and an inter-dealer bond broker must keep all records in electronic form for a period of not less than seven years from the creation of the record referred to in this section, and for the first two years in a readily accessible location.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[am. B.C. Regs. 492/2003, s. 6; 48/2007, Sch. B, s. 4 (b) to (h); 250/2008, Sch. B, s. 5; 201/2012, Sch. B, s. 3; 179/2015, Sch. B, s. 13.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e2195">
+        <bcl:marginalnote>Transmission in electronic form</bcl:marginalnote>
+        <bcl:num>11.3</bcl:num>
+        <bcl:text>A dealer and inter-dealer bond broker must transmit</bcl:text>
+        <bcl:paragraph id="d2e2206">
+          <bcl:num>a</bcl:num>
+          <bcl:text>to a regulation services provider the information required by the regulation services provider, within ten business days, in electronic form; and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e2215">
+          <bcl:num>b</bcl:num>
+          <bcl:text>to the securities regulatory authority the information required by the securities regulatory authority under securities legislation, within ten business days, in electronic form.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 250/2008, Sch. B, s. 6; am. B.C. Reg. 179/2015, Sch. B, s. 13.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e2229">
+      <bcl:num>12</bcl:num>
+      <bcl:text>Exemption</bcl:text>
+      <bcl:section id="d2e2239">
+        <bcl:marginalnote>Exemption</bcl:marginalnote>
+        <bcl:num>12.1</bcl:num>
+        <bcl:subsection id="d2e2247">
+          <bcl:num>1</bcl:num>
+          <bcl:text>The regulator or the securities regulatory authority may grant an exemption from this Instrument, in whole or in part, subject to such conditions or restrictions as may be imposed in the exemption.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e2256">
+          <bcl:num>2</bcl:num>
+          <bcl:text>Despite subsection (1), in Ontario, only the regulator may grant such an exemption.</bcl:text>
+        </bcl:subsection>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e2266">
+      <bcl:num>13</bcl:num>
+      <bcl:text>Effective Date</bcl:text>
+      <bcl:section id="d2e2275">
+        <bcl:marginalnote>Effective date</bcl:marginalnote>
+        <bcl:num>13.1</bcl:num>
+        <bcl:text>This Instrument comes into force on December 1, 2001.</bcl:text>
+      </bcl:section>
+    </bcl:part>
+    <reg:provisionsnote>[Provisions relevant to the enactment of this regulation: <bcl:link resource="leg" xlink:href="/legislation/96418_01" xlink:type="locator"><in:doc>Securities Act</in:doc></bcl:link>, R.S.B.C. 1996, c. 418, section 184]</reg:provisionsnote>
+    <bcl:schedule>
+      <bcl:centertext>
+        <in:strong>Note: Transitional Provisions</in:strong>
+      </bcl:centertext>
+      <bcl:centertext>[en. B.C. Reg. 134/2017.]</bcl:centertext>
+      <bcl:lefttext>
+        <in:strong>Transition – publication of inter-listed securities</in:strong>
+      </bcl:lefttext>
+      <bcl:indent1>
+        <in:strong>4</in:strong>    On or before April 17, 2017, a recognized exchange must publicly disclose on its website a list of the inter-listed securities that were listed on the exchange as of April 10, 2017.</bcl:indent1>
+      <bcl:lefttext>
+        <in:strong>Transition – fee adjustment for orders involving non-inter-listed securities</in:strong>
+      </bcl:lefttext>
+      <bcl:indent1>
+        <in:strong>5</in:strong>    Despite paragraph 6.6.1 (2) (b), as enacted by section 2 of this Instrument, a marketplace to which that paragraph applies may, until May 15, 2017, charge a fee that exceeds the amount referred to in that paragraph provided the fee charged is not greater than</bcl:indent1>
+      <bcl:indent2>(a)  $0.0030 per security traded for an equity security, or per unit traded for an exchange-traded fund, if the execution price of each security or unit traded is greater than or equal to $1.00, and</bcl:indent2>
+      <bcl:indent2>(b)  $0.0004 per security traded for an equity security, or per unit traded for an exchange-traded fund, if the execution price is less than $1.00.</bcl:indent2>
+    </bcl:schedule>
+  </reg:content>
+</reg:regulation>
