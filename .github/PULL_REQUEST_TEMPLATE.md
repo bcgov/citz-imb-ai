@@ -6,7 +6,7 @@ JIRA_BOARD_ABBREVIATION-JIRA_TASK_NUMBER: TITLE_OF_JIRA_TASK
 ## 🎯 Summary
 
 <!-- COMPLETE JIRA LINK BELOW -->
-[AIR-](https://citz-imb.atlassian.net/jira/software/c/projects/DEVOP/boards/18?selectedIssue=AIR-)
+[ZUBA-](https://citz-imb.atlassian.net/jira/software/c/projects/ZUBA/boards/62?selectedIssue=ZUBA-)
 
 <!-- PROVIDE BELOW an explanation of your changes and any images to support your explanation -->
 
