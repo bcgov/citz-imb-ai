@@ -1,0 +1,1095 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_03029_01",
+        "act:title": "Enforcement of Canadian Judgments and Decrees Act",
+        "act:chapter": "29",
+        "act:yearenacted": "2003",
+        "act:assentedto": "May 29, 2003",
+        "act:currency": {
+            "act:tlcDirPath": "414786120/03029/tlc03029_f",
+            "act:tlc": "E3tlc03029"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e25",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e33",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e42",
+                                    "bcl:text": {
+                                        "in:term": "AIT",
+                                        "#text": "means the Agreement on Internal Trade entered into by the\n            governments of Canada, the provinces, Yukon and the Northwest Territories and includes\n            amendments to the agreement;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e51",
+                                    "bcl:text": {
+                                        "in:term": "AIT award",
+                                        "#text": "means an order for tariff costs, or an order for monetary\n            penalties, made by a presiding body;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e61",
+                                    "bcl:text": {
+                                        "in:term": "Canadian civil protection order",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/11025_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Family Law Act"
+                                        },
+                                        "#text": "means a Canadian judgment, or part of\n            a Canadian judgment, that is similar in nature to an order made under section 183 of the\n              ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e73",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "Canadian judgment",
+                                            "#text": "means a judgment, decree or order made in a civil\n            proceeding by a court of a province or territory of Canada other than British\n            Columbia"
+                                        },
+                                        "and, subject to section 1.1, includes a domestic trade agreement\n            award, but does not include a judgment, decree or order that"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e82",
+                                            "bcl:num": "a",
+                                            "bcl:text": "that requires a person to pay money, including",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e91",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "an order for the payment of money that is made in the exercise of a judicial\n                function by a tribunal of a province or territory of Canada other than British\n                Columbia and that is enforceable as a judgment of the superior court of unlimited\n                trial jurisdiction in that province or territory, and"
+                                                },
+                                                {
+                                                    "@id": "d2e100",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Criminal Code"
+                                                        },
+                                                        "#text": "an order made and entered under section 741 of the  in a court of a province or territory\n                of Canada other than British Columbia,"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e112",
+                                            "bcl:num": "b",
+                                            "bcl:text": "under which a person is required to do or not do an act or thing,\n              or"
+                                        },
+                                        {
+                                            "@id": "d2e122",
+                                            "bcl:num": "c",
+                                            "bcl:text": "that declares rights, obligations or status in relation to a person or\n              thing,"
+                                        },
+                                        {
+                                            "@id": "d2e134",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96127_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Family Maintenance Enforcement Act"
+                                                },
+                                                "#text": "is for maintenance or support, including an order enforceable under the\n                ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e146",
+                                            "bcl:num": "e",
+                                            "bcl:text": "is for the payment of money as a penalty or fine for committing an\n              offence,"
+                                        },
+                                        {
+                                            "@id": "d2e155",
+                                            "bcl:num": "f",
+                                            "bcl:text": "relates to the care, control or welfare of a minor, except in the case of a\n              Canadian civil protection order,"
+                                        },
+                                        {
+                                            "@id": "d2e164",
+                                            "bcl:num": "g",
+                                            "bcl:text": "is made by a tribunal of a province or territory of Canada other than British\n              Columbia, whether or not it is enforceable as an order of the superior court of\n              unlimited trial jurisdiction of that province or territory, to\n              the extent that it provides for relief other than the payment of money, or"
+                                        },
+                                        {
+                                            "@id": "d2e174",
+                                            "bcl:num": "h",
+                                            "bcl:text": "relates to the granting of probate or issuing a grant of administration or the\n              administration of the estate of a deceased person;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e183",
+                                    "bcl:text": {
+                                        "in:term": "domestic trade agreement",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e192",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the AIT,"
+                                        },
+                                        {
+                                            "@id": "d2e201",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the NWPTA,"
+                                        },
+                                        {
+                                            "@id": "d2e210",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the TILMA, or"
+                                        },
+                                        {
+                                            "@id": "d0e225",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a prescribed trade agreement;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e219",
+                                    "bcl:text": {
+                                        "in:term": "domestic trade agreement award",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e229",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an AIT award,"
+                                        },
+                                        {
+                                            "@id": "d2e238",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a NWPTA award,"
+                                        },
+                                        {
+                                            "@id": "d2e247",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a TILMA award, or"
+                                        },
+                                        {
+                                            "@id": "d0e274",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a prescribed award under a prescribed trade agreement;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e256",
+                                    "bcl:text": {
+                                        "in:term": "enforcement",
+                                        "#text": "includes requiring that a Canadian judgment be recognized\n            by any person or authority, whether or not further relief is sought;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e265",
+                                    "bcl:text": {
+                                        "in:term": "enforcing party",
+                                        "#text": "means,"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e305",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the case of a Canadian judgment that is not a domestic trade agreement award, a person entitled to enforce the Canadian judgment in the province or territory of Canada where the Canadian judgment was made, or"
+                                        },
+                                        {
+                                            "@id": "d0e314",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the case of a Canadian judgment that is a domestic trade agreement award, a person in whose favour the Canadian judgment was made;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e274",
+                                    "bcl:text": {
+                                        "in:term": "NWPTA",
+                                        "#text": "means the New West Partnership Trade Agreement entered into by\n            the governments of British Columbia, Alberta and Saskatchewan on April 30, 2010 and\n            includes amendments to the agreement;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e284",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "NWPTA award",
+                                            "#text": "means"
+                                        },
+                                        "and includes an award of costs under Article 32 (1) of the NWPTA;"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e293",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a monetary award within the meaning of Article 29 (7) of the NWPTA if no\n              judicial review has been requested in relation to that award under Article\u00a031\u00a0(1) of\n              the NWPTA within the 15 day period referred to in that Article,"
+                                        },
+                                        {
+                                            "@id": "d2e302",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a monetary award within the meaning of Article 29 (7) of the NWPTA\n              if",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e311",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a judicial review has been requested in relation to that award under Article\n                31 (1) of the NWPTA within the 15 day period referred to in that Article,\n                and"
+                                                },
+                                                {
+                                                    "@id": "d2e320",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the judicial review court determines that the award should neither be set\n                aside nor remitted to a NWPTA panel, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e329",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if a judicial review of a monetary award within the meaning of Article\u00a029\u00a0(7)\n              of the NWPTA has been requested under Article 31 (1) of the NWPTA and the judicial\n              review court remits the award to a NWPTA panel, the monetary award as confirmed or\n              amended by that NWPTA panel,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e342",
+                                    "bcl:text": {
+                                        "in:term": "NWPTA panel",
+                                        "#text": "means a panel convened under Article 26 or 29 of the\n            NWPTA;"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e403",
+                                    "bcl:text": {
+                                        "in:term": "prescribed trade agreement",
+                                        "#text": "means an agreement into which the government of British Columbia or the government of Canada has entered that is prescribed as a prescribed trade agreement;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e351",
+                                    "bcl:text": {
+                                        "in:term": "presiding body",
+                                        "#text": "has the same meaning as Presiding Body in the\n            AIT;"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e424",
+                                    "bcl:text": {
+                                        "in:term": "province",
+                                        "#text": "does not include the Northwest Territories, Yukon or Nunavut;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e360",
+                                    "bcl:text": {
+                                        "in:term": "registered Canadian judgment",
+                                        "#text": "means a Canadian judgment that is\n            registered under this Act;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e369",
+                                    "bcl:text": {
+                                        "in:term": "TILMA",
+                                        "#text": "means the Trade, Investment and Labour Mobility Agreement\n            entered into by the governments of British Columbia and Alberta on April 28, 2006 and\n            includes amendments to the agreement;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e378",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "TILMA award",
+                                            "#text": "means"
+                                        },
+                                        "and includes an award of costs under Article 32 (1) of the TILMA;"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e388",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a monetary award within the meaning of Article 29 (7) of the TILMA if no\n              judicial review has been requested in relation to that award under Article 31 (1) of\n              the TILMA within the 15 day period referred to in that Article,"
+                                        },
+                                        {
+                                            "@id": "d2e397",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a monetary award within the meaning of Article 29 (7) of the TILMA\n              if",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e406",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "judicial review has been requested in relation to that award under Article\n                31 (1) of the TILMA within the 15 day period referred to in that Article, and"
+                                                },
+                                                {
+                                                    "@id": "d2e415",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the judicial review court determines that the award should neither be set\n                aside nor remitted to a TILMA panel, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e424",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if judicial review has been requested under Article 31 (1) of the TILMA of a\n              monetary award within the meaning of Article 29 (7) of the TILMA and the judicial\n              review court remits the award to a TILMA panel, the monetary award as confirmed or\n              amended by that TILMA panel,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e437",
+                                    "bcl:text": {
+                                        "in:term": "TILMA panel",
+                                        "#text": "means a panel convened under Article 26 or 29 of the\n            TILMA."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e446",
+                            "bcl:num": "2",
+                            "bcl:text": "When used in relation to a domestic trade agreement award,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e455",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a reference in section 3 (1) (a) to a judge, registrar, clerk or other proper officer of the court that made the Canadian judgment is deemed to be,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e464",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in the case of an AIT award, a reference to a member of the presiding body\n              that made the AIT award,"
+                                        },
+                                        {
+                                            "@id": "d2e473",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the case of a NWPTA award, a reference to a member of the NWPTA panel that\n              made the NWPTA award,"
+                                        },
+                                        {
+                                            "@id": "d2e482",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "in the case of a TILMA award, a reference to a member of the TILMA panel that\n              made the TILMA award, or"
+                                        },
+                                        {
+                                            "@id": "d0e568",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "in the case of an award referred to in paragraph (d) of the definition of \"domestic trade agreement award\" in subsection (1), a reference to the person, or to a member of the panel or other body, that made the award,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e492",
+                                    "bcl:num": "b",
+                                    "bcl:text": "[Repealed 2012-11-4.]"
+                                },
+                                {
+                                    "@id": "d2e501",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a reference in sections 6 (1) and (3) (a) and (c) and 10 (a) and (b) to a\n            proceeding is deemed to be a reference to the proceedings that led to the domestic trade\n            agreement award, and"
+                                },
+                                {
+                                    "@id": "d0e600",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a reference in section 6 (3) (a) and (b) to the judge, court or tribunal that made the Canadian judgment is deemed to be,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e608",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in the case of an AIT award, a reference to the presiding body that made the AIT award,"
+                                        },
+                                        {
+                                            "@id": "d0e617",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the case of a NWPTA award, a reference to the NWPTA panel that made the NWPTA award,"
+                                        },
+                                        {
+                                            "@id": "d0e626",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "in the case of a TILMA award, a reference to the TILMA panel that made the TILMA award, or"
+                                        },
+                                        {
+                                            "@id": "d0e635",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "in the case of an award referred to in paragraph (d) of the definition of \"domestic trade agreement award\" in subsection (1) of this section, a reference to the person, panel or other body that made the award."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e511",
+                    "bcl:marginalnote": "Domestic trade agreement awards",
+                    "bcl:num": "1.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e519",
+                            "bcl:num": "1",
+                            "bcl:text": "If a Canadian judgment or a registered Canadian judgment is a domestic trade\n          agreement award,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e528",
+                                    "bcl:num": "a",
+                                    "bcl:text": "sections 6 (2)\n            (c) (ii) to (iv) and 9 do not apply, and"
+                                },
+                                {
+                                    "@id": "d2e537",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a reference in section 4 to sections 5 and 6 is deemed\n            to be a reference to sections 5 and 6 (1), (2) (a),\n              (b)\u00a0\n           and (c) (i) and (v), \u00a0(3) and (4)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e547",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96089_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Crown Proceeding\n              Act"
+                                },
+                                "#text": "If a registered Canadian judgment is a domestic trade agreement award against the\n          government, the following must accord with the :"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e559",
+                                    "bcl:num": "a",
+                                    "bcl:text": "enforcement of that registered Canadian judgment under section 4 of\n            this Act;"
+                                },
+                                {
+                                    "@id": "d2e568",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an order in respect of that registered Canadian judgment under section 6 (2)\n            (a), (b)\u00a0or (c) (i) or (v) of this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e577",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "Subject to subsection (2), nothing in subsection (1) affects the power of\n          the Supreme Court to make, in relation to a registered Canadian judgment that is a\n          domestic trade agreement award, any order in relation to the enforcement of that\n          registered Canadian judgment, including, without limitation, any order",
+                                "that the court may make in relation to the enforcement of any other order or\n          judgment of the court."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e586",
+                                    "bcl:num": "a",
+                                    "bcl:text": "staying or limiting the enforcement of that registered Canadian judgment,\n            or"
+                                },
+                                {
+                                    "@id": "d2e595",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting the procedure to be used for the enforcement of that registered\n            Canadian judgment,"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e609",
+                    "bcl:marginalnote": "Right to register Canadian judgment",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e617",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), a Canadian judgment, whether or not the Canadian judgment is final,\n          may be registered under this Act for the purpose of enforcement."
+                        },
+                        {
+                            "@id": "d2e626",
+                            "bcl:num": "2",
+                            "bcl:text": "A Canadian judgment that requires a person to pay money may not be registered\n          under this Act for the purpose of enforcement unless it is a final judgment."
+                        },
+                        {
+                            "@id": "d2e635",
+                            "bcl:num": "3",
+                            "bcl:text": "A Canadian judgment that also contains provisions for relief that may not be\n          enforced under this Act may be registered under this Act except in respect of those\n          provisions."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e645",
+                    "bcl:marginalnote": "Procedure for registering Canadian judgment",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e653",
+                            "bcl:num": "1",
+                            "bcl:text": "A Canadian judgment is registered under this Act by paying the fee prescribed by\n          regulation and by filing in the registry of the Supreme Court",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e662",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a copy of the Canadian judgment, certified as true by a judge, registrar, clerk or other\n            proper officer of the court that made the Canadian judgment, and"
+                                },
+                                {
+                                    "@id": "d2e671",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the additional information or material required by the applicable Rules of\n            Court."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e681",
+                            "bcl:num": "2",
+                            "bcl:text": "[Repealed 2011-25-329.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e691",
+                    "bcl:marginalnote": "Effect of registration",
+                    "bcl:num": "4",
+                    "bcl:text": "Subject to sections 5 and 6, a registered Canadian judgment,",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e702",
+                            "bcl:num": "a",
+                            "bcl:text": "subject to paragraph (b), may be enforced in British Columbia as if it were an order or\n          judgment of, and entered in, the Supreme Court, or"
+                        },
+                        {
+                            "@id": "d2e711",
+                            "bcl:num": "b",
+                            "bcl:text": "in the case of a registered Canadian judgment that is a domestic trade agreement\n          award, may be enforced in British Columbia as if it were an order or judgment of, and\n          entered in, the Supreme Court, but only if and to the extent that that enforcement or\n          entry is not restricted by the applicable domestic trade agreement."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e722",
+                    "bcl:marginalnote": "Time limit for registration and enforcement",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e730",
+                            "bcl:num": "1",
+                            "bcl:text": "A Canadian judgment, other than a Canadian judgment that is a domestic trade agreement award, that requires a person to pay money must not be registered or\n          enforced under this Act",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e739",
+                                    "bcl:num": "a",
+                                    "bcl:text": "after the time for enforcement has expired in the province or territory of Canada where\n            the Canadian judgment was made, or"
+                                },
+                                {
+                                    "@id": "d2e748",
+                                    "bcl:num": "b",
+                                    "bcl:text": "later than 10 years after the date on which the Canadian judgment became enforceable in\n            the province or territory of Canada where it was made."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1020",
+                            "bcl:num": "1.1",
+                            "bcl:text": "A Canadian judgment that is a domestic trade agreement award must not be registered or enforced under this Act more than 10 years after the date on which the Canadian judgment was made."
+                        },
+                        {
+                            "@id": "d2e758",
+                            "bcl:num": "2",
+                            "bcl:text": "Equitable doctrines and rules of law in relation to delay apply to the enforcement\n          of a Canadian judgment, to the extent that it provides for relief other than the payment\n          of money."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e768",
+                    "bcl:marginalnote": "Application for directions",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e776",
+                            "bcl:num": "1",
+                            "bcl:text": "A party to the proceeding in which a registered Canadian judgment was made may\n          apply to the Supreme Court for directions respecting its enforcement."
+                        },
+                        {
+                            "@id": "d2e785",
+                            "bcl:num": "2",
+                            "bcl:text": "On an application under subsection (1), the court may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e794",
+                                    "bcl:num": "a",
+                                    "bcl:text": "make an order that the Canadian judgment be modified as may be required to make it\n            enforceable in conformity with local practice,"
+                                },
+                                {
+                                    "@id": "d2e804",
+                                    "bcl:num": "b",
+                                    "bcl:text": "make an order stipulating the procedure to be used in enforcing the Canadian judgment,\n            or"
+                                },
+                                {
+                                    "@id": "d2e813",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make an order staying or limiting the enforcement of the Canadian judgment, subject to\n            any terms and for any period the court considers appropriate in the circumstances,\n            if",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e822",
+                                            "bcl:num": "i",
+                                            "bcl:text": "such an order could be made in respect of an order or judgment of the Supreme\n              Court under the applicable Rules of Court or any enactment relating to legal remedies\n              and the enforcement of orders and judgments,"
+                                        },
+                                        {
+                                            "@id": "d2e831",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the party against whom enforcement is sought has brought, or intends to bring,\n              in the province or territory of Canada where the Canadian judgment was made, a proceeding to set\n              aside, vary or obtain other relief in respect of the Canadian judgment,"
+                                        },
+                                        {
+                                            "@id": "d2e840",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "an order staying or limiting enforcement is in effect in the province or\n              territory of Canada where the Canadian judgment was made,"
+                                        },
+                                        {
+                                            "@id": "d2e849",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "the Canadian judgment is contrary to public policy in British Columbia, or"
+                                        },
+                                        {
+                                            "@id": "d0e1174",
+                                            "bcl:num": "v",
+                                            "bcl:text": "the Canadian judgment is a domestic trade agreement award and the ability to enforce that domestic trade agreement award is, under the terms of the domestic trade agreement, suspended or otherwise ineffective."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e859",
+                            "bcl:num": "3",
+                            "bcl:text": "Notwithstanding subsection (2), the Supreme Court must not make an order\n          staying or limiting the enforcement of a registered Canadian judgment solely on the\n          grounds that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e868",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the judge, court or tribunal that made the Canadian judgment lacked jurisdiction over the\n            subject matter of the proceeding that led to the Canadian judgment, or over the party against\n            whom enforcement is sought, under",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e877",
+                                            "bcl:num": "i",
+                                            "bcl:text": "principles of private international law, or"
+                                        },
+                                        {
+                                            "@id": "d2e886",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the domestic law of the province or territory of Canada where the Canadian judgment was\n              made,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e895",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the Supreme Court would have come to a different decision on a finding of fact\n            or law or on an exercise of discretion from the decision of the judge, court or tribunal\n            that made the Canadian judgment, or"
+                                },
+                                {
+                                    "@id": "d2e904",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a defect existed in the process or proceeding leading to the Canadian judgment."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e914",
+                            "bcl:num": "4",
+                            "bcl:text": "An application for directions must be made under subsection (1) before any measures\n          are taken to enforce a registered Canadian judgment if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e923",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the enforceability of the Canadian judgment is, by its terms, subject to the satisfaction\n            of a condition, or"
+                                },
+                                {
+                                    "@id": "d2e932",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the Canadian judgment was obtained without notice to the persons bound by it."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e942",
+                    "bcl:marginalnote": "Interest on registered Canadian judgment",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e950",
+                            "bcl:num": "1",
+                            "bcl:text": "To the extent that a registered Canadian judgment requires a person to pay money,\n          interest is payable as if it were an order or judgment of the Supreme Court."
+                        },
+                        {
+                            "@id": "d2e959",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purpose of calculating interest payable under subsection (1),\n          the amount owing on the registered Canadian judgment is the total of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e968",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the amount owing on the Canadian judgment on the date it is registered under this Act,\n            and"
+                                },
+                                {
+                                    "@id": "d2e978",
+                                    "bcl:num": "b",
+                                    "bcl:text": "interest that has accrued to that date under,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e1356",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in the case of a Canadian judgment that is not a domestic trade agreement award, the laws applicable to the calculation of interest on the Canadian judgment in the province or territory of Canada where it was made, or"
+                                        },
+                                        {
+                                            "@id": "d0e1365",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the case of a Canadian judgment that is a domestic trade agreement award, the laws of British Columbia."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e988",
+                    "bcl:marginalnote": "Recovery of registration costs",
+                    "bcl:num": "8",
+                    "bcl:text": "An enforcing party is entitled to recover all costs, charges and\n        disbursements",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e999",
+                            "bcl:num": "a",
+                            "bcl:text": "reasonably incurred in the registration of a Canadian judgment under this Act,\n          and"
+                        },
+                        {
+                            "@id": "d2e1008",
+                            "bcl:num": "b",
+                            "bcl:text": "assessed or allowed by a registrar of the Supreme Court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1018",
+                    "bcl:marginalnote": "Enforcing parties' other rights not affected by\n        registration",
+                    "bcl:num": "9",
+                    "bcl:text": "Neither registering a Canadian judgment nor taking other proceedings under this Act\n        affects an enforcing party's right to bring an action on the Canadian judgment or on the\n        original cause of action."
+                },
+                {
+                    "@id": "d2e1030",
+                    "bcl:marginalnote": "Canadian civil protection orders",
+                    "bcl:num": "9.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1038",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/11025_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Family Law\n            Act"
+                                },
+                                "#text": "A Canadian civil protection order is deemed, without registration under this Act,\n          to be an order made under Part 9 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1050",
+                            "bcl:num": "2",
+                            "bcl:text": "Nothing in subsection (1) prevents a person from registering a\n          Canadian civil protection order under this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1061",
+                    "bcl:marginalnote": "Application of Act",
+                    "bcl:num": "10",
+                    "bcl:text": "This Act applies to",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1072",
+                            "bcl:num": "a",
+                            "bcl:text": "a Canadian judgment made in a proceeding commenced after this Act comes into\n          force, and"
+                        },
+                        {
+                            "@id": "d2e1081",
+                            "bcl:num": "b",
+                            "bcl:text": "a Canadian judgment made in a proceeding commenced before this Act comes into\n          force and in which the party against whom enforcement is sought took part."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e1487",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "10.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e1495",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d0e1508",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations respecting any matter for which regulations are contemplated by this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1190",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "19",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in\n        Council."
+                }
+            ],
+            "bcl:conseqhead": [
+                {
+                    "bcl:text": "Repeal",
+                    "bcl:conseqnote": {
+                        "bcl:editorialnote": {
+                            "in:em": "[Note: See Table of Legislative Changes for the status of sections 11 to 18.]"
+                        }
+                    },
+                    "bcl:num": "11",
+                    "oasis:table": {
+                        "@style": "1",
+                        "@id": "d1e1366",
+                        "oasis:tgroup": {
+                            "@cols": "3",
+                            "oasis:colspec": [
+                                {
+                                    "@colname": "c1",
+                                    "@colnum": "1",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c2",
+                                    "@colnum": "2",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c3",
+                                    "@colnum": "3",
+                                    "@align": "center",
+                                    "@border": "0"
+                                }
+                            ],
+                            "oasis:thead": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:strong": "Section(s)"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": {
+                                                "in:strong": null
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "in:strong": "Affected Act"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "oasis:tbody": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "11"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96115",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Enforcement of Canadian Judgments Act"
+                                                },
+                                                "#text": "Supplement to the"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "bcl:text": "Consequential Amendments",
+                    "bcl:num": "12-18",
+                    "oasis:table": {
+                        "@style": "1",
+                        "@id": "d0e1447",
+                        "oasis:tgroup": {
+                            "@cols": "3",
+                            "oasis:colspec": [
+                                {
+                                    "@colname": "c1",
+                                    "@colnum": "1",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c2",
+                                    "@colnum": "2",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c3",
+                                    "@colnum": "3",
+                                    "@align": "center",
+                                    "@border": "0"
+                                }
+                            ],
+                            "oasis:thead": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:strong": "Section(s)"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": {
+                                                "in:strong": null
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "in:strong": "Affected Act"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "oasis:tbody": {
+                                "oasis:trow": [
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "oasis:line": {
+                                                    "in:em": "12\u201313"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/tlc96078",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Court Order Enforcement Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "oasis:line": {
+                                                    "in:em": "14\u201315"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/tlc96080",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Court Rules Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "oasis:line": {
+                                                    "in:em": "16\u201318"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/tlc96266",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Limitation Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

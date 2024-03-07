@@ -1,0 +1,2061 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@id": "23032",
+        "@xsi:schemaLocation": "https://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "act:title": "Short-Term Rental Accommodations Act",
+        "act:chapter": "32",
+        "act:yearenacted": "2023",
+        "act:assentedto": "October 26, 2023",
+        "act:currency": {
+            "act:tlcDirPath": "1527898742/1785381728/1624918602",
+            "act:tlc": "E3tlc23032"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e22",
+                    "bcl:num": "1",
+                    "bcl:text": "Interpretation and Application",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e28",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e36",
+                                    "bcl:text": {
+                                        "in:term": "accessory dwelling unit",
+                                        "#text": "means a building, or part of a building, that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e42",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is a self-contained residential accommodation unit,"
+                                        },
+                                        {
+                                            "@id": "d2e49",
+                                            "bcl:num": "b",
+                                            "bcl:text": "has cooking, sleeping and bathroom facilities, and"
+                                        },
+                                        {
+                                            "@id": "d2e56",
+                                            "bcl:num": "c",
+                                            "bcl:text": "is secondary to a primary dwelling unit located on the same property;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e86",
+                                    "bcl:text": {
+                                        "in:term": "business licence number",
+                                        "#text": "means the number associated with a business licence;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e93",
+                                    "bcl:text": {
+                                        "in:term": "business licence requirement",
+                                        "#text": "means a requirement in an applicable short-term rental bylaw that a person have a business licence;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e100",
+                                    "bcl:text": {
+                                        "in:term": "coordination agreement",
+                                        "in:desc": "[application of Act to participating First Nations]",
+                                        "#text": "means an agreement described in section 4 (2) ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e107",
+                                    "bcl:text": {
+                                        "in:term": "dwelling unit",
+                                        "#text": "means a building, or a part of a building, that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e113",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is a self-contained residential accommodation unit, and"
+                                        },
+                                        {
+                                            "@id": "d2e120",
+                                            "bcl:num": "b",
+                                            "bcl:text": "usually has cooking, eating, living, sleeping and bathroom facilities;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e128",
+                                    "bcl:text": {
+                                        "in:term": "exempt land",
+                                        "#text": "means prescribed land where the principal residence requirement does not apply;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e135",
+                                    "bcl:text": {
+                                        "in:term": "First Nation law",
+                                        "#text": "means a law of a participating First Nation in relation to one or both of the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e141",
+                                            "bcl:num": "a",
+                                            "bcl:text": "short-term rental accommodation services or similar services;"
+                                        },
+                                        {
+                                            "@id": "d2e148",
+                                            "bcl:num": "b",
+                                            "bcl:text": "platform services;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e157",
+                                    "bcl:text": {
+                                        "in:term": "participating First Nation",
+                                        "in:desc": "[application of Act to participating First Nations]",
+                                        "#text": "means the Nisg\u0331a'a Nation or a treaty first nation, if the Nisg\u0331a'a Nation or the treaty first nation has entered into a coordination agreement under section 4 ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e164",
+                                    "bcl:text": {
+                                        "in:term": "platform",
+                                        "#text": "means an online marketplace on which platform services are provided;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e171",
+                                    "bcl:text": {
+                                        "in:term": "platform offer",
+                                        "#text": "means a short-term rental offer made on a platform that uses the services of a platform service provider;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e178",
+                                    "bcl:text": {
+                                        "in:term": "platform representative",
+                                        "#text": "means a person responsible for representing a platform service provider in British Columbia;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e185",
+                                    "bcl:text": {
+                                        "in:term": "platform service",
+                                        "#text": "means the facilitation, provided by a platform service provider on a platform, of promotion and of transactions for reservations and payments in relation to short-term rental accommodation services located in British Columbia;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e192",
+                                    "bcl:text": {
+                                        "in:term": "platform service provider",
+                                        "#text": "means a person operating a platform and providing platform services;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e200",
+                                    "bcl:text": {
+                                        "in:term": "platform service provider information",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e206",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the name, telephone number, address, email address and, if applicable, fax number of the platform service provider and the platform representative, and"
+                                        },
+                                        {
+                                            "@id": "d2e213",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any prescribed information;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e221",
+                                    "bcl:text": {
+                                        "in:term": "principal residence",
+                                        "#text": "means the residence in which an individual resides for a longer period of time in a calendar year than any other place;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e228",
+                                    "bcl:text": {
+                                        "in:term": "principal residence requirement",
+                                        "in:desc": "[principal residence requirement]",
+                                        "#text": "means the requirement imposed under section 14 (1) ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e235",
+                                    "bcl:text": {
+                                        "in:term": "property host",
+                                        "#text": "means a person"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e241",
+                                            "bcl:num": "a",
+                                            "bcl:text": "who is legally entitled to possession of a property where short-term rental accommodation services are provided, and"
+                                        },
+                                        {
+                                            "@id": "d2e248",
+                                            "bcl:num": "b",
+                                            "bcl:text": "who has responsibility for arranging for the short-term rental offer;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e277",
+                                    "bcl:text": {
+                                        "in:term": "registrar",
+                                        "in:desc": "[appointment of registrar, delegation and authentication]",
+                                        "#text": "means the registrar appointed under section 5 (1) ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e313",
+                                    "bcl:text": {
+                                        "in:term": "related bylaw",
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/03026_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Community Charter"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/r15001_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Local Government Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/vanch_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Vancouver Charter"
+                                            }
+                                        ],
+                                        "#text": "means a local government bylaw made under the , the  or the , other than a short-term rental bylaw, that restricts or otherwise impacts short-term rental accommodation services or similar services;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e320",
+                                    "bcl:text": {
+                                        "in:term": "residence",
+                                        "#text": "means any of the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e326",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a dwelling unit;"
+                                        },
+                                        {
+                                            "@id": "d2e333",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a secondary suite or other accessory dwelling unit;"
+                                        },
+                                        {
+                                            "@id": "d2e340",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a prescribed dwelling;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e369",
+                                    "bcl:text": {
+                                        "in:term": "secondary suite",
+                                        "#text": "means an accessory dwelling unit that is located in and forms part of a primary dwelling unit;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e377",
+                                    "bcl:text": {
+                                        "in:term": "short-term rental accommodation service",
+                                        "#text": "means the service of accommodation in the property of a property host, in exchange for a fee, that is provided to members of the public for a period of time of less than 90 consecutive days or another prescribed period, if any, but does not include a prescribed accommodation service;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e384",
+                                    "bcl:text": {
+                                        "in:term": "short-term rental bylaw",
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/03026_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Community Charter"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/r15001_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Local Government Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/vanch_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Vancouver Charter"
+                                            }
+                                        ],
+                                        "#text": "means a local government bylaw made under the , the  or the  in relation to one or both of the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e390",
+                                            "bcl:num": "a",
+                                            "bcl:text": "short-term rental accommodation services or similar services;"
+                                        },
+                                        {
+                                            "@id": "d2e397",
+                                            "bcl:num": "b",
+                                            "bcl:text": "platform services;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e405",
+                                    "bcl:text": {
+                                        "in:term": "short-term rental information",
+                                        "#text": ", in relation to a short-term rental offer, means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e411",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the name of the property host and the address of the relevant property where the short-term rental accommodation services are to be provided,"
+                                        },
+                                        {
+                                            "@id": "d2e418",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the name, telephone number, address, email address and, if applicable, fax number of each supplier host, including the property host,"
+                                        },
+                                        {
+                                            "@id": "d2e425",
+                                            "bcl:num": "c",
+                                            "bcl:text": "[Not in force.]"
+                                        },
+                                        {
+                                            "@id": "d2e432",
+                                            "bcl:num": "d",
+                                            "bcl:text": "if required under an applicable short-term rental bylaw, the applicable business licence number, and"
+                                        },
+                                        {
+                                            "@id": "d2e440",
+                                            "bcl:num": "e",
+                                            "bcl:text": "any prescribed information, including in relation to an owner of the relevant property;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e448",
+                                    "bcl:text": {
+                                        "in:term": "short-term rental offer",
+                                        "#text": ", in respect of a property of a property host, means an offer by a supplier host to provide short-term rental accommodation services at the property;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e455",
+                                    "bcl:text": {
+                                        "in:term": "similar services",
+                                        "#text": "means prescribed services in relation to short-term accommodation;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e462",
+                                    "bcl:text": {
+                                        "in:term": "supplier host",
+                                        "#text": ", in respect of a short-term rental offer, means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e468",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the property host, and"
+                                        },
+                                        {
+                                            "@id": "d2e475",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the following persons, if applicable:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e481",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a person who, acting on behalf of, under the direction of or as agent of the property host, has responsibility for arranging for the short-term rental offer, which may include managing the short-term rental accommodation services;"
+                                                },
+                                                {
+                                                    "@id": "d2e488",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a prescribed person."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e498",
+                            "bcl:marginalnote": "Interpretation",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of this Act, a short-term rental bylaw, related bylaw or First Nation law is a short-term rental bylaw, related bylaw or First Nation law, as applicable, even if the short-term rental bylaw, related bylaw or First Nation law relates to a period of accommodation that differs from the period of time described in the definition of \"short-term rental accommodation service\"."
+                        },
+                        {
+                            "@id": "d2e507",
+                            "bcl:marginalnote": "What this Act does not apply to",
+                            "bcl:num": "3",
+                            "bcl:text": "This Act does not apply to hotels, motels and any other accommodation service providers that may be prescribed for the purposes of this section."
+                        },
+                        {
+                            "@id": "d2e517",
+                            "bcl:marginalnote": "Application of Act to participating First Nations",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e523",
+                                    "bcl:num": "1",
+                                    "bcl:text": "This Act does not apply within the Nisg\u0331a'a Lands or the treaty lands of a treaty first nation unless the Nisg\u0331a'a Nation or the treaty first nation has entered into a coordination agreement under this section."
+                                },
+                                {
+                                    "@id": "d2e530",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may, on behalf of the government, enter into a coordination agreement with the Nisg\u0331a'a Nation or a treaty first nation if the Nisg\u0331a'a Nation or the treaty first nation",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e536",
+                                            "bcl:num": "a",
+                                            "bcl:text": "wishes that this Act or the regulations, or a part of this Act or the regulations, apply within the Nisg\u0331a'a Lands or the treaty lands of the treaty first nation, and"
+                                        },
+                                        {
+                                            "@id": "d2e543",
+                                            "bcl:num": "b",
+                                            "bcl:text": "wishes, in order to enforce a First Nation law as a participating First Nation, to coordinate with the minister in respect of the performance of duties, or exercise of powers, under this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e551",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The minister may not delegate to any person any of the minister's powers to enter into a coordination agreement under this section."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e560",
+                    "bcl:num": "2",
+                    "bcl:text": "Registration",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e566",
+                            "bcl:marginalnote": "Appointment of registrar, delegation and authentication",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e572",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96385_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Service Act"
+                                        },
+                                        "#text": "The minister may appoint a registrar under the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e579",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96385_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Service Act"
+                                        },
+                                        "#text": "Employees may be appointed under the , and the registrar may retain other persons, whom the registrar considers necessary to exercise the registrar's powers and perform the registrar's duties under this Act."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e586",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The registrar may delegate to a person or class of persons any of the registrar's powers or duties under this Act."
+                                },
+                                {
+                                    "@id": "d2e594",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The delegation by the registrar must be in writing and may include any terms or conditions the registrar considers advisable."
+                                },
+                                {
+                                    "@id": "d2e601",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The registrar may require that, at the time an individual attempts to access services or functions of the registrar, the individual be authenticated in the prescribed manner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e609",
+                            "bcl:marginalnote": "Not in force",
+                            "bcl:num": "6-12",
+                            "bcl:text": "[Not in force.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e960",
+                    "bcl:num": "3",
+                    "bcl:text": "Specific Requirements and Related Matters",
+                    "bcl:division": [
+                        {
+                            "@id": "d2e966",
+                            "bcl:num": "1",
+                            "bcl:text": "Not in force",
+                            "bcl:section": {
+                                "@id": "d2e972",
+                                "bcl:marginalnote": "Not in force",
+                                "bcl:num": "13",
+                                "bcl:text": "[Not in force.]"
+                            }
+                        },
+                        {
+                            "@id": "d2e1004",
+                            "bcl:num": "2",
+                            "bcl:text": "Principal Residence Requirement",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1010",
+                                    "bcl:marginalnote": "Not in force",
+                                    "bcl:num": "14",
+                                    "bcl:text": "[Not in force.]"
+                                },
+                                {
+                                    "@id": "d2e1059",
+                                    "bcl:marginalnote": "Requests for changes to exempt land",
+                                    "bcl:num": "15",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1065",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to the regulations, a local government that meets the applicable prescribed criteria may, by resolution, request that the Lieutenant Governor in Council change the exempt land to remove or add the geographic area of the local government if the local government wishes, as applicable,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1071",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "that the principal residence requirement apply to the geographic area and that the geographic area be removed from the exempt land, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1078",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "that the principal residence requirement not apply to the geographic area and that the geographic area be added to the exempt land."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1086",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The local government must convey a resolution adopted under subsection (1) to the minister, on behalf of the Lieutenant Governor in Council, on or before the prescribed date in respect of a prescribed period of time."
+                                        },
+                                        {
+                                            "@id": "d2e1093",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The Lieutenant Governor in Council may, by regulation,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1099",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "prescribe criteria for the purposes of subsection (1),"
+                                                },
+                                                {
+                                                    "@id": "d2e1106",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "prescribe dates and periods of time for the purposes of subsection (2),"
+                                                },
+                                                {
+                                                    "@id": "d2e1113",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "establish procedures for a local government that meets any prescribed criteria to request a change to the exempt land,"
+                                                },
+                                                {
+                                                    "@id": "d2e1121",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "establish procedures for a prescribed person or entity to request a change to the exempt land,"
+                                                },
+                                                {
+                                                    "@id": "d2e1128",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "provide for the factors that the Lieutenant Governor in Council is to consider before making a regulation under paragraph (f) of this subsection, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1135",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "change the exempt land."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1144",
+                                            "bcl:num": "4",
+                                            "bcl:text": {
+                                                "in:desc": "[regulations of the Lieutenant Governor in Council]",
+                                                "#text": "This section does not limit the authority to make regulations under section 38 ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1152",
+                                    "bcl:marginalnote": "Not in force",
+                                    "bcl:num": "16",
+                                    "bcl:text": "[Not in force.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1174",
+                            "bcl:num": "3",
+                            "bcl:text": "Not in force",
+                            "bcl:section": {
+                                "@id": "d2e1180",
+                                "bcl:marginalnote": "Not in force",
+                                "bcl:num": "17-18",
+                                "bcl:text": "[Not in force.]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1351",
+                    "bcl:num": "4",
+                    "bcl:text": "Compliance and Enforcement",
+                    "bcl:division": [
+                        {
+                            "@id": "d2e1357",
+                            "bcl:num": "1",
+                            "bcl:text": "Director",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1363",
+                                    "bcl:marginalnote": "Appointment of director and delegation",
+                                    "bcl:num": "19",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1369",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96385_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Public Service Act"
+                                                },
+                                                "#text": "The minister may appoint a director under the ."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1376",
+                                            "bcl:num": "2",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96385_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Public Service Act"
+                                                },
+                                                "#text": "Employees may be appointed under the , and the director may retain other persons, whom the director considers necessary to exercise the director's powers and perform the director's duties under this Act."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1383",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The director may delegate to a person or a class of persons any of the director's powers or duties under this Act."
+                                        },
+                                        {
+                                            "@id": "d2e1391",
+                                            "bcl:num": "4",
+                                            "bcl:text": "The delegation by the director must be in writing and may include any terms or conditions the director considers advisable."
+                                        },
+                                        {
+                                            "@id": "d2e1398",
+                                            "bcl:num": "5",
+                                            "bcl:text": "[Not in force.]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1420",
+                                    "bcl:marginalnote": "Correction or clarification of orders",
+                                    "bcl:num": "20",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1426",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The director may, in respect of an order made by the director under this Part,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1432",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "correct typographic, grammatical, arithmetic or other similar errors,"
+                                                },
+                                                {
+                                                    "@id": "d2e1439",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "clarify the order, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1446",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "amend an obvious error or inadvertent omission in the order."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1454",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The director may take the steps described in subsection (1)",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1460",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "on the director's own initiative, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1467",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "at the request of the person subject to the order in relation to a clarification, error or omission described in subsection (1) (b) or (c)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1475",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A request by a person under subsection (2) (b) must be made within 15 days after the date the order is received."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1483",
+                                    "bcl:marginalnote": "Orders final and binding",
+                                    "bcl:num": "21",
+                                    "bcl:text": "Except as otherwise provided in this Part, each of the following orders is final and binding on the person subject to the order:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1491",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a compliance order under Division 3 of this Part."
+                                        },
+                                        {
+                                            "@id": "d2e1498",
+                                            "bcl:num": "b",
+                                            "bcl:text": "[Not in force.]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1507",
+                            "bcl:num": "2",
+                            "bcl:text": "Ensuring Compliance",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1513",
+                                    "bcl:marginalnote": "Investigation",
+                                    "bcl:num": "22",
+                                    "bcl:text": "The director may conduct investigations to ensure compliance with this Act and the regulations."
+                                },
+                                {
+                                    "@id": "d2e1522",
+                                    "bcl:marginalnote": "Production of records",
+                                    "bcl:num": "23",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1528",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The director may require a person to provide to the director, within a reasonable time, all records in the person's possession or control related in any way to an investigation."
+                                        },
+                                        {
+                                            "@id": "d2e1535",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person required under subsection (1) to provide records must comply with the requirement."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1544",
+                            "bcl:num": "3",
+                            "bcl:text": "Compliance Orders",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1550",
+                                    "bcl:marginalnote": "Compliance orders",
+                                    "bcl:num": "24",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1556",
+                                            "bcl:num": "1",
+                                            "bcl:text": "If satisfied that a person is contravening or has contravened a provision of this Act or the regulations, the director may order the person to comply with this Act and the regulations."
+                                        },
+                                        {
+                                            "@id": "d2e1563",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A compliance order under this section must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1569",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "name the person in respect of which the order is issued,"
+                                                },
+                                                {
+                                                    "@id": "d2e1576",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "describe the act, omission or practice by which the person is contravening or has contravened a provision of this Act or the regulations,"
+                                                },
+                                                {
+                                                    "@id": "d2e1583",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "identify the provision of this Act or the regulations that is being contravened or has been contravened, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1591",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "be dated and signed by the director."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1599",
+                                            "bcl:num": "3",
+                                            "bcl:text": "In a compliance order under this section, the director may order that a person take specified action within a specified period of time to remedy an act, omission or practice by which the person is contravening or has contravened a provision of this Act or the regulations."
+                                        },
+                                        {
+                                            "@id": "d2e1607",
+                                            "bcl:num": "4",
+                                            "bcl:text": "A compliance order under this section may include an order, in respect of a supplier host and one or more of the supplier host's platform offers, that a platform service provider cease providing platform services in respect of the platform offers."
+                                        },
+                                        {
+                                            "@id": "d2e1614",
+                                            "bcl:num": "5",
+                                            "bcl:text": "The director must serve a copy of a compliance order under this section on the person named in the order."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1622",
+                                    "bcl:marginalnote": "Filing compliance orders in Supreme Court",
+                                    "bcl:num": "25",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1628",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The director may file a compliance order with the Supreme Court."
+                                        },
+                                        {
+                                            "@id": "d2e1635",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A compliance order filed under subsection (1) is deemed for all purposes to be an order of the Supreme Court and enforceable as an order of the court."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1645",
+                            "bcl:num": "4",
+                            "bcl:text": "Not in force",
+                            "bcl:section": {
+                                "@id": "d2e1651",
+                                "bcl:marginalnote": "Not in force",
+                                "bcl:num": "26-30",
+                                "bcl:text": "[Not in force.]"
+                            }
+                        },
+                        {
+                            "@id": "d2e1910",
+                            "bcl:num": "5",
+                            "bcl:text": "Injunctions",
+                            "bcl:section": {
+                                "@id": "d2e1916",
+                                "bcl:marginalnote": "Injunctions",
+                                "bcl:num": "31",
+                                "bcl:subsection": [
+                                    {
+                                        "@id": "d2e1922",
+                                        "bcl:num": "1",
+                                        "bcl:text": "On application by the director, the Supreme Court may grant an injunction doing one or more of the following:",
+                                        "bcl:paragraph": [
+                                            {
+                                                "@id": "d2e1928",
+                                                "bcl:num": "a",
+                                                "bcl:text": "restraining a person from contravening a provision of this Act or the regulations, if the court is satisfied that there are reasonable grounds to believe that the person has contravened or is likely to contravene a provision of this Act or the regulations;"
+                                            },
+                                            {
+                                                "@id": "d2e1935",
+                                                "bcl:num": "b",
+                                                "bcl:text": "requiring a person to comply with this Act or the regulations, if the court is satisfied that there are reasonable grounds to believe that the person has not complied or is likely not to comply with this Act or the regulations."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d2e1943",
+                                        "bcl:num": "2",
+                                        "bcl:text": "A contravention of this Act or the regulations may be restrained under subsection (1) whether or not a penalty or other remedy is provided by this Act."
+                                    },
+                                    {
+                                        "@id": "d2e1950",
+                                        "bcl:num": "3",
+                                        "bcl:text": "At any time before the court disposes of the injunction proceeding, the court may grant an interim injunction."
+                                    },
+                                    {
+                                        "@id": "d2e1958",
+                                        "bcl:num": "4",
+                                        "bcl:text": "With respect to considering an interim injunction under subsection (3),",
+                                        "bcl:paragraph": [
+                                            {
+                                                "@id": "d2e1964",
+                                                "bcl:num": "a",
+                                                "bcl:text": "the court must give greater weight, importance and the balance of convenience to the enforcement of this Act than to the continued provision of short-term rental accommodation services or platform services, as applicable,"
+                                            },
+                                            {
+                                                "@id": "d2e1971",
+                                                "bcl:num": "b",
+                                                "bcl:text": "the director must not be required to post a bond or give an undertaking as to damages, and"
+                                            },
+                                            {
+                                                "@id": "d2e1978",
+                                                "bcl:num": "c",
+                                                "bcl:text": "the director need not establish that irreparable harm will be done if the interim injunction is not issued."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1990",
+                    "bcl:num": "5",
+                    "bcl:text": "General Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1996",
+                            "bcl:marginalnote": "Delivery and service",
+                            "bcl:num": "32",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2002",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If this Act or the regulations require or authorize an order, notice, decision or other document to be delivered or served, it may be delivered or served in the following manner:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2008",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by any manner prescribed by regulation;"
+                                        },
+                                        {
+                                            "@id": "d2e2015",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by any other method specified by the court under subsection (3)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2023",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If an order, notice, decision or other document is delivered or served by a manner prescribed under subsection (1) (a), the document is deemed to have been delivered or served as provided for by regulation."
+                                },
+                                {
+                                    "@id": "d2e2030",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On application by any person, the Supreme Court, for the purposes of this Act, may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2036",
+                                            "bcl:num": "a",
+                                            "bcl:text": "give directions on how to deliver to or serve a document on a person, or"
+                                        },
+                                        {
+                                            "@id": "d2e2043",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by order, dispense with service of a document if the court is satisfied that the person already has actual notice of the contents of the document and is avoiding service."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2052",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the court makes an order under subsection (3) (b) to dispense with service of a document, the document takes effect without being served."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2060",
+                            "bcl:marginalnote": "Collection, use and disclosure of personal information",
+                            "bcl:num": "33",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2066",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may, directly or indirectly, collect and use personal information under this Act for the administration or enforcement of this Act."
+                                },
+                                {
+                                    "@id": "d2e2073",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may disclose personal information collected under subsection (1) as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2079",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[disclosure of personal information]",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "in accordance with section 33  of the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2086",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for one or more of the following purposes:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2092",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "bcl:link": [
+                                                            {
+                                                                "@resource": "leg",
+                                                                "@xlink:href": "/legislation/96194_01",
+                                                                "@xlink:type": "locator",
+                                                                "in:doc": "Home Owner Grant Act"
+                                                            },
+                                                            {
+                                                                "@resource": "leg",
+                                                                "@xlink:href": "/legislation/96249_01",
+                                                                "@xlink:type": "locator",
+                                                                "in:doc": "Land Tax Deferment Act"
+                                                            }
+                                                        ],
+                                                        "#text": "the administration or enforcement of this Act, the  or the ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e2099",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the administration or enforcement of an Act of the Parliament of Canada that provides for the imposition and collection of a tax or duty;"
+                                                },
+                                                {
+                                                    "@id": "d2e2106",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the administration or enforcement of an enactment of British Columbia that provides for the imposition and collection of a tax or duty;"
+                                                },
+                                                {
+                                                    "@id": "d2e2114",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "to support the enforcement by local governments of short-term rental bylaws and related bylaws;"
+                                                },
+                                                {
+                                                    "@id": "d2e2121",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "to support the enforcement by participating First Nations of First Nation laws;"
+                                                },
+                                                {
+                                                    "@id": "d2e2128",
+                                                    "bcl:num": "vi",
+                                                    "bcl:text": "to support the enforcement by a prescribed person or entity of enactments that restrict or otherwise impact short-term rental accommodation services or similar services;"
+                                                },
+                                                {
+                                                    "@id": "d2e2135",
+                                                    "bcl:num": "vii",
+                                                    "bcl:text": "to monitor and research housing assistance programs and other housing programs."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2145",
+                            "bcl:marginalnote": "Sharing of information",
+                            "bcl:num": "34",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2151",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (2), the minister may enter into a written agreement to share information, including personal information, with any person or group of persons for a purpose specified in section 33."
+                                },
+                                {
+                                    "@id": "d2e2158",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An agreement under subsection (1) requires the prior approval of the Lieutenant Governor in Council unless the agreement is with any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2164",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a ministry of the government of British Columbia or an agency or corporation of that ministry;"
+                                        },
+                                        {
+                                            "@id": "d2e2171",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the government of Canada, the government of a jurisdiction within Canada, or an agency or corporation of any of those governments;"
+                                        },
+                                        {
+                                            "@id": "d2e2178",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a local government;"
+                                        },
+                                        {
+                                            "@id": "d2e2186",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a participating First Nation;"
+                                        },
+                                        {
+                                            "@id": "d2e2193",
+                                            "bcl:num": "e",
+                                            "bcl:text": "a person or entity that is prescribed for the purposes of section 33 (2) (b) (vi)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2201",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A local government may, in accordance with an agreement under subsection (1) and any regulations made under subsection (6), collect, use and disclose personal information under this Act",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2207",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for the enforcement of short-term rental bylaws and related bylaws, or"
+                                        },
+                                        {
+                                            "@id": "d2e2214",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for a prescribed purpose."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2223",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A participating First Nation may, in accordance with an agreement under subsection (1) and any regulations made under subsection (6), collect, use and disclose personal information under this Act",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2229",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for the enforcement of a First Nation law of the participating First Nation, or"
+                                        },
+                                        {
+                                            "@id": "d2e2236",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for a prescribed purpose."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2244",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A prescribed person or entity may, in accordance with an agreement under subsection (1) and any regulations made under subsection (6), collect, use and disclose personal information under this Act",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2250",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for the enforcement by the prescribed person or entity of enactments that restrict or otherwise impact short-term rental accommodation services or similar services, or"
+                                        },
+                                        {
+                                            "@id": "d2e2257",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for a prescribed purpose."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2265",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The Lieutenant Governor in Council may make regulations relating to the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2271",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an agreement under subsection (1);"
+                                        },
+                                        {
+                                            "@id": "d2e2278",
+                                            "bcl:num": "b",
+                                            "bcl:text": "information sharing among the minister, local governments, participating First Nations and prescribed persons or entities."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2288",
+                            "bcl:marginalnote": {
+                                "in:doc": "Freedom of Information and Protection of Privacy Act",
+                                "#text": "Non-application of Part 2 of"
+                            },
+                            "bcl:num": "35",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2294",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "public body",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "In this section,  has the same meaning as in Schedule 1 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2301",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "in:desc": "[Freedom of Information]",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "Part 2  of the  does not apply to the information specified in subsection (3) of this section."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2308",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subject to subsection (4) of this section, a public body must not disclose any of the following information collected under this Act:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2314",
+                                            "bcl:num": "a) and (b",
+                                            "bcl:text": "[Not in force.]"
+                                        },
+                                        {
+                                            "@id": "d2e2328",
+                                            "bcl:num": "c",
+                                            "bcl:text": "any other information that may be prescribed for the purposes of this section."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2337",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Subsection (3) of this section does not apply to the disclosure of information by a public body in accordance with section 33 (2) or 34 of this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2345",
+                            "bcl:marginalnote": "Not in force",
+                            "bcl:num": "36",
+                            "bcl:text": "[Not in force.]"
+                        },
+                        {
+                            "@id": "d2e2409",
+                            "bcl:marginalnote": {
+                                "in:doc": "Offence Act",
+                                "#text": "Section 5 of  does not apply"
+                            },
+                            "bcl:num": "37",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act or the regulations."
+                            }
+                        },
+                        {
+                            "@id": "d2e2418",
+                            "bcl:marginalnote": "Regulations of the Lieutenant Governor in Council",
+                            "bcl:num": "38",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2424",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2431",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2437",
+                                            "bcl:num": "a",
+                                            "bcl:text": "respecting any matter for which regulations are contemplated by this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2444",
+                                            "bcl:num": "b",
+                                            "bcl:text": "respecting periods of time or time limits, including as follows:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2450",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "authorizing a person to extend a period of time or time limit under this Act, and prescribing the circumstances in which the period of time or time limit, including an expired period of time or time limit, may be extended;"
+                                                },
+                                                {
+                                                    "@id": "d2e2457",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "respecting any procedures to be followed before a period of time or time limit may be extended;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2465",
+                                            "bcl:num": "c",
+                                            "bcl:text": "respecting the definitions in section 1, including the following:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2471",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "providing conditions for, or excluding, the kinds of dwellings or circumstances that apply to the definition of \"accessory dwelling unit\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2478",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing land for the purposes of the definition of \"exempt land\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2485",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "providing for exceptions from the definition of \"platform\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2493",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "providing for exceptions from the definition of \"platform service\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2500",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "specifying that certain persons or entities are excluded from the definition of \"platform service provider\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2507",
+                                                    "bcl:num": "vi",
+                                                    "bcl:text": "prescribing information for the purposes of the definition of \"platform service provider information\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2514",
+                                                    "bcl:num": "vii",
+                                                    "bcl:text": "specifying that certain residences are excluded from the definition of \"principal residence\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2521",
+                                                    "bcl:num": "viii",
+                                                    "bcl:text": "for the purposes of the definition of \"residence\", in relation to the following:",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e2527",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "providing conditions for, or excluding, the dwellings or circumstances that apply to the definition;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2534",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "prescribing dwellings;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e2542",
+                                                    "bcl:num": "ix",
+                                                    "bcl:text": "providing conditions for, or excluding, the kinds of dwellings or circumstances that apply to the definition of \"secondary suite\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2550",
+                                                    "bcl:num": "x",
+                                                    "bcl:text": "for the purposes of the definition of \"short-term rental accommodation service\", prescribing the following:",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e2556",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "a period of time;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2563",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "accommodation services;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e2571",
+                                                    "bcl:num": "xi",
+                                                    "bcl:text": "prescribing information for the purposes of the definition of \"short-term rental information\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2578",
+                                                    "bcl:num": "xii",
+                                                    "bcl:text": "prescribing services for the purposes of the definition of \"similar services\";"
+                                                },
+                                                {
+                                                    "@id": "d2e2585",
+                                                    "bcl:num": "xiii",
+                                                    "bcl:text": "prescribing persons for the purposes of the definition of \"supplier host\";"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2594",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "in:desc": "[what this Act does not apply to]",
+                                                "#text": "for the purposes of section 3 ,"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2600",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "providing for whether a property is a hotel or motel, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2607",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing accommodation service providers, including providing conditions for, or excluding, circumstances for accommodation in respect of the accommodation service providers;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2615",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "in:desc": "[application of Act to participating First Nations]",
+                                                "#text": "respecting coordination agreements with participating First Nations for the purposes of section 4 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2622",
+                                            "bcl:num": "f",
+                                            "bcl:text": "respecting the registrar, registration and renewal of registration under this Act, including the following:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2628",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "in:desc": "[appointment of registrar, delegation and authentication]",
+                                                        "#text": "prescribing a manner for authentication for the purposes of section 5 (5) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e2635",
+                                                    "bcl:num": "ii) to (vii",
+                                                    "bcl:text": "[Not in force.]"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2715",
+                                            "bcl:num": "g",
+                                            "bcl:text": {
+                                                "in:desc": "[short-term rental offer requirements]",
+                                                "#text": "respecting requirements relating to short-term rental offers, including prescribing information for the purposes of section 13 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2722",
+                                            "bcl:num": "h",
+                                            "bcl:text": {
+                                                "in:desc": "[principal residence requirement]",
+                                                "#text": "for the purposes of section 14 ,"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2728",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "respecting the principal residence requirement, including providing for exceptions, exclusions or conditions in respect of how the principal residence requirement applies",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e2734",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "to persons,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2741",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "in circumstances,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2748",
+                                                            "bcl:num": "C",
+                                                            "bcl:text": "in relation to dwellings or other properties, including residences, principal residences, secondary suites or other accessory dwelling units,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2756",
+                                                            "bcl:num": "D",
+                                                            "bcl:text": "in relation to short-term rental offers, or"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2763",
+                                                            "bcl:num": "E",
+                                                            "bcl:text": "in relation to platforms, and"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e2771",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing locations and information or documents;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2779",
+                                            "bcl:num": "i",
+                                            "bcl:text": {
+                                                "in:desc": "[requests for changes to exempt land]",
+                                                "#text": "respecting requests to seek changes to exempt land for the purposes of section 15 , including the following:"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2785",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "prescribing criteria in respect of local governments;"
+                                                },
+                                                {
+                                                    "@id": "d2e2792",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing dates and periods of time;"
+                                                },
+                                                {
+                                                    "@id": "d2e2799",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "establishing procedures;"
+                                                },
+                                                {
+                                                    "@id": "d2e2807",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "prescribing persons and entities;"
+                                                },
+                                                {
+                                                    "@id": "d2e2814",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "providing for factors;"
+                                                },
+                                                {
+                                                    "@id": "d2e2821",
+                                                    "bcl:num": "vi",
+                                                    "bcl:text": "respecting changes to exempt land;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2830",
+                                            "bcl:num": "j",
+                                            "bcl:text": {
+                                                "in:desc": "[platform service provider requirements]",
+                                                "#text": "respecting requirements of platform service providers, including prescribing information for the purposes of section 17 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2837",
+                                            "bcl:num": "k",
+                                            "bcl:text": {
+                                                "in:desc": "[procedures for local governments]",
+                                                "#text": "respecting procedures relating to requests made by local governments of platform service providers, including prescribing periods of time and information, for the purposes of section 18 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2844",
+                                            "bcl:num": "l",
+                                            "bcl:text": "establishing procedures for providing an opportunity to object to a demand for production of records;"
+                                        },
+                                        {
+                                            "@id": "d2e2851",
+                                            "bcl:num": "m",
+                                            "bcl:text": "respecting compliance orders, including establishing procedures for providing an opportunity to be heard;"
+                                        },
+                                        {
+                                            "@id": "d2e2858",
+                                            "bcl:num": "n",
+                                            "bcl:text": "[Not in force.]"
+                                        },
+                                        {
+                                            "@id": "d2e2980",
+                                            "bcl:num": "o",
+                                            "bcl:text": {
+                                                "in:desc": "[delivery and service]",
+                                                "#text": "respecting the delivery or service of documents for the purposes of section 32 , including the following:"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2986",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "prescribing when documents delivered or served are deemed to be received;"
+                                                },
+                                                {
+                                                    "@id": "d2e2993",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing manners of delivering or serving documents;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3002",
+                                            "bcl:num": "p",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[collection, use and disclosure of personal information]",
+                                                    "[sharing of information]"
+                                                ],
+                                                "#text": "for the purposes of sections 33  and 34 , as applicable, respecting the sharing of information and information-sharing agreements, including the following:"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3008",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "relating to the collection, use and disclosure of personal information;"
+                                                },
+                                                {
+                                                    "@id": "d2e3015",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing purposes, persons and entities;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3023",
+                                            "bcl:num": "q",
+                                            "bcl:text": {
+                                                "in:desc": "[non-application of Part 2 of Freedom of Information and Protection of Privacy Act]",
+                                                "#text": "prescribing information for the purposes of section 35 ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3031",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation under this Act may do one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3037",
+                                            "bcl:num": "a",
+                                            "bcl:text": "delegate a matter to a person;"
+                                        },
+                                        {
+                                            "@id": "d2e3044",
+                                            "bcl:num": "b",
+                                            "bcl:text": "confer a discretion on a person;"
+                                        },
+                                        {
+                                            "@id": "d2e3051",
+                                            "bcl:num": "c",
+                                            "bcl:text": "make different regulations in relation to different classes of persons, entities, local governments, properties, short-term rental offers, short-term rental accommodation services, similar services, platforms, platform service providers, accommodation services, accommodation service providers, things, circumstances, periods of time or time limits, or other matters;"
+                                        },
+                                        {
+                                            "@id": "d2e3059",
+                                            "bcl:num": "d",
+                                            "bcl:text": "make different regulations for different geographic areas in British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e3066",
+                                            "bcl:num": "e",
+                                            "bcl:text": "make different regulations respecting different requirements, including the following:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3072",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "[Not in force.]"
+                                                },
+                                                {
+                                                    "@id": "d2e3079",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a principal residence requirement;"
+                                                },
+                                                {
+                                                    "@id": "d2e3086",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "a business licence requirement;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3094",
+                                            "bcl:num": "f",
+                                            "bcl:text": "make regulations providing for exemptions from one or more provisions of this Act or the regulations made under it, including regulations doing one or more of the following:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3100",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "exempting a person or entity from the application under this Act of the following:",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e3106",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "[Not in force.]"
+                                                        },
+                                                        {
+                                                            "@id": "d2e3113",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "the principal residence requirement;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e3121",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "exempting the following:",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e3127",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "persons or entities;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e3134",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "local governments;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e3141",
+                                                            "bcl:num": "C",
+                                                            "bcl:text": "platforms;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e3149",
+                                                            "bcl:num": "D",
+                                                            "bcl:text": "service providers;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e3156",
+                                                            "bcl:num": "E",
+                                                            "bcl:text": "activities or circumstances;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e3163",
+                                                            "bcl:num": "F",
+                                                            "bcl:text": "properties, including dwelling units, residences, principal residences or secondary suites or other accessory dwelling units."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3174",
+                            "bcl:marginalnote": "Transitional regulations",
+                            "bcl:num": "39",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3180",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may make regulations in respect of any matters necessary for more effectively bringing into operation the provisions of this Act and for avoiding or remedying any transitional difficulties encountered in doing so, and for that purpose disapplying or varying any provision of this Act."
+                                },
+                                {
+                                    "@id": "d2e3187",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The authority to make or amend a regulation under this section, but not the authority to repeal a regulation under this section, ends 2 years after the date on which this section comes into force."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3196",
+                    "bcl:num": "6",
+                    "bcl:text": "Consequential and Related Amendments",
+                    "bcl:conseqhead": {
+                        "bcl:text": "Consequential and Related Amendments",
+                        "bcl:num": "40-44",
+                        "bcl:conseqnote": {
+                            "bcl:editorialnote": {
+                                "in:em": "[Note: See Table of Legislative Changes for the status of sections 40 to 44.]"
+                            }
+                        },
+                        "oasis:table": {
+                            "@style": "1",
+                            "@id": "d1e12443",
+                            "oasis:tgroup": {
+                                "@cols": "3",
+                                "oasis:colspec": [
+                                    {
+                                        "@colname": "c1",
+                                        "@colnum": "1",
+                                        "@align": "center",
+                                        "@border": "0"
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@colnum": "2",
+                                        "@align": "center",
+                                        "@border": "0"
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "@colnum": "3",
+                                        "@align": "center",
+                                        "@border": "0"
+                                    }
+                                ],
+                                "oasis:tbody": {
+                                    "oasis:trow": [
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "center",
+                                                    "oasis:line": {
+                                                        "in:strong": "Section(s)"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "@align": "center",
+                                                    "@width": "400",
+                                                    "oasis:line": {
+                                                        "in:strong": "Affected Act"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "40-41"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E3tlc03026",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Community Charter"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "42-43"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E3tlc15001r",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Local Government Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "44"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E3tlc53055",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Vancouver Charter"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "bcl:section": {
+                        "@id": "d2e1056",
+                        "bcl:marginalnote": "Commencement",
+                        "bcl:num": "45",
+                        "bcl:text": "The provisions of this Act referred to in column 1 of the following table come into force as set out in column 2 of the table:",
+                        "oasis:table": {
+                            "@style": "2",
+                            "@id": "d1e876",
+                            "oasis:tgroup": {
+                                "@cols": "3",
+                                "oasis:colspec": [
+                                    {
+                                        "@colname": "c1",
+                                        "@colnum": "1",
+                                        "@align": "center",
+                                        "@border": "1"
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@colnum": "2",
+                                        "@align": "center",
+                                        "@border": "1"
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "@colnum": "3",
+                                        "@align": "center",
+                                        "@border": "1"
+                                    }
+                                ],
+                                "oasis:tbody": {
+                                    "oasis:trow": [
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "center",
+                                                    "@valign": "top",
+                                                    "@width": "60",
+                                                    "oasis:line": "Item"
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@valign": "top",
+                                                    "@width": "200",
+                                                    "oasis:line": {
+                                                        "in:br": null,
+                                                        "in:strong": "Provisions of Act",
+                                                        "#text": "Column 1"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "@valign": "top",
+                                                    "@width": "300",
+                                                    "oasis:line": {
+                                                        "in:br": null,
+                                                        "in:strong": "Commencement",
+                                                        "#text": "Column 2"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "center",
+                                                    "@valign": "top",
+                                                    "@width": "60",
+                                                    "oasis:line": "1"
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@valign": "top",
+                                                    "@width": "200",
+                                                    "oasis:line": "Anything not elsewhere covered by this table"
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "@valign": "top",
+                                                    "@width": "300",
+                                                    "oasis:line": "The date of Royal Assent"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "center",
+                                                    "@valign": "top",
+                                                    "@width": "60",
+                                                    "oasis:line": "2"
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@valign": "top",
+                                                    "@width": "200",
+                                                    "oasis:line": "Sections 1 to 39"
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "@valign": "top",
+                                                    "@width": "300",
+                                                    "oasis:line": "By regulation of the Lieutenant Governor in Council"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1444 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_08035_01",
+        "act:title": "Patient Care Quality Review Board Act",
+        "act:chapter": "35",
+        "act:yearenacted": "2008",
+        "act:assentedto": "May 29, 2008",
+        "act:currency": {
+            "act:tlcDirPath": "1922970521/08035/tlc08035_f",
+            "act:tlc": "E3tlc08035"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e21",
+                    "bcl:num": "1",
+                    "bcl:text": "Interpretation",
+                    "bcl:section": {
+                        "@id": "d2e30",
+                        "bcl:marginalnote": "Definitions",
+                        "bcl:num": "1",
+                        "bcl:text": "In this Act:",
+                        "bcl:definition": [
+                            {
+                                "@id": "d2e41",
+                                "bcl:text": {
+                                    "in:term": "applicable review board",
+                                    "#text": "means,"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e50",
+                                        "bcl:num": "a",
+                                        "bcl:text": "in respect of a health authority or its complaint office, the review board established under section 8 for the health authority region for that health authority, and"
+                                    },
+                                    {
+                                        "@id": "d2e60",
+                                        "bcl:num": "b",
+                                        "bcl:text": "in respect of the PHSA or its complaint office, the review board established under section 8 for that health authority;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e69",
+                                "bcl:text": {
+                                    "in:term": "care quality complaint",
+                                    "#text": "means a complaint"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e78",
+                                        "bcl:num": "a",
+                                        "bcl:text": "respecting one or more of the following:",
+                                        "bcl:subparagraph": [
+                                            {
+                                                "@id": "d2e87",
+                                                "bcl:num": "i",
+                                                "bcl:text": "the delivery of, or the failure to deliver, health care;"
+                                            },
+                                            {
+                                                "@id": "d2e96",
+                                                "bcl:num": "ii",
+                                                "bcl:text": "the quality of health care delivered;"
+                                            },
+                                            {
+                                                "@id": "d2e105",
+                                                "bcl:num": "iii",
+                                                "bcl:text": "the delivery of, or the failure to deliver, a service relating to health care;"
+                                            },
+                                            {
+                                                "@id": "d2e115",
+                                                "bcl:num": "iv",
+                                                "bcl:text": "the quality of any service relating to health care, and"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d2e124",
+                                        "bcl:num": "b",
+                                        "bcl:text": "made by or on behalf of the individual to whom the health care or service was delivered or not delivered;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e133",
+                                "bcl:text": {
+                                    "in:term": "complainant",
+                                    "#text": "means"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e142",
+                                        "bcl:num": "a",
+                                        "bcl:text": "the individual referred to in paragraph (b) of the definition of \"care quality complaint\", or"
+                                    },
+                                    {
+                                        "@id": "d2e151",
+                                        "bcl:num": "b",
+                                        "bcl:text": "if a person has been authorized under the common law or an enactment to make health care decisions in respect of that individual, the person having that authority;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e160",
+                                "bcl:text": {
+                                    "in:term": "complaint office",
+                                    "#text": "means a patient care quality office established under section 2;"
+                                }
+                            },
+                            {
+                                "@id": "d2e170",
+                                "bcl:text": {
+                                    "in:term": "contracting agency",
+                                    "#text": ", in relation to a health authority, means any agency, organization or other entity that, under contract to the health authority, delivers health care or related services, and includes a prescribed person;"
+                                }
+                            },
+                            {
+                                "@id": "d2e179",
+                                "bcl:text": {
+                                    "in:term": "entity",
+                                    "#text": "includes an individual;"
+                                }
+                            },
+                            {
+                                "@id": "d2e188",
+                                "bcl:text": {
+                                    "in:term": "health authority",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96180_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Health Authorities Act"
+                                    },
+                                    "#text": "means a regional health board designated under section 4 of the  and includes the PHSA, but does not include the Nisg\u0331a'a Health Authority;"
+                                }
+                            },
+                            {
+                                "@id": "d2e203",
+                                "bcl:text": {
+                                    "in:term": "health authority region",
+                                    "bcl:link": [
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96180_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Health Authorities Act"
+                                        },
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96180_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Health Authorities Act"
+                                        }
+                                    ],
+                                    "#text": "means, in respect of a health authority designated under section 4 of the , the area of British Columbia that is designated under section 4 of the  as the region for the health authority;"
+                                }
+                            },
+                            {
+                                "@id": "d2e218",
+                                "bcl:text": {
+                                    "in:term": "health care",
+                                    "#text": "means anything that is provided to an individual for a therapeutic, preventive, palliative, diagnostic or other health related purpose, and includes"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e227",
+                                        "bcl:num": "a",
+                                        "bcl:text": "a course of health care, and"
+                                    },
+                                    {
+                                        "@id": "d2e237",
+                                        "bcl:num": "b",
+                                        "bcl:text": "other prescribed services relating to individuals' health or well-being;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e246",
+                                "bcl:text": {
+                                    "in:term": "PHSA",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/15018_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Societies Act"
+                                    },
+                                    "#text": "means the Provincial Health Services Authority, a society under the ;"
+                                }
+                            },
+                            {
+                                "@id": "d2e258",
+                                "bcl:text": {
+                                    "in:term": "review board",
+                                    "#text": "means a Patient Care Quality Review Board established under section 8."
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d2e268",
+                    "bcl:num": "2",
+                    "bcl:text": "Patient Care Quality Offices",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e277",
+                            "bcl:marginalnote": "Establishment of patient care quality offices",
+                            "bcl:num": "2",
+                            "bcl:text": "Each health authority must, in accordance with the directions of the minister under section 6, establish a patient care quality office to receive care quality complaints and to process those care quality complaints in accordance with any directions provided by the minister under section 6."
+                        },
+                        {
+                            "@id": "d2e289",
+                            "bcl:marginalnote": "Complaints",
+                            "bcl:num": "3",
+                            "bcl:text": "Without limiting any other right an individual may have to submit a care quality complaint in relation to health care to any other entity, the individual may submit that care quality complaint to the complaint office in the health authority region in which the health care was",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e300",
+                                    "bcl:num": "a",
+                                    "bcl:text": "delivered, or"
+                                },
+                                {
+                                    "@id": "d2e309",
+                                    "bcl:num": "b",
+                                    "bcl:text": "requested but not delivered."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e320",
+                            "bcl:marginalnote": "Role of complaint office",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e328",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "external complaint",
+                                        "#text": "In this section,  means a care quality complaint, submitted to a complaint office, that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e340",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the complaint office determines",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e349",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "relates to another health authority, or"
+                                                },
+                                                {
+                                                    "@id": "d2e359",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "should be processed by another entity,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e368",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the minister, under section 6, directs is to be referred to another entity, or"
+                                        },
+                                        {
+                                            "@id": "d2e377",
+                                            "bcl:num": "c",
+                                            "bcl:text": "is included in this definition by regulation of the minister."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e386",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a complaint office receives a care quality complaint, the complaint office",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e395",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must, unless the care quality complaint is an external complaint, process the care quality complaint in accordance with any directions provided by the minister under section 6, or"
+                                        },
+                                        {
+                                            "@id": "d2e404",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must, for a care quality complaint that is an external complaint,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e414",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "if the complainant consents, refer that care quality complaint to another entity in accordance with any directions provided by the minister under section 6 and provide notice of that referral to the complainant and, if different, the individual who submitted the care quality complaint on the complainant's behalf, or"
+                                                },
+                                                {
+                                                    "@id": "d2e423",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "if there is no entity to which the care quality complaint may or must be referred or if the complainant does not consent to a referral under subparagraph (i) of this paragraph, notify the complainant and, if different, the individual who submitted the care quality complaint on the complainant's behalf, that the care quality complaint will not be considered or referred by the complaint office."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e433",
+                            "bcl:marginalnote": "Reports",
+                            "bcl:num": "5",
+                            "bcl:text": "A complaint office must, at the times and in the manner directed by the minister under section 6, report to one or both of the applicable review board and the minister on",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e444",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the number of care quality complaints of a particular nature received by the complaint office in the reporting period and the average resolution time for complaints of that nature in that period, and"
+                                },
+                                {
+                                    "@id": "d2e453",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any other matters that the minister may direct."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e463",
+                            "bcl:marginalnote": "Directions by minister",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e471",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may provide directions to a health authority respecting the care quality complaint process it is to follow and the creation, role and responsibilities of its complaint office, including, without limitation, directions respecting the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e480",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the form and manner in which the health authority is to make public the existence and role of its complaint office, including the information that is to be provided by the health authority in that regard;"
+                                        },
+                                        {
+                                            "@id": "d2e489",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the locations at which care quality complaints may be submitted to a complaint office and the hours during which those locations must be available for the submission of care quality complaints;"
+                                        },
+                                        {
+                                            "@id": "d2e499",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the means by which care quality complaints may be submitted to a complaint office, including submission in writing or by telephone, electronic mail, fax and internet, and the steps that must be taken and the facilities that must be provided by a complaint office to facilitate the submission of care quality complaints by those means;"
+                                        },
+                                        {
+                                            "@id": "d2e508",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the manner in which care quality complaints are to be processed by a complaint office and the period within which the care quality complaint process or any step in that process is to occur;"
+                                        },
+                                        {
+                                            "@id": "d2e517",
+                                            "bcl:num": "e",
+                                            "bcl:text": [
+                                                "the circumstances in which a complaint office may or must obtain a complainant's consent relating to",
+                                                "and the form and content of a consent;"
+                                            ],
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e526",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the complaint office's collection, use, retention and disclosure of information relating to the complainant's care quality complaint submitted to it, and"
+                                                },
+                                                {
+                                                    "@id": "d2e535",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the referral, by the complaint office to another entity, of any information and records submitted to the complaint office as or with the complainant's care quality complaint and any related information referred to in subparagraph (i),"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e548",
+                                            "bcl:num": "f",
+                                            "bcl:text": "the circumstances and manner in which a complaint office is to refer, to another entity, a care quality complaint received by the complaint office and the persons to whom and the period within which those care quality complaints are to be referred;"
+                                        },
+                                        {
+                                            "@id": "d2e557",
+                                            "bcl:num": "g",
+                                            "bcl:text": "the information about each care quality complaint received by a complaint office that is to be recorded by the complaint office, including, without limitation,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e566",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the nature of the care quality complaint,"
+                                                },
+                                                {
+                                                    "@id": "d2e575",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the date the care quality complaint was received by the complaint office,"
+                                                },
+                                                {
+                                                    "@id": "d2e584",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "if the care quality complaint was processed by the complaint office, the process undertaken, the results of that process, the date on which those results were communicated to the complainant and, if different, the individual who submitted the care quality complaint on the complainant's behalf, and the manner and content of that communication, and"
+                                                },
+                                                {
+                                                    "@id": "d2e593",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "if the care quality complaint was referred to another entity by the complaint office, the date of that referral, the entity to which it was referred and any information about the resolution of the care quality complaint provided to the complaint office by the entity or the complainant;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e603",
+                                            "bcl:num": "h",
+                                            "bcl:text": "the information about care quality complaints and the complaint process that is to be maintained by a health authority and made accessible",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e612",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "to the applicable review board,"
+                                                },
+                                                {
+                                                    "@id": "d2e621",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "in the case of a care quality complaint that has been made public, including by the complainant disclosing the care quality complaint to any person, to the minister for the purposes of",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e630",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "the minister's powers and duties under section 13 or 15, or"
+                                                        },
+                                                        {
+                                                            "@id": "d2e639",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "allowing the minister to assess the extent to which any information about the care quality complaint should and can be disclosed under section 19, and"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e648",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "in the case of any other care quality complaint, to the minister, in a manner that does not disclose the complainant's identity, for the purposes of the minister's powers and duties under section 13 or 15;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e658",
+                                            "bcl:num": "i",
+                                            "bcl:text": "information and reports to be provided by a complaint office to a complainant and, if different, the individual who submitted the care quality complaint on the complainant's behalf, including the information to be provided and the form and timing of those reports;"
+                                        },
+                                        {
+                                            "@id": "d2e667",
+                                            "bcl:num": "j",
+                                            "bcl:text": "the reports and recommendations that may or must be provided by a complaint office to one or both of the applicable review board and the minister, including the information to be provided and the form and timing of those reports and recommendations."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e676",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A health authority and its complaint office must process care quality complaints in accordance with any directions of the minister under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e686",
+                            "bcl:marginalnote": "Review by complaint office",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e694",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a complaint office processes a care quality complaint, the complaint office",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e703",
+                                            "bcl:num": "a",
+                                            "bcl:text": "may consider",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e712",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96124_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Evidence Act"
+                                                        },
+                                                        "#text": "any information and records available to the health authority in respect of the complainant and the care quality complaint other than information, records, findings or conclusions described in section 51 (5) of the ,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e725",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "any information and records provided by a contracting agency under subsection (2) of this section, and"
+                                                },
+                                                {
+                                                    "@id": "d2e734",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "any information and records provided by the complainant and, if different, by the individual who submitted the care quality complaint on the complainant's behalf,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e743",
+                                            "bcl:num": "b",
+                                            "bcl:text": "may consider all of the circumstances relating to the care quality complaint and determine the entities involved in those circumstances and the policies and procedures of those entities that are applicable to those circumstances,"
+                                        },
+                                        {
+                                            "@id": "d2e752",
+                                            "bcl:num": "c",
+                                            "bcl:text": "must, after processing the care quality complaint,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e761",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "report to the individual who submitted the care quality complaint on the complainant's behalf that the complaint office has processed the care quality complaint and whether or not the care quality complaint has been resolved, and"
+                                                },
+                                                {
+                                                    "@id": "d2e770",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "report to the complainant respecting",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e780",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "the circumstances relating to the care quality complaint as understood by the complaint office,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e789",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "those policies and procedures of the entities involved in the subject matter of the care quality complaint that are applicable to those circumstances, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e798",
+                                                            "bcl:num": "C",
+                                                            "bcl:text": "any actions taken in response to the care quality complaint, including any actions to resolve that care quality complaint, and"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e807",
+                                            "bcl:num": "d",
+                                            "bcl:text": "must provide to the complainant and, if different, the individual who submitted the care quality complaint on the complainant's behalf, notice of the complainant's right to a review of the care quality complaint under Division 2 of Part 3, including the address to which a request for a review may be delivered."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e816",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a care quality complaint relates to health care or services that a contracting agency delivered or failed to deliver,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e825",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the complaint office may require the contracting agency to provide to the complaint office any available information and records requested by the complaint office relating to the complainant and the care quality complaint, and"
+                                        },
+                                        {
+                                            "@id": "d2e835",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96124_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Evidence Act"
+                                                },
+                                                "#text": "the contracting agency must, despite any contrary provisions in any contract between the health authority and the contracting agency, promptly provide to the complaint office that information and those records, other than information, records, findings or conclusions described in section 51 (5) of the  and any other prescribed information and records."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e848",
+                    "bcl:num": "3",
+                    "bcl:text": "Patient Care Quality Review Boards",
+                    "bcl:division": [
+                        {
+                            "@id": "d2e857",
+                            "bcl:num": "1",
+                            "bcl:text": "Establishment of Review Boards",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e870",
+                                    "bcl:marginalnote": "Establishment of review boards",
+                                    "bcl:num": "8",
+                                    "bcl:text": "There is established for each health authority region and for the PHSA a Patient Care Quality Review Board consisting of the members appointed under section 9."
+                                },
+                                {
+                                    "@id": "d2e882",
+                                    "bcl:marginalnote": "Review board members",
+                                    "bcl:num": "9",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e890",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Each review board consists of",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e899",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a member appointed by the minister and designated by the minister as the chair, and"
+                                                },
+                                                {
+                                                    "@id": "d2e908",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "other members appointed by the minister."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e918",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The minister must appoint the first review board for each health authority region and for the PHSA on or before October 15, 2008."
+                                        },
+                                        {
+                                            "@id": "d2e927",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The following individuals are not eligible to be appointed to a review board for a health authority region or for the PHSA:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e936",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a member of the board of directors of the health authority in that health authority region or of the PHSA, as the case may be;"
+                                                },
+                                                {
+                                                    "@id": "d2e945",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a member of the executive of that health authority;"
+                                                },
+                                                {
+                                                    "@id": "d2e954",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "an employee or contractor of that health authority."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e963",
+                                            "bcl:num": "4",
+                                            "bcl:text": "An act or proceeding of the review board is not invalid merely because the composition of the review board does not accord with subsections (1) to (3)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e973",
+                                    "bcl:marginalnote": "Remuneration and expenses for members",
+                                    "bcl:num": "10",
+                                    "bcl:text": "In accordance with general directives of the Treasury Board, members of a review board may be paid remuneration and must be reimbursed for reasonable travelling and out of pocket expenses necessarily incurred in carrying out their duties."
+                                },
+                                {
+                                    "@id": "d2e985",
+                                    "bcl:marginalnote": "Organization of review board",
+                                    "bcl:num": "11",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e993",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The chair of a review board may organize the review board into panels, each composed of 2 or more members."
+                                        },
+                                        {
+                                            "@id": "d2e1002",
+                                            "bcl:num": "2",
+                                            "bcl:text": [
+                                                "The members of a review board may sit",
+                                                "and 2 or more panels may sit at the same time."
+                                            ],
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1011",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "as the review board, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1021",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "as a panel of the review board,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1033",
+                                            "bcl:num": "3",
+                                            "bcl:text": "If one or more members of a review board sit as a panel,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1042",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the panel has the jurisdiction of, and may exercise the powers and perform the duties of, the review board, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1051",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a determination of the panel is a determination of the review board."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1061",
+                                    "bcl:marginalnote": "Not in force",
+                                    "bcl:num": "12",
+                                    "bcl:text": "[Not in force.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1073",
+                            "bcl:num": "2",
+                            "bcl:text": "Reviews",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1086",
+                                    "bcl:marginalnote": "Review of care quality complaint",
+                                    "bcl:num": "13",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1094",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A complainant or an individual on the complainant's behalf may request that a care quality complaint submitted to a complaint office by or on behalf of the complainant be reviewed by the applicable review board if",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1103",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the complaint office has provided to the complainant or, if different, the individual who submitted the care quality complaint on the complainant's behalf, a report under section 7 (1) (c) in relation to the care quality complaint, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1112",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the complaint office has not, within the prescribed period after the submission of the care quality complaint to the complaint office, provided to the complainant or, if different, the individual who submitted the care quality complaint on the complainant's behalf, a report under section 7 (1) (c) in relation to the care quality complaint."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1122",
+                                            "bcl:num": "2",
+                                            "bcl:text": [
+                                                "The minister may direct a review board to review a complaint, however brought to the attention of the minister, respecting",
+                                                "whether or not a care quality complaint has been submitted to a complaint office in relation to that matter."
+                                            ],
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1131",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the delivery of, or the failure to deliver, health care,"
+                                                },
+                                                {
+                                                    "@id": "d2e1140",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the quality of health care delivered,"
+                                                },
+                                                {
+                                                    "@id": "d2e1149",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the delivery of, or the failure to deliver, a service relating to health care, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1158",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "the quality of any service relating to health care,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1171",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A review board must, in accordance with any directions provided by the minister under section 16, undertake a review of",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1180",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a care quality complaint, if the review board receives a request under subsection (1) of this section,"
+                                                },
+                                                {
+                                                    "@id": "d2e1189",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "an individual's situation, if the minister directs the review board to review the situation and the review board receives a consent, in the form and with the content directed by the minister under section 16, from the individual or a person having authority under the common law or an enactment to make health care decisions in respect of the individual, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1198",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "any other situation or matter, if the minister directs the review board to review the situation or matter."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1207",
+                                            "bcl:num": "4",
+                                            "bcl:text": "In exercising its powers and performing its duties under this Part, a review board may",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1216",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "consult with a health authority and any of its contracting agencies, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1226",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "request additional information and records that the review board considers necessary or appropriate from",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e1235",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the health authority, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1244",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "if the matter under review relates to any of the health authority's contracting agencies, that contracting agency."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1253",
+                                            "bcl:num": "5",
+                                            "bcl:text": "A health authority or contracting agency must provide all reasonable assistance to a review board in relation to a review being undertaken by that review board, including by promptly providing to the review board, in response to a request under subsection (4) (b), any information and records available to the health authority or contracting agency, other than",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1262",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96124_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Evidence Act"
+                                                        },
+                                                        "#text": "information, records, findings or conclusions described in section 51 (5) of the , and"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1274",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "any other prescribed information and records requested by the review board under subsection (4) (b) of this section."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1284",
+                                    "bcl:marginalnote": "Powers and duties of review board",
+                                    "bcl:num": "14",
+                                    "bcl:text": "If a review board conducts a review under section 13, the review board",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1295",
+                                            "bcl:num": "a",
+                                            "bcl:text": "may consider any information and records available to the review board in respect of the matter under review, including",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1304",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "any information and records provided by a health authority or contracting agency under section 13 (5), and"
+                                                },
+                                                {
+                                                    "@id": "d2e1314",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "any information and records provided by the complainant and, if different, the individual who submitted a review request on the complainant's behalf,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1323",
+                                            "bcl:num": "b",
+                                            "bcl:text": "may consider all of the circumstances relating to the matter under review and determine the entities involved in those circumstances and the policies and procedures of those entities that are applicable to those circumstances, and"
+                                        },
+                                        {
+                                            "@id": "d2e1332",
+                                            "bcl:num": "c",
+                                            "bcl:text": "must, at the conclusion of the review,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1341",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "report to the individual who submitted the review request on the complainant's behalf or, in the case of a care quality complaint, situation or matter referred to the review board under section 13 (2) or (3) (b) or (c), to the minister, that the review board has completed its review of the care quality complaint and whether or not the care quality complaint has been resolved, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1350",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "report to the complainant, if any, respecting",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e1359",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "the circumstances relating to the matter under review as understood by the review board,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1369",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "those policies and procedures of the entities involved in the matter under review that are applicable to those circumstances, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1378",
+                                                            "bcl:num": "C",
+                                                            "bcl:text": "any actions taken in response to the care quality complaint, including any actions to resolve that care quality complaint."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1388",
+                                    "bcl:marginalnote": "Reports",
+                                    "bcl:num": "15",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1396",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A review board must make an annual report to the minister."
+                                        },
+                                        {
+                                            "@id": "d2e1405",
+                                            "bcl:num": "2",
+                                            "bcl:text": "In addition to the reports referred to in section 14 (c) and subsection (1) of this section, a review board",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1414",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "must, at the request of the minister, report to the minister on specific matters,"
+                                                },
+                                                {
+                                                    "@id": "d2e1424",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "may, as a result of a review requested or directed under section 13, or as a result of a report, recommendation or information provided to it under section 6 (1) (j),",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e1433",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "subject to paragraph (c) of this subsection, provide recommendations for improvements in patient care quality to one or both of the following:",
+                                                            "bcl:clause": [
+                                                                {
+                                                                    "@id": "d2e1442",
+                                                                    "bcl:num": "A",
+                                                                    "bcl:text": "the minister;"
+                                                                },
+                                                                {
+                                                                    "@id": "d2e1451",
+                                                                    "bcl:num": "B",
+                                                                    "bcl:text": "the health authority,"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "@id": "d2e1460",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "provide recommendations to the minister and the health authority respecting",
+                                                            "bcl:clause": [
+                                                                {
+                                                                    "@id": "d2e1469",
+                                                                    "bcl:num": "A",
+                                                                    "bcl:text": "the processes by which care quality complaints are made and disposed of, and"
+                                                                },
+                                                                {
+                                                                    "@id": "d2e1479",
+                                                                    "bcl:num": "B",
+                                                                    "bcl:text": "any other matters in respect of which recommendations are requested by the minister, and"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "@id": "d2e1488",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "report to the minister and to the health authority on the following:",
+                                                            "bcl:clause": [
+                                                                {
+                                                                    "@id": "d2e1497",
+                                                                    "bcl:num": "A",
+                                                                    "bcl:text": "the number of care quality complaints of a particular nature received by the complaint office in a reporting period and the average resolution time of the complaint office for care quality complaints of that nature;"
+                                                                },
+                                                                {
+                                                                    "@id": "d2e1506",
+                                                                    "bcl:num": "B",
+                                                                    "bcl:text": "the number of requests for reviews of care quality complaints of a particular nature received by the review board in a reporting period and the average resolution time of the review board for reviews of care quality complaints of that nature;"
+                                                                },
+                                                                {
+                                                                    "@id": "d2e1515",
+                                                                    "bcl:num": "C",
+                                                                    "bcl:text": "the effectiveness of the care quality complaint process, including consistency and timing of, and the level of satisfaction with, the results of that process;"
+                                                                },
+                                                                {
+                                                                    "@id": "d2e1524",
+                                                                    "bcl:num": "D",
+                                                                    "bcl:text": "if and to what extent the care quality complaint process accords with the minister's directions in relation to it;"
+                                                                },
+                                                                {
+                                                                    "@id": "d2e1534",
+                                                                    "bcl:num": "E",
+                                                                    "bcl:text": "any other matter directed by the minister, and"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e1543",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "must, if a recommendation is provided to the health authority under paragraph (b) (i) (B), also provide that recommendation to the minister."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1552",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A review board must ensure that any of its reports and recommendations are submitted by it in the manner, at the time and with the information required by the minister."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1562",
+                                    "bcl:marginalnote": "Directions by minister",
+                                    "bcl:num": "16",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1570",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The minister may provide directions to a review board respecting the review process and the review board's role and responsibilities, including, without limitation, directions to the review board respecting the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1579",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the means by which review requests may be submitted to a review board, including submission in writing or by telephone, electronic mail, fax and internet, and the steps that must be taken and the facilities that must be provided by a review board to facilitate submission of review requests by those means;"
+                                                },
+                                                {
+                                                    "@id": "d2e1588",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the manner in which review requests are to be processed by a review board and the period within which that is to occur;"
+                                                },
+                                                {
+                                                    "@id": "d2e1598",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the circumstances in which a review board may or must obtain a complainant's consent relating to the review board's collection, use, retention and disclosure of information relating to a review request submitted to it, and the form and content of a consent;"
+                                                },
+                                                {
+                                                    "@id": "d2e1607",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "the information about each review request received by a review board that is to be recorded by the review board, including, without limitation,",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e1616",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the nature of the care quality complaint underlying the review request, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1625",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the date the review request was received by the review board;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e1634",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "the manner in which the information required under paragraph (d) is to be recorded by a review board and the period within which that information is to be retained by the review board;"
+                                                },
+                                                {
+                                                    "@id": "d2e1643",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "the information about care quality complaints and the review process that is to be maintained by a review board and made accessible,",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e1653",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "in the case of a care quality complaint that has been made public, including by the complainant disclosing the care quality complaint to any person, to the minister for the purposes of",
+                                                            "bcl:clause": [
+                                                                {
+                                                                    "@id": "d2e1662",
+                                                                    "bcl:num": "A",
+                                                                    "bcl:text": "the minister's powers and duties under section 13 or 15, or"
+                                                                },
+                                                                {
+                                                                    "@id": "d2e1671",
+                                                                    "bcl:num": "B",
+                                                                    "bcl:text": "allowing the minister to assess the extent to which any information about the care quality complaint should and can be disclosed under section 19, and"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "@id": "d2e1680",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "in the case of any other care quality complaint, to the minister, in a manner that does not disclose the complainant's identity, for the purposes of the minister's powers and duties under section 15;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e1689",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "reviews the review board is to conduct into the activities of the health authority or a contracting agency to determine if and to what extent a recommendation of the review board under section 15 has been adopted;"
+                                                },
+                                                {
+                                                    "@id": "d2e1698",
+                                                    "bcl:num": "h",
+                                                    "bcl:text": "information and reports to be provided by a review board to a complainant and, if different, the individual who submitted a review request on the complainant's behalf, including the information to be provided and the form and timing in which that information and those reports may or must be provided;"
+                                                },
+                                                {
+                                                    "@id": "d2e1708",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the reports and recommendations that may or must be provided by a review board to the minister, including the information to be provided and the form and timing of those reports and recommendations."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1717",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The review board must comply with any directions of the minister under this section."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1727",
+                    "bcl:num": "4",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1736",
+                            "bcl:marginalnote": "Collection, use and disclosure of personal information",
+                            "bcl:num": "17",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1744",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A complaint office or a review board may receive, collect, use and disclose personal information necessary for the performance of its powers and duties under this Act."
+                                },
+                                {
+                                    "@id": "d2e1753",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting any other power of the minister under the common law or an enactment to require, receive, collect, use or disclose information, the minister may receive, collect, use and disclose personal information in or for the performance of the minister's powers and duties under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1764",
+                            "bcl:marginalnote": "Confidentiality",
+                            "bcl:num": "18",
+                            "bcl:text": "Each person who obtains personal information under this Act, including, without limitation, as a result of the submission, processing, review or referral of a care quality complaint under this Act or as a result of any report or recommendation provided under this Act,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1775",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must keep confidential that personal information,"
+                                },
+                                {
+                                    "@id": "d2e1784",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must not communicate any of that personal information except to the extent that the person is authorized or required to do so under this Act or any other enactment, and"
+                                },
+                                {
+                                    "@id": "d2e1794",
+                                    "bcl:num": "c",
+                                    "bcl:text": "must not be required in an inquiry, arbitration, inquest or civil proceeding or in a proceeding before a tribunal, board or commission",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1803",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to testify in relation to that personal information, or"
+                                        },
+                                        {
+                                            "@id": "d2e1812",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to produce any",
+                                            "bcl:clause": [
+                                                {
+                                                    "@id": "d2e1821",
+                                                    "bcl:num": "A",
+                                                    "bcl:text": "evidence obtained as a result of the submission of, or in the processing, review or referral of, a care quality complaint under this Act, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1830",
+                                                    "bcl:num": "B",
+                                                    "bcl:text": "any reports provided in relation to that processing, review or referral."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1840",
+                            "bcl:marginalnote": "Disclosure if compelling public interest",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1848",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "Despite any provision of this or any other enactment, if the minister considers that there is a compelling public interest requiring the disclosure of",
+                                        "the minister may, subject to subsection (2) of this section, make disclosure of",
+                                        "including by public disclosure."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1857",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a care quality complaint, whether or not it has been submitted to a complaint office or a review board or has been processed or resolved,"
+                                        },
+                                        {
+                                            "@id": "d2e1866",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the result of a care quality complaint process,"
+                                        },
+                                        {
+                                            "@id": "d2e1876",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the result of a review under section 13, or"
+                                        },
+                                        {
+                                            "@id": "d2e1885",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the content of a report or recommendation provided to the minister under this Act,"
+                                        },
+                                        {
+                                            "@id": "d2e1897",
+                                            "bcl:num": "e",
+                                            "bcl:text": "information relating to that care quality complaint,"
+                                        },
+                                        {
+                                            "@id": "d2e1906",
+                                            "bcl:num": "f",
+                                            "bcl:text": "the result of the care quality complaint process or of the review under section 13, or"
+                                        },
+                                        {
+                                            "@id": "d2e1915",
+                                            "bcl:num": "g",
+                                            "bcl:text": "the content of the care quality complaint or the report or recommendation,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1928",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister must ensure that any disclosure under subsection (1) does not constitute an unreasonable invasion of personal privacy or include information relating to any individual's medical diagnosis or health status."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1938",
+                            "bcl:marginalnote": "Qualified privilege",
+                            "bcl:num": "20",
+                            "bcl:text": "An oral or written complaint, referral, recommendation, report or statement made under this Act has qualified privilege."
+                        },
+                        {
+                            "@id": "d2e1950",
+                            "bcl:marginalnote": {
+                                "in:doc": "Offence Act"
+                            },
+                            "bcl:num": "21",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act or the regulations."
+                            }
+                        },
+                        {
+                            "@id": "d2e1968",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1976",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The minister may make regulations referred to in section 41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1988",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1) or the minister's power to provide directions under section 6 or 16, the minister may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1997",
+                                            "bcl:num": "a",
+                                            "bcl:text": "defining any word or expression used but not defined in this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2007",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing persons for the purposes of the definition of \"contracting agency\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2016",
+                                            "bcl:num": "c",
+                                            "bcl:text": "prescribing services for the purposes of the definition of \"health care\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2025",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing care quality complaints for the purposes of the definition of \"external complaint\" in section 4;"
+                                        },
+                                        {
+                                            "@id": "d2e2034",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing information and records for the purposes of section 7 (2) (b) or 13 (5) (b);"
+                                        },
+                                        {
+                                            "@id": "d2e2043",
+                                            "bcl:num": "f",
+                                            "bcl:text": "prescribing a period for the purposes of section 13 (1) (b)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2052",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In making regulations under this Act, the minister may make different regulations for different persons, places, circumstances or transactions or different classes of persons, places, circumstances or transactions."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2062",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "23",
+                            "bcl:text": "[Repealed 2008-35-23 (3).]"
+                        }
+                    ]
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Consequential Amendment",
+                "bcl:num": "24",
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of section 24.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:em": "24"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": null
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:doc": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96165",
+                                                    "@xlink:type": "locator",
+                                                    "#text": "Freedom of Information and Protection of Privacy Act"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "bcl:section": {
+                "@id": "d2e2123",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "25",
+                "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+            }
+        }
+    }
+}

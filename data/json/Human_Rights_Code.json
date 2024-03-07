@@ -1,0 +1,2519 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96210_01",
+        "act:title": "Human Rights Code",
+        "act:chapter": "210",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "712470149/96210/tlc96210_f",
+            "act:tlc": "E3tlc96210"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Code:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "age",
+                                "#text": "means an age of 19 years or more;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "chair",
+                                "#text": "means the member designated under section 31 as the chair of the tribunal;"
+                            }
+                        },
+                        {
+                            "@id": "d2e45",
+                            "bcl:text": {
+                                "in:term": "collective agreement",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96244_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Labour Relations Code"
+                                },
+                                "#text": "means a collective agreement as defined in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e50",
+                            "bcl:text": {
+                                "in:term": "commissioner",
+                                "#text": "means the Human Rights Commissioner appointed under section 47.01;"
+                            }
+                        },
+                        {
+                            "@id": "d2e57",
+                            "bcl:text": {
+                                "in:term": "complainant",
+                                "#text": "means a person or group of persons that files a complaint under section\u00a021;"
+                            }
+                        },
+                        {
+                            "@id": "d2e66",
+                            "bcl:text": {
+                                "in:term": "complaint",
+                                "#text": "means a complaint filed under section 21;"
+                            }
+                        },
+                        {
+                            "@id": "d2e75",
+                            "bcl:text": {
+                                "in:term": "discrimination",
+                                "#text": "includes the conduct described in sections 7, 8\u00a0(1)\u00a0(a), (9)\u00a0(a) and\u00a0(b), 10\u00a0(1)\u00a0(a), 11, 13\u00a0(1)\u00a0(a) and\u00a0(2), 14\u00a0(a) and\u00a0(b), 43 and\u00a047.21;"
+                            }
+                        },
+                        {
+                            "@id": "d2e84",
+                            "bcl:text": {
+                                "in:term": "employers' organization",
+                                "#text": "means an organization of employers formed for purposes that include the regulation of relations between employers and employees;"
+                            }
+                        },
+                        {
+                            "@id": "d2e93",
+                            "bcl:text": {
+                                "in:term": [
+                                    "employment",
+                                    "employ"
+                                ],
+                                "#text": "includes the relationship of master and servant, master and apprentice and principal and agent, if a substantial part of the agent's services relate to the affairs of one principal, and  has a corresponding meaning;"
+                            }
+                        },
+                        {
+                            "@id": "d2e106",
+                            "bcl:text": {
+                                "in:term": "employment agency",
+                                "#text": "includes a person who undertakes, with or without compensation, to procure employees for employers or to procure employment for persons;"
+                            }
+                        },
+                        {
+                            "@id": "d2e110",
+                            "bcl:text": {
+                                "in:term": "Indigenous",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/19044",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Declaration on the Rights of Indigenous Peoples Act"
+                                },
+                                "#text": ", in relation to a person, means Indigenous within the meaning of \"Indigenous peoples\" as defined in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e115",
+                            "bcl:text": {
+                                "in:term": "intervenor",
+                                "#text": "means the commissioner entitled, or other person allowed, under section 22.1 to intervene in a complaint;"
+                            }
+                        },
+                        {
+                            "@id": "d2e124",
+                            "bcl:text": {
+                                "in:term": "member",
+                                "#text": "means a person appointed under section 31 as a member of the tribunal;"
+                            }
+                        },
+                        {
+                            "@id": "d2e133",
+                            "bcl:text": {
+                                "in:term": "occupational association",
+                                "#text": "means an organization, other than a trade union or employers' organization, in which membership is a prerequisite to carrying on a trade, occupation or profession;"
+                            }
+                        },
+                        {
+                            "@id": "d2e142",
+                            "bcl:text": {
+                                "in:term": "panel",
+                                "#text": "means a panel designated under section 27.1 (1) (b);"
+                            }
+                        },
+                        {
+                            "@id": "d2e151",
+                            "bcl:text": {
+                                "in:term": "party",
+                                "#text": ", with respect to a complaint, means the complainant and the person against whom the complaint is made and any person that the tribunal adds as a party;"
+                            }
+                        },
+                        {
+                            "@id": "d2e161",
+                            "bcl:text": {
+                                "in:term": "person",
+                                "#text": "includes an employer, an employment agency, an employers' organization, an occupational association and a trade union;"
+                            }
+                        },
+                        {
+                            "@id": "d2e170",
+                            "bcl:text": {
+                                "in:term": "trade union",
+                                "#text": "means an organization of employees formed for purposes that include the regulation of relations between employees and employers;"
+                            }
+                        },
+                        {
+                            "@id": "d2e179",
+                            "bcl:text": {
+                                "in:term": "tribunal",
+                                "#text": "means the British Columbia Human Rights Tribunal continued under section\u00a031."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e189",
+                    "bcl:marginalnote": "Discrimination and intent",
+                    "bcl:num": "2",
+                    "bcl:text": "Discrimination in contravention of this Code does not require an intention to contravene this Code."
+                },
+                {
+                    "@id": "d2e201",
+                    "bcl:marginalnote": "Purposes",
+                    "bcl:num": "3",
+                    "bcl:text": "The purposes of this Code are as follows:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e212",
+                            "bcl:num": "a",
+                            "bcl:text": "to foster a society in British Columbia in which there are no impediments to full and free participation in the economic, social, political and cultural life of British Columbia;"
+                        },
+                        {
+                            "@id": "d2e221",
+                            "bcl:num": "b",
+                            "bcl:text": "to promote a climate of understanding and mutual respect where all are equal in dignity and rights;"
+                        },
+                        {
+                            "@id": "d2e231",
+                            "bcl:num": "c",
+                            "bcl:text": "to prevent discrimination prohibited by this Code;"
+                        },
+                        {
+                            "@id": "d2e240",
+                            "bcl:num": "d",
+                            "bcl:text": "to identify and eliminate persistent patterns of inequality associated with discrimination prohibited by this Code;"
+                        },
+                        {
+                            "@id": "d2e249",
+                            "bcl:num": "e",
+                            "bcl:text": "to provide a means of redress for those persons who are discriminated against contrary to this Code."
+                        },
+                        {
+                            "@id": "d2e258",
+                            "bcl:num": "f) and (g",
+                            "bcl:text": "[Repealed 2002-62-2.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e268",
+                    "bcl:marginalnote": "Code prevails",
+                    "bcl:num": "4",
+                    "bcl:text": "If there is a conflict between this Code and any other enactment, this Code prevails."
+                },
+                {
+                    "@id": "d2e280",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "5-6",
+                    "bcl:text": "[Repealed 2018-48-3.]"
+                },
+                {
+                    "@id": "d2e323",
+                    "bcl:marginalnote": "Discriminatory publication",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e331",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "A person must not publish, issue or display, or cause to be published, issued or displayed, any statement, publication, notice, sign, symbol, emblem or other representation that",
+                                "because of the Indigenous identity, race, colour, ancestry, place of origin, religion, marital status, family status, physical or mental disability, sex, sexual orientation, gender identity or expression, or age of that person or that group or class of persons."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e340",
+                                    "bcl:num": "a",
+                                    "bcl:text": "indicates discrimination or an intention to discriminate against a person or a group or class of persons, or"
+                                },
+                                {
+                                    "@id": "d2e349",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is likely to expose a person or a group or class of persons to hatred or contempt"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e362",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not apply to a private communication, a communication intended to be private or a communication related to an activity otherwise permitted by this Code."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e372",
+                    "bcl:marginalnote": "Discrimination in accommodation, service and facility",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e380",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "A person must not, without a bona fide and reasonable justification,",
+                                "because of the Indigenous identity, race, colour, ancestry, place of origin, religion, marital status, family status, physical or mental disability, sex, sexual orientation, gender identity or expression, or age of that person or class of persons."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e389",
+                                    "bcl:num": "a",
+                                    "bcl:text": "deny to a person or class of persons any accommodation, service or facility customarily available to the public, or"
+                                },
+                                {
+                                    "@id": "d2e398",
+                                    "bcl:num": "b",
+                                    "bcl:text": "discriminate against a person or class of persons regarding any accommodation, service or facility customarily available to the public"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e411",
+                            "bcl:num": "2",
+                            "bcl:text": "A person does not contravene this section by discriminating",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e420",
+                                    "bcl:num": "a",
+                                    "bcl:text": "on the basis of sex, if the discrimination relates to the maintenance of public decency or to the determination of premiums or benefits under contracts of life or health insurance, or"
+                                },
+                                {
+                                    "@id": "d2e429",
+                                    "bcl:num": "b",
+                                    "bcl:text": "on the basis of physical or mental disability or age, if the discrimination relates to the determination of premiums or benefits under contracts of life or health insurance."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e439",
+                    "bcl:marginalnote": "Discrimination in purchase of property",
+                    "bcl:num": "9",
+                    "bcl:text": [
+                        "A person must not",
+                        "because of the Indigenous identity, race, colour, ancestry, place of origin, religion, marital status, physical or mental disability, sex, sexual orientation, or gender identity or expression of that person or class of persons."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e450",
+                            "bcl:num": "a",
+                            "bcl:text": "deny to a person or class of persons the opportunity to purchase a commercial unit or dwelling unit that is in any way represented as being available for sale,"
+                        },
+                        {
+                            "@id": "d2e459",
+                            "bcl:num": "b",
+                            "bcl:text": "deny to a person or class of persons the opportunity to acquire land or an interest in land, or"
+                        },
+                        {
+                            "@id": "d2e469",
+                            "bcl:num": "c",
+                            "bcl:text": "discriminate against a person or class of persons regarding a term or condition of the purchase or other acquisition of a commercial unit, dwelling unit, land or interest in land"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e482",
+                    "bcl:marginalnote": "Discrimination in tenancy premises",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e490",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "A person must not",
+                                "because of the Indigenous identity, race, colour, ancestry, place of origin, religion, marital status, family status, physical or mental disability, sex, sexual orientation, gender identity or expression, age or lawful source of income of that person or class of persons, or of any other person or class of persons."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e499",
+                                    "bcl:num": "a",
+                                    "bcl:text": "deny to a person or class of persons the right to occupy, as a tenant, space that is represented as being available for occupancy by a tenant, or"
+                                },
+                                {
+                                    "@id": "d2e508",
+                                    "bcl:num": "b",
+                                    "bcl:text": "discriminate against a person or class of persons regarding a term or condition of the tenancy of the space,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e521",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not apply in the following circumstances:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e530",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if the space is to be occupied by another person who is to share, with the person making the representation, the use of any sleeping, bathroom or cooking facilities in the space;"
+                                },
+                                {
+                                    "@id": "d2e539",
+                                    "bcl:num": "b",
+                                    "bcl:text": "as it relates to family status or age,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e548",
+                                            "bcl:num": "i",
+                                            "bcl:text": "if the space is a rental unit in residential premises in which every rental unit is reserved for rental to a person who has reached 55 years of age or to 2 or more persons, at least one of whom has reached 55\u00a0years of age, or"
+                                        },
+                                        {
+                                            "@id": "d2e557",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "a rental unit in a prescribed class of residential premises;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e567",
+                                    "bcl:num": "c",
+                                    "bcl:text": "as it relates to physical or mental disability, if",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e576",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the space is a rental unit in residential premises,"
+                                        },
+                                        {
+                                            "@id": "d2e585",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the rental unit and the residential premises of which the rental unit forms part,",
+                                            "bcl:clause": [
+                                                {
+                                                    "@id": "d2e594",
+                                                    "bcl:num": "A",
+                                                    "bcl:text": "are designed to accommodate persons with disabilities, and"
+                                                },
+                                                {
+                                                    "@id": "d2e603",
+                                                    "bcl:num": "B",
+                                                    "bcl:text": "conform to the prescribed standards, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e612",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the rental unit is offered for rent exclusively to a person with a disability or to 2 or more persons, at least one of whom has a physical or mental disability."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e622",
+                    "bcl:marginalnote": "Discrimination in employment advertisements",
+                    "bcl:num": "11",
+                    "bcl:text": "A person must not publish or cause to be published an advertisement in connection with employment or prospective employment that expresses a limitation, specification or preference as to Indigenous identity, race, colour, ancestry, place of origin, political belief, religion, marital status, family status, physical or mental disability, sex, sexual orientation, gender identity or expression, or age unless the limitation, specification or preference is based on a bona fide occupational requirement."
+                },
+                {
+                    "@id": "d2e635",
+                    "bcl:marginalnote": "Discrimination in wages",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e643",
+                            "bcl:num": "1",
+                            "bcl:text": "An employer must not discriminate between employees by employing an employee of one sex for work at a rate of pay that is less than the rate of pay at which an employee of another sex is employed by that employer for similar or substantially similar work."
+                        },
+                        {
+                            "@id": "d2e652",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of subsection (1), the concept of skill, effort and responsibility must, subject to factors in respect of pay rates such as seniority systems, merit systems and systems that measure earnings by quantity or quality of production, be used to determine what is similar or substantially similar work."
+                        },
+                        {
+                            "@id": "d2e661",
+                            "bcl:num": "3",
+                            "bcl:text": "A difference in the rate of pay between employees of different sexes based on a factor other than sex does not constitute a failure to comply with this section if the factor on which the difference is based would reasonably justify the difference."
+                        },
+                        {
+                            "@id": "d2e671",
+                            "bcl:num": "4",
+                            "bcl:text": "An employer must not reduce the rate of pay of an employee in order to comply with this section."
+                        },
+                        {
+                            "@id": "d2e680",
+                            "bcl:num": "5",
+                            "bcl:text": "If an employee is paid less than the rate of pay to which the employee is entitled under this section, the employee is entitled to recover from the employer, by action, the difference between the amount paid and the amount to which the employee is entitled, together with the costs, but",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e689",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the action must be commenced no later than 12\u00a0months from the termination of the employee's services, and"
+                                },
+                                {
+                                    "@id": "d2e698",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the action applies only to wages of an employee during the 12\u00a0month period immediately before the earlier of the date of the employee's termination or the commencement of the action."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e708",
+                    "bcl:marginalnote": "Discrimination in employment",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e716",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "A person must not",
+                                "because of the Indigenous identity, race, colour, ancestry, place of origin, political belief, religion, marital status, family status, physical or mental disability, sex, sexual orientation, gender identity or expression, or age of that person or because that person has been convicted of a criminal or summary conviction offence that is unrelated to the employment or to the intended employment of that person."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e725",
+                                    "bcl:num": "a",
+                                    "bcl:text": "refuse to employ or refuse to continue to employ a person, or"
+                                },
+                                {
+                                    "@id": "d2e734",
+                                    "bcl:num": "b",
+                                    "bcl:text": "discriminate against a person regarding employment or any term or condition of employment"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e747",
+                            "bcl:num": "2",
+                            "bcl:text": "An employment agency must not refuse to refer a person for employment for any reason mentioned in subsection (1)."
+                        },
+                        {
+                            "@id": "d2e756",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsection (1) does not apply",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e765",
+                                    "bcl:num": "a",
+                                    "bcl:text": "as it relates to age, to a bona fide scheme based on seniority, or"
+                                },
+                                {
+                                    "@id": "d2e774",
+                                    "bcl:num": "b",
+                                    "bcl:text": "as it relates to marital status, physical or mental disability, sex or age, to the operation of a bona fide retirement, superannuation or pension plan or to a bona fide group or employee insurance plan, whether or not the plan is the subject of a contract of insurance between an insurer and an employer."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e783",
+                            "bcl:num": "4",
+                            "bcl:text": "Subsections (1) and (2) do not apply with respect to a refusal, limitation, specification or preference based on a bona fide occupational requirement."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e793",
+                    "bcl:marginalnote": "Discrimination by unions and associations",
+                    "bcl:num": "14",
+                    "bcl:text": [
+                        "A trade union, employers' organization or occupational association must not",
+                        "because of the Indigenous identity, race, colour, ancestry, place of origin, political belief, religion, marital status, family status, physical or mental disability, sex, sexual orientation, gender identity or expression, or age of that person or member, or because that person or member has been convicted of a criminal or summary conviction offence that is unrelated to the membership or intended membership."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e804",
+                            "bcl:num": "a",
+                            "bcl:text": "exclude any person from membership,"
+                        },
+                        {
+                            "@id": "d2e813",
+                            "bcl:num": "b",
+                            "bcl:text": "expel or suspend any member, or"
+                        },
+                        {
+                            "@id": "d2e823",
+                            "bcl:num": "c",
+                            "bcl:text": "discriminate against any person or member"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e836",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "15-20",
+                    "bcl:text": "[Repealed 2002-62-5.]"
+                },
+                {
+                    "@id": "d2e848",
+                    "bcl:marginalnote": "Complaints",
+                    "bcl:num": "21",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e856",
+                            "bcl:num": "1",
+                            "bcl:text": "Any person or group of persons that alleges that a person has contravened this Code may file a complaint with the tribunal in a form satisfactory to the tribunal."
+                        },
+                        {
+                            "@id": "d2e865",
+                            "bcl:num": "2) and (3",
+                            "bcl:text": "[Repealed 2002-62-7.]"
+                        },
+                        {
+                            "@id": "d2e874",
+                            "bcl:num": "4",
+                            "bcl:text": "Subject to subsection (5), a complaint under subsection (1) may be filed on behalf of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e884",
+                                    "bcl:num": "a",
+                                    "bcl:text": "another person, or"
+                                },
+                                {
+                                    "@id": "d2e893",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a group or class of persons whether or not the person filing the complaint is a member of that group or class."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e902",
+                            "bcl:num": "5",
+                            "bcl:text": "A member or panel may refuse to accept, for filing under subsection (1), a complaint made on behalf of another person or a group or class of persons if that member or panel is satisfied that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e911",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person alleged to have been discriminated against does not wish to proceed with the complaint, or"
+                                },
+                                {
+                                    "@id": "d2e920",
+                                    "bcl:num": "b",
+                                    "bcl:text": "proceeding with the complaint is not in the interest of the group or class on behalf of which the complaint is made."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e929",
+                            "bcl:num": "6",
+                            "bcl:text": "A member or panel may proceed with 2 or more complaints together if a member or panel is satisfied that it is fair and reasonable in the circumstances to do so."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e939",
+                    "bcl:marginalnote": "Time limit for filing a complaint",
+                    "bcl:num": "22",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e947",
+                            "bcl:num": "1",
+                            "bcl:text": "A complaint must be filed within one year of the alleged contravention."
+                        },
+                        {
+                            "@id": "d2e956",
+                            "bcl:num": "2",
+                            "bcl:text": "If a continuing contravention is alleged in a complaint, the complaint must be filed within one year of the last alleged instance of the contravention."
+                        },
+                        {
+                            "@id": "d2e965",
+                            "bcl:num": "3",
+                            "bcl:text": "If a complaint is filed after the expiration of the time limit referred to in subsection\u00a0(1) or\u00a0(2), a member or panel may accept all or part of the complaint if the member or panel determines that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e975",
+                                    "bcl:num": "a",
+                                    "bcl:text": "it is in the public interest to accept the complaint, and"
+                                },
+                                {
+                                    "@id": "d2e984",
+                                    "bcl:num": "b",
+                                    "bcl:text": "no substantial prejudice will result to any person because of the delay."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e995",
+                    "bcl:marginalnote": "Commissioner and other intervenors",
+                    "bcl:num": "22.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e1046",
+                            "bcl:num": "1",
+                            "bcl:text": "The commissioner may, at any time after a complaint is filed, intervene in the complaint on terms a member or panel may determine having regard to the role and mandate of the commissioner under this Code."
+                        },
+                        {
+                            "@id": "d1e1055",
+                            "bcl:num": "2",
+                            "bcl:text": "A member or panel may, at any time after a complaint is filed and on the terms specified by the member or panel, allow any other person or group of persons to intervene in the complaint, whether or not that person or group of persons would be affected by an order made by the member or panel under section 37."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1007",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "23-24",
+                    "bcl:text": "[Repealed 2002-62-10.]"
+                },
+                {
+                    "@id": "d2e1019",
+                    "bcl:marginalnote": "Deferral of a complaint",
+                    "bcl:num": "25",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1027",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "proceeding",
+                                "#text": "In this section and in section 27,  includes a proceeding authorized by another Act and a grievance under a collective agreement."
+                            }
+                        },
+                        {
+                            "@id": "d2e1039",
+                            "bcl:num": "2",
+                            "bcl:text": "If at any time after a complaint is filed a member or panel determines that another proceeding is capable of appropriately dealing with the substance of a complaint, the member or panel may defer further consideration of the complaint until the outcome of the other proceeding."
+                        },
+                        {
+                            "@id": "d2e1048",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2002-62-11.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1058",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "26",
+                    "bcl:text": "[Repealed 2002-62-12.]"
+                },
+                {
+                    "@id": "d2e1070",
+                    "bcl:marginalnote": "Dismissal of a complaint",
+                    "bcl:num": "27",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1078",
+                            "bcl:num": "1",
+                            "bcl:text": "A member or panel may, at any time after a complaint is filed and with or without a hearing, dismiss all or part of the complaint if that member or panel determines that any of the following apply:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1087",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the complaint or that part of the complaint is not within the jurisdiction of the tribunal;"
+                                },
+                                {
+                                    "@id": "d2e1096",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the acts or omissions alleged in the complaint or that part of the complaint do not contravene this Code;"
+                                },
+                                {
+                                    "@id": "d2e1106",
+                                    "bcl:num": "c",
+                                    "bcl:text": "there is no reasonable prospect that the complaint will succeed;"
+                                },
+                                {
+                                    "@id": "d2e1115",
+                                    "bcl:num": "d",
+                                    "bcl:text": "proceeding with the complaint or that part of the complaint would not",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1124",
+                                            "bcl:num": "i",
+                                            "bcl:text": "benefit the person, group or class alleged to have been discriminated against, or"
+                                        },
+                                        {
+                                            "@id": "d2e1133",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "further the purposes of this Code;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1142",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the complaint or that part of the complaint was filed for improper motives or made in bad faith;"
+                                },
+                                {
+                                    "@id": "d2e1151",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the substance of the complaint or that part of the complaint has been appropriately dealt with in another proceeding;"
+                                },
+                                {
+                                    "@id": "d2e1161",
+                                    "bcl:num": "g",
+                                    "bcl:text": "the contravention alleged in the complaint or that part of the complaint occurred more than one year before the complaint was filed unless the complaint or that part of the complaint was accepted under section 22 (3)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1170",
+                            "bcl:num": "2",
+                            "bcl:text": "If a member or panel dismisses a complaint or part of a complaint under subsection\u00a0(1), that member or panel must inform the following persons of the decision in writing and give reasons for the decision:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1179",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the complainant;"
+                                },
+                                {
+                                    "@id": "d2e1188",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the person against whom the complaint was made, if that person had been given notice of the complaint;"
+                                },
+                                {
+                                    "@id": "d2e1197",
+                                    "bcl:num": "c",
+                                    "bcl:text": "any other party;"
+                                },
+                                {
+                                    "@id": "d2e1206",
+                                    "bcl:num": "d",
+                                    "bcl:text": "an intervenor."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1216",
+                    "bcl:marginalnote": "Assignment of complaints",
+                    "bcl:num": "27.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1224",
+                            "bcl:num": "1",
+                            "bcl:text": "For the purposes of making a decision or order in respect of a complaint, the chair may assign the complaint to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1233",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a single member designated by the chair, or"
+                                },
+                                {
+                                    "@id": "d2e1242",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a panel of 3 members designated by the chair."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1252",
+                            "bcl:num": "2",
+                            "bcl:text": "If a panel is designated under subsection (1) (b), the chair must designate one of the members of the panel to preside."
+                        },
+                        {
+                            "@id": "d2e1261",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2004-45-104.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1272",
+                    "bcl:marginalnote": "Evidence",
+                    "bcl:num": "27.2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1280",
+                            "bcl:num": "1",
+                            "bcl:text": "A member or panel may receive and accept on oath, by affidavit or otherwise, evidence and information that the member or panel considers necessary and appropriate, whether or not the evidence or information would be admissible in a court of law."
+                        },
+                        {
+                            "@id": "d2e1289",
+                            "bcl:num": "2",
+                            "bcl:text": "Nothing is admissible in evidence before a member or panel that is inadmissible in a court because of a privilege under the law of evidence."
+                        },
+                        {
+                            "@id": "d2e1298",
+                            "bcl:num": "3",
+                            "bcl:text": "Despite section 4, subsection (1) of this section does not override an Act expressly limiting the extent to which or purposes for which evidence may be admitted or used in any proceeding."
+                        },
+                        {
+                            "@id": "d2e1308",
+                            "bcl:num": "4",
+                            "bcl:text": "A member or panel may direct that all or part of the evidence of a witness be heard in private."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1318",
+                    "bcl:marginalnote": "Powers to make rules and orders respecting practice and procedure",
+                    "bcl:num": "27.3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1326",
+                            "bcl:num": "1",
+                            "bcl:text": "The tribunal may make rules respecting practice and procedure to facilitate just and timely resolution of complaints."
+                        },
+                        {
+                            "@id": "d2e1335",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the tribunal may make rules as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1344",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting the holding of prehearing conferences and requiring the parties to attend a prehearing conference in order to discuss issues relating to a complaint and the possibility of simplifying or disposing of issues;"
+                                },
+                                {
+                                    "@id": "d2e1354",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting disclosure of evidence, including but not limited to prehearing disclosure and prehearing examination of a party on oath or solemn affirmation or by affidavit;"
+                                },
+                                {
+                                    "@id": "d2e1363",
+                                    "bcl:num": "c",
+                                    "bcl:text": "specifying the form of notice to be given to a party by another party or by the tribunal requiring a party to diligently pursue a complaint and specifying the time within which and the manner in which the party must respond to the notice;"
+                                },
+                                {
+                                    "@id": "d2e1372",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting service of notices and orders, including substituted service;"
+                                },
+                                {
+                                    "@id": "d2e1381",
+                                    "bcl:num": "e",
+                                    "bcl:text": "requiring a party or an intervenor to provide an address for service or delivery of notices and orders;"
+                                },
+                                {
+                                    "@id": "d2e1390",
+                                    "bcl:num": "f",
+                                    "bcl:text": "providing that a party's or an intervenor's address of record is to be treated as an address for service;"
+                                },
+                                {
+                                    "@id": "d2e1399",
+                                    "bcl:num": "g",
+                                    "bcl:text": "respecting procedures for matters under sections 22, 25 and\u00a027;"
+                                },
+                                {
+                                    "@id": "d2e1409",
+                                    "bcl:num": "h",
+                                    "bcl:text": "respecting mediation and other dispute resolution processes, including, without limitation, rules that would permit or require mediation of a complaint, whether the mediation is provided by a member or by a person appointed, engaged or retained under section\u00a033;"
+                                },
+                                {
+                                    "@id": "d2e1418",
+                                    "bcl:num": "i",
+                                    "bcl:text": "respecting procedures for formal offers to settle a complaint;"
+                                },
+                                {
+                                    "@id": "d2e1427",
+                                    "bcl:num": "j",
+                                    "bcl:text": "respecting the amendment of a complaint or a response to a complaint;"
+                                },
+                                {
+                                    "@id": "d2e1436",
+                                    "bcl:num": "k",
+                                    "bcl:text": "respecting the addition of parties to a complaint;"
+                                },
+                                {
+                                    "@id": "d2e1445",
+                                    "bcl:num": "l",
+                                    "bcl:text": "[Repealed 2018-48-7.]"
+                                },
+                                {
+                                    "@id": "d0e1514",
+                                    "bcl:num": "m",
+                                    "bcl:text": "requiring or allowing that a process be conducted electronically, with or without conditions."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1454",
+                            "bcl:num": "3",
+                            "bcl:text": "In order to facilitate the just and timely resolution of a complaint, a member or panel, on their own initiative or on application of a party or an intervenor, may make any order for which a rule could be made under subsection (1) or  (2)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1464",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "27.4",
+                    "bcl:text": "[Repealed 2004-45-104.]"
+                },
+                {
+                    "@id": "d2e1476",
+                    "bcl:marginalnote": "Dismissal for failure to pursue complaint",
+                    "bcl:num": "27.5",
+                    "bcl:text": "If, under the rules, a party has been given notice requiring the party to diligently pursue a complaint and the party fails to act on the notice within the time allowed, then on the request of another party or on its own initiative, a member or panel may dismiss the complaint."
+                },
+                {
+                    "@id": "d2e1488",
+                    "bcl:marginalnote": "Assisting parties to settle",
+                    "bcl:num": "27.6",
+                    "bcl:text": "A member or a person appointed, engaged or retained under section 33 may assist the parties to a complaint, through mediation or any other dispute resolution process, to achieve a settlement."
+                },
+                {
+                    "@id": "d2e1500",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "28-29",
+                    "bcl:text": "[Repealed 2002-62-12.]"
+                },
+                {
+                    "@id": "d2e1513",
+                    "bcl:marginalnote": "Enforcement of settlement agreements",
+                    "bcl:num": "30",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1521",
+                            "bcl:num": "1",
+                            "bcl:text": "If there has been a breach of the terms of a settlement agreement, a party to the settlement agreement may apply to the Supreme Court to enforce the settlement agreement to the extent that the terms of the settlement agreement could have been ordered by the tribunal."
+                        },
+                        {
+                            "@id": "d2e1530",
+                            "bcl:num": "2",
+                            "bcl:text": "The right to enforce a settlement agreement under subsection (1) cannot be waived."
+                        },
+                        {
+                            "@id": "d2e1539",
+                            "bcl:num": "3",
+                            "bcl:text": "A provision of a settlement agreement that purports to waive the right to enforce the agreement under subsection (1) is void."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e1637",
+                    "bcl:marginalnote": "Human Rights Tribunal",
+                    "bcl:num": "31",
+                    "bcl:text": "The British Columbia Human Rights Tribunal is continued consisting of the following individuals appointed by the Lieutenant Governor in Council after a merit-based process:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d0e1648",
+                            "bcl:num": "a",
+                            "bcl:text": "a member designated as the chair;"
+                        },
+                        {
+                            "@id": "d0e1657",
+                            "bcl:num": "b",
+                            "bcl:text": "other members appointed after consultation with the chair."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1595",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "31.1",
+                    "bcl:text": "[Repealed 2003-47-35.]"
+                },
+                {
+                    "@id": "d0e1683",
+                    "bcl:marginalnote": {
+                        "in:doc": "Administrative Tribunals Act",
+                        "#text": "Application of  to tribunal"
+                    },
+                    "bcl:num": "32",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/04045_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Administrative Tribunals Act"
+                        },
+                        "#text": "The following provisions of the  apply to the tribunal:"
+                    },
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d0e1700",
+                            "bcl:num": "a",
+                            "bcl:text": {
+                                "in:desc": "[Interpretation and Application]",
+                                "#text": "Part 1 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1712",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "in:desc": "[Appointments]",
+                                "#text": "Part 2 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1724",
+                            "bcl:num": "c",
+                            "bcl:text": {
+                                "in:desc": "[Clustering]",
+                                "#text": "Part 3 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1736",
+                            "bcl:num": "d",
+                            "bcl:text": {
+                                "in:desc": "[withdrawal or settlement of application]",
+                                "#text": "section 17 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1748",
+                            "bcl:num": "e",
+                            "bcl:text": {
+                                "in:desc": "[facilitated settlement]",
+                                "#text": "section 28 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1760",
+                            "bcl:num": "f",
+                            "bcl:text": {
+                                "in:desc": "[disclosure protection]",
+                                "#text": "section 29 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1772",
+                            "bcl:num": "g",
+                            "bcl:text": {
+                                "in:desc": "[tribunal duties]",
+                                "#text": "section 30 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1784",
+                            "bcl:num": "h",
+                            "bcl:text": {
+                                "in:desc": "[tribunal power to compel witnesses and order disclosure]",
+                                "#text": "section 34 (3) and (4) ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1796",
+                            "bcl:num": "i",
+                            "bcl:text": {
+                                "in:desc": "[tribunal without jurisdiction over Canadian Charter of Rights and Freedoms issues]",
+                                "#text": "section 45 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1808",
+                            "bcl:num": "j",
+                            "bcl:text": {
+                                "in:desc": "[notice to Attorney General if constitutional question raised in application]",
+                                "#text": "section 46 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1820",
+                            "bcl:num": "k",
+                            "bcl:text": {
+                                "in:desc": {
+                                    "in:doc": "Human Rights Code",
+                                    "#text": "[notice to Attorney General regarding issue under ]"
+                                },
+                                "#text": "section 46.1 (3) to (9) ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1836",
+                            "bcl:num": "l",
+                            "bcl:text": {
+                                "in:desc": "[maintenance of order at hearings]",
+                                "#text": "section 48 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1848",
+                            "bcl:num": "m",
+                            "bcl:text": {
+                                "in:desc": "[contempt proceeding for uncooperative witness or other person]",
+                                "#text": "section 49 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1860",
+                            "bcl:num": "n",
+                            "bcl:text": {
+                                "in:desc": "[decisions]",
+                                "#text": "section 50 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1872",
+                            "bcl:num": "o",
+                            "bcl:text": {
+                                "in:desc": "[Immunities]",
+                                "#text": "Part 8 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1884",
+                            "bcl:num": "p",
+                            "bcl:text": {
+                                "in:desc": "[time limit for judicial review]",
+                                "#text": "section 57 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1896",
+                            "bcl:num": "q",
+                            "bcl:text": {
+                                "in:desc": "[standard of review without privative clause]",
+                                "#text": "section 59 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1908",
+                            "bcl:num": "r",
+                            "bcl:text": {
+                                "in:desc": "[surveys]",
+                                "#text": "section 59.1 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1920",
+                            "bcl:num": "s",
+                            "bcl:text": {
+                                "in:desc": "[reporting]",
+                                "#text": "section 59.2 ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1932",
+                            "bcl:num": "t",
+                            "bcl:text": {
+                                "in:desc": "[power to make regulations]",
+                                "#text": "section 60 (1) (g) to (i) and (2) ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e1944",
+                            "bcl:num": "u",
+                            "bcl:text": {
+                                "in:desc": {
+                                    "in:doc": "Freedom of Information and Protection of Privacy Act",
+                                    "#text": "[application of ]"
+                                },
+                                "#text": "section 61 ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1624",
+                    "bcl:marginalnote": "Staff of the tribunal",
+                    "bcl:num": "33",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1632",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "Employees necessary to carry out the powers and duties of the tribunal may be appointed under the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1644",
+                            "bcl:num": "2",
+                            "bcl:text": "The tribunal may engage or retain consultants or specialists that the tribunal considers necessary to carry out the powers and duties of the tribunal and may determine their remuneration."
+                        },
+                        {
+                            "@id": "d2e1653",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "The  does not apply to the retention, remuneration or engagement of consultants or specialists under subsection (2)."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1666",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "34",
+                    "bcl:text": "[Repealed 2002-62-17.]"
+                },
+                {
+                    "@id": "d2e1679",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "34.1",
+                    "bcl:text": "[Repealed 2004-45-106.]"
+                },
+                {
+                    "@id": "d2e1691",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "35-36",
+                    "bcl:text": "[Repealed 2002-62-17.]"
+                },
+                {
+                    "@id": "d2e1703",
+                    "bcl:marginalnote": "Remedies",
+                    "bcl:num": "37",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1711",
+                            "bcl:num": "1",
+                            "bcl:text": "If the member or panel designated to hear a complaint determines that the complaint is not justified, the member or panel must dismiss the complaint."
+                        },
+                        {
+                            "@id": "d2e1720",
+                            "bcl:num": "2",
+                            "bcl:text": "If the member or panel determines that the complaint is justified, the member or panel",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1729",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must order the person that contravened this Code to cease the contravention and to refrain from committing the same or a similar contravention,"
+                                },
+                                {
+                                    "@id": "d2e1739",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may make a declaratory order that the conduct complained of, or similar conduct, is discrimination contrary to this Code,"
+                                },
+                                {
+                                    "@id": "d2e1748",
+                                    "bcl:num": "c",
+                                    "bcl:text": "may order the person that contravened this Code to do one or both of the following:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1757",
+                                            "bcl:num": "i",
+                                            "bcl:text": "take steps, specified in the order, to ameliorate the effects of the discriminatory practice;"
+                                        },
+                                        {
+                                            "@id": "d2e1766",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "adopt and implement an employment equity program or other special program to ameliorate the conditions of disadvantaged individuals or groups if the evidence at the hearing indicates the person has engaged in a pattern or practice that contravenes this Code, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1775",
+                                    "bcl:num": "d",
+                                    "bcl:text": "if the person discriminated against is a party to the complaint, or is an identifiable member of a group or class on behalf of which a complaint is filed, may order the person that contravened this Code to do one or more of the following:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1784",
+                                            "bcl:num": "i",
+                                            "bcl:text": "make available to the person discriminated against the right, opportunity or privilege that, in the opinion of the member or panel, the person was denied contrary to this Code;"
+                                        },
+                                        {
+                                            "@id": "d2e1794",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "compensate the person discriminated against for all, or a part the member or panel determines, of any wages or salary lost, or expenses incurred, by the contravention;"
+                                        },
+                                        {
+                                            "@id": "d2e1803",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "pay to the person discriminated against an amount that the member or panel considers appropriate to compensate that person for injury to dignity, feelings and self respect or to any of them."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1812",
+                            "bcl:num": "3",
+                            "bcl:text": "An order made under subsection (2) may require the person against whom the order is made to provide any person designated in the order with information respecting the implementation of the order."
+                        },
+                        {
+                            "@id": "d2e1821",
+                            "bcl:num": "4",
+                            "bcl:text": "The member or panel may award costs",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1830",
+                                    "bcl:num": "a",
+                                    "bcl:text": "against a party to a complaint who has engaged in improper conduct during the course of the complaint, and"
+                                },
+                                {
+                                    "@id": "d2e1839",
+                                    "bcl:num": "b",
+                                    "bcl:text": "without limiting paragraph (a), against a party who contravenes a rule under section 27.3 (2) or an order under section 27.3 (3)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1849",
+                            "bcl:num": "5",
+                            "bcl:text": "A decision or order of a member or panel is a decision or order of the tribunal for the purposes of this Code."
+                        },
+                        {
+                            "@id": "d2e1858",
+                            "bcl:num": "6",
+                            "bcl:text": "The member or panel must inform the parties and any intervenor in writing of the decision made under this section and give reasons for the decision."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1868",
+                    "bcl:marginalnote": "Modification of orders",
+                    "bcl:num": "38",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1876",
+                            "bcl:num": "1",
+                            "bcl:text": "Until an order made under section 37 (2) (c) or (d) (i) has been fully implemented, any party or a person designated in the order may apply to the member or panel that made the order, or to a member or panel designated by the chair, for a modification of that order on the grounds that the order is no longer appropriate because of unforeseen circumstances."
+                        },
+                        {
+                            "@id": "d2e1885",
+                            "bcl:num": "2",
+                            "bcl:text": "The member or panel may vary or rescind the order after determining that the order",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1894",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has not been fully implemented, and"
+                                },
+                                {
+                                    "@id": "d2e1904",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is no longer appropriate because of unforeseen circumstances."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1913",
+                            "bcl:num": "3",
+                            "bcl:text": "In varying an order under subsection (2), the member or panel may exercise any of the powers under section 37 (2) (a), (c) or (d)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1923",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "38.1",
+                    "bcl:text": "[Repealed 2002-62-20.]"
+                },
+                {
+                    "@id": "d2e1935",
+                    "bcl:marginalnote": "Enforcement of remedies",
+                    "bcl:num": "39",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1943",
+                            "bcl:num": "1",
+                            "bcl:text": "If an order is made under section 37 (2) (a), (c) or (d) or (4) or 38 (2), the party in whose favour the order is made or a person designated in the order may file a certified copy of the order with the Supreme Court."
+                        },
+                        {
+                            "@id": "d2e1952",
+                            "bcl:num": "2",
+                            "bcl:text": "An order filed under subsection (1) has the same force and effect, and all proceedings may be taken on it, as if it were a judgment of the Supreme Court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1963",
+                    "bcl:marginalnote": "Annual report",
+                    "bcl:num": "39.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1971",
+                            "bcl:num": "1",
+                            "bcl:text": "As soon as practicable after the end of the fiscal year of the government, the tribunal must submit to the minister an annual report on the activities of the tribunal."
+                        },
+                        {
+                            "@id": "d2e1980",
+                            "bcl:num": "2",
+                            "bcl:text": "The minister must,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e2069",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if the Legislative Assembly is in session, promptly lay the annual report under subsection (1) before the Legislative Assembly, or"
+                                },
+                                {
+                                    "@id": "d0e2078",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the Legislative Assembly is not in session when the annual report is submitted, file the report with the Clerk of the Legislative Assembly."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1990",
+                    "bcl:marginalnote": "Disclosure",
+                    "bcl:num": "40",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1998",
+                            "bcl:num": "1",
+                            "bcl:text": "[Repealed 2004-45-106.]"
+                        },
+                        {
+                            "@id": "d2e2007",
+                            "bcl:num": "2",
+                            "bcl:text": "Any information received by any person in the course of attempting to reach a settlement of a complaint is confidential and may not be disclosed or admitted in evidence except with the consent of the person who gave the information."
+                        },
+                        {
+                            "@id": "d2e2016",
+                            "bcl:num": "3) and (4",
+                            "bcl:text": "[Repealed 2004-45-106.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2026",
+                    "bcl:marginalnote": "Exemptions",
+                    "bcl:num": "41",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2034",
+                            "bcl:num": "1",
+                            "bcl:text": "If a charitable, philanthropic, educational, fraternal, religious or social organization or corporation that is not operated for profit has as a primary purpose the promotion of the interests and welfare of an identifiable group or class of persons characterized by a physical or mental disability or by a common Indigenous identity, race, religion, age, sex, sexual orientation, gender identity or expression, marital status, political belief, colour, ancestry or place of origin, that organization or corporation must not be considered to be contravening this Code because it is granting a preference to members of the identifiable group or class of persons."
+                        },
+                        {
+                            "@id": "d2e2043",
+                            "bcl:num": "2",
+                            "bcl:text": "Nothing in this Code prohibits a distinction on the basis of age if that distinction is permitted or required by any Act or regulation."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2053",
+                    "bcl:marginalnote": "Special programs",
+                    "bcl:num": "42",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2061",
+                            "bcl:num": "1",
+                            "bcl:text": "It is not discrimination or a contravention of this Code to plan, advertise, adopt or implement an employment equity program that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2070",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has as its objective the amelioration of conditions of disadvantaged individuals or groups who are disadvantaged because of Indigenous identity, race, colour, ancestry, place of origin, physical or mental disability, sex, sexual orientation, or gender identity or expression, and"
+                                },
+                                {
+                                    "@id": "d2e2079",
+                                    "bcl:num": "b",
+                                    "bcl:text": "achieves or is reasonably likely to achieve that objective."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2089",
+                            "bcl:num": "2",
+                            "bcl:text": "[Repealed 2002-62-23.]"
+                        },
+                        {
+                            "@id": "d2e2098",
+                            "bcl:num": "3",
+                            "bcl:text": "On application by any person, with or without notice to any other person, the commissioner may approve any program or activity that has as its objective the amelioration of conditions of disadvantaged individuals or groups."
+                        },
+                        {
+                            "@id": "d2e2107",
+                            "bcl:num": "4",
+                            "bcl:text": "Any program or activity approved under subsection (3) is not in contravention of this Code."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2117",
+                    "bcl:marginalnote": "Protection",
+                    "bcl:num": "43",
+                    "bcl:text": "A person must not evict, discharge, suspend, expel, intimidate, coerce, impose any pecuniary or other penalty on, deny a right or benefit to or otherwise discriminate against a person because that person complains or is named in a complaint, might complain or be named in a complaint, gives evidence, might give evidence or otherwise assists or might assist in a complaint or other proceeding under this Code."
+                },
+                {
+                    "@id": "d2e2129",
+                    "bcl:marginalnote": "Style of cause for proceedings",
+                    "bcl:num": "44",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2137",
+                            "bcl:num": "1",
+                            "bcl:text": "A proceeding under this Code in respect of a trade union, employers' organization or occupational association may be taken in its name."
+                        },
+                        {
+                            "@id": "d2e2146",
+                            "bcl:num": "2",
+                            "bcl:text": "An act or thing done or omitted by an employee, officer, director, official or agent of any person within the scope of the person's authority is deemed to be an act or thing done or omitted by that person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2157",
+                    "bcl:marginalnote": "Technical defects",
+                    "bcl:num": "45",
+                    "bcl:text": "A proceeding under this Code is not invalid because of any defect in form or any technical irregularity."
+                },
+                {
+                    "@id": "d2e2169",
+                    "bcl:marginalnote": "Delegation of powers",
+                    "bcl:num": "46",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2177",
+                            "bcl:num": "1) to (3",
+                            "bcl:text": "[Repealed 2002-62-24.]"
+                        },
+                        {
+                            "@id": "d2e2186",
+                            "bcl:num": "4",
+                            "bcl:text": "The chair may, in writing, delegate to one or more of the members any of the chair's powers or duties under this Code, except the power to delegate under this section."
+                        },
+                        {
+                            "@id": "d2e2195",
+                            "bcl:num": "5",
+                            "bcl:text": "A delegation made under this section may be revoked, and does not prevent the person who delegated the power from exercising that power."
+                        },
+                        {
+                            "@id": "d2e2205",
+                            "bcl:num": "6",
+                            "bcl:text": "A delegation may be made subject to any terms the person delegating considers appropriate."
+                        },
+                        {
+                            "@id": "d2e2214",
+                            "bcl:num": "7",
+                            "bcl:text": "If the person who delegated the power ceases to hold office, the delegation continues in effect so long as the delegate continues in office or until the delegation is revoked by the person who succeeds the person who delegated the power."
+                        },
+                        {
+                            "@id": "d2e2223",
+                            "bcl:num": "8",
+                            "bcl:text": "A person purporting to exercise a power because of a delegation made under this section must, when requested to do so, produce evidence of the person's authority to exercise the power."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2233",
+                    "bcl:marginalnote": "Time limits",
+                    "bcl:num": "47",
+                    "bcl:text": "Despite the fact that a period prescribed under section 49 (2) (b) has expired and the period has not been extended in accordance with the regulations, this Code continues to apply to the complaint to which the period relates, and",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e2244",
+                            "bcl:num": "a",
+                            "bcl:text": "all proceedings taken under this Code with respect to the complaint may continue, and"
+                        },
+                        {
+                            "@id": "d2e2253",
+                            "bcl:num": "b",
+                            "bcl:text": "all proceedings available under this Code with respect to the complaint may be taken."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2658",
+                    "bcl:marginalnote": "Human Rights Commissioner",
+                    "bcl:num": "47.01",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2666",
+                            "bcl:num": "1",
+                            "bcl:text": "The Legislative Assembly may, by resolution, appoint as the Human Rights Commissioner a person who has been unanimously recommended for the appointment by a special committee of the Legislative Assembly."
+                        },
+                        {
+                            "@id": "d1e2675",
+                            "bcl:num": "2",
+                            "bcl:text": "The commissioner is an officer of the Legislature."
+                        },
+                        {
+                            "@id": "d1e2684",
+                            "bcl:num": "3",
+                            "bcl:text": "Subject to section 47.02, the commissioner holds office for a term of 5 years."
+                        },
+                        {
+                            "@id": "d1e2694",
+                            "bcl:num": "4",
+                            "bcl:text": "The commissioner may be reappointed, in the manner referred to in subsection (1) of this section, for one additional term of up to 5 years as specified in the reappointment resolution."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2704",
+                    "bcl:marginalnote": "Resignation, suspension or removal of commissioner",
+                    "bcl:num": "47.02",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2712",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "standing committee",
+                                "#text": "In this section,  means the select standing committee of the Legislative Assembly that has been designated for the purposes of subsection (4)."
+                            }
+                        },
+                        {
+                            "@id": "d1e2724",
+                            "bcl:num": "2",
+                            "bcl:text": "The commissioner may resign at any time by giving written notice to the Speaker of the Legislative Assembly or, if there is no Speaker or the Speaker is absent from British Columbia, to the Clerk of the Legislative Assembly."
+                        },
+                        {
+                            "@id": "d1e2733",
+                            "bcl:num": "3",
+                            "bcl:text": "By a resolution passed by at least 2/3 of the members present, the Legislative Assembly may, for cause or incapacity, suspend the commissioner, with or without salary, or remove the commissioner from office."
+                        },
+                        {
+                            "@id": "d1e2743",
+                            "bcl:num": "4",
+                            "bcl:text": "If the Legislative Assembly is not sitting and will not be sitting within 5 days, the standing committee, by unanimous resolution, may, for cause or incapacity, suspend the commissioner, with or without salary, for a period that must be set by the standing committee to end not later than on the expiry of a further 20 sitting days of the Legislative Assembly."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2753",
+                    "bcl:marginalnote": "Acting commissioner",
+                    "bcl:num": "47.03",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2761",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "standing committee",
+                                "#text": "In this section,  means the select standing committee of the Legislative Assembly that has been designated for the purposes of subsections (2), (3) and\u00a0(4)."
+                            }
+                        },
+                        {
+                            "@id": "d1e2773",
+                            "bcl:num": "2",
+                            "bcl:text": "If the commissioner is suspended or temporarily absent because of illness or another reason, or if the office of commissioner is vacant, the Legislative Assembly, on the recommendation of the standing committee, may appoint an acting commissioner to exercise the powers and perform the duties of the commissioner until whichever of the following is the case and occurs first:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2781",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the suspension ends;"
+                                },
+                                {
+                                    "@id": "d1e2790",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the commissioner returns to office after the temporary absence;"
+                                },
+                                {
+                                    "@id": "d1e2799",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a person is appointed under section 47.01."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2809",
+                            "bcl:num": "3",
+                            "bcl:text": "If the commissioner is suspended or temporarily absent because of illness or another reason, or if the office of commissioner is vacant, and the Legislative Assembly is not sitting and will not be sitting within 5 days, the standing committee may appoint an acting commissioner to exercise the powers and perform the duties of the commissioner until whichever of the following is the case and occurs first:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2817",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the suspension ends;"
+                                },
+                                {
+                                    "@id": "d1e2826",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the commissioner returns to office after the temporary absence;"
+                                },
+                                {
+                                    "@id": "d1e2835",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a person is appointed under section 47.01."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2846",
+                            "bcl:num": "4",
+                            "bcl:text": "If the commissioner is suspended or temporarily absent because of illness or another reason, or if the office of commissioner is vacant, and the Legislative Assembly is not sitting and will not be sitting within 5 days and the standing committee has not been established, the Lieutenant Governor in Council may make the appointment referred to in subsection (3) of this section."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2857",
+                    "bcl:marginalnote": "Salary, expenses and benefits of commissioner",
+                    "bcl:num": "47.04",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2865",
+                            "bcl:num": "1",
+                            "bcl:text": "A commissioner appointed under section 47.01 or 47.03 is entitled",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2873",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to be paid compensation as may be set by the Lieutenant Governor in Council, and"
+                                },
+                                {
+                                    "@id": "d1e2882",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to be reimbursed for reasonable travel and out-of-pocket expenses personally incurred in exercising the powers and performing the duties of the office."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2892",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/00_99044_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Sector Pension Plans Act"
+                                },
+                                "#text": "The public service plan as defined in section 1 (1) of the  applies to the commissioner."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2907",
+                    "bcl:marginalnote": "Oath of commissioner",
+                    "bcl:num": "47.05",
+                    "bcl:text": "Before taking office, a commissioner appointed under section 47.01 or 47.03 must make an oath or solemn affirmation before the Clerk of the Legislative Assembly to faithfully and impartially exercise the powers and perform the duties of the office."
+                },
+                {
+                    "@id": "d1e2919",
+                    "bcl:marginalnote": "Staff of commissioner",
+                    "bcl:num": "47.06",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2927",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "The commissioner may appoint, in accordance with the , employees necessary to enable the commissioner to exercise the powers and perform the duties of the office."
+                            }
+                        },
+                        {
+                            "@id": "d1e2941",
+                            "bcl:num": "2",
+                            "bcl:text": "The commissioner may engage or retain consultants or specialists the commissioner considers necessary to exercise the powers and perform the duties of the office and may determine their remuneration and other terms and conditions of their engagement or retainers."
+                        },
+                        {
+                            "@id": "d1e2950",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "The  does not apply in respect of a person engaged or retained under subsection (2) of this section."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2965",
+                    "bcl:marginalnote": "Delegation by commissioner",
+                    "bcl:num": "47.07",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2973",
+                            "bcl:num": "1",
+                            "bcl:text": "The commissioner may, in writing, delegate to any person employed, engaged or retained by the commissioner any power or duty of the commissioner under this Code, except the power",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2981",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to delegate under this section, and"
+                                },
+                                {
+                                    "@id": "d1e2990",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to make an annual report under section 47.23."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3000",
+                            "bcl:num": "2",
+                            "bcl:text": "A delegation may be made subject to any terms the person delegating considers appropriate."
+                        },
+                        {
+                            "@id": "d1e3009",
+                            "bcl:num": "3",
+                            "bcl:text": "A delegation made under this section may be revoked, and does not prevent the person who delegated the power or duty from exercising that power or performing that duty."
+                        },
+                        {
+                            "@id": "d1e3019",
+                            "bcl:num": "4",
+                            "bcl:text": "If the person who delegated the power or duty ceases to hold office, the delegation continues in effect so long as the delegate continues in office or until the delegation is revoked by the person who succeeds the person who delegated the power or duty."
+                        },
+                        {
+                            "@id": "d1e3028",
+                            "bcl:num": "5",
+                            "bcl:text": "A person purporting to exercise a power or perform a duty through a delegation must, when requested to do so, produce evidence of the delegation."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3038",
+                    "bcl:marginalnote": "Advisory council",
+                    "bcl:num": "47.08",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3046",
+                            "bcl:num": "1",
+                            "bcl:text": "The human rights advisory council is established."
+                        },
+                        {
+                            "@id": "d1e3055",
+                            "bcl:num": "2",
+                            "bcl:text": "On recommendation by the commissioner, the Lieutenant Governor in Council may appoint members of the human rights advisory council and may set the terms and conditions of office of the members appointed."
+                        },
+                        {
+                            "@id": "d1e3064",
+                            "bcl:num": "3",
+                            "bcl:text": "The role of the human rights advisory council is to advise the commissioner on issues respecting human rights and to perform any other function specified by the commissioner."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3074",
+                    "bcl:marginalnote": "Restrictions on disclosure by commissioner and staff",
+                    "bcl:num": "47.09",
+                    "bcl:text": "Except in the proper exercise of powers or performance of duties under this Code, the commissioner, and anyone acting for or under the direction of the commissioner, must not disclose any information received in the course of exercising those powers or performing those duties."
+                },
+                {
+                    "@id": "d1e3087",
+                    "bcl:marginalnote": "Non-compellability of commissioner and staff",
+                    "bcl:num": "47.10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3095",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), the commissioner, and anyone acting for or under the direction of the commissioner, must not be compelled to give evidence in court or in any other proceedings respecting any information received in the course of exercising powers or performing duties under this Code."
+                        },
+                        {
+                            "@id": "d1e3104",
+                            "bcl:num": "2",
+                            "bcl:text": "The commissioner, and anyone acting for or under the direction of the commissioner, may be compelled to give evidence in a prosecution of an offence under this Code."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3114",
+                    "bcl:marginalnote": "Personal liability protection of commissioner and staff",
+                    "bcl:num": "47.11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3122",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), no legal proceeding for damages lies or may be commenced or maintained against the commissioner, or against a person acting for or under the direction of the commissioner, because of anything done or omitted",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3130",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the exercise or intended exercise of any power under this Code, or"
+                                },
+                                {
+                                    "@id": "d1e3139",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the performance or intended performance of any duty under this Code."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3149",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not apply to a person referred to in that subsection in relation to anything done or omitted by that person in bad faith."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3159",
+                    "bcl:marginalnote": "Powers of commissioner",
+                    "bcl:num": "47.12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3167",
+                            "bcl:num": "1",
+                            "bcl:text": "The commissioner is responsible for promoting and protecting human rights, including by doing any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3175",
+                                    "bcl:num": "a",
+                                    "bcl:text": "identifying, and promoting the elimination of, discriminatory practices, policies and programs;"
+                                },
+                                {
+                                    "@id": "d1e3184",
+                                    "bcl:num": "b",
+                                    "bcl:text": "developing resources, policies and guidelines to prevent and eliminate discriminatory practices, policies and programs;"
+                                },
+                                {
+                                    "@id": "d1e3193",
+                                    "bcl:num": "c",
+                                    "bcl:text": "publishing reports, making recommendations or using other means the commissioner considers appropriate to prevent or eliminate discriminatory practices, policies and programs;"
+                                },
+                                {
+                                    "@id": "d1e3203",
+                                    "bcl:num": "d",
+                                    "bcl:text": "developing and delivering public information and education about human rights;"
+                                },
+                                {
+                                    "@id": "d1e3212",
+                                    "bcl:num": "e",
+                                    "bcl:text": "undertaking, directing and supporting research respecting human rights;"
+                                },
+                                {
+                                    "@id": "d1e3221",
+                                    "bcl:num": "f",
+                                    "bcl:text": "examining the human rights implications of any policy, program or legislation, and making recommendations respecting any policy, program or legislation that the commissioner considers may be inconsistent with this Code;"
+                                },
+                                {
+                                    "@id": "d1e3230",
+                                    "bcl:num": "g",
+                                    "bcl:text": "consulting and cooperating with individuals and organizations in order to promote and protect human rights;"
+                                },
+                                {
+                                    "@id": "d1e3239",
+                                    "bcl:num": "h",
+                                    "bcl:text": "establishing working groups for special assignments respecting human rights;"
+                                },
+                                {
+                                    "@id": "d1e3248",
+                                    "bcl:num": "i",
+                                    "bcl:text": "promoting compliance with international human rights obligations;"
+                                },
+                                {
+                                    "@id": "d1e3258",
+                                    "bcl:num": "j",
+                                    "bcl:text": "intervening in complaints under section 22.1 and in any proceeding in any court;"
+                                },
+                                {
+                                    "@id": "d1e3278a",
+                                    "bcl:num": "k",
+                                    "bcl:text": "approving a program or activity under section 42;"
+                                },
+                                {
+                                    "@id": "d1e3478a",
+                                    "bcl:num": "l",
+                                    "bcl:text": "initiating inquiries under sections 47.14 and 47.15."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3268",
+                            "bcl:num": "2",
+                            "bcl:text": "The commissioner may not file a complaint with the tribunal under section 21 but may assist a person or group of persons with any aspect of a complaint."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3302",
+                    "bcl:marginalnote": "Provision of tribunal records to commissioner",
+                    "bcl:num": "47.13",
+                    "bcl:text": "On request by the commissioner, the tribunal must provide to the commissioner copies of complaints and responses filed with the tribunal and may provide to the commissioner other records in its custody or control."
+                },
+                {
+                    "@id": "d1e3301",
+                    "bcl:marginalnote": "Referrals",
+                    "bcl:num": "47.14",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3309",
+                            "bcl:num": "1",
+                            "bcl:text": "The Legislative Assembly or any of its committees may at any time refer a matter to the commissioner for inquiry and report."
+                        },
+                        {
+                            "@id": "d1e3318",
+                            "bcl:num": "2",
+                            "bcl:text": "If the commissioner accepts a referral, the commissioner must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3326",
+                                    "bcl:num": "a",
+                                    "bcl:text": "inquire into the matter referred, and"
+                                },
+                                {
+                                    "@id": "d1e3335",
+                                    "bcl:num": "b",
+                                    "bcl:text": "make a written report to the Legislative Assembly."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3345",
+                            "bcl:num": "3",
+                            "bcl:text": "If the commissioner does not accept a referral, the commissioner must provide written reasons to the Legislative Assembly for not accepting the referral."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3355",
+                    "bcl:marginalnote": "Commissioner's inquiry",
+                    "bcl:num": "47.15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3363",
+                            "bcl:num": "1",
+                            "bcl:text": "If the commissioner is of the opinion that an inquiry into a matter would promote or protect human rights, the commissioner may inquire into the matter."
+                        },
+                        {
+                            "@id": "d1e3372",
+                            "bcl:num": "2",
+                            "bcl:text": "An inquiry may be conducted in public."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3383",
+                    "bcl:marginalnote": "Commissioner's order powers for inquiries",
+                    "bcl:num": "47.16",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3391",
+                            "bcl:num": "1",
+                            "bcl:text": "For the purpose of conducting an inquiry, the commissioner may make an order, in writing, requiring a person to do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3399",
+                                    "bcl:num": "a",
+                                    "bcl:text": "attend, in person or by electronic means, before the commissioner and answer questions on oath or solemn affirmation or in any other manner;"
+                                },
+                                {
+                                    "@id": "d1e3408",
+                                    "bcl:num": "b",
+                                    "bcl:text": "produce to the commissioner a record or other thing in the person's custody or control;"
+                                },
+                                {
+                                    "@id": "d1e3417",
+                                    "bcl:num": "c",
+                                    "bcl:text": "record physical dimensions, or take photographs, video recordings or audio recordings, of premises or vehicles, and produce the records, photographs, video recordings and audio recordings to the commissioner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3427",
+                            "bcl:num": "2",
+                            "bcl:text": "An order under subsection (1), (3) or (6) must be served in accordance with the regulations."
+                        },
+                        {
+                            "@id": "d1e3436",
+                            "bcl:num": "3",
+                            "bcl:text": "The commissioner, on the commissioner's own initiative, may, by written order, confirm, vary or rescind an order."
+                        },
+                        {
+                            "@id": "d1e3446",
+                            "bcl:num": "4",
+                            "bcl:text": "A person subject to an order under subsection (1), (3) or (6) may apply to the commissioner to vary or rescind the order."
+                        },
+                        {
+                            "@id": "d1e3455",
+                            "bcl:num": "5",
+                            "bcl:text": "A request for variation or rescission must be made in the prescribed form and manner."
+                        },
+                        {
+                            "@id": "d1e3464",
+                            "bcl:num": "6",
+                            "bcl:text": "After considering a request for variation or rescission, the commissioner may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3472",
+                                    "bcl:num": "a",
+                                    "bcl:text": "reject the request, or"
+                                },
+                                {
+                                    "@id": "d1e3481",
+                                    "bcl:num": "b",
+                                    "bcl:text": "by written order, confirm, vary or rescind the order."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3491",
+                            "bcl:num": "7",
+                            "bcl:text": "The commissioner must provide written reasons for an order under subsection\u00a0(3) or\u00a0(6)."
+                        },
+                        {
+                            "@id": "d1e3500",
+                            "bcl:num": "8",
+                            "bcl:text": "An order under subsection (1), (3) or (6) is not suspended during the period of the commissioner's consideration of a request under subsection\u00a0(4) unless the commissioner, in writing, suspends\u00a0it."
+                        },
+                        {
+                            "@id": "d1e3509",
+                            "bcl:num": "9",
+                            "bcl:text": "At the conclusion of an inquiry, the commissioner must return any record or other thing produced in the inquiry to the person who produced it."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3519",
+                    "bcl:marginalnote": "Expenses reimbursement",
+                    "bcl:num": "47.17",
+                    "bcl:text": "If a person incurs expenses in complying with an order of the commissioner under section 47.16, the commissioner may reimburse the person for reasonable expenses."
+                },
+                {
+                    "@id": "d1e3531",
+                    "bcl:marginalnote": "Cabinet information protected",
+                    "bcl:num": "47.18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3539",
+                            "bcl:num": "1",
+                            "bcl:text": "The commissioner must not require any information or answer to be given or any record or other thing to be produced if the Attorney General certifies that giving the information, answering the question or producing the record or other thing might",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3547",
+                                    "bcl:num": "a",
+                                    "bcl:text": "interfere with or impede the investigation or detection of an offence,"
+                                },
+                                {
+                                    "@id": "d1e3556",
+                                    "bcl:num": "b",
+                                    "bcl:text": "result in or involve the disclosure of deliberations of the Executive Council, or"
+                                },
+                                {
+                                    "@id": "d1e3565",
+                                    "bcl:num": "c",
+                                    "bcl:text": "result in or involve the disclosure of proceedings of the Executive Council or a committee of it, relating to matters of a secret or confidential nature, and that the disclosure would be contrary or prejudicial to the public interest."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3575",
+                            "bcl:num": "2",
+                            "bcl:text": "The commissioner must report each certificate of the Attorney General to the Legislative Assembly not later than in the commissioner's next annual report."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3585",
+                    "bcl:marginalnote": "Enforcement of commissioner's orders",
+                    "bcl:num": "47.19",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3593",
+                            "bcl:num": "1",
+                            "bcl:text": "The commissioner may file a copy of an order made under section 47.16\u00a0(1), (3) or\u00a0(6) with the Supreme Court."
+                        },
+                        {
+                            "@id": "d1e3602",
+                            "bcl:num": "2",
+                            "bcl:text": "An order filed under subsection (1) of this section has the same force and effect, and all proceedings may be taken on it, as if it were a judgment of the Supreme Court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3612",
+                    "bcl:marginalnote": "Commissioner's inquiry reports",
+                    "bcl:num": "47.20",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3620",
+                            "bcl:num": "1",
+                            "bcl:text": "At the conclusion of an inquiry under section 47.15, the commissioner may make a written report containing any recommendations the commissioner considers appropriate."
+                        },
+                        {
+                            "@id": "d1e3629",
+                            "bcl:num": "2",
+                            "bcl:text": "The commissioner may publish a report referred to in subsection\u00a0(1) and provide the report to the Speaker of the Legislative Assembly."
+                        },
+                        {
+                            "@id": "d1e3638",
+                            "bcl:num": "3",
+                            "bcl:text": "If a report referred to in subsection (1) of this section or section 47.14 contains a recommendation made to a person, the commissioner may require the person to notify the commissioner, within a specified period of time, of steps taken, or intended to be taken, to address the recommendation."
+                        },
+                        {
+                            "@id": "d1e3648",
+                            "bcl:num": "4",
+                            "bcl:text": "On request by a person who is subject to a notification requirement under subsection\u00a0(3), the commissioner may extend the period of time for the notification, either before or after that period of time has expired."
+                        },
+                        {
+                            "@id": "d1e3657",
+                            "bcl:num": "5",
+                            "bcl:text": "If the commissioner considers that a person has not, within the original or extended period of time, adequately addressed a recommendation, the commissioner may make a written report about the person's failure to adequately address the recommendation."
+                        },
+                        {
+                            "@id": "d1e3666",
+                            "bcl:num": "6",
+                            "bcl:text": "The commissioner may publish a report referred to in subsection\u00a0(5) and provide the report to the Speaker of the Legislative Assembly."
+                        },
+                        {
+                            "@id": "d1e3675",
+                            "bcl:num": "7",
+                            "bcl:text": "If the commissioner provides a report to the Speaker under subsection\u00a0(2) or\u00a0(6), the Speaker must lay the report before the Legislative Assembly as soon as practicable."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3685",
+                    "bcl:marginalnote": "Protection",
+                    "bcl:num": "47.21",
+                    "bcl:text": "A person must not evict, discharge, suspend, expel, intimidate, coerce, impose any pecuniary or other penalty on, deny a right or benefit to or otherwise discriminate against a person because that person participates in or might participate in an inquiry under this Code."
+                },
+                {
+                    "@id": "d1e3698",
+                    "bcl:marginalnote": "Offences",
+                    "bcl:num": "47.22",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3706",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who wilfully does any of the following commits an offence:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3714",
+                                    "bcl:num": "a",
+                                    "bcl:text": "makes a false statement to, or misleads or attempts to mislead, the commissioner in the exercise of powers or performance of duties under this Code;"
+                                },
+                                {
+                                    "@id": "d1e3723",
+                                    "bcl:num": "b",
+                                    "bcl:text": "obstructs the commissioner in the exercise of powers or performance of duties under this Code."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3733",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who commits an offence under this section is liable,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3741",
+                                    "bcl:num": "a",
+                                    "bcl:text": "for a first offence, to a fine of not more than $25\u00a0000, and"
+                                },
+                                {
+                                    "@id": "d1e3750",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for a second or subsequent offence, to a fine of not more than $100\u00a0000."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3278",
+                    "bcl:marginalnote": "Annual report of commissioner",
+                    "bcl:num": "47.23",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3286",
+                            "bcl:num": "1",
+                            "bcl:text": "The commissioner must submit to the Speaker of the Legislative Assembly an annual report on the activities of the commissioner's office."
+                        },
+                        {
+                            "@id": "d1e3295",
+                            "bcl:num": "2",
+                            "bcl:text": "The Speaker must lay the report before the Legislative Assembly as soon as practicable."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e3305",
+                    "bcl:marginalnote": "Special reports of commissioner",
+                    "bcl:num": "47.24",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e3313",
+                            "bcl:num": "1",
+                            "bcl:text": "The commissioner may, at any time, make a special report to the Speaker of the Legislative Assembly respecting any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3321",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the exercise of the commissioner's powers or performance of the commissioner's duties;"
+                                },
+                                {
+                                    "@id": "d1e3330",
+                                    "bcl:num": "b",
+                                    "bcl:text": "research that has been undertaken, directed or supported by the commissioner;"
+                                },
+                                {
+                                    "@id": "d1e3339",
+                                    "bcl:num": "c",
+                                    "bcl:text": "human rights in British Columbia."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3349",
+                            "bcl:num": "2",
+                            "bcl:text": "The Speaker must lay a report made under subsection (1) before the Legislative Assembly as soon as practicable."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2263",
+                    "bcl:marginalnote": {
+                        "in:doc": "Offence Act"
+                    },
+                    "bcl:num": "48",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Section 5 of the  does not apply to this Code or the regulations."
+                    }
+                },
+                {
+                    "@id": "d2e2281",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "49",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2289",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e2301",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2310",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing the standards for the purposes of section\u00a010;"
+                                },
+                                {
+                                    "@id": "d2e2320",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prescribing a period",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2329",
+                                            "bcl:num": "i) to (iv",
+                                            "bcl:text": "[Repealed 2002-62-25.]"
+                                        },
+                                        {
+                                            "@id": "d2e2338",
+                                            "bcl:num": "v",
+                                            "bcl:text": "within which a hearing must be begun, and"
+                                        },
+                                        {
+                                            "@id": "d2e2347",
+                                            "bcl:num": "vi",
+                                            "bcl:text": "within which a decision and reasons must be provided under section 37 (6);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2356",
+                                    "bcl:num": "c",
+                                    "bcl:text": "authorizing a person to extend a period referred to in paragraph (b) and prescribing the circumstances in which the period may be extended;"
+                                },
+                                {
+                                    "@id": "d2e2365",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting the procedures to be followed before a period prescribed under paragraph (b) may be extended;"
+                                },
+                                {
+                                    "@id": "d2e2375",
+                                    "bcl:num": "e",
+                                    "bcl:text": "providing for the suspension of a period prescribed under paragraph (b) where consideration of a complaint is deferred under section 25 (2);"
+                                },
+                                {
+                                    "@id": "d2e2384",
+                                    "bcl:num": "f",
+                                    "bcl:text": "[Repealed 2002-62-25.]"
+                                },
+                                {
+                                    "@id": "d2e2393",
+                                    "bcl:num": "g",
+                                    "bcl:text": "respecting the practice and procedure in hearings before the tribunal;"
+                                },
+                                {
+                                    "@id": "d1e4000",
+                                    "bcl:num": "g.1",
+                                    "bcl:text": "respecting the service under section 47.16 of orders made under that section;"
+                                },
+                                {
+                                    "@id": "d1e4010",
+                                    "bcl:num": "g.2",
+                                    "bcl:text": "respecting applications under section 47.16 for variance or rescission of orders made under that section."
+                                },
+                                {
+                                    "@id": "d2e2402",
+                                    "bcl:num": "h",
+                                    "bcl:text": "[Repealed 2002-62-25.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2411",
+                            "bcl:num": "3",
+                            "bcl:text": "A regulation made under subsection (2) (c) may permit a period to be extended despite the fact that the period has already expired."
+                        },
+                        {
+                            "@id": "d2e2420",
+                            "bcl:num": "4",
+                            "bcl:text": "Without limiting subsection (2) (g), a regulation made under that subsection may include provisions respecting",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2430",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the disclosure and inspection of documents by parties to a complaint,"
+                                },
+                                {
+                                    "@id": "d2e2439",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the oral examination of parties and witnesses on oath or affirmation,"
+                                },
+                                {
+                                    "@id": "d2e2448",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the holding of prehearing conferences, and"
+                                },
+                                {
+                                    "@id": "d2e2457",
+                                    "bcl:num": "d",
+                                    "bcl:text": "procedures for formal offers to settle a complaint."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2467",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "50",
+                    "bcl:text": "[Repealed 2002-62-26.]"
+                },
+                {
+                    "@id": "d1e4109",
+                    "bcl:marginalnote": "Review of sections 47.01 to 47.24",
+                    "bcl:num": "50.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e4117",
+                            "bcl:num": "1",
+                            "bcl:text": "At least once every 5 years, a special committee of the Legislative Assembly must begin a comprehensive review of sections 47.01 to 47.24 of this Code and must submit a report respecting those sections to the Legislative Assembly within one year after the date of the appointment of the special committee."
+                        },
+                        {
+                            "@id": "d1e4126",
+                            "bcl:num": "2",
+                            "bcl:text": "A report submitted under subsection (1) of this section may include any recommended amendments to sections 47.01 to 47.24."
+                        },
+                        {
+                            "@id": "d1e4135",
+                            "bcl:num": "3",
+                            "bcl:text": "For the purposes of subsection (1), the first 5-year period begins on the date that this section comes into force."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

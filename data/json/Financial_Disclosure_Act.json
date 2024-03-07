@@ -1,0 +1,603 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96139_01",
+        "act:title": "Financial Disclosure Act",
+        "act:chapter": "139",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1198514681/96139/tlc96139_f",
+            "act:tlc": "E3tlc96139"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "business",
+                                "#text": "includes a profession, calling, trade, manufacture,\n          undertaking of any kind and an adventure or concern in the nature of trade, but does not\n          include an office or employment;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "debt",
+                                "#text": "does not include"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e45",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a mortgage, lease or agreement for sale on land ordinarily occupied by the\n            debtor for, or as incidental to, residential purposes,"
+                                },
+                                {
+                                    "@id": "d2e54",
+                                    "bcl:num": "b",
+                                    "bcl:text": "current and ordinary household and personal living expenses, and"
+                                },
+                                {
+                                    "@id": "d2e63",
+                                    "bcl:num": "c",
+                                    "bcl:text": "money or other property entrusted to or received by a nominee, municipal\n            official, public employee or municipal employee in trust for another person;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e72",
+                            "bcl:text": {
+                                "in:term": "disclosure clerk",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e81",
+                                    "bcl:num": "a",
+                                    "bcl:text": "for a written disclosure filed by a nominee, the Clerk of the Legislative\n            Assembly,"
+                                },
+                                {
+                                    "@id": "d2e90",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for a written disclosure filed by a municipal official or municipal\n            employee,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e100",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in the case of an official or employee in relation to a municipality or\n              regional district, the local government corporate officer,"
+                                        },
+                                        {
+                                            "@id": "d2e109",
+                                            "bcl:num": "i.1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96239_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Islands Trust Act"
+                                                },
+                                                "#text": "in the case of an official or employee in relation to the Islands Trust, the\n              secretary of the Islands Trust appointed under section 17 of the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e121",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the case of an official or employee in relation to the board of a school\n              district, the secretary treasurer of the school district, and"
+                                        },
+                                        {
+                                            "@id": "d2e130",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "in the case of an official or employee in relation to a francophone education\n              authority, the chief executive officer of the authority, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e139",
+                                    "bcl:num": "c",
+                                    "bcl:text": "for a written disclosure filed by a public employee, the Provincial\n            Secretary;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e148",
+                            "bcl:text": {
+                                "in:term": "employment",
+                                "#text": "means the position of an individual in the service of some\n          other person;"
+                            }
+                        },
+                        {
+                            "@id": "d2e158",
+                            "bcl:text": {
+                                "in:term": "francophone education authority",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96412_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "School Act"
+                                },
+                                "#text": "has the same meaning as in the\n            ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e170",
+                            "bcl:text": {
+                                "in:term": "interest",
+                                "#text": "means an interest specified, or required to be specified, in a\n          written disclosure regardless of the date when it is required under section\u00a03 to be\n          filed;"
+                            }
+                        },
+                        {
+                            "@id": "d2e179",
+                            "bcl:text": {
+                                "in:term": "land",
+                                "#text": "does not include, except in the definition \"debt\", land ordinarily\n          occupied by an owner for, or as incidental to, residential purposes;"
+                            }
+                        },
+                        {
+                            "@id": "d2e188",
+                            "bcl:text": {
+                                "in:term": "local trust committee",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96239_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Islands\n              Trust Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e200",
+                            "bcl:text": {
+                                "in:term": "municipal employee",
+                                "#text": "means a person who"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e209",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is employed or appointed by the council of a municipality, by the board of a\n            regional district, by the trust council, by a francophone education authority or by the\n            board of a school district, and"
+                                },
+                                {
+                                    "@id": "d2e219",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is designated by the council, board, trust council or francophone education\n            authority, as the case may be, to be a municipal employee;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e228",
+                            "bcl:text": [
+                                {
+                                    "in:term": "municipal official",
+                                    "#text": "means a person who"
+                                },
+                                "and includes, except in sections 2 (1), (3) and (5) and 11, a person for whom\n          nomination papers for election to office as a municipal official have been\n          filed;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e237",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is a member of the council of a municipality, the board of a regional district\n            or a local trust committee, or"
+                                },
+                                {
+                                    "@id": "d2e246",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96412_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "School\n                Act"
+                                        },
+                                        "#text": "is a member of a board of school trustees constituted under the , or is a member of the board of regional trustees of a\n            francophone education authority,"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e261",
+                            "bcl:text": {
+                                "in:term": "nominee",
+                                "#text": "means a person referred to in section 2 (1);"
+                            }
+                        },
+                        {
+                            "@id": "d2e271",
+                            "bcl:text": {
+                                "in:term": "office",
+                                "#text": "means the position of a person, other than a corporation,\n          entitling the person to a fixed or ascertainable stipend or remuneration;"
+                            }
+                        },
+                        {
+                            "@id": "d2e280",
+                            "bcl:text": {
+                                "in:term": "public employee",
+                                "#text": "means a person, other than a municipal employee or a\n          judge, who is designated by the Lieutenant Governor in Council and who is"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e289",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96385_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Service Act"
+                                        },
+                                        "#text": "employed by the government, or any of its boards, agencies or commissions, under\n            the  or by an order of the Lieutenant\n            Governor in Council,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e301",
+                                    "bcl:num": "b",
+                                    "bcl:text": "employed by or appointed to a board, agency or commission if the employment or\n            appointment requires an order or approval of the Lieutenant Governor in Council,\n            or"
+                                },
+                                {
+                                    "@id": "d2e310",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a member of a board, agency or commission established under an Act or by order\n            of the Lieutenant Governor in Council;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e319",
+                            "bcl:text": {
+                                "in:term": "trust council",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96239_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Islands Trust\n              Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e332",
+                            "bcl:text": {
+                                "in:term": "written disclosure",
+                                "#text": "means a written disclosure required to be made and\n          filed under this Act."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e342",
+                    "bcl:marginalnote": "Requirement to make written disclosure",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e350",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who accepts a nomination for election to office as a Provincial or\n          municipal official must make a written disclosure and file it with the person's nomination\n          papers."
+                        },
+                        {
+                            "@id": "d2e359",
+                            "bcl:num": "2",
+                            "bcl:text": "Promptly after receiving a written disclosure under subsection (1), the person\n          receiving it must send it to the appropriate disclosure clerk."
+                        },
+                        {
+                            "@id": "d2e368",
+                            "bcl:num": "3",
+                            "bcl:text": "A person who is a municipal official, public employee or municipal employee must\n          make and file a written disclosure between January 1 and 15 in each year in which the\n          person is an official or employee."
+                        },
+                        {
+                            "@id": "d2e378",
+                            "bcl:num": "4",
+                            "bcl:text": "A person who becomes a public employee or a municipal employee must make and file\n          a written disclosure not later than the 15th day of the month following the month in which\n          the person becomes a public employee or a municipal employee."
+                        },
+                        {
+                            "@id": "d2e387",
+                            "bcl:num": "5",
+                            "bcl:text": "A person who ceases to be a municipal official, public employee or municipal\n          employee, for any reason other than the person's death, must make and file a written\n          disclosure not later than the 15th day of the month following the month in which the\n          person ceases to be an official or employee."
+                        },
+                        {
+                            "@id": "d2e396",
+                            "bcl:num": "6",
+                            "bcl:text": "A person is not required to file more than one written disclosure during any one\n          month."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e406",
+                    "bcl:marginalnote": "Contents and filing of written disclosures: Provincial",
+                    "bcl:num": "3",
+                    "bcl:text": "A written disclosure made by a nominee or public employee must be filed in the\n        prescribed form with the appropriate disclosure clerk and must specify all of the\n        following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e417",
+                            "bcl:num": "a",
+                            "bcl:text": "the name of each corporation in which the person or a trustee for the person holds\n          one or more shares;"
+                        },
+                        {
+                            "@id": "d2e426",
+                            "bcl:num": "b",
+                            "bcl:text": "the name of each business situated or carrying on business in British Columbia and\n          financially remunerating the nominee or public employee as an owner, part owner, trustee\n          or partner;"
+                        },
+                        {
+                            "@id": "d2e436",
+                            "bcl:num": "c",
+                            "bcl:text": "the name of each business located or carrying on business in British Columbia and\n          financially remunerating the nominee or public employee for services performed by the\n          person as an employee;"
+                        },
+                        {
+                            "@id": "d2e445",
+                            "bcl:num": "d",
+                            "bcl:text": "the name of each organization located in British Columbia and financially\n          remunerating the nominee or public employee for an office held by the person that is not\n          disclosed under paragraph (b) or (c);"
+                        },
+                        {
+                            "@id": "d2e454",
+                            "bcl:num": "e",
+                            "bcl:text": "the name of the creditor for each debt of the nominee or public\n          employee;"
+                        },
+                        {
+                            "@id": "d2e463",
+                            "bcl:num": "f",
+                            "bcl:text": "a description and location of land located in British Columbia in which the\n          nominee or public employee, or a trustee for that person, owns an interest or has an\n          agreement entitling the nominee, public employee or trustee to acquire an interest."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e473",
+                    "bcl:marginalnote": "Contents and filing of written disclosures: municipal",
+                    "bcl:num": "4",
+                    "bcl:text": "A written disclosure by a municipal official or municipal employee must",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e484",
+                            "bcl:num": "a",
+                            "bcl:text": "be filed in the prescribed form with the appropriate disclosure clerk,\n          and"
+                        },
+                        {
+                            "@id": "d2e493",
+                            "bcl:num": "b",
+                            "bcl:text": "specify the matters listed in section 3, limited for section 3 (b), (c), (d) and\n          (f) to the regional district that includes the municipality, local trust area, school\n          district or francophone school district for which the official is elected or nominated, or\n          the employee is employed or appointed."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e503",
+                    "bcl:marginalnote": "Other rules about written disclosures",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e511",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If shares of a corporation carrying more than 30% of the votes for the election of\n          directors are held, other than by way of security only,",
+                                "the written disclosure must include a statement, in prescribed form, setting out\n          the"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e520",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by a person who is a nominee, municipal official, public employee or municipal employee, or by a trustee for the person, or"
+                                },
+                                {
+                                    "@id": "d2e529",
+                                    "bcl:num": "b",
+                                    "bcl:text": "jointly by a person who is a nominee, municipal official, public employee or municipal employee, or by a trustee for the person, and one or more of that person's spouse, child, sibling or parent,"
+                                },
+                                {
+                                    "@id": "d2e542",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02057_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Business Corporations Act"
+                                        },
+                                        "#text": "name of each of the corporation's subsidiaries, within the meaning of section\u00a02\u00a0(2) of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e554",
+                                    "bcl:num": "d",
+                                    "bcl:text": "type of business ordinarily carried on by the corporation or by the\n            subsidiary,"
+                                },
+                                {
+                                    "@id": "d2e563",
+                                    "bcl:num": "e",
+                                    "bcl:text": "description and location of land of which the corporation, a trustee for it, or\n            the subsidiary, owns an interest or has an agreement entitling it to acquire an\n            interest,"
+                                },
+                                {
+                                    "@id": "d2e572",
+                                    "bcl:num": "f",
+                                    "bcl:text": "name of the creditor for each debt of the corporation or subsidiary, except a\n            debt of less than $5\u00a0000 payable in full in less than 90\u00a0days, and"
+                                },
+                                {
+                                    "@id": "d2e581",
+                                    "bcl:num": "g",
+                                    "bcl:text": "name of each corporation in which the corporation, a trustee for it, or the\n            subsidiary, holds one or more shares."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e591",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of sections 3 and 4 and this section, a person is deemed to be a trustee\n          for a nominee, municipal official, public employee or municipal employee if the\n          person",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e600",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/I-3.3/index.html",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Income Tax Act"
+                                        },
+                                        "#text": "holds a share in a corporation or an interest in land either for the benefit of\n            the nominee, municipal official, public employee or municipal employee, or in\n            circumstances where the nominee, municipal official, public employee or municipal\n            employee is liable to pay, under the  (Canada), income tax\n            on income received on the share or land interest, or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e612",
+                                    "bcl:num": "b",
+                                    "bcl:text": "has entered into an agreement entitling the person to acquire an interest in\n            land for the benefit of the nominee, municipal official, public employee or municipal\n            employee."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e621",
+                            "bcl:num": "3",
+                            "bcl:text": "A nominee, municipal official, public employee or municipal employee may make and\n          file a supplementary written disclosure."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e632",
+                    "bcl:marginalnote": "Access to written disclosures",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e640",
+                            "bcl:num": "1",
+                            "bcl:text": "The disclosure clerk with whom a written disclosure is filed under section\u00a03 or 4\n          must produce for inspection, on request during normal business hours, the written\n          disclosure filed by a nominee or municipal official."
+                        },
+                        {
+                            "@id": "d2e649",
+                            "bcl:num": "2",
+                            "bcl:text": "Subject to subsections (3) and (4) and sections 9, 10 and 11, a person\n          does not have access to a written disclosure filed by a public employee or municipal\n          employee."
+                        },
+                        {
+                            "@id": "d2e658",
+                            "bcl:num": "3",
+                            "bcl:text": "On receiving a written disclosure by a public employee, the Provincial Secretary\n          must send a copy of it to the member of the Executive Council who, in the Provincial\n          Secretary's opinion, is responsible to the Executive Council for the administration of the\n          Act for which the public employee is employed or appointed."
+                        },
+                        {
+                            "@id": "d2e668",
+                            "bcl:num": "4",
+                            "bcl:text": "On receiving a written disclosure by a municipal employee, the disclosure clerk\n          must send a copy of it to the members of the council, board or trust council responsible\n          for the employment or appointment of the municipal employee."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e678",
+                    "bcl:marginalnote": "Other disclosure laws",
+                    "bcl:num": "7",
+                    "bcl:text": "This Act is supplementary to and does not affect a duty or obligation to disclose an\n        interest under any other law."
+                },
+                {
+                    "@id": "d2e690",
+                    "bcl:marginalnote": "Proceedings not invalidated",
+                    "bcl:num": "8",
+                    "bcl:text": "The failure of a municipal official, public employee or municipal employee to comply\n        with this Act does not, of itself, invalidate a matter, proceeding, vote or\n        contract."
+                },
+                {
+                    "@id": "d2e702",
+                    "bcl:marginalnote": "Offence and penalty",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e710",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who, as a municipal official, public employee or municipal employee,\n          fails to make or file a written disclosure under this Act, commits an offence."
+                        },
+                        {
+                            "@id": "d2e719",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who commits an offence under subsection (1) is liable on\n          conviction to a fine of not more than $10 000."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e729",
+                    "bcl:marginalnote": "Procedural matters",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e737",
+                            "bcl:num": "1",
+                            "bcl:text": "It is a defence to a charge under section 9 to show that the\n          municipal official, public employee or municipal employee complied with section\u00a03 or 4 to\n          the best of the official's or employee's knowledge or belief."
+                        },
+                        {
+                            "@id": "d2e746",
+                            "bcl:num": "2",
+                            "bcl:text": "If a public employee or municipal employee is prosecuted under section\u00a09, the\n          Provincial Secretary or appropriate disclosure clerk, at the request of the court, must\n          send to the court the written disclosure of the employee."
+                        },
+                        {
+                            "@id": "d2e755",
+                            "bcl:num": "3",
+                            "bcl:text": "If, in a prosecution under section 9, it is alleged that a person was a trustee for\n          a municipal official, public employee or municipal employee, the onus is on the municipal\n          official, public employee or municipal employee to show that the person was not a trustee\n          on the official's or employee's behalf."
+                        },
+                        {
+                            "@id": "d2e765",
+                            "bcl:num": "4",
+                            "bcl:text": "If a public employee or municipal employee is prosecuted under section 9, the\n          court may make public all or part of the public employee's or municipal employee's written\n          disclosure."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e775",
+                    "bcl:marginalnote": "Liability to payment from profit after failure to\n        disclose",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e783",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If the Supreme Court, on an application made with the consent of the Attorney\n          General, finds that",
+                                "the court may order the municipal official, public employee or municipal employee\n          to pay to the employee's employer, or to the local government to which the official is\n          elected, as the case may be, the amount determined by the court to be the amount of the\n          financial gain."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e792",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a municipal official, public employee or municipal employee knowingly and\n            wilfully contravened this Act by not disclosing an interest, and"
+                                },
+                                {
+                                    "@id": "d2e801",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the official or employee made a financial gain resulting from the official's or employee's\n            involvement in a matter, proceeding, vote or contract in respect of the\n            interest,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e814",
+                            "bcl:num": "2",
+                            "bcl:text": "If an application under subsection (1) is made in respect of a public employee,\n          the Provincial Secretary, at the request of the court, must send to a court the written\n          disclosure of the public employee involved."
+                        },
+                        {
+                            "@id": "d2e823",
+                            "bcl:num": "3",
+                            "bcl:text": "If an application under subsection (1) is made in respect of a municipal\n          employee, the disclosure clerk, at the request of the court, must send to the court the\n          written disclosure of the municipal employee."
+                        },
+                        {
+                            "@id": "d2e832",
+                            "bcl:num": "4",
+                            "bcl:text": "If the proceedings under this section are against a public employee or municipal\n          employee, the court may make public all or part of the employee's written\n          disclosure."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e843",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "12",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96238_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Interpretation Act"
+                        },
+                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of\n        the ."
+                    }
+                }
+            ]
+        }
+    }
+}

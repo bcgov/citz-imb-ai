@@ -1,0 +1,1855 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_04060_01",
+        "act:title": "Community Living Authority Act",
+        "act:chapter": "60",
+        "act:yearenacted": "2004",
+        "act:assentedto": "October 21, 2004",
+        "act:currency": {
+            "act:tlcDirPath": "781755088/04060/tlc04060_f",
+            "act:tlc": "E4tlc04060"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e25",
+                    "bcl:num": "1",
+                    "bcl:text": "Introductory Provisions",
+                    "bcl:section": {
+                        "@id": "d2e34",
+                        "bcl:marginalnote": "Definitions",
+                        "bcl:num": "1",
+                        "bcl:text": "In this Act:",
+                        "bcl:definition": [
+                            {
+                                "@id": "d2e45",
+                                "bcl:text": {
+                                    "in:term": "administrative services",
+                                    "#text": "means administrative support and services, including, without limitation, computer, data analysis, legal, payroll, records management, procurement and other support and services, but does not include community living support;"
+                                }
+                            },
+                            {
+                                "@id": "d2e54",
+                                "bcl:text": {
+                                    "in:term": "adult",
+                                    "#text": "means a person 19 years of age or over;"
+                                }
+                            },
+                            {
+                                "@id": "d2e64",
+                                "bcl:text": {
+                                    "in:term": "authority",
+                                    "#text": "means Community Living British Columbia, established under section 2 (1);"
+                                }
+                            },
+                            {
+                                "@id": "d2e73",
+                                "bcl:text": {
+                                    "in:term": "board",
+                                    "#text": "means the board of directors of the authority appointed under section 5;"
+                                }
+                            },
+                            {
+                                "@id": "d2e82",
+                                "bcl:text": {
+                                    "in:term": "capital project",
+                                    "#text": "means a project that"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e91",
+                                        "bcl:num": "a",
+                                        "bcl:text": "is budgeted for, in whole or in part, as a capital expense with a value above the amount set by the minister, and"
+                                    },
+                                    {
+                                        "@id": "d2e100",
+                                        "bcl:num": "b",
+                                        "bcl:text": "is related to acquiring or developing facilities owned or leased by or on behalf of the authority for the purpose of administering this Act;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e109",
+                                "bcl:text": {
+                                    "in:term": "child",
+                                    "#text": "means a person under 19 years of age;"
+                                }
+                            },
+                            {
+                                "@id": "d2e119",
+                                "bcl:text": {
+                                    "in:term": "community living support",
+                                    "#text": "means any of the following:"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e128",
+                                        "bcl:num": "a",
+                                        "bcl:text": "support and services to children and adults with developmental disabilities;"
+                                    },
+                                    {
+                                        "@id": "d2e137",
+                                        "bcl:num": "b",
+                                        "bcl:text": "support and services to families to assist them in caring for a child or an adult with a developmental disability;"
+                                    },
+                                    {
+                                        "@id": "d2e146",
+                                        "bcl:num": "c",
+                                        "bcl:text": {
+                                            "in:doc": "Supply Act, 2004-2005",
+                                            "#text": "support and services to adults, other than those described in paragraph (a) or (b), who, on the date that this Act comes into force, are receiving community living services under vote 16 in the estimates of revenue and expenditure approved for the Ministry of Children and Family Development in the ;"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d2e158",
+                                        "bcl:num": "d",
+                                        "bcl:text": "support and services to other prescribed persons;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e167",
+                                "bcl:text": {
+                                    "in:term": "developmental disability",
+                                    "#text": "means significantly impaired intellectual functioning that"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e177",
+                                        "bcl:num": "a",
+                                        "bcl:text": "manifests before the age of 18 years,"
+                                    },
+                                    {
+                                        "@id": "d2e186",
+                                        "bcl:num": "b",
+                                        "bcl:text": "exists concurrently with impaired adaptive functioning, and"
+                                    },
+                                    {
+                                        "@id": "d2e195",
+                                        "bcl:num": "c",
+                                        "bcl:text": "meets other prescribed criteria;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e204",
+                                "bcl:text": {
+                                    "in:term": "director",
+                                    "#text": "means a member of the board appointed under section 5;"
+                                }
+                            },
+                            {
+                                "@id": "d2e213",
+                                "bcl:text": {
+                                    "in:term": "fiscal year",
+                                    "#text": "means a year beginning on April 1;"
+                                }
+                            },
+                            {
+                                "@id": "d2e212",
+                                "bcl:text": {
+                                    "in:term": "Indigenous peoples",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/19044",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Declaration on the Rights of Indigenous Peoples Act"
+                                    },
+                                    "#text": "has the same meaning as in the ;"
+                                }
+                            },
+                            {
+                                "@id": "d2e222",
+                                "bcl:text": {
+                                    "in:term": "interim authority",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02058_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Community Services Interim Authorities Act"
+                                    },
+                                    "#text": "means an authority established under section 3 (1) of the ;"
+                                }
+                            },
+                            {
+                                "@id": "d2e235",
+                                "bcl:text": {
+                                    "in:term": "minister",
+                                    "#text": "means the minister responsible for the administration of this Act;"
+                                }
+                            },
+                            {
+                                "@id": "d2e244",
+                                "bcl:text": {
+                                    "in:term": "service provider",
+                                    "#text": "means a person or an organization delivering community living support under an agreement with the authority or a person authorized by the authority;"
+                                }
+                            },
+                            {
+                                "@id": "d2e253",
+                                "bcl:text": {
+                                    "in:term": "unearned revenue",
+                                    "#text": "means money that was received by the authority from the government for a purpose and that has not been applied to that purpose within the time or in the way required."
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d2e263",
+                    "bcl:num": "2",
+                    "bcl:text": "Community Living British Columbia",
+                    "bcl:division": [
+                        {
+                            "@id": "d2e272",
+                            "bcl:num": "1",
+                            "bcl:text": "Establishment of Authority and Composition of Board",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e284",
+                                    "bcl:marginalnote": "Authority established",
+                                    "bcl:num": "2",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e292",
+                                            "bcl:num": "1",
+                                            "bcl:text": "There is established an authority to be known as Community Living British Columbia to exercise the powers and perform the functions and duties given to it under this Act."
+                                        },
+                                        {
+                                            "@id": "d2e301",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The authority is a corporation consisting of the board."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e312",
+                                    "bcl:marginalnote": "Agent of government",
+                                    "bcl:num": "3",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e320",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The authority is for all purposes an agent of the government."
+                                        },
+                                        {
+                                            "@id": "d2e329",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The authority, as an agent of the government, is not liable for taxation except as the government is liable for taxation."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e339",
+                                    "bcl:marginalnote": "Capital of authority",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The capital of the authority is one share with a par value of $10, which share must be issued to, and registered in the name of, the Minister of Finance and must be held by that minister on behalf of the government."
+                                },
+                                {
+                                    "@id": "d2e351",
+                                    "bcl:marginalnote": "Composition of board",
+                                    "bcl:num": "5",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e359",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The board consists of up to 11 directors appointed by the minister."
+                                        },
+                                        {
+                                            "@id": "d2e368",
+                                            "bcl:num": "2) and (3",
+                                            "bcl:text": "[Repealed 2009-34-15.]"
+                                        },
+                                        {
+                                            "@id": "d1e337",
+                                            "bcl:num": "3.1",
+                                            "bcl:text": "Subject to section 6 (2) (c), the board must include the following as directors:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e343",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "at least 2 individuals who are",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e349",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "eligible to receive support and services referred to in paragraph (a) or (d) of the definition of \"community living support\", and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e356",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "advocates for themselves and others with respect to that support and services;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e364",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "at least one individual who is a family member of an individual who is eligible to receive support and services referred to in paragraph (a) or (d) of the definition of \"community living support\";"
+                                                },
+                                                {
+                                                    "@id": "d1e371",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "at least one individual who is an Indigenous person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e368a",
+                                            "bcl:num": "4",
+                                            "bcl:text": "[Repealed 2009-34-15.]"
+                                        },
+                                        {
+                                            "@id": "d2e377",
+                                            "bcl:num": "5",
+                                            "bcl:text": "The chair of the board is a director who",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e387",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "is designated as chair by the minister, or"
+                                                },
+                                                {
+                                                    "@id": "d2e396",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "is appointed by the board under the bylaws of the authority if a chair is not designated under paragraph (a)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e405",
+                                            "bcl:num": "6",
+                                            "bcl:text": "The board must establish an advisory committee to the board composed of individuals referred to in the definition of \"community living support\"."
+                                        },
+                                        {
+                                            "@id": "d2e416",
+                                            "bcl:num": "7",
+                                            "bcl:text": "The board must continue to have an Indigenous advisory committee to advise the board, which committee is composed of individuals who are one or more of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e376",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "an Indigenous person who is eligible to receive support and services referred to in paragraph\u00a0(a) or (d) of the definition of \"community living support\";"
+                                                },
+                                                {
+                                                    "@id": "d1e383",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a family member of an Indigenous person who is eligible to receive support and services referred to in paragraph\u00a0(a) or (d) of the definition of \"community living support\";"
+                                                },
+                                                {
+                                                    "@id": "d1e390",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "a representative of an organization that supports Indigenous peoples."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e415",
+                                    "bcl:marginalnote": "Term of appointment of directors",
+                                    "bcl:num": "6",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e423",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An appointment under section 5 (1) may be",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e432",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "made for a term not exceeding 3 years, and"
+                                                },
+                                                {
+                                                    "@id": "d2e441",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "renewed for an additional term not exceeding 3 years."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e451",
+                                            "bcl:num": "2",
+                                            "bcl:text": "If a person ceases for any reason to be a director of the board before the end of the term for which the person was appointed,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e460",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the minister may appoint a replacement director for the remainder of the term of that person,"
+                                                },
+                                                {
+                                                    "@id": "d2e469",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "despite section 5 (1), the chair may, after consultation with the minister, appoint an individual as a director to hold office until the earlier of the following:",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e478",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "an appointment under section 5 (1) or subsection (2) (a) of this section;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e487",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "a period of 6 months has expired, and"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e496",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the board continues to operate until a replacement director is appointed under paragraph (a) or (b)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e506",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The chair of the board may authorize a director to continue to hold office after the expiry of the director's term of appointment until the earliest of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e515",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the director is reappointed;"
+                                                },
+                                                {
+                                                    "@id": "d2e524",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "an appointment under subsection (1);"
+                                                },
+                                                {
+                                                    "@id": "d2e533",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "a period of 6 months has expired."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e543",
+                                    "bcl:marginalnote": "Remuneration",
+                                    "bcl:num": "7",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e551",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The minister may set",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e560",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "remuneration for directors in accordance with the general directives of the Treasury Board, including different rates of remuneration for different directors, and"
+                                                },
+                                                {
+                                                    "@id": "d2e569",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "other conditions of appointment of a director."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e579",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The authority must pay directors",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e588",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the remuneration set under subsection (1) (a), and"
+                                                },
+                                                {
+                                                    "@id": "d2e597",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "reimbursement, in accordance with the general directives of the Treasury Board, for reasonable travelling and out of pocket expenses necessarily incurred in carrying out their duties."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e607",
+                            "bcl:num": "2",
+                            "bcl:text": "Powers, Functions and Duties of Board",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e620",
+                                    "bcl:marginalnote": "Management of authority",
+                                    "bcl:num": "8",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e628",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to this Act and the regulations, the board must manage the affairs of the authority and may",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e637",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "exercise the powers and perform the functions and duties of the authority under this Act on behalf of the authority, and"
+                                                },
+                                                {
+                                                    "@id": "d2e646",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "delegate to another person the exercise of any power or performance of any function or duty conferred or imposed on the board other than the power to delegate under this paragraph."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e656",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Subject to this Act and the regulations, the board may pass resolutions and make bylaws it considers necessary or advisable for the management and conduct of its affairs, the exercise of its powers and the performance of its functions and duties."
+                                        },
+                                        {
+                                            "@id": "d2e665",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Subject to the regulations, the board must establish a conflict of interest policy for directors, the chief executive officer and other officers and employees, for the approval of the minister."
+                                        },
+                                        {
+                                            "@id": "d2e674",
+                                            "bcl:num": "4",
+                                            "bcl:text": "The board may not acquire or dispose of real property, except by resolution of the board and with the prior approval of the minister under section 10 (2)."
+                                        },
+                                        {
+                                            "@id": "d2e683",
+                                            "bcl:num": "5",
+                                            "bcl:text": "Before submitting its service plan, budget plan or capital plan to the minister for approval, the board must approve the plan by resolution."
+                                        },
+                                        {
+                                            "@id": "d2e692",
+                                            "bcl:num": "6",
+                                            "bcl:text": "A majority of the directors holding office constitutes a quorum at a meeting of the board."
+                                        },
+                                        {
+                                            "@id": "d2e701",
+                                            "bcl:num": "7",
+                                            "bcl:text": "If more than half of the directors in the office abstain from voting at a meeting of the board because of a conflict of interest, whether actual or potential, the remaining directors constitute a quorum for that vote."
+                                        },
+                                        {
+                                            "@id": "d2e711",
+                                            "bcl:num": "8",
+                                            "bcl:text": "The affirmative votes of a quorum at a meeting of the board is sufficient to pass a resolution or bylaw."
+                                        },
+                                        {
+                                            "@id": "d2e720",
+                                            "bcl:num": "9",
+                                            "bcl:text": "A resolution in writing, signed by all of the directors, is as valid as if it had been passed at a meeting of the board properly called and constituted."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e730",
+                                    "bcl:marginalnote": "Meetings open to public",
+                                    "bcl:num": "9",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e738",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to subsections (2) and (3), a meeting of the board must be open to the public."
+                                        },
+                                        {
+                                            "@id": "d2e747",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A part of a board meeting may be closed to the public if the subject matter being considered relates to one or more of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e756",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "personal information about an identifiable individual who holds, or is being considered for, a position as a director, officer, employee, agent or contractor of the authority;"
+                                                },
+                                                {
+                                                    "@id": "d2e766",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "personal information about an identifiable individual who has offered to provide a donation to the authority on condition of anonymity;"
+                                                },
+                                                {
+                                                    "@id": "d2e775",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "labour relations or employee negotiations;"
+                                                },
+                                                {
+                                                    "@id": "d2e784",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "the security of property of the authority;"
+                                                },
+                                                {
+                                                    "@id": "d2e793",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "the acquisition or disposition of land or improvements, if the board considers that disclosure could reasonably be expected to harm the interests of the authority;"
+                                                },
+                                                {
+                                                    "@id": "d2e802",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "litigation or potential litigation affecting the authority;"
+                                                },
+                                                {
+                                                    "@id": "d2e811",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "communications that are subject to solicitor-client privilege;"
+                                                },
+                                                {
+                                                    "@id": "d2e821",
+                                                    "bcl:num": "h",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96165_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                        },
+                                                        "#text": "information that would be prohibited from disclosure under section 21 of the  if the information were in a record;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e833",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "information that may be withheld from disclosure under another enactment;"
+                                                },
+                                                {
+                                                    "@id": "d2e842",
+                                                    "bcl:num": "j",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96340_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Ombudsperson Act"
+                                                        },
+                                                        "#text": "discussions respecting an investigation under the  if the authority has been notified under section 14 of that Act."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e854",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A part of a board meeting must be closed to the public if the subject matter being considered relates to information that must be withheld from disclosure under another enactment."
+                                        },
+                                        {
+                                            "@id": "d2e863",
+                                            "bcl:num": "4",
+                                            "bcl:text": "Before a meeting or part of a board meeting is closed to the public, the board must state, by resolution,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e872",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the fact that the meeting or part of the meeting is to be closed, and"
+                                                },
+                                                {
+                                                    "@id": "d2e882",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the basis under subsection (2) or (3) on which the meeting or part of the meeting is to be closed."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e892",
+                            "bcl:num": "3",
+                            "bcl:text": "Powers, Functions and Duties of Authority",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e904",
+                                    "bcl:marginalnote": "Powers of authority",
+                                    "bcl:num": "10",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e912",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to this Act and the regulations, the authority has the powers and capacity of a natural person for the purposes of exercising its powers and performing its functions and duties under this Act."
+                                        },
+                                        {
+                                            "@id": "d2e921",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Except with the prior approval of the minister, the authority may not",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e930",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "acquire assets and incur liabilities other than in its own name,"
+                                                },
+                                                {
+                                                    "@id": "d2e940",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "incur a deficit of any kind,"
+                                                },
+                                                {
+                                                    "@id": "d2e949",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "borrow money,"
+                                                },
+                                                {
+                                                    "@id": "d2e958",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "spend money for a capital project other than in accordance with a capital plan, or"
+                                                },
+                                                {
+                                                    "@id": "d2e967",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "acquire or dispose of real property."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e977",
+                                    "bcl:marginalnote": "Duties of authority",
+                                    "bcl:num": "11",
+                                    "bcl:text": "The authority must do all of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e988",
+                                            "bcl:num": "a",
+                                            "bcl:text": "provide for the delivery in British Columbia of community living support identified by the minister and of administrative services",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e997",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "using available resources through its own employees, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1007",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "by entering into agreements with the government or other persons to deliver or provide for the delivery of that support;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1016",
+                                            "bcl:num": "b",
+                                            "bcl:text": "comply with Provincial standards prescribed by the minister under section 18 (1) (a);"
+                                        },
+                                        {
+                                            "@id": "d2e1025",
+                                            "bcl:num": "c",
+                                            "bcl:text": "manage the delivery of community living support and administrative services, including, without limitation, developing policies, setting priorities and allocating resources, in accordance with its service plan, budget plan and capital plan;"
+                                        },
+                                        {
+                                            "@id": "d2e1034",
+                                            "bcl:num": "d",
+                                            "bcl:text": "comply with the minister's directions in carrying out the minister's power under section 18 (1) (b) to monitor and assess the authority, and comply with processes to assess performance, set by the minister under section 18 (1) (c);"
+                                        },
+                                        {
+                                            "@id": "d2e1043",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prepare, and submit to the minister after the end of its fiscal year, an annual report in accordance with the regulations;"
+                                        },
+                                        {
+                                            "@id": "d2e1052",
+                                            "bcl:num": "f",
+                                            "bcl:text": "perform other prescribed functions and duties."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1062",
+                                    "bcl:marginalnote": "Service plan and other plans",
+                                    "bcl:num": "12",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1070",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The authority must submit to the minister for approval, by a date specified by the minister,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1079",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a proposed service plan respecting the provision of community living support and administrative services for the period specified by the minister, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1088",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a proposed budget plan and capital plan related to the provision of community living support and administrative services by the authority under the service plan referred to in paragraph (a)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1098",
+                                            "bcl:num": "2",
+                                            "bcl:text": "In developing a proposed plan referred to in subsection (1) in relation to the provision of community living support, the authority must endeavour to",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1107",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "offer a range of funding and planning options that promote choice, flexibility and self-determination, for example, individualized funding, independent planning support and the involvement of community resources,"
+                                                },
+                                                {
+                                                    "@id": "d2e1116",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "promote choice and innovation in the manner in which services are delivered,"
+                                                },
+                                                {
+                                                    "@id": "d2e1125",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "encourage shared responsibility among families, service providers and community resources,"
+                                                },
+                                                {
+                                                    "@id": "d2e1134",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "utilize and further develop the capacity of individuals, families and community resources,"
+                                                },
+                                                {
+                                                    "@id": "d2e1143",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "assist adults with developmental disabilities to achieve maximum independence and live full lives in their communities,"
+                                                },
+                                                {
+                                                    "@id": "d2e1153",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "promote equitable access to community living support, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1162",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "coordinate the provision of community living support with services provided by the government and community resources."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1171",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The minister may require that the authority modify a proposed plan referred to in subsection (1) in order to obtain the minister's approval under that subsection."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1182",
+                                    "bcl:marginalnote": "Duty to consult",
+                                    "bcl:num": "13",
+                                    "bcl:text": "Subject to the regulations, the authority must, wherever reasonable and appropriate, consult and collaborate with the minister, other ministries and any other person specified by the minister respecting the development of a service plan and other matters of mutual interest in relation to the provision of community living support."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1194",
+                            "bcl:num": "4",
+                            "bcl:text": "Officers and Employees",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1206",
+                                    "bcl:marginalnote": "Chief executive officer",
+                                    "bcl:num": "14",
+                                    "bcl:text": "The board must appoint a person as the chief executive officer of the authority and determine the remuneration and other terms and conditions of employment for the chief executive officer."
+                                },
+                                {
+                                    "@id": "d2e1218",
+                                    "bcl:marginalnote": "Officers and employees",
+                                    "bcl:num": "15",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1226",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The chief executive officer of the authority may employ or retain the other officers and employees necessary to carry on the business and operations of the authority and the board, and may define their duties and determine their remuneration."
+                                        },
+                                        {
+                                            "@id": "d2e1235",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The chief executive officer and the other officers and employees must perform their functions and duties in accordance with any policies and guidelines established by the board."
+                                        },
+                                        {
+                                            "@id": "d2e1244",
+                                            "bcl:num": "3",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/96385_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Public Service Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/96388_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Public Service Labour Relations Act"
+                                                    }
+                                                ],
+                                                "#text": "The  and the  do not apply to the authority or to an agency that contracts with the authority."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1260",
+                    "bcl:num": "3",
+                    "bcl:text": "Financial Requirements",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1269",
+                            "bcl:marginalnote": "Financial requirements",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1277",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If required by the minister or the Minister of Finance, the authority must submit financial reports and statements in the form with the information and at the time that either minister requests."
+                                },
+                                {
+                                    "@id": "d2e1286",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Minister of Finance may direct the Comptroller General to examine, and report to Treasury Board on, any or all of the financial and accounting operations of the authority."
+                                },
+                                {
+                                    "@id": "d2e1295",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/03002_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Auditor General Act"
+                                        },
+                                        "#text": "Unless the Auditor General is appointed in accordance with the  as the auditor of the authority, the authority must appoint an auditor to audit the accounts of the authority at least once each year."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1308",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The authority must prepare financial statements in accordance with generally accepted accounting principles used in Canada."
+                                },
+                                {
+                                    "@id": "d2e1317",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the authority has unearned revenue but has not fully implemented that portion of its service plan related to the unearned revenue, the minister, at the end of the fiscal year, may direct the authority to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1326",
+                                            "bcl:num": "a",
+                                            "bcl:text": "spend some or all of the unearned revenue to fully implement its service plan, or"
+                                        },
+                                        {
+                                            "@id": "d2e1335",
+                                            "bcl:num": "b",
+                                            "bcl:text": "repay some or all of the unearned revenue to the government."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1344",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The authority must apply any surplus to carrying out the purposes of the authority."
+                                },
+                                {
+                                    "@id": "d2e1353",
+                                    "bcl:num": "7",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96140_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Financial Information Act"
+                                        },
+                                        "#text": "The  applies to the authority."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1367",
+                            "bcl:marginalnote": "Grants instead of taxes",
+                            "bcl:num": "17",
+                            "bcl:text": "Subject to the approval of the Lieutenant Governor in Council, the authority may in any year pay to a municipality in which it has property a grant not greater than the amount that would be payable as taxes on the property in that year if the property were not exempt from taxation by the municipality."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1379",
+                    "bcl:num": "4",
+                    "bcl:text": "Minister's Powers and Duties",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1388",
+                            "bcl:marginalnote": "Minister's powers",
+                            "bcl:num": "18",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1396",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1405",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribe Provincial standards for the provision of community living support and administrative services in British Columbia,"
+                                        },
+                                        {
+                                            "@id": "d2e1414",
+                                            "bcl:num": "b",
+                                            "bcl:text": "monitor the authority and assess the ability of the authority, and of the board, to exercise its powers and perform its functions and duties under this Act,"
+                                        },
+                                        {
+                                            "@id": "d2e1424",
+                                            "bcl:num": "c",
+                                            "bcl:text": "establish processes to assess performance respecting the powers, functions and duties of the authority, and of the board, under this Act, and"
+                                        },
+                                        {
+                                            "@id": "d2e1433",
+                                            "bcl:num": "d",
+                                            "bcl:text": "provide information and assistance to the authority."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1442",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister must consult with the interim authority or the authority before making a regulation under subsection (1) (a)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1452",
+                            "bcl:marginalnote": "Minister's representative",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1460",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may appoint one or more persons as the minister's representative for the purposes of ensuring compliance with this Act."
+                                },
+                                {
+                                    "@id": "d2e1469",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A minister's representative, at any reasonable time and on presentation of identification, may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1478",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enter and inspect any office or facility owned or operated by the authority, and"
+                                        },
+                                        {
+                                            "@id": "d2e1488",
+                                            "bcl:num": "b",
+                                            "bcl:text": "require the authority to produce a record or other thing that is related to its activities and is in its custody or under its control."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1497",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The authority and its officers and employees must give the minister's representative",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1506",
+                                            "bcl:num": "a",
+                                            "bcl:text": "all reasonable assistance to enable the representative to exercise the representative's powers and perform the representative's functions and duties, and"
+                                        },
+                                        {
+                                            "@id": "d2e1515",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any information that the representative may reasonably require to exercise the representative's powers and perform the representative's functions and duties."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1524",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The minister's representative must report to the minister anything indicating",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1533",
+                                            "bcl:num": "a",
+                                            "bcl:text": "that the authority has contravened or is contravening this Act,"
+                                        },
+                                        {
+                                            "@id": "d2e1543",
+                                            "bcl:num": "b",
+                                            "bcl:text": "that the authority is, or is likely to be, in financial difficulty, or"
+                                        },
+                                        {
+                                            "@id": "d2e1552",
+                                            "bcl:num": "c",
+                                            "bcl:text": "uncertainty as to whether the authority is, or is likely to be, able to exercise its powers and perform its functions and duties under this Act."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1562",
+                            "bcl:marginalnote": "Appointment of special advisor",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1570",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1579",
+                                            "bcl:num": "a",
+                                            "bcl:text": "appoint a special advisor for the authority to assist the board with anything related to the provision of community living support or administrative services, including financial matters, and"
+                                        },
+                                        {
+                                            "@id": "d2e1588",
+                                            "bcl:num": "b",
+                                            "bcl:text": "specify the duties and remuneration of the special advisor."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1598",
+                                    "bcl:num": "2",
+                                    "bcl:text": "With the approval of the minister, the special advisor may engage specialists and consultants."
+                                },
+                                {
+                                    "@id": "d2e1607",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The special advisor and any specialists and consultants must be paid out of the funds of the authority."
+                                },
+                                {
+                                    "@id": "d2e1616",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The special advisor may attend and participate in any meeting of the board or other meeting involving the authority, the chief executive officer or other officers or employees in exercising the special advisor's powers or performing the special advisor's functions or duties."
+                                },
+                                {
+                                    "@id": "d2e1625",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Section 19 (2) and (3) apply for the purposes of this section."
+                                },
+                                {
+                                    "@id": "d2e1634",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The special advisor must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1643",
+                                            "bcl:num": "a",
+                                            "bcl:text": "submit a report to the minister in respect of anything resulting from performing the special advisor's functions and duties under this section, and"
+                                        },
+                                        {
+                                            "@id": "d2e1653",
+                                            "bcl:num": "b",
+                                            "bcl:text": "indicate in the report the extent to which the board agrees with the report."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1662",
+                                    "bcl:num": "7",
+                                    "bcl:text": "The minister may direct the board respecting anything contained in the report of the special advisor."
+                                },
+                                {
+                                    "@id": "d2e1671",
+                                    "bcl:num": "8",
+                                    "bcl:text": "The board must comply with any direction of the minister under subsection (7)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1681",
+                    "bcl:num": "5",
+                    "bcl:text": "General Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1691",
+                            "bcl:marginalnote": "Liability",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1699",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsections (2) and (3), no action for damages lies or may be brought against a director or the chief executive officer or any other officer or employee of the authority because of anything done or omitted to be done",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1708",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the exercise or intended exercise of any power under this Act, or"
+                                        },
+                                        {
+                                            "@id": "d2e1717",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the performance or intended performance of any function or duty under this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1727",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subsection (1) does not apply to a person referred to in that subsection in relation to anything done or omitted by that person in bad faith."
+                                },
+                                {
+                                    "@id": "d2e1736",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subsection (1) does not absolve the authority from vicarious liability arising out of an act or omission by a person referred to in that subsection for which the authority would be vicariously liable if this section were not in force."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1746",
+                            "bcl:marginalnote": "Appointment of public administrator",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1754",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1763",
+                                            "bcl:num": "a",
+                                            "bcl:text": "appoint a public administrator to exercise the powers and perform the functions and duties of the board under this Act if the Lieutenant Governor in Council considers this to be necessary in the public interest, and"
+                                        },
+                                        {
+                                            "@id": "d2e1772",
+                                            "bcl:num": "b",
+                                            "bcl:text": "specify terms and conditions of the appointment."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1782",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Despite any other provision of this Act, on the appointment of a public administrator, the directors cease to hold office."
+                                },
+                                {
+                                    "@id": "d2e1791",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subject to subsection (1), the public administrator has the powers, functions and duties of the authority and of the board."
+                                },
+                                {
+                                    "@id": "d2e1800",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The public administrator must be paid out of the funds of the authority."
+                                },
+                                {
+                                    "@id": "d2e1809",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The Lieutenant Governor in Council may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1818",
+                                            "bcl:num": "a",
+                                            "bcl:text": "remove the public administrator of the authority, and"
+                                        },
+                                        {
+                                            "@id": "d2e1827",
+                                            "bcl:num": "b",
+                                            "bcl:text": "order that a board be appointed in accordance with section 5."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1837",
+                            "bcl:marginalnote": "Transfer of records",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1845",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/15027",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Information Management Act"
+                                        },
+                                        "#text": "Despite the  but subject to the regulations,"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1857",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the minister, in writing, may transfer records to the authority, and"
+                                        },
+                                        {
+                                            "@id": "d2e1866",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the authority, in writing, may transfer records to the minister."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1876",
+                                    "bcl:num": "2",
+                                    "bcl:text": "On the effective date of a transfer under subsection (1), the records cease to be the records of the transferor and become the records of the transferee."
+                                },
+                                {
+                                    "@id": "d2e1885",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Records may be identified by name, class or description in a transfer under subsection (1)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1895",
+                            "bcl:marginalnote": "Transfer of assets and liabilities",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1903",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council, by regulation, may authorize the transfer of assets and liabilities of the government to the authority, subject to terms and conditions set out in the regulation."
+                                },
+                                {
+                                    "@id": "d2e1912",
+                                    "bcl:num": "2",
+                                    "bcl:text": "On the date that a transfer authorized under subsection (1) takes effect,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1921",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the asset or liability transferred ceases to be the asset or liability of the government and becomes the asset or liability of the authority, and"
+                                        },
+                                        {
+                                            "@id": "d2e1931",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the government is released from any liability so transferred."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1940",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation made under subsection (1) may identify assets and liabilities by name, class or description."
+                                },
+                                {
+                                    "@id": "d2e1949",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The Minister of Finance may make payments out of the consolidated revenue fund for the purpose of subsection (1)."
+                                },
+                                {
+                                    "@id": "d2e1958",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Any payments made by the Minister of Finance under subsection (4) must be attributed to, and must not exceed the amount available in, the voted appropriation of the minister responsible for the assets transferred."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1968",
+                            "bcl:marginalnote": "Transfer of facilities",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1976",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "Provincial body",
+                                        "#text": "In this section,  means a facility or service related to the provision of community living support that is owned by the government."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1988",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Lieutenant Governor in Council, by regulation, may authorize the transfer of a Provincial body, including land and other property of the government or Provincial body used or occupied by the Provincial body and specified in the order, to the authority and may specify in the order the conditions for the transfer of the land and other property to the authority."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1998",
+                            "bcl:marginalnote": "Transfer of agreements",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2006",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The government, in writing, may assign to the authority any agreement entered into by the government that relates to the provision of community living support or administrative services."
+                                },
+                                {
+                                    "@id": "d2e2015",
+                                    "bcl:num": "2",
+                                    "bcl:text": "On the effective date of an assignment under subsection (1), all rights and obligations of the government under the agreement cease to be the rights and obligations of the government and become the rights and obligations of the authority."
+                                },
+                                {
+                                    "@id": "d2e2024",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A reference to the government in an agreement assigned under subsection (1) is deemed to be a reference to the authority."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2035",
+                            "bcl:marginalnote": "Application of other Acts",
+                            "bcl:num": "27",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2043",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02057_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Business Corporations Act"
+                                        },
+                                        "#text": "Subject to subsection (2), the  does not apply to the authority."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2055",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/02057_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Business Corporations Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/15018_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Societies Act"
+                                            }
+                                        ],
+                                        "#text": "The Lieutenant Governor in Council, by regulation, may declare that provisions of the  or the  apply to the authority."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2070",
+                                    "bcl:num": "3",
+                                    "bcl:text": "[Repealed 2015-27-31.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2083",
+                            "bcl:marginalnote": {
+                                "in:doc": "Offence Act"
+                            },
+                            "bcl:num": "28",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act or the regulations made under this Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e2101",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "29",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2109",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2121",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2130",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing additional persons for the purposes of paragraph (d) of the definition of \"community living support\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2140",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing additional criteria for the purpose of paragraph (c) of the definition of \"developmental disability\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2149",
+                                            "bcl:num": "c",
+                                            "bcl:text": "prescribing additional duties of the authority under section 11;"
+                                        },
+                                        {
+                                            "@id": "d2e2158",
+                                            "bcl:num": "d",
+                                            "bcl:text": "respecting a policy under section 8 (3) or any matter relating to conflicts of interest, whether actual or potential, by a director, the chief executive officer, or another officer or employee;"
+                                        },
+                                        {
+                                            "@id": "d2e2167",
+                                            "bcl:num": "e",
+                                            "bcl:text": "establishing the authority for, or requirements or standards relating to the collection, use, disclosure, custody, control or ownership of, or access to, information by the minister, the authority, service providers or persons who are in receipt of funding under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2176",
+                                            "bcl:num": "f",
+                                            "bcl:text": "respecting a common client information system among the minister, the authority and service providers, or any of them;"
+                                        },
+                                        {
+                                            "@id": "d2e2185",
+                                            "bcl:num": "g",
+                                            "bcl:text": "defining, for the purposes of this Act and the regulations, words or expressions used but not defined in this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2195",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The minister may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2204",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing the form and content of and process for an annual report under section 11 (e) or a proposed plan under section 12 (1);"
+                                        },
+                                        {
+                                            "@id": "d2e2213",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for the purposes of section 13, respecting consultation and collaboration and the making of agreements;"
+                                        },
+                                        {
+                                            "@id": "d2e2222",
+                                            "bcl:num": "c",
+                                            "bcl:text": "establishing a process to determine whether the authority is meeting and continues to meet the Provincial standards set by the minister under section 18 (1) (a);"
+                                        },
+                                        {
+                                            "@id": "d2e2231",
+                                            "bcl:num": "d",
+                                            "bcl:text": "respecting the transfer of records to or from the authority under section 23."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2240",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A regulation made by the Lieutenant Governor in Council or the minister under this Act may provide differently for",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2250",
+                                            "bcl:num": "a",
+                                            "bcl:text": "different persons or classes of persons, and"
+                                        },
+                                        {
+                                            "@id": "d2e2259",
+                                            "bcl:num": "b",
+                                            "bcl:text": "different regions of British Columbia."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2269",
+                    "bcl:num": "6",
+                    "bcl:text": "Repealed",
+                    "bcl:section": {
+                        "@id": "d2e2278",
+                        "bcl:marginalnote": "Repealed",
+                        "bcl:num": "30-32",
+                        "bcl:text": "[Repealed 2004-60-32.]"
+                    }
+                },
+                {
+                    "@id": "d2e2290",
+                    "bcl:num": "7",
+                    "bcl:text": "Consequential and Related Amendments",
+                    "bcl:conseqhead": {
+                        "bcl:text": "Consequential and Related Amendments",
+                        "bcl:num": "33-110",
+                        "bcl:conseqnote": {
+                            "bcl:editorialnote": {
+                                "in:em": "[Note: See Table of Legislative Changes for the status of sections 33 to 110.]"
+                            }
+                        },
+                        "oasis:table": {
+                            "@style": "1",
+                            "@id": "d1e2097",
+                            "oasis:tgroup": {
+                                "@cols": "3",
+                                "oasis:colspec": [
+                                    {
+                                        "@colname": "c1",
+                                        "@colnum": "1",
+                                        "@align": "center",
+                                        "@border": "0"
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@colnum": "2",
+                                        "@align": "center",
+                                        "@border": "0"
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "@colnum": "3",
+                                        "@align": "center",
+                                        "@border": "0"
+                                    }
+                                ],
+                                "oasis:thead": {
+                                    "oasis:trow": {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "oasis:line": {
+                                                    "in:strong": "Section(s)"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "oasis:line": {
+                                                    "in:strong": "Affected Act"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "oasis:tbody": {
+                                    "oasis:trow": [
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "33\u201359"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc96005",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Adoption Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "60\u201394"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc96046",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Child, Family and Community Service Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "95"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc02058",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Community Services Interim Authorities Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "96\u2013102"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc03027",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Community Services Labour Relations Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "103"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc96124",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Evidence Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "104"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc96165",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "105\u2013109"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc96209",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Human Resource Facility Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oasis:entry": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@align": "right",
+                                                    "oasis:line": {
+                                                        "in:em": "110"
+                                                    }
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@width": "35",
+                                                    "oasis:line": null
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "oasis:line": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/E2tlc02050",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Office for Children and Youth Act"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "bcl:section": {
+                "@id": "d2e2481",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "111",
+                "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+            }
+        }
+    }
+}

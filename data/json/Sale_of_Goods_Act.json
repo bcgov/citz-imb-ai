@@ -1,0 +1,2285 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96410_01",
+        "act:title": "Sale of Goods Act",
+        "act:chapter": "410",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1527898742/96410/1954487982",
+            "act:tlc": "E3tlc96410"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e15",
+                    "bcl:num": "1",
+                    "bcl:text": "General Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e24",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e35",
+                                    "bcl:text": {
+                                        "in:term": "action",
+                                        "#text": "includes counterclaim and set off;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e44",
+                                    "bcl:text": {
+                                        "in:term": "buyer",
+                                        "#text": "means a person who buys or agrees to buy goods;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e54",
+                                    "bcl:text": {
+                                        "in:term": "contract of lease",
+                                        "#text": "has the same meaning as \"lease\";"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e63",
+                                    "bcl:text": {
+                                        "in:term": "contract of sale",
+                                        "#text": "includes an agreement to sell as well as a sale;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e72",
+                                    "bcl:text": {
+                                        "in:term": "delivery",
+                                        "#text": "means voluntary transfer of possession from one person to another;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e81",
+                                    "bcl:text": {
+                                        "in:term": "document of title",
+                                        "#text": "includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e90",
+                                            "bcl:num": "a",
+                                            "bcl:text": "any bill of lading, dock warrant, warehouse keeper's certificate and warrant or order for the delivery of goods, and"
+                                        },
+                                        {
+                                            "@id": "d2e99",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any other document used in the ordinary course of business as proof of the possession or control of goods, or authorizing or purporting to authorize, either by endorsement or by delivery, the possessor of the document to transfer or receive goods represented by it;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e109",
+                                    "bcl:text": {
+                                        "in:term": "fault",
+                                        "#text": "means wrongful act or default;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e118",
+                                    "bcl:text": {
+                                        "in:term": "future goods",
+                                        "#text": "means goods to be manufactured or acquired by the seller after the making of the contract of sale;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e127",
+                                    "bcl:text": {
+                                        "in:term": "goods",
+                                        "#text": "includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e136",
+                                            "bcl:num": "a",
+                                            "bcl:text": "all chattels personal, other than things in action and money, and"
+                                        },
+                                        {
+                                            "@id": "d2e145",
+                                            "bcl:num": "b",
+                                            "bcl:text": "growing crops, whether or not industrial, and things attached to or forming part of the land that are agreed to be severed before sale or under the contract of sale;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e154",
+                                    "bcl:text": {
+                                        "in:term": "lease",
+                                        "#text": "means a lease or an agreement to lease where the lessee is acquiring the goods that are being leased primarily for personal, family or household purposes;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e164",
+                                    "bcl:text": {
+                                        "in:term": "lessee",
+                                        "#text": "means a person who leases or agrees to lease goods from a lessor primarily for personal, family or household purposes;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e173",
+                                    "bcl:text": {
+                                        "in:term": "lessor",
+                                        "#text": "means a person who leases or agrees to lease goods to a lessee;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e182",
+                                    "bcl:text": {
+                                        "in:term": "mercantile agent",
+                                        "#text": "means a mercantile agent who has, in the customary course of the agent's business as an agent, authority to"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e191",
+                                            "bcl:num": "a",
+                                            "bcl:text": "sell goods, or consign goods for the purpose of sale, or"
+                                        },
+                                        {
+                                            "@id": "d2e200",
+                                            "bcl:num": "b",
+                                            "bcl:text": "buy goods or raise money on the security of goods;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e209",
+                                    "bcl:text": {
+                                        "in:term": "pledge",
+                                        "#text": "includes any contract pledging or giving a lien or security on goods, whether in consideration of an original advance or of any further or continuing advance or of any pecuniary liability;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e219",
+                                    "bcl:text": {
+                                        "in:term": "property",
+                                        "#text": "means the general property in goods, and not merely a special property;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e228",
+                                    "bcl:text": {
+                                        "in:term": "quality of goods",
+                                        "#text": "includes their state or condition;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e237",
+                                    "bcl:text": {
+                                        "in:term": "sale",
+                                        "#text": "includes a bargain and sale as well as a sale and delivery;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e246",
+                                    "bcl:text": {
+                                        "in:term": "seller",
+                                        "#text": "means a person who sells or agrees to sell goods;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e255",
+                                    "bcl:text": {
+                                        "in:term": "specific goods",
+                                        "#text": "means goods identified and agreed on at the time a contract of sale is made;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e264",
+                                    "bcl:text": {
+                                        "in:term": "warranty",
+                                        "#text": "means an agreement with reference to goods that are the subject of a contract of sale, but collateral to the main purpose of that contract, the breach of which gives rise to a claim for damages, but not to a right to reject the goods and treat the contract as repudiated."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e274",
+                            "bcl:marginalnote": "In good faith",
+                            "bcl:num": "2",
+                            "bcl:text": "A thing is done in good faith within the meaning of this Act when it is in fact done honestly, whether done negligently or not."
+                        },
+                        {
+                            "@id": "d2e286",
+                            "bcl:marginalnote": "Insolvent person",
+                            "bcl:num": "3",
+                            "bcl:text": "A person is insolvent within the meaning of this Act who",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e297",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has ceased to pay the person's debts in the ordinary course of business, or"
+                                },
+                                {
+                                    "@id": "d2e306",
+                                    "bcl:num": "b",
+                                    "bcl:text": "cannot pay the person's debts as they become due."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e316",
+                            "bcl:marginalnote": "Deliverable state",
+                            "bcl:num": "4",
+                            "bcl:text": "Goods are in a deliverable state within the meaning of this Act when they are in such a state that the buyer would under the contract be bound to take delivery of them."
+                        },
+                        {
+                            "@id": "d2e329",
+                            "bcl:marginalnote": "Possession",
+                            "bcl:num": "5",
+                            "bcl:text": "A person is deemed to be in possession of goods, or of the documents of title to goods, if the goods or documents are in the person's actual custody or are held by another who is subject to the person's control or for the person or on the person's behalf."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e341",
+                    "bcl:num": "2",
+                    "bcl:text": "Formation of the Contract",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e350",
+                            "bcl:marginalnote": "Sale and agreement to sell",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e358",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A contract of sale of goods is a contract by which the seller transfers or agrees to transfer the property in goods to the buyer for a money consideration, called the price."
+                                },
+                                {
+                                    "@id": "d2e367",
+                                    "bcl:num": "2",
+                                    "bcl:text": "There may be a contract of sale between one part owner and another."
+                                },
+                                {
+                                    "@id": "d2e376",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A contract of sale may be absolute or conditional."
+                                },
+                                {
+                                    "@id": "d2e386",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If under a contract of sale the property in the goods is transferred from the seller to the buyer, the contract is called a sale."
+                                },
+                                {
+                                    "@id": "d2e395",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the transfer of the property in the goods is to take place at a future time or is subject to some condition to be fulfilled later, the contract is called an agreement to sell."
+                                },
+                                {
+                                    "@id": "d2e404",
+                                    "bcl:num": "6",
+                                    "bcl:text": "An agreement to sell becomes a sale when the time elapses or the conditions are fulfilled subject to which the property in the goods is to be transferred."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e414",
+                            "bcl:marginalnote": "Capacity to buy and sell",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e422",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "necessaries",
+                                        "#text": "In this section,  means goods suitable to the condition in life of a person, and to the person's actual requirements at the time of the sale and delivery."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e434",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Capacity to buy and sell is regulated by the general law concerning capacity to contract and to transfer and acquire property."
+                                },
+                                {
+                                    "@id": "d2e443",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Despite subsection (2), if necessaries are sold and delivered to a person who because of mental incapacity or drunkenness is incompetent to contract, that person must pay a reasonable price for them."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e453",
+                            "bcl:marginalnote": "Contract of sale",
+                            "bcl:num": "8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e461",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to this or any other Act, a contract of sale may be made in writing, either with or without seal, or by word of mouth, or partly in writing and partly by word of mouth, or may be implied from the conduct of the parties."
+                                },
+                                {
+                                    "@id": "d2e470",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Nothing in this section affects the law relating to corporations."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e480",
+                            "bcl:marginalnote": "Existing or future goods",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e488",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The goods that form the subject of a contract of sale may be either existing goods, owned or possessed by the seller, or future goods."
+                                },
+                                {
+                                    "@id": "d2e497",
+                                    "bcl:num": "2",
+                                    "bcl:text": "There may be a contract for the sale of goods, the acquisition of which by the seller depends on a contingency that may or may not happen."
+                                },
+                                {
+                                    "@id": "d2e506",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If by a contract of sale the seller purports to effect a present sale of future goods, the contract operates as an agreement to sell the goods."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e517",
+                            "bcl:marginalnote": "Goods that have perished",
+                            "bcl:num": "10",
+                            "bcl:text": "A contract for the sale of specific goods is void if, without the knowledge of the seller, the goods have perished at the time when the contract is made."
+                        },
+                        {
+                            "@id": "d2e529",
+                            "bcl:marginalnote": "Goods perishing before sale but after agreement to sell",
+                            "bcl:num": "11",
+                            "bcl:text": "If there is an agreement to sell specific goods, and subsequently the goods, without any fault on the part of the seller or buyer, perish before the risk passes to the buyer, the agreement is avoided."
+                        },
+                        {
+                            "@id": "d2e541",
+                            "bcl:marginalnote": "Ascertainment of price",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e549",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The price in a contract of sale may be",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e558",
+                                            "bcl:num": "a",
+                                            "bcl:text": "set by the contract,"
+                                        },
+                                        {
+                                            "@id": "d2e567",
+                                            "bcl:num": "b",
+                                            "bcl:text": "left to be set as agreed in the contract, or"
+                                        },
+                                        {
+                                            "@id": "d2e577",
+                                            "bcl:num": "c",
+                                            "bcl:text": "determined by the course of dealing between the parties."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e586",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the price is not determined in accordance with subsection (1), the buyer must pay a reasonable price."
+                                },
+                                {
+                                    "@id": "d2e595",
+                                    "bcl:num": "3",
+                                    "bcl:text": "What is a reasonable price is a question of fact dependent on the circumstances of each case."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e605",
+                            "bcl:marginalnote": "Agreement to sell at valuation",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e613",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If there is an agreement to sell goods on the terms that the price is to be set by the valuation of a third party, and the third party cannot or does not do so, the agreement is avoided."
+                                },
+                                {
+                                    "@id": "d2e622",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the goods or any part of them have been delivered to and appropriated by the buyer, subsection (1) does not apply and the buyer must pay a reasonable price for the goods."
+                                },
+                                {
+                                    "@id": "d2e631",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the third party is prevented from making the valuation by the fault of the seller or buyer, the party not in fault may maintain an action for damages against the party in fault."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e641",
+                            "bcl:marginalnote": "Stipulations as to time",
+                            "bcl:num": "14",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e649",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Unless a different intention appears from the terms of the contract, stipulations as to time of payment are not deemed to be of the essence of a contract of sale."
+                                },
+                                {
+                                    "@id": "d2e658",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Whether any other stipulation as to time is of the essence of the contract or not depends on the terms of the contract."
+                                },
+                                {
+                                    "@id": "d2e667",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In a contract of sale, unless there is evidence to the contrary, \"month\" means calendar month."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e677",
+                            "bcl:marginalnote": "Condition may be treated as warranty",
+                            "bcl:num": "15",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e685",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a contract of sale or lease is subject to any condition to be fulfilled by the seller or lessor, the buyer or lessee may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e694",
+                                            "bcl:num": "a",
+                                            "bcl:text": "waive the condition, or"
+                                        },
+                                        {
+                                            "@id": "d2e703",
+                                            "bcl:num": "b",
+                                            "bcl:text": "elect to treat the breach of the condition as a breach of warranty, and not as a ground for treating the contract as repudiated."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e713",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Whether a stipulation in a contract of sale or lease is a condition the breach of which may give rise to a right to treat the contract as repudiated, or is a warranty the breach of which may give rise to a claim for damages but not to a right to reject the goods and treat the contract as repudiated, depends in each case on the construction of the contract."
+                                },
+                                {
+                                    "@id": "d2e722",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For the purposes of subsection (2), a stipulation may be a condition though called a warranty in the contract."
+                                },
+                                {
+                                    "@id": "d2e731",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If a contract of sale is not severable and the buyer has accepted the goods or part of them, or if the contract is for specific goods the property in which has passed to the buyer, the breach of any condition to be fulfilled by the seller can only be treated as a breach of warranty, and not as a ground for rejecting the goods and treating the contract as repudiated, unless there is a term of the contract, express or implied, to that effect."
+                                },
+                                {
+                                    "@id": "d2e740",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a lessee has accepted goods or part of them, the breach of a condition to be fulfilled by the lessor can only be treated as a breach of warranty, and not as a ground for rejecting the goods and treating the lease as repudiated, unless there is a term of the lease, express or implied, to that effect."
+                                },
+                                {
+                                    "@id": "d2e749",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Section 39 applies to a determination of whether a lessee has accepted goods or part of them under subsection\u00a0(5) of this section."
+                                },
+                                {
+                                    "@id": "d2e758",
+                                    "bcl:num": "7",
+                                    "bcl:text": "Nothing in this section affects any condition or warranty the fulfillment of which is excused by law because of impossibility or otherwise."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e769",
+                            "bcl:marginalnote": "Implied undertaking as to title, and implied warranty of quiet possession",
+                            "bcl:num": "16",
+                            "bcl:text": "In a contract of sale or lease, unless the circumstances of the contract are such as to show a different intention, there is",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e780",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an implied condition on the part of the seller or lessor that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e789",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in the case of a sale or lease, the seller or lessor has a right to sell or lease the goods, and"
+                                        },
+                                        {
+                                            "@id": "d2e799",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the case of an agreement to sell or lease, the seller or lessor will have a right to sell or lease the goods at the time when the property is to pass or the lessee is to take possession of the leased goods,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e808",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an implied warranty that the buyer or lessee is to have and enjoy quiet possession of the goods, and"
+                                },
+                                {
+                                    "@id": "d2e817",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an implied warranty that the goods are free from any charge or encumbrance in favour of any third party, not declared or known to the buyer or lessee before or at the time when the contract is made."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e827",
+                            "bcl:marginalnote": "Sale by description",
+                            "bcl:num": "17",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e835",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In a contract for the sale or lease of goods by description, there is an implied condition that the goods must correspond with the description."
+                                },
+                                {
+                                    "@id": "d2e844",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the sale or lease is by sample, as well as by description, it is not sufficient that the bulk of the goods correspond with the sample if the goods do not also correspond with the description."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e854",
+                            "bcl:marginalnote": "Implied conditions as to quality or fitness",
+                            "bcl:num": "18",
+                            "bcl:text": "Subject to this and any other Act, there is no implied warranty or condition as to the quality or fitness for any particular purpose of goods supplied under a contract of sale or lease, except as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e865",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if the buyer or lessee, expressly or by implication, makes known to the seller or lessor the particular purpose for which the goods are required, so as to show that the buyer or lessee relies on the seller's or lessor's skill or judgment, and the goods are of a description that it is in the course of the seller's or lessor's business to supply, whether the seller or lessor is the manufacturer or not, there is an implied condition that the goods are reasonably fit for that purpose; except that in the case of a contract for the sale or lease of a specified article under its patent or other trade name, there is no implied condition as to its fitness for any particular purpose;"
+                                },
+                                {
+                                    "@id": "d2e874",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if goods are bought by description from a seller or lessor who deals in goods of that description, whether the seller or lessor is the manufacturer or not, there is an implied condition that the goods are of merchantable quality; but if the buyer or lessee has examined the goods there is no implied condition as regards defects that the examination ought to have revealed;"
+                                },
+                                {
+                                    "@id": "d2e884",
+                                    "bcl:num": "c",
+                                    "bcl:text": "there is an implied condition that the goods will be durable for a reasonable period of time having regard to the use to which they would normally be put and to all the surrounding circumstances of the sale or lease;"
+                                },
+                                {
+                                    "@id": "d2e893",
+                                    "bcl:num": "d",
+                                    "bcl:text": "an implied warranty or condition as to quality or fitness for a particular purpose may be annexed by the usage of trade;"
+                                },
+                                {
+                                    "@id": "d2e902",
+                                    "bcl:num": "e",
+                                    "bcl:text": "an express warranty or condition does not negative a warranty or condition implied by this Act unless inconsistent with it."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e912",
+                            "bcl:marginalnote": "Sale by sample",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e920",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A contract of sale or lease is a contract for sale or lease by sample if there is a term in the contract, express or implied, to that effect."
+                                },
+                                {
+                                    "@id": "d2e929",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In a contract for sale or lease by sample,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e938",
+                                            "bcl:num": "a",
+                                            "bcl:text": "there is an implied condition that the bulk must correspond with the sample in quality,"
+                                        },
+                                        {
+                                            "@id": "d2e948",
+                                            "bcl:num": "b",
+                                            "bcl:text": "there is an implied condition that the buyer or lessee must have a reasonable opportunity of comparing the bulk with the sample, and"
+                                        },
+                                        {
+                                            "@id": "d2e957",
+                                            "bcl:num": "c",
+                                            "bcl:text": "there is an implied condition that the goods must be free from any defect rendering them unmerchantable that would not be apparent on reasonable examination of the sample."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e967",
+                            "bcl:marginalnote": "No waiver of warranties or conditions",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e975",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For the purpose of this section, retail sale or lease includes every contract of sale or lease made by a seller or lessor in the ordinary course of the seller's or lessor's business but does not include a sale or lease of goods",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e984",
+                                            "bcl:num": "a",
+                                            "bcl:text": "to a purchaser for resale or to a lessee for subletting,"
+                                        },
+                                        {
+                                            "@id": "d2e993",
+                                            "bcl:num": "b",
+                                            "bcl:text": "to a purchaser or lessee who intends to use the goods primarily for business purposes,"
+                                        },
+                                        {
+                                            "@id": "d2e1003",
+                                            "bcl:num": "c",
+                                            "bcl:text": "to a corporation or an industrial or commercial enterprise, or"
+                                        },
+                                        {
+                                            "@id": "d2e1012",
+                                            "bcl:num": "d",
+                                            "bcl:text": "by a trustee in bankruptcy, a liquidator or sheriff."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1021",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Despite section 18 (e) or 69, in the case of a retail sale or lease of goods, other than goods that on reasonable inspection appear to be used goods or goods that are described or represented by the seller or lessor to be used, any term of a contract of sale or lease, or any collateral or contemporaneous contract or agreement, that purports to negative or in any way diminish the conditions or warranties under sections 17, 18 and 19 of this Act, is,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1030",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if a term, severable from the contract and void, or"
+                                        },
+                                        {
+                                            "@id": "d2e1039",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if a collateral or contemporaneous contract or agreement, void."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1048",
+                                    "bcl:num": "3",
+                                    "bcl:text": [
+                                        "Despite section 18 (e) or 69, in the case of a retail sale or lease of new or used goods,",
+                                        "that purports to negative or in any way diminish the condition or warranty under section\u00a016 is,"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1058",
+                                            "bcl:num": "a",
+                                            "bcl:text": "any term of a contract of sale or lease, or"
+                                        },
+                                        {
+                                            "@id": "d2e1067",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any collateral or contemporaneous contract or agreement,"
+                                        },
+                                        {
+                                            "@id": "d2e1079",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if a term, severable from the contract and void, or"
+                                        },
+                                        {
+                                            "@id": "d2e1088",
+                                            "bcl:num": "d",
+                                            "bcl:text": "if a collateral or contemporaneous contract or agreement, void."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1098",
+                    "bcl:num": "3",
+                    "bcl:text": "Effect of the Contract",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1108",
+                            "bcl:marginalnote": "Goods must be ascertained",
+                            "bcl:num": "21",
+                            "bcl:text": "If there is a contract for the sale of unascertained goods, no property in the goods is transferred to the buyer unless and until the goods are ascertained."
+                        },
+                        {
+                            "@id": "d2e1120",
+                            "bcl:marginalnote": "Property passes according to intent of parties",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1128",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If there is a contract for the sale of specific or ascertained goods, the property in them is transferred to the buyer at the time the parties to the contract intend it to be transferred."
+                                },
+                                {
+                                    "@id": "d2e1137",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For ascertaining the intention of the parties, regard must be had to the terms of the contract, the conduct of the parties and the circumstances of the case."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1147",
+                            "bcl:marginalnote": "Intention of the parties as to the passing of the property in the goods",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1155",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Unless a different intention appears, the intention of the parties as to the time at which the property in the goods is to pass to the buyer is governed by the rules set out in this section."
+                                },
+                                {
+                                    "@id": "d2e1164",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If there is an unconditional contract for the sale of specific goods in a deliverable state, the property in the goods passes to the buyer when the contract is made, and it is immaterial whether the time of payment or the time of delivery, or both, are postponed."
+                                },
+                                {
+                                    "@id": "d2e1173",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If there is a contract for the sale of specific goods, and the seller is bound to do something to the goods for the purpose of putting them into a deliverable state, the property does not pass until that thing is done and the buyer has notice of it."
+                                },
+                                {
+                                    "@id": "d2e1183",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If there is a contract for the sale of specific goods in a deliverable state, but the seller is bound to weigh, measure, test or do some other act or thing with reference to the goods for the purpose of ascertaining the price, the property does not pass until that act or thing is done and the buyer has notice of it."
+                                },
+                                {
+                                    "@id": "d2e1192",
+                                    "bcl:num": "5",
+                                    "bcl:text": "When goods are delivered to the buyer on approval or \"on sale or return\", or other similar terms, the property passes to the buyer as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1201",
+                                            "bcl:num": "a",
+                                            "bcl:text": "when the buyer signifies approval or acceptance to the seller or does any other act adopting the transaction;"
+                                        },
+                                        {
+                                            "@id": "d2e1210",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the buyer does not signify approval or acceptance to the seller, but retains the goods without giving notice of rejection, then, if a time has been set for returning the goods, at the end of that time, and, if no time has been set, at the end of a reasonable time."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1219",
+                                    "bcl:num": "6",
+                                    "bcl:text": "For the purposes of subsection (5), what is a reasonable time is a question of fact."
+                                },
+                                {
+                                    "@id": "d2e1228",
+                                    "bcl:num": "7",
+                                    "bcl:text": "If there is a contract for the sale of unascertained or future goods by description, the property in the goods passes to the buyer when goods of that description and in a deliverable state are unconditionally appropriated to the contract",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1238",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by the seller with the assent of the buyer, or"
+                                        },
+                                        {
+                                            "@id": "d2e1247",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by the buyer with the assent of the seller."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1256",
+                                    "bcl:num": "8",
+                                    "bcl:text": "For the purposes of subsection (7), the assent may be express or implied, and may be given either before or after the appropriation is made."
+                                },
+                                {
+                                    "@id": "d2e1265",
+                                    "bcl:num": "9",
+                                    "bcl:text": "If, in pursuance of the contract, the seller delivers the goods to the buyer or to a carrier or other bailee, whether named by the buyer or not, for transmission to the buyer, and does not reserve the right of disposal, the seller is deemed to have unconditionally appropriated the goods to the contract."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1275",
+                            "bcl:marginalnote": "Reservation of right of disposal",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1283",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If there is a contract for the sale of specific goods, or if goods are subsequently appropriated to the contract, the seller may, by the terms of the contract or appropriation, reserve the right of disposal of the goods until certain conditions are fulfilled."
+                                },
+                                {
+                                    "@id": "d2e1292",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In such a case, despite the delivery of the goods to the buyer, or to a carrier or other bailee for transmission to the buyer, the property in the goods does not pass to the buyer until the conditions imposed by the seller are fulfilled."
+                                },
+                                {
+                                    "@id": "d2e1301",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If goods are shipped, and by the bill of lading the goods are deliverable to the order of the seller or the seller's agent, the seller is deemed, unless there is evidence to the contrary, to reserve the right of disposal."
+                                },
+                                {
+                                    "@id": "d2e1311",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the seller of goods draws on the buyer for the price, and transmits the bill of exchange and bill of lading to the buyer together, to secure acceptance or payment of the bill of exchange, the buyer is bound to return the bill of lading if the buyer does not honour the bill of exchange."
+                                },
+                                {
+                                    "@id": "d2e1320",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the buyer wrongfully retains the bill of lading, the property in the goods does not pass to the buyer."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1330",
+                            "bcl:marginalnote": "Risk passes with property",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1338",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Unless otherwise agreed, the goods remain at the seller's risk until the property in them is transferred to the buyer, but when the property in them is transferred to the buyer the goods are at the buyer's risk, whether delivery has been made or not."
+                                },
+                                {
+                                    "@id": "d2e1347",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If delivery has been delayed through the fault of either buyer or seller, then despite subsection (1), the goods are at the risk of the party in fault as regards any loss that might not have occurred but for that fault."
+                                },
+                                {
+                                    "@id": "d2e1356",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Nothing in this section affects the duties or liabilities of either seller or buyer as a bailee or custodian of the goods of the other party."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1366",
+                            "bcl:marginalnote": "Sale by person not owner",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1374",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to this Act, if goods are sold by a person who is not the owner of them, and who does not sell them under the authority or with the consent of the owner, the buyer acquires no better title to the goods than the seller had, unless the owner's conduct precludes the owner from denying the seller's authority to sell."
+                                },
+                                {
+                                    "@id": "d2e1383",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Nothing in this Act affects the validity of any contract of sale under any special common law or statutory power of sale, or under the order of a court of competent jurisdiction."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1394",
+                            "bcl:marginalnote": "Market overt",
+                            "bcl:num": "27",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1402",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If goods are sold in market overt, according to the usage of the market, the buyer acquires a good title to the goods, as long as they are bought in good faith and without notice of any defect or want of title on the part of the seller."
+                                },
+                                {
+                                    "@id": "d2e1411",
+                                    "bcl:num": "2",
+                                    "bcl:text": "This section does not affect the law relating to the sale of horses."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1421",
+                            "bcl:marginalnote": "Sale under voidable title",
+                            "bcl:num": "28",
+                            "bcl:text": "When the seller of goods has a voidable title to them, but the seller's title has not been avoided at the time of the sale, the buyer acquires a good title to the goods, if they are bought in good faith and without notice of the seller's defect of title."
+                        },
+                        {
+                            "@id": "d2e1433",
+                            "bcl:marginalnote": "Revesting of property in stolen goods on conviction of offender",
+                            "bcl:num": "29",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1441",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If goods have been stolen and the offender is prosecuted to conviction, the property in the goods stolen revests in the person who was the owner of the goods, or that person's personal representative, despite any intermediate dealing with them, whether by sale in market overt or otherwise."
+                                },
+                                {
+                                    "@id": "d2e1450",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Despite any enactment to the contrary, if goods have been obtained by fraud or other wrongful means not amounting to theft, the property in the goods does not revest in the person who was the owner of the goods, or that person's personal representative, merely because of the conviction of the offender."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1460",
+                            "bcl:marginalnote": "Seller or buyer in possession after sale",
+                            "bcl:num": "30",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1468",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a person having sold goods continues or is in possession of the goods, or of the documents of title to the goods, the delivery or transfer by that person, or by a mercantile agent acting for that person, of the goods or documents of title under any sale, pledge or other disposition of them, or under any agreement for the sale, pledge or other disposition of them, to any person receiving the same in good faith and without notice of the previous sale has the same effect as if the person making the delivery or transfer were expressly authorized by the owner of the goods to make the delivery or transfer."
+                                },
+                                {
+                                    "@id": "d2e1477",
+                                    "bcl:num": "2",
+                                    "bcl:text": [
+                                        "Subsection (1) does not apply to a sale, pledge or other disposition of",
+                                        {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96359_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Personal Property Security Act"
+                                            },
+                                            "#text": "that is out of the ordinary course of business of the seller, pledger or disposer if, before the sale, pledge or disposition, the owner's interest in the goods is registered in the personal property registry in accordance with the regulations made under the , and Part 4 of that Act applies to the registration."
+                                        }
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1486",
+                                            "bcl:num": "a",
+                                            "bcl:text": "goods, or"
+                                        },
+                                        {
+                                            "@id": "d2e1496",
+                                            "bcl:num": "b",
+                                            "bcl:text": "documents of title to goods, other than negotiable documents of title,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1511",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a person having bought or agreed to buy goods obtains, with the consent of the seller, possession of the goods or the documents of title to the goods, the delivery or transfer by that person, or by a mercantile agent acting for that person, of the goods or documents of title under any sale, pledge or other disposition of them, or under any agreement for the sale, pledge or other disposition of them, to any person receiving the same in good faith and without notice of any lien or other right of the original seller in respect of the goods has the same effect as if the person making the delivery or transfer were a mercantile agent in possession of the goods or documents of title with the consent of the owner."
+                                },
+                                {
+                                    "@id": "d2e1520",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96359_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Personal Property Security Act"
+                                        },
+                                        "#text": "Subsection (3) does not apply to a sale, pledge or other disposition of goods or of documents of title to goods by a person who has obtained possession of the goods under a security agreement by which the seller has a security interest as defined in the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1532",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "in:doc": "Chattel Mortgage Act",
+                                        "#text": "The interest of an owner under subsection (1) that, immediately before October 1, 1990, was covered by an unexpired registration under the , R.S.B.C. 1979, c. 48, is deemed for the purposes of subsection (2) to be registered in the personal property registry and the registration continues,"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1544",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:doc": "Chattel Mortgage Act",
+                                                "#text": "in the case of an interest in a motor vehicle registered under section\u00a07 of the , R.S.B.C. 1979, c. 48, for the unexpired portion of the registration, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1557",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:doc": "Chattel Mortgage Act",
+                                                "#text": "in the case of an interest in goods other than a motor vehicle under section\u00a07 of the , R.S.B.C. 1979, c. 48, for 3 years from October\u00a01,\u00a01990."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1569",
+                                    "bcl:num": "6",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96359_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Personal Property Security Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96359_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Personal Property Security Act"
+                                            }
+                                        ],
+                                        "#text": "Before the expiry of the registration under subsection (5) (a) or (b), registration of the owner's interest may be further continued by registration in the personal property registry in accordance with regulations made under the , and Part 4 of the  applies to the registration."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1585",
+                    "bcl:num": "4",
+                    "bcl:text": "Performance of the Contract",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1594",
+                            "bcl:marginalnote": "Duties of seller and buyer",
+                            "bcl:num": "31",
+                            "bcl:text": "It is the duty of the seller to deliver the goods, and of the buyer to accept and pay for them, in accordance with the terms of the contract of sale."
+                        },
+                        {
+                            "@id": "d2e1607",
+                            "bcl:marginalnote": "Payment and delivery are concurrent conditions",
+                            "bcl:num": "32",
+                            "bcl:text": "Unless otherwise agreed, delivery of the goods and payment of the price are concurrent conditions; that is to say, the seller must be ready and willing to give possession of the goods to the buyer in exchange for the price, and the buyer must be ready and willing to pay the price in exchange for possession of the goods."
+                        },
+                        {
+                            "@id": "d2e1619",
+                            "bcl:marginalnote": "Rules as to delivery",
+                            "bcl:num": "33",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1627",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Whether it is for the buyer to take possession of the goods, or for the seller to send them to the buyer, is a question depending in each case on the contract, express or implied, between the parties."
+                                },
+                                {
+                                    "@id": "d2e1636",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Apart from any such contract, express or implied, the place of delivery is the seller's place of business, if the seller has one, and if not, the seller's residence."
+                                },
+                                {
+                                    "@id": "d2e1645",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the contract is for the sale of specific goods, which to the knowledge of the parties when the contract is made are in some other place, then despite subsection (2) that place is the place of delivery."
+                                },
+                                {
+                                    "@id": "d2e1655",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If under the contract of sale the seller is bound to send the goods to the buyer, but no time for sending them is set, the seller is bound to send them within a reasonable time."
+                                },
+                                {
+                                    "@id": "d2e1664",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the goods at the time of sale are in the possession of a third person, there is no delivery by seller to buyer unless and until that third person acknowledges to the buyer that the third person holds the goods on the buyer's behalf."
+                                },
+                                {
+                                    "@id": "d2e1673",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Nothing in this section affects the operation of the issue or transfer of any document of title to goods."
+                                },
+                                {
+                                    "@id": "d2e1682",
+                                    "bcl:num": "7",
+                                    "bcl:text": "Demand or tender of delivery may be treated as ineffectual unless made at a reasonable hour."
+                                },
+                                {
+                                    "@id": "d2e1691",
+                                    "bcl:num": "8",
+                                    "bcl:text": "For the purposes of subsection (7), what is a reasonable hour is a question of fact."
+                                },
+                                {
+                                    "@id": "d2e1700",
+                                    "bcl:num": "9",
+                                    "bcl:text": "Unless otherwise agreed, the expenses of and incidental to putting the goods into a deliverable state must be borne by the seller."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1710",
+                            "bcl:marginalnote": "Delivery of wrong quantity",
+                            "bcl:num": "34",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1718",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the seller delivers to the buyer a quantity of goods less than the seller contracted to sell, the buyer may reject them."
+                                },
+                                {
+                                    "@id": "d2e1727",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the buyer accepts the delivered goods, the buyer must pay for them at the contract rate."
+                                },
+                                {
+                                    "@id": "d2e1736",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the seller delivers to the buyer a quantity of goods larger than the seller contracted to sell, the buyer may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1746",
+                                            "bcl:num": "a",
+                                            "bcl:text": "accept the goods included in the contract and reject the rest, or"
+                                        },
+                                        {
+                                            "@id": "d2e1755",
+                                            "bcl:num": "b",
+                                            "bcl:text": "reject the whole."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1764",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the seller delivers to the buyer a quantity of goods larger than the seller contracted to sell and the buyer accepts the whole of the goods delivered, the buyer must pay for them at the contract rate."
+                                },
+                                {
+                                    "@id": "d2e1773",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the seller delivers to the buyer the goods the seller contracted to sell mixed with the goods of a different description not included in the contract, the buyer may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1782",
+                                            "bcl:num": "a",
+                                            "bcl:text": "accept the goods that are in accordance with the contract and reject the rest, or"
+                                        },
+                                        {
+                                            "@id": "d2e1791",
+                                            "bcl:num": "b",
+                                            "bcl:text": "reject the whole."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1801",
+                                    "bcl:num": "6",
+                                    "bcl:text": "This section is subject to any usage of trade, special agreement or course of dealing between the parties."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1811",
+                            "bcl:marginalnote": "Instalment deliveries",
+                            "bcl:num": "35",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1819",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Unless otherwise agreed, the buyer of goods is not bound to accept delivery by instalments."
+                                },
+                                {
+                                    "@id": "d2e1828",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If there is a contract for the sale of goods to be delivered by stated instalments, which are to be separately paid for, and the seller makes defective deliveries in respect of one or more instalments, or the buyer neglects or refuses to take delivery of or pay for one or more instalments, it is a question in each case depending on the terms of the contract and the circumstances of the case whether the breach of contract is",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1837",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a repudiation of the whole contract, or"
+                                        },
+                                        {
+                                            "@id": "d2e1847",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a severable breach giving rise to a claim for compensation but not to a right to treat the whole contract as repudiated."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1857",
+                            "bcl:marginalnote": "Delivery to carrier",
+                            "bcl:num": "36",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1865",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If, in pursuance of a contract of sale, the seller is authorized or required to send the goods to the buyer, delivery of the goods to a carrier, whether named by the buyer or not, for transmission to the buyer is deemed, unless there is evidence to the contrary, to be a delivery of the goods to the buyer."
+                                },
+                                {
+                                    "@id": "d2e1874",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Unless otherwise authorized by the buyer, the seller must make such contract with the carrier on behalf of the buyer as may be reasonable, having regard to the nature of the goods and the other circumstances of the case."
+                                },
+                                {
+                                    "@id": "d2e1883",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the seller fails to act as required under subsection (2), and the goods are lost or damaged in course of transit, the buyer may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1893",
+                                            "bcl:num": "a",
+                                            "bcl:text": "decline to treat the delivery to the carrier as a delivery to the buyer, or"
+                                        },
+                                        {
+                                            "@id": "d2e1902",
+                                            "bcl:num": "b",
+                                            "bcl:text": "hold the seller responsible in damages."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1911",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Unless otherwise agreed, if goods are sent by the seller to the buyer by a route involving sea transit, under circumstances in which it is usual to insure, the seller must give such notice to the buyer as may enable the buyer to insure them during their sea transit."
+                                },
+                                {
+                                    "@id": "d2e1920",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the seller fails to give notice as required under subsection (4), the goods are deemed to be at the seller's risk during the sea transit."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1930",
+                            "bcl:marginalnote": "Risk if goods are delivered at distant place",
+                            "bcl:num": "37",
+                            "bcl:text": "Unless otherwise agreed, if the seller of goods agrees to deliver them at the seller's own risk at a place other than that where they are when sold, the buyer must nevertheless take any risk of deterioration in the goods necessarily incident to the course of transit."
+                        },
+                        {
+                            "@id": "d2e1943",
+                            "bcl:marginalnote": "Buyer's right of examining goods",
+                            "bcl:num": "38",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1951",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If goods are delivered to the buyer that the buyer has not previously examined, the buyer is not deemed to have accepted them unless and until the buyer has had a reasonable opportunity of examining them for the purpose of ascertaining whether they are in conformity with the contract."
+                                },
+                                {
+                                    "@id": "d2e1960",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Unless otherwise agreed, when the seller tenders delivery of goods to the buyer, the seller is bound, on request, to afford the buyer a reasonable opportunity of examining the goods for the purpose of ascertaining whether they are in conformity with the contract."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1970",
+                            "bcl:marginalnote": "Acceptance",
+                            "bcl:num": "39",
+                            "bcl:text": "The buyer is deemed to have accepted the goods when",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1981",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the buyer intimates to the seller that the buyer has accepted them,"
+                                },
+                                {
+                                    "@id": "d2e1990",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the goods have been delivered to the buyer, and the buyer does any act in relation to them which is inconsistent with the ownership of the seller, or"
+                                },
+                                {
+                                    "@id": "d2e2000",
+                                    "bcl:num": "c",
+                                    "bcl:text": "after the lapse of a reasonable time, the buyer retains the goods without intimating to the seller that the buyer has rejected them."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2010",
+                            "bcl:marginalnote": "Buyer not bound to return rejected goods",
+                            "bcl:num": "40",
+                            "bcl:text": "Unless otherwise agreed, if goods are delivered to the buyer and the buyer refuses to accept them, having the right so to do, the buyer is not bound to return them to the seller, but it is sufficient if the buyer intimates to the seller that the buyer refuses to accept them."
+                        },
+                        {
+                            "@id": "d2e2022",
+                            "bcl:marginalnote": "Liability of buyer for neglecting or refusing to take delivery of goods",
+                            "bcl:num": "41",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2030",
+                                    "bcl:num": "1",
+                                    "bcl:text": "When the seller is ready and willing to deliver the goods, and requests the buyer to take delivery, and the buyer does not within a reasonable time after the request take delivery of the goods, the buyer is liable to the seller for",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2039",
+                                            "bcl:num": "a",
+                                            "bcl:text": "any loss occasioned by the buyer's neglect or refusal to take delivery, and"
+                                        },
+                                        {
+                                            "@id": "d2e2048",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a reasonable charge for the care and custody of the goods."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2058",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Nothing in this section affects the rights of the seller if the neglect or refusal of the buyer to take delivery amounts to a repudiation of the contract."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2068",
+                    "bcl:num": "5",
+                    "bcl:text": "Rights of Unpaid Seller Against the Goods",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2077",
+                            "bcl:marginalnote": "Unpaid seller and seller",
+                            "bcl:num": "42",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2085",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "seller",
+                                        "#text": "In this Part,  includes any person who is in the position of a seller, as, for instance, an agent of the seller to whom the bill of lading has been endorsed, or a consignor or agent who has paid or is directly responsible for the price."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2097",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The seller of the goods is deemed to be an unpaid seller within the meaning of this Act",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2106",
+                                            "bcl:num": "a",
+                                            "bcl:text": "when the whole of the price has not been paid or tendered, or"
+                                        },
+                                        {
+                                            "@id": "d2e2116",
+                                            "bcl:num": "b",
+                                            "bcl:text": "when a bill of exchange or other negotiable instrument has been received as conditional payment, and the condition on which it was received has not been fulfilled because of the dishonour of the instrument or otherwise."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2127",
+                            "bcl:marginalnote": "Unpaid seller's rights",
+                            "bcl:num": "43",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2135",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to this or any other Act, even if the property in the goods may have passed to the buyer, the unpaid seller of goods, as such, has by implication of law",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2144",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a lien on the goods or right to retain them for the price while the seller is in possession of them,"
+                                        },
+                                        {
+                                            "@id": "d2e2153",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in case of the insolvency of the buyer, a right of stopping the goods in transit after the seller has parted with the possession of them, and"
+                                        },
+                                        {
+                                            "@id": "d2e2163",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a right of resale as limited by this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2172",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the property in goods has not passed to the buyer, the unpaid seller has, in addition to any other remedies, a right of withholding delivery similar to and coextensive with the seller's rights of lien and stoppage in transit where the property has passed to the buyer."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2182",
+                            "bcl:marginalnote": "Unpaid seller's lien",
+                            "bcl:num": "44",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2190",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to this Act, the unpaid seller of goods who is in possession of them is entitled to retain possession of them until payment or tender of the price in the following cases:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2199",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if the goods have been sold without any stipulation as to credit;"
+                                        },
+                                        {
+                                            "@id": "d2e2208",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the goods have been sold on credit, but the term of credit has expired;"
+                                        },
+                                        {
+                                            "@id": "d2e2218",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if the buyer becomes insolvent."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2227",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The seller may exercise the right of lien even if the seller is in possession of the goods as agent or bailee for the buyer."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2237",
+                            "bcl:marginalnote": "Part delivery",
+                            "bcl:num": "45",
+                            "bcl:text": "An unpaid seller who has made part delivery of the goods may exercise the right of lien or retention on the remainder, unless that part delivery has been made under circumstances that show an agreement to waive the lien or right of retention."
+                        },
+                        {
+                            "@id": "d2e2249",
+                            "bcl:marginalnote": "Termination of lien",
+                            "bcl:num": "46",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2257",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The unpaid seller of goods loses the lien or right of retention",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2266",
+                                            "bcl:num": "a",
+                                            "bcl:text": "when the seller delivers the goods to a carrier or other bailee for transmission to the buyer without reserving the right of disposal of the goods,"
+                                        },
+                                        {
+                                            "@id": "d2e2275",
+                                            "bcl:num": "b",
+                                            "bcl:text": "when the buyer or the buyer's agent lawfully obtains possession of the goods, and"
+                                        },
+                                        {
+                                            "@id": "d2e2285",
+                                            "bcl:num": "c",
+                                            "bcl:text": "by waiver of it."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2294",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The unpaid seller of goods, having a lien or right of retention, does not lose the lien or right of retention merely because the seller has obtained judgment or decree for the price of the goods."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2304",
+                            "bcl:marginalnote": "Right to stop goods in transit",
+                            "bcl:num": "47",
+                            "bcl:text": "Subject to this Act, when the buyer of goods becomes insolvent, the unpaid seller who has parted with the possession of the goods has the right of stopping them in transit; that is to say, the unpaid seller may resume possession of the goods as long as they are in course of transit, and may retain them until payment or tender of the price."
+                        },
+                        {
+                            "@id": "d2e2316",
+                            "bcl:marginalnote": "Duration of transit",
+                            "bcl:num": "48",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2324",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Goods are deemed to be in course of transit from the time they are delivered to a carrier by land or water, or other bailee, for transmission to the buyer, until the buyer or the buyer's agent in that behalf takes delivery of them from the carrier or other bailee."
+                                },
+                                {
+                                    "@id": "d2e2333",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the buyer or the buyer's agent in that behalf obtains delivery of the goods before the arrival at the appointed destination, the transit is at an end."
+                                },
+                                {
+                                    "@id": "d2e2342",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If after the arrival of the goods at the appointed destination the carrier or other bailee acknowledges to the buyer or the buyer's agent that the carrier or other bailee holds the goods on the buyer's behalf, and continues in possession of them as bailee for the buyer or the buyer's agent, the transit is at an end, and it is immaterial that a further destination for the goods may have been indicated by the buyer."
+                                },
+                                {
+                                    "@id": "d2e2352",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the goods are rejected by the buyer, and the carrier or other bailee continues in possession of them, the transit is not deemed to be at an end, even if the seller has refused to receive them back."
+                                },
+                                {
+                                    "@id": "d2e2361",
+                                    "bcl:num": "5",
+                                    "bcl:text": "When the goods are delivered to a ship chartered by the buyer, it is a question depending on the circumstances of the particular case whether they are in possession of the master as a carrier or as agent to the buyer."
+                                },
+                                {
+                                    "@id": "d2e2370",
+                                    "bcl:num": "6",
+                                    "bcl:text": "If the carrier or other bailee wrongfully refuses to deliver the goods to the buyer or the buyer's agent in that behalf, the transit is deemed to be at an end."
+                                },
+                                {
+                                    "@id": "d2e2379",
+                                    "bcl:num": "7",
+                                    "bcl:text": "If part delivery of the goods has been made to the buyer or the buyer's agent in that behalf, the remainder of the goods may be stopped in transit, unless the part delivery has been made under circumstances that show an agreement to give up possession of the whole of the goods."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2390",
+                            "bcl:marginalnote": "How right to stop in transit exercised",
+                            "bcl:num": "49",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2398",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The unpaid seller may exercise the right of stoppage in transit",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2407",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by taking actual possession of the goods, or"
+                                        },
+                                        {
+                                            "@id": "d2e2416",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by giving notice of the seller's claim to the carrier, or other bailee in whose possession the goods are."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2426",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Notice of stoppage in transit may be given either to the person in actual possession of the goods or to that person's principal."
+                                },
+                                {
+                                    "@id": "d2e2435",
+                                    "bcl:num": "3",
+                                    "bcl:text": "To be effectual, notice given to a principal under subsection (2) at a time and under circumstances that the principal, by the exercise of reasonable diligence, may communicate it to a servant or agent in time to prevent a delivery to the buyer."
+                                },
+                                {
+                                    "@id": "d2e2444",
+                                    "bcl:num": "4",
+                                    "bcl:text": "When given notice of stoppage in transit by the seller, the carrier or other bailee in possession of the goods must redeliver the goods to or according to the directions of the seller."
+                                },
+                                {
+                                    "@id": "d2e2453",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The expenses of redelivery under subsection (4) must be borne by the seller."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2463",
+                            "bcl:marginalnote": "Effect of subsale or pledge by buyer",
+                            "bcl:num": "50",
+                            "bcl:text": "Subject to this Act, the unpaid seller's right of lien, or retention or stoppage in transit, is not affected by any sale or other disposition of the goods that the buyer may have made, unless the seller has assented to it; except that where a document of title to goods has been lawfully transferred to any person as buyer or owner of the goods, and that person transfers the document to a person who takes the document in good faith and for valuable consideration, then,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2474",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if such last mentioned transfer was by way of sale, the unpaid seller's right of lien, or retention or stoppage in transit, is defeated, and"
+                                },
+                                {
+                                    "@id": "d2e2483",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if such last mentioned transfer was by way of pledge or other disposition for value, the unpaid seller's right of lien, or retention or stoppage in transit, can only be exercised subject to the rights of the transferee."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2493",
+                            "bcl:marginalnote": "Sale not generally rescinded by exercise of right of lien or stoppage in transit",
+                            "bcl:num": "51",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2501",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to this section, a contract of sale is not rescinded by the mere exercise by an unpaid seller of the right of lien, or retention or stoppage in transit."
+                                },
+                                {
+                                    "@id": "d2e2510",
+                                    "bcl:num": "2",
+                                    "bcl:text": "When an unpaid seller who has exercised the right of lien, or retention or stoppage in transit, resells the goods, the buyer acquires a good title to it as against the original buyer."
+                                },
+                                {
+                                    "@id": "d2e2519",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the goods are of a perishable nature, or if the unpaid seller gives notice to the buyer of the seller's intention to resell, and the buyer does not within a reasonable time pay or tender the price, the unpaid seller may resell the goods and recover from the original buyer damages for any loss occasioned by the buyer's breach of contract."
+                                },
+                                {
+                                    "@id": "d2e2529",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the seller expressly reserves a right of resale in case the buyer should default, and on the buyer defaulting resells the goods, the original contract of sale is rescinded by that act, but without prejudice to any claim the seller may have for damages."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2539",
+                    "bcl:num": "6",
+                    "bcl:text": "Actions for Breach of the Contract",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2548",
+                            "bcl:marginalnote": "Action for price",
+                            "bcl:num": "52",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2556",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If, under a contract of sale, the property in the goods has passed to the buyer, and the buyer wrongfully neglects or refuses to pay for the goods according to the terms of the contract, the seller may maintain an action against the buyer for the price of the goods."
+                                },
+                                {
+                                    "@id": "d2e2565",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If, under a contract of sale, the price is payable on a day certain, irrespective of delivery, and the buyer wrongfully neglects or refuses to pay such price, the seller may maintain an action for the price, although the property in the goods has not passed, and the goods have not been appropriated to the contract."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2575",
+                            "bcl:marginalnote": "Damages for nonacceptance",
+                            "bcl:num": "53",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2583",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the buyer wrongfully neglects or refuses to accept and pay for the goods, the seller may maintain an action against the buyer for damages for nonacceptance."
+                                },
+                                {
+                                    "@id": "d2e2592",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The measure of damages is the estimated loss directly and naturally resulting, in the ordinary course of events, from the buyer's breach of contract."
+                                },
+                                {
+                                    "@id": "d2e2601",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If there is an available market for the goods in question, the measure of damages is to be ascertained, unless there is evidence to the contrary, by the difference between the contract price and the market or current price at the time or times when the goods ought to have been accepted, or if no time was set for acceptance, then at the time of the refusal to accept."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2612",
+                            "bcl:marginalnote": "Damages for nondelivery",
+                            "bcl:num": "54",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2620",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the seller wrongfully neglects or refuses to deliver the goods to the buyer, the buyer may maintain an action against the seller for damages for nondelivery."
+                                },
+                                {
+                                    "@id": "d2e2629",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The measure of damages is the estimated loss directly and naturally resulting, in the ordinary course of events, from the seller's breach of contract."
+                                },
+                                {
+                                    "@id": "d2e2638",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If there is an available market for the goods in question, the measure of damages is to be ascertained, unless there is evidence to the contrary, by the difference between the contract price and the market or current price of the goods at the time or times when they ought to have been delivered, or, if no time was set, then at the time of the refusal to deliver."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2648",
+                            "bcl:marginalnote": "Specific performance",
+                            "bcl:num": "55",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2656",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In any action for breach of contract to deliver specific or ascertained goods, the court may, if it thinks fit, on the application of the plaintiff, order that the contract be performed specifically without giving the defendant the option of retaining the goods on payment of damages."
+                                },
+                                {
+                                    "@id": "d2e2665",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The order may be unconditional, or on terms and conditions as to damages, payment of the price, and otherwise, as the court thinks just, and the application by the plaintiff may be made at any time before judgment."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2675",
+                            "bcl:marginalnote": "Remedy for breach of warranty",
+                            "bcl:num": "56",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2683",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If there is a breach of warranty by the seller, or if the buyer elects, or is compelled, to treat any breach of a condition on the part of the seller as a breach of warranty, the buyer is not merely because of the breach of warranty entitled to reject the goods, but the buyer may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2692",
+                                            "bcl:num": "a",
+                                            "bcl:text": "set up against the seller the breach of warranty in diminution or extinction of the price, or"
+                                        },
+                                        {
+                                            "@id": "d2e2701",
+                                            "bcl:num": "b",
+                                            "bcl:text": "maintain an action against the seller for damages for the breach of warranty."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2711",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The measure of damages for breach of warranty is the estimated loss directly and naturally resulting, in the ordinary course of events, from the breach of warranty."
+                                },
+                                {
+                                    "@id": "d2e2720",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In the case of breach of warranty of quality, the loss is, unless there is evidence to the contrary, the difference between the value of the goods at the time of delivery to the buyer and the value they would have had if they had answered to the warranty."
+                                },
+                                {
+                                    "@id": "d2e2729",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The fact that the buyer has set up the breach of warranty in diminution or extinction of the price does not prevent the buyer from maintaining an action for the same breach of warranty if the buyer has suffered further damage."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2739",
+                            "bcl:marginalnote": "Interest and special damages",
+                            "bcl:num": "57",
+                            "bcl:text": "This Act does not affect the right of the buyer or the seller to recover interest or special damages in any case where by law interest or special damages may be recoverable, or to recover money paid if the consideration for the payment of it has failed."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2751",
+                    "bcl:num": "7",
+                    "bcl:text": "Disposition of Goods by Agents",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2760",
+                            "bcl:marginalnote": "Exception",
+                            "bcl:num": "58",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property Security Act"
+                                },
+                                "#text": "Sections 59 to 62 do not apply to a consignment to which the  applies."
+                            }
+                        },
+                        {
+                            "@id": "d2e2776",
+                            "bcl:marginalnote": "Disposition by mercantile agent",
+                            "bcl:num": "59",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2784",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a mercantile agent is, with the consent of the owner, in possession of goods or of the documents of title to goods, any sale, pledge or other disposition of the goods made by the mercantile agent when acting in the ordinary course of business of a mercantile agent is, subject to this Act, as valid as if the mercantile agent were expressly authorized by the owner of the goods to make the sale, pledge or other disposition, if the person taking under the disposition acts in good faith, and has not at the time of the disposition notice that the person making the disposition has not authority to make it."
+                                },
+                                {
+                                    "@id": "d2e2793",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a mercantile agent has, with the consent of the owner, been in possession of goods, or of the documents of title to goods, any sale, pledge or other disposition that would have been valid if the consent had continued is valid despite the termination of the consent, if the person taking under the disposition has not at that time notice that the consent has been terminated."
+                                },
+                                {
+                                    "@id": "d2e2802",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a mercantile agent has obtained possession of any documents of title to goods because of being or having been, with the consent of the owner, in possession of the goods represented by it, or of any other documents of title to the goods, the agent's possession of the first mentioned documents is, for the purposes of this Act, deemed to be with the consent of the owner."
+                                },
+                                {
+                                    "@id": "d2e2812",
+                                    "bcl:num": "4",
+                                    "bcl:text": "For the purposes of this Act, the consent of the owner is presumed unless there is evidence to the contrary."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2822",
+                            "bcl:marginalnote": "Pledge of documents of title",
+                            "bcl:num": "60",
+                            "bcl:text": "A pledge of the documents of title to goods is deemed to be a pledge of the goods."
+                        },
+                        {
+                            "@id": "d2e2834",
+                            "bcl:marginalnote": "Pledge for earlier debt",
+                            "bcl:num": "61",
+                            "bcl:text": "If a mercantile agent pledges goods as security for a debt or liability due from the pledger to the pledgee before the time of the pledge, the pledgee acquires no further right to the goods than could have been enforced by the pledger at the time of the pledge."
+                        },
+                        {
+                            "@id": "d2e2846",
+                            "bcl:marginalnote": "Exchange of goods or documents",
+                            "bcl:num": "62",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2854",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For the purposes of this Act, the consideration necessary for the validity of a sale, pledge or other disposition of goods may be either a payment in cash, or the delivery or transfer of other goods, or of a document of title to goods, or of a negotiable security, or any other valuable consideration."
+                                },
+                                {
+                                    "@id": "d2e2863",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If goods are pledged by a mercantile agent in consideration of the delivery or transfer of other goods, or of a document of title to goods, or of a negotiable security, the pledgee acquires no right or interest in the goods so pledged in excess of the value of the goods, documents or security when so delivered or transferred in exchange."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2873",
+                            "bcl:marginalnote": "Agreements through clerks",
+                            "bcl:num": "63",
+                            "bcl:text": "For the purposes of this Act, an agreement made with a mercantile agent through a clerk or other person authorized in the ordinary course of business to make contracts of sale or pledge on the agent's behalf is deemed to be an agreement with the agent."
+                        },
+                        {
+                            "@id": "d2e2885",
+                            "bcl:marginalnote": "Consignors and consignees",
+                            "bcl:num": "64",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2893",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the owner of goods has given possession of the goods to another person for the purpose of consignment or sale, or has shipped the goods in the name of another person, and the consignee of the goods has not had notice that the other person is not the owner of the goods, the consignee has, in respect of advances made to or for the use of the other person, the same lien on the goods as if that person were the owner of the goods, and may transfer any such lien to another person."
+                                },
+                                {
+                                    "@id": "d2e2902",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Nothing in this section limits or affects the validity of any sale, pledge or disposition by a mercantile agent."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2913",
+                            "bcl:marginalnote": "Effect of transfer of documents on vendor's lien or right of stoppage in transit",
+                            "bcl:num": "65",
+                            "bcl:text": "If a document of title to goods has been lawfully transferred to a person as a buyer or owner of the goods, and that person transfers the document to a person who takes the document in good faith and for valuable consideration, the last mentioned transfer has the same effect for defeating any seller's lien or right of stoppage in transit as the transfer of a bill of lading has for defeating the right of stoppage in transit."
+                        },
+                        {
+                            "@id": "d2e2925",
+                            "bcl:marginalnote": "Transfer of documents",
+                            "bcl:num": "66",
+                            "bcl:text": "For the purposes of this Act, the transfer of a document may be by endorsement, or if the document is by custom or by its express terms transferable by delivery, or makes the goods deliverable to the bearer, then by delivery."
+                        },
+                        {
+                            "@id": "d2e2937",
+                            "bcl:marginalnote": "True owner",
+                            "bcl:num": "67",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2945",
+                                    "bcl:num": "1",
+                                    "bcl:text": "This Act does not authorize an agent to exceed or depart from the agent's authority as between the agent and the agent's principal, or exempt the agent from any liability, civil or criminal, for so doing."
+                                },
+                                {
+                                    "@id": "d2e2954",
+                                    "bcl:num": "2",
+                                    "bcl:text": "This Act does not prevent",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2963",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the owner of goods from recovering the goods from an agent or assignee for the benefit of creditors at any time before the sale or pledge of them, or"
+                                        },
+                                        {
+                                            "@id": "d2e2973",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the owner of goods pledged by an agent",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2982",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "from having a right to redeem the goods at any time before the sale of them, on satisfying the claim for which the goods were pledged, and paying to the agent, if required by the agent, any money in respect of which the agent would by law be entitled to retain the goods or the documents of title to them, or any of them, by way of lien as against the owner, or"
+                                                },
+                                                {
+                                                    "@id": "d2e2991",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "from recovering from any person with whom the goods have been pledged any balance of money remaining in the person's hands as the produce of the sale of the goods, after deducting the amount of the person's lien."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3000",
+                                    "bcl:num": "3",
+                                    "bcl:text": "This Act does not prevent the owner of goods sold by an agent from recovering from the buyer the price agreed to be paid for the goods, or any part of that price, subject to any right of set off on the part of the buyer against the agent."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3010",
+                            "bcl:marginalnote": "Common law powers of agent",
+                            "bcl:num": "68",
+                            "bcl:text": "This Act must be construed in amplification and not in derogation of the powers exercisable by an agent independently of this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3022",
+                    "bcl:num": "8",
+                    "bcl:text": "Supplementary Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e3031",
+                            "bcl:marginalnote": "Exclusion of implied terms and conditions",
+                            "bcl:num": "69",
+                            "bcl:text": "Any right, duty or liability that would arise under a contract of sale by implication of law may be negatived or varied",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3042",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by express agreement,"
+                                },
+                                {
+                                    "@id": "d2e3051",
+                                    "bcl:num": "b",
+                                    "bcl:text": "by the course of dealing between the parties, or"
+                                },
+                                {
+                                    "@id": "d2e3061",
+                                    "bcl:num": "c",
+                                    "bcl:text": "by usage, if the usage is such as to bind both parties to the contract."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3072",
+                            "bcl:marginalnote": "Reasonable time",
+                            "bcl:num": "70",
+                            "bcl:text": "If by this Act any reference is made to a reasonable time, the question what is a reasonable time is a question of fact."
+                        },
+                        {
+                            "@id": "d2e3084",
+                            "bcl:marginalnote": "Rights, etc., enforceable by action",
+                            "bcl:num": "71",
+                            "bcl:text": "If any right, duty or liability is declared by this Act, it may, unless otherwise by this Act provided, be enforced by an action."
+                        },
+                        {
+                            "@id": "d2e3096",
+                            "bcl:marginalnote": "Auction sales",
+                            "bcl:num": "72",
+                            "bcl:text": "In the case of a sale by auction the following rules apply:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3107",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if goods are put up for sale by auction in lots, each lot is, unless there is evidence to the contrary, deemed to be the subject of a separate contract of sale;"
+                                },
+                                {
+                                    "@id": "d2e3116",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a sale by auction is complete when the auctioneer announces its completion by the fall of the hammer, or in other customary manner, and until that announcement is made a bid may be retracted;"
+                                },
+                                {
+                                    "@id": "d2e3126",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if a sale by auction is not notified to be subject to a right to bid on behalf of the seller, it is not lawful for the seller to bid or to employ any person to bid at the sale, or for the auctioneer knowingly to take any bid from the seller or any such person, and any sale contravening this rule may be treated as fraudulent by the buyer;"
+                                },
+                                {
+                                    "@id": "d2e3135",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a sale by auction may be notified to be subject to a reserved or upset price, and a right to bid may also be reserved expressly by or on behalf of the seller, and if a right to bid is expressly reserved, but not otherwise, the seller or any one person on the seller's behalf may bid at the auction."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3145",
+                            "bcl:marginalnote": "Common law, bills of sale and mortgages",
+                            "bcl:num": "73",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3153",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Except so far as they are inconsistent with the express provisions of this Act, the rules of the common law, including the law merchant and in particular the rules relating to the law of principal and agent and the effect of fraud, misrepresentation, duress or coercion, mistake or other invalidating cause, continue to apply to contracts for the sale of goods."
+                                },
+                                {
+                                    "@id": "d2e3162",
+                                    "bcl:num": "2",
+                                    "bcl:text": "This Act does not affect the enactments relating to bills of sale."
+                                },
+                                {
+                                    "@id": "d2e3171",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The provisions of this Act relating to contracts of sale do not apply to any transaction in the form of a contract of sale that is intended to operate by way of mortgage, pledge, charge or other security."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3181",
+                    "bcl:num": "9",
+                    "bcl:text": "Buyer's Lien",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e3190",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "74",
+                            "bcl:text": "In this Part:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e3201",
+                                    "bcl:text": {
+                                        "in:term": "buyer's lien",
+                                        "#text": "means a lien arising under section 75;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3210",
+                                    "bcl:text": {
+                                        "in:term": "payment",
+                                        "#text": "includes an obligation incurred by the buyer to a person, other than the seller, to whom the buyer remains liable despite a default by the seller;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3220",
+                                    "bcl:text": {
+                                        "in:term": "seller",
+                                        "#text": "includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3229",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a successor in interest or title of a seller, and"
+                                        },
+                                        {
+                                            "@id": "d2e3238",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a trustee;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3247",
+                                    "bcl:text": {
+                                        "in:term": "trustee",
+                                        "#text": "means a person who assumes control of a seller's property by operation of law, under legal process or under the terms of a security agreement, and includes a sheriff, a trustee in bankruptcy, a liquidator and a receiver."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3258",
+                            "bcl:marginalnote": "Buyer's lien",
+                            "bcl:num": "75",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3266",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "If in the usual course of a seller's business the seller makes an agreement to sell goods and",
+                                        "then the buyer has the lien described in subsection (2)."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3275",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the buyer pays all or part of the price,"
+                                        },
+                                        {
+                                            "@id": "d2e3284",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the goods are unascertained or future goods, and"
+                                        },
+                                        {
+                                            "@id": "d2e3294",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the buyer is acquiring the goods in good faith for use primarily for personal, family or household purposes,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3306",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The lien under subsection (1) is for the amount the buyer has paid towards the purchase price of the goods and is against",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3315",
+                                            "bcl:num": "a",
+                                            "bcl:text": "all goods",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3324",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "that are in or come into the possession of the seller and are held by the seller for sale,"
+                                                },
+                                                {
+                                                    "@id": "d2e3333",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "that correspond with the description of or with any sample of the goods under the agreement to sell, and"
+                                                },
+                                                {
+                                                    "@id": "d2e3343",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the property in which has not passed to a different buyer under a different contract of sale, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3352",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any account in a savings institution in which the seller usually deposits the proceeds of sales."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3362",
+                            "bcl:marginalnote": "Termination of lien",
+                            "bcl:num": "76",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3370",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A buyer's lien is discharged when the seller",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3379",
+                                            "bcl:num": "a",
+                                            "bcl:text": "fulfills the contract of sale by causing property in goods to pass to the buyer in accordance with the contract of sale, or"
+                                        },
+                                        {
+                                            "@id": "d2e3388",
+                                            "bcl:num": "b",
+                                            "bcl:text": "refunds to the buyer the money that the buyer has paid towards the purchase price of the goods."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3398",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Whether a buyer's lien is to be discharged under subsection (1) (a) or under subsection (1) (b) is at the option of the seller, but a discharge of the lien under subsection (1) (b) does not affect any right of action the buyer may have for a breach of the contract of sale."
+                                },
+                                {
+                                    "@id": "d2e3407",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A buyer's lien ceases to bind goods that are appropriated to a sale made in good faith to a different buyer, whether or not that sale is in the usual course of the seller's business."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3417",
+                            "bcl:marginalnote": "Priority",
+                            "bcl:num": "77",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3425",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "security interest",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96359_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Personal Property Security Act"
+                                        },
+                                        "#text": "For the purposes of this section,  has the same meaning as in the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3440",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A buyer's lien has priority over other security interests."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3450",
+                            "bcl:marginalnote": "Trustee's duty",
+                            "bcl:num": "78",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3458",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A trustee who assumes control of a seller's property is, with respect to any valid and existing buyer's lien of which the trustee has knowledge, under a duty to ensure that property subject to the lien is dealt with for the buyer's benefit in accordance with this Part."
+                                },
+                                {
+                                    "@id": "d2e3467",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A trustee who deals with property that is subject to a buyer's lien is not liable to the buyer if the trustee acts in good faith and without knowledge of the lien."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3477",
+                            "bcl:marginalnote": "Proceedings",
+                            "bcl:num": "79",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3485",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (3), a person entitled to a buyer's lien on goods may commence a proceeding to enforce the lien in whatever court has monetary jurisdiction and the jurisdiction must be determined by reference to the amount the buyer has actually paid."
+                                },
+                                {
+                                    "@id": "d2e3494",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In a proceeding to enforce the lien, the court may make one or more of the following orders:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3503",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an order declaring that the buyer's lien exists;"
+                                        },
+                                        {
+                                            "@id": "d2e3513",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an order that goods be seized and sold and the proceeds applied to the discharge of one or more buyers' liens;"
+                                        },
+                                        {
+                                            "@id": "d2e3522",
+                                            "bcl:num": "c",
+                                            "bcl:text": "an order that goods be seized and delivered to the holder of a buyer's lien to discharge the lien."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3531",
+                                    "bcl:num": "3",
+                                    "bcl:text": "No proceeding may be brought under this section to enforce a buyer's lien against goods that are in the possession, custody or control of a trustee."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3541",
+                            "bcl:marginalnote": "Several liens",
+                            "bcl:num": "80",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3549",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "If there are 2 or more buyers' liens over the same property and",
+                                        "then, subject to subsection (2), the shortfall must be attributed to the buyers' claims in the proportions that their respective claims bear to the sum of those claims."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3558",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the seller fails, or is unable, to discharge the liens, and"
+                                        },
+                                        {
+                                            "@id": "d2e3567",
+                                            "bcl:num": "b",
+                                            "bcl:text": "on the enforcement of the liens, insufficient money is realized to satisfy the claims of those buyers,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3580",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The equitable principles respecting the marshalling of claims apply to competing buyers' liens."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3591",
+                            "bcl:marginalnote": "Application",
+                            "bcl:num": "81",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3599",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The provisions of this Part and the regulations made under it apply despite any waiver or agreement to the contrary."
+                                },
+                                {
+                                    "@id": "d2e3608",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Nothing in this Part derogates from the rights of a buyer under a contract of sale, including the right of a buyer to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3617",
+                                            "bcl:num": "a",
+                                            "bcl:text": "reject goods if the buyer would otherwise be entitled to do so, or"
+                                        },
+                                        {
+                                            "@id": "d2e3627",
+                                            "bcl:num": "b",
+                                            "bcl:text": "claim damages in respect of defective or deficient goods."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

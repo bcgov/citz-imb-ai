@@ -1,0 +1,1275 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96349_01",
+        "act:title": "Patients Property Act",
+        "act:chapter": "349",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1922970521/96349/tlc96349_f",
+            "act:tlc": "E3tlc96349"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e21",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d1e34",
+                            "bcl:text": {
+                                "in:term": "committee",
+                                "#text": "means the following persons:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e41",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a person appointed as committee under section 6 (1);"
+                                },
+                                {
+                                    "@id": "d1e50",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the Public Guardian and Trustee under section 6 (3);"
+                                },
+                                {
+                                    "@id": "d1e59",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "a statutory property guardian under Part 2.1 of the ;"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e32",
+                            "bcl:text": {
+                                "in:term": "court",
+                                "#text": "means Supreme Court;"
+                            }
+                        },
+                        {
+                            "@id": "d2e41",
+                            "bcl:text": {
+                                "in:term": "patient",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e51",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96288_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Mental Health Act"
+                                        },
+                                        "#text": "a person who, before paragraph (a.1) of this definition comes into force, was described in a certificate signed by the director of a Provincial mental health facility or psychiatric unit as defined in the  as one who is, because of mental infirmity arising from disease, age or otherwise, incapable of managing his or her affairs,"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e108",
+                                    "bcl:num": "a.1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "a person who has a statutory property guardian under Part 2.1 of the , or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e63",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a person who is declared under this Act by a judge to be",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e72",
+                                            "bcl:num": "i",
+                                            "bcl:text": "incapable of managing his or her affairs,"
+                                        },
+                                        {
+                                            "@id": "d2e81",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "incapable of managing himself or herself, or"
+                                        },
+                                        {
+                                            "@id": "d2e90",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "incapable of managing himself or herself or his or her affairs;"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e99",
+                            "bcl:text": {
+                                "in:term": "Public Guardian and Trustee",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96383_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Guardian and\n              Trustee Act"
+                                },
+                                "#text": "means the Public Guardian and\n          Trustee holding office under the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e112",
+                            "bcl:text": {
+                                "in:term": "representation agreement",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96405_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Representation Agreement Act"
+                                },
+                                "#text": "means an agreement made under the\n            ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e125",
+                    "bcl:marginalnote": "Application and service of notice",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e133",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "The Attorney General, a near relative of a person or other person may apply to the\n          court for an order declaring that a person is, because of",
+                                "incapable of managing his or her affairs or incapable of managing himself or\n          herself, or incapable of managing himself or herself or his or her affairs."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e142",
+                                    "bcl:num": "a",
+                                    "bcl:text": "mental infirmity arising from disease, age or otherwise, or"
+                                },
+                                {
+                                    "@id": "d2e151",
+                                    "bcl:num": "b",
+                                    "bcl:text": "disorder or disability of mind arising from the use of drugs,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e164",
+                            "bcl:num": "2",
+                            "bcl:text": "Subject to subsection (3), a notice setting out the time and place of the application\n          must be served personally on the person who is the subject of the application not less\n          than 10 days before the date of the application."
+                        },
+                        {
+                            "@id": "d2e173",
+                            "bcl:num": "3",
+                            "bcl:text": "On an application under this section, the court may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e182",
+                                    "bcl:num": "a",
+                                    "bcl:text": "direct that any person be served with notice of the application, or"
+                                },
+                                {
+                                    "@id": "d2e191",
+                                    "bcl:num": "b",
+                                    "bcl:text": "dispense with service on any person of notice of the application."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e200",
+                            "bcl:num": "4",
+                            "bcl:text": "Despite subsection (3), unless the court is satisfied that service on the person who\n          is the subject of the application would be injurious to that person's health or would for\n          any other reason be inadvisable in the interests of that person, the court must not\n          dispense with service on that person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e210",
+                    "bcl:marginalnote": "Hearing of application",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e218",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If, on",
+                                "the court is satisfied that the person is, because of",
+                                "incapable of managing his or her affairs or incapable of managing himself or\n          herself, or incapable of managing himself or herself or his or her affairs, it must, by\n          order, declare the person"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e227",
+                                    "bcl:num": "a",
+                                    "bcl:text": "hearing an application, and"
+                                },
+                                {
+                                    "@id": "d2e236",
+                                    "bcl:num": "b",
+                                    "bcl:text": [
+                                        "reading the affidavits of 2 medical practitioners setting out their opinion that\n            the person who is the subject of the application is, because of",
+                                        "incapable of managing his or her affairs or incapable of managing himself or\n            herself, or incapable of managing himself or herself or his or her affairs,"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e246",
+                                            "bcl:num": "i",
+                                            "bcl:text": "mental infirmity arising from disease, age or otherwise, or"
+                                        },
+                                        {
+                                            "@id": "d2e255",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "disorder or disability of mind arising from the use of drugs,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e270",
+                                    "bcl:num": "c",
+                                    "bcl:text": "mental infirmity arising from disease, age or otherwise, or"
+                                },
+                                {
+                                    "@id": "d2e279",
+                                    "bcl:num": "d",
+                                    "bcl:text": "disorder or disability of mind arising from the use of drugs,"
+                                },
+                                {
+                                    "@id": "d2e292",
+                                    "bcl:num": "e",
+                                    "bcl:text": "incapable of managing his or her affairs,"
+                                },
+                                {
+                                    "@id": "d2e301",
+                                    "bcl:num": "f",
+                                    "bcl:text": "incapable of managing himself or herself, or"
+                                },
+                                {
+                                    "@id": "d2e310",
+                                    "bcl:num": "g",
+                                    "bcl:text": "incapable of managing himself or herself or his or her affairs."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e319",
+                            "bcl:num": "2",
+                            "bcl:text": "The court may, on hearing an application under this section and reading the\n          affidavits described in subsection (1), direct an issue to be tried, and in that\n          event the following provisions apply:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e328",
+                                    "bcl:num": "a",
+                                    "bcl:text": [
+                                        "the question in issue is whether the person who is the subject of the\n            application is, because of",
+                                        "incapable of managing his or her affairs or incapable of managing himself or\n            herself, or incapable of managing himself or herself or his or her affairs;"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e338",
+                                            "bcl:num": "i",
+                                            "bcl:text": "mental infirmity arising from disease, age or otherwise, or"
+                                        },
+                                        {
+                                            "@id": "d2e347",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "disorder or disability of mind arising from the use of drugs,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e359",
+                                    "bcl:num": "b",
+                                    "bcl:text": "this Act applies to the issue and the trial of it;"
+                                },
+                                {
+                                    "@id": "d2e368",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the Supreme Court Civil Rules apply;"
+                                },
+                                {
+                                    "@id": "d2e377",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the court must",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e387",
+                                            "bcl:num": "i",
+                                            "bcl:text": "dismiss the application, or"
+                                        },
+                                        {
+                                            "@id": "d2e396",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "by order, declare that the person who is the subject of the\n              application",
+                                            "bcl:clause": [
+                                                {
+                                                    "@id": "d2e405",
+                                                    "bcl:num": "A",
+                                                    "bcl:text": "is incapable of managing his or her affairs,"
+                                                },
+                                                {
+                                                    "@id": "d2e414",
+                                                    "bcl:num": "B",
+                                                    "bcl:text": "is incapable of managing himself or herself, or"
+                                                },
+                                                {
+                                                    "@id": "d2e423",
+                                                    "bcl:num": "C",
+                                                    "bcl:text": "is incapable of managing himself or herself or his or her\n                affairs."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e505",
+                    "bcl:marginalnote": "Reassessment and review",
+                    "bcl:num": "3.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e513",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96006_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Adult Guardianship Act"
+                                },
+                                "#text": "The rights to reassessment and review set out in sections 34 and 35 of the  apply, and section 37 (3) and (4) of that Act applies, to a patient as defined in paragraph (a) of the definition of \"patient\" under this Act as if"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e521",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "the patient is an adult with a statutory property guardian under the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e530",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "the patient's committee is a statutory property guardian under the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e539",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "the director of a Provincial mental health facility or psychiatric unit who signed the certificate referred to in paragraph (a) of the definition of \"patient\" under this Act, or a person acting on his or her behalf or who is his or her successor, is the health authority designate referred to in the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e549",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "the certificate referred to in paragraph (a) of the definition of \"patient\" under this Act is a certificate of incapability issued under section 32 of the , and"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e558",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "for the purposes of section 35 (2) (b) of the , the body that appointed the director who signed the certificate referred to in paragraph (a) of the definition of \"patient\" under this Act is a party to a review."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e568",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of subsection (1),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e576",
+                                    "bcl:num": "a",
+                                    "bcl:text": "[Not in force.]"
+                                },
+                                {
+                                    "@id": "d1e585",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "if statutory property guardianship ends under section 37 (3) of the , the person ceases to be a patient."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e595",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96006_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Adult Guardianship Act"
+                                },
+                                "#text": "For greater certainty, the rights to reassessment and review set out in sections 34 and\u00a035, and section 37 (3) and (4), of the  continue to apply to a patient as defined in paragraph (a.1) of the definition of \"patient\"."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e433",
+                    "bcl:marginalnote": "Order declaring person no longer incapable",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e655",
+                            "bcl:num": "0.1",
+                            "bcl:text": "This section applies only to patients as defined in paragraph (b) of the definition of \"patient\"."
+                        },
+                        {
+                            "@id": "d2e441",
+                            "bcl:num": "1",
+                            "bcl:text": "At any time after one year from the making of an order under section\u00a03 or sooner\n          by leave of the court, the Attorney General, the patient or other person may apply to the\n          court for an order declaring that a patient is no longer",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e450",
+                                    "bcl:num": "a",
+                                    "bcl:text": "incapable of managing his or her affairs,"
+                                },
+                                {
+                                    "@id": "d2e459",
+                                    "bcl:num": "b",
+                                    "bcl:text": "incapable of managing himself or herself, or"
+                                },
+                                {
+                                    "@id": "d2e469",
+                                    "bcl:num": "c",
+                                    "bcl:text": "incapable of managing himself or herself or his or her affairs."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e478",
+                            "bcl:num": "2",
+                            "bcl:text": "Except by leave of the court, a patient must not be the subject of an application\n          under this subsection more often than once in any year."
+                        },
+                        {
+                            "@id": "d2e487",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "If, on",
+                                "the court is satisfied that the patient is no longer",
+                                "the court may, by order, so declare."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e496",
+                                    "bcl:num": "a",
+                                    "bcl:text": "hearing an application under this section, and"
+                                },
+                                {
+                                    "@id": "d2e505",
+                                    "bcl:num": "b",
+                                    "bcl:text": "reading the affidavits of 2 medical practitioners setting out their opinion that\n            the patient is no longer",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e514",
+                                            "bcl:num": "i",
+                                            "bcl:text": "incapable of managing his or her affairs,"
+                                        },
+                                        {
+                                            "@id": "d2e524",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "incapable of managing himself or herself, or"
+                                        },
+                                        {
+                                            "@id": "d2e533",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "incapable of managing himself or herself or his or her affairs,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e545",
+                                    "bcl:num": "c",
+                                    "bcl:text": "incapable of managing his or her affairs,"
+                                },
+                                {
+                                    "@id": "d2e554",
+                                    "bcl:num": "d",
+                                    "bcl:text": "incapable of managing himself or herself, or"
+                                },
+                                {
+                                    "@id": "d2e563",
+                                    "bcl:num": "e",
+                                    "bcl:text": "incapable of managing himself or herself or his or her affairs,"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e577",
+                    "bcl:marginalnote": "Examination",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e585",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If",
+                                "the court hearing the appeal or application or trying the issue may order the\n          person who is the subject of the application or the patient to attend and submit at the\n          time and place the order directs to examination."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e594",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an application is made or an issue is tried under section\u00a03,"
+                                },
+                                {
+                                    "@id": "d2e603",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an appeal is taken from an order under section\u00a03, or"
+                                },
+                                {
+                                    "@id": "d2e613",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an application is made under section 4,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e625",
+                            "bcl:num": "2",
+                            "bcl:text": "An examination under this section must be made by",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e634",
+                                    "bcl:num": "a",
+                                    "bcl:text": "one or more medical practitioners other than those whose affidavits were before\n            the court on the appeal, application or trial, or"
+                                },
+                                {
+                                    "@id": "d2e643",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a board of 3 or more medical practitioners designated by the College of\n            Physicians and Surgeons of British Columbia at the request of the court."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e652",
+                            "bcl:num": "3",
+                            "bcl:text": "If the person who is the subject of the application or the patient requests an\n          examination under this section, unless the court hearing the appeal or application is\n          satisfied that the person or patient is not mentally competent to form and express the\n          request, the court must order the examination."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e663",
+                    "bcl:marginalnote": "Appointment of committee",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e671",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to section 13, on application by the Attorney General or\n          any other person, the court may appoint any person to be the committee of the\n          patient."
+                        },
+                        {
+                            "@id": "d2e680",
+                            "bcl:num": "2",
+                            "bcl:text": "On application by the Attorney General, the Public Guardian and Trustee or any\n          other person, the court may, subject to section\u00a013, rescind the appointment of a person\n          appointed as committee."
+                        },
+                        {
+                            "@id": "d2e689",
+                            "bcl:num": "3",
+                            "bcl:text": "Subject to section 16, except during the time that a person\n          appointed under subsection\u00a0(1), other than the Public Guardian and Trustee, is the\n          committee of a patient, the Public Guardian and Trustee is the committee of the\n          patient."
+                        },
+                        {
+                            "@id": "d2e699",
+                            "bcl:num": "4",
+                            "bcl:text": "An application under subsection (1) and an application under section\u00a02 may be made\n          as one application."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e709",
+                    "bcl:marginalnote": "Service of notice of application to appoint committee",
+                    "bcl:num": "7",
+                    "bcl:text": "Notice in writing of an application to appoint a committee must be served, not less\n        than 10\u00a0days before the date of the application, on",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e720",
+                            "bcl:num": "a",
+                            "bcl:text": "the Public Guardian and Trustee, and"
+                        },
+                        {
+                            "@id": "d2e729",
+                            "bcl:num": "b",
+                            "bcl:text": "the committee of the patient if one has been appointed."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e739",
+                    "bcl:marginalnote": "Discharge of committee",
+                    "bcl:num": "8",
+                    "bcl:text": "If the court appoints a committee to succeed another committee, the former\n        committee, on being discharged under section\u00a013,",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e750",
+                            "bcl:num": "a",
+                            "bcl:text": "ceases to be the committee of the patient, and"
+                        },
+                        {
+                            "@id": "d2e759",
+                            "bcl:num": "b",
+                            "bcl:text": "must transfer the estate of the patient to the appointed committee."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e769",
+                    "bcl:marginalnote": "Nomination of committee by patient",
+                    "bcl:num": "9",
+                    "bcl:text": [
+                        "On an application for the appointment of a committee, if there is presented to the\n        court a nomination in writing of a committee by the patient,",
+                        "the nominee must be appointed committee unless there is good and sufficient reason\n        for refusing the appointment."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e780",
+                            "bcl:num": "a",
+                            "bcl:text": "made and signed by the patient at a time when the patient was of full age and of\n          sound and disposing mind, and"
+                        },
+                        {
+                            "@id": "d2e789",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/09013_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Wills,\n              Estates and Succession Act"
+                                },
+                                "#text": "executed in accordance with the requirements for the making of a will under the\n            ,"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e806",
+                    "bcl:marginalnote": "Inventory, security and accounts",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e814",
+                            "bcl:num": "1",
+                            "bcl:text": "If a committee other than the Public Guardian and Trustee has been appointed under\n          this Act, the following rules apply:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e823",
+                                    "bcl:num": "a",
+                                    "bcl:text": "[Repealed 2003-37-38.]"
+                                },
+                                {
+                                    "@id": "d2e832",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if property belonging to the patient is discovered after the first passing of\n            accounts under paragraph (d) and that property is valued at $25 000 or more, the\n            committee must, within 30 days of the discovery of the property, deliver to the Public\n            Guardian and Trustee a true account of the property as it is discovered;"
+                                },
+                                {
+                                    "@id": "d2e842",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if ordered by the court, either on the person's appointment as committee or\n            subsequently on the application of the Public Guardian and Trustee, the committee must\n            give security for the proper performance of the committee's duties in the amount the\n            court directs in the form of a bond that must be in the name of the Public Guardian and\n            Trustee, approved by the Registrar of the Supreme Court, and filed with the Public\n            Guardian and Trustee;"
+                                },
+                                {
+                                    "@id": "d2e851",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the committee must pass the committee's accounts before the Public Guardian and\n            Trustee at the times directed by the Public Guardian and Trustee, including, if the\n            Public and Guardian Trustee requires it, a true inventory of the whole estate of the\n            patient, stating the estimated revenue of it and setting out the debts, credits and\n            effects of the patient to the extent they have come to the knowledge of the\n            committee;"
+                                },
+                                {
+                                    "@id": "d2e860",
+                                    "bcl:num": "e",
+                                    "bcl:text": "if required by the Public Guardian and Trustee, the committee must pass the\n            accounts before the Supreme Court in the county in which the committee was appointed\n            committee."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e869",
+                            "bcl:num": "2",
+                            "bcl:text": "A committee may at any time appeal the passing of accounts by the Public Guardian\n          and Trustee to the Supreme Court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e879",
+                    "bcl:marginalnote": "When a person ceases to be a patient",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e887",
+                            "bcl:num": "1",
+                            "bcl:text": "A person ceases to be a patient on any of the following events:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e896",
+                                    "bcl:num": "a) to (d",
+                                    "bcl:text": "[Repealed 2014-9-33.]"
+                                },
+                                {
+                                    "@id": "d2e948",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the making of an order declaring that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e957",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the patient is no longer incapable of managing his or her affairs,"
+                                        },
+                                        {
+                                            "@id": "d2e966",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the patient is no longer incapable of managing himself or herself,\n              or"
+                                        },
+                                        {
+                                            "@id": "d2e975",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the patient is no longer incapable of managing himself or herself or his or\n              her affairs."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e985",
+                            "bcl:num": "2",
+                            "bcl:text": "[Repealed 2014-9-33.]"
+                        },
+                        {
+                            "@id": "d2e994",
+                            "bcl:num": "3",
+                            "bcl:text": "Despite anything in this Act to the contrary, the Public Guardian and Trustee may\n          carry out and complete a transaction entered into by the Public Guardian and Trustee in\n          relation to a patient's estate which is not completed before the patient ceases to be a\n          patient."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1005",
+                    "bcl:marginalnote": "Application for discharge of committee",
+                    "bcl:num": "12",
+                    "bcl:text": "If a person ceases to be a patient, the person or the committee of the person's\n        estate other than the Public Guardian and Trustee may apply, on 10\u00a0days' notice in writing\n        to the Public Guardian and Trustee, to the court for the discharge of the\n        committee."
+                },
+                {
+                    "@id": "d2e1017",
+                    "bcl:marginalnote": "Passing of accounts",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1025",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If",
+                                "the court may, and must if requested by the Public Guardian and Trustee, order\n          that the committee pass the accounts and may, in the order, specify the time and the\n          manner of passing the accounts, and must adjourn the application until the carrying out of\n          the order."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1034",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an application is made under section 12 for the discharge of a committee other than\n            the Public Guardian and Trustee, or"
+                                },
+                                {
+                                    "@id": "d2e1043",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an application is made for the rescission of the appointment of a committee\n            other than the Public Guardian and Trustee,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1056",
+                            "bcl:num": "2",
+                            "bcl:text": "If a committee fails to pass the accounts as ordered, or if the accounts are found\n          to be incomplete or inaccurate, the committee may be required to attend before the court\n          to explain why the accounts have not been passed or a proper proceeding in connection with\n          them taken, and the court may give the direction it considers proper."
+                        },
+                        {
+                            "@id": "d2e1065",
+                            "bcl:num": "3",
+                            "bcl:text": "After the order made under subsection (1) has been carried out, and the court is\n          satisfied that no further passing of accounts is necessary, the court may order that the\n          committee is discharged."
+                        },
+                        {
+                            "@id": "d2e1074",
+                            "bcl:num": "4",
+                            "bcl:text": "If the Public Guardian and Trustee or a committee is discharged under this\n          section, the Public Guardian and Trustee or the committee",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1083",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has no further powers or duties with respect to the estate of the person who has\n            ceased to be a patient, and"
+                                },
+                                {
+                                    "@id": "d2e1092",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is released, except in respect of undisclosed acts, neglects, defaults or\n            accounts or dishonest or unlawful conduct, from all actions, claims and demands for or\n            concerning the Public Guardian and Trustee's or the committee's management or\n            administration of the estate."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1102",
+                    "bcl:marginalnote": "Compensation for acting as committee",
+                    "bcl:num": "14",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1110",
+                            "bcl:num": "1",
+                            "bcl:text": "A person may be allowed reasonable compensation from the estate of a patient or\n          from the estate of a person who has ceased to be a patient for services rendered as\n          committee of the patient or of the person who has ceased to be a patient."
+                        },
+                        {
+                            "@id": "d2e1119",
+                            "bcl:num": "2",
+                            "bcl:text": "The compensation, if any, to be paid to a person other than the Public Guardian\n          and Trustee must be fixed on the passing of accounts."
+                        },
+                        {
+                            "@id": "d2e1128",
+                            "bcl:num": "3",
+                            "bcl:text": "If, in the opinion of a person who is entitled to compensation under this section,\n          the estate of a patient or the estate of a person who has ceased to be a patient is so\n          limited in value that the payment out of it of compensation would create poverty or\n          hardship for the patient or person who has ceased to be a patient or the patient's\n          dependants, no compensation need be claimed or paid or no amount need be retained out of\n          the estate."
+                        },
+                        {
+                            "@id": "d2e1138",
+                            "bcl:num": "4",
+                            "bcl:text": "A committee of a patient or a person who has been the committee of a person who\n          has ceased to be a patient has a first lien or charge on the estate of the patient or\n          person who has ceased to be a patient for all costs, expenses and advances made by him or\n          her for or incidental to the administration of the estate of the patient or the person who\n          has ceased to be a patient or for the benefit of the patient or person who has ceased to\n          be a patient, the patient's family or other dependants."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1148",
+                    "bcl:marginalnote": "Powers of committee",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1156",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to section 16,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1165",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the committee of a patient as defined in paragraph (a) or (a.1) of the definition of \"patient\" in section 1 has all the rights, privileges and powers with regard to the estate\n            of the patient as the patient would have if of full age and of sound and disposing mind,\n            and"
+                                },
+                                {
+                                    "@id": "d2e1174",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the committee of a patient",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1184",
+                                            "bcl:num": "i",
+                                            "bcl:text": "declared to be incapable of managing his or her affairs has all the rights,\n              privileges and powers with regard to the estate of the patient as the patient would\n              have if of full age and of sound and disposing mind,"
+                                        },
+                                        {
+                                            "@id": "d2e1193",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "declared to be incapable of managing himself or herself has the custody of the\n              person of the patient, and"
+                                        },
+                                        {
+                                            "@id": "d2e1202",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "declared to be incapable of managing himself or herself or his or her affairs\n              has all the rights, privileges and powers with regard to the estate of the patient as\n              the patient would have if of full age and of sound and disposing mind, and as well the\n              custody of the person of the patient."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1211",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96464_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Trustee\n              Act"
+                                },
+                                "#text": "For investing money, a committee is a trustee within the meaning of the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1224",
+                    "bcl:marginalnote": "Special direction limiting powers of committee",
+                    "bcl:num": "16",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1232",
+                            "bcl:num": "1",
+                            "bcl:text": "On the appointment of a committee, the court may, by the same order, attach\n          conditions or restrictions on the committee's exercise of certain rights, privileges or\n          powers specified in the order, including requiring the written consent of the Public\n          Guardian and Trustee prior to the committee's exercise of any right, privilege or\n          power."
+                        },
+                        {
+                            "@id": "d2e1241",
+                            "bcl:num": "2",
+                            "bcl:text": "If, under subsection (1), the court has attached a condition that the consent of the\n          Public Guardian and Trustee is required prior to the committee's exercise of any right,\n          privilege or power, the registrar of the court must send a copy of the court's order to\n          the Public Guardian and Trustee."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1251",
+                    "bcl:marginalnote": "Rights, powers and privileges included",
+                    "bcl:num": "17",
+                    "bcl:text": "The rights, powers and privileges vested in the committee include all the rights,\n        powers and privileges that would be exercisable by the patient as a trustee, as the guardian\n        of a person, as the holder of a power of appointment and as the personal representative of a\n        person, if the person were of full age and of sound and disposing mind."
+                },
+                {
+                    "@id": "d2e1264",
+                    "bcl:marginalnote": "Exercise of powers",
+                    "bcl:num": "18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e1489",
+                            "bcl:num": "1",
+                            "bcl:text": "A committee must exercise the committee's powers for the benefit of the patient and\n        the patient's family, having regard to the nature and value of the property of the patient\n        and the circumstances and needs of the patient and the patient's family."
+                        },
+                        {
+                            "@id": "d1e1503",
+                            "bcl:num": "2",
+                            "bcl:text": "A committee must, to the extent reasonable, foster the independence of the patient and encourage the patient's involvement in any decision making that affects the patient."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1276",
+                    "bcl:marginalnote": "Effect on power of attorney or representation agreement of person becoming a\n        patient by court order",
+                    "bcl:num": "19",
+                    "bcl:text": "On a person becoming a patient as defined in paragraph (b) of the definition of\n        \"patient\" in section\n          1,",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1287",
+                            "bcl:num": "a",
+                            "bcl:text": "every power of attorney given by the person is terminated, and"
+                        },
+                        {
+                            "@id": "d2e1296",
+                            "bcl:num": "b",
+                            "bcl:text": "unless the court orders otherwise, every representation agreement made by the\n          person is terminated."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1306",
+                    "bcl:marginalnote": "Effect on power of attorney or certain representation agreements of person\n        becoming a patient other than by court order",
+                    "bcl:num": "19.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1314",
+                            "bcl:num": "1",
+                            "bcl:text": "On a person becoming a patient as defined in paragraph (a) or (a.1) of the definition of\n          \"patient\" in section 1, the following are suspended:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1323",
+                                    "bcl:num": "a",
+                                    "bcl:text": "every power of attorney that was given by the person;"
+                                },
+                                {
+                                    "@id": "d2e1332",
+                                    "bcl:num": "b",
+                                    "bcl:text": "every provision of a representation agreement made by the person in respect of\n            his or her property."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1342",
+                            "bcl:num": "2",
+                            "bcl:text": "After receiving a copy of the suspended power of attorney or of a representation\n          agreement any provision of which has been suspended under subsection (1) and any information\n          that the Public Guardian and Trustee may require, the Public Guardian and Trustee must\n          determine whether it is necessary or desirable for the Public Guardian and Trustee to\n          manage the patient's property under this Act."
+                        },
+                        {
+                            "@id": "d2e1351",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "If the Public Guardian and Trustee determines that it is necessary or desirable\n          for the Public Guardian and Trustee to manage the patient's property, then on the making\n          of the determination",
+                                "as the case may be."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1360",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the power of attorney that was suspended under subsection (1) is terminated,\n            or"
+                                },
+                                {
+                                    "@id": "d2e1369",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the provisions of the representation agreement that were suspended under\n              subsection\n              (1) are cancelled,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1381",
+                            "bcl:num": "4",
+                            "bcl:text": "If the Public Guardian and Trustee determines that it is not necessary or\n          desirable for the Public Guardian and Trustee to manage the patient's property,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1391",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the Public Guardian and Trustee's authority as committee  is\n            terminated on the making of that determination, and"
+                                },
+                                {
+                                    "@id": "d2e1400",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the suspension of the power of attorney or of the provisions of the\n            representation agreement ends on the termination of the Public Guardian and Trustee's\n            authority as committee."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1410",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "19.2",
+                    "bcl:text": "[Repealed 2011-5-29.]"
+                },
+                {
+                    "@id": "d2e1422",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "20",
+                    "bcl:text": "[Repealed 2011-5-29.]"
+                },
+                {
+                    "@id": "d2e1434",
+                    "bcl:marginalnote": "Effect of things done by committee",
+                    "bcl:num": "21",
+                    "bcl:text": "Everything done by a committee in the exercise of the committee's powers under this\n        Act has the same effect with respect to all other persons as if done by the patient at a\n        time when the patient was of full age and of sound and disposing mind."
+                },
+                {
+                    "@id": "d2e1447",
+                    "bcl:marginalnote": "Actions for and against patient",
+                    "bcl:num": "22",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1455",
+                            "bcl:num": "1",
+                            "bcl:text": "A person other than the committee of the patient must not bring an action on\n          behalf of the patient."
+                        },
+                        {
+                            "@id": "d2e1464",
+                            "bcl:num": "2",
+                            "bcl:text": "An action against a patient must be brought against the committee as litigation\n          guardian."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1474",
+                    "bcl:marginalnote": "Cost of maintenance, care and treatment",
+                    "bcl:num": "23",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1482",
+                            "bcl:num": "1",
+                            "bcl:text": "A patient is liable for the cost of the patient's maintenance, care and treatment\n          and, subject to section\u00a018, the committee must pay out of the estate of the patient the\n          amounts necessary to defray all just and reasonable charges for the maintenance, care and\n          treatment of the patient."
+                        },
+                        {
+                            "@id": "d2e1491",
+                            "bcl:num": "2",
+                            "bcl:text": "The Public Guardian and Trustee may permit a patient of whose estate the Public\n          Guardian and Trustee is committee to hold, manage or control a part of the estate to\n          defray normal living expenses or part of them, and the Public Guardian and Trustee is not\n          liable for loss or damage to the estate of the patient resulting from the patient holding,\n          managing or controlling that part of the estate."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1501",
+                    "bcl:marginalnote": "Death of patient",
+                    "bcl:num": "24",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1509",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/09013_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Wills, Estates and\n              Succession Act"
+                                },
+                                "#text": "Subject to subsection (2), on the death of a patient and until\n          a\n          representation grant, within the meaning of the , is issued in respect of the patient's\n          estate and notice in writing of the\n          representation\n          grant is served on the committee, the committee of the patient"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1518",
+                                    "bcl:num": "a",
+                                    "bcl:text": "continues to have the rights, powers, duties and privileges that the committee\n            would have had if the patient had not died, and"
+                                },
+                                {
+                                    "@id": "d2e1527",
+                                    "bcl:num": "b",
+                                    "bcl:text": "has the powers of a person who has been issued a representation\n            grant."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1537",
+                            "bcl:num": "2",
+                            "bcl:text": "Despite section 10 (1) (d), the Public Guardian and Trustee must not require the\n          committee to pass accounts before the Public Guardian and Trustee after the death of the\n          patient."
+                        },
+                        {
+                            "@id": "d2e1546",
+                            "bcl:num": "3",
+                            "bcl:text": "After the death of the patient, the committee must provide the committee's\n          accounts to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1555",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the executor or administrator of the patient's estate, or"
+                                },
+                                {
+                                    "@id": "d2e1564",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the committee and the executor or administrator of the patient's estate are\n            the same person, the beneficiaries of the patient's estate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1573",
+                            "bcl:num": "4",
+                            "bcl:text": "The executor, administrator or beneficiaries of the patient's estate may provide\n          to the committee written approval of, and consent to, the accounts received under\n          subsection\u00a0(3)."
+                        },
+                        {
+                            "@id": "d2e1582",
+                            "bcl:num": "5",
+                            "bcl:text": "If a committee fails to provide its accounts as required under subsection\n          (3), or if the accounts are incomplete or inaccurate, a person entitled to the\n          accounts may require the committee to attend before the court to explain the committee's\n          failure to provide the accounts or to provide a satisfactory accounting, and the court may\n          give the direction it considers proper."
+                        },
+                        {
+                            "@id": "d2e1592",
+                            "bcl:num": "6",
+                            "bcl:text": "The court may, on being satisfied that no further accounting by the committee is\n          necessary, order at any time that the committee is discharged."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1602",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "25-26",
+                    "bcl:text": "[Repealed 1999-25-23.]"
+                },
+                {
+                    "@id": "d2e1614",
+                    "bcl:marginalnote": "Costs",
+                    "bcl:num": "27",
+                    "bcl:text": "The costs of all proceedings under this Act are in the discretion of the\n        court."
+                },
+                {
+                    "@id": "d2e1626",
+                    "bcl:marginalnote": "Orders by court",
+                    "bcl:num": "28",
+                    "bcl:text": "If there is insufficient provision in this Act, the court may at any time, on the\n        application of any person, make an order not in contradiction to this Act or the regulations\n        that it considers necessary for or in the interests of the proper, honest and prudent\n        management and administration of the estate of a patient."
+                },
+                {
+                    "@id": "d2e1639",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "29",
+                    "bcl:text": "[Repealed 1999-25-23.]"
+                },
+                {
+                    "@id": "d2e1651",
+                    "bcl:marginalnote": "Appointment of new Public Guardian and Trustee",
+                    "bcl:num": "30",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1659",
+                            "bcl:num": "1",
+                            "bcl:text": "If a new Public Guardian and Trustee is appointed, the new Public Guardian and\n          Trustee is committee to every patient of whom the predecessor was the\n          committee."
+                        },
+                        {
+                            "@id": "d2e1668",
+                            "bcl:num": "2",
+                            "bcl:text": "[Repealed 1999-25-23.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1678",
+                    "bcl:marginalnote": "Persons outside British Columbia",
+                    "bcl:num": "31",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1686",
+                            "bcl:num": "1",
+                            "bcl:text": "If a person resident in another province who would be, if resident in British\n          Columbia, a patient as defined under this Act has estate in British Columbia, the\n          Lieutenant Governor in Council may appoint the person who is charged with the duty of\n          managing, handling, administering or caring for the estate of that person in that province\n          to be the committee of the estate of the person in British Columbia."
+                        },
+                        {
+                            "@id": "d2e1695",
+                            "bcl:num": "2",
+                            "bcl:text": "The order in council making an appointment under subsection (1) is conclusive\n          evidence that all conditions precedent to the appointment have been fulfilled."
+                        },
+                        {
+                            "@id": "d2e1704",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "Every person appointed a committee under subsection (1)",
+                                "and this Act applies to the person in the same manner as to the Public Guardian\n          and Trustee acting as the committee of the estate of the person."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1714",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has as committee in respect to the estate of the person in British Columbia the\n            same rights, powers, privileges and immunities as are conferred by this Act on the\n            Public Guardian and Trustee as committee of a patient in British Columbia,\n            and"
+                                },
+                                {
+                                    "@id": "d2e1723",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is subject to the same obligations and must perform the same duties"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1735",
+                            "bcl:num": "4",
+                            "bcl:text": "All acts of a person appointed committee under this section are binding in all\n          courts and land title offices in the same manner and to the same extent as the acts of the\n          Public Guardian and Trustee acting as the committee of the estate of a patient are\n          binding."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

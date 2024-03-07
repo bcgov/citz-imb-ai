@@ -1,0 +1,44 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96067_01",
+        "act:title": "Constitutional Amendment Approval Act",
+        "act:chapter": "67",
+        "act:yearenacted": "1996",
+        "act:content": {
+            "bcl:preamble": {
+                "bcl:marginalnote": "Preamble",
+                "bcl:text": [
+                    "WHEREAS Canadians are involved in reassessing the Constitution of Canada;",
+                    "AND WHEREAS the Constitution of Canada is the Supreme Law of Canada;",
+                    "AND WHEREAS constitutional amendment has an impact on all British Columbians;",
+                    "AND WHEREAS it is essential that the Constitution of Canada reflect the values of British \n  Columbians and that British Columbians have an opportunity to indicate their views on any proposed \n  constitutional amendment;",
+                    "THEREFORE HER MAJESTY, by and with the advice and consent of the Legislative Assembly \n  of the Province of British Columbia, enacts as follows:"
+                ]
+            },
+            "bcl:section": {
+                "@id": "d2e37",
+                "bcl:marginalnote": "Referendum to precede resolution for constitutional change",
+                "bcl:num": "1",
+                "bcl:text": {
+                    "bcl:link": {
+                        "@resource": "leg",
+                        "@xlink:href": "/legislation/96400_01",
+                        "@xlink:type": "locator",
+                        "in:doc": "Referendum Act"
+                    },
+                    "#text": "The government must not introduce a motion for a resolution of the Legislative \n  Assembly authorizing an amendment to the Constitution of Canada unless a referendum has first \n  been conducted under the  with respect to the subject matter of that \n  resolution."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1719 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96144_01",
+        "act:title": "Fire Services Act",
+        "act:chapter": "144",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1198514681/96144/tlc96144_f",
+            "act:tlc": "E3tlc96144"
+        },
+        "act:ccollect": [
+            "statreg_codes_solo",
+            "statreg_vcbc_codes_solo"
+        ],
+        "act:content": {
+            "bcl:section": {
+                "@id": "d2e20",
+                "bcl:marginalnote": "Definitions",
+                "bcl:num": "1",
+                "bcl:text": "In this Act:",
+                "bcl:definition": [
+                    {
+                        "@id": "d2e31",
+                        "bcl:text": {
+                            "in:term": "advisory board",
+                            "#text": "means the Fire Services Advisory Board continued under section\u00a04;"
+                        }
+                    },
+                    {
+                        "@id": "d2e40",
+                        "bcl:text": {
+                            "in:term": "district",
+                            "#text": "means a fire district constituted under this Act;"
+                        }
+                    },
+                    {
+                        "@id": "d2e50",
+                        "bcl:text": {
+                            "in:term": "factory",
+                            "#text": "means a building, premises, workshop, structure, room or place"
+                        },
+                        "bcl:paragraph": [
+                            {
+                                "@id": "d2e59",
+                                "bcl:num": "a",
+                                "bcl:text": "where any manufacturing process or assembling in connection with the manufacturing of products is carried on,"
+                            },
+                            {
+                                "@id": "d2e68",
+                                "bcl:num": "b",
+                                "bcl:text": "where thermal, hydraulic, electrical or other form of energy or power is used to move or work any machinery or device in the preparing, inspecting, manufacturing or finishing, or in a process incidental to the preparing, inspecting, manufacturing or finishing, of a product or is used to aid the manufacturing carried on there,"
+                            },
+                            {
+                                "@id": "d2e77",
+                                "bcl:num": "c",
+                                "bcl:text": "where manual labour is performed by way of trade or for purposes of gain in or incidental to the making of a product, or the altering, repairing, ornamenting, finishing, storing, cleaning, washing or adapting for sale of a product, or"
+                            },
+                            {
+                                "@id": "d2e86",
+                                "bcl:num": "d",
+                                "bcl:text": "used for the maintenance of aircraft, locomotives and motor vehicles;"
+                            }
+                        ]
+                    },
+                    {
+                        "@id": "d2e95",
+                        "bcl:text": {
+                            "in:term": "fire department",
+                            "#text": "includes fire brigade;"
+                        }
+                    },
+                    {
+                        "@id": "d2e105",
+                        "bcl:text": {
+                            "in:term": "fire services personnel",
+                            "#text": "means persons regularly employed by a municipal fire department, appointed as auxiliary members of a fire department, or acting voluntarily as fire fighters;"
+                        }
+                    },
+                    {
+                        "@id": "d2e114",
+                        "bcl:text": {
+                            "in:term": "hotel",
+                            "#text": "includes"
+                        },
+                        "bcl:paragraph": [
+                            {
+                                "@id": "d2e123",
+                                "bcl:num": "a",
+                                "bcl:text": "an apartment house,"
+                            },
+                            {
+                                "@id": "d2e132",
+                                "bcl:num": "b",
+                                "bcl:text": "a residential building that has",
+                                "bcl:subparagraph": [
+                                    {
+                                        "@id": "d2e141",
+                                        "bcl:num": "i",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/98043_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Strata Property Act"
+                                            },
+                                            "#text": "2 or more levels of strata lots as defined in the , and"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d2e153",
+                                        "bcl:num": "ii",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/98043_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Strata Property Act"
+                                            },
+                                            "#text": "one or more corridors that are common property as defined in the , and"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e166",
+                                "bcl:num": "c",
+                                "bcl:text": "a boarding house, lodging house, club or any other building, except a private dwelling, where lodging is provided;"
+                            }
+                        ]
+                    },
+                    {
+                        "@id": "d2e175",
+                        "bcl:text": {
+                            "in:term": "local assistant",
+                            "#text": "means a local assistant to the fire commissioner as described in section\u00a06;"
+                        }
+                    },
+                    {
+                        "@id": "d2e184",
+                        "bcl:text": {
+                            "in:term": "means of exit",
+                            "#text": "means a continuous path of travel provided by a doorway, hallway, corridor, exterior passageway, balcony, lobby, stair, ramp or other exit facility, or a combination of them, for the escape of persons from any point in a building, floor area, room or contained open space to a public thoroughfare or other unobstructed open space and includes exits and access to exits;"
+                        }
+                    },
+                    {
+                        "@id": "d2e193",
+                        "bcl:text": {
+                            "in:term": "occupier",
+                            "#text": "includes"
+                        },
+                        "bcl:paragraph": [
+                            {
+                                "@id": "d2e202",
+                                "bcl:num": "a",
+                                "bcl:text": "a tenant, lessee, agent and any other person who has the right of access to and control of a building or premises to which this Act applies, and"
+                            },
+                            {
+                                "@id": "d2e211",
+                                "bcl:num": "b",
+                                "bcl:text": "in relation to common property and common facilities in a strata plan, the strata corporation;"
+                            }
+                        ]
+                    },
+                    {
+                        "@id": "d2e221",
+                        "bcl:text": {
+                            "in:term": "Provincial building regulations",
+                            "bcl:link": {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/03026_00",
+                                "@xlink:type": "locator",
+                                "in:doc": "Community Charter"
+                            },
+                            "#text": "means the Provincial building regulations as defined in the ;"
+                        }
+                    },
+                    {
+                        "@id": "d2e233",
+                        "bcl:text": {
+                            "in:term": "public building",
+                            "#text": "includes a factory, a warehouse, store, mill, school, hospital, theatre, public hall, office building and any building other than a private dwelling house;"
+                        }
+                    },
+                    {
+                        "@id": "d2e242",
+                        "bcl:text": {
+                            "in:term": "storey",
+                            "#text": "means a division of a building between a floor, not below the grade level of the surrounding ground, and the floor or roof next above;"
+                        }
+                    },
+                    {
+                        "@id": "d2e251",
+                        "bcl:text": {
+                            "in:term": "superintendent",
+                            "bcl:link": {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/96141_00",
+                                "@xlink:type": "locator",
+                                "in:doc": "Financial Institutions Act"
+                            },
+                            "#text": "means the Superintendent of Financial Institutions under the ;"
+                        }
+                    },
+                    {
+                        "@id": "d2e263",
+                        "bcl:text": {
+                            "in:term": "taxable insurer",
+                            "bcl:link": {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/96232_01",
+                                "@xlink:type": "locator",
+                                "in:doc": "Insurance Premium Tax Act"
+                            },
+                            "#text": "has the same meaning as in the ."
+                        }
+                    }
+                ]
+            },
+            "bcl:part": [
+                {
+                    "@id": "d2e276",
+                    "bcl:num": "1",
+                    "bcl:text": "Investigation, Prevention and Suppression of Fires",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e285",
+                            "bcl:marginalnote": "Fire commissioner and staff",
+                            "bcl:num": "2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e293",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e302",
+                                            "bcl:num": "a",
+                                            "bcl:text": "appoint a fire commissioner after a merit-based process,"
+                                        },
+                                        {
+                                            "@id": "d2e311",
+                                            "bcl:num": "b",
+                                            "bcl:text": "define the duties of the fire commissioner, and"
+                                        },
+                                        {
+                                            "@id": "d2e321",
+                                            "bcl:num": "c",
+                                            "bcl:text": "determine the remuneration and other terms and conditions of employment of the fire commissioner."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e330",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96385_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Public Service Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96388_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Public Service Labour Relations Act"
+                                            }
+                                        ],
+                                        "#text": "The  and the  do not apply to the fire commissioner."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e345",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96386_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Public Service Benefit Plan Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/99044_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Public Sector Pension Plans Act"
+                                            }
+                                        ],
+                                        "#text": "The  and the Public Service Pension Plan, continued under the , apply to the fire commissioner."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e360",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96385_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Service Act"
+                                        },
+                                        "#text": "Staff required for the work of the fire commissioner must be appointed under the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e373",
+                            "bcl:marginalnote": "Duties of fire commissioner",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e381",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The fire commissioner must, for fire prevention and inspection, do the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e390",
+                                            "bcl:num": "a",
+                                            "bcl:text": "collect and disseminate information about fires in British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e399",
+                                            "bcl:num": "b",
+                                            "bcl:text": "investigate and inquire into a fire as the fire commissioner believes advisable;"
+                                        },
+                                        {
+                                            "@id": "d2e409",
+                                            "bcl:num": "c",
+                                            "bcl:text": "investigate conditions under which fires are likely to occur;"
+                                        },
+                                        {
+                                            "@id": "d2e418",
+                                            "bcl:num": "d",
+                                            "bcl:text": "study methods of fire prevention;"
+                                        },
+                                        {
+                                            "@id": "d2e427",
+                                            "bcl:num": "e",
+                                            "bcl:text": "give the advice and recommendations the fire commissioner considers necessary on matters in subsection (2)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e436",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Matters for advice and recommendation of the fire commissioner are the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e445",
+                                            "bcl:num": "a",
+                                            "bcl:text": "provision of an adequate water supply;"
+                                        },
+                                        {
+                                            "@id": "d2e454",
+                                            "bcl:num": "b",
+                                            "bcl:text": "installation and maintenance of a fire alarm system and fire extinguishing equipment;"
+                                        },
+                                        {
+                                            "@id": "d2e464",
+                                            "bcl:num": "c",
+                                            "bcl:text": "enactment and enforcement of municipal bylaws for fire prevention or to protect life and property from fire;"
+                                        },
+                                        {
+                                            "@id": "d2e473",
+                                            "bcl:num": "d",
+                                            "bcl:text": "planning of a municipal area to protect against fire;"
+                                        },
+                                        {
+                                            "@id": "d2e482",
+                                            "bcl:num": "e",
+                                            "bcl:text": "lightning rods;"
+                                        },
+                                        {
+                                            "@id": "d2e491",
+                                            "bcl:num": "f",
+                                            "bcl:text": "any other fire prevention and inspection matter."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e500",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The fire commissioner must, for fire suppression, do the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e509",
+                                            "bcl:num": "a",
+                                            "bcl:text": "consult with and give information and advice to fire chiefs and fire departments;"
+                                        },
+                                        {
+                                            "@id": "d2e519",
+                                            "bcl:num": "b",
+                                            "bcl:text": "establish, in consultation with the advisory board and subject to the minister's approval, minimum standards for selection and training of fire services personnel;"
+                                        },
+                                        {
+                                            "@id": "d2e528",
+                                            "bcl:num": "c",
+                                            "bcl:text": "give the advice and recommendations the fire commissioner considers necessary on the establishment of fire departments."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e537",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The fire commissioner must help to enforce all enactments on combustibles, explosives and other flammable matter."
+                                },
+                                {
+                                    "@id": "d2e546",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The fire commissioner must perform other duties required by the minister."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e556",
+                            "bcl:marginalnote": "Fire Services Advisory Board",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e564",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Fire Services Advisory Board is continued consisting of the fire commissioner as chair and other members appointed by the Lieutenant Governor in Council."
+                                },
+                                {
+                                    "@id": "d2e573",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The members of the advisory board hold office for the term determined by the Lieutenant Governor in Council."
+                                },
+                                {
+                                    "@id": "d2e582",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Each member of the advisory board must be reimbursed for reasonable travelling and out of pocket expenses necessarily incurred by the member in the discharge of duties and, in addition, must be paid the remuneration for services set by the Lieutenant Governor in Council."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e593",
+                            "bcl:marginalnote": "Duties of advisory board",
+                            "bcl:num": "5",
+                            "bcl:text": "The advisory board",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e604",
+                                    "bcl:num": "a",
+                                    "bcl:text": "may advise the fire commissioner on all aspects of operational fire services,"
+                                },
+                                {
+                                    "@id": "d2e613",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must, on request of the minister, investigate and prepare a report on fire suppression, and"
+                                },
+                                {
+                                    "@id": "d2e623",
+                                    "bcl:num": "c",
+                                    "bcl:text": "must perform other duties required by the minister."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e633",
+                            "bcl:marginalnote": "Long service and bravery medals",
+                            "bcl:num": "5.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e641",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In recognition of the significant contribution to the protection of persons and property that is made by fire fighters and others involved in the provision of fire services, the fire commissioner may issue medals for long service."
+                                },
+                                {
+                                    "@id": "d2e650",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In recognition of bravery beyond that expected of fire fighters and others involved in the provision of fire services in the normal course of their duties, the fire commissioner may issue medals for bravery."
+                                },
+                                {
+                                    "@id": "d2e659",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Long service and bravery medals issued by the fire commissioner before this section comes into force are deemed to be medals issued under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e669",
+                            "bcl:marginalnote": "Local assistants",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e677",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The local assistants to the fire commissioner are as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e686",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in a municipality that maintains a fire department, the fire chief and persons authorized in writing by the fire chief to exercise the powers of a local assistant;"
+                                        },
+                                        {
+                                            "@id": "d2e695",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in a municipality that does not maintain a fire department, the mayor of the municipality or another person appointed as a local assistant by the fire commissioner;"
+                                        },
+                                        {
+                                            "@id": "d2e705",
+                                            "bcl:num": "c",
+                                            "bcl:text": "in any other part of British Columbia, a person appointed as a local assistant by the fire commissioner."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e714",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The fire commissioner may appoint local assistants for the purposes of this Act."
+                                },
+                                {
+                                    "@id": "d2e723",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If no local assistant has been appointed in an area of British Columbia not in a municipality or the appointed local assistant has ceased to act, the members of the police force or police department stationed in the area are local assistants until another local assistant is appointed by the fire commissioner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e733",
+                            "bcl:marginalnote": "Peace officer",
+                            "bcl:num": "7",
+                            "bcl:text": "The fire commissioner and the commissioner's inspectors, and local assistants have the powers of a peace officer for the purposes of this Act."
+                        },
+                        {
+                            "@id": "d2e745",
+                            "bcl:marginalnote": "Fire districts",
+                            "bcl:num": "8",
+                            "bcl:text": "The fire commissioner may by notice in the Gazette constitute a part of British Columbia not included in a municipality into a fire district, and extend, reduce or annul the fire district."
+                        },
+                        {
+                            "@id": "d2e757",
+                            "bcl:marginalnote": "Investigation of fires",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e765",
+                                    "bcl:num": "1",
+                                    "bcl:text": "To ascertain whether a fire was due to accident, negligence or design, a local assistant must, within 3\u00a0days after the fire, excluding holidays, investigate or have investigated in a general way the cause, origin and circumstances of each fire",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e774",
+                                            "bcl:num": "a",
+                                            "bcl:text": "occurring in the municipality, district or part of British Columbia for which he or she is a local assistant, and"
+                                        },
+                                        {
+                                            "@id": "d2e783",
+                                            "bcl:num": "b",
+                                            "bcl:text": "destroying or damaging property or as a result of which death has occurred."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e793",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Immediately after an investigation under subsection (1), the local assistant must submit to the fire commissioner a report containing",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e802",
+                                            "bcl:num": "a",
+                                            "bcl:text": "all facts ascertained about the cause, origin and circumstances of the fire, and"
+                                        },
+                                        {
+                                            "@id": "d2e811",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any further information required by the fire commissioner."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e820",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The report required under subsection (2) must be submitted in a format and by the means approved by the fire commissioner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e831",
+                            "bcl:marginalnote": "Authority to enter",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e839",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The local assistant, the fire commissioner and the commissioner's inspectors have authority at all times, by day or night, to enter and to examine a building, premises, motor vehicle, vessel or railway rolling stock where a fire has occurred, and, if necessary, those adjoining or near the fire."
+                                },
+                                {
+                                    "@id": "d2e848",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An investigator may exclude a person from the building, premises, motor vehicle, vessel or railway rolling stock where the fire has occurred."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e858",
+                            "bcl:marginalnote": "Duty of persons to furnish information",
+                            "bcl:num": "11",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e866",
+                                    "bcl:num": "1",
+                                    "bcl:text": "It is the duty of the occupier or, if none, of the owner of a building, premises, motor vehicle, vessel or railway rolling stock where a fire occurs to report the fire immediately to the local assistant, or to a Provincial or municipal police officer or constable in whose district the fire occurs."
+                                },
+                                {
+                                    "@id": "d2e875",
+                                    "bcl:num": "2",
+                                    "bcl:text": "It is the duty of every owner and occupier of, and every person residing or employed at, a building, premises, motor vehicle, vessel or railway rolling stock where a fire occurs to furnish, at the request of the local assistant, fire commissioner or the commissioner's inspectors, information he or she has relating to a fire or the property it destroyed or damaged."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e885",
+                            "bcl:marginalnote": "Remuneration of local assistant",
+                            "bcl:num": "12",
+                            "bcl:text": "For each fire investigated and reported by a local assistant to the satisfaction of the fire commissioner, the local assistant must be paid out of the consolidated revenue fund the sum prescribed by the Lieutenant Governor in Council and his or her necessary expenses in obtaining required information."
+                        },
+                        {
+                            "@id": "d2e897",
+                            "bcl:marginalnote": "Preliminary report of suspicious fire",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e905",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a fire appears to be of suspicious origin, the local assistant and each insurer interested in the property destroyed or damaged by it must immediately make a preliminary report to the fire commissioner, stating",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e914",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the name of the owner and occupier of the property,"
+                                        },
+                                        {
+                                            "@id": "d2e923",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the location, use and occupancy of the property,"
+                                        },
+                                        {
+                                            "@id": "d2e933",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the date of the fire, and"
+                                        },
+                                        {
+                                            "@id": "d2e942",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the facts that tend to establish the cause or origin of the fire."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e951",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A preliminary report must be in addition to the report under section\u00a09 or\u00a019."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e961",
+                            "bcl:marginalnote": "Inquiry by fire commissioner or other person",
+                            "bcl:num": "14",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e969",
+                                    "bcl:num": "1",
+                                    "bcl:text": "On receipt of a preliminary report, or in a case where he or she thinks it advisable, the fire commissioner may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e978",
+                                            "bcl:num": "a",
+                                            "bcl:text": "hold an inquiry into the cause, origin, and circumstances of the fire, or"
+                                        },
+                                        {
+                                            "@id": "d2e987",
+                                            "bcl:num": "b",
+                                            "bcl:text": "direct a judge of the Provincial Court, Justice of the Peace or a competent person to hold the inquiry."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e997",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person directed by the fire commissioner to hold an inquiry must without delay, on completion of the inquiry, send a report of the inquiry to the fire commissioner."
+                                },
+                                {
+                                    "@id": "d2e1006",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The report under subsection (2) must give the person's opinion on the cause and origin of the fire and whether it appears to be of incendiary origin."
+                                },
+                                {
+                                    "@id": "d2e1015",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The evidence taken at the inquiry must also be sent to the fire commissioner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1025",
+                            "bcl:marginalnote": "Retention of insurance money",
+                            "bcl:num": "15",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1033",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Pending an inquiry under section 14, the fire commissioner may permit the withholding of payment under a policy of insurance on property destroyed or damaged by the fire for a period of not longer than 90\u00a0days after completion of the proof of loss, despite a statutory provision or a condition in the policy to the contrary."
+                                },
+                                {
+                                    "@id": "d2e1042",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The insurer and the insured must be notified by registered letter of action under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1053",
+                            "bcl:marginalnote": "Powers and procedure at inquiry",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1061",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "If the fire commissioner or a person holds an inquiry under this Part, sections\u00a043 to\u00a053,\u00a055,\u00a065\u00a0(2) and\u00a0(3) and\u00a067\u00a0(1) of the  apply, with the necessary changes except that in applying section 67 (1), the limitation on adjournment is 30 days."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1073",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The fire commissioner or a person holding an inquiry has the following powers:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1082",
+                                            "bcl:num": "a",
+                                            "bcl:text": "to enter, as set out in section 10;"
+                                        },
+                                        {
+                                            "@id": "d2e1092",
+                                            "bcl:num": "b",
+                                            "bcl:text": "to hold the inquiry in private, to exclude persons not required or permitted by this Act to be present, and to keep witnesses apart from each other so that they may not communicate with each other until they have been examined;"
+                                        },
+                                        {
+                                            "@id": "d2e1101",
+                                            "bcl:num": "c",
+                                            "bcl:text": "to employ the technical, scientific, clerical or other assistance he or she considers necessary;"
+                                        },
+                                        {
+                                            "@id": "d2e1110",
+                                            "bcl:num": "d",
+                                            "bcl:text": "to require the assistance of peace officers."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1119",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For an inquiry in a municipality, other than the Cities of Vancouver and Victoria, the municipality must, if no suitable place in a Provincial building is available, at the request of the fire commissioner provide a suitable place to hold the inquiry."
+                                },
+                                {
+                                    "@id": "d2e1128",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If no suitable place is provided, one may be procured at the expense of the municipality."
+                                },
+                                {
+                                    "@id": "d2e1137",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "The fees payable to justices and to witnesses under the  are payable, with the necessary changes, for an inquiry under this Part, but no fees are payable to a judge of the Provincial Court."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1150",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Fees and necessary expenses for an inquiry under this Part must be paid out of the consolidated revenue fund."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1160",
+                            "bcl:marginalnote": "Right of interested person to be present",
+                            "bcl:num": "17",
+                            "bcl:text": "A person interested may appear at an inquiry and be heard in person or by counsel."
+                        },
+                        {
+                            "@id": "d2e1172",
+                            "bcl:marginalnote": "Report to Attorney General of evidence of arson",
+                            "bcl:num": "18",
+                            "bcl:text": "If there is evidence sufficient to charge a person with the crime of arson or an attempt to commit arson, the fire commissioner must at once report to the Attorney General, and provide the Attorney General with the evidence the fire commissioner possesses and the names of witnesses."
+                        },
+                        {
+                            "@id": "d2e1184",
+                            "bcl:marginalnote": "Report by insurer",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1192",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A taxable insurer must furnish to the fire commissioner at the end of each calendar month a report, in the form provided, of every fire in which it is interested as insurer occurring in British Columbia during the month."
+                                },
+                                {
+                                    "@id": "d2e1201",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In the case of any insurance claim made against any insurer other than a taxable insurer, in respect of a fire occurring in British Columbia, the person making or adjusting the claim must furnish to the fire commissioner a report in the form provided."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1211",
+                            "bcl:marginalnote": "Record of reported fires",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1219",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The fire commissioner must keep a statistical record of all fires reported to the fire commissioner."
+                                },
+                                {
+                                    "@id": "d2e1228",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The record referred to in subsection (1) must be available at the office of the fire commissioner for inspection by the public."
+                                },
+                                {
+                                    "@id": "d2e1237",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The fire commissioner may allow a person to inspect a document in the office of the fire commissioner relating to a reported fire and may supply a person with a copy of a document on payment of the prescribed fee."
+                                },
+                                {
+                                    "@id": "d2e1247",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The Lieutenant Governor in Council may prescribe fees for the purposes of subsection\u00a0(3)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1257",
+                            "bcl:marginalnote": "Inspection of fire hazards",
+                            "bcl:num": "21",
+                            "bcl:text": "On complaint of a person interested or, if believed advisable, without complaint, the fire commissioner and the commissioner's inspectors may at all reasonable hours enter any premises anywhere in British Columbia to inspect them and ascertain whether or not any of the following conditions exist:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1268",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the premises are in a state of disrepair that a fire starting in them might spread rapidly to endanger life or other property;"
+                                },
+                                {
+                                    "@id": "d2e1277",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the premises are so used or occupied that fire would endanger life or property;"
+                                },
+                                {
+                                    "@id": "d2e1287",
+                                    "bcl:num": "c",
+                                    "bcl:text": "combustible or explosive material is kept or other flammable conditions exist on the premises so as to endanger life or property;"
+                                },
+                                {
+                                    "@id": "d2e1296",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a fire hazard exists on the premises."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1307",
+                            "bcl:marginalnote": "Order to remedy conditions",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1315",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After an inspection the fire commissioner, or an inspector with the fire commissioner's authority, may in writing order that within a reasonable time, to be set by the order,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1324",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if section 21 (a) applies, the owner remove or destroy the premises, or the owner or occupier repair the premises,"
+                                        },
+                                        {
+                                            "@id": "d2e1333",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if section 21 (b) applies, the owner or occupier alter the use or occupancy of the premises,"
+                                        },
+                                        {
+                                            "@id": "d2e1343",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if section 21 (c) applies, the occupier remove or keep securely the combustible or explosive material or remedy the flammable conditions, and"
+                                        },
+                                        {
+                                            "@id": "d2e1352",
+                                            "bcl:num": "d",
+                                            "bcl:text": "if section 21 (d) applies, the owner or occupier remove or take proper precautions against the fire hazard."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1361",
+                                    "bcl:num": "2",
+                                    "bcl:text": "After the receipt of an order, the owner, occupier or person in charge must comply with it."
+                                },
+                                {
+                                    "@id": "d2e1370",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subject to an agreement to the contrary,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1379",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the cost of complying with an order must be borne by the owner, and"
+                                        },
+                                        {
+                                            "@id": "d2e1388",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the occupier pays the cost, the occupier has a right of action or set off against the owner for the cost actually and necessarily paid in complying with the order."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1398",
+                                    "bcl:num": "4",
+                                    "bcl:text": "[Repealed 1997-25-6.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1408",
+                            "bcl:marginalnote": "Order where owner absent",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1416",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If there is no occupier of premises about which an order is made, and the owner is absent from British Columbia or the owner's whereabouts are unknown, the fire commissioner may carry out an order involving an expenditure of not more than $100 and, with the approval of the Attorney General, any other order."
+                                },
+                                {
+                                    "@id": "d2e1425",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the land on which the premises are located is in a municipality, the fire commissioner must certify to the municipal financial officer the costs actually and necessarily incurred in carrying out the order."
+                                },
+                                {
+                                    "@id": "d2e1434",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The municipal officer referred to in subsection (2) must pay the amount to the fire commissioner from the ordinary revenue of the municipality."
+                                },
+                                {
+                                    "@id": "d2e1444",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "in:desc": "[taxes are a special charge on the land]",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/03026_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Community Charter"
+                                        },
+                                        "#text": "The amount paid under subsection (3) forms a special charge, within the meaning of section 250\u00a0 of the , on the land and the improvements in favour of the municipality, and is for all purposes deemed to be delinquent taxes on the land under that Act from the date of the payment."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1459",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/03026_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Community Charter"
+                                        },
+                                        "#text": "The  applies to the collection and recovery of amounts deemed to be delinquent taxes under subsection (4)."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1471",
+                                    "bcl:num": "6",
+                                    "bcl:text": "If the land on which the premises are located is a rural area, the fire commissioner must certify the cost to the surveyor of taxes."
+                                },
+                                {
+                                    "@id": "d2e1480",
+                                    "bcl:num": "7",
+                                    "bcl:text": "Costs certified under subsection (6) form a lien and charge on the land in favour of the government and are for all purposes delinquent taxes from the date of the certificate."
+                                },
+                                {
+                                    "@id": "d2e1489",
+                                    "bcl:num": "8",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96448_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Taxation (Rural Area) Act"
+                                        },
+                                        "#text": "The  applies to the collection and recovery of delinquent taxes under subsection (7)."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1501",
+                                    "bcl:num": "9",
+                                    "bcl:text": "Money recovered under a certificate under subsection (6) must be accounted for as part of the consolidated revenue fund."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1511",
+                            "bcl:marginalnote": "Power of local assistants",
+                            "bcl:num": "24",
+                            "bcl:text": "A local assistant may, in the municipality or part of British Columbia for which he or she is a local assistant, exercise the powers conferred by sections 21 and 22 and, with the written approval of the fire commissioner, the powers conferred by section 23."
+                        },
+                        {
+                            "@id": "d2e1523",
+                            "bcl:marginalnote": "Emergencies",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1531",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If an emergency arising from a fire hazard or from a risk of explosion causes the fire commissioner to be apprehensive of imminent and serious danger to life or property, or of a panic, the fire commissioner may immediately take the steps he or she thinks advisable to remove the hazard or risk."
+                                },
+                                {
+                                    "@id": "d2e1540",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For the purposes of subsection (1), the fire commissioner may evacuate a building or area, and may call on the police and fire prevention authorities who have jurisdiction to provide assistance."
+                                },
+                                {
+                                    "@id": "d2e1549",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the fire commissioner believes that conditions exist in or near a hotel or public building, that, in the event of a fire, might seriously endanger life or property, the fire commissioner may immediately take the action he or she believes advisable to remedy the conditions to eliminate the danger and may evacuate and close the hotel or public building."
+                                },
+                                {
+                                    "@id": "d2e1559",
+                                    "bcl:num": "4",
+                                    "bcl:text": "For the purposes of subsection (3), the fire commissioner may call on the assistance of peace officers and fire prevention authorities."
+                                },
+                                {
+                                    "@id": "d2e1568",
+                                    "bcl:num": "5",
+                                    "bcl:text": "An appeal by petition to the Supreme Court may be taken by a person injuriously affected by the closure of a hotel or public building under subsection (3)."
+                                },
+                                {
+                                    "@id": "d2e1577",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The petition must be filed in the court registry within 5\u00a0days after the order of closure and the fire commissioner must be given notice in writing of the petition."
+                                },
+                                {
+                                    "@id": "d2e1586",
+                                    "bcl:num": "7",
+                                    "bcl:text": "The court may make any order it considers just."
+                                },
+                                {
+                                    "@id": "d2e1595",
+                                    "bcl:num": "8",
+                                    "bcl:text": "An appeal from an order under subsection (7) lies to the Court of Appeal with leave of a justice of the Court of Appeal."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1605",
+                            "bcl:marginalnote": "Municipal duty to inspect hotels and public buildings",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1613",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A municipal council must provide for a regular system of inspection of hotels and public buildings in the municipality."
+                                },
+                                {
+                                    "@id": "d2e1622",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A municipal council may authorize persons, in addition to the local assistant, to exercise within the municipality some or all of the powers under sections\u00a021 to\u00a023."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1632",
+                            "bcl:marginalnote": "Appeal to fire commissioner",
+                            "bcl:num": "27",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1640",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a local assistant makes an order under sections\u00a021 to\u00a024 to remove or to keep secure combustible or explosive material or to remedy a flammable condition, the occupier may appeal to the fire commissioner by registered letter mailed within 48 hours after receipt of the order."
+                                },
+                                {
+                                    "@id": "d2e1649",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a local assistant makes an order under sections\u00a021 to\u00a024 to repair, remove or destroy premises, or to alter the use or occupancy of premises, or to remove or to take proper precautions against a fire hazard, the owner or occupier may appeal to the fire commissioner by registered letter mailed within 10\u00a0days after receipt of the order."
+                                },
+                                {
+                                    "@id": "d2e1658",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The fire commissioner must promptly investigate each appeal, affirm, modify or revoke the order appealed from, and in writing communicate the decision and the reasons to the owner or occupier and to the maker of the order."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1669",
+                            "bcl:marginalnote": "Other appeals",
+                            "bcl:num": "28",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1677",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If an order under section 21, 22, 23, 24, 27 or 30 involves the loss or expenditure of more than\u00a0$500, the owner or occupier, if dissatisfied with the order or decision, may, within 5 days of its receipt apply for review of it by petition to the Supreme Court."
+                                },
+                                {
+                                    "@id": "d2e1686",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An application under subsection (1) must be commenced at a registry of the Supreme Court located in the judicial district where the property lies."
+                                },
+                                {
+                                    "@id": "d2e1695",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The owner or occupier must file the petition with the registrar of the court and give notice of it in writing to the fire commissioner."
+                                },
+                                {
+                                    "@id": "d2e1705",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The court must hear and determine the appeal and make the order it believes proper."
+                                },
+                                {
+                                    "@id": "d2e1714",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The decision under subsection (4) is final, except that on a point of law an appeal lies to the Court of Appeal."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1724",
+                            "bcl:marginalnote": "Delegation of appeal powers",
+                            "bcl:num": "29",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1732",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The fire commissioner may delegate in writing any of the fire commissioner's powers, duties or functions respecting an appeal under this Act."
+                                },
+                                {
+                                    "@id": "d2e1741",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The decision of a delegate is a decision of the fire commissioner for the purposes of section\u00a028."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1751",
+                    "bcl:num": "2",
+                    "bcl:text": "Escape From Fire",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1760",
+                            "bcl:marginalnote": "Escape from fire",
+                            "bcl:num": "30",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1768",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An owner or occupier of a hotel or public building must provide means of exit from the hotel or public building in accordance with the Provincial building regulations."
+                                },
+                                {
+                                    "@id": "d2e1777",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The owner or occupier must keep the means of exit unobstructed and in good repair."
+                                },
+                                {
+                                    "@id": "d2e1786",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The fire commissioner may order an owner or occupier of a hotel or public building to provide or make alterations to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1796",
+                                            "bcl:num": "a",
+                                            "bcl:text": "fire and smoke detection, fire alarm, fire extinguishing and emergency lighting systems, and"
+                                        },
+                                        {
+                                            "@id": "d2e1805",
+                                            "bcl:num": "b",
+                                            "bcl:text": "means of exit, regardless of subsection (1)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1814",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A local assistant may order an owner or occupier of a hotel or public building to provide or make alterations to systems of fire and smoke detection, fire alarm, fire extinguishing and emergency lighting and means of exit, to the extent that the order does not set requirements which exceed those established by the Provincial building regulations."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1824",
+                            "bcl:marginalnote": "Means of exit, etc.",
+                            "bcl:num": "31",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1832",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "approved",
+                                        "#text": "In this section,  means approved by the fire commissioner."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1844",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An owner or occupier of a hotel or public building which is required under this Part to have a means of exit must do the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1853",
+                                            "bcl:num": "a",
+                                            "bcl:text": "keep posted in all main halls and at the intersections of all cross halls of the hotel or public building conspicuous signs indicating the means of exit;"
+                                        },
+                                        {
+                                            "@id": "d2e1863",
+                                            "bcl:num": "b",
+                                            "bcl:text": "keep posted in each apartment or room a conspicuous notice describing the means of exit, with instructions to be followed in the event of fire;"
+                                        },
+                                        {
+                                            "@id": "d2e1872",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if the building is occupied, ensure that the means of exit has approved illumination, and if the illumination is artificial, has an approved emergency lighting system;"
+                                        },
+                                        {
+                                            "@id": "d2e1881",
+                                            "bcl:num": "d",
+                                            "bcl:text": "provide an alarm gong or similar equipment required by regulation;"
+                                        },
+                                        {
+                                            "@id": "d2e1890",
+                                            "bcl:num": "e",
+                                            "bcl:text": "if the fire commissioner orders, provide and keep in good repair a sprinkler system of an approved type;"
+                                        },
+                                        {
+                                            "@id": "d2e1899",
+                                            "bcl:num": "f",
+                                            "bcl:text": "ensure that smoke and fire doors or closures are kept closed when not in use for access, unless they are automatically controlled by an approved fire or smoke detection system;"
+                                        },
+                                        {
+                                            "@id": "d2e1908",
+                                            "bcl:num": "g",
+                                            "bcl:text": "for a hotel, hospital, community care facility or other building with sleeping accommodation and used for the care of persons, adopt, and have the employees in the building practise, an approved fire drill system;"
+                                        },
+                                        {
+                                            "@id": "d2e1918",
+                                            "bcl:num": "h",
+                                            "bcl:text": "for a school, child care facility, children's home or other institution for children's education or care, adopt, and have all persons in the premises practise, an approved fire drill system."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1928",
+                            "bcl:marginalnote": "Doors to open outward",
+                            "bcl:num": "32",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1936",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The outside doors and the main inside doors of a building used as a church, school, theatre, hall or place of public resort",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1945",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must open freely outward, and"
+                                        },
+                                        {
+                                            "@id": "d2e1954",
+                                            "bcl:num": "b",
+                                            "bcl:text": "while the building is so used, must not be bolted, locked or otherwise secured shut or obstructed in a manner that, in the opinion of the fire commissioner, prevents the rapid exit of persons inside the building."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1964",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The gates in a fence enclosing a building used as a church, school, theatre, hall or place of public resort must, if not hung to open outward, be kept open by proper fastenings when the building is so used."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1975",
+                            "bcl:marginalnote": "Orders to comply with this Part",
+                            "bcl:num": "33",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1983",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the owner or occupier of a hotel or public building fails to provide, keep in good repair, alter or improve a means of exit, alarm gong or other equipment required by this Part, the local assistant authorized by this Part to inspect the hotel or public building may in writing order the owner or occupier to comply with the requirement within a reasonable time stated in the order."
+                                },
+                                {
+                                    "@id": "d2e1992",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The local assistant must deliver the order to the owner or occupier, who must comply with it."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2002",
+                            "bcl:marginalnote": "Appeal",
+                            "bcl:num": "34",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2010",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The owner or occupier may, within 10\u00a0days after the receipt of the order, appeal to the fire commissioner."
+                                },
+                                {
+                                    "@id": "d2e2019",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Section 27 applies to an appeal and, if the order involves the expenditure of a sum exceeding\u00a0$500, section\u00a028 also applies."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2029",
+                            "bcl:marginalnote": "Cost of complying with this Part",
+                            "bcl:num": "35",
+                            "bcl:text": "The cost of providing, keeping in good repair, altering and improving a means of exit, alarm gong or other similar equipment under this Part is governed by the rules in section 22 (3)."
+                        },
+                        {
+                            "@id": "d2e2041",
+                            "bcl:marginalnote": "Inspection of buildings",
+                            "bcl:num": "36",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2049",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this section:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d2e2058",
+                                            "bcl:text": {
+                                                "in:term": "building",
+                                                "#text": "includes a hotel, public building, church, theatre, hall or other building used as a place of public resort;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2067",
+                                            "bcl:text": {
+                                                "in:term": "officer",
+                                                "#text": "means a local assistant and, in a municipality, the chief police officer and any other person authorized by the municipal council to exercise some or all of a local assistant's powers under this Part."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2077",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An officer has power at any time to enter a building to inspect it and ascertain whether this Part is being complied with."
+                                },
+                                {
+                                    "@id": "d2e2086",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A municipal council must provide for a regular system of inspection by an officer of buildings in the municipality."
+                                },
+                                {
+                                    "@id": "d2e2095",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The fire commissioner and the commissioner's inspectors may exercise the powers of an officer anywhere in British Columbia."
+                                },
+                                {
+                                    "@id": "d2e2104",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/19001_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Workers Compensation Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/19001_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Workers Compensation Act"
+                                            }
+                                        ],
+                                        "#text": "An officer under Part 2 of the  or the regulations made under it has the powers of an officer for a factory in the area for which the officer under the  is appointed."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2120",
+                    "bcl:num": "3",
+                    "bcl:text": "General Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2129",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "37-39",
+                            "bcl:text": "[Repealed 1998-5-11.]"
+                        },
+                        {
+                            "@id": "d2e2142",
+                            "bcl:marginalnote": "Accounting for money received",
+                            "bcl:num": "40",
+                            "bcl:text": "All licence and other fees, money and fines collected or recovered under this Act must be accounted for as part of the consolidated revenue fund."
+                        },
+                        {
+                            "@id": "d2e2154",
+                            "bcl:marginalnote": "Badges for local assistants",
+                            "bcl:num": "41",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2162",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The fire commissioner must issue a metal badge, with a serial number, to each local assistant and to each person authorized by a municipal council under section\u00a026."
+                                },
+                                {
+                                    "@id": "d2e2171",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The person to whom a badge is issued must wear and on request exhibit the badge when engaged in the performance of duties under this Act."
+                                },
+                                {
+                                    "@id": "d2e2180",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The badge must be returned when the authority of the holder under this Act ceases."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2190",
+                            "bcl:marginalnote": "Orders affecting strata lots",
+                            "bcl:num": "41.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2198",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/98043_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Strata Property Act"
+                                        },
+                                        "#text": "An order under section 22, 30 or 33 that applies to a strata lot may be delivered to the strata corporation by service in accordance with section\u00a063 of the  if any of the following circumstances apply:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2210",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the order cannot be delivered to the owner or occupier of the strata lot after reasonable efforts at delivery;"
+                                        },
+                                        {
+                                            "@id": "d2e2219",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the order has been delivered to the owner or occupier, but the owner or occupier does not appeal the order and does not comply with the order;"
+                                        },
+                                        {
+                                            "@id": "d2e2229",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the order has been upheld on appeal under section\u00a027, 28 or\u00a034, but the owner or occupier does not comply with the order."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2238",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An order under section 22, 30 or 33 that applies to 6 or more strata lots",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2247",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is not required to be delivered to the owners or occupiers of the strata lots, and"
+                                        },
+                                        {
+                                            "@id": "d2e2256",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/98043_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Strata Property Act"
+                                                },
+                                                "#text": "may instead be delivered to the strata corporation by service in accordance with section\u00a063 of the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2268",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If an order is delivered to a strata corporation under subsection (1) or (2), the strata corporation is deemed to be an occupier of the strata lots to which the order applies and must comply with the order."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2278",
+                            "bcl:marginalnote": "Annual report",
+                            "bcl:num": "42",
+                            "bcl:text": "By April 1 in each year, the fire commissioner must submit to the minister a detailed report of the commissioner's administration made up to the preceding December\u00a031."
+                        },
+                        {
+                            "@id": "d2e2290",
+                            "bcl:marginalnote": "Actions against officers",
+                            "bcl:num": "43",
+                            "bcl:text": "Without the leave of the Attorney General, an action or proceeding must not be brought or taken against the fire commissioner or a local assistant to the fire commissioner or an officer on the fire commissioner's staff for anything done or omitted in the performance or intended performance of duties under this Act."
+                        },
+                        {
+                            "@id": "d2e2302",
+                            "bcl:marginalnote": "Offences",
+                            "bcl:num": "44",
+                            "bcl:text": "A person who does any of the following commits an offence:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2313",
+                                    "bcl:num": "a",
+                                    "bcl:text": "obstructs the fire commissioner or a local assistant or other person in the execution of his or her duties under this Act;"
+                                },
+                                {
+                                    "@id": "d2e2322",
+                                    "bcl:num": "b",
+                                    "bcl:text": "refuses or neglects to admit to any building or premises for any purpose of this Act the fire commissioner or a local assistant or other person who under this Act is entitled to enter;"
+                                },
+                                {
+                                    "@id": "d2e2332",
+                                    "bcl:num": "c",
+                                    "bcl:text": "contravenes a provision of this Act or regulations where no separate offence is provided."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2343",
+                            "bcl:marginalnote": "Offence by owner or occupier",
+                            "bcl:num": "45",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2351",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An owner or occupier of a building or premises who fails to comply with an order made under this Act commits an offence."
+                                },
+                                {
+                                    "@id": "d2e2360",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "A person who commits an offence under subsection (1) is liable on conviction to the penalties provided in the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2372",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In the case of a continuing offence, a person who commits the offence is liable to a further penalty of not more than $50 for each day during which the offence continues."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2382",
+                            "bcl:marginalnote": "Offence by local assistant",
+                            "bcl:num": "46",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2390",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A local assistant who refuses or neglects to comply with a requirement of this Act or the regulations commits an offence."
+                                },
+                                {
+                                    "@id": "d2e2399",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person who commits an offence under subsection (1) is liable, on conviction, to a fine of not more than $100."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2409",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "47",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2417",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The minister may make regulations referred to in section\u00a041 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2429",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the minister may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2438",
+                                            "bcl:num": "a",
+                                            "bcl:text": "regulating manufacturing or trades dangerous in causing or promoting fire;"
+                                        },
+                                        {
+                                            "@id": "d2e2448",
+                                            "bcl:num": "b",
+                                            "bcl:text": "regulating the manufacture, storage, carriage, sale and disposal of a combustible, explosive or flammable matter;"
+                                        },
+                                        {
+                                            "@id": "d2e2457",
+                                            "bcl:num": "c",
+                                            "bcl:text": "regulating or prohibiting the dealing in, keeping for sale or disposing of a fireball, firecracker, squib, cannon cracker, basket bomb, giant cracker, sky rocket, Roman candle, mine, torpedo or other firework;"
+                                        },
+                                        {
+                                            "@id": "d2e2466",
+                                            "bcl:num": "d",
+                                            "bcl:text": "governing the location, construction, occupancy, ventilation and safety of community halls, hospitals, nurses' residences, nursing homes, children's homes, apartment houses, public garages, churches, theatres, office buildings, public halls and other public buildings and places of a public or semi-public nature designated for this paragraph by regulation;"
+                                        },
+                                        {
+                                            "@id": "d2e2475",
+                                            "bcl:num": "e",
+                                            "bcl:text": "regulating or prohibiting the sale, maintenance, installation or use in any building or premises, of an appliance, fixture or thing likely to cause or promote fire;"
+                                        },
+                                        {
+                                            "@id": "d2e2484",
+                                            "bcl:num": "f",
+                                            "bcl:text": "standardizing hose couplings and connections;"
+                                        },
+                                        {
+                                            "@id": "d2e2493",
+                                            "bcl:num": "g",
+                                            "bcl:text": "adopting all or part of the National Fire Code of Canada and any other code or standard on fire standards and fire safety, and amending a code or standard adopted under this paragraph;"
+                                        },
+                                        {
+                                            "@id": "d2e2503",
+                                            "bcl:num": "h",
+                                            "bcl:text": "for the purpose of adopting a code or standard under paragraph (g)",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2512",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "designating one or more persons to be responsible for the administration and enforcement of the code or standard, and prescribing the powers and duties of that person, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2521",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "establishing a system of appeal from a decision made by a person under the codes or standards adopted."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2530",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For the purposes of subsection (2) (d), the regulations may be similar or different for different classes of buildings or different conditions."
+                                },
+                                {
+                                    "@id": "d1e2712",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96402_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Regulations Act"
+                                        },
+                                        "#text": "The  does not apply to a regulation under subsection (2) (g)."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e2725",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Notice of the enactment, amendment, repeal or replacement of a regulation under subsection (2) (g) must be published in the Gazette."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2540",
+                            "bcl:marginalnote": "Municipal bylaws",
+                            "bcl:num": "48",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2548",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Nothing in this Act prevents a municipality from making bylaws relating to a matter within the scope of this Act, but only so far as they are not repugnant to this Act or the regulations."
+                                },
+                                {
+                                    "@id": "d2e2557",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Nothing in this Act absolves a municipality from its duty to enforce a law or regulation relating to a matter under this Act."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

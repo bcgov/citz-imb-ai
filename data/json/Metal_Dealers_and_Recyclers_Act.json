@@ -1,0 +1,1485 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_11022_01",
+        "act:title": "Metal Dealers and Recyclers Act",
+        "act:chapter": "22",
+        "act:yearenacted": "2011",
+        "act:assentedto": "November 24, 2011",
+        "act:currency": {
+            "act:tlcDirPath": "1325524918/1971848528/1468966540",
+            "act:tlc": "E2tlc11022"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e24",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "business entity",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e44",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a corporation,"
+                                },
+                                {
+                                    "@id": "d2e54",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a partnership,"
+                                },
+                                {
+                                    "@id": "d2e63",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a sole proprietorship,"
+                                },
+                                {
+                                    "@id": "d2e72",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a society, or"
+                                },
+                                {
+                                    "@id": "d2e81",
+                                    "bcl:num": "e",
+                                    "bcl:text": "another person prescribed by regulation;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e90",
+                            "bcl:text": {
+                                "in:term": "customer code",
+                                "#text": "means a numerical or alphabetical code, or\n          both, determined in accordance with the regulations;"
+                            }
+                        },
+                        {
+                            "@id": "d2e99",
+                            "bcl:text": {
+                                "in:term": "inspector",
+                                "#text": "means a person appointed as an inspector under\n            section\n            13;"
+                            }
+                        },
+                        {
+                            "@id": "d2e109",
+                            "bcl:text": {
+                                "in:term": "local authority",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e118",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a municipality, including the City of Vancouver,"
+                                },
+                                {
+                                    "@id": "d2e127",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a regional district, and"
+                                },
+                                {
+                                    "@id": "d2e136",
+                                    "bcl:num": "c",
+                                    "bcl:text": "any other local body prescribed by regulation as a local authority for the\n            purposes of this Act or the regulations;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e145",
+                            "bcl:text": {
+                                "in:term": "local police authority",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96367_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Police\n              Act"
+                                },
+                                "#text": "means the police force or police\n          department, or the designated policing unit as defined in section 1 of the , that is responsible for policing the area in which the\n          business premises of a metal dealer or recycler are located;"
+                            }
+                        },
+                        {
+                            "@id": "d2e157",
+                            "bcl:text": {
+                                "in:term": "metal dealer or recycler",
+                                "#text": "means a person who carries on a\n          business of purchasing regulated metal;"
+                            }
+                        },
+                        {
+                            "@id": "d2e167",
+                            "bcl:text": {
+                                "in:term": "motor vehicle",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96318_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Motor\n              Vehicle Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e179",
+                            "bcl:text": [
+                                {
+                                    "in:term": "non-ferrous metal",
+                                    "#text": "means a metal or alloy that does not\n          contain significant amounts of iron, including, without limitation,"
+                                },
+                                "but does not include gold, platinum or silver;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e188",
+                                    "bcl:num": "a",
+                                    "bcl:text": "aluminum,"
+                                },
+                                {
+                                    "@id": "d2e197",
+                                    "bcl:num": "b",
+                                    "bcl:text": "copper, including brass and bronze,"
+                                },
+                                {
+                                    "@id": "d2e206",
+                                    "bcl:num": "c",
+                                    "bcl:text": "lead,"
+                                },
+                                {
+                                    "@id": "d2e215",
+                                    "bcl:num": "d",
+                                    "bcl:text": "magnesium,"
+                                },
+                                {
+                                    "@id": "d2e225",
+                                    "bcl:num": "e",
+                                    "bcl:text": "nickel,"
+                                },
+                                {
+                                    "@id": "d2e234",
+                                    "bcl:num": "f",
+                                    "bcl:text": "zinc, and"
+                                },
+                                {
+                                    "@id": "d2e243",
+                                    "bcl:num": "g",
+                                    "bcl:text": "a prescribed metal or alloy,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e255",
+                            "bcl:text": {
+                                "in:term": "private dwelling",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e264",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a structure that is used solely as a private residence, or"
+                                },
+                                {
+                                    "@id": "d2e274",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if only part of a structure is used solely as a private residence, that part of\n            the structure;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e283",
+                            "bcl:text": {
+                                "in:term": "purchase",
+                                "#text": "includes to acquire, whether or not for\n          consideration;"
+                            }
+                        },
+                        {
+                            "@id": "d2e292",
+                            "bcl:text": {
+                                "in:term": "registrant",
+                                "#text": "means a person who is registered under this\n          Act;"
+                            }
+                        },
+                        {
+                            "@id": "d2e301",
+                            "bcl:text": {
+                                "in:term": "registrar",
+                                "#text": "means an individual appointed as the Registrar of\n          Metal Dealers and Recyclers under section 27;"
+                            }
+                        },
+                        {
+                            "@id": "d2e310",
+                            "bcl:text": [
+                                {
+                                    "in:term": "regulated metal",
+                                    "#text": "means"
+                                },
+                                "but does not include"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e319",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an item substantially made of non-ferrous metal, or"
+                                },
+                                {
+                                    "@id": "d2e329",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a prescribed item or class of items,"
+                                },
+                                {
+                                    "@id": "d2e341",
+                                    "bcl:num": "c",
+                                    "bcl:text": "used metal cans or containers for food, beverages or paint,"
+                                },
+                                {
+                                    "@id": "d2e350",
+                                    "bcl:num": "d",
+                                    "bcl:text": "metal domestic or household products normally recycled to avoid waste,\n            or"
+                                },
+                                {
+                                    "@id": "d2e359",
+                                    "bcl:num": "e",
+                                    "bcl:text": "a prescribed item or class of items;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e368",
+                            "bcl:text": {
+                                "in:term": "sell",
+                                "#text": "includes to transfer, give or otherwise dispose of,\n          whether or not for consideration;"
+                            }
+                        },
+                        {
+                            "@id": "d2e378",
+                            "bcl:text": {
+                                "in:term": "transaction information",
+                                "#text": "means the information that a metal\n          dealer or recycler collects and records in accordance with section 5."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2337",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "33",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in\n        Council."
+                }
+            ],
+            "bcl:part": [
+                {
+                    "@id": "d2e388",
+                    "bcl:num": "1",
+                    "bcl:text": "Sale and Purchase of Regulated Metal",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e397",
+                            "bcl:marginalnote": "Prohibitions \u2013 sale of regulated metal",
+                            "bcl:num": "2",
+                            "bcl:text": "A person must not sell regulated metal to a metal dealer or recycler unless, at\n          the time of the transaction, the person",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e408",
+                                    "bcl:num": "a",
+                                    "bcl:text": "presents prescribed identification to the metal dealer or recycler,\n            and"
+                                },
+                                {
+                                    "@id": "d2e417",
+                                    "bcl:num": "b",
+                                    "bcl:text": "provides the metal dealer or recycler with",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e427",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the information referred to in section 5 (2) (a), (c), (d) and (e),\n              and"
+                                        },
+                                        {
+                                            "@id": "d2e436",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "any other prescribed information."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e446",
+                            "bcl:marginalnote": "Prohibitions \u2013 purchase of regulated metal",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e454",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A metal dealer or recycler must not purchase regulated metal from a person\n            unless, at the time of the transaction, the person complies with the requirements of\n              section\n              2."
+                                },
+                                {
+                                    "@id": "d2e463",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A metal dealer or recycler must, at the time of the transaction, take reasonable\n            measures to ensure that the identification presented in accordance with section 2\n            (a)",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e472",
+                                            "bcl:num": "a",
+                                            "bcl:text": "has not been altered or defaced to misrepresent the age or identity of the\n              person,"
+                                        },
+                                        {
+                                            "@id": "d2e482",
+                                            "bcl:num": "b",
+                                            "bcl:text": "was issued by the issuing agency to the person, and"
+                                        },
+                                        {
+                                            "@id": "d2e491",
+                                            "bcl:num": "c",
+                                            "bcl:text": "is not otherwise forged or fraudulently made."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e500",
+                                    "bcl:num": "3",
+                                    "bcl:text": [
+                                        "A metal dealer or recycler must not purchase",
+                                        "unless the person selling the metallic wire or regulated metal provides proof of\n            ownership of the property."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e509",
+                                            "bcl:num": "a",
+                                            "bcl:text": "metallic wire that reasonably appears to have had insulation or casing removed\n              from it, or"
+                                        },
+                                        {
+                                            "@id": "d2e518",
+                                            "bcl:num": "b",
+                                            "bcl:text": "regulated metal that bears distinguishing or identifying marks indicating\n              ownership of the metal by any of the following:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e527",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a local authority;"
+                                                },
+                                                {
+                                                    "@id": "d2e537",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a public utility or similar entity that distributes, through piping or\n                wiring, electricity, telephone services or cable television signals;"
+                                                },
+                                                {
+                                                    "@id": "d2e546",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "a prescribed entity,"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e560",
+                            "bcl:marginalnote": "Stolen property",
+                            "bcl:num": "4",
+                            "bcl:text": "If a metal dealer or recycler or any of its employees has reasonable grounds to\n          believe that regulated metal in the possession of the metal dealer or recycler is stolen\n          property, the metal dealer or recycler or the employee, as applicable, must immediately\n          inform the local police authority of the fact."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e572",
+                    "bcl:num": "2",
+                    "bcl:text": "Transaction Information",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e581",
+                            "bcl:marginalnote": "Transaction information",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e589",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A metal dealer or recycler must not purchase regulated metal unless, at the time\n            of the transaction, the metal dealer or recycler",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e598",
+                                            "bcl:num": "a",
+                                            "bcl:text": "assigns a customer code to the transaction, and"
+                                        },
+                                        {
+                                            "@id": "d2e607",
+                                            "bcl:num": "b",
+                                            "bcl:text": "records the following information:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e617",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a description of the regulated metal, including its type, weight and any\n                distinguishing marks or features;"
+                                                },
+                                                {
+                                                    "@id": "d2e626",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the date and time of the transaction;"
+                                                },
+                                                {
+                                                    "@id": "d2e635",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the total value of the transaction;"
+                                                },
+                                                {
+                                                    "@id": "d2e644",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "the full name of the individual who conducts the transaction on behalf of the\n              metal dealer or recycler;"
+                                                },
+                                                {
+                                                    "@id": "d2e653",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "the customer code assigned under paragraph (a);"
+                                                },
+                                                {
+                                                    "@id": "d2e662",
+                                                    "bcl:num": "vi",
+                                                    "bcl:text": "any other prescribed information."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e672",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In addition to the requirements of subsection (1), a metal dealer or\n            recycler must not purchase regulated metal unless, at the time of the transaction, the\n            metal dealer or recycler collects and records the following information:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e681",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the full name, current address and telephone number of the person selling the\n              metal;"
+                                        },
+                                        {
+                                            "@id": "d2e690",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a description, including any prescribed information, of the identification\n              presented in accordance with section 2 (a);"
+                                        },
+                                        {
+                                            "@id": "d2e699",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the origin of the regulated metal as stated by the person selling the\n              metal;"
+                                        },
+                                        {
+                                            "@id": "d2e708",
+                                            "bcl:num": "d",
+                                            "bcl:text": "if the individual who delivers the regulated metal to the business premises of\n              the metal dealer or recycler is not the owner of the metal at the time of the\n              transaction, the full name, current address and telephone number of the individual who\n              delivers the metal;"
+                                        },
+                                        {
+                                            "@id": "d2e717",
+                                            "bcl:num": "e",
+                                            "bcl:text": "if a motor vehicle is used to deliver the regulated metal to the business\n              premises of the metal dealer or recycler, the following information in respect of the\n              motor vehicle:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e727",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "paint colour, make and model;"
+                                                },
+                                                {
+                                                    "@id": "d2e736",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "licence plate number and province of issue;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e745",
+                                            "bcl:num": "f",
+                                            "bcl:text": "any other prescribed information."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e755",
+                            "bcl:marginalnote": "Reporting to local police authority",
+                            "bcl:num": "6",
+                            "bcl:text": "A metal dealer or recycler must, for each transaction, provide the information\n          referred to in section 5 (1) (b) to the local police authority within the prescribed period\n          of time and in the prescribed manner and form."
+                        },
+                        {
+                            "@id": "d2e767",
+                            "bcl:marginalnote": "Transaction information maintenance",
+                            "bcl:num": "7",
+                            "bcl:text": "A metal dealer or recycler must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e778",
+                                    "bcl:num": "a",
+                                    "bcl:text": "record and maintain transaction information in the prescribed manner and form,\n            and"
+                                },
+                                {
+                                    "@id": "d2e787",
+                                    "bcl:num": "b",
+                                    "bcl:text": "keep transaction information on the metal dealer or recycler's business premises\n            for at least one year from the date of the transaction."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e797",
+                    "bcl:num": "3",
+                    "bcl:text": "Registration",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e807",
+                            "bcl:marginalnote": "Registration required",
+                            "bcl:num": "8",
+                            "bcl:text": "A person must not carry on business as a metal dealer or recycler unless the\n          person is registered under this Act."
+                        },
+                        {
+                            "@id": "d2e819",
+                            "bcl:marginalnote": "Applying for registration",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e827",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person may apply to the registrar for registration under this Act or for\n            renewal of registration."
+                                },
+                                {
+                                    "@id": "d2e836",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An application for registration or renewal of registration must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e845",
+                                            "bcl:num": "a",
+                                            "bcl:text": "be made in the form and manner required by the registrar, and"
+                                        },
+                                        {
+                                            "@id": "d2e855",
+                                            "bcl:num": "b",
+                                            "bcl:text": "be accompanied by the prescribed fee, if any."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e864",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person who applies for registration or renewal of registration must meet all\n            the conditions and requirements imposed under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e874",
+                            "bcl:marginalnote": "Registration",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e882",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The registrar may, on application under section 9, grant registration or\n            renewal of registration for a period not exceeding the prescribed period."
+                                },
+                                {
+                                    "@id": "d2e891",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The registrar may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e900",
+                                            "bcl:num": "a",
+                                            "bcl:text": "impose on a registration any terms and conditions that the registrar considers\n              appropriate, and"
+                                        },
+                                        {
+                                            "@id": "d2e910",
+                                            "bcl:num": "b",
+                                            "bcl:text": "amend or remove a term or condition of a registration."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e919",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The registrar must provide the applicant or registrant written reasons for a\n            decision under subsection (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e929",
+                            "bcl:marginalnote": "Terms and conditions of registration",
+                            "bcl:num": "11",
+                            "bcl:text": "The following are terms and conditions of every registration:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e940",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a registrant must report to the registrar, within 10 days of its\n            occurrence,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e949",
+                                            "bcl:num": "i",
+                                            "bcl:text": "a change in the registrant's business address, and"
+                                        },
+                                        {
+                                            "@id": "d2e959",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "a change in any prescribed information;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e968",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a registrant must comply",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e977",
+                                            "bcl:num": "i",
+                                            "bcl:text": "with this Act and the regulations, and"
+                                        },
+                                        {
+                                            "@id": "d2e986",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "with the terms and conditions of the registrant's registration;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e995",
+                                    "bcl:num": "c",
+                                    "bcl:text": "any other prescribed terms and conditions."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1005",
+                            "bcl:marginalnote": "Refusal, suspension or termination of registration",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1013",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The registrar may refuse to grant registration or renewal of registration if any\n            of the following apply:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1022",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the applicant or registrant fails in any way to comply with, or does not meet\n              the requirements of, section 9;"
+                                        },
+                                        {
+                                            "@id": "d2e1031",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the application is for renewal of registration and the registrar is satisfied\n              that the registrant has contravened a provision of this Act, the regulations or a term\n              or condition of the registration."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1041",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the registrar is satisfied that a registrant has contravened a provision of\n            this Act, the regulations or a term or condition of the registration, the registrar\n            may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1050",
+                                            "bcl:num": "a",
+                                            "bcl:text": "cancel the registration, or"
+                                        },
+                                        {
+                                            "@id": "d2e1059",
+                                            "bcl:num": "b",
+                                            "bcl:text": "suspend the registration for a period of time and subject to conditions the\n              registrar considers necessary."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1068",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The registrar must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1077",
+                                            "bcl:num": "a",
+                                            "bcl:text": "hold a hearing before making a decision under subsection (1) or (2),\n              and"
+                                        },
+                                        {
+                                            "@id": "d2e1086",
+                                            "bcl:num": "b",
+                                            "bcl:text": "provide the applicant or registrant written reasons for the\n              decision."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1096",
+                    "bcl:num": "4",
+                    "bcl:text": "Enforcement",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1106",
+                            "bcl:marginalnote": "Appointment of inspectors",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1114",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The registrar may appoint persons or persons within a class of persons as\n            inspectors."
+                                },
+                                {
+                                    "@id": "d2e1123",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The registrar may impose restrictions on the powers and duties that an inspector\n            may exercise under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1133",
+                            "bcl:marginalnote": "Inspections",
+                            "bcl:num": "14",
+                            "bcl:text": "An inspector may conduct an inspection for the purpose of determining whether a\n          person is in compliance with this Act, the regulations or the terms and conditions of the\n          person's registration."
+                        },
+                        {
+                            "@id": "d2e1145",
+                            "bcl:marginalnote": "Inspectors' powers",
+                            "bcl:num": "15",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1153",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For the purposes of an inspection, an inspector may, during normal business\n            hours, do any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1162",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enter and inspect the premises of a metal dealer or recycler;"
+                                        },
+                                        {
+                                            "@id": "d2e1171",
+                                            "bcl:num": "b",
+                                            "bcl:text": "inspect, audit or examine any record, goods or other thing in the\n              premises;"
+                                        },
+                                        {
+                                            "@id": "d2e1181",
+                                            "bcl:num": "c",
+                                            "bcl:text": "demand that a document or any other thing be produced for\n              inspection;"
+                                        },
+                                        {
+                                            "@id": "d2e1190",
+                                            "bcl:num": "d",
+                                            "bcl:text": "remove a record or any other thing for review and copying;"
+                                        },
+                                        {
+                                            "@id": "d2e1199",
+                                            "bcl:num": "e",
+                                            "bcl:text": "remove and retain a record or any other thing that may be required as evidence\n              from the premises;"
+                                        },
+                                        {
+                                            "@id": "d2e1208",
+                                            "bcl:num": "f",
+                                            "bcl:text": "question a person."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1217",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a record or thing is removed under subsection (1) (d) or (e), the\n            inspector",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1226",
+                                            "bcl:num": "a",
+                                            "bcl:text": "may make copies of, take extracts from or otherwise record the record or\n              thing, and"
+                                        },
+                                        {
+                                            "@id": "d2e1236",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must give a receipt to the person from whom the record or thing is\n              taken."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1245",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The authority under subsection (1) must not be used to enter a private dwelling\n            except with the consent of the occupant or under the authority of a warrant under\n              section\n              16."
+                                },
+                                {
+                                    "@id": "d2e1254",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The inspector, on request of a person whose premises the inspector enters, must\n            present identification provided by the minister for this purpose."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1264",
+                            "bcl:marginalnote": "Warrants",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1272",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If satisfied by evidence given under oath that entry on or into a building,\n            receptacle or place, including a private dwelling, is necessary for any purpose related\n            to conducting an inspection under this Act, a justice may issue a warrant authorizing an\n            inspector to, during normal business hours, enter on or into that building, receptacle\n            or place and conduct an inspection."
+                                },
+                                {
+                                    "@id": "d2e1281",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In the warrant, a justice may authorize an inspector to do one or both of the\n            following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1290",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enter at a specified time or within a specified period of time;"
+                                        },
+                                        {
+                                            "@id": "d2e1300",
+                                            "bcl:num": "b",
+                                            "bcl:text": "enter by force, if necessary."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1309",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An inspector may make an application for a warrant under subsection\n              (1) without notice to any other person."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1319",
+                            "bcl:marginalnote": "Administrative penalties",
+                            "bcl:num": "17",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1327",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After giving a person an opportunity to be heard, the registrar may impose an\n            administrative penalty on the person if the person contravenes",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1336",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a prescribed provision of this Act or the regulations, or"
+                                        },
+                                        {
+                                            "@id": "d2e1345",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a term or condition of registration."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1355",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Before the registrar imposes an administrative penalty on a person, the\n            registrar must consider the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1364",
+                                            "bcl:num": "a",
+                                            "bcl:text": "previous enforcement actions for contraventions of a similar nature by the\n              person;"
+                                        },
+                                        {
+                                            "@id": "d2e1373",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the gravity and magnitude of the contravention;"
+                                        },
+                                        {
+                                            "@id": "d2e1382",
+                                            "bcl:num": "c",
+                                            "bcl:text": "whether the contravention was repeated or continuous;"
+                                        },
+                                        {
+                                            "@id": "d2e1391",
+                                            "bcl:num": "d",
+                                            "bcl:text": "whether the contravention was deliberate;"
+                                        },
+                                        {
+                                            "@id": "d2e1400",
+                                            "bcl:num": "e",
+                                            "bcl:text": "any economic benefit derived by the person from the contravention;"
+                                        },
+                                        {
+                                            "@id": "d2e1410",
+                                            "bcl:num": "f",
+                                            "bcl:text": "the person's efforts to correct the contravention."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1419",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the registrar imposes an administrative penalty on a person, a prosecution\n            for an offence under this Act for the same contravention may not be brought against the\n            person."
+                                },
+                                {
+                                    "@id": "d2e1428",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A person who has been charged with an offence under this Act may not be subject\n            to an administrative penalty in respect of the circumstances that gave rise to the\n            charge."
+                                },
+                                {
+                                    "@id": "d2e1437",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a business entity contravenes a prescribed provision of this Act or the\n            regulations or a term or condition of a registration, an employee, officer, director or\n            agent of the business entity who authorized, permitted or acquiesced in the\n            contravention is also liable under this section, whether or not an administrative\n            penalty is imposed on the business entity."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1447",
+                            "bcl:marginalnote": "Amount of administrative penalty",
+                            "bcl:num": "18",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1455",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An individual on whom an administrative penalty is imposed is liable to a\n            penalty of not more than $5\u00a0000."
+                                },
+                                {
+                                    "@id": "d2e1464",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A business entity on which an administrative penalty is imposed is liable to a\n            penalty of not more than $50\u00a0000."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1475",
+                            "bcl:marginalnote": "Notice of administrative penalty",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1483",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the registrar imposes an administrative penalty on a person, the registrar\n            must give to the person a notice imposing the administrative penalty that specifies the\n            following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1492",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the contravention;"
+                                        },
+                                        {
+                                            "@id": "d2e1501",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the amount of the penalty;"
+                                        },
+                                        {
+                                            "@id": "d2e1511",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the date by which the penalty must be paid;"
+                                        },
+                                        {
+                                            "@id": "d2e1520",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the person's right to have this decision reconsidered;"
+                                        },
+                                        {
+                                            "@id": "d2e1529",
+                                            "bcl:num": "e",
+                                            "bcl:text": "an address to which a request for a reconsideration may be given."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1538",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A notice imposing an administrative penalty may be reconsidered in accordance\n            with section\n              28."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1548",
+                            "bcl:marginalnote": "Due date of administrative penalty",
+                            "bcl:num": "20",
+                            "bcl:text": "The person on whom an administrative penalty is imposed must pay the\n          administrative penalty",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1559",
+                                    "bcl:num": "a",
+                                    "bcl:text": "within 30 days after the date on which the person receives the notice referred\n            to in section\n              19 (1), or"
+                                },
+                                {
+                                    "@id": "d2e1568",
+                                    "bcl:num": "b",
+                                    "bcl:text": "within 30 days, if the person requests a reconsideration of the administrative\n            penalty under section 28, after the date on which the person receives the notice\n            referred to in section 28 (3) (b)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1578",
+                            "bcl:marginalnote": "Enforcement of administrative penalty",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1586",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to a reconsideration of an administrative penalty or the expiry of the\n            period of time within which a reconsideration may be requested, an administrative\n            penalty constitutes a debt payable by the person on whom the penalty is\n            imposed."
+                                },
+                                {
+                                    "@id": "d2e1595",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a person fails to pay an administrative penalty as required under section 20,\n            the registrar may file with the Supreme Court or Provincial Court a certified copy of\n            the notice imposing the administrative penalty and, on being filed, the notice has the\n            same force and effect, and all proceedings may be taken on the notice, as if the notice\n            were a judgment of that court."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1605",
+                            "bcl:marginalnote": "Revenue from administrative penalties",
+                            "bcl:num": "22",
+                            "bcl:text": "The registrar must pay all amounts derived from administrative penalties into the\n          consolidated revenue fund."
+                        },
+                        {
+                            "@id": "d2e1617",
+                            "bcl:marginalnote": "Limitation period",
+                            "bcl:num": "23",
+                            "bcl:text": "The time limit for giving a notice imposing an administrative penalty is 2 years\n          after the date on which the contravention occurred."
+                        },
+                        {
+                            "@id": "d2e1629",
+                            "bcl:marginalnote": "Injunction",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1637",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "On application by the registrar, the Supreme Court may grant an\n            injunction",
+                                        "and, until disposition of the injunction proceeding, the court may grant an\n            interim injunction."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1646",
+                                            "bcl:num": "a",
+                                            "bcl:text": "restraining a person or business entity from contravening this Act or the\n              regulations if the court is satisfied that there are reasonable grounds to believe\n              that the person or business entity has contravened or is likely to contravene this Act\n              or the regulations,"
+                                        },
+                                        {
+                                            "@id": "d2e1655",
+                                            "bcl:num": "b",
+                                            "bcl:text": "requiring a person or business entity to comply with this Act or the\n              regulations if the court is satisfied that there are reasonable grounds to believe\n              that the person or business entity has not complied, or is not likely to comply, with\n              this Act or the regulations, or"
+                                        },
+                                        {
+                                            "@id": "d2e1665",
+                                            "bcl:num": "c",
+                                            "bcl:text": "requiring a person or business entity not to hold themselves out as being\n              registered if they are not registered under this Act"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1677",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An injunction regarding a contravention may be granted under subsection\n              (1) whether or not a penalty or other remedy is provided by this Act for\n            the contravention."
+                                },
+                                {
+                                    "@id": "d2e1686",
+                                    "bcl:num": "3",
+                                    "bcl:text": "With respect to considering an interim injunction under subsection\n              (1),",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1695",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the court must give greater weight, importance and the balance of convenience\n              to the enforcement of this Act than to the continued operation of the person or\n              business entity,"
+                                        },
+                                        {
+                                            "@id": "d2e1704",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the registrar must not be required to post a bond or give an undertaking as to\n              damages, and"
+                                        },
+                                        {
+                                            "@id": "d2e1714",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the registrar need not establish that irreparable harm will be done if the\n              interim injunction is not issued."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1725",
+                            "bcl:marginalnote": "Offences",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1733",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who contravenes any of the following commits an offence:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1742",
+                                            "bcl:num": "a",
+                                            "bcl:text": "sections 2, 3, 5,\n                6, 7 or 8;"
+                                        },
+                                        {
+                                            "@id": "d2e1751",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a term or condition of registration under this Act, including, without\n              limitation, terms and conditions described in section 11 and terms and\n              conditions imposed on the registration by the registrar;"
+                                        },
+                                        {
+                                            "@id": "d2e1761",
+                                            "bcl:num": "c",
+                                            "bcl:text": "subsection (4) of this section."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1770",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person who provides false or misleading information in any of the following\n            circumstances commits an offence:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1779",
+                                            "bcl:num": "a",
+                                            "bcl:text": "when required or authorized under this Act to provide information;"
+                                        },
+                                        {
+                                            "@id": "d2e1788",
+                                            "bcl:num": "b",
+                                            "bcl:text": "when applying for registration under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e1797",
+                                            "bcl:num": "c",
+                                            "bcl:text": "when requested, ordered or directed by the registrar or an inspector to\n              provide information."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1806",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person does not commit an offence under subsection (2) if, at the time\n            the information was supplied, the person did not know that the information was false or\n            misleading and, with the exercise of reasonable diligence, could not have known that the\n            information was false or misleading."
+                                },
+                                {
+                                    "@id": "d2e1816",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A person must not obstruct, impede or refuse to admit an inspector who is\n            exercising powers or performing duties under this Act or a warrant issued under, or for\n            the purposes of enforcing, this Act."
+                                },
+                                {
+                                    "@id": "d2e1825",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a business entity commits an offence under this section, an employee,\n            officer, director or agent of the business entity who authorized, permitted or\n            acquiesced in the commission of the offence also commits an offence."
+                                },
+                                {
+                                    "@id": "d2e1834",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Subsection (5) applies whether or not the business entity is prosecuted\n            for the offence."
+                                },
+                                {
+                                    "@id": "d2e1843",
+                                    "bcl:num": "7",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "Section\n              5 of the  does not apply for the\n            purposes of this Act."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1856",
+                            "bcl:marginalnote": "Offence penalties",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1864",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An individual who commits an offence under section 25 is liable on\n            conviction to a fine of not more than $10\u00a0000 or imprisonment for not longer than 6\n            months, or both."
+                                },
+                                {
+                                    "@id": "d2e1873",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A business entity that commits an offence under section 25 is liable on\n            conviction to a fine of not more than $100\u00a0000."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1883",
+                    "bcl:num": "5",
+                    "bcl:text": "Registrar of Metal Dealers and Recyclers",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1892",
+                            "bcl:marginalnote": "Registrar",
+                            "bcl:num": "27",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1900",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96385_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Service\n                Act"
+                                        },
+                                        "#text": "The minister must appoint, under the , an individual as the Registrar of Metal Dealers and\n            Recyclers."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1912",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The registrar has the powers and duties conferred or imposed on the registrar\n            under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1922",
+                            "bcl:marginalnote": "Reconsiderations",
+                            "bcl:num": "28",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1930",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person may request the registrar to reconsider a decision under section\u00a010\u00a0(2),\u00a012\u00a0(1) or\u00a0(2) or 19",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1939",
+                                            "bcl:num": "a",
+                                            "bcl:text": "within 30 days after receiving notice of or reasons for the decision,\n              or"
+                                        },
+                                        {
+                                            "@id": "d2e1948",
+                                            "bcl:num": "b",
+                                            "bcl:text": "within the period of time specified by the registrar, if the registrar is\n              satisfied that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1958",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "special circumstances existed which precluded the filing of a request for\n                reconsideration within the period of time required in paragraph (a) of this\n                subsection, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1967",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "an injustice would otherwise result."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1976",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person must make the request under subsection (1) in writing and\n            must identify the error the person believes was made or the other grounds on which a\n            reconsideration is requested."
+                                },
+                                {
+                                    "@id": "d2e1985",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On receiving a request under this section, the registrar must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1994",
+                                            "bcl:num": "a",
+                                            "bcl:text": "confirm, vary or cancel the decision, and"
+                                        },
+                                        {
+                                            "@id": "d2e2003",
+                                            "bcl:num": "b",
+                                            "bcl:text": "notify the person in writing of the registrar's decision under paragraph\n                (a) and of the reasons for the decision."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2013",
+                            "bcl:marginalnote": "Hearings",
+                            "bcl:num": "29",
+                            "bcl:text": "The registrar may hold a hearing under this Act in writing, electronically or\n          orally or by any combination of written, electronic or oral hearings."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2026",
+                    "bcl:num": "6",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2035",
+                            "bcl:marginalnote": "Exemption",
+                            "bcl:num": "30",
+                            "bcl:text": "This Act does not apply to a person who purchases or sells a used motor vehicle\n          that has been, or will be, crushed for the purposes of recycling it."
+                        },
+                        {
+                            "@id": "d2e2047",
+                            "bcl:marginalnote": "Regulations",
+                            "bcl:num": "31",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2055",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the\n              ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2067",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1) of this section, the Lieutenant\n            Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2076",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing identification for the purposes of section 2 (a);"
+                                        },
+                                        {
+                                            "@id": "d2e2086",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing information for the purposes of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2095",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "section 2 (b) (ii),"
+                                                },
+                                                {
+                                                    "@id": "d2e2104",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "section 5\n                  (1) (b) (vi) and (2) (b) and (f), and"
+                                                },
+                                                {
+                                                    "@id": "d2e2113",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "section 11 (a) (ii);"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2122",
+                                            "bcl:num": "c",
+                                            "bcl:text": "respecting the manner in which customer codes are determined;"
+                                        },
+                                        {
+                                            "@id": "d2e2131",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing an entity for the purpose of section 3 (3) (b)\n              (iii);"
+                                        },
+                                        {
+                                            "@id": "d2e2141",
+                                            "bcl:num": "e",
+                                            "bcl:text": "respecting the period of time, manner and form in which information must be\n              provided to the local police authority for the purposes of section\n              6;"
+                                        },
+                                        {
+                                            "@id": "d2e2150",
+                                            "bcl:num": "f",
+                                            "bcl:text": "regulating or prohibiting cash transactions in relation to regulated\n              metal;"
+                                        },
+                                        {
+                                            "@id": "d2e2159",
+                                            "bcl:num": "g",
+                                            "bcl:text": "respecting the manner and form in which transaction information must be\n              recorded and maintained for the purpose of section 7."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2168",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Without limiting subsection (1) of this section, the Lieutenant\n            Governor in Council may make regulations respecting registration and renewal of\n            registration under this Act, including, without limitation, the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2177",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing conditions or requirements that must be met by a person applying\n              for registration or renewal of registration;"
+                                        },
+                                        {
+                                            "@id": "d2e2186",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing the information that a person applying for registration or renewal\n              of registration is required to provide;"
+                                        },
+                                        {
+                                            "@id": "d2e2196",
+                                            "bcl:num": "c",
+                                            "bcl:text": "respecting forms of applications and registrations;"
+                                        },
+                                        {
+                                            "@id": "d2e2205",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing fees for the purpose of section 9 (2) (b);"
+                                        },
+                                        {
+                                            "@id": "d2e2214",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing a maximum period of time for the purpose of section 10\n                (1);"
+                                        },
+                                        {
+                                            "@id": "d2e2223",
+                                            "bcl:num": "f",
+                                            "bcl:text": "prescribing terms and conditions of registration for the purpose of section 11\n                (c)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2232",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Without limiting subsection (1) of this section, the Lieutenant\n            Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2241",
+                                            "bcl:num": "a",
+                                            "bcl:text": "exempting, on any conditions, for any periods of time and in any circumstances\n              that are considered advisable, any transaction or class of transactions, or person or\n              class of persons, from all or any part of this Act or the regulations;"
+                                        },
+                                        {
+                                            "@id": "d2e2251",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing a person or class of persons for the purpose of the definition of\n              \"business entity\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2260",
+                                            "bcl:num": "c",
+                                            "bcl:text": "prescribing a local body as a local authority for the purpose of the\n              definition of \"local authority\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2269",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing metals or alloys for the purpose of the definition of \"non-ferrous\n              metal\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2278",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing items or classes of items for the purpose of the definition of\n              \"regulated metal\" in section 1;"
+                                        },
+                                        {
+                                            "@id": "d2e2287",
+                                            "bcl:num": "f",
+                                            "bcl:text": "defining terms that are used but not defined in this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2296",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Without limiting subsection (1) of this section, the Lieutenant\n            Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2306",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing provisions for the purpose of section 17 (1) (a);"
+                                        },
+                                        {
+                                            "@id": "d2e2315",
+                                            "bcl:num": "b",
+                                            "bcl:text": "establishing an offence for the contravention of a regulation and prescribing\n              a penalty for that offence up to the maximum penalties set out in section\n              26."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2325",
+                            "bcl:marginalnote": "Transition \u2013 registration requirement",
+                            "bcl:num": "32",
+                            "bcl:text": "Section\n            8 does not apply, for a period of 6 months after the date this section comes\n          into force, to a person who, on that date, carries on business as a metal dealer or\n          recycler."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

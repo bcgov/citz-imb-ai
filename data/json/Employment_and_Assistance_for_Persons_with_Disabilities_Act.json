@@ -1,0 +1,2691 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_02041_01",
+        "act:title": "Employment and Assistance for Persons with Disabilities Act",
+        "act:chapter": "41",
+        "act:yearenacted": "2002",
+        "act:assentedto": "May 30, 2002",
+        "act:currency": {
+            "act:tlcDirPath": "414786120/02041/tlc02041_f",
+            "act:tlc": "E3tlc02041"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e18",
+                    "bcl:num": "1",
+                    "bcl:text": "Introductory Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e27",
+                            "bcl:marginalnote": "Interpretation",
+                            "bcl:num": "1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e35",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this Act:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d2e44",
+                                            "bcl:text": {
+                                                "in:term": "applicant",
+                                                "#text": "means the person in a family unit who applies under this Act for disability assistance, hardship assistance or a supplement on behalf of the family unit, and includes"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e53",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the person's spouse, if the spouse is a dependant, and"
+                                                },
+                                                {
+                                                    "@id": "d2e63",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the person's adult dependants;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e72",
+                                            "bcl:text": {
+                                                "in:term": "business day",
+                                                "#text": "means a day other than Saturday or a holiday;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e81",
+                                            "bcl:text": {
+                                                "in:term": "child",
+                                                "#text": "means an unmarried person under 19 years of age;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e90",
+                                            "bcl:text": {
+                                                "in:term": "dependant",
+                                                "#text": ", in relation to a person, means anyone who resides with the person and who"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e99",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "is the spouse of the person, or"
+                                                },
+                                                {
+                                                    "@id": "d2e108",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "is a dependent child of the person;"
+                                                },
+                                                {
+                                                    "@id": "d2e118",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "[Repealed 2019-36-98.]"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e127",
+                                            "bcl:text": {
+                                                "in:term": "dependent child",
+                                                "#text": ", with respect to a parent, means a child, other than a child who is 18 years of age and is a person with disabilities, who resides in the parent's place of residence for more than 50% of each month and relies on that parent for the necessities of life, and includes a child in circumstances prescribed under subsection (2) but excludes a child in circumstances prescribed under subsection\u00a0(2.1);"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e136",
+                                            "bcl:text": {
+                                                "in:term": "dependent youth",
+                                                "#text": "means a dependent child who has reached 16 years of age;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e145",
+                                            "bcl:text": {
+                                                "in:term": "disability assistance",
+                                                "in:desc": "[disability assistance and supplements]",
+                                                "#text": "means an amount for shelter and support provided under section\u00a05 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e157",
+                                            "bcl:text": {
+                                                "in:term": "employment plan",
+                                                "in:desc": "[employment plan]",
+                                                "#text": "means a plan required under section 9\u00a0\u00a0and includes an amended employment plan;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e169",
+                                            "bcl:text": {
+                                                "in:term": "family unit",
+                                                "#text": "means an applicant or a recipient and the applicant's or the recipient's dependants;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e179",
+                                            "bcl:text": {
+                                                "in:term": "former Act",
+                                                "#text": "means"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e188",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96097REP_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Disability Benefits Program Act"
+                                                        },
+                                                        "#text": "the , or"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e200",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96027REP_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "BC Benefits (Income Assistance) Act"
+                                                        },
+                                                        "#text": "the ;"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e212",
+                                            "bcl:text": {
+                                                "in:term": "hardship assistance",
+                                                "in:desc": "[hardship assistance]",
+                                                "#text": "means an amount for shelter and support provided under section\u00a06\u00a0(1)\u00a0;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e224",
+                                            "bcl:text": {
+                                                "in:term": "person with disabilities",
+                                                "in:desc": "[persons with disabilities]",
+                                                "#text": "means a person designated under section 2\u00a0;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e236",
+                                            "bcl:text": {
+                                                "in:term": "recipient",
+                                                "#text": "means the person in a family unit to or for whom disability assistance, hardship assistance or a supplement is provided under this Act for the use or benefit of someone in the family unit, and includes"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e246",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the person's spouse, if the spouse is a dependant, and"
+                                                },
+                                                {
+                                                    "@id": "d2e255",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the person's adult dependants;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e264",
+                                            "bcl:text": {
+                                                "in:term": "spouse",
+                                                "#text": "has the meaning in section 1.1;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e273",
+                                            "bcl:text": {
+                                                "in:term": "supplement",
+                                                "in:desc": "[financial assistance to service or program providers]",
+                                                "#text": "means any form of assistance specified by regulation, other than disability assistance, hardship assistance or financial assistance provided under section\u00a07 \u00a0and, without limitation, includes access to programs established or funded under this Act;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e285",
+                                            "bcl:text": {
+                                                "in:term": "tribunal",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/02040_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Employment and Assistance Act"
+                                                },
+                                                "#text": "means the Employment and Assistance Appeal Tribunal established under section\u00a019 of the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e297",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Lieutenant Governor in Council may prescribe other circumstances in which a child is a dependent child of a parent for the purposes of this Act."
+                                },
+                                {
+                                    "@id": "d1e344",
+                                    "bcl:num": "2.1",
+                                    "bcl:text": "The Lieutenant Governor in Council may prescribe circumstances in which a child is not a dependent child of a parent for the purposes of this Act."
+                                },
+                                {
+                                    "@id": "d2e307",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For the purpose of the definition of \"dependant\", spouses do not reside apart by reason only that a spouse is employed or self-employed in a position that requires the spouse to be away from the residence of the family unit for periods longer than a day."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e317",
+                            "bcl:marginalnote": "Meaning of \"spouse\"",
+                            "bcl:num": "1.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e325",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Two persons are spouses of each other for the purposes of this Act if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e334",
+                                            "bcl:num": "a",
+                                            "bcl:text": "they are married to each other,"
+                                        },
+                                        {
+                                            "@id": "d2e343",
+                                            "bcl:num": "b",
+                                            "bcl:text": "they declare to the minister that they are in a marriage-like relationship, or"
+                                        },
+                                        {
+                                            "@id": "d2e362",
+                                            "bcl:num": "c",
+                                            "bcl:text": [
+                                                "they have resided together for at least the previous 12 consecutive months and the minister is satisfied that the relationship demonstrates",
+                                                "consistent with a marriage-like relationship."
+                                            ],
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e371",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "financial dependence or interdependence, and"
+                                                },
+                                                {
+                                                    "@id": "d2e380",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "social and familial interdependence"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e353",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Lieutenant Governor in Council may prescribe circumstances in which two persons are not spouses of each other for the purposes of this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e421",
+                            "bcl:marginalnote": "Persons with disabilities",
+                            "bcl:num": "2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e429",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this section:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d2e438",
+                                            "bcl:text": {
+                                                "in:term": "assistive device",
+                                                "#text": "means a device designed to enable a person to perform a daily living activity that, because of a severe mental or physical impairment, the person is unable to perform;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e447",
+                                            "bcl:text": {
+                                                "in:term": "daily living activity",
+                                                "#text": "has the prescribed meaning;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e457",
+                                            "bcl:text": {
+                                                "in:term": "prescribed professional",
+                                                "#text": "has the prescribed meaning."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e466",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may designate a person who has reached 18 years of age as a person with disabilities for the purposes of this Act if the minister is satisfied that the person is in a prescribed class of persons or that the person has a severe mental or physical impairment that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e475",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the opinion of a medical practitioner or nurse practitioner is likely to continue for at least 2\u00a0years, and"
+                                        },
+                                        {
+                                            "@id": "d2e484",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the opinion of a prescribed professional",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e493",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "directly and significantly restricts the person's ability to perform daily living activities either",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e502",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": "continuously, or"
+                                                        },
+                                                        {
+                                                            "@id": "d2e512",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "periodically for extended periods, and"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e521",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "as a result of those restrictions, the person requires help to perform those activities."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e530",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For the purposes of subsection (2),",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e539",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a person who has a severe mental impairment includes a person with a mental disorder, and"
+                                        },
+                                        {
+                                            "@id": "d2e548",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a person requires help in relation to a daily living activity if, in order to perform it, the person requires",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e557",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "an assistive device,"
+                                                },
+                                                {
+                                                    "@id": "d2e567",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the significant help or supervision of another person, or"
+                                                },
+                                                {
+                                                    "@id": "d2e576",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the services of an assistance animal."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e585",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The minister may rescind a designation under subsection (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e595",
+                            "bcl:marginalnote": "Eligibility of family unit",
+                            "bcl:num": "3",
+                            "bcl:text": "For the purposes of this Act, a family unit is eligible, in relation to disability assistance, hardship assistance or a supplement, if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e606",
+                                    "bcl:num": "a",
+                                    "bcl:text": "each person in the family unit on whose account the disability assistance, hardship assistance or supplement is provided satisfies the initial and continuing conditions of eligibility established under this Act, and"
+                                },
+                                {
+                                    "@id": "d2e615",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the family unit has not been declared ineligible for the disability assistance, hardship assistance or supplement under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e626",
+                            "bcl:marginalnote": "Application of Act",
+                            "bcl:num": "4",
+                            "bcl:text": "To be eligible for disability assistance or hardship assistance under this Act, a family unit must include a person with disabilities."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e638",
+                    "bcl:num": "2",
+                    "bcl:text": "Assistance",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e647",
+                            "bcl:marginalnote": "Disability assistance and supplements",
+                            "bcl:num": "5",
+                            "bcl:text": "Subject to the regulations, the minister may provide disability assistance or a supplement to or for a family unit that is eligible for it."
+                        },
+                        {
+                            "@id": "d2e659",
+                            "bcl:marginalnote": "Hardship assistance",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e667",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to the regulations, the minister may provide hardship assistance to or for a family unit that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e676",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is eligible for it, and"
+                                        },
+                                        {
+                                            "@id": "d2e685",
+                                            "bcl:num": "b",
+                                            "bcl:text": "is not eligible for disability assistance."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e695",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If hardship assistance is repayable, before providing it the minister may specify and require a particular type of security for repayment."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e705",
+                            "bcl:marginalnote": "Financial assistance to service or program providers",
+                            "bcl:num": "7",
+                            "bcl:text": "The minister may provide financial assistance to a person who, or a group of persons that, undertakes to provide a service or program that, in the minister's opinion, will promote the purposes of this Act."
+                        },
+                        {
+                            "@id": "d2e717",
+                            "bcl:marginalnote": "Employment-related programs and other programs",
+                            "bcl:num": "8",
+                            "bcl:text": "The minister may establish or fund employment-related programs and other programs for applicants, recipients or dependent youths who have difficulty finding or maintaining employment."
+                        },
+                        {
+                            "@id": "d2e730",
+                            "bcl:marginalnote": "Employment plan",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e738",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For a family unit to be eligible for disability assistance or hardship assistance, each applicant or recipient in the family unit, when required to do so by the minister, must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e747",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enter into an employment plan, and"
+                                        },
+                                        {
+                                            "@id": "d2e756",
+                                            "bcl:num": "b",
+                                            "bcl:text": "comply with the conditions in the employment plan."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e766",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A dependent youth, when required to do so by the minister, must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e775",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enter into an employment plan, and"
+                                        },
+                                        {
+                                            "@id": "d2e784",
+                                            "bcl:num": "b",
+                                            "bcl:text": "comply with the conditions in the employment plan."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e793",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The minister may specify the conditions in an employment plan including, without limitation, a condition requiring the applicant, recipient or dependent youth to participate in a specific employment-related program that, in the minister's opinion, will assist the applicant, recipient or dependent youth to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e802",
+                                            "bcl:num": "a",
+                                            "bcl:text": "find employment, or"
+                                        },
+                                        {
+                                            "@id": "d2e811",
+                                            "bcl:num": "b",
+                                            "bcl:text": "become more employable."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e821",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If an employment plan includes a condition requiring an applicant, a recipient or a dependent youth to participate in a specific employment-related program, that condition is not met if the person",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e830",
+                                            "bcl:num": "a",
+                                            "bcl:text": "fails to demonstrate reasonable efforts to participate in the program, or"
+                                        },
+                                        {
+                                            "@id": "d2e839",
+                                            "bcl:num": "b",
+                                            "bcl:text": "ceases, except for medical reasons, to participate in the program."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e848",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a dependent youth fails to comply with subsection (2), the minister may reduce the amount of disability assistance or hardship assistance provided to or for the family unit by the prescribed amount for the prescribed period."
+                                },
+                                {
+                                    "@id": "d2e857",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The minister may amend, suspend or cancel an employment plan."
+                                },
+                                {
+                                    "@id": "d2e866",
+                                    "bcl:num": "7",
+                                    "bcl:text": [
+                                        "A decision under this section",
+                                        {
+                                            "in:desc": "[reconsideration and appeal rights]",
+                                            "#text": "is final and conclusive and is not open to review by a court on any ground or to appeal under section 16 (3)\u00a0."
+                                        }
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e876",
+                                            "bcl:num": "a",
+                                            "bcl:text": "requiring a person to enter into an employment plan,"
+                                        },
+                                        {
+                                            "@id": "d2e885",
+                                            "bcl:num": "b",
+                                            "bcl:text": "amending, suspending or cancelling an employment plan, or"
+                                        },
+                                        {
+                                            "@id": "d2e894",
+                                            "bcl:num": "c",
+                                            "bcl:text": "specifying the conditions of an employment plan"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e910",
+                            "bcl:marginalnote": "Information and verification",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e918",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "For the purposes of",
+                                        "the minister may do one or more of the following:"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e927",
+                                            "bcl:num": "a",
+                                            "bcl:text": "determining whether a person wanting to apply for disability assistance or hardship assistance is eligible to apply for it,"
+                                        },
+                                        {
+                                            "@id": "d2e936",
+                                            "bcl:num": "b",
+                                            "bcl:text": "determining or auditing eligibility for disability assistance, hardship assistance or a supplement,"
+                                        },
+                                        {
+                                            "@id": "d2e946",
+                                            "bcl:num": "c",
+                                            "bcl:text": "assessing employability and skills for the purposes of an employment plan, or"
+                                        },
+                                        {
+                                            "@id": "d2e955",
+                                            "bcl:num": "d",
+                                            "bcl:text": "assessing compliance with the conditions of an employment plan,"
+                                        },
+                                        {
+                                            "@id": "d2e967",
+                                            "bcl:num": "e",
+                                            "bcl:text": "direct a person referred to in paragraph (a), an applicant or a recipient to supply the minister with information within the time and in the manner specified by the minister;"
+                                        },
+                                        {
+                                            "@id": "d2e976",
+                                            "bcl:num": "f",
+                                            "bcl:text": "seek verification of any information supplied to the minister by a person referred to in paragraph (a), an applicant or a recipient;"
+                                        },
+                                        {
+                                            "@id": "d2e985",
+                                            "bcl:num": "g",
+                                            "bcl:text": "direct a person referred to in paragraph (a), an applicant or a recipient to supply verification of any information the person, the applicant or the recipient supplied to the minister."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e995",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may direct an applicant or a recipient to supply verification of information received by the minister if that information relates to the eligibility of the family unit for disability assistance, hardship assistance or a supplement."
+                                },
+                                {
+                                    "@id": "d2e1004",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subsection (1) (e) to (g) applies with respect to a dependent youth for a purpose referred to in subsection (1) (c) or (d)."
+                                },
+                                {
+                                    "@id": "d2e1013",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If an applicant or a recipient fails to comply with a direction under this section, the minister may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1069",
+                                            "bcl:num": "a",
+                                            "bcl:text": "reduce the amount of disability assistance or hardship assistance provided to or for the family unit by the prescribed amount for the prescribed period, or"
+                                        },
+                                        {
+                                            "@id": "d1e1078",
+                                            "bcl:num": "b",
+                                            "bcl:text": "declare the family unit ineligible for disability assistance, hardship assistance or a supplement for the prescribed period."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1092",
+                                    "bcl:num": "4.1",
+                                    "bcl:text": "The Lieutenant Governor in Council may prescribe circumstances in which subsection (4)\u00a0(a) or\u00a0(b) does not apply."
+                                },
+                                {
+                                    "@id": "d2e1022",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a dependent youth fails to comply with a direction under this section, the minister may reduce the amount of disability assistance or hardship assistance provided to or for the family unit by the prescribed amount for the prescribed period."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1032",
+                            "bcl:marginalnote": "Reporting obligations",
+                            "bcl:num": "11",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1040",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For a family unit to be eligible for disability assistance, a recipient, in the manner and within the time specified by regulation, must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1049",
+                                            "bcl:num": "a",
+                                            "bcl:text": "submit to the minister a report that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1058",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "is in the form specified by the minister, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1068",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "contains the prescribed information, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1077",
+                                            "bcl:num": "b",
+                                            "bcl:text": "notify the minister of any change in circumstances or information that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1086",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "may affect the eligibility of the family unit, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1095",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "was previously provided to the minister."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1104",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A report under subsection (1) (a) is deemed not to have been submitted unless the accuracy of the information provided in it is confirmed by a signed statement of each recipient."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1114",
+                            "bcl:marginalnote": "Consequences of not meeting employment-related obligations",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1122",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to the conditions of an employment plan, the family unit of an applicant or a recipient is subject to the consequence described in subsection (2) for a family unit matching the applicant's or recipient's family unit if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1131",
+                                            "bcl:num": "a",
+                                            "bcl:text": "at any time while a recipient in the family unit is receiving disability assistance or hardship assistance or within 60\u00a0days before an applicant in the family unit applies for disability assistance, the applicant or recipient has",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1140",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "failed to accept suitable employment,"
+                                                },
+                                                {
+                                                    "@id": "d2e1150",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "voluntarily left employment without just cause, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1159",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "been dismissed from employment for just cause, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1168",
+                                            "bcl:num": "b",
+                                            "bcl:text": "at any time while a recipient in the family unit is receiving disability assistance or hardship assistance, the recipient fails to demonstrate reasonable efforts to search for employment."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1177",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For the purposes of subsection (1),",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1186",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if a family unit includes dependent children, the disability assistance or hardship assistance provided to or for the family unit must be reduced by the prescribed amount for the prescribed period, and"
+                                        },
+                                        {
+                                            "@id": "d2e1195",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if a family unit does not include dependent children, the family unit is not eligible for disability assistance for the prescribed period."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1205",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The Lieutenant Governor in Council may specify by regulation categories of applicants or recipients to whose family units this section does not apply."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1215",
+                            "bcl:marginalnote": "Consequences of not accepting or disposing of property",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1223",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may take action under subsection (3) if, within 2 years before the date of application for disability assistance or hardship assistance or at any time while disability assistance or hardship assistance is being provided, an applicant or a recipient has done either of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1232",
+                                            "bcl:num": "a",
+                                            "bcl:text": "failed to accept or pursue income, assets or other means of support that would, in the minister's opinion, enable the applicant or recipient to be completely or partly independent of disability assistance, hardship assistance or supplements;"
+                                        },
+                                        {
+                                            "@id": "d2e1241",
+                                            "bcl:num": "b",
+                                            "bcl:text": "disposed of real or personal property for consideration that, in the minister's opinion, is inadequate."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1340",
+                                    "bcl:num": "1.1",
+                                    "bcl:text": "The Lieutenant Governor in Council may specify by regulation sources of income, types of assets or other means of support that the minister must not consider under subsection\u00a0(1)\u00a0(a)."
+                                },
+                                {
+                                    "@id": "d2e1251",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A family unit is not eligible for disability assistance for the prescribed period if, within 2\u00a0years before the date of application for disability assistance or hardship assistance or at any time while disability assistance or hardship assistance is being provided, an applicant or a recipient has disposed of real or personal property to reduce assets."
+                                },
+                                {
+                                    "@id": "d2e1260",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In circumstances described in subsection (1), the minister may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1269",
+                                            "bcl:num": "a",
+                                            "bcl:text": "reduce the amount of disability assistance or hardship assistance provided to or for the family unit by the prescribed amount for the prescribed period, or"
+                                        },
+                                        {
+                                            "@id": "d2e1278",
+                                            "bcl:num": "b",
+                                            "bcl:text": "declare the family unit of the person ineligible for disability assistance or hardship assistance for the prescribed period."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1288",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "14",
+                            "bcl:text": "[Repealed 2015-23-58.]"
+                        },
+                        {
+                            "@id": "d2e1423",
+                            "bcl:marginalnote": "Consequences for providing inaccurate or incomplete information",
+                            "bcl:num": "14.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1431",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may take action under subsection (2) if the minister determines that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1440",
+                                            "bcl:num": "a",
+                                            "bcl:text": "disability assistance, hardship assistance or a supplement was provided to or for a family unit that was not eligible for it,"
+                                        },
+                                        {
+                                            "@id": "d2e1449",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the disability assistance, hardship assistance or supplement was provided to or for the family unit either",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1459",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "on the basis of inaccurate or incomplete information provided by the applicant or recipient",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e1468",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": {
+                                                                "in:desc": "[information and verification]",
+                                                                "#text": "under section 10 (1) (e)\u00a0, or"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d2e1480",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": {
+                                                                "in:desc": "[reporting obligations]",
+                                                                "#text": "in a report under section 11 (1)\u00a0, or"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e1492",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "because the recipient failed to report as required under section 11 (1), and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1501",
+                                            "bcl:num": "c",
+                                            "bcl:text": "in the minister's opinion, the applicant or recipient failed to take the necessary steps to ensure the accuracy or completeness of the information before providing it to the minister."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1510",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In the circumstances described in subsection (1), the minister may reduce the disability assistance or hardship assistance provided to or for the family unit by the prescribed amount for the prescribed period."
+                                },
+                                {
+                                    "@id": "d2e1520",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The periods prescribed for the purposes of subsection (2) may vary with the number of determinations made under subsection (1) in relation to a family unit."
+                                },
+                                {
+                                    "@id": "d2e1529",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02040_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Employment and Assistance Act"
+                                        },
+                                        "#text": "If a family unit that is subject to a reduction under section 15.1 of the  qualifies for disability assistance or hardship assistance under this Act before the period prescribed for the purposes of section 15.1 (2) of that Act expires, the reduction is deemed to have been imposed under subsection (2) of this section."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1542",
+                            "bcl:marginalnote": "Consequences in relation to outstanding arrest warrants",
+                            "bcl:num": "14.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1550",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "No disability assistance, hardship assistance or supplement may be paid to or for a family unit on account of an applicant or recipient for whom a warrant for arrest has been issued under",
+                                        "on whom the warrant has not been executed."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1559",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/I-2.5/index.html",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Immigration and Refugee Protection Act"
+                                                },
+                                                "#text": "the  (Canada), or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1571",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any other enactment of Canada in relation to an indictable offence, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1584",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Despite section 6 and subsection (1) of this section, and subject to the regulations, the minister may provide",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1593",
+                                            "bcl:num": "a",
+                                            "bcl:text": "disability assistance, hardship assistance or a supplement to or for the family unit on account of the person who is subject to the warrant, or"
+                                        },
+                                        {
+                                            "@id": "d2e1602",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a supplement to",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1611",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the person who is the subject of the warrant, for the purpose of the person returning to the jurisdiction that issued the warrant, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1620",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the family unit, for the purpose of the family unit returning to the jurisdiction that issued the warrant."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1630",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a family unit includes a person described in subsection (1), the person's income and assets must be included in the income and assets of the family unit for the purposes of determining whether the family unit is eligible for disability assistance, hardship assistance or a supplement, except as otherwise provided in the regulations."
+                                },
+                                {
+                                    "@id": "d2e1639",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "in:term": "indictable offence",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/I-21/index.html",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "In this section,  includes an offence that is deemed under section\u00a034\u00a0(1) of the  (Canada) to be an indictable offence."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1655",
+                            "bcl:marginalnote": "Applying periods of ineligibility and reduction",
+                            "bcl:num": "15",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1663",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a family unit is ineligible for disability assistance or hardship assistance for a month for more than one reason or on account of more than one person, the month counts towards the period of ineligibility applicable for each reason and on account of each person."
+                                },
+                                {
+                                    "@id": "d2e1672",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a family unit is ineligible for disability assistance or hardship assistance for a period that overlaps with a period when the disability assistance, hardship assistance or a supplement provided to or for the family unit are subject to a reduction, the period of the reduction is reduced by the period of the overlap."
+                                },
+                                {
+                                    "@id": "d2e1681",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the disability assistance, hardship assistance or a supplement provided to or for the family unit are subject to a reduction for more than one reason or on account of more than one person in the family unit for a month, the disability assistance, hardship assistance or a supplement provided to or for the family unit for the month must be reduced for each reason and for each person."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1691",
+                    "bcl:num": "3",
+                    "bcl:text": "Appeals",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1700",
+                            "bcl:marginalnote": "Reconsideration and appeal rights",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1708",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to section 17, a person may request the minister to reconsider any of the following decisions made under this Act:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1717",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a decision that results in a refusal to provide disability assistance, hardship assistance or a supplement to or for someone in the person's family unit;"
+                                        },
+                                        {
+                                            "@id": "d2e1726",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a decision that results in a discontinuance of disability assistance or a supplement provided to or for someone in the person's family unit;"
+                                        },
+                                        {
+                                            "@id": "d2e1736",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a decision that results in a reduction of disability assistance or a supplement provided to or for someone in the person's family unit;"
+                                        },
+                                        {
+                                            "@id": "d2e1745",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a decision in respect of the amount of a supplement provided to or for someone in the person's family unit if that amount is less than the lesser of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1754",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the maximum amount of the supplement under the regulations, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1763",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the cost of the least expensive and appropriate manner of providing the supplement;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1772",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "in:desc": "[employment plan]",
+                                                "#text": "a decision respecting the conditions of an employment plan under section\u00a09 ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1784",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A request under subsection (1) must be made, and the decision reconsidered, within the time limits and in accordance with any rules specified by regulation."
+                                },
+                                {
+                                    "@id": "d2e1794",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "in:desc": [
+                                            "[employment plan]",
+                                            "[overpayments]"
+                                        ],
+                                        "#text": "Subject to a regulation under subsection (5) and to sections 9 (7)\u00a0, 17 and 18\u00a0(2) , a person who is dissatisfied with the outcome of a request for a reconsideration under subsection (1) (a) to (d) may appeal the decision that is the outcome of the request to the tribunal."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1809",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02040_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Employment and Assistance Act"
+                                        },
+                                        "#text": "A right of appeal given under subsection (3) is subject to the time limits and other requirements set out in the  and the regulations under that Act."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1821",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The Lieutenant Governor in Council may designate by regulation",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1830",
+                                            "bcl:num": "a",
+                                            "bcl:text": "categories of supplements that are not appealable to the tribunal, and"
+                                        },
+                                        {
+                                            "@id": "d2e1839",
+                                            "bcl:num": "b",
+                                            "bcl:text": "circumstances in which a decision to refuse to provide disability assistance, hardship assistance or a supplement is not appealable to the tribunal."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1849",
+                            "bcl:marginalnote": "No appeal from decision based on same circumstances",
+                            "bcl:num": "17",
+                            "bcl:text": [
+                                "If a person reapplies for disability assistance, hardship assistance or a supplement after",
+                                "no right of reconsideration or appeal exists in respect of the second or a subsequent application unless there has been a change in circumstances relevant to the determination referred to in paragraph (a)."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1860",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the eligibility of the person's family unit for the disability assistance, hardship assistance or supplement has been determined under this Act,"
+                                },
+                                {
+                                    "@id": "d2e1869",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a right of appeal under section 16 (3) has been exercised in respect of the determination referred to in paragraph (a), and"
+                                },
+                                {
+                                    "@id": "d2e1879",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the decision of the tribunal in respect of the appeal referred to in paragraph (b) has been implemented"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1893",
+                    "bcl:num": "4",
+                    "bcl:text": "General Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1902",
+                            "bcl:marginalnote": "Overpayments",
+                            "bcl:num": "18",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1910",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If disability assistance, hardship assistance or a supplement is provided to or for a family unit that is not eligible for it, recipients who are members of the family unit during the period for which the overpayment is provided are liable to repay to the government the amount or value of the overpayment provided for that period."
+                                },
+                                {
+                                    "@id": "d2e1919",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "in:desc": "[reconsideration and appeal rights]",
+                                        "#text": "The minister's decision about the amount a person is liable to repay under subsection\u00a0(1) is not appealable under section 16 (3)\u00a0."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1932",
+                            "bcl:marginalnote": "Liability for and recovery of debts under Act",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1940",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An amount that a person is liable to repay under this Act is a debt due to the government that may be",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1949",
+                                            "bcl:num": "a",
+                                            "bcl:text": "recovered in a court that has jurisdiction, or"
+                                        },
+                                        {
+                                            "@id": "d2e1958",
+                                            "bcl:num": "b",
+                                            "bcl:text": "deducted, in accordance with the regulations, from any subsequent disability assistance, hardship assistance or supplement for which the person's family unit is eligible or from an amount payable to the person by the government under a prescribed enactment."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1968",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to the regulations, the minister may enter into an agreement, or accept any right assigned, for the repayment of an amount referred to in subsection (1)."
+                                },
+                                {
+                                    "@id": "d2e1977",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An agreement under subsection (2) may be entered into before or after the disability assistance, hardship assistance or supplement to which it relates is provided."
+                                },
+                                {
+                                    "@id": "d2e1986",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A person is jointly and separately liable for a debt referred to under subsection (1) that accrued in respect of a family unit while the person was a recipient in the family unit."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1996",
+                            "bcl:marginalnote": "No garnishment, attachment, execution or seizure",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2004",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Disability assistance, hardship assistance and supplements are exempt from garnishment, attachment, execution or seizure under any Act."
+                                },
+                                {
+                                    "@id": "d2e2013",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96138_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Financial Administration Act"
+                                        },
+                                        "#text": "Subsection (1) does not prevent disability assistance, hardship assistance or a supplement being retained by way of a deduction or set off under this Act, the  or a prescribed enactment."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2026",
+                            "bcl:marginalnote": "Agreements",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2034",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsections (2) and (2.1), the minister may enter into an agreement with any person or group of persons."
+                                },
+                                {
+                                    "@id": "d2e2043",
+                                    "bcl:num": "2",
+                                    "bcl:text": "With the prior approval of the Lieutenant Governor in Council, the minister may enter into an agreement, including an information-sharing agreement, on behalf of the government of British Columbia with any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2052",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the government of Canada or an agency of the government of Canada;"
+                                        },
+                                        {
+                                            "@id": "d2e2062",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the government of a province or another jurisdiction in Canada or an agency of the government of a province or other jurisdiction;"
+                                        },
+                                        {
+                                            "@id": "d2e2071",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the government of a state of the United States or an agency of that government."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2080",
+                                    "bcl:num": "2.1",
+                                    "bcl:text": "With the prior approval of the Lieutenant Governor in Council, the minister may enter into an information-sharing agreement with",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2089",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "a public body as defined in the , or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2101",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a legal entity representing an aboriginal community."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2110",
+                                    "bcl:num": "2.2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02040_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Employment and Assistance Act"
+                                        },
+                                        "#text": "Prior approval is not required under subsection (2.1) if the information-sharing agreement is for the purpose of the administration or enforcement of this Act, the  or another enactment."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2123",
+                                    "bcl:num": "2.3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "An information-sharing agreement under this section is not required for the purpose of sharing for research purposes personal information collected under this Act if the personal information is disclosed in accordance with section\u00a033\u00a0(3)\u00a0(h) of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2135",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An information-sharing agreement may be entered into under subsection (2) or (2.1) only for",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2144",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the purposes of the administration or enforcement of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2153",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "this Act,"
+                                                },
+                                                {
+                                                    "@id": "d2e2162",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "bcl:link": [
+                                                            {
+                                                                "@resource": "leg",
+                                                                "@xlink:href": "/legislation/96215_00",
+                                                                "@xlink:type": "locator",
+                                                                "in:doc": "Income Tax Act"
+                                                            },
+                                                            {
+                                                                "@resource": "leg",
+                                                                "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/I-3.3/index.html",
+                                                                "@xlink:type": "locator",
+                                                                "in:doc": "Income Tax Act"
+                                                            }
+                                                        ],
+                                                        "#text": "the  or the  (Canada),"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e2177",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/I-2.5/index.html",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Immigration and Refugee Protection Act"
+                                                        },
+                                                        "#text": "the \u00a0(Canada), or"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e2190",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "a social benefit program operated by a government, an agency, a public body or a legal entity referred to in subsection (2) or (2.1), or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2199",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "a purpose for which the minister is authorized under the  to disclose personal information in the jurisdiction of the government, agency, public body or entity with which the agreement is made."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2211",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "in:term": "information-sharing agreement",
+                                        "#text": "In this section,  includes a data-matching agreement."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2224",
+                            "bcl:marginalnote": "Offence of supplying false or misleading information",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2232",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:desc": [
+                                            "[information and verification]",
+                                            "[reporting obligations]"
+                                        ],
+                                        "#text": "A person commits an offence who supplies, in an application under this Act or when directed or required under section 10 (1), (2) or (3) , section 11\u00a0 or the regulations, information that is false or misleading with respect to a material fact."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2247",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person does not commit an offence under subsection (1) if, at the time the information was supplied, the person did not know that it was false or misleading and, with the exercise of reasonable diligence, could not have known that it was false or misleading."
+                                },
+                                {
+                                    "@id": "d2e2256",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person who commits an offence under this section is liable on conviction to a fine of not more than $2\u00a0000 or to imprisonment for not more than 6 months or to both."
+                                },
+                                {
+                                    "@id": "d2e2266",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If a person is convicted of an offence under this section, in addition to a penalty that may be imposed under subsection (3), the court may order the person to repay the government all or part of any amount that person received under this Act as a result of committing the offence."
+                                },
+                                {
+                                    "@id": "d2e2275",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the court makes an order under subsection (4) and the amount ordered to be paid is not paid immediately, the government may file the order with a court in British Columbia that has jurisdiction."
+                                },
+                                {
+                                    "@id": "d2e2284",
+                                    "bcl:num": "6",
+                                    "bcl:text": "An order filed under subsection (5) may be enforced in the same manner, as applicable, as if it were",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2293",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a judgment of the Supreme Court, or"
+                                        },
+                                        {
+                                            "@id": "d2e2302",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a payment order of the Provincial Court."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2313",
+                            "bcl:marginalnote": "Other provisions relating to offences",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2321",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "Section 5 of the  does not apply to this Act or the regulations."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2333",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The time limit for laying an information for an offence under this Act is 12\u00a0months after the facts on which the information is based first came to the minister's attention."
+                                },
+                                {
+                                    "@id": "d2e2342",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A document purporting to have been issued by the minister, certifying the date on which the minister became aware of the facts on which the information is based,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2352",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is admissible without proof of the signature or official character of the person appearing to have signed the certificate, and"
+                                        },
+                                        {
+                                            "@id": "d2e2361",
+                                            "bcl:num": "b",
+                                            "bcl:text": "is proof of the certified facts unless there is evidence to the contrary."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2371",
+                            "bcl:marginalnote": "Minister's powers",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2379",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For the purposes of this Act, the minister may acquire and dispose of real or personal property."
+                                },
+                                {
+                                    "@id": "d2e2388",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may conduct surveys and research activities for the purposes of program evaluation."
+                                },
+                                {
+                                    "@id": "d2e2397",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The minister may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2407",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribe forms for use under this Act, and"
+                                        },
+                                        {
+                                            "@id": "d2e2416",
+                                            "bcl:num": "b",
+                                            "bcl:text": "specify forms for use under this Act."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2426",
+                            "bcl:marginalnote": "Delegation of minister's powers and duties",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2434",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to the regulations, the minister may delegate to any person or category of persons any or all of the minister's powers, duties or functions under this Act except",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2443",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the power to prescribe forms, and"
+                                        },
+                                        {
+                                            "@id": "d2e2452",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the power to enter into an agreement under section 21 (2) or (2.1), unless section\u00a021\u00a0(2.2) applies in relation to the agreement."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2462",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A delegation of the powers, duties or functions of the minister must be in writing and may include any limits or conditions the minister considers advisable."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2472",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2480",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2492",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2501",
+                                            "bcl:num": "a",
+                                            "bcl:text": "specifying forms of assistance for the purpose of the definition of \"supplement\";"
+                                        },
+                                        {
+                                            "@id": "d2e2511",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing categories of disability assistance, hardship assistance and supplements which, without limitation, may relate to the purpose, duration or frequency of the disability assistance, hardship assistance or supplement or the category of person who, or family unit that, is eligible for it;"
+                                        },
+                                        {
+                                            "@id": "d2e2520",
+                                            "bcl:num": "c",
+                                            "bcl:text": "establishing conditions that persons must satisfy to be eligible to apply for disability assistance or hardship assistance and the information, authorizations and verifications that must be provided in order to demonstrate that those conditions are satisfied;"
+                                        },
+                                        {
+                                            "@id": "d2e2529",
+                                            "bcl:num": "d",
+                                            "bcl:text": "respecting applications for disability assistance, hardship assistance and supplements and the information, authorizations and verifications that must be provided in support of those applications;"
+                                        },
+                                        {
+                                            "@id": "d2e2538",
+                                            "bcl:num": "e",
+                                            "bcl:text": "defining persons or categories of persons who, or family units or categories of family units that, qualify for categories of disability assistance, hardship assistance and supplements;"
+                                        },
+                                        {
+                                            "@id": "d2e2547",
+                                            "bcl:num": "f",
+                                            "bcl:text": "governing eligibility for disability assistance, hardship assistance or a supplement;"
+                                        },
+                                        {
+                                            "@id": "d2e2556",
+                                            "bcl:num": "g",
+                                            "bcl:text": "prescribing rules for determining the income and assets of a family unit;"
+                                        },
+                                        {
+                                            "@id": "d2e2566",
+                                            "bcl:num": "h",
+                                            "bcl:text": "prescribing rules for determining the rate or amount of disability assistance, hardship assistance or a supplement;"
+                                        },
+                                        {
+                                            "@id": "d2e2575",
+                                            "bcl:num": "i",
+                                            "bcl:text": "regulating the time and manner of providing disability assistance, hardship assistance and supplements;"
+                                        },
+                                        {
+                                            "@id": "d2e2584",
+                                            "bcl:num": "j",
+                                            "bcl:text": "specifying conditions on which disability assistance, hardship assistance or a supplement may be provided, including a condition that the disability assistance, hardship assistance or supplement be provided on a repayable basis, and the consequences of failing to comply with those conditions;"
+                                        },
+                                        {
+                                            "@id": "d2e2593",
+                                            "bcl:num": "k",
+                                            "bcl:text": "respecting the duties of persons who administer disability assistance, hardship assistance or a supplement received by them for others;"
+                                        },
+                                        {
+                                            "@id": "d2e2602",
+                                            "bcl:num": "l",
+                                            "bcl:text": "respecting the information, authorizations and verifications that must be provided for the purposes of entering into, amending, suspending, cancelling or auditing compliance with an employment plan;"
+                                        },
+                                        {
+                                            "@id": "d2e2611",
+                                            "bcl:num": "m",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[information and verification]",
+                                                    "[consequences of not accepting or disposing of property]"
+                                                ],
+                                                "#text": "prescribing the periods for which a family unit may be declared ineligible under section 10 (4)\u00a0, section 13 (3) (b)\u00a0 or the regulations;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2627",
+                                            "bcl:num": "n",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[consequences of not meeting employment-related obligations]",
+                                                    "[consequences of not accepting or disposing of property]"
+                                                ],
+                                                "#text": "prescribing periods of ineligibility for the purposes of sections\u00a012\u00a0(2)\u00a0(b)\u00a0 and 13\u00a0(2) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2642",
+                                            "bcl:num": "o",
+                                            "bcl:text": "[Repealed 2015-23-59.]"
+                                        },
+                                        {
+                                            "@id": "d3e2642",
+                                            "bcl:num": "p",
+                                            "bcl:text": {
+                                                "in:desc": "[persons with disabilities]",
+                                                "#text": "prescribing classes of persons for the purposes of section 2 (2)  by reference to a status or benefit that"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d3e2663",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "is conferred by the government, the government of Canada or an agent of either of those governments, and"
+                                                },
+                                                {
+                                                    "@id": "d4e2663",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "in the opinion of the Lieutenant Governor in Council, evidences a mental or physical impairment at least as severe as that described in section\u00a02\u00a0(2)\u00a0(a) and\u00a0(b)."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2654",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2663",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[employment plan]",
+                                                    "[information and verification]",
+                                                    "[consequences of not meeting employment-related obligations]",
+                                                    "[consequences of not accepting or disposing of property]"
+                                                ],
+                                                "#text": "specifying the amounts and duration of a reduction under section\u00a09\u00a0(5)\u00a0, section 10\u00a0(4)\u00a0(a) or\u00a0(5)\u00a0, section\u00a012\u00a0(2)\u00a0(a)\u00a0, section\u00a013\u00a0(3)\u00a0(a)\u00a0 or the regulations;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2684",
+                                            "bcl:num": "b",
+                                            "bcl:text": "[Repealed 2015-23-59.]"
+                                        },
+                                        {
+                                            "@id": "d2e2696",
+                                            "bcl:num": "b.1",
+                                            "bcl:text": "prescribing amounts and periods for the purpose of section 14.1 (2);"
+                                        },
+                                        {
+                                            "@id": "d2e2706",
+                                            "bcl:num": "c",
+                                            "bcl:text": "prescribing additional circumstances in which the minister may declare a family unit ineligible for, or may reduce, disability assistance, hardship assistance and supplements;"
+                                        },
+                                        {
+                                            "@id": "d2e2715",
+                                            "bcl:num": "d",
+                                            "bcl:text": "governing investigations and audits to determine eligibility for disability assistance, hardship assistance and supplements and to ensure compliance with this Act and the regulations;"
+                                        },
+                                        {
+                                            "@id": "d2e2724",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "in:desc": "[liability for and recovery of debts under Act]",
+                                                "#text": "prescribing, for the purpose of section 19 (2)\u00a0, the circumstances in which repayment agreements may be entered into or assignments accepted, and the terms to be included in those agreements or assignments;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2736",
+                                            "bcl:num": "f",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[liability for and recovery of debts under Act]",
+                                                    "[no garnishment, attachment, execution or seizure]"
+                                                ],
+                                                "#text": "prescribing enactments for the purpose of sections 19 (1) (b)\u00a0 and 20\u00a0(2) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2751",
+                                            "bcl:num": "g",
+                                            "bcl:text": {
+                                                "in:desc": "[reconsideration and appeal rights]",
+                                                "#text": "specifying time limits and other rules for the purpose of a reconsideration under section\u00a016 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2763",
+                                            "bcl:num": "h",
+                                            "bcl:text": "respecting reinstatement of disability assistance and supplements pending an appeal;"
+                                        },
+                                        {
+                                            "@id": "d2e2773",
+                                            "bcl:num": "i",
+                                            "bcl:text": "respecting service and delivery of documents or the giving of notice under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2782",
+                                            "bcl:num": "j",
+                                            "bcl:text": {
+                                                "in:desc": "[agreements]",
+                                                "#text": "respecting terms or conditions that are to be included in information-sharing agreements under section 21 (2) or (2.1) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2794",
+                                            "bcl:num": "k",
+                                            "bcl:text": "respecting the delegation of the powers, duties and functions of the minister;"
+                                        },
+                                        {
+                                            "@id": "d2e2803",
+                                            "bcl:num": "l",
+                                            "bcl:text": {
+                                                "in:desc": "[liability for and recovery of debts under Act]",
+                                                "#text": "respecting deductions under section 19 (1) (b) , including, without limitation,"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e2872",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "prescribing the manner of deduction,"
+                                                },
+                                                {
+                                                    "@id": "d0e2881",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing the duration and the minimum and maximum amounts of a deduction,"
+                                                },
+                                                {
+                                                    "@id": "d0e2890",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "exempting a category of family units from the minimum amount of a deduction prescribed under subparagraph (ii) of this paragraph in circumstances or on conditions the Lieutenant Governor in Council prescribes, and"
+                                                },
+                                                {
+                                                    "@id": "d0e2899",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "for certainty, establishing categories under subsection (4) (c) of this section that relate, without limitation, in whole or in part to inclusion in the family unit of a person who is or has been convicted of an offence",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d0e2907",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": {
+                                                                "bcl:link": {
+                                                                    "@resource": "leg",
+                                                                    "@xlink:href": "/legislation/02040_01",
+                                                                    "@xlink:type": "locator",
+                                                                    "in:doc": "Employment and Assistance Act"
+                                                                },
+                                                                "#text": "under this Act or the , or"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d0e2916",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": {
+                                                                "bcl:link": [
+                                                                    {
+                                                                        "@resource": "leg",
+                                                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                                                        "@xlink:type": "locator",
+                                                                        "in:doc": "Criminal Code"
+                                                                    },
+                                                                    {
+                                                                        "@resource": "leg",
+                                                                        "@xlink:href": "/legislation/02040_01",
+                                                                        "@xlink:type": "locator",
+                                                                        "in:doc": "Employment and Assistance Act"
+                                                                    }
+                                                                ],
+                                                                "#text": "under the  in relation to obtaining money, under this Act or the , by fraud or false or misleading representation;"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2815",
+                                            "bcl:num": "m",
+                                            "bcl:text": "respecting any matter that, by this Act, is to be prescribed, determined or regulated by regulation;"
+                                        },
+                                        {
+                                            "@id": "d2e2824",
+                                            "bcl:num": "n",
+                                            "bcl:text": "defining any word or expression used in this Act or the regulations."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2834",
+                                    "bcl:num": "4",
+                                    "bcl:text": "In making regulations under this Act, the Lieutenant Governor in Council may do one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2843",
+                                            "bcl:num": "a",
+                                            "bcl:text": "delegate a matter to a person;"
+                                        },
+                                        {
+                                            "@id": "d2e2852",
+                                            "bcl:num": "b",
+                                            "bcl:text": "confer a discretion on a person;"
+                                        },
+                                        {
+                                            "@id": "d2e2861",
+                                            "bcl:num": "c",
+                                            "bcl:text": "make different regulations for different groups or categories of persons or family units."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2871",
+                            "bcl:marginalnote": "Regulations respecting eligibility and assignment of maintenance rights",
+                            "bcl:num": "27",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2879",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may make regulations governing the assignment of maintenance rights and the recovery of the amount of disability assistance and hardship assistance provided in place of maintenance, including the following regulations:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2888",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing categories of persons whose family units are not eligible for disability assistance or hardship assistance unless they and their dependants assign to the minister any maintenance rights that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2897",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "they have respecting maintenance for themselves or a dependent child, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2907",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "are specified under paragraph (b);"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2916",
+                                            "bcl:num": "b",
+                                            "bcl:text": "specifying maintenance rights that are to be assigned to the minister, including, but not limited to, any of the following rights:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2925",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "to make an application under an enactment of British Columbia for a maintenance order;"
+                                                },
+                                                {
+                                                    "@id": "d2e2934",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "to enter into a maintenance agreement;"
+                                                },
+                                                {
+                                                    "@id": "d2e2943",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "to make or defend an application for variation of a maintenance order or maintenance agreement;"
+                                                },
+                                                {
+                                                    "@id": "d2e2952",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "to receive payment under",
+                                                    "bcl:clause": [
+                                                        {
+                                                            "@id": "d2e2962",
+                                                            "bcl:num": "A",
+                                                            "bcl:text": {
+                                                                "bcl:link": {
+                                                                    "@resource": "leg",
+                                                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/D-3.4/",
+                                                                    "@xlink:type": "locator",
+                                                                    "in:doc": "Divorce Act"
+                                                                },
+                                                                "#text": "a maintenance order made under the  (Canada) or otherwise, or"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d2e2974",
+                                                            "bcl:num": "B",
+                                                            "bcl:text": "a maintenance agreement;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e2983",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "to enforce a maintenance order or maintenance agreement;"
+                                                },
+                                                {
+                                                    "@id": "d2e2992",
+                                                    "bcl:num": "vi",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96127_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Family Maintenance Enforcement Act"
+                                                        },
+                                                        "#text": "to file a maintenance order or maintenance agreement under the ;"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3004",
+                                            "bcl:num": "c",
+                                            "bcl:text": "governing how and to whom notice of an assignment of maintenance rights must be given;"
+                                        },
+                                        {
+                                            "@id": "d2e3013",
+                                            "bcl:num": "d",
+                                            "bcl:text": "governing how long an assignment of maintenance rights remains in effect for different categories of maintenance rights;"
+                                        },
+                                        {
+                                            "@id": "d2e3023",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing terms that are to be included in an assignment of maintenance rights and the consequences of failure to comply with those terms;"
+                                        },
+                                        {
+                                            "@id": "d2e3032",
+                                            "bcl:num": "f",
+                                            "bcl:text": [
+                                                "determining the amounts that may",
+                                                "to recover the amount of disability assistance or hardship assistance provided in place of maintenance while the assignment is in effect;"
+                                            ],
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3041",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "be deducted from maintenance payments received under an assignment of maintenance rights, and"
+                                                },
+                                                {
+                                                    "@id": "d2e3050",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "be retained by the government"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3062",
+                                            "bcl:num": "g",
+                                            "bcl:text": "respecting the method of accounting to a recipient for payments received under an assignment of maintenance rights and for deductions made from those payments."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3072",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A regulation under subsection (1) (b) (iv) may specify that the minister be assigned the right to receive arrears of maintenance that are paid while the assignment is in effect, even though the arrears accrued before",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3081",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the regulation came into force, or"
+                                        },
+                                        {
+                                            "@id": "d2e3090",
+                                            "bcl:num": "b",
+                                            "bcl:text": "disability assistance or hardship assistance was provided to or for the family unit that becomes eligible as a result of the assignment."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3099",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation under subsection (1) (d) may provide that an assignment of maintenance rights remains in effect for a specified period after the family unit became eligible for disability assistance or hardship assistance as a result of the assignment ceases to receive either disability assistance or hardship assistance."
+                                },
+                                {
+                                    "@id": "d2e3108",
+                                    "bcl:num": "4",
+                                    "bcl:text": "While an assignment of maintenance rights is in effect, the minister",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3117",
+                                            "bcl:num": "a",
+                                            "bcl:text": "may make an application or bring a proceeding relating to the assigned rights in the name of the government or in the name of the person who made the assignment, and"
+                                        },
+                                        {
+                                            "@id": "d2e3127",
+                                            "bcl:num": "b",
+                                            "bcl:text": "has the same right to be notified and to participate in any proceedings relating to the assigned rights that, but for that assignment, the person who made the assignment would have had."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3136",
+                                    "bcl:num": "5",
+                                    "bcl:text": "While an assignment of maintenance rights is in effect, the person who made the assignment is not entitled to exercise any of the assigned rights",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3145",
+                                            "bcl:num": "a",
+                                            "bcl:text": "except to the extent authorized in writing by the minister, and"
+                                        },
+                                        {
+                                            "@id": "d2e3154",
+                                            "bcl:num": "b",
+                                            "bcl:text": "subject to any terms or conditions specified in the authorization."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3164",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "28",
+                            "bcl:text": "[Repealed 2015-23-60.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3229",
+                    "bcl:num": "5",
+                    "bcl:text": "Transitional and Consequential Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e3238",
+                            "bcl:marginalnote": {
+                                "in:doc": "Interpretation Act",
+                                "#text": "Application of sections 35 and 36 of the"
+                            },
+                            "bcl:num": "29",
+                            "bcl:text": {
+                                "in:desc": "[transitional regulations]",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "Subject to sections 31, 32, 33, 34, 35 and 36 and to regulations made under section\u00a030 of this Act , sections\u00a035 and 36\u00a0(1) of the  apply to all matters affected by the repeal of a former Act and its replacement by this Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e3258",
+                            "bcl:marginalnote": "Transitional regulations",
+                            "bcl:num": "30",
+                            "bcl:text": "The Lieutenant Governor in Council may make regulations considered necessary or advisable to more effectively bring this Act into operation and to facilitate the transition from the operation of any of the following Acts to the operation of this Act:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3269",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96025REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "BC Benefits (Appeals) Act"
+                                        },
+                                        "#text": ";"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3281",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96027REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "BC Benefits (Income Assistance) Act"
+                                        },
+                                        "#text": ";"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3294",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96028REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "BC Benefits (Youth Works) Act"
+                                        },
+                                        "#text": ";"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3306",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96097REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Disability Benefits Program Act"
+                                        },
+                                        "#text": "."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3319",
+                            "bcl:marginalnote": "Recipients under former Act deemed recipients under this Act",
+                            "bcl:num": "31",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3327",
+                                    "bcl:num": "1",
+                                    "bcl:text": "On the date this section comes into force, a person with disabilities who is receiving income assistance, a disability allowance or a benefit under a former Act",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3336",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is deemed to have applied for and be in receipt of disability assistance or supplements under this Act, and"
+                                        },
+                                        {
+                                            "@id": "d2e3345",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in order to continue receiving disability assistance or the supplement, must satisfy the initial and continuing conditions of eligibility established under this Act that apply in respect of the disability assistance or supplement."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3355",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96027REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "BC Benefits (Income Assistance) Act"
+                                        },
+                                        "#text": "On the date this section comes into force, a person with disabilities who is receiving hardship assistance under the"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3366",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is deemed to have applied for and received hardship assistance under this Act, and"
+                                        },
+                                        {
+                                            "@id": "d2e3375",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in order to receive further hardship assistance, must satisfy the conditions of eligibility established under this Act for hardship assistance."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3384",
+                                    "bcl:num": "3",
+                                    "bcl:text": [
+                                        {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96025REP_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "BC Benefits (Appeals) Act"
+                                            },
+                                            "#text": "Despite a final decision of a tribunal, or the BC Benefits Appeal Board, under the , the minister may"
+                                        },
+                                        "to equal the amounts or categories of disability assistance, hardship assistance or supplements the recipient and the recipient's dependants are eligible for under this Act."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3396",
+                                            "bcl:num": "a",
+                                            "bcl:text": "adjust an amount of disability allowance, income assistance, hardship assistance or a benefit,"
+                                        },
+                                        {
+                                            "@id": "d2e3405",
+                                            "bcl:num": "b",
+                                            "bcl:text": "alter a category of disability allowance, income assistance, hardship assistance or a benefit provided to or for a recipient referred to in subsections (1) and (2) and the recipient's dependants, and"
+                                        },
+                                        {
+                                            "@id": "d2e3415",
+                                            "bcl:num": "c",
+                                            "bcl:text": "alter the category of person of the recipient or the recipient's dependants"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3427",
+                                    "bcl:num": "4",
+                                    "bcl:text": "An adjustment or alteration referred to in subsection (3) (a) or (b) may be, as applicable,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3436",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an increase, a decrease or a discontinuance of an amount, or"
+                                        },
+                                        {
+                                            "@id": "d2e3445",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a change in, or a discontinuance or an addition of, a category of disability assistance, hardship assistance or supplements."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3455",
+                            "bcl:marginalnote": "Transition of persons with disabilities under former Acts",
+                            "bcl:num": "32",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3463",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        {
+                                            "in:desc": "[recipients under former Act deemed recipients under this Act]",
+                                            "#text": "Subject to section 31 (1) (b)\u00a0, on the day this section comes into force, a person with disabilities who is receiving"
+                                        },
+                                        "is deemed to have been designated as a person with disabilities under this Act."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3475",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96097REP_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Disability Benefits Program Act"
+                                                },
+                                                "#text": "a disability allowance or a benefit under the , or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e3487",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96027REP_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "BC Benefits (Income Assistance) Act"
+                                                },
+                                                "#text": "income assistance, hardship assistance or a benefit under the"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3502",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "in:desc": "[persons with disabilities]",
+                                        "#text": "Section 2 (4)\u00a0 applies to a designation under subsection (1)."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3515",
+                            "bcl:marginalnote": "Indebtedness under former Act",
+                            "bcl:num": "33",
+                            "bcl:text": [
+                                "On the date this section comes into force, a person",
+                                "continues to be liable on the same terms to the government for the amount of indebtedness outstanding on that date and the debt is deemed to have been incurred and to be owing under this Act."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3526",
+                                    "bcl:num": "a",
+                                    "bcl:text": "whose family unit includes a person with disabilities, and"
+                                },
+                                {
+                                    "@id": "d2e3535",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96028REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "BC Benefits (Youth Works) Act"
+                                        },
+                                        "in:doc": "Guaranteed Available Income for Need Act",
+                                        "#text": "who is indebted to the government under a former Act, the  or the , R.S.B.C.\u00a01979,\u00a0c.\u00a0158,"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3556",
+                            "bcl:marginalnote": "Assignment of maintenance rights deemed made under this Act",
+                            "bcl:num": "34",
+                            "bcl:text": [
+                                "An assignment of maintenance rights that",
+                                "for a person to whom this Act applies, is deemed to have been made, and continues in force, under and subject to the regulations to this Act."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3567",
+                                    "bcl:num": "a",
+                                    "bcl:text": "was made or continued under the regulations to a former Act, and"
+                                },
+                                {
+                                    "@id": "d2e3576",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is in effect on the date this section comes into force,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3590",
+                            "bcl:marginalnote": "Transitional \u2014 disqualification under former Act",
+                            "bcl:num": "35",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96028REP_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "BC Benefits (Youth Works) Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96028REP_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "BC Benefits (Youth Works) Act"
+                                    }
+                                ],
+                                "#text": "The family unit of a person who, on the date this Act comes into force, is not eligible for a disability allowance, income assistance or hardship assistance under a former Act or a youth allowance under the  because of a period of disqualification imposed under the former Act or the  is not eligible for disability assistance or hardship assistance under this Act, as applicable, until the imposed period of disqualification expires, and that period is deemed to have been imposed under this Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e3608",
+                            "bcl:marginalnote": "Transitional \u2014 appeals",
+                            "bcl:num": "36",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3616",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If, on the date this section comes into force, a person has requested a reconsideration of a decision under a former Act,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3625",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the reconsideration must be conducted in accordance with the procedures under this Act and this Act applies to the decision being reconsidered,"
+                                        },
+                                        {
+                                            "@id": "d2e3634",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/02040_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Employment and Assistance Act"
+                                                },
+                                                "in:desc": "[appeals]",
+                                                "#text": "if the decision that is reconsidered is a decision that is appealable under this Act, an appeal to the tribunal under the  may be commenced in accordance with Part\u00a03  of that Act and this Act applies to the decision being appealed, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e3650",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if the decision that is reconsidered is a decision that is not appealable under this Act, the decision of the minister on the reconsideration is final and conclusive and is not open to review in a court on any ground or to appeal to any tribunal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3659",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96025REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "BC Benefits (Appeals) Act"
+                                        },
+                                        "#text": "If, on the date this section comes into force, an appeal to a tribunal has been commenced under the ,"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3671",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if a tribunal has been appointed under that Act",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3680",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the appeal must be to that tribunal and this Act applies to the decision being appealed,"
+                                                },
+                                                {
+                                                    "@id": "d2e3689",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "for the purpose of the appeal, that tribunal has the same jurisdiction as, and is deemed to be a panel of, the Employment and Assistance Appeal Tribunal, and"
+                                                },
+                                                {
+                                                    "@id": "d2e3698",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the decision of that tribunal is final and conclusive and is not open to review in a court except on a question of law or excess of jurisdiction or to appeal to any body, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3708",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96025REP_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "BC Benefits (Appeals) Act"
+                                                },
+                                                "#text": "if a tribunal has not been appointed under the ,"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3720",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/02040_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Employment and Assistance Act"
+                                                        },
+                                                        "#text": "the appeal must be to the tribunal under, and conducted in accordance with, Part\u00a03 of the , and"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e3732",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "this Act applies to the decision being appealed."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3741",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96025REP_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "BC Benefits (Appeals) Act"
+                                        },
+                                        "#text": "If, on the date this section comes into force, an appeal to the BC Benefits Appeal Board has been commenced under the  by a person with disabilities, or a dependant of such a person, despite the repeal of that Act,"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3753",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[transitional appeal board]",
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/02040_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Employment and Assistance Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/96025REP_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "BC Benefits (Appeals) Act"
+                                                    }
+                                                ],
+                                                "#text": "subject to section 46\u00a0 of the , the appeal must be conducted in accordance with the procedures under the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e3771",
+                                            "bcl:num": "b",
+                                            "bcl:text": "this Act applies to the decision being appealed, and"
+                                        },
+                                        {
+                                            "@id": "d2e3781",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the decision of the appeal board is final and conclusive and is not open to review in a court except on a question of law or excess of jurisdiction."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e3916",
+                            "bcl:marginalnote": "Transitional \u2014 repeal of section 14",
+                            "bcl:num": "36.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e3924",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this section:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d0e3932",
+                                            "bcl:text": {
+                                                "in:term": "Act offence",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/02040_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Employment and Assistance Act"
+                                                },
+                                                "#text": "means an offence under this Act or the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e3940",
+                                            "bcl:text": {
+                                                "in:term": "criminal code offence",
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Criminal Code"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/02040_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Employment and Assistance Act"
+                                                    }
+                                                ],
+                                                "#text": "means an offence under the  in relation to obtaining money, under this Act or the , by fraud or false or misleading representation."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e3949",
+                                    "bcl:num": "2",
+                                    "bcl:text": "On and after the date section 14 is repealed, a family unit to which consequences referred to in section 14 (1), (2) or (3) applied immediately before that date",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e3957",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is not ineligible for disability assistance by reason only of a consequence imposed under that section, and"
+                                        },
+                                        {
+                                            "@id": "d0e3966",
+                                            "bcl:num": "b",
+                                            "bcl:text": "is not subject to any consequence imposed on the family unit under that section."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e3976",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For certainty, a family unit described in subsection (2) is liable under section 18 to repay to the government the amount or value of, as applicable,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e3984",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an overpayment in respect of which a person in the family unit has been convicted of a criminal code offence or Act offence referred to in section\u00a014 (1) or (2), as that section read immediately before its repeal, or"
+                                        },
+                                        {
+                                            "@id": "d0e3993",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an overpayment that is the subject of a judgment referred to in section\u00a014\u00a0(3), as that section read immediately before its repeal."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3791",
+                            "bcl:marginalnote": "Spent",
+                            "bcl:num": {
+                                "in:em": "37-48"
+                            },
+                            "bcl:text": {
+                                "in:em": "[Consequential amendments and repeal. Spent. 2002-41-37 to 48.]"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "bcl:section": {
+                "@id": "d2e3809",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "49",
+                "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+            }
+        }
+    }
+}

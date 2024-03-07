@@ -1,0 +1,1046 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96131_01",
+        "act:title": "Farm Practices Protection (Right to Farm) Act",
+        "act:chapter": "131",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1198514681/96131/tlc96131_f",
+            "act:tlc": "E3tlc96131"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e23",
+                    "bcl:num": "1",
+                    "bcl:text": "Definitions",
+                    "bcl:section": {
+                        "@id": "d2e32",
+                        "bcl:marginalnote": "Definitions",
+                        "bcl:num": "1",
+                        "bcl:text": "In this Act:",
+                        "bcl:definition": [
+                            {
+                                "@id": "d1e45",
+                                "bcl:text": {
+                                    "in:term": "agricultural land reserve",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02036_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Agricultural Land Commission Act"
+                                    },
+                                    "#text": "has the same meaning as in the ;"
+                                }
+                            },
+                            {
+                                "@id": "d2e43",
+                                "bcl:text": {
+                                    "in:term": "board",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96330_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Natural Products Marketing (BC) Act"
+                                    },
+                                    "#text": "means the Provincial board under the ;"
+                                }
+                            },
+                            {
+                                "@id": "d2e55",
+                                "bcl:text": {
+                                    "in:term": "complainant",
+                                    "#text": "means a person who under section 3 applies for a determination referred to in that section;"
+                                }
+                            },
+                            {
+                                "@id": "d2e65",
+                                "bcl:text": {
+                                    "in:term": "Crown land",
+                                    "#text": "means land, whether or not it is covered by water, or an interest in land, vested in the government;"
+                                }
+                            },
+                            {
+                                "@id": "d2e74",
+                                "bcl:text": {
+                                    "in:term": "farm business",
+                                    "#text": "means a business in which one or more farm operations are conducted, and includes a farm education or farm research institution to the extent that the institution conducts one or more farm operations;"
+                                }
+                            },
+                            {
+                                "@id": "d2e83",
+                                "bcl:text": [
+                                    {
+                                        "in:term": "farm operation",
+                                        "#text": "means any of the following activities involved in carrying on a farm business:"
+                                    },
+                                    "and includes",
+                                    "but does not include"
+                                ],
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e92",
+                                        "bcl:num": "a",
+                                        "bcl:text": "growing, producing, raising or keeping animals or plants, including mushrooms, or the primary products of those plants or animals;"
+                                    },
+                                    {
+                                        "@id": "d2e101",
+                                        "bcl:num": "b",
+                                        "bcl:text": "clearing, draining, irrigating or cultivating land;"
+                                    },
+                                    {
+                                        "@id": "d2e110",
+                                        "bcl:num": "c",
+                                        "bcl:text": "using farm machinery, equipment, devices, materials and structures;"
+                                    },
+                                    {
+                                        "@id": "d2e120",
+                                        "bcl:num": "d",
+                                        "bcl:text": "applying fertilizers, manure, pesticides and biological control agents, including by ground and aerial spraying;"
+                                    },
+                                    {
+                                        "@id": "d2e129",
+                                        "bcl:num": "e",
+                                        "bcl:text": "conducting any other agricultural activity on, in or over agricultural land;"
+                                    },
+                                    {
+                                        "@id": "d2e141",
+                                        "bcl:num": "f",
+                                        "bcl:text": [
+                                            "intensively cultivating in plantations, any",
+                                            "prescribed by the minister;"
+                                        ],
+                                        "bcl:subparagraph": [
+                                            {
+                                                "@id": "d2e150",
+                                                "bcl:num": "i",
+                                                "bcl:text": "specialty wood crops, or"
+                                            },
+                                            {
+                                                "@id": "d2e159",
+                                                "bcl:num": "ii",
+                                                "bcl:text": "specialty fibre crops"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d2e172",
+                                        "bcl:num": "g",
+                                        "bcl:text": "conducting turf production",
+                                        "bcl:subparagraph": [
+                                            {
+                                                "@id": "d2e181",
+                                                "bcl:num": "i",
+                                                "bcl:text": "outside of the agricultural land reserve, or"
+                                            },
+                                            {
+                                                "@id": "d2e190",
+                                                "bcl:num": "ii",
+                                                "bcl:text": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/02036_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Agricultural Land Commission Act"
+                                                    },
+                                                    "#text": "in the agricultural land reserve with the approval under the  of the Provincial Agricultural Land Commission;"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d2e202",
+                                        "bcl:num": "h",
+                                        "bcl:text": "prescribed types of aquaculture;"
+                                    },
+                                    {
+                                        "@id": "d2e214",
+                                        "bcl:num": "i",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/14016",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Animal Health Act"
+                                            },
+                                            "#text": "raising or keeping fur bearing animals or game, within the meaning of a regulation made under the , by a person licensed or permitted to do so under that Act;"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d2e227",
+                                        "bcl:num": "j",
+                                        "bcl:text": "[Repealed 2014-16-107.]"
+                                    },
+                                    {
+                                        "@id": "d2e239",
+                                        "bcl:num": "k",
+                                        "bcl:text": [
+                                            "processing or direct marketing by a farmer of one or both of",
+                                            "to the extent that the processing or marketing of those products is conducted on the farmer's farm;"
+                                        ],
+                                        "bcl:subparagraph": [
+                                            {
+                                                "@id": "d2e248",
+                                                "bcl:num": "i",
+                                                "bcl:text": "the products of a farm owned or operated by the farmer, and"
+                                            },
+                                            {
+                                                "@id": "d2e257",
+                                                "bcl:num": "ii",
+                                                "bcl:text": "within limits prescribed by the minister, products not of that farm,"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d2e273",
+                                        "bcl:num": "l",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/02069_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Forest and Range Practices Act"
+                                            },
+                                            "#text": "an activity, other than grazing or hay cutting, if the activity constitutes a forest practice as defined in the ;"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d2e285",
+                                        "bcl:num": "m",
+                                        "bcl:text": "breeding pets or operating a kennel;"
+                                    },
+                                    {
+                                        "@id": "d2e294",
+                                        "bcl:num": "n",
+                                        "bcl:text": "growing, producing, raising or keeping exotic animals, except types of exotic animals prescribed by the minister;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e303",
+                                "bcl:text": {
+                                    "in:term": "farmer",
+                                    "#text": "means the owner or operator of a farm business;"
+                                }
+                            },
+                            {
+                                "@id": "d2e312",
+                                "bcl:text": {
+                                    "in:term": "land use regulation",
+                                    "#text": "means an enactment that restricts or prescribes the use to which land or premises may be put or the nature of business or activities that may be conducted on land or premises, but does not include the following:"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e321",
+                                        "bcl:num": "a",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/03026_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Community Charter"
+                                            },
+                                            "#text": "a bylaw under the following provisions of the :"
+                                        },
+                                        "bcl:subparagraph": {
+                                            "@id": "d1e334",
+                                            "bcl:text": [
+                                                {
+                                                    "in:desc": "[firecrackers, fireworks and explosives]",
+                                                    "#text": "section 8 (3) (d)\u00a0;"
+                                                },
+                                                {
+                                                    "in:desc": "[weapons other than firearms]",
+                                                    "#text": "section 8 (3) (e)\u00a0;"
+                                                },
+                                                {
+                                                    "in:desc": "[nuisances, disturbances and other situations]",
+                                                    "#text": "section 8 (3) (h)\u00a0;"
+                                                },
+                                                {
+                                                    "in:desc": "[animals]",
+                                                    "#text": "section 8 (3) (k)\u00a0;"
+                                                },
+                                                {
+                                                    "in:desc": "[firearms]",
+                                                    "#text": "section 8 (5)\u00a0;"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "@id": "d2e364",
+                                        "bcl:num": "b",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/r15001_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Local Government Act"
+                                            },
+                                            "#text": "a bylaw under the following provisions of the :"
+                                        },
+                                        "bcl:subparagraph": {
+                                            "@id": "d1e390",
+                                            "bcl:text": [
+                                                {
+                                                    "in:desc": "[general animal control powers]",
+                                                    "#text": "section 318\u00a0;"
+                                                },
+                                                {
+                                                    "in:desc": "[noise control]",
+                                                    "#text": "section 324\u00a0;"
+                                                },
+                                                {
+                                                    "in:desc": "[nuisances and disturbances]",
+                                                    "#text": "section 325\u00a0;"
+                                                },
+                                                {
+                                                    "in:desc": "[fireworks restrictions]",
+                                                    "#text": "section 326\u00a0;"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e401",
+                                "bcl:text": [
+                                    {
+                                        "in:term": "normal farm practice",
+                                        "#text": "means a practice that is conducted by a farm business in a manner consistent with"
+                                    },
+                                    "and includes a practice that makes use of innovative technology in a manner consistent with proper advanced farm management practices and with any standards prescribed under paragraph (b)."
+                                ],
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e410",
+                                        "bcl:num": "a",
+                                        "bcl:text": "proper and accepted customs and standards as established and followed by similar farm businesses under similar circumstances, and"
+                                    },
+                                    {
+                                        "@id": "d2e420",
+                                        "bcl:num": "b",
+                                        "bcl:text": "any standards prescribed by the Lieutenant Governor in Council,"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d2e433",
+                    "bcl:num": "2",
+                    "bcl:text": "Right to Farm",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e442",
+                            "bcl:marginalnote": "Normal farm practices protected",
+                            "bcl:num": "2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e450",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If each of the requirements of subsection (2) is fulfilled in relation to a farm operation conducted as part of a farm business,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e459",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the farmer is not liable in nuisance to any person for any odour, noise, dust or other disturbance resulting from the farm operation, and"
+                                        },
+                                        {
+                                            "@id": "d2e468",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the farmer must not be prevented by injunction or other order of a court from conducting that farm operation."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e478",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The requirements referred to in subsection (1) are that the farm operation must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e487",
+                                            "bcl:num": "a",
+                                            "bcl:text": "be conducted in accordance with normal farm practices,"
+                                        },
+                                        {
+                                            "@id": "d2e496",
+                                            "bcl:num": "b",
+                                            "bcl:text": "be conducted on, in or over land",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e505",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "that is in the agricultural land reserve,"
+                                                },
+                                                {
+                                                    "@id": "d2e514",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/r15001_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Local Government Act"
+                                                        },
+                                                        "#text": "on which, under the , farm use is allowed,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e526",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "that is used for a type of aquaculture prescribed for the purpose of paragraph\u00a0(h) of the definition of \"farm operation\", or"
+                                                },
+                                                {
+                                                    "@id": "d2e539",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "that is Crown land designated as a farming area under subsection (2.1), and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e548",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/08028_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Public Health Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/03058_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Integrated Pest Management Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/03053_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Environmental Management Act"
+                                                    }
+                                                ],
+                                                "#text": "not be conducted in contravention of the , , , the regulations under those Acts or any land use regulation."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e566",
+                                    "bcl:num": "2.1",
+                                    "bcl:text": "The Lieutenant Governor in Council may designate Crown land as a farming area for the purposes of subsection (2) (b) (iv)."
+                                },
+                                {
+                                    "@id": "d2e575",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The following apply if each of the requirements of subsection (2), except subsection\u00a0(2)\u00a0(b)\u00a0(ii), is fulfilled in relation to a farm operation conducted as part of a farm business:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e584",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[bylaw contraventions]",
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/03026_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Community Charter"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/03026_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Community Charter"
+                                                    }
+                                                ],
+                                                "#text": "despite section 260 (3)\u00a0 of the , a farmer does not contravene a bylaw made under the following provisions of the  only by conducting that farm operation:"
+                                            },
+                                            "bcl:subparagraph": {
+                                                "@id": "d1e652",
+                                                "bcl:text": [
+                                                    {
+                                                        "in:desc": "[firecrackers, fireworks and explosives]",
+                                                        "#text": "section 8 (3) (d)\u00a0;"
+                                                    },
+                                                    {
+                                                        "in:desc": "[weapons other than firearms]",
+                                                        "#text": "section 8 (3) (e)\u00a0;"
+                                                    },
+                                                    {
+                                                        "in:desc": "[nuisances, disturbances and other situations]",
+                                                        "#text": "section 8 (3) (h)\u00a0;"
+                                                    },
+                                                    {
+                                                        "in:desc": "[animals]",
+                                                        "#text": "section 8 (3) (k)\u00a0;"
+                                                    },
+                                                    {
+                                                        "in:desc": "[firearms]",
+                                                        "#text": "section 8 (5)\u00a0;"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e633",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[bylaw contraventions \u2014 offences and prosecutions]",
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/r15001_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Local Government Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/r15001_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Local Government Act"
+                                                    }
+                                                ],
+                                                "#text": "despite section 416  of the , a farmer does not contravene a bylaw made under the following provisions of the  only by conducting that farm operation:"
+                                            },
+                                            "bcl:subparagraph": {
+                                                "@id": "d1e715",
+                                                "bcl:text": [
+                                                    {
+                                                        "in:desc": "[general animal control powers]",
+                                                        "#text": "section 318\u00a0;"
+                                                    },
+                                                    {
+                                                        "in:desc": "[noise control]",
+                                                        "#text": "section 324\u00a0;"
+                                                    },
+                                                    {
+                                                        "in:desc": "[nuisances and disturbances]",
+                                                        "#text": "section 325\u00a0;"
+                                                    },
+                                                    {
+                                                        "in:desc": "[fireworks restrictions]",
+                                                        "#text": "section 326\u00a0;"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e673",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[actions by municipality]",
+                                                    "[enforcement by civil proceedings]"
+                                                ],
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/03026_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Community Charter"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/r15001_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Local Government Act"
+                                                    }
+                                                ],
+                                                "#text": "despite section 274  of the  and section 420  of the , a farmer must not be prevented by injunction or other order of a court from conducting that farm operation."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e695",
+                            "bcl:marginalnote": "Complaints to board",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e703",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a person is aggrieved by any odour, noise, dust or other disturbance resulting from a farm operation conducted as part of a farm business, the person may apply in writing to the board for a determination as to whether the odour, noise, dust or other disturbance results from a normal farm practice."
+                                },
+                                {
+                                    "@id": "d2e712",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Every application under subsection (1) must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e721",
+                                            "bcl:num": "a",
+                                            "bcl:text": "contain a statement of the nature of the complaint, the name and address of the person making the application, the name and address of the farmer and the location of the farm,"
+                                        },
+                                        {
+                                            "@id": "d2e731",
+                                            "bcl:num": "b",
+                                            "bcl:text": "be in a form acceptable to the chair of board, and"
+                                        },
+                                        {
+                                            "@id": "d2e740",
+                                            "bcl:num": "c",
+                                            "bcl:text": "be accompanied by the fee prescribed by the Lieutenant Governor in Council."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e751",
+                            "bcl:marginalnote": "Settlement of complaints",
+                            "bcl:num": "4",
+                            "bcl:text": "In the interest of reaching a settlement of a complaint that is the subject of an application under section 3 (1), the chair of the board, at any time before a panel of the board has decided the application, may inquire into matters relevant to the complaint, and, as part of that inquiry, may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e762",
+                                    "bcl:num": "a",
+                                    "bcl:text": "obtain the advice of persons who are knowledgeable about normal farm practices, and"
+                                },
+                                {
+                                    "@id": "d2e771",
+                                    "bcl:num": "b",
+                                    "bcl:text": "consult with the farmer identified in the application and the complainant."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e781",
+                            "bcl:marginalnote": "Establishing panels to hear complaints",
+                            "bcl:num": "5",
+                            "bcl:text": "After receipt of an application that meets the requirements of section 3, the chair of the board, if satisfied that any consultations under section 4 have been terminated without achieving a settlement of the complaint, or that settlement is unlikely, must establish a panel of the board to hear the complaint."
+                        },
+                        {
+                            "@id": "d2e811",
+                            "bcl:marginalnote": "Hearing of complaints",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e819",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The panel established to hear an application must hold a hearing and must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e828",
+                                            "bcl:num": "a",
+                                            "bcl:text": "dismiss the complaint if the panel is of the opinion that the odour, noise, dust or other disturbance results from a normal farm practice, or"
+                                        },
+                                        {
+                                            "@id": "d2e837",
+                                            "bcl:num": "b",
+                                            "bcl:text": "order the farmer to cease the practice that causes the odour, noise, dust or other disturbance if it is not a normal farm practice, or to modify the practice in the manner set out in the order, to be consistent with normal farm practice."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e847",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The chair of the board, after giving the complainant an opportunity to be heard, may refuse to refer an application to a panel for the purpose of a hearing, or, after a hearing has begun, the panel to which an application has been referred may refuse to continue the hearing or to make a decision if, in the opinion of the chair of the board or the panel, as the case may be,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e856",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the subject matter of the application is trivial,"
+                                        },
+                                        {
+                                            "@id": "d2e865",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the application is frivolous or vexatious or is not made in good faith, or"
+                                        },
+                                        {
+                                            "@id": "d2e874",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the complainant does not have a sufficient personal interest in the subject matter of the application."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e883",
+                                    "bcl:num": "3) to (5",
+                                    "bcl:text": "[Repealed 2015-10-67.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e912",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "6.1-7",
+                            "bcl:text": "[Repealed 2015-10-67.]"
+                        },
+                        {
+                            "@id": "d2e994",
+                            "bcl:marginalnote": "Appeal",
+                            "bcl:num": "8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1002",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Within 60 days after receiving written notice of a decision of the chair or a panel of the board made under section 6, the complainant or farmer affected by the decision may appeal the decision to the Supreme Court on a question of law or jurisdiction."
+                                },
+                                {
+                                    "@id": "d2e1011",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An appeal from a decision of the Supreme Court lies to the Court of Appeal with leave of a justice of the Court of Appeal."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1022",
+                    "bcl:num": "3",
+                    "bcl:text": "Board",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1031",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "9",
+                            "bcl:text": "[Repealed 2003-7-21.]"
+                        },
+                        {
+                            "@id": "d1e1018",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "10",
+                            "bcl:text": "[Repealed 2015-10-67.]"
+                        },
+                        {
+                            "@id": "d2e1082",
+                            "bcl:marginalnote": "Responsibilities of board",
+                            "bcl:num": "11",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1090",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The board, the chair of the board or a panel of the board may exercise the powers and perform the duties that are conferred or imposed on it under this Act."
+                                },
+                                {
+                                    "@id": "d2e1099",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96239_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Islands Trust Act"
+                                        },
+                                        "#text": "On the board's own initiative or at the request of a municipality or regional district, or of a trust council under the , the board may study, report on, and make recommendations concerning, any matter related to farm practices."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1111",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The board must provide the minister with any information requested by the minister regarding the policies and procedures of the board."
+                                },
+                                {
+                                    "@id": "d2e1121",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The minister may order the board to study any matter related to farm practices and the board must conduct the study and report its findings and recommendations to the minister."
+                                },
+                                {
+                                    "@id": "d2e1130",
+                                    "bcl:num": "5",
+                                    "bcl:text": "[Repealed 2015-10-67.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1098",
+                            "bcl:marginalnote": {
+                                "in:doc": "Administrative Tribunals Act",
+                                "#text": "Application of"
+                            },
+                            "bcl:num": "11.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1108",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/04045_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Administrative Tribunals Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96330_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Natural Products Marketing (BC) Act"
+                                            }
+                                        ],
+                                        "in:desc": "[application of Administrative Tribunals Act to the board]",
+                                        "#text": "For the purposes of exercising its powers and performing duties under this Act, the following provisions of the  apply to the board in addition to those incorporated under section 3.1  of the :"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1127",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[Practice and Procedure]",
+                                                "#text": "Part 4 , except the following:"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1138",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "in:desc": "[notice of hearing by publication]",
+                                                        "#text": "section 21 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1150",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "in:desc": "[notice of appeal (inclusive of prescribed fee)]",
+                                                        "#text": "section 22 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1162",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": {
+                                                        "in:desc": "[notice of appeal (exclusive of prescribed fee)]",
+                                                        "#text": "section 23 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1175",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": {
+                                                        "in:desc": "[time limit for appeals]",
+                                                        "#text": "section 24 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1187",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": {
+                                                        "in:desc": "[appeal does not operate as stay]",
+                                                        "#text": "section 25 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1199",
+                                                    "bcl:num": "vi",
+                                                    "bcl:text": {
+                                                        "in:desc": "[summary dismissal for not filing within time limit]",
+                                                        "#text": "section 31 (1) (b) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1211",
+                                                    "bcl:num": "vii",
+                                                    "bcl:text": {
+                                                        "in:desc": "[party power to compel witnesses and require disclosure]",
+                                                        "#text": "section 34 (1) and (2) ;"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1224",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[power to award costs]",
+                                                "#text": "section 47 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1236",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "in:desc": "[contempt proceedings for uncooperative witness or other person]",
+                                                "#text": "section 49 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1249",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[Decisions]",
+                                                    "[money order set out as principal and interest]"
+                                                ],
+                                                "#text": "Part 7 , except section 50 (1) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1264",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "in:desc": "[immunity protection for tribunal and members]",
+                                                "#text": "section 56 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1276",
+                                            "bcl:num": "f",
+                                            "bcl:text": {
+                                                "in:desc": "[power to make regulations]",
+                                                "#text": "section 60 (1) (a) to (i) and (2) ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1289",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96330_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Natural Products Marketing (BC) Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/04045_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Administrative Tribunals Act"
+                                            }
+                                        ],
+                                        "#text": "Despite section 3.1 of the , the following sections of the  do not apply to the board in relation to this Act:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1305",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[time limit for judicial review]",
+                                                "#text": "section 57 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1317",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[standard of review with privative clause]",
+                                                "#text": "section 58 ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1143",
+                    "bcl:num": "4",
+                    "bcl:text": "Regulations",
+                    "bcl:section": {
+                        "@id": "d2e1152",
+                        "bcl:marginalnote": "Power to make regulations",
+                        "bcl:num": "12",
+                        "bcl:subsection": [
+                            {
+                                "@id": "d2e1160",
+                                "bcl:num": "1",
+                                "bcl:text": {
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96238_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Interpretation Act"
+                                    },
+                                    "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                                }
+                            },
+                            {
+                                "@id": "d2e1172",
+                                "bcl:num": "2",
+                                "bcl:text": "Without limiting the generality of subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e1181",
+                                        "bcl:num": "a",
+                                        "bcl:text": "[Repealed 2015-10-70.]"
+                                    },
+                                    {
+                                        "@id": "d2e1191",
+                                        "bcl:num": "b",
+                                        "bcl:text": "respecting standards for the purpose of the definition of \"normal farm practice\";"
+                                    },
+                                    {
+                                        "@id": "d2e1200",
+                                        "bcl:num": "c",
+                                        "bcl:text": "governing practices and procedures for",
+                                        "bcl:subparagraph": [
+                                            {
+                                                "@id": "d2e1209",
+                                                "bcl:num": "i",
+                                                "bcl:text": "hearings before a panel of the board, and"
+                                            },
+                                            {
+                                                "@id": "d2e1218",
+                                                "bcl:num": "ii",
+                                                "bcl:text": "inquiries and consultations respecting complaints or other matters before the board, the chair of the board or a panel of the board;"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d2e1227",
+                                        "bcl:num": "d",
+                                        "bcl:text": "respecting the engagement or retention of specialists and consultants by the board."
+                                    },
+                                    {
+                                        "@id": "d2e1236",
+                                        "bcl:num": "e",
+                                        "bcl:text": "[Repealed 2015-10-70.]"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e1246",
+                                "bcl:num": "3",
+                                "bcl:text": "The minister may make regulations prescribing one or more of the following:",
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e1255",
+                                        "bcl:num": "a",
+                                        "bcl:text": "specialty wood crops or specialty fibre crops for the purpose of paragraph (f) of the definition of \"farm operation\";"
+                                    },
+                                    {
+                                        "@id": "d3e1255",
+                                        "bcl:num": "a.1",
+                                        "bcl:text": "types of aquaculture for the purpose of paragraph (h) of the definition of \"farm operation\";"
+                                    },
+                                    {
+                                        "@id": "d2e1264",
+                                        "bcl:num": "b",
+                                        "bcl:text": "limits referred to in paragraph (k) of the definition of \"farm operation\";"
+                                    },
+                                    {
+                                        "@id": "d2e1273",
+                                        "bcl:num": "c",
+                                        "bcl:text": "exceptions for the purpose of paragraph (n) of the definition of \"farm operation\"."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

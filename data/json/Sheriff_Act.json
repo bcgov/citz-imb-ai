@@ -1,0 +1,865 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96425_01",
+        "act:title": "Sheriff Act",
+        "act:chapter": "425",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1527898742/96425/tlc96425_f",
+            "act:tlc": "E4tlc96425"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "director",
+                                "#text": "means the director of sheriff services;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "process",
+                                "#text": "includes a writ, petition, warrant or order issued under the seal of the court, a judge's summons or order, a notice, subpoena and other proceeding at law or otherwise;"
+                            }
+                        },
+                        {
+                            "@id": "d2e45",
+                            "bcl:text": {
+                                "in:term": "warrant of execution",
+                                "#text": "includes an order for seizure and sale issued under the Small Claims Rules."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e55",
+                    "bcl:marginalnote": "Staff",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e63",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "There may be appointed under the  a director of sheriff services, sheriffs, deputy sheriffs and other employees considered necessary to carry out their duties under this or any other enactment."
+                            }
+                        },
+                        {
+                            "@id": "d2e75",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "Subject to the minister's approval and despite the , the director, and a sheriff authorized in writing by the director, may appoint persons on a temporary or part time basis to act as sheriffs for particular purposes specified in their appointment."
+                            }
+                        },
+                        {
+                            "@id": "d2e87",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96138_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Financial Administration Act"
+                                },
+                                "#text": "If a person is appointed under subsection (2) for the purpose of serving a document, despite the , the director may authorize a sheriff to pay the person appointed a fee from money received by the sheriff for service of the document."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e100",
+                    "bcl:marginalnote": "Court bailiffs",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e108",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister or a person designated in writing by the minister may appoint a person as a court bailiff."
+                        },
+                        {
+                            "@id": "d2e117",
+                            "bcl:num": "2",
+                            "bcl:text": "A court bailiff appointed under subsection (1) is deemed to be a sheriff for the purposes of any provision in an enactment that confers on a sheriff any powers, rights or duties in respect of civil execution proceedings including, without limiting this, powers, rights and duties of a sheriff respecting the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e126",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the execution of writs, warrants, court orders and other process issued or made in civil proceedings;"
+                                },
+                                {
+                                    "@id": "d2e136",
+                                    "bcl:num": "b",
+                                    "bcl:text": "levies, seizures or dispositions permitted under an enactment;"
+                                },
+                                {
+                                    "@id": "d2e145",
+                                    "bcl:num": "c",
+                                    "bcl:text": "maintaining records relative to judgments and executions;"
+                                },
+                                {
+                                    "@id": "d2e154",
+                                    "bcl:num": "d",
+                                    "bcl:text": "searching the records referred to in paragraph (c) and providing",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e163",
+                                            "bcl:num": "i",
+                                            "bcl:text": "information from the records,"
+                                        },
+                                        {
+                                            "@id": "d2e172",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "extracts from the records,"
+                                        },
+                                        {
+                                            "@id": "d2e181",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "copies of the records, and"
+                                        },
+                                        {
+                                            "@id": "d2e191",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "certificates in respect of the records;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e200",
+                                    "bcl:num": "e",
+                                    "bcl:text": "fees or other payments for services rendered."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e209",
+                            "bcl:num": "3",
+                            "bcl:text": "Nothing in this section authorizes a court bailiff to execute court orders to arrest persons."
+                        },
+                        {
+                            "@id": "d2e218",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96138_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Financial Administration Act"
+                                },
+                                "#text": "Despite the , a court bailiff"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e230",
+                                    "bcl:num": "a",
+                                    "bcl:text": "may collect fees a sheriff is entitled to collect under an enactment,"
+                                },
+                                {
+                                    "@id": "d2e239",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may retain a portion of the fees as provided under the terms of a contract for services entered into with the government, and"
+                                },
+                                {
+                                    "@id": "d2e249",
+                                    "bcl:num": "c",
+                                    "bcl:text": "must remit the balance of the fees to the government."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e259",
+                    "bcl:marginalnote": "Duties of director",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e267",
+                            "bcl:num": "1",
+                            "bcl:text": "The director is responsible to the minister for",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e276",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the administration of this Act,"
+                                },
+                                {
+                                    "@id": "d2e285",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the direction of sheriff services generally, and"
+                                },
+                                {
+                                    "@id": "d2e295",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the establishment and maintenance of programs for the selection and training of sheriffs and other persons appointed under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e304",
+                            "bcl:num": "2",
+                            "bcl:text": "The minister or the director may designate a person to act as director during the director's absence."
+                        },
+                        {
+                            "@id": "d2e313",
+                            "bcl:num": "3",
+                            "bcl:text": "The director is a sheriff."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e323",
+                    "bcl:marginalnote": "Powers, duties and responsibilities of sheriffs",
+                    "bcl:num": "4.1",
+                    "bcl:text": "In addition to the powers conferred and the duties and responsibilities established at common law or under any other Provincial or federal enactment, sheriffs have the powers conferred and duties and responsibilities established under this Act."
+                },
+                {
+                    "@id": "d2e336",
+                    "bcl:marginalnote": "Jurisdiction",
+                    "bcl:num": "5",
+                    "bcl:text": "The director and each sheriff has jurisdiction throughout British Columbia to exercise all the powers and perform the duties imposed on them under this or any other enactment."
+                },
+                {
+                    "@id": "d2e348",
+                    "bcl:marginalnote": "Officer of court",
+                    "bcl:num": "6",
+                    "bcl:text": "A sheriff is an officer of all of the courts in British Columbia."
+                },
+                {
+                    "@id": "d2e360",
+                    "bcl:marginalnote": "Court security",
+                    "bcl:num": "6.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e368",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e377",
+                                    "bcl:text": {
+                                        "in:term": "court",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e386",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the Court of Appeal,"
+                                        },
+                                        {
+                                            "@id": "d2e396",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the Supreme Court,"
+                                        },
+                                        {
+                                            "@id": "d2e405",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the Provincial Court, or"
+                                        },
+                                        {
+                                            "@id": "d2e414",
+                                            "bcl:num": "d",
+                                            "bcl:text": "any other entity designated as a court by regulation of the minister;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e423",
+                                    "bcl:text": {
+                                        "in:term": "court facility",
+                                        "#text": "means any building in which a court is located or, if a court is located in a building and the regulations of the minister designate only a part of that building as a court facility, the designated part of the building;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e432",
+                                    "bcl:text": {
+                                        "in:term": "court facility area",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e441",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the grounds or other areas belonging to or used in connection with a court facility, and"
+                                        },
+                                        {
+                                            "@id": "d2e451",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the roads, streets or lanes immediately adjacent to a court facility or to the grounds or other areas referred to in paragraph (a);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e460",
+                                    "bcl:text": {
+                                        "in:term": "restricted zone",
+                                        "#text": "means a part of a court facility designated by the regulations of the minister as a restricted zone;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e469",
+                                    "bcl:text": {
+                                        "in:term": "weapon",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Criminal Code"
+                                        },
+                                        "#text": "means a firearm as defined in the  and includes anything else that could be used to"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e481",
+                                            "bcl:num": "a",
+                                            "bcl:text": "cause death or serious bodily harm to a person, or"
+                                        },
+                                        {
+                                            "@id": "d2e490",
+                                            "bcl:num": "b",
+                                            "bcl:text": "threaten or intimidate a person."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e499",
+                            "bcl:num": "2",
+                            "bcl:text": "No person may possess a weapon in a court facility unless authorized to do so by the regulations of the minister or by a sheriff."
+                        },
+                        {
+                            "@id": "d2e509",
+                            "bcl:num": "3",
+                            "bcl:text": "A sheriff may do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e518",
+                                    "bcl:num": "a",
+                                    "bcl:text": "search a person for weapons in the manner prescribed by the minister before the person enters a court facility or at any time while the person is inside the court facility;"
+                                },
+                                {
+                                    "@id": "d2e527",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for the purposes of paragraph (a), require a person inside a court facility to move to another place inside the court facility in order to be searched in the manner prescribed by the minister;"
+                                },
+                                {
+                                    "@id": "d2e536",
+                                    "bcl:num": "c",
+                                    "bcl:text": "seize any weapon in the possession of a person who is in, or is attempting to enter, a court facility;"
+                                },
+                                {
+                                    "@id": "d2e545",
+                                    "bcl:num": "d",
+                                    "bcl:text": "evict a person from a restricted zone if the person is not authorized by the regulations of the minister to enter that restricted zone."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e554",
+                            "bcl:num": "4",
+                            "bcl:text": "In addition to the sheriff's powers under subsection (3), a sheriff may refuse a person entry to, or evict a person from, a court facility if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e564",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person refuses to be searched for weapons in the manner prescribed by the minister,"
+                                },
+                                {
+                                    "@id": "d2e573",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the person refuses to comply with a direction of a sheriff made under subsection (3) (b),"
+                                },
+                                {
+                                    "@id": "d2e582",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the person is in possession of a weapon and refuses to comply with the sheriff's request to relinquish the weapon to the sheriff, or"
+                                },
+                                {
+                                    "@id": "d2e591",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the sheriff has reason to believe that the person is",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e600",
+                                            "bcl:num": "i",
+                                            "bcl:text": "a threat to the safety of the court facility or to the health or safety of any of its occupants, or"
+                                        },
+                                        {
+                                            "@id": "d2e609",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "disrupting court proceedings."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e619",
+                            "bcl:num": "4.1",
+                            "bcl:text": "In addition to the sheriff's powers under subsection (3), a sheriff may arrest a person who is in a court facility area or evict a person from a court facility area if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e628",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person is in possession of a weapon and refuses to comply with the sheriff's request to relinquish the weapon to the sheriff, or"
+                                },
+                                {
+                                    "@id": "d2e637",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the sheriff has reason to believe that the person is",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e646",
+                                            "bcl:num": "i",
+                                            "bcl:text": "a threat to the safety of the court facility or the health or safety of any of the occupants of the court facility, or"
+                                        },
+                                        {
+                                            "@id": "d2e655",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "disrupting court proceedings."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e664",
+                            "bcl:num": "5",
+                            "bcl:text": "A sheriff may use reasonable force in",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e674",
+                                    "bcl:num": "a",
+                                    "bcl:text": "refusing a person entry to a court facility or a restricted zone,"
+                                },
+                                {
+                                    "@id": "d2e683",
+                                    "bcl:num": "b",
+                                    "bcl:text": "evicting a person from a court facility, a restricted zone or a court facility area, or"
+                                },
+                                {
+                                    "@id": "d2e692",
+                                    "bcl:num": "c",
+                                    "bcl:text": "seizing a weapon from a person who is in, or is attempting to enter, a court facility or a court facility area."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e701",
+                            "bcl:num": "6",
+                            "bcl:text": "Nothing in this section limits or replaces the power of a judge, associate judge or other judicial officer to control court proceedings."
+                        },
+                        {
+                            "@id": "d2e710",
+                            "bcl:num": "7",
+                            "bcl:text": "Nothing in this section affects any right of a judge, associate judge or other judicial officer to have unimpeded access to any part of a court facility."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e720",
+                    "bcl:marginalnote": "Prisoner searches",
+                    "bcl:num": "6.2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e728",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e737",
+                                    "bcl:text": {
+                                        "in:term": "contraband",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e746",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04046_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Correction Act"
+                                                },
+                                                "#text": "contraband described in paragraphs (a) to (e) of the definition of \"contraband\" in the , or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e759",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an object or substance that, in the opinion of a sheriff's supervisor, may threaten the security or safety of sheriffs or persons in the custody of sheriffs;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e768",
+                                    "bcl:text": {
+                                        "in:term": "prisoner",
+                                        "#text": "means a person in the lawful custody of a sheriff."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e777",
+                            "bcl:num": "2",
+                            "bcl:text": "A sheriff may conduct a search of a prisoner and any personal possessions, including clothing, that the prisoner may be carrying or wearing."
+                        },
+                        {
+                            "@id": "d2e786",
+                            "bcl:num": "3",
+                            "bcl:text": "A search under subsection (2) may include a strip search conducted in accordance with the regulations of the minister."
+                        },
+                        {
+                            "@id": "d2e795",
+                            "bcl:num": "4",
+                            "bcl:text": "Before a sheriff conducts a strip search of a prisoner, the sheriff must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e804",
+                                    "bcl:num": "a",
+                                    "bcl:text": "believe on reasonable grounds that the prisoner may be in possession of contraband,"
+                                },
+                                {
+                                    "@id": "d2e814",
+                                    "bcl:num": "b",
+                                    "bcl:text": "believe on reasonable grounds that a strip search is necessary in the circumstances, and"
+                                },
+                                {
+                                    "@id": "d2e823",
+                                    "bcl:num": "c",
+                                    "bcl:text": "obtain the authorization of the sheriff's supervisor, unless the sheriff believes on reasonable grounds that the delay necessary to comply with this requirement would result in danger to human life or safety."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e832",
+                            "bcl:num": "5",
+                            "bcl:text": "Subsection (4) does not apply to a strip search of a prisoner conducted by a sheriff on taking custody of the prisoner for transport from a penitentiary under the control of Canada."
+                        },
+                        {
+                            "@id": "d2e841",
+                            "bcl:num": "6",
+                            "bcl:text": "A strip search of a prisoner must be conducted by a sheriff of the same sex as the prisoner unless the delay that would be caused by complying with this requirement would result in danger to human life or safety."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d3e728",
+                    "bcl:marginalnote": "Threat or risk assessment",
+                    "bcl:num": "6.3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d3e832",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d4e832",
+                                    "bcl:text": {
+                                        "in:term": "personal information",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "has the same meaning as in Schedule 1 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d5e832",
+                                    "bcl:text": {
+                                        "in:term": "threat or risk assessment",
+                                        "#text": "means the identification and assessment of threats or risks to a person, facility, building or property described in subsection (2)."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d6e832",
+                            "bcl:num": "2",
+                            "bcl:text": "Subject to subsection (3), a sheriff may, if authorized by the director, conduct a threat or risk assessment in respect of a person, facility, building or property in relation to which the sheriff has a power, duty or responsibility referred to in section 4.1."
+                        },
+                        {
+                            "@id": "d7e832",
+                            "bcl:num": "3",
+                            "bcl:text": "A sheriff may, if authorized by the director, conduct a threat or risk assessment in respect of an employee of the government if the director considers that the employee may be exposed to a threat or risk at the employee's workplace or in relation to the employee's work."
+                        },
+                        {
+                            "@id": "d8e832",
+                            "bcl:num": "4",
+                            "bcl:text": "For the purpose of conducting a threat or risk assessment, a sheriff may, if authorized by the director, collect personal information and other information, including, without limitation,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d9e832",
+                                    "bcl:num": "a",
+                                    "bcl:text": "personal information that is in the Canadian Police Information Centre database or any other database administered by a law enforcement agency, and"
+                                },
+                                {
+                                    "@id": "d3e851",
+                                    "bcl:num": "b",
+                                    "bcl:text": "personal information that is in the custody or control of the Royal Canadian Mounted Police or any other law enforcement agency."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e851",
+                    "bcl:marginalnote": "Only sheriff may serve and execute certain court orders",
+                    "bcl:num": "7",
+                    "bcl:text": "A person other than a sheriff or a person appointed under section 2 (2) or 3 must not serve or execute a judgment summons, an order of committal or writ or warrant of execution issued in respect of a civil matter."
+                },
+                {
+                    "@id": "d2e863",
+                    "bcl:marginalnote": "Access to information in control of ICBC",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e871",
+                            "bcl:num": "1",
+                            "bcl:text": "A sheriff has the right to any information that is in the custody or control of the Insurance Corporation of British Columbia and is necessary to enable the sheriff",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e880",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to serve any process relating to a civil proceeding, or"
+                                },
+                                {
+                                    "@id": "d2e889",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to exercise any of the powers or rights or to perform any of the duties described in section 3 (2) (a) or (b)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e899",
+                            "bcl:num": "2",
+                            "bcl:text": "If requested, the Insurance Corporation of British Columbia must disclose to a sheriff information described in subsection (1)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e910",
+                    "bcl:marginalnote": "Solicitor responsible for sheriff's costs",
+                    "bcl:num": "9",
+                    "bcl:text": "A solicitor or other agent whose name appears on any process served by a sheriff is responsible to the sheriff for the fees and expenses of service or execution."
+                },
+                {
+                    "@id": "d2e922",
+                    "bcl:marginalnote": "Sheriff may require payment in advance",
+                    "bcl:num": "10",
+                    "bcl:text": "A sheriff is not required to effect execution or seizure under any process unless, if demanded by the sheriff,",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e933",
+                            "bcl:num": "a",
+                            "bcl:text": "all reasonably anticipated costs of the process are first paid to the sheriff, or"
+                        },
+                        {
+                            "@id": "d2e942",
+                            "bcl:num": "b",
+                            "bcl:text": "an undertaking satisfactory to the sheriff is given by the person initiating the process."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e952",
+                    "bcl:marginalnote": "Bylaw document fees",
+                    "bcl:num": "11",
+                    "bcl:text": "If a sheriff serves a document issued under a municipal bylaw, the municipality must pay the sheriff a fee prescribed by the minister."
+                },
+                {
+                    "@id": "d2e964",
+                    "bcl:marginalnote": "Offence",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e972",
+                            "bcl:num": "1",
+                            "bcl:text": "A director, sheriff or other person acting under the authority of the director or a sheriff must not directly or indirectly",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e981",
+                                    "bcl:num": "a",
+                                    "bcl:text": "demand or receive any reward for performing or not performing the director's, sheriff's or person's duties except as permitted by this or any other enactment, or"
+                                },
+                                {
+                                    "@id": "d2e990",
+                                    "bcl:num": "b",
+                                    "bcl:text": "acquire any property disposed of under execution by a sheriff."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1000",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "A person who contravenes this section commits an offence and is liable on conviction to the penalties provided under the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1013",
+                    "bcl:marginalnote": "Employee to post bond",
+                    "bcl:num": "13",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96030_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Bonding Act"
+                        },
+                        "#text": "The minister may require a person employed for the purposes of this Act to post a bond under the  for an amount and in a form the minister considers appropriate."
+                    }
+                },
+                {
+                    "@id": "d2e1028",
+                    "bcl:marginalnote": "Ministerial orders",
+                    "bcl:num": "13.1",
+                    "bcl:text": "The minister may make orders for the purposes of section 15 (2) (b)."
+                },
+                {
+                    "@id": "d2e1041",
+                    "bcl:marginalnote": "Regulations of the minister",
+                    "bcl:num": "14",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1049",
+                            "bcl:num": "1",
+                            "bcl:text": "[Repealed 2009-22-71.]"
+                        },
+                        {
+                            "@id": "d2e1058",
+                            "bcl:num": "2",
+                            "bcl:text": "The minister may, for the purposes of sections 6.1 and 6.2, make the following regulations:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1067",
+                                    "bcl:num": "a",
+                                    "bcl:text": "designating any entity as a court;"
+                                },
+                                {
+                                    "@id": "d2e1077",
+                                    "bcl:num": "b",
+                                    "bcl:text": "permanently or temporarily designating parts of buildings as court facilities;"
+                                },
+                                {
+                                    "@id": "d2e1086",
+                                    "bcl:num": "c",
+                                    "bcl:text": "authorizing persons or classes of persons to possess weapons in court facilities;"
+                                },
+                                {
+                                    "@id": "d2e1095",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting searches under sections 6.1 and 6.2;"
+                                },
+                                {
+                                    "@id": "d2e1104",
+                                    "bcl:num": "e",
+                                    "bcl:text": "designating parts of court facilities as restricted zones;"
+                                },
+                                {
+                                    "@id": "d2e1113",
+                                    "bcl:num": "f",
+                                    "bcl:text": "authorizing persons or members of classes of persons to enter restricted zones, with power to prescribe different restricted zones that different persons or members of different classes of persons may enter;"
+                                },
+                                {
+                                    "@id": "d2e1122",
+                                    "bcl:num": "g",
+                                    "bcl:text": "defining words or expressions used but not defined in this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1132",
+                            "bcl:num": "3",
+                            "bcl:text": "Regulations under subsection (2) (d) may provide for different types of searches, including strip searches, for different circumstances."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1142",
+                    "bcl:marginalnote": "Regulations of the Lieutenant Governor in Council",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1150",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1162",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1171",
+                                    "bcl:num": "a",
+                                    "bcl:text": "establishing additional duties and responsibilities that may or must be undertaken by sheriffs;"
+                                },
+                                {
+                                    "@id": "d2e1181",
+                                    "bcl:num": "b",
+                                    "bcl:text": "conferring powers on sheriffs in relation to their duties and responsibilities, including, without limiting this, conferring powers equivalent to those under section 6.1 that may be exercised in circumstances specified in the regulation or order of the minister;"
+                                },
+                                {
+                                    "@id": "d2e1190",
+                                    "bcl:num": "c",
+                                    "bcl:text": "in relation to the duties and responsibilities that may be undertaken by sheriffs, authorizing the director to determine the circumstances in which duties and responsibilities are undertaken and powers exercised."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

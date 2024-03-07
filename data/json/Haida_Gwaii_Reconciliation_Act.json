@@ -1,0 +1,998 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_10017_01",
+        "act:title": "Haida Gwaii Reconciliation Act",
+        "act:chapter": "17",
+        "act:yearenacted": "2010",
+        "act:assentedto": "June 3, 2010",
+        "act:currency": {
+            "act:tlcDirPath": "712470149/100017/479301502",
+            "act:tlc": "E3tlc10017"
+        },
+        "act:content": {
+            "bcl:preamble": {
+                "bcl:marginalnote": "Preamble",
+                "bcl:text": [
+                    "WHEREAS the Haida Nation, as represented by the Council of the Haida Nation, and\n        British Columbia, as represented by the Minister of Aboriginal Relations and Reconciliation,\n        have negotiated the Kunst'aa guu \u2013 Kunst'aayah Reconciliation Protocol representing the\n        development of a new relationship between the Haida Nation and British Columbia;",
+                    "AND WHEREAS the Kunst'aa guu \u2013 Kunst'aayah Reconciliation Protocol represents an\n        incremental step in the process of the reconciliation of the Haida and Crown\n        titles;",
+                    "AND WHEREAS the Kunst'aa guu \u2013 Kunst'aayah Reconciliation Protocol and the new\n        relationship are intended by the Haida Nation and British Columbia to guide joint\n        decision-making regarding land and natural resource management on Haida Gwaii;",
+                    "AND WHEREAS the Kunst'aa guu \u2013 Kunst'aayah Reconciliation Protocol provides for the\n        commitment of the parties to further refine and develop the processes for operational level\n        decision-making on Haida Gwaii;",
+                    "AND WHEREAS the Kunst'aa guu \u2013 Kunst'aayah Reconciliation Protocol provides that the\n        Haida Nation and British Columbia hold differing views with regard to sovereignty, title,\n        ownership and jurisdiction over Haida Gwaii, under the Kunst'aa guu \u2013 Kunst'aayah\n        Reconciliation Protocol the Haida Nation and British Columbia will operate under their\n        respective authorities and jurisdictions;",
+                    "AND WHEREAS the Kunst'aa guu \u2013 Kunst'aayah Reconciliation Protocol provides that\n        British Columbia will introduce legislation to provide the statutory framework, and the\n        Haida Nation will provide its necessary legal authority, to assist in the implementation of\n        the Kunst'aa guu \u2013 Kunst'aayah Reconciliation Protocol;",
+                    "THEREFORE HER MAJESTY, by and with the advice and consent of the Legislative\n        Assembly of the Province of British Columbia, enacts as follows:"
+                ]
+            },
+            "bcl:section": [
+                {
+                    "@id": "d2e53",
+                    "bcl:marginalnote": "Definitions and publication requirement",
+                    "bcl:num": "1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e61",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e70",
+                                    "bcl:text": {
+                                        "in:term": "council",
+                                        "#text": "means the Haida Gwaii Management Council established as set\n            out in section\n              3;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e79",
+                                    "bcl:text": {
+                                        "in:term": "decision",
+                                        "#text": "includes the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e89",
+                                            "bcl:num": "a",
+                                            "bcl:text": "establishing objectives under section 4 (1);"
+                                        },
+                                        {
+                                            "@id": "d2e98",
+                                            "bcl:num": "b",
+                                            "bcl:text": "determining allowable annual cut under section 5 (2);"
+                                        },
+                                        {
+                                            "@id": "d2e107",
+                                            "bcl:num": "c",
+                                            "bcl:text": "approving a management plan under section 6 (2);"
+                                        },
+                                        {
+                                            "@id": "d2e116",
+                                            "bcl:num": "d",
+                                            "bcl:text": "establishing policies and standards under section 7 (2);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e125",
+                                    "bcl:text": {
+                                        "in:term": "land",
+                                        "#text": "includes foreshore and land covered by water;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e134",
+                                    "bcl:text": {
+                                        "in:term": "management area",
+                                        "#text": "means the land comprising Haida Gwaii\n            except"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e144",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/i-5/",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Indian\n                Act"
+                                                },
+                                                "#text": "land within the boundaries of a reserve, as defined in the  (Canada),"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e156",
+                                            "bcl:num": "b",
+                                            "bcl:text": "land within the boundaries of a municipality, and"
+                                        },
+                                        {
+                                            "@id": "d2e165",
+                                            "bcl:num": "c",
+                                            "bcl:text": "land the indefeasible title to which is registered in a land title office in\n              the name of a person other than the Crown;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e174",
+                                    "bcl:text": {
+                                        "in:term": "reconciliation protocol",
+                                        "#text": "means the Kunst'aa guu \u2013 Kunst'aayah\n            Reconciliation Protocol between the Haida Nation and British Columbia, dated for\n            reference December 11, 2009, and includes an amendment under section 8 of\n            this Act at the time"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e183",
+                                            "bcl:num": "a",
+                                            "bcl:text": "that the amendment is published under subsection (2) (b) of this\n              section, if the amendment can be implemented without an Act of the Legislature,\n              and"
+                                        },
+                                        {
+                                            "@id": "d2e192",
+                                            "bcl:num": "b",
+                                            "bcl:text": "that implementing legislation has been enacted by the Legislature and the\n              amendment is published under subsection (2) (b) of this section, if the amendment\n              requires an Act of the Legislature to be implemented."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e202",
+                            "bcl:num": "2",
+                            "bcl:text": "The minister must publish in the Gazette",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e211",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the reconciliation protocol, and"
+                                },
+                                {
+                                    "@id": "d2e220",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an amendment to the reconciliation protocol."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e230",
+                    "bcl:marginalnote": "Naming Haida Gwaii",
+                    "bcl:num": "2",
+                    "bcl:text": "The islands known as the Queen Charlotte Islands in the English language and \u00celes de\n        la Reine-Charlotte in the French language are renamed as Haida Gwaii in both\n        languages."
+                },
+                {
+                    "@id": "d2e242",
+                    "bcl:marginalnote": "Haida Gwaii Management Council",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e250",
+                            "bcl:num": "1",
+                            "bcl:text": "The Haida Gwaii Management Council is established by the joint operation of a\n          resolution of the Haida Nation and this Act."
+                        },
+                        {
+                            "@id": "d2e259",
+                            "bcl:num": "2",
+                            "bcl:text": "The council consists of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e268",
+                                    "bcl:num": "a",
+                                    "bcl:text": "2 members appointed by resolution of the Haida Nation after consultation with\n            British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e278",
+                                    "bcl:num": "b",
+                                    "bcl:text": "2 members appointed by the Lieutenant Governor in Council after consultation\n            with the Haida Nation, and"
+                                },
+                                {
+                                    "@id": "d2e287",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a chair appointed both by resolution of the Haida Nation and by the Lieutenant\n            Governor in Council."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e296",
+                            "bcl:num": "3",
+                            "bcl:text": "A decision of the council must be made by consensus of the members referred to in\n            subsection (2)\n            (a) and (b), but failing consensus, by majority vote of those\n          members."
+                        },
+                        {
+                            "@id": "d2e305",
+                            "bcl:num": "4",
+                            "bcl:text": "In the event of a tie vote under subsection (3), the chair must cast\n          the deciding vote."
+                        },
+                        {
+                            "@id": "d2e314",
+                            "bcl:num": "5",
+                            "bcl:text": "A decision of the council must be published in the Gazette."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e324",
+                    "bcl:marginalnote": "Forest and range practices objectives",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e332",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/02069_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Forest and Range\n              Practices Act"
+                                },
+                                "#text": "The council may establish objectives for the use and management of land and\n          resources in the management area for the purposes of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e344",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96245_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Land Act"
+                                },
+                                "#text": "In establishing objectives under subsection (1), the council must act in\n          accordance with sections 93.5 and 93.6 of the  and regulations made under\n            section\n            93.81 of that Act, and for that purpose a reference in those\n          provisions"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e356",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to the \"minister\" is deemed to be a reference to the council,"
+                                },
+                                {
+                                    "@id": "d2e366",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to \"section\n              93.4\" is deemed to be a reference to subsection (1) of this\n            section,"
+                                },
+                                {
+                                    "@id": "d2e375",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to an \"order\" is deemed to be a reference to a decision of the council under\n              subsection\n              (1), and"
+                                },
+                                {
+                                    "@id": "d2e384",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "in:desc": "[transition \u2014 Land Act\n              objectives]",
+                                        "#text": "to an \"objective\" is deemed to be a reference to an objective established under\n            subsection (1) or continued under section 14\u00a0 of this Act."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e398",
+                    "bcl:marginalnote": "Allowable annual cut",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e406",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": [
+                                    "allowable annual cut",
+                                    "chief\n            forester"
+                                ],
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96157_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Forest\n              Act"
+                                },
+                                "#text": "In this section,  and  have the same meanings as in section 1 (1) of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e424",
+                            "bcl:num": "2",
+                            "bcl:text": "The council must determine the allowable annual cut for the management area at\n          least once in every 10 years after the date of the last determination."
+                        },
+                        {
+                            "@id": "d2e433",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96157_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Forest Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96157_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Forest Act"
+                                    }
+                                ],
+                                "#text": "For the purposes of subsection (2), on request of the council, the chief forester\n          must provide to the council all information that the chief forester would consider under\n            section 8\n            (1) of the  if the chief forester were\n          making the determination under subsection (2) of this section, including, without\n          limitation, information respecting the matters, as they relate to the management area, set\n          out in section 8\n            (8) of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e449",
+                            "bcl:num": "4",
+                            "bcl:text": "Promptly after making a determination under subsection (2), the council\n          must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e458",
+                                    "bcl:num": "a",
+                                    "bcl:text": "give written notice of the determination to the chief forester, and"
+                                },
+                                {
+                                    "@id": "d2e467",
+                                    "bcl:num": "b",
+                                    "bcl:text": "publish the determination on a publicly accessible website."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e477",
+                    "bcl:marginalnote": "Protected areas management plans",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e485",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e494",
+                                    "bcl:text": {
+                                        "in:term": "management plan",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96344_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Park Act"
+                                        },
+                                        "#text": "means a plan respecting the protection, use or\n            management of the natural resources, including wildlife and wildlife habitat, or the\n            cultural or recreational values, of a protected area that is developed under the\n            direction of the council and in consultation with the minister charged with the\n            administration of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e506",
+                                    "bcl:text": {
+                                        "in:term": "protected area",
+                                        "#text": "means any of the following located in the management\n            area:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e516",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96344_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Park\n                Act"
+                                                },
+                                                "#text": "a park, as defined in section 1 of the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e528",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96344_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Park\n                Act"
+                                                },
+                                                "#text": "a conservancy, as defined in section 1 of the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e540",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/96103_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Ecological Reserve Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/00017_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Protected Areas of British Columbia Act"
+                                                    }
+                                                ],
+                                                "#text": "an area established or continued as an ecological reserve under the  or the ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e555",
+                            "bcl:num": "2",
+                            "bcl:text": "A management plan respecting a protected area does not take effect until approved\n          by the council."
+                        },
+                        {
+                            "@id": "d2e564",
+                            "bcl:num": "3",
+                            "bcl:text": "A management plan approved by the council must be published on a publicly\n          available website."
+                        },
+                        {
+                            "@id": "d2e573",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96344_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Park Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96103_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Ecological Reserve\n              Act"
+                                    }
+                                ],
+                                "#text": "A management plan respecting a park or conservancy must be consistent with the\n            , and a management plan respecting an ecological\n          reserve must be consistent with the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e589",
+                            "bcl:num": "5",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96344_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Park\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96103_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Ecological Reserve\n              Act"
+                                    }
+                                ],
+                                "#text": "A provision of a management plan is not inconsistent with the  or the , as applicable, if a person who complies with the management\n          plan does not, by this compliance, contravene the applicable Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e604",
+                            "bcl:num": "6",
+                            "bcl:text": "A provision of a management plan is of no force or effect if the provision\n          applies",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e613",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96344_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Park\n              Act"
+                                        },
+                                        "#text": "to a park or conservancy and is inconsistent with the , or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e625",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96103_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Ecological Reserve\n                Act"
+                                        },
+                                        "#text": "to an ecological reserve and is inconsistent with the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e637",
+                            "bcl:num": "7",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96344_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Park\n            Act"
+                                },
+                                "#text": "The minister charged with the administration of the  may not issue a park use permit under that Act authorizing a\n          person to do anything in a park or conservancy that is prohibited by a management plan\n          that applies in the park or conservancy."
+                            }
+                        },
+                        {
+                            "@id": "d2e649",
+                            "bcl:num": "8",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96103_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Ecological Reserve\n              Act"
+                                },
+                                "#text": "The minister charged with the administration of the  may not issue a permit under that Act authorizing a person to\n          do anything in an ecological reserve that is prohibited by a management plan that applies\n          in the ecological reserve."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e662",
+                    "bcl:marginalnote": "Heritage sites",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e670",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": [
+                                    "conservation",
+                                    "heritage\n            site"
+                                ],
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96187_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Heritage\n              Conservation Act"
+                                },
+                                "#text": "In this section,  and  have the same meanings as in section 1 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e688",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96187_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Heritage Conservation\n              Act"
+                                },
+                                "#text": "Despite section 7 (1) of the , with the approval of the Lieutenant Governor in Council, the\n          council may establish policies and standards for the identification and conservation of\n          heritage sites within the management area."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e701",
+                    "bcl:marginalnote": "Amending reconciliation protocol",
+                    "bcl:num": "8",
+                    "bcl:text": "The minister, on behalf of the government, may enter into agreements amending the\n        reconciliation protocol."
+                },
+                {
+                    "@id": "d2e713",
+                    "bcl:marginalnote": "Act binding on the government",
+                    "bcl:num": "9",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96238_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Interpretation Act"
+                        },
+                        "#text": "Despite section 14\n          (2) of the , this Act and the\n        regulations made under it are binding on the government."
+                    }
+                },
+                {
+                    "@id": "d2e728",
+                    "bcl:marginalnote": {
+                        "in:doc": "Offence Act",
+                        "#text": "Application of"
+                    },
+                    "bcl:num": "10",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Section 5\n        of the  does not apply to this Act."
+                    }
+                },
+                {
+                    "@id": "d2e746",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "11",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96238_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Interpretation Act"
+                        },
+                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the\n          ."
+                    }
+                },
+                {
+                    "@id": "d2e761",
+                    "bcl:marginalnote": "Repeal",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e769",
+                            "bcl:num": "1",
+                            "bcl:text": "The Lieutenant Governor in Council may repeal the following provisions of this Act\n          by regulation:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e778",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the preamble and sections 1, 3 to 11 and 13 to 15;"
+                                },
+                                {
+                                    "@id": "d2e787",
+                                    "bcl:num": "b",
+                                    "bcl:text": "this section;"
+                                },
+                                {
+                                    "@id": "d2e797",
+                                    "bcl:num": "c",
+                                    "bcl:text": "any of sections 16 to 21 that have not been brought into force."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e806",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96157_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Forest\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02069_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Forest and Range\n              Practices Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96187_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Heritage Conservation\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96245_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Land\n            Act"
+                                    }
+                                ],
+                                "#text": "If the provisions referred to in subsection (1) (a) are repealed by\n          regulation under subsection (1), the Lieutenant Governor in Council, for the purposes of\n          bringing those repeals into operation, may make regulations amending the , the , the  and the  to"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e827",
+                                    "bcl:num": "a",
+                                    "bcl:text": "remove references to this Act, the council or the management area,"
+                                },
+                                {
+                                    "@id": "d2e836",
+                                    "bcl:num": "b",
+                                    "bcl:text": "reassign the council's powers and duties under those Acts, and"
+                                },
+                                {
+                                    "@id": "d2e845",
+                                    "bcl:num": "c",
+                                    "bcl:text": "prevent, minimize or otherwise address any transitional difficulties caused by\n            the repeals."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e854",
+                            "bcl:num": "3",
+                            "bcl:text": "A regulation made under subsection (2) ceases to have effect at the end of the\n          last day of the next session of the Legislative Assembly after the regulation is\n          made."
+                        },
+                        {
+                            "@id": "d2e864",
+                            "bcl:num": "4",
+                            "bcl:text": "A regulation may not be made under subsection (2) if a regulation\n          having the same effect has been made under that subsection."
+                        },
+                        {
+                            "@id": "d2e873",
+                            "bcl:num": "5",
+                            "bcl:text": "A regulation may not be made under subsection (2) later than one year\n          after a regulation is made under subsection (1)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e883",
+                    "bcl:marginalnote": {
+                        "in:doc": "Forest Act",
+                        "#text": "Transition \u2014"
+                    },
+                    "bcl:num": "13",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96157_00",
+                            "@xlink:type": "locator",
+                            "in:doc": "Forest\n          Act"
+                        },
+                        "#text": "The chief forester under the  must provide to the council, on or before March 31, 2011 and\n        without a request from the council, the information described in section 5 (3) of\n        this Act."
+                    }
+                },
+                {
+                    "@id": "d2e901",
+                    "bcl:marginalnote": {
+                        "in:doc": "Land Act",
+                        "#text": "Transition \u2014  objectives"
+                    },
+                    "bcl:num": "14",
+                    "bcl:text": [
+                        {
+                            "bcl:link": {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/96245_01",
+                                "@xlink:type": "locator",
+                                "in:doc": "Land\n            Act"
+                            },
+                            "in:desc": "[forest and range\n          practices objectives]",
+                            "#text": "Objectives established by the minister under section 93.4 of the , and objectives continued under section 93.8 of that Act, that apply to all\n        or a part of the management area before the date section 4\u00a0 of this Act comes into force"
+                        },
+                        "until they are repealed or replaced by the council."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e922",
+                            "bcl:num": "a",
+                            "bcl:text": "continue in force and to apply to all or the part of the management area, as\n          applicable, on and after that date, and"
+                        },
+                        {
+                            "@id": "d2e931",
+                            "bcl:num": "b",
+                            "bcl:text": "are deemed to have been established under section 4 (1) of this\n          Act"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e945",
+                    "bcl:marginalnote": "Transition \u2014 regulation-making\n        authority",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e955",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96157_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Forest Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02069_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Forest\n              and Range Practices Act"
+                                    }
+                                ],
+                                "#text": "The Lieutenant Governor in Council may make regulations the Lieutenant Governor in\n          Council considers necessary or advisable for the purpose of more effectively bringing into\n          operation the reconciliation protocol, including, without limitation, modifying a\n          provision of this Act, the  or the  to ensure consistency with that\n          protocol."
+                            }
+                        },
+                        {
+                            "@id": "d2e970",
+                            "bcl:num": "2",
+                            "bcl:text": "A regulation under subsection (1) modifying a provision of an\n          Act",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e979",
+                                    "bcl:num": "a",
+                                    "bcl:text": "may only be made during the 2 year period after the date this section comes into\n            force,"
+                                },
+                                {
+                                    "@id": "d2e989",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may not be made if a regulation having the same effect has been made under\n              subsection\n              (1), and"
+                                },
+                                {
+                                    "@id": "d2e998",
+                                    "bcl:num": "c",
+                                    "bcl:text": "ceases to have effect at the end of the last day of the next session of the\n            Legislative Assembly after the regulation is made."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1305",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "22",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Consequential Amendments",
+                "bcl:num": "16-21",
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of sections 16 to 21.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": [
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "16"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96157",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Forest Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "17-19"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc02069",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Forest and Range Practices Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "20"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96187",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Heritage Conservation Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "21"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96245",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Land Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2310 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96248_01",
+        "act:title": "Land Surveyors Act",
+        "act:chapter": "248",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "76470131/96248/tlc96248_f",
+            "act:tlc": "E3tlc96248"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "artificial",
+                                "#text": "means manufactured;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "artificial feature",
+                                "#text": "includes survey monuments, posts and other designated objects;"
+                            }
+                        },
+                        {
+                            "@id": "d2e45",
+                            "bcl:text": {
+                                "in:term": "association",
+                                "#text": "means the Association of British Columbia Land Surveyors;"
+                            }
+                        },
+                        {
+                            "@id": "d2e54",
+                            "bcl:text": {
+                                "in:term": "board",
+                                "#text": "means the board of management constituted under section 6;"
+                            }
+                        },
+                        {
+                            "@id": "d2e63",
+                            "bcl:text": {
+                                "in:term": "boundary",
+                                "#text": "means a natural or artificial line on land, below land, in airspace or in or on any structure, the purpose of which is to indicate the limits of an interest in the land, airspace, natural resources or structure;"
+                            }
+                        },
+                        {
+                            "@id": "d2e72",
+                            "bcl:text": {
+                                "in:term": "land",
+                                "#text": "includes foreshore and land covered by water;"
+                            }
+                        },
+                        {
+                            "@id": "d2e81",
+                            "bcl:text": {
+                                "in:term": "land surveying company",
+                                "#text": "means a company for which a permit has been issued;"
+                            }
+                        },
+                        {
+                            "@id": "d2e90",
+                            "bcl:text": {
+                                "in:term": "land surveyor",
+                                "#text": "means a person admitted as a land surveyor under section 47;"
+                            }
+                        },
+                        {
+                            "@id": "d2e100",
+                            "bcl:text": {
+                                "in:term": "land surveyor associate",
+                                "#text": "means a person who, for a Canadian jurisdiction other than British Columbia, has a status recognized under the bylaws as equivalent to that of a land surveyor, is registered as a land surveyor associate in compliance with the bylaws and is not in default for fees, dues or costs payable to the association;"
+                            }
+                        },
+                        {
+                            "@id": "d2e109",
+                            "bcl:text": {
+                                "in:term": "land surveyor in training",
+                                "#text": "means a person who is registered with the association as a land surveyor in training and who is not in default for fees, dues or costs payable to the association;"
+                            }
+                        },
+                        {
+                            "@id": "d2e118",
+                            "bcl:text": {
+                                "in:term": "member",
+                                "#text": "means a land surveyor, land surveyor associate or land surveyor in training;"
+                            }
+                        },
+                        {
+                            "@id": "d2e127",
+                            "bcl:text": {
+                                "in:term": "nonpractising land surveyor",
+                                "#text": "means a land surveyor whose name has, after application by that person, been placed on a list of nonpractising land surveyors and who is not in default for fees, dues or costs payable to the association;"
+                            }
+                        },
+                        {
+                            "@id": "d2e136",
+                            "bcl:text": {
+                                "in:term": "permit",
+                                "#text": "means a permit issued under section\u00a051 and includes a renewal of that permit;"
+                            }
+                        },
+                        {
+                            "@id": "d2e145",
+                            "bcl:text": {
+                                "in:term": "practice of land surveying",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e155",
+                                    "bcl:num": "a",
+                                    "bcl:text": [
+                                        "the measurement of land or airspace to",
+                                        "and without limiting subparagraphs (i) and (ii), may include"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e164",
+                                            "bcl:num": "i",
+                                            "bcl:text": "determine, locate, define, describe, establish or re-establish boundaries, or"
+                                        },
+                                        {
+                                            "@id": "d2e173",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "determine the location of any natural or artificial feature on land or in airspace relative to a boundary for the purpose of certifying in writing the location of the natural or artificial feature,"
+                                        },
+                                        {
+                                            "@id": "d2e185",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "integrating any monument that defines a boundary, either directly or indirectly, with a network of geodetic points of any order of precision and determining coordinate values for the monument when those values are used in the development or maintenance of a geographic information system that will be used in whole or in part for determining or establishing boundaries,"
+                                        },
+                                        {
+                                            "@id": "d2e194",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "establishing control points for the purpose of carrying out the activities in subparagraphs (i) to (iii),"
+                                        },
+                                        {
+                                            "@id": "d2e204",
+                                            "bcl:num": "v",
+                                            "bcl:text": "preparing maps, plans and documents in any format with respect to determining or establishing boundaries, and"
+                                        },
+                                        {
+                                            "@id": "d2e213",
+                                            "bcl:num": "vi",
+                                            "bcl:text": "giving advice with respect to land surveying, determining and establishing boundaries and spatial relationships and the rules and regulations pertaining to land surveying, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e222",
+                                    "bcl:num": "b",
+                                    "bcl:text": "advising on, reporting on or supervising any of the activities listed in paragraph\u00a0(a);"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e231",
+                            "bcl:text": {
+                                "in:term": "practising land surveyor",
+                                "#text": "means a land surveyor who is not in default for fees, dues or costs payable to the association, who is not under suspension and who is not a nonpractising land surveyor;"
+                            }
+                        },
+                        {
+                            "@id": "d2e240",
+                            "bcl:text": {
+                                "in:term": "president",
+                                "#text": "means the person elected as president under section 25 (2);"
+                            }
+                        },
+                        {
+                            "@id": "d2e249",
+                            "bcl:text": {
+                                "in:term": "secretary",
+                                "#text": "means the secretary appointed under section 6 (7);"
+                            }
+                        },
+                        {
+                            "@id": "d2e259",
+                            "bcl:text": {
+                                "in:term": "to suspend",
+                                "#text": ", as applied to a member, means to suspend from all rights and privileges of a member;"
+                            }
+                        },
+                        {
+                            "@id": "d2e268",
+                            "bcl:text": {
+                                "in:term": "vice president",
+                                "#text": "means the person elected as vice president under section 25 (2)."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e278",
+                    "bcl:marginalnote": "Association of Land Surveyors",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e286",
+                            "bcl:num": "1",
+                            "bcl:text": "The Corporation of Land Surveyors of the Province of British Columbia is renamed the Association of British Columbia Land Surveyors and is continued as a corporation consisting of the members."
+                        },
+                        {
+                            "@id": "d2e295",
+                            "bcl:num": "2",
+                            "bcl:text": "Except as otherwise provided in this Act, the association has the powers and capacity of a natural person of full capacity."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e305",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "3",
+                    "bcl:text": "[Repealed 2004-21-13.]"
+                },
+                {
+                    "@id": "d2e317",
+                    "bcl:marginalnote": "Bylaws",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e325",
+                            "bcl:num": "1",
+                            "bcl:text": "The association may pass bylaws consistent with this Act with regard to one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e334",
+                                    "bcl:num": "a",
+                                    "bcl:text": "governance, discipline and professional standards of members;"
+                                },
+                                {
+                                    "@id": "d2e343",
+                                    "bcl:num": "b",
+                                    "bcl:text": "management of the property of the association;"
+                                },
+                                {
+                                    "@id": "d2e353",
+                                    "bcl:num": "c",
+                                    "bcl:text": "[Repealed 2004-21-15.]"
+                                },
+                                {
+                                    "@id": "d2e362",
+                                    "bcl:num": "c.1",
+                                    "bcl:text": "categories of membership, associated rosters and applicable fees or dues;"
+                                },
+                                {
+                                    "@id": "d2e371",
+                                    "bcl:num": "d",
+                                    "bcl:text": "[Repealed 2004-21-15.]"
+                                },
+                                {
+                                    "@id": "d2e380",
+                                    "bcl:num": "e",
+                                    "bcl:text": "examination and admission of those persons applying to become members;"
+                                },
+                                {
+                                    "@id": "d2e389",
+                                    "bcl:num": "f",
+                                    "bcl:text": "setting fees for examination and admission;"
+                                },
+                                {
+                                    "@id": "d2e398",
+                                    "bcl:num": "g",
+                                    "bcl:text": "borrowing money on the credit of the association;"
+                                },
+                                {
+                                    "@id": "d2e408",
+                                    "bcl:num": "h",
+                                    "bcl:text": "equipment and instruments used by members and the standard of their work;"
+                                },
+                                {
+                                    "@id": "d2e417",
+                                    "bcl:num": "i",
+                                    "bcl:text": "matters which may be necessary or expedient for the general management of the association;"
+                                },
+                                {
+                                    "@id": "d2e426",
+                                    "bcl:num": "j",
+                                    "bcl:text": "insurance that provides indemnity against professional liability claims, including requiring members to maintain that type of insurance;"
+                                },
+                                {
+                                    "@id": "d2e435",
+                                    "bcl:num": "k",
+                                    "bcl:text": "establishing a professional practice review program for members, including establishing a means to fund the professional practice review program;"
+                                },
+                                {
+                                    "@id": "d2e444",
+                                    "bcl:num": "l",
+                                    "bcl:text": "procedures for elections."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e453",
+                            "bcl:num": "2",
+                            "bcl:text": "Bylaws made under subsection (1) may include provisions for their enforcement and penalties for their contravention."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e463",
+                    "bcl:marginalnote": "Passing bylaws and delegation of power to pass bylaws",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e471",
+                            "bcl:num": "1",
+                            "bcl:text": "Bylaws may be passed only at a general meeting of the association."
+                        },
+                        {
+                            "@id": "d2e480",
+                            "bcl:num": "2",
+                            "bcl:text": "Despite subsection (1), by resolution indicating the scope of the proposed bylaws, the association may delegate the power to pass particular bylaws to the board."
+                        },
+                        {
+                            "@id": "d2e489",
+                            "bcl:num": "3",
+                            "bcl:text": "Bylaws passed by the board under subsection (2) are bylaws of the association."
+                        },
+                        {
+                            "@id": "d2e499",
+                            "bcl:num": "4",
+                            "bcl:text": "A bylaw or a bylaw amendment of the association takes effect when",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e508",
+                                    "bcl:num": "a",
+                                    "bcl:text": "it has been passed under subsection (1) or (2),"
+                                },
+                                {
+                                    "@id": "d2e517",
+                                    "bcl:num": "b",
+                                    "bcl:text": "it has been filed under subsection (5), and"
+                                },
+                                {
+                                    "@id": "d2e526",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the 45 days referred to in subsection (6) have expired, and it has not been disallowed by the Lieutenant Governor in Council."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e535",
+                            "bcl:num": "5",
+                            "bcl:text": "The board must file with the minister a certified copy of all bylaws or bylaw amendments passed under this section."
+                        },
+                        {
+                            "@id": "d2e544",
+                            "bcl:num": "6",
+                            "bcl:text": "A bylaw or bylaw amendment filed with the minister under subsection (5) may be disallowed by the Lieutenant Governor in Council within 45 days of the bylaw or bylaw amendment being filed."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e555",
+                    "bcl:marginalnote": "Board of management",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e563",
+                            "bcl:num": "1",
+                            "bcl:text": "Except as otherwise provided in this Act, the business, property and affairs of the association are to be managed, and its powers may be exercised, by the board of management."
+                        },
+                        {
+                            "@id": "d2e572",
+                            "bcl:num": "2",
+                            "bcl:text": "The board consists of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e581",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the president, vice president and other members of the board elected under section\u00a025 or appointed or elected under subsection (4) of this section,"
+                                },
+                                {
+                                    "@id": "d2e591",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the Surveyor General of British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e600",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the last preceding president so long as the last preceding president is a practising land surveyor,"
+                                },
+                                {
+                                    "@id": "d2e609",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the secretary, and"
+                                },
+                                {
+                                    "@id": "d2e618",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the persons appointed under subsection (9)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e627",
+                            "bcl:num": "3",
+                            "bcl:text": "Members of the board hold office until",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e636",
+                                    "bcl:num": "a",
+                                    "bcl:text": "their term of office expires, or"
+                                },
+                                {
+                                    "@id": "d2e646",
+                                    "bcl:num": "b",
+                                    "bcl:text": "they resign, die or cease to be practising land surveyors."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e655",
+                            "bcl:num": "4",
+                            "bcl:text": "An elected member of the board who ceases to hold office under subsection (3) (b) must be replaced by a practising land surveyor appointed by the board or, failing an appointment, elected at an extraordinary general meeting of the association."
+                        },
+                        {
+                            "@id": "d2e664",
+                            "bcl:num": "5",
+                            "bcl:text": "Subsection (3) applies to a member of the board appointed or elected under subsection\u00a0(4)."
+                        },
+                        {
+                            "@id": "d2e673",
+                            "bcl:num": "6",
+                            "bcl:text": "The number of elected members of the board may be varied by bylaw or by resolution of a general meeting of the association."
+                        },
+                        {
+                            "@id": "d2e682",
+                            "bcl:num": "7",
+                            "bcl:text": "The board must appoint from among the practising land surveyors, a secretary, who holds office at the pleasure of the board."
+                        },
+                        {
+                            "@id": "d2e691",
+                            "bcl:num": "8",
+                            "bcl:text": "The secretary must not be dismissed except by the votes of at least 3/5 of the other members of the board."
+                        },
+                        {
+                            "@id": "d2e701",
+                            "bcl:num": "9",
+                            "bcl:text": "The Lieutenant Governor in Council may appoint up to 2 board members who are not members of the association and who, subject to subsection (3) (b), serve for a 2 year term."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e711",
+                    "bcl:marginalnote": "Functions of the board",
+                    "bcl:num": "7",
+                    "bcl:text": "In addition to other powers conferred by this Act, the board's functions include the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e722",
+                            "bcl:num": "a",
+                            "bcl:text": "maintaining the discipline and professional standards of members;"
+                        },
+                        {
+                            "@id": "d2e731",
+                            "bcl:num": "b",
+                            "bcl:text": "preventing or conciliating misunderstandings between members;"
+                        },
+                        {
+                            "@id": "d2e741",
+                            "bcl:num": "c",
+                            "bcl:text": "hearing and deciding complaints and accusations against members about their professional conduct;"
+                        },
+                        {
+                            "@id": "d2e750",
+                            "bcl:num": "d",
+                            "bcl:text": "disciplining members found guilty of misconduct or unprofessional conduct as provided in this Act;"
+                        },
+                        {
+                            "@id": "d2e759",
+                            "bcl:num": "e",
+                            "bcl:text": "issuing and maintaining guidelines, for the use of members and the general public, with respect to fees for professional services;"
+                        },
+                        {
+                            "@id": "d2e768",
+                            "bcl:num": "f",
+                            "bcl:text": "dealing with applications to become members;"
+                        },
+                        {
+                            "@id": "d2e777",
+                            "bcl:num": "g",
+                            "bcl:text": "providing for the term of articles for a land surveyor in training;"
+                        },
+                        {
+                            "@id": "d2e786",
+                            "bcl:num": "h",
+                            "bcl:text": "providing for examination of applicants;"
+                        },
+                        {
+                            "@id": "d2e796",
+                            "bcl:num": "i",
+                            "bcl:text": "ordering a member or former member to appear before the board;"
+                        },
+                        {
+                            "@id": "d2e805",
+                            "bcl:num": "j",
+                            "bcl:text": "preparing draft bylaws to be laid before a general meeting;"
+                        },
+                        {
+                            "@id": "d2e814",
+                            "bcl:num": "k",
+                            "bcl:text": "preparing and passing bylaws under powers delegated to the board under section\u00a05."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e824",
+                    "bcl:marginalnote": "Quorum of the board",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e832",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (4), 3 members of the board form a quorum."
+                        },
+                        {
+                            "@id": "d2e841",
+                            "bcl:num": "2",
+                            "bcl:text": "All decisions of the board must be made by a majority of its members present at a meeting of the board."
+                        },
+                        {
+                            "@id": "d2e850",
+                            "bcl:num": "3",
+                            "bcl:text": "The chair votes as a member of the board and has no additional or casting vote."
+                        },
+                        {
+                            "@id": "d2e860",
+                            "bcl:num": "4",
+                            "bcl:text": "For hearings held by the board under sections\u00a060,\u00a061,\u00a062 and\u00a063,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e869",
+                                    "bcl:num": "a",
+                                    "bcl:text": "5 members of the board form a quorum, and"
+                                },
+                                {
+                                    "@id": "d2e878",
+                                    "bcl:num": "b",
+                                    "bcl:text": "decisions to expel or suspend a member of the association require a majority of at least 2/3 of the members of the board present."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e888",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "9",
+                    "bcl:text": "[Repealed 2004-21-20.]"
+                },
+                {
+                    "@id": "d2e900",
+                    "bcl:marginalnote": "General meetings",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e908",
+                            "bcl:num": "1",
+                            "bcl:text": "An annual general meeting of the association must be held in British Columbia once in each calendar year on a date and at a place determined by the board."
+                        },
+                        {
+                            "@id": "d2e917",
+                            "bcl:num": "2",
+                            "bcl:text": "An extraordinary general meeting may, and on the written request of 10 practising land surveyors must, be convened by order of the president or vice president, by notice to all practising land surveyors."
+                        },
+                        {
+                            "@id": "d2e926",
+                            "bcl:num": "3",
+                            "bcl:text": "Thirty practising land surveyors form a quorum at a general meeting."
+                        },
+                        {
+                            "@id": "d2e936",
+                            "bcl:num": "4",
+                            "bcl:text": "Notice of a meeting ordered under subsection (2) must be sent, at least 15 days before the date of the meeting in a manner prescribed by bylaw, to each practising land surveyor."
+                        },
+                        {
+                            "@id": "d2e935",
+                            "bcl:num": "5",
+                            "bcl:text": "A meeting under this section may be conducted by means of electronic or other communication facilities, as long as all participants in the meeting are able to communicate with each other."
+                        },
+                        {
+                            "@id": "d2e937",
+                            "bcl:num": "6",
+                            "bcl:text": "If an annual general meeting is conducted by means of electronic or other communication facilities, participants are deemed to be present in person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e946",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "11-12",
+                    "bcl:text": "[Repealed 2004-21-22.]"
+                },
+                {
+                    "@id": "d2e959",
+                    "bcl:marginalnote": "Report of the board",
+                    "bcl:num": "13",
+                    "bcl:text": "At each annual general meeting the board must submit a report of its operations and business during the preceding year."
+                },
+                {
+                    "@id": "d2e971",
+                    "bcl:marginalnote": "Election of board",
+                    "bcl:num": "14",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e979",
+                            "bcl:num": "1",
+                            "bcl:text": "The elected members of the board are to be elected, by votes to be counted at the annual general meeting, for a term specified in the bylaws in the manner provided by this Act and the bylaws."
+                        },
+                        {
+                            "@id": "d2e988",
+                            "bcl:num": "2",
+                            "bcl:text": "The association, by a resolution at an extraordinary general meeting, may fill vacancies for elected members of the board."
+                        },
+                        {
+                            "@id": "d2e997",
+                            "bcl:num": "3",
+                            "bcl:text": "A person may not be elected a member of the board unless the person is a practising land surveyor and has been a practising land surveyor continuously for the 3 month period before the annual general meeting."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1007",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "15",
+                    "bcl:text": "[Repealed 2004-21-23.]"
+                },
+                {
+                    "@id": "d2e1019",
+                    "bcl:marginalnote": "Nomination of candidates by members",
+                    "bcl:num": "16",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1027",
+                            "bcl:num": "1",
+                            "bcl:text": "Any 6 practising land surveyors may, in writing, nominate a candidate for the board in any year from practising land surveyors."
+                        },
+                        {
+                            "@id": "d2e1036",
+                            "bcl:num": "2",
+                            "bcl:text": "The nomination must be sent to the secretary at least 2 months before the date of the annual general meeting, accompanied by the nominee's written consent to nomination."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1046",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "17",
+                    "bcl:text": "[Repealed 2004-21-23.]"
+                },
+                {
+                    "@id": "d2e1058",
+                    "bcl:marginalnote": "Mailing of ballot papers",
+                    "bcl:num": "18",
+                    "bcl:text": "At least 6 weeks before the date of the annual general meeting, the secretary must send each practising land surveyor a ballot paper in the form provided by bylaw, setting out the names of all nominees, their places of residence and, unless nominated by the board, the names of those nominating them."
+                },
+                {
+                    "@id": "d2e1071",
+                    "bcl:marginalnote": "Nominations at extraordinary general meetings",
+                    "bcl:num": "19",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1079",
+                            "bcl:num": "1",
+                            "bcl:text": "Sections 16 and 18 do not apply to an election of members of the board at an extraordinary general meeting."
+                        },
+                        {
+                            "@id": "d2e1088",
+                            "bcl:num": "2",
+                            "bcl:text": "Nomination of candidates may be made orally from the floor at an extraordinary general meeting."
+                        },
+                        {
+                            "@id": "d2e1097",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2004-21-26.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1107",
+                    "bcl:marginalnote": "Voting at general meetings",
+                    "bcl:num": "20",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1115",
+                            "bcl:num": "1",
+                            "bcl:text": "Voting at elections of members of the board at an annual general meeting is to be by ballot on ballot papers in the form provided by bylaw."
+                        },
+                        {
+                            "@id": "d2e1124",
+                            "bcl:num": "2",
+                            "bcl:text": "A voter must personally mark the voter's ballot paper and fill in the declaration on it as provided by bylaw."
+                        },
+                        {
+                            "@id": "d2e1133",
+                            "bcl:num": "3) and (4",
+                            "bcl:text": "[Repealed 2004-21-27.]"
+                        },
+                        {
+                            "@id": "d2e1143",
+                            "bcl:num": "5",
+                            "bcl:text": "For an election under subsection (1), a ballot paper containing more marks than the number of nominees to be elected is invalid and the votes recorded on it must not be counted."
+                        },
+                        {
+                            "@id": "d2e1152",
+                            "bcl:num": "6",
+                            "bcl:text": "Votes for membership on the board at an extraordinary general meeting must be cast by the voter writing on a ballot paper the names of the nominees for whom the voter votes."
+                        },
+                        {
+                            "@id": "d2e1161",
+                            "bcl:num": "7",
+                            "bcl:text": "For an election under subsection (6), a ballot paper containing the names of more nominees than there are vacancies to be filled is invalid and the votes recorded on it must not be counted."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1171",
+                    "bcl:marginalnote": "Ballots to be delivered to secretary",
+                    "bcl:num": "21",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1179",
+                            "bcl:num": "1",
+                            "bcl:text": "Except at an election held at an extraordinary general meeting, ballot papers must be delivered to the secretary before the closing of the ballot box at the annual general meeting."
+                        },
+                        {
+                            "@id": "d2e1188",
+                            "bcl:num": "2",
+                            "bcl:text": "Ballot papers received by the secretary by post are deemed to have been delivered."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1198",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "22-23",
+                    "bcl:text": "[Repealed 2004-21-28.]"
+                },
+                {
+                    "@id": "d2e1210",
+                    "bcl:marginalnote": "Voters entitled to be present",
+                    "bcl:num": "24",
+                    "bcl:text": "A voter at an election has the right to be present when ballot papers are opened and scrutinized."
+                },
+                {
+                    "@id": "d2e1222",
+                    "bcl:marginalnote": "Votes for candidates and officers",
+                    "bcl:num": "25",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1230",
+                            "bcl:num": "1",
+                            "bcl:text": "At an election of members of the board held at a general meeting, the vacancies on the board must be filled by the candidates who receive the highest number of votes."
+                        },
+                        {
+                            "@id": "d2e1239",
+                            "bcl:num": "2",
+                            "bcl:text": "The president and vice president of the association must be elected as provided by bylaw."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1250",
+                    "bcl:marginalnote": "Deciding a tie vote",
+                    "bcl:num": "26",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1258",
+                            "bcl:num": "1",
+                            "bcl:text": "If at an election 2 or more candidates receive an equal number of votes, so that their election remains undecided, the election of the candidates required to complete the board must be determined as provided in subsections (2) to (4)."
+                        },
+                        {
+                            "@id": "d2e1267",
+                            "bcl:num": "2",
+                            "bcl:text": "A scrutineer must at once put into a ballot box a slip of paper for each candidate whose election is undecided, with the candidate's name written on it."
+                        },
+                        {
+                            "@id": "d2e1276",
+                            "bcl:num": "3",
+                            "bcl:text": "The secretary must draw by chance, in the presence of the meeting, as many slips as there are vacancies on the board still to be filled."
+                        },
+                        {
+                            "@id": "d2e1286",
+                            "bcl:num": "4",
+                            "bcl:text": "The persons whose names are drawn are deemed to be elected."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1296",
+                    "bcl:marginalnote": "Secretary must declare result",
+                    "bcl:num": "27",
+                    "bcl:text": "On completion of the scrutiny and counting of votes and any drawing of lots under section\u00a026, the secretary must at once declare the result of the election and cause the names of those elected to be published in the Gazette within 30 days of declaring the result of the vote."
+                },
+                {
+                    "@id": "d2e1308",
+                    "bcl:marginalnote": "Chair of the board",
+                    "bcl:num": "28",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1316",
+                            "bcl:num": "1",
+                            "bcl:text": "The president is the chair of meetings of the board."
+                        },
+                        {
+                            "@id": "d2e1325",
+                            "bcl:num": "2",
+                            "bcl:text": "In the absence of the president, the vice president is the chair."
+                        },
+                        {
+                            "@id": "d2e1334",
+                            "bcl:num": "3",
+                            "bcl:text": "If both the president and the vice president are absent, the members of the board who are present may elect a chair."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1344",
+                    "bcl:marginalnote": "Calling meetings of the board",
+                    "bcl:num": "29",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1352",
+                            "bcl:num": "1",
+                            "bcl:text": "A meeting of the board may be called by the president or vice president."
+                        },
+                        {
+                            "@id": "d2e1361",
+                            "bcl:num": "2",
+                            "bcl:text": "A meeting of the board must be called by the president or vice president on the request of 3 members of the board."
+                        },
+                        {
+                            "@id": "d2e1370",
+                            "bcl:num": "3",
+                            "bcl:text": "Notice of a meeting of the board is sufficiently given if mailed to its members at their last known addresses."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1380",
+                    "bcl:marginalnote": "Place and frequency of board meetings",
+                    "bcl:num": "30",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1388",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (1.1), meetings of the board must be held in the City of Victoria or another place determined by the board, and may be adjourned."
+                        },
+                        {
+                            "@id": "d2e1397",
+                            "bcl:num": "1.1",
+                            "bcl:text": "A meeting of the board may be conducted by means of electronic or other communication facilities, as long as all participants in the meeting are able to communicate with each other."
+                        },
+                        {
+                            "@id": "d2e1396",
+                            "bcl:num": "1.2",
+                            "bcl:text": "If a meeting of the board is conducted by means of electronic or other communication facilities, participants are deemed to be present in person."
+                        },
+                        {
+                            "@id": "d2e1395",
+                            "bcl:num": "2",
+                            "bcl:text": "The board must meet at least annually to admit candidates as members and for other business."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1407",
+                    "bcl:marginalnote": "Registrar",
+                    "bcl:num": "31",
+                    "bcl:text": "The secretary is the registrar and treasurer of the association."
+                },
+                {
+                    "@id": "d2e1420",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "32",
+                    "bcl:text": "[Repealed 2004-21-33.]"
+                },
+                {
+                    "@id": "d2e1432",
+                    "bcl:marginalnote": "Duties of secretary",
+                    "bcl:num": "33",
+                    "bcl:text": "The secretary must do the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1443",
+                            "bcl:num": "a",
+                            "bcl:text": "keep a careful record of the proceedings of the association and the board;"
+                        },
+                        {
+                            "@id": "d2e1452",
+                            "bcl:num": "b",
+                            "bcl:text": "be responsible for custody of the common seal, records and archives of the association and board;"
+                        },
+                        {
+                            "@id": "d2e1462",
+                            "bcl:num": "c",
+                            "bcl:text": "certify copies of documents or extracts of documents from the records, as required;"
+                        },
+                        {
+                            "@id": "d2e1471",
+                            "bcl:num": "d",
+                            "bcl:text": "receive the money of the association, deposit it in a savings institution and make all authorized payments;"
+                        },
+                        {
+                            "@id": "d2e1480",
+                            "bcl:num": "e",
+                            "bcl:text": "render accounts to the annual general meeting showing receipts and payments for the year ending on the preceding December\u00a031;"
+                        },
+                        {
+                            "@id": "d2e1489",
+                            "bcl:num": "f",
+                            "bcl:text": "render accounts required by the board;"
+                        },
+                        {
+                            "@id": "d2e1498",
+                            "bcl:num": "g",
+                            "bcl:text": "make and keep among the records of the association a register of members, with addresses, giving particulars of deaths, expulsion or suspension from membership and other particulars that the board directs;"
+                        },
+                        {
+                            "@id": "d2e1507",
+                            "bcl:num": "h",
+                            "bcl:text": "generally perform other services specified by the board or the association."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1517",
+                    "bcl:marginalnote": "Practising land surveyors",
+                    "bcl:num": "34",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1525",
+                            "bcl:num": "1",
+                            "bcl:text": "The secretary must, immediately after February\u00a01 in each year,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1534",
+                                    "bcl:num": "a",
+                                    "bcl:text": "provide to the Surveyor General and to the registrar of each land title district in British Columbia an alphabetical list of practising land surveyors, made up to that day, and"
+                                },
+                                {
+                                    "@id": "d2e1543",
+                                    "bcl:num": "b",
+                                    "bcl:text": "publish the list in one issue of the Gazette in that month."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1553",
+                            "bcl:num": "2",
+                            "bcl:text": "The secretary, on receipt after February 1 in any year of all money due to the association from a practising land surveyor, together with a sum sufficient to pay the cost of publishing and providing a supplementary list, must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1562",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prepare and publish once in the Gazette the name of each practising land surveyor who has since the publication under subsection (1) paid all money due from the practising land surveyor to the association, and"
+                                },
+                                {
+                                    "@id": "d2e1571",
+                                    "bcl:num": "b",
+                                    "bcl:text": "provide a copy of every supplementary list to the Surveyor General and to the registrar of each land title district."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1580",
+                            "bcl:num": "3",
+                            "bcl:text": "If a practising land surveyor complains to the board that a name has been improperly inserted in or omitted from a list published under this section, the board must promptly examine the complaint and correct any error."
+                        },
+                        {
+                            "@id": "d2e1589",
+                            "bcl:num": "4",
+                            "bcl:text": "The board's decision under subsection\u00a0(3) is subject to appeal under section\u00a067."
+                        },
+                        {
+                            "@id": "d2e1598",
+                            "bcl:num": "5",
+                            "bcl:text": "Any error in a list published under this section must be corrected in accordance with the decision on appeal."
+                        },
+                        {
+                            "@id": "d2e1608",
+                            "bcl:num": "6",
+                            "bcl:text": "Only the votes of persons whose names appear on the list of practising land surveyors at the date of a general meeting may be counted on any vote at that meeting."
+                        },
+                        {
+                            "@id": "d2e1617",
+                            "bcl:num": "7",
+                            "bcl:text": "Each year the secretary must publish in the Gazette the name of any practising land surveyor who since the publication of an earlier list of practising land surveyors has ceased to be a practising land surveyor."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1627",
+                    "bcl:marginalnote": "Land surveyor in training",
+                    "bcl:num": "35",
+                    "bcl:text": "A person must be admitted as a land surveyor in training if the person complies with the requirements of the bylaws."
+                },
+                {
+                    "@id": "d2e1639",
+                    "bcl:marginalnote": "Bylaws respecting land surveyors in training and admission as land surveyor",
+                    "bcl:num": "35.1",
+                    "bcl:text": "The bylaws may specify any or all of the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1650",
+                            "bcl:num": "a",
+                            "bcl:text": "the form and term of training for a land surveyor in training;"
+                        },
+                        {
+                            "@id": "d2e1659",
+                            "bcl:num": "b",
+                            "bcl:text": "the fees to be paid by a land surveyor in training;"
+                        },
+                        {
+                            "@id": "d2e1669",
+                            "bcl:num": "c",
+                            "bcl:text": "the basis for admission as a land surveyor in training of an individual who has started similar training outside of British Columbia;"
+                        },
+                        {
+                            "@id": "d2e1678",
+                            "bcl:num": "d",
+                            "bcl:text": "the recognition of training outside of British Columbia as equivalent to training as a land surveyor in training for the purposes of this Act;"
+                        },
+                        {
+                            "@id": "d2e1687",
+                            "bcl:num": "e",
+                            "bcl:text": "setting the conditions under which a land surveyor in training may take an examination for admission as a land surveyor;"
+                        },
+                        {
+                            "@id": "d2e1696",
+                            "bcl:num": "f",
+                            "bcl:text": "setting conditions and fees for admission as a land surveyor."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1706",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "36-41",
+                    "bcl:text": "[Repealed 2004-21-35.]"
+                },
+                {
+                    "@id": "d2e1719",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "42-43",
+                    "bcl:text": "[Repealed 2004-21-36.]"
+                },
+                {
+                    "@id": "d2e1731",
+                    "bcl:marginalnote": "Land surveyor associate may sit examinations to become land surveyor",
+                    "bcl:num": "44",
+                    "bcl:text": "A person registered as a land surveyor associate may be permitted to sit the examinations to become a land surveyor if the person complies with the bylaws."
+                },
+                {
+                    "@id": "d2e1743",
+                    "bcl:marginalnote": "Qualifications to become a land surveyor",
+                    "bcl:num": "45",
+                    "bcl:text": "A person must not be admitted as a land surveyor unless",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1754",
+                            "bcl:num": "a",
+                            "bcl:text": "all of the following apply:",
+                            "bcl:subparagraph": [
+                                {
+                                    "@id": "d2e1763",
+                                    "bcl:num": "i",
+                                    "bcl:text": "the person is at least 19 years of age;"
+                                },
+                                {
+                                    "@id": "d2e1773",
+                                    "bcl:num": "ii",
+                                    "bcl:text": "[Repealed 2015-26-45.]"
+                                },
+                                {
+                                    "@id": "d2e1782",
+                                    "bcl:num": "iii",
+                                    "bcl:text": "the person has satisfied the board that the person has passed all required examinations and has complied with this Act and the bylaws, or"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1791",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/09020_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Labour Mobility Act"
+                                },
+                                "#text": "the person is a person whom the board is obliged under the  to admit as a land surveyor."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1804",
+                    "bcl:marginalnote": "Oath",
+                    "bcl:num": "46",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1812",
+                            "bcl:num": "1",
+                            "bcl:text": "Before becoming a land surveyor, a candidate for admission as a land surveyor must take and sign before a member of the board an oath or affirmation in the form established by bylaw."
+                        },
+                        {
+                            "@id": "d2e1821",
+                            "bcl:num": "2",
+                            "bcl:text": "The oath or affirmation must be kept among the records of the association."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1831",
+                    "bcl:marginalnote": "Admission as land surveyor",
+                    "bcl:num": "47",
+                    "bcl:text": "Admission as a land surveyor is effected by resolution of the board and entry of the land surveyor's name in a register of members kept by the secretary."
+                },
+                {
+                    "@id": "d2e1843",
+                    "bcl:marginalnote": "Issue of commission",
+                    "bcl:num": "48",
+                    "bcl:text": "A person admitted as a land surveyor who has complied with every prerequisite of the right to practise as a land surveyor, and has paid the sums specified by the bylaws for a commission and for the entry of the person's name in the register of members, must be issued a commission in writing in the form provided by bylaw and signed by the secretary and at least one other member of the board."
+                },
+                {
+                    "@id": "d2e1856",
+                    "bcl:marginalnote": "Membership fees, resignation, readmission",
+                    "bcl:num": "49",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1864",
+                            "bcl:num": "1",
+                            "bcl:text": "On or before January 31 in each year, a member must pay to the secretary the annual membership fee for that year set by this Act or by bylaw."
+                        },
+                        {
+                            "@id": "d2e1873",
+                            "bcl:num": "2",
+                            "bcl:text": "A member continues to be liable for annual membership fees unless the person has resigned from membership."
+                        },
+                        {
+                            "@id": "d2e1882",
+                            "bcl:num": "3",
+                            "bcl:text": "A member may resign membership by notice in writing to the secretary, but is liable for the annual membership fee for the year in which the notice is given."
+                        },
+                        {
+                            "@id": "d2e1892",
+                            "bcl:num": "4",
+                            "bcl:text": "A person who has resigned from membership may be readmitted as a member if the person",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1901",
+                                    "bcl:num": "a",
+                                    "bcl:text": "applies in writing to the board,"
+                                },
+                                {
+                                    "@id": "d2e1910",
+                                    "bcl:num": "b",
+                                    "bcl:text": "satisfies the board of the person's competence, and"
+                                },
+                                {
+                                    "@id": "d2e1919",
+                                    "bcl:num": "c",
+                                    "bcl:text": "pays the annual membership fee for the year of application."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1928",
+                            "bcl:num": "5",
+                            "bcl:text": "A member may not resign from membership while an inquiry or proceeding is pending under this Act about any act or conduct of that member."
+                        },
+                        {
+                            "@id": "d2e1937",
+                            "bcl:num": "6",
+                            "bcl:text": "The resignation of a person from membership, and a notice given by the person under subsection (3)",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1947",
+                                    "bcl:num": "a",
+                                    "bcl:text": "does not affect the exercise of a power of the board or a court under this Act in respect of that person or a matter or thing existing or done while the person was a member, and"
+                                },
+                                {
+                                    "@id": "d2e1956",
+                                    "bcl:num": "b",
+                                    "bcl:text": "does not relieve the person from any discipline, penalty, liability or proceeding to which the person would otherwise be liable."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1966",
+                    "bcl:marginalnote": "Right to practise through a company",
+                    "bcl:num": "50",
+                    "bcl:text": "Subject to this Act and the bylaws, a land surveying company may carry on the business of providing land surveying services to the public through one or more persons each of whom is",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1977",
+                            "bcl:num": "a",
+                            "bcl:text": "a practising land surveyor, or"
+                        },
+                        {
+                            "@id": "d2e1986",
+                            "bcl:num": "b",
+                            "bcl:text": "an employee of the land surveying company under the direct supervision of a practising land surveyor."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1996",
+                    "bcl:marginalnote": "Corporate registration",
+                    "bcl:num": "51",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2004",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/02057_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Business Corporations Act"
+                                },
+                                "#text": "The board must issue a land surveying company permit to a company within the meaning of the  that is in good standing under that Act if the board is satisfied that"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2016",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the name of the company includes the words \"land surveying\","
+                                },
+                                {
+                                    "@id": "d2e2025",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the majority of the voting shares of the company are legally and beneficially owned by one or more practising land surveyors or by one or more companies the majority of whose voting shares are legally and beneficially owned by one or more practising land surveyors,"
+                                },
+                                {
+                                    "@id": "d2e2035",
+                                    "bcl:num": "c",
+                                    "bcl:text": "[Repealed 2009-34-3.]"
+                                },
+                                {
+                                    "@id": "d2e2044",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a majority of the directors of the company are practising land surveyors, and"
+                                },
+                                {
+                                    "@id": "d2e2053",
+                                    "bcl:num": "e",
+                                    "bcl:text": "all of the persons who will be practising as land surveyors on behalf of the company are practising land surveyors or are under the direct supervision of a practising land surveyor."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2062",
+                            "bcl:num": "1.1",
+                            "bcl:text": "[Repealed 2009-34-3.]"
+                        },
+                        {
+                            "@id": "d2e2071",
+                            "bcl:num": "2",
+                            "bcl:text": "The board may refuse to issue a permit under subsection (1) if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2080",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the land surveying company has previously had its permit revoked, or"
+                                },
+                                {
+                                    "@id": "d2e2090",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a shareholder of the land surveying company was a shareholder of a land surveying company that previously had its permit revoked."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2100",
+                    "bcl:marginalnote": "Prohibition against carrying on business",
+                    "bcl:num": "52",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2108",
+                            "bcl:num": "1",
+                            "bcl:text": "A company that has the words \"land surveying\" as part of its name must not carry on any business unless it holds a permit."
+                        },
+                        {
+                            "@id": "d2e2117",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/I-3.3/index.html",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Income Tax Act"
+                                },
+                                "#text": "A land surveying company that holds a permit must not carry on any activities that would, for the purposes of the  (Canada), give rise to income from business, except the provision of land surveying services or services that are directly associated with the provision of land surveying services."
+                            }
+                        },
+                        {
+                            "@id": "d2e2129",
+                            "bcl:num": "3",
+                            "bcl:text": "No act of a land surveying company, including a transfer of property to or by the company, is invalid only because the company contravenes subsection (1) or (2)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2139",
+                    "bcl:marginalnote": "Voting agreements prohibited",
+                    "bcl:num": "53",
+                    "bcl:text": "A shareholder of a land surveying company must not enter into a voting trust agreement, proxy or any other type of agreement that vests in another person who is not a practising land surveyor the authority to exercise the voting rights attached to any or all of the shares."
+                },
+                {
+                    "@id": "d2e2151",
+                    "bcl:marginalnote": "Responsibility of members",
+                    "bcl:num": "54",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2159",
+                            "bcl:num": "1",
+                            "bcl:text": "The liability for professional negligence of a member carrying on the practice of land surveying is not affected by the fact that the member is carrying on that practice as an employee of a land surveying company."
+                        },
+                        {
+                            "@id": "d2e2168",
+                            "bcl:num": "2",
+                            "bcl:text": "The relationship of a member to a land surveying company, whether as a shareholder, director, officer or employee of the company, does not affect, modify or diminish the application to the member of this Act and the bylaws."
+                        },
+                        {
+                            "@id": "d2e2177",
+                            "bcl:num": "3",
+                            "bcl:text": "Nothing in this Act affects, modifies or limits any law applicable to the fiduciary, confidential or ethical relationships between a land surveyor and a person receiving the professional services of that land surveyor."
+                        },
+                        {
+                            "@id": "d2e2187",
+                            "bcl:num": "4",
+                            "bcl:text": "The relationship between a land surveying company carrying on business as permitted under this Act and a person receiving land surveying services provided by the company is subject to all applicable law relating to the fiduciary, confidential and ethical relationships that exist between a member and the member's client."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2198",
+                    "bcl:marginalnote": "Revocation of permits",
+                    "bcl:num": "55",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2206",
+                            "bcl:num": "1",
+                            "bcl:text": "The board may, after a hearing, revoke the permit issued to a land surveying company if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2215",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the course of providing land surveying services the company does anything that, if done by a member, would be conduct unbecoming a member,"
+                                },
+                                {
+                                    "@id": "d2e2224",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the company contravenes section 52, or"
+                                },
+                                {
+                                    "@id": "d2e2234",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the company ceases to comply with a condition of qualification for a permit referred to in section 51 or a condition under section 56 (1) (c) or (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2243",
+                            "bcl:num": "2",
+                            "bcl:text": "Rather than revoking a permit under subsection (1), the board may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2252",
+                                    "bcl:num": "a",
+                                    "bcl:text": "discipline one or more of the shareholders of the land surveying company, or"
+                                },
+                                {
+                                    "@id": "d2e2261",
+                                    "bcl:num": "b",
+                                    "bcl:text": "impose a fine on the land surveying company in an amount of not more than $10\u00a0000."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2270",
+                            "bcl:num": "3",
+                            "bcl:text": "If a permit is revoked under this section, the board must inform the Registrar of Companies and the Registrar of Companies must amend the name of the company whose permit has been revoked",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2279",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by deleting the words \"land surveying\" from it, and"
+                                },
+                                {
+                                    "@id": "d2e2289",
+                                    "bcl:num": "b",
+                                    "bcl:text": "by making any other amendments to it that the Registrar of Companies considers necessary or advisable."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2298",
+                            "bcl:num": "4",
+                            "bcl:text": "All shareholders, directors, officers and employees of a land surveying company may be",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2307",
+                                    "bcl:num": "a",
+                                    "bcl:text": "compelled to give evidence at a proceeding under this Act, other than as a member against whom a proceeding is brought under section\u00a060, or"
+                                },
+                                {
+                                    "@id": "d2e2316",
+                                    "bcl:num": "b",
+                                    "bcl:text": "required to produce all files and records that are in their possession or power and that are relevant to matters raised in the proceeding referred to in paragraph (a)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2326",
+                    "bcl:marginalnote": "Rules respecting companies",
+                    "bcl:num": "56",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2334",
+                            "bcl:num": "1",
+                            "bcl:text": "The board may make rules that it considers necessary or advisable for the purposes of sections\u00a050 to\u00a055, including rules",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2343",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting the issue and renewal of permits, including",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2352",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the establishment of a procedure to obtain a permit and a renewal of a permit, and"
+                                        },
+                                        {
+                                            "@id": "d2e2362",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "setting fees for the obtaining of a permit or a renewal of a permit,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2371",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting procedures for revocation of permits, including the adaptation, in a manner that the board considers necessary or advisable, of rules respecting proceedings before the board,"
+                                },
+                                {
+                                    "@id": "d2e2380",
+                                    "bcl:num": "c",
+                                    "bcl:text": "setting conditions that may be attached to permits that are issued or renewed under this Act,"
+                                },
+                                {
+                                    "@id": "d2e2389",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting names and the approval of names, including the types of names by which a land surveying company may be known, and"
+                                },
+                                {
+                                    "@id": "d2e2398",
+                                    "bcl:num": "e",
+                                    "bcl:text": "respecting the disposition of shares of a shareholder of a land surveying company who",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2407",
+                                            "bcl:num": "i",
+                                            "bcl:text": "ceases to be a member, or"
+                                        },
+                                        {
+                                            "@id": "d2e2417",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "remains a member but ceases to be a practising land surveyor."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2426",
+                            "bcl:num": "2",
+                            "bcl:text": "The board may, as a condition of issuing or renewing a permit, set an amount of insurance that the holder of the permit must carry or must provide to each of its employees for the purpose of providing indemnity against professional liability claims."
+                        },
+                        {
+                            "@id": "d2e2435",
+                            "bcl:num": "3",
+                            "bcl:text": "The rules under subsection (1) or the amount set under subsection (2) may be different for different permit holders, at the discretion of the board."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2445",
+                    "bcl:marginalnote": "Bylaws apply to companies",
+                    "bcl:num": "57",
+                    "bcl:text": "The bylaws made under section 4 apply to land surveying companies, and the association and the board may exercise the powers given by this Act and the bylaws to enforce the bylaws made under section\u00a04."
+                },
+                {
+                    "@id": "d2e2457",
+                    "bcl:marginalnote": "Appeals and other matters",
+                    "bcl:num": "58",
+                    "bcl:text": "Sections 65 to 69 apply to a land surveying company as though it were a member."
+                },
+                {
+                    "@id": "d2e2469",
+                    "bcl:marginalnote": "Practice of land surveying and use of titles",
+                    "bcl:num": "59",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2477",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "A person must not",
+                                "unless the person"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2486",
+                                    "bcl:num": "a",
+                                    "bcl:text": "engage in the practice of land surveying, or"
+                                },
+                                {
+                                    "@id": "d2e2495",
+                                    "bcl:num": "b",
+                                    "bcl:text": "purport to be, or be held out to the public as, a land surveyor or authorized under this Act to engage in the practice of land surveying"
+                                },
+                                {
+                                    "@id": "d2e2508",
+                                    "bcl:num": "c",
+                                    "bcl:text": "is a practising land surveyor, or"
+                                },
+                                {
+                                    "@id": "d2e2517",
+                                    "bcl:num": "d",
+                                    "bcl:text": "practises as authorized by this Act through a land surveying company."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2526",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "This Act does not affect or interfere with the right of",
+                                "if that practice or work or those services do not involve the determination or certification of a boundary or natural or artificial features in relation to a boundary."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2535",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/98009_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Legal Profession Act"
+                                        },
+                                        "#text": "a lawyer to engage in the practice of law under the authority of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2547",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96334_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Notaries Act"
+                                        },
+                                        "#text": "a notary public to provide notary services under the authority of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2560",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96017_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Architects Act"
+                                        },
+                                        "#text": "an architect to engage in the practice of professional architecture under the authority of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2572",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/18047",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Professional Governance Act"
+                                        },
+                                        "#text": "a professional engineer to engage in the practice of professional engineering under the authority of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2584",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/18047",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Professional Governance Act"
+                                        },
+                                        "#text": "a professional geoscientist to engage in the practice of professional geoscience under the authority of the , or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2596",
+                                    "bcl:num": "f",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/18047",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Professional Governance Act"
+                                        },
+                                        "#text": "a person entitled to use the designation \"applied science technologist\" or \"certified technician\" under the authority of the  to perform the work usual to such designations,"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2611",
+                            "bcl:num": "3",
+                            "bcl:text": "Subject to subsection (4), a person must not use or display the designation \"B. C. Land Surveyor\", \"British Columbia Land Surveyor\", \"land surveyor\", \"Professional Land Surveyor\" or \"Provincial Land Surveyor\" or the initials \"B. C. L. S.\" or \"P. L. S.\" unless the person is a practising land surveyor."
+                        },
+                        {
+                            "@id": "d2e2621",
+                            "bcl:num": "4",
+                            "bcl:text": "A land surveyor whose name has been placed on a list of nonpractising land surveyors, on application by the land surveyor to the association, may use the designations or initials, the use of which is restricted by subsection (3), if the designation or initials are followed by the designation \"Not Practising\" or \"Retired\" or the abbreviation \"N.P.\" or \"Ret.\""
+                        },
+                        {
+                            "@id": "d2e2630",
+                            "bcl:num": "5",
+                            "bcl:text": "A person who contravenes subsection (1) or (3) commits an offence."
+                        },
+                        {
+                            "@id": "d2e2639",
+                            "bcl:num": "6",
+                            "bcl:text": "This section does not apply to a land surveying company."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2649",
+                    "bcl:marginalnote": "Land surveyors entitled to enter land",
+                    "bcl:num": "59.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2657",
+                            "bcl:num": "1",
+                            "bcl:text": "A practising land surveyor engaged in the practice of land surveying, or a person performing, for a practising land surveyor, duties in relation to the practice of land surveying, must be permitted to pass over any land without hindrance from any person."
+                        },
+                        {
+                            "@id": "d2e2666",
+                            "bcl:num": "2",
+                            "bcl:text": "On the request of an occupier of land or a person authorized by an occupier of land,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2675",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a practising land surveyor entering or on the land must show identification and proof that the land surveyor is registered with the association as a practising land surveyor, and"
+                                },
+                                {
+                                    "@id": "d2e2685",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a person entering or on the land and performing, for a practising land surveyor, duties in relation to the practice of land surveying must show identification and proof that the person is acting for a practising land surveyor."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2694",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsection (1) ceases to apply to a practising land surveyor, or to a person performing, for a practising land surveyor, duties in relation to the practice of land surveying, who fails or refuses to comply with subsection (2)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2705",
+                    "bcl:marginalnote": "Penalty for refusing access to land surveyor",
+                    "bcl:num": "59.2",
+                    "bcl:text": "A person commits an offence who",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e2716",
+                            "bcl:num": "a",
+                            "bcl:text": "refuses to permit a practising land surveyor engaged in the practice of land surveying, or a person performing, for a practising land surveyor, duties in relation to the practice of land surveying, to pass over any land, or"
+                        },
+                        {
+                            "@id": "d2e2725",
+                            "bcl:num": "b",
+                            "bcl:text": "interferes with a practising land surveyor engaged in the practice of land surveying or with a person performing, for a practising land surveyor, duties in relation to the practice of land surveying."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2735",
+                    "bcl:marginalnote": "Damage by land surveyor",
+                    "bcl:num": "59.3",
+                    "bcl:text": "If a practising land surveyor or a person performing, for a practising land surveyor, duties in relation to the practice of land surveying causes damage on land, a court of competent jurisdiction, on application of an owner or occupier of the land or another person injured, may order the land surveyor to pay compensation to the owner, occupier or other person for the owner's, occupier's or other person's damages."
+                },
+                {
+                    "@id": "d2e2747",
+                    "bcl:marginalnote": "Disciplinary powers",
+                    "bcl:num": "60",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2755",
+                            "bcl:num": "1",
+                            "bcl:text": "If the board determines that a member has breached or is in breach of a bylaw of the association or that a former member had, while a member, breached a bylaw of the association, the board may do one or more of the following by order:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2764",
+                                    "bcl:num": "a",
+                                    "bcl:text": "censure the member or former member;"
+                                },
+                                {
+                                    "@id": "d2e2773",
+                                    "bcl:num": "b",
+                                    "bcl:text": "suspend the member for a period, not longer than 6 months, that the board thinks fit;"
+                                },
+                                {
+                                    "@id": "d2e2783",
+                                    "bcl:num": "c",
+                                    "bcl:text": "fine the member or former member an amount not more than $5 000;"
+                                },
+                                {
+                                    "@id": "d2e2792",
+                                    "bcl:num": "d",
+                                    "bcl:text": "order the member to participate in a peer mentoring or educational program at the member's expense;"
+                                },
+                                {
+                                    "@id": "d2e2801",
+                                    "bcl:num": "e",
+                                    "bcl:text": "suspend the former member from the right to be reinstated as a member for a period, not longer than 6 months, that the board thinks fit and place conditions on the former member's right to be reinstated as a member, including the condition that the former member participate in a peer mentoring or educational program at the former member's expense."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2810",
+                            "bcl:num": "2",
+                            "bcl:text": "If the board determines that a member has been guilty of unprofessional conduct or that a former member, while a member, was guilty of unprofessional conduct, the board may do one or more of the following by order:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2819",
+                                    "bcl:num": "a",
+                                    "bcl:text": "censure the member or former member;"
+                                },
+                                {
+                                    "@id": "d2e2828",
+                                    "bcl:num": "b",
+                                    "bcl:text": "suspend the member for a period that the board thinks fit or expel the member;"
+                                },
+                                {
+                                    "@id": "d2e2838",
+                                    "bcl:num": "c",
+                                    "bcl:text": "fine the member or former member an amount not more than $10 000;"
+                                },
+                                {
+                                    "@id": "d2e2847",
+                                    "bcl:num": "d",
+                                    "bcl:text": "order the member to participate in a peer mentoring or educational program at the member's expense;"
+                                },
+                                {
+                                    "@id": "d2e2856",
+                                    "bcl:num": "e",
+                                    "bcl:text": "suspend the former member from the right to be reinstated as a member for a period that the board thinks fit and place conditions on the former member's right to be reinstated as a member, including the condition that the former member participate in a peer mentoring or educational program at the former member's expense;"
+                                },
+                                {
+                                    "@id": "d2e2865",
+                                    "bcl:num": "f",
+                                    "bcl:text": "prohibit the former member from applying to be reinstated as a member."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2874",
+                            "bcl:num": "3",
+                            "bcl:text": "Unprofessional conduct includes, among other things, falsification of documents and the negligent or improper performance of a professional duty."
+                        },
+                        {
+                            "@id": "d2e2883",
+                            "bcl:num": "4",
+                            "bcl:text": "The board may expel from membership, or suspend for a period it thinks fit, a member convicted of a criminal offence which, in the board's opinion, involves moral turpitude."
+                        },
+                        {
+                            "@id": "d2e2893",
+                            "bcl:num": "5",
+                            "bcl:text": "The board may order payment by a member whom it has found guilty of an offence, of the costs of any hearing relating to the offence, including the expenses of witnesses."
+                        },
+                        {
+                            "@id": "d2e2902",
+                            "bcl:num": "6",
+                            "bcl:text": "The amount of the costs ordered under subsection (5) must be ascertained and certified by the secretary."
+                        },
+                        {
+                            "@id": "d2e2911",
+                            "bcl:num": "7",
+                            "bcl:text": "The secretary must send a copy of a certificate made under subsection (6) to the offender."
+                        },
+                        {
+                            "@id": "d2e2920",
+                            "bcl:num": "8",
+                            "bcl:text": "Within 10 days of receiving a certificate under subsection (7), an offender may appeal to the board by notice in writing."
+                        },
+                        {
+                            "@id": "d2e2929",
+                            "bcl:num": "9",
+                            "bcl:text": "A decision of the board under subsection\u00a0(8) is subject to further appeal under section\u00a066."
+                        },
+                        {
+                            "@id": "d2e2938",
+                            "bcl:num": "10",
+                            "bcl:text": "The board may, by order made at any time, suspend an offending member until the member pays any costs which the board has ordered the member to pay."
+                        },
+                        {
+                            "@id": "d2e2948",
+                            "bcl:num": "11",
+                            "bcl:text": "The association may recover the costs as a debt by action in a court of competent jurisdiction."
+                        },
+                        {
+                            "@id": "d2e2957",
+                            "bcl:num": "12",
+                            "bcl:text": "The powers conferred by this section may be exercised against a member while the member is under suspension."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2967",
+                    "bcl:marginalnote": "Summons to appear",
+                    "bcl:num": "61",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2975",
+                            "bcl:num": "1",
+                            "bcl:text": "Before disciplining a member or former member, the board must summon the member or former member to appear before them by summons signed by the secretary, or, in the secretary's absence, by 2 members of the board, giving the member or former member reasonable notice and indicating with reasonable particularity the matters the member or former member will be called on to answer."
+                        },
+                        {
+                            "@id": "d2e2984",
+                            "bcl:num": "2",
+                            "bcl:text": "If a member or former member fails to appear as required by a summons, the board may proceed in the member's or former member's absence and make any order or decision it could have made if the member or former member were present."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2994",
+                    "bcl:marginalnote": "Summons to witnesses",
+                    "bcl:num": "62",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3002",
+                            "bcl:num": "1",
+                            "bcl:text": "By a summons issued in the same way as a summons under section\u00a061, the board may require",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3011",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the attendance of a witness at a hearing involving the conduct of a member or former member, and"
+                                },
+                                {
+                                    "@id": "d2e3020",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the production of any records."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3030",
+                            "bcl:num": "2",
+                            "bcl:text": "The board may examine witnesses under oath."
+                        },
+                        {
+                            "@id": "d2e3039",
+                            "bcl:num": "3",
+                            "bcl:text": "A summons issued by the board has the force of a subpoena issued out of the Supreme Court."
+                        },
+                        {
+                            "@id": "d2e3048",
+                            "bcl:num": "4",
+                            "bcl:text": "A witness who disobeys a summons issued by the board or refuses to be sworn or give evidence is liable, on application to the Supreme Court, to attachment, fine or other punishment the court thinks fit."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3058",
+                    "bcl:marginalnote": "Board may institute inquiry",
+                    "bcl:num": "63",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3066",
+                            "bcl:num": "1",
+                            "bcl:text": "The board has full power to inquire into a suspected breach of a bylaw or suspected unprofessional conduct by a member or former member, and, without any complaint having been made, may summon the member or former member to appear before the board for examination as to the matters specified in the summons."
+                        },
+                        {
+                            "@id": "d2e3075",
+                            "bcl:num": "2",
+                            "bcl:text": "On return of the summons or at an adjournment of the hearing, the board may examine the member or former member on oath."
+                        },
+                        {
+                            "@id": "d2e3084",
+                            "bcl:num": "3",
+                            "bcl:text": "If a member or former member is summoned under this section, the board may discipline the member or former member under section 60 if the member or former member",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3094",
+                                    "bcl:num": "a",
+                                    "bcl:text": "fails to appear before the board,"
+                                },
+                                {
+                                    "@id": "d2e3103",
+                                    "bcl:num": "b",
+                                    "bcl:text": "refuses to be sworn or to answer questions put to the member or former member to the board's satisfaction, or"
+                                },
+                                {
+                                    "@id": "d2e3112",
+                                    "bcl:num": "c",
+                                    "bcl:text": "is found by the board, on examination or on the evidence of witnesses, to have been guilty of breach of a bylaw or of unprofessional conduct."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3121",
+                            "bcl:num": "4",
+                            "bcl:text": "The powers conferred by this section may be exercised against a member or former member whether or not the member or former member is under suspension."
+                        },
+                        {
+                            "@id": "d2e3130",
+                            "bcl:num": "5",
+                            "bcl:text": "In proceedings under this section a member of the board is not disqualified merely because the board proceeded on its own motion or at the instance of a member of the board."
+                        },
+                        {
+                            "@id": "d2e3139",
+                            "bcl:num": "6",
+                            "bcl:text": "In proceedings under this section all members of the board, whether initiators of the proceedings or not, are entitled to sit and adjudicate at any hearing."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3150",
+                    "bcl:marginalnote": "Multiple offences",
+                    "bcl:num": "64",
+                    "bcl:text": "Any number of offences or of alleged or suspected offences may be dealt with at one hearing and disposed of in one order."
+                },
+                {
+                    "@id": "d2e3162",
+                    "bcl:marginalnote": "Entry of disciplinary action in register",
+                    "bcl:num": "65",
+                    "bcl:text": "If a member or former member is disciplined under section 60 (1) (b) or (e) or (2) (b), (e) or (f)",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e3173",
+                            "bcl:num": "a",
+                            "bcl:text": "the secretary must record the effect of the discipline order against the name of the member or former member in the register of members, and"
+                        },
+                        {
+                            "@id": "d2e3182",
+                            "bcl:num": "b",
+                            "bcl:text": "a notice of the discipline order must be published in the Gazette within 15 days of the making of the order."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3192",
+                    "bcl:marginalnote": "Right of appeal",
+                    "bcl:num": "66",
+                    "bcl:text": "An order or decision of the board under section\u00a034,\u00a060,\u00a061 or\u00a063 may be appealed to the Supreme Court by the member or former member affected."
+                },
+                {
+                    "@id": "d2e3204",
+                    "bcl:marginalnote": "Procedure on appeal",
+                    "bcl:num": "67",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3212",
+                            "bcl:num": "1",
+                            "bcl:text": "An appeal to the Supreme Court under section 66 must be made by service of a notice of appeal, containing the grounds of appeal, within 30 days from the date the appellant first had notice of the board's order or decision, or if notice of the order or decision is published in the Gazette, within 30\u00a0days of the publication."
+                        },
+                        {
+                            "@id": "d2e3221",
+                            "bcl:num": "2",
+                            "bcl:text": "The notice of appeal must be served on the board."
+                        },
+                        {
+                            "@id": "d2e3230",
+                            "bcl:num": "3",
+                            "bcl:text": "Within 10 days after service of notice of appeal, the appellant must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3240",
+                                    "bcl:num": "a",
+                                    "bcl:text": "set down the appeal for hearing as though it were a trial,"
+                                },
+                                {
+                                    "@id": "d2e3249",
+                                    "bcl:num": "b",
+                                    "bcl:text": "deposit a record of all proceedings before the board for the use of the court, and"
+                                },
+                                {
+                                    "@id": "d2e3258",
+                                    "bcl:num": "c",
+                                    "bcl:text": "provide a copy of the record to each respondent."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3268",
+                    "bcl:marginalnote": "Hearing of appeal",
+                    "bcl:num": "68",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3276",
+                            "bcl:num": "1",
+                            "bcl:text": "On the hearing of an appeal, the court must proceed on the record of the proceedings before the board, unless the court, for special reasons, directs further evidence to be received."
+                        },
+                        {
+                            "@id": "d2e3285",
+                            "bcl:num": "2",
+                            "bcl:text": "On the hearing of an appeal, the court may review the decision of the board on the facts and the law, and reverse or confirm all or part of it, or remit the proceedings to the board for a rehearing."
+                        },
+                        {
+                            "@id": "d2e3294",
+                            "bcl:num": "3",
+                            "bcl:text": "The court may reverse a decision only if it appears that substantial justice has not been done."
+                        },
+                        {
+                            "@id": "d2e3304",
+                            "bcl:num": "4",
+                            "bcl:text": "On the hearing of an appeal, the court has a discretion like that of the board and may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3313",
+                                    "bcl:num": "a",
+                                    "bcl:text": "make any order which the board should have made,"
+                                },
+                                {
+                                    "@id": "d2e3322",
+                                    "bcl:num": "b",
+                                    "bcl:text": "modify a penalty imposed, or"
+                                },
+                                {
+                                    "@id": "d2e3331",
+                                    "bcl:num": "c",
+                                    "bcl:text": "impose the penalty which the board should have imposed."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3340",
+                            "bcl:num": "5",
+                            "bcl:text": "Appeals must be heard in the City of Victoria or of Vancouver, unless otherwise agreed by the board and the parties concerned."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3350",
+                    "bcl:marginalnote": "Appeal only remedy",
+                    "bcl:num": "69",
+                    "bcl:text": "An order or decision of the board must not be quashed or reviewed by any means other than an appeal as provided in this Act."
+                },
+                {
+                    "@id": "d2e3363",
+                    "bcl:marginalnote": "Injunction",
+                    "bcl:num": "70",
+                    "bcl:text": "On application of the board and on being satisfied that there is reason to believe that there is or will be a contravention of this Act, the Supreme Court may grant an injunction restraining a person from continuing or committing the contravention, and, pending disposition of the action seeking the injunction, the court may grant an interim injunction."
+                },
+                {
+                    "@id": "d2e3375",
+                    "bcl:marginalnote": "Protection of members of board",
+                    "bcl:num": "71",
+                    "bcl:text": "An action may not be brought against the board or a member of it for anything done in good faith in pursuance or intended pursuance of this Act."
+                },
+                {
+                    "@id": "d2e3387",
+                    "bcl:marginalnote": "Records certified by secretary shall be evidence",
+                    "bcl:num": "72",
+                    "bcl:text": "Copies of records of the association certified under the signature of the secretary and the seal of the association are admissible in all courts in British Columbia as evidence of the original records."
+                },
+                {
+                    "@id": "d2e3399",
+                    "bcl:marginalnote": "Money recoverable belongs to the association",
+                    "bcl:num": "73",
+                    "bcl:text": "All fees, fines, penalties and costs receivable or recoverable under this Act, other than under section\u00a059, or a bylaw are the property of the association."
+                },
+                {
+                    "@id": "d2e3411",
+                    "bcl:marginalnote": {
+                        "in:doc": "Offence Act",
+                        "#text": "Application of"
+                    },
+                    "bcl:num": "74",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Section 5 of the  does not apply to this Act or to the bylaws of the association."
+                    }
+                },
+                {
+                    "@id": "d2e3428",
+                    "bcl:marginalnote": "Power to make rules for surveys",
+                    "bcl:num": "75",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3436",
+                            "bcl:num": "1",
+                            "bcl:text": "For the purposes of this Act and the following enactments, the association may make rules for surveys and plans, including plans in electronic format:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3445",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/00_04015_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Coal Act"
+                                        },
+                                        "#text": "section 24 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3457",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96245_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Act"
+                                        },
+                                        "#text": "section 73 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3470",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96247_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Survey Act"
+                                        },
+                                        "#text": "sections 12 (2) and 14 (1) of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3482",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "section 385 (5) of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3494",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/00_96292_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Mineral Tenure Act"
+                                        },
+                                        "#text": "section 64 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3506",
+                                    "bcl:num": "f",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96361_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Petroleum and Natural Gas Act"
+                                        },
+                                        "#text": "section 121 (3) of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3518",
+                                    "bcl:num": "g",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/08036_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Energy Resource Activities Act"
+                                        },
+                                        "#text": "section 112 (1) (g) of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3530",
+                                    "bcl:num": "h",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/98043_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Strata Property Act"
+                                        },
+                                        "#text": "sections 68 (4) and 244 (1) (e) of the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3543",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the association may do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3552",
+                                    "bcl:num": "a",
+                                    "bcl:text": "make rules for the design and specifications for permanent survey monuments or reference posts;"
+                                },
+                                {
+                                    "@id": "d2e3561",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for the purposes of a rule made under subsection (1), provide for the exemption of a particular survey from the application of rules made under subsection (1);"
+                                },
+                                {
+                                    "@id": "d2e3570",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make rules requiring a land surveyor to report damage to or destruction of a control monument to the Surveyor General;"
+                                },
+                                {
+                                    "@id": "d2e3579",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96245_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Act"
+                                        },
+                                        "#text": "for surveys under the , make rules allowing new posts to be set on existing lines without retracement in appropriate circumstances if certain conditions are met;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3591",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/98043_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Strata Property Act"
+                                        },
+                                        "#text": "make rules allowing modified posting of bare land strata lots for the purposes of the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3604",
+                            "bcl:num": "3",
+                            "bcl:text": "Rules made under subsections (1) and (2) do not have effect until approved by order of the Surveyor General."
+                        },
+                        {
+                            "@id": "d2e3613",
+                            "bcl:num": "4",
+                            "bcl:text": "The Surveyor General may recommend to the association that the association make a rule or amend a rule made under this section and, if the association fails to act on the recommendation within the time specified by the Surveyor General, the Surveyor General, by order, may amend the rules made by the association."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

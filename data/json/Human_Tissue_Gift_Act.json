@@ -1,0 +1,545 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96211_01",
+        "act:title": "Human Tissue Gift Act",
+        "act:chapter": "211",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "712470149/96211/tlc96211_f",
+            "act:tlc": "E3tlc96211"
+        },
+        "act:content": {
+            "bcl:section": {
+                "@id": "d2e21",
+                "bcl:marginalnote": "Definitions",
+                "bcl:num": "1",
+                "bcl:text": "In this Act:",
+                "bcl:definition": [
+                    {
+                        "@id": "d2e32",
+                        "bcl:text": {
+                            "in:term": "consent",
+                            "#text": "means a consent given under this Act;"
+                        }
+                    },
+                    {
+                        "@id": "d2e41",
+                        "bcl:text": {
+                            "in:term": "tissue",
+                            "#text": "includes an organ, but does not include skin, bone, blood, blood constituent or other tissue that is replaceable by natural processes of repair;"
+                        }
+                    },
+                    {
+                        "@id": "d2e51",
+                        "bcl:text": {
+                            "in:term": "transplant",
+                            "#text": "means the removal of tissue from a human body, whether living or dead, and its implantation in a living human body;"
+                        }
+                    },
+                    {
+                        "@id": "d2e60",
+                        "bcl:text": {
+                            "in:term": "writing",
+                            "#text": "for Part 2 includes a will and any other testamentary instrument, whether or not probate has been applied for or granted and whether or not the will or other testamentary instrument is valid."
+                        }
+                    }
+                ]
+            },
+            "bcl:part": [
+                {
+                    "@id": "d2e70",
+                    "bcl:num": "1",
+                    "bcl:text": "Gifts for Transplants While Donor Alive",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e79",
+                            "bcl:marginalnote": "Transplants under Act are lawful",
+                            "bcl:num": "2",
+                            "bcl:text": "A transplant from one living human body to another living human body may be done in accordance with this Act, but not otherwise."
+                        },
+                        {
+                            "@id": "d2e91",
+                            "bcl:marginalnote": "Consent for transplant",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e99",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who has reached age 19, is mentally competent to consent, and is able to make a free and informed decision, may sign a consent to the removal at once from the person's body of the tissue specified in the consent and its implantation in the body of another living person."
+                                },
+                                {
+                                    "@id": "d2e108",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Despite subsection (1), consent given by a person who had not reached age 19, was not mentally competent to consent, or was not able to make a free and informed decision is valid for this Act if the person who acted on it had no reason to believe that the person who gave it had not reached age 19, was not mentally competent to consent, and was not able to make a free and informed decision, as the case may be."
+                                },
+                                {
+                                    "@id": "d2e117",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Consent given under this section is full authority for a medical practitioner to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e127",
+                                            "bcl:num": "a",
+                                            "bcl:text": "make any examination necessary to assure medical acceptability of the tissue specified, and"
+                                        },
+                                        {
+                                            "@id": "d2e136",
+                                            "bcl:num": "b",
+                                            "bcl:text": "immediately remove that tissue from the body of the person who gave the consent."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e145",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If for any reason the tissue specified in the consent is not removed in the circumstances to which the consent relates, the consent is void."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e155",
+                    "bcl:num": "2",
+                    "bcl:text": "Gifts for Transplants When Donor Dies",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e165",
+                            "bcl:marginalnote": "Consent by person for use of body after death",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e173",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "A person who has reached age 19 may consent,",
+                                        "that the person's body or parts of it specified in the consent be used after the person's death for therapeutic purposes, medical education or scientific research."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e182",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in writing signed by the person at any time, or"
+                                        },
+                                        {
+                                            "@id": "d2e191",
+                                            "bcl:num": "b",
+                                            "bcl:text": "orally in the presence of at least 2 witnesses during the person's last illness,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e204",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Despite subsection (1), consent given by a person who had not reached age 19 is valid for this Act if the person who acted on it had no reason to believe that the person who gave it had not reached age 19."
+                                },
+                                {
+                                    "@id": "d2e213",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On the death of a person who has given a consent under this section, the consent is binding and is full authority for the use of the body or the removal and use of the specified parts for the purpose specified."
+                                },
+                                {
+                                    "@id": "d2e222",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Despite subsection (3), a person must not act on a consent given under this section if the person has reason to believe that it was subsequently withdrawn, unless the consent was contained in a valid will of the deceased."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e232",
+                            "bcl:marginalnote": "Consent by spouse or others for use of body after death",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e240",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "If a person of any age who has not given a consent under section\u00a04 dies, or in the opinion of a medical practitioner is incapable of giving a consent by reason of injury or disease and the person's death is imminent,",
+                                        "may consent,",
+                                        "to the body or the parts of it specified in the consent being used after death for therapeutic purposes, medical education or scientific research."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e249",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the person's spouse of any age,"
+                                        },
+                                        {
+                                            "@id": "d2e258",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if none or if the person's spouse is not readily available, any one of the person's children who has attained the age of majority,"
+                                        },
+                                        {
+                                            "@id": "d2e268",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if none or if none is readily available, any of the person's parents,"
+                                        },
+                                        {
+                                            "@id": "d2e277",
+                                            "bcl:num": "d",
+                                            "bcl:text": "if none or if none is readily available, any one of the person's siblings who has attained the age of majority,"
+                                        },
+                                        {
+                                            "@id": "d2e286",
+                                            "bcl:num": "e",
+                                            "bcl:text": "if none or if none is readily available, any other of the person's next of kin who has attained the age of majority, or"
+                                        },
+                                        {
+                                            "@id": "d2e295",
+                                            "bcl:num": "f",
+                                            "bcl:text": "if none or if none is readily available, the person lawfully in possession of the body other than, if the person died in hospital, the administrative head of the hospital,"
+                                        },
+                                        {
+                                            "@id": "d2e307",
+                                            "bcl:num": "g",
+                                            "bcl:text": "in writing signed by the spouse, relative or other person,"
+                                        },
+                                        {
+                                            "@id": "d2e317",
+                                            "bcl:num": "h",
+                                            "bcl:text": "orally by the spouse, relative or other person in the presence of at least 2 witnesses, or"
+                                        },
+                                        {
+                                            "@id": "d2e326",
+                                            "bcl:num": "i",
+                                            "bcl:text": "by the telegraphic, recorded telephonic or other recorded message of the spouse, relative or other person,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e338",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person must not give a consent under this section if the person has reason to believe that the person who died or whose death is imminent would have objected to it."
+                                },
+                                {
+                                    "@id": "d2e347",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On the death of a person for whom a consent was given under this section, the consent is binding and is, subject to section 6, full authority for the use of the body or for the removal and use of the specified parts for the purpose specified."
+                                },
+                                {
+                                    "@id": "d2e356",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Despite subsection (3), a person must not act on a consent given under this section if the person has actual knowledge of an objection to it by the person for whom the consent was given or by a person of the same or closer relationship to the person for whom the consent was given than the person who gave the consent."
+                                },
+                                {
+                                    "@id": "d2e366",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "in:term": "person lawfully in possession of the body",
+                                        "#text": "In subsection (1),  does not include"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e378",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/07015_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Coroners Act"
+                                                },
+                                                "#text": "the supervising coroner or a coroner in possession of the body under the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e390",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96383_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Public Guardian and Trustee Act"
+                                                },
+                                                "#text": "the Public Guardian and Trustee in possession of the body for its burial under the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e402",
+                                            "bcl:num": "c",
+                                            "bcl:text": "an embalmer or funeral director in possession of the body for its burial, cremation or other disposition, or"
+                                        },
+                                        {
+                                            "@id": "d2e411",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the superintendent of a crematorium in possession of the body for its cremation."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e421",
+                            "bcl:marginalnote": "Coroner's direction",
+                            "bcl:num": "6",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/07015_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Coroners Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/07015_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Coroners Act"
+                                    }
+                                ],
+                                "#text": "If, in the opinion of a medical practitioner, the death of a person is imminent by reason of injury or disease and the medical practitioner has reason to believe that section 2, 3 or 4 of the  may apply when death does occur and a consent under this Part has been obtained for a post mortem transplant of tissue from the body, a coroner having jurisdiction, even though that death has not yet occurred, may give directions the medical practitioner thinks proper for the removal of that tissue after the death of the person, and every direction given has the same effect as if it had been made after death under section 13 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e439",
+                            "bcl:marginalnote": "Determination of death",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e447",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For a post mortem transplant, the fact of death must be determined by at least 2 medical practitioners in accordance with accepted medical practice."
+                                },
+                                {
+                                    "@id": "d2e456",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A medical practitioner who has had any association with the proposed recipient of the post mortem transplant that might influence the medical practitioner's judgment must not take any part in the determination of the fact of death of the donor."
+                                },
+                                {
+                                    "@id": "d2e465",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A medical practitioner who took any part in the determination of the fact of death of the donor must not participate in any way in the transplant procedures."
+                                },
+                                {
+                                    "@id": "d2e475",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Nothing in this section in any way applies to a medical practitioner in the removal of eyes for cornea transplants."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e485",
+                            "bcl:marginalnote": "If specified use fails",
+                            "bcl:num": "8",
+                            "bcl:text": "If a gift under this part cannot for any reason be used for any of the purposes specified in the consent, the subject matter of the gift and the body to which it belongs must be dealt with and disposed of as if no consent had been given."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e497",
+                    "bcl:num": "3",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e507",
+                            "bcl:marginalnote": "Civil liability",
+                            "bcl:num": "9",
+                            "bcl:text": "No action or other proceeding for damages lies against a person for an act done in good faith and without negligence in the exercise or intended exercise of any authority conferred by this Act."
+                        },
+                        {
+                            "@id": "d2e519",
+                            "bcl:marginalnote": "Sale of tissue prohibited",
+                            "bcl:num": "10",
+                            "bcl:text": "A person must not buy, sell or otherwise deal in, directly or indirectly, for a valuable consideration, any tissue for a transplant, or any body or parts other than blood or a blood constituent, for therapeutic purposes, medical education or scientific research."
+                        },
+                        {
+                            "@id": "d2e531",
+                            "bcl:marginalnote": "Dealing contrary to public policy",
+                            "bcl:num": "11",
+                            "bcl:text": "Any dealing prohibited by section\u00a010 is invalid as contrary to public policy."
+                        },
+                        {
+                            "@id": "d2e543",
+                            "bcl:marginalnote": "Disclosure of information",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e551",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "Except if legally required, a person must not disclose or give to any other person any information or document by which the identity of any person",
+                                        "may become known publicly."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e560",
+                                            "bcl:num": "a",
+                                            "bcl:text": "who has given or refused to give a consent,"
+                                        },
+                                        {
+                                            "@id": "d2e569",
+                                            "bcl:num": "b",
+                                            "bcl:text": "with respect to whom a consent has been given, or"
+                                        },
+                                        {
+                                            "@id": "d2e579",
+                                            "bcl:num": "c",
+                                            "bcl:text": "into whose body tissue has been, is being, or may be transplanted,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e591",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the information or document disclosed or given pertains only to the person who disclosed or gave the information or document, subsection (1) does not apply."
+                                },
+                                {
+                                    "@id": "d2e600",
+                                    "bcl:num": "3",
+                                    "bcl:text": [
+                                        "Despite subsection (1), if",
+                                        "the identity may be published by any person not sooner than one month after the date of the transplant."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e609",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a recipient of body tissue consents in writing to the publication of the recipient's identity,"
+                                        },
+                                        {
+                                            "@id": "d2e618",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the case of a recipient who is under the age of majority, the recipient's parent or guardian consents in writing to the publication of the recipient's identity,"
+                                        },
+                                        {
+                                            "@id": "d2e628",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a donor of body tissue consents in writing to the publication of the donor's identity, or"
+                                        },
+                                        {
+                                            "@id": "d2e637",
+                                            "bcl:num": "d",
+                                            "bcl:text": "in the case of a donor who is dead or under the age of majority, any one of the persons referred to in section 5 (1) (a) to (d) consents to the publication of the donor's identity,"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e650",
+                            "bcl:marginalnote": "Application of other Acts",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e658",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/07015_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Coroners Act"
+                                        },
+                                        "#text": "Except as provided in section 6, nothing in this Act affects the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e670",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96181_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Health Care (Consent) and Care Facility (Admission) Act"
+                                        },
+                                        "#text": "The  does not affect anything in this Act."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e683",
+                            "bcl:marginalnote": "Offence",
+                            "bcl:num": "14",
+                            "bcl:text": "A person who knowingly contravenes this Act commits an offence and is liable, on conviction, to a fine of not more than $1\u00a0000, or to imprisonment for a term of not more than 6 months, or to both a fine and imprisonment."
+                        },
+                        {
+                            "@id": "d2e696",
+                            "bcl:marginalnote": "Regulations",
+                            "bcl:num": "15",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e704",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may make regulations that establish standards, practices, protocols or procedures",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e713",
+                                            "bcl:num": "a",
+                                            "bcl:text": "requiring notification of an agency described by subsection (2) (d), patients or relatives of patients so that consideration can be given in a timely manner to the giving of a consent in appropriate circumstances,"
+                                        },
+                                        {
+                                            "@id": "d2e722",
+                                            "bcl:num": "b",
+                                            "bcl:text": "facilitating the giving of consents if patients or their relatives wish these consents to be given, or"
+                                        },
+                                        {
+                                            "@id": "d2e732",
+                                            "bcl:num": "c",
+                                            "bcl:text": "expediting the effective use of consents."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e741",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Regulations under subsection (1) may be made to apply to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e750",
+                                            "bcl:num": "a",
+                                            "bcl:text": "health care professionals specified in those regulations,"
+                                        },
+                                        {
+                                            "@id": "d2e759",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96200_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Hospital Act"
+                                                },
+                                                "#text": "a hospital as defined in section 1 of the  or a licensed hospital as defined in section\u00a05 of that Act,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e771",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/02075_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Community Care and Assisted Living Act"
+                                                },
+                                                "#text": "a community care facility as defined in section 1 of the , or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e783",
+                                            "bcl:num": "d",
+                                            "bcl:text": "an agency specified in those regulations that facilitates and coordinates transplants in British Columbia."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,578 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_09032_01",
+        "act:title": "Assistance to Shelter Act",
+        "act:chapter": "32",
+        "act:yearenacted": "2009",
+        "act:assentedto": "November 26, 2009",
+        "act:currency": {
+            "act:tlcDirPath": "524872423/09032/tlc09032_f",
+            "act:tlc": "E2tlc09032"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e18",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e29",
+                            "bcl:text": {
+                                "in:term": "BC Housing",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96307_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Ministry of Lands, Parks and\n            Housing\u00a0Act"
+                                },
+                                "#text": "means the British Columbia Housing Management Commission as\n          continued under section 10 (1) (b) of the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e41",
+                            "bcl:text": {
+                                "in:term": "community representative",
+                                "#text": "means the person designated in an Extreme\n          Weather Response Plan to issue or cancel extreme weather alerts;"
+                            }
+                        },
+                        {
+                            "@id": "d2e51",
+                            "bcl:text": {
+                                "in:term": "emergency shelter",
+                                "#text": "means a building or a portion of a building that is\n          used to provide temporary accommodation free of charge to persons to meet the persons'\n          immediate basic needs for shelter;"
+                            }
+                        },
+                        {
+                            "@id": "d2e60",
+                            "bcl:text": {
+                                "in:term": "extreme weather alert",
+                                "#text": "means an extreme weather alert under section 2 or\n            3;"
+                            }
+                        },
+                        {
+                            "@id": "d2e69",
+                            "bcl:text": {
+                                "in:term": "extreme weather conditions",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e78",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in relation to a geographical area to which an Extreme Weather Response Plan\n            applies,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e87",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the weather conditions, but not other factors, set out in the description of\n              extreme weather in the Extreme Weather Response Plan, or"
+                                        },
+                                        {
+                                            "@id": "d2e96",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "any prescribed conditions that are not addressed or identified in the Extreme\n              Weather Response Plan, or"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e106",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in relation to a geographical area to which no Extreme Weather Response Plan\n            applies, the prescribed conditions;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e115",
+                            "bcl:text": {
+                                "in:term": "Extreme Weather Response Plan",
+                                "#text": "means a current plan, filed with BC\n          Housing, of a person who has entered into an agreement with BC Housing to participate in\n          BC\u00a0Housing's emergency shelter program, which plan includes, without limitation, the\n          following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e124",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a description of the geographical area to which the plan applies;"
+                                },
+                                {
+                                    "@id": "d2e133",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a description of weather conditions that are the basis for issuing an extreme\n            weather alert;"
+                                },
+                                {
+                                    "@id": "d2e142",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a designation of a community representative;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e151",
+                            "bcl:text": {
+                                "in:term": "person at risk",
+                                "#text": "means a person assessed to be a person at risk under\n            section\n            5;"
+                            }
+                        },
+                        {
+                            "@id": "d2e161",
+                            "bcl:text": {
+                                "in:term": "police force",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e170",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96367_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Police\n              Act"
+                                        },
+                                        "#text": "the provincial police force within the meaning of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e182",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96367_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Police\n              Act"
+                                        },
+                                        "#text": "a municipal police department within the meaning of the , and"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e194",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96367_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Police Act"
+                                        },
+                                        "#text": "any prescribed designated policing unit that has been prescribed by the minister\n            responsible for the  as a police force under\n            that Act;"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e206",
+                            "bcl:text": {
+                                "in:term": "police officer",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96367_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Police\n            Act"
+                                },
+                                "#text": "means a person who, under the ,"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e218",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is a provincial constable or municipal constable or has the powers of a\n            provincial constable or municipal constable, or"
+                                },
+                                {
+                                    "@id": "d2e228",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is a constable other than a constable referred to in paragraph (a) and is within\n            a class of constables prescribed under section 8 (2) (c) of this\n            Act."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e238",
+                    "bcl:marginalnote": "Extreme weather alert by community representative",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e246",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "extreme weather conditions",
+                                "#text": "In this section,  has the meaning\n          under paragraph\u00a0(a)\u00a0(i) of the definition of \"extreme weather conditions\" in section\n          1."
+                            }
+                        },
+                        {
+                            "@id": "d2e258",
+                            "bcl:num": "2",
+                            "bcl:text": "A community representative designated for the geographical area to which an\n          Extreme Weather Response Plan applies may do all of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e267",
+                                    "bcl:num": "a",
+                                    "bcl:text": "determine when extreme weather conditions exist;"
+                                },
+                                {
+                                    "@id": "d2e277",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if, in the opinion of the community representative, extreme weather conditions\n            exist, issue an extreme weather alert in the prescribed manner;"
+                                },
+                                {
+                                    "@id": "d2e286",
+                                    "bcl:num": "c",
+                                    "bcl:text": "immediately after issuing an extreme weather alert, notify, in the prescribed\n            manner, the following that an extreme weather alert has been issued:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e295",
+                                            "bcl:num": "i",
+                                            "bcl:text": "all of the police forces in the geographical area to which the Extreme Weather\n              Response Plan applies;"
+                                        },
+                                        {
+                                            "@id": "d2e304",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the minister;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e313",
+                                    "bcl:num": "d",
+                                    "bcl:text": "determine when extreme weather conditions no longer exist;"
+                                },
+                                {
+                                    "@id": "d2e322",
+                                    "bcl:num": "e",
+                                    "bcl:text": "if, in the opinion of the community representative, extreme weather conditions\n            no longer exist, cancel the extreme weather alert in the prescribed manner;"
+                                },
+                                {
+                                    "@id": "d2e332",
+                                    "bcl:num": "f",
+                                    "bcl:text": "immediately after cancelling an extreme weather alert, notify, in the prescribed\n            manner, the following that an extreme weather alert has been cancelled:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e341",
+                                            "bcl:num": "i",
+                                            "bcl:text": "all of the police forces in the geographical area to which the Extreme Weather\n              Response Plan applies;"
+                                        },
+                                        {
+                                            "@id": "d2e350",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the minister."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e359",
+                            "bcl:num": "3",
+                            "bcl:text": "The minister may cancel, in the prescribed manner, an extreme weather alert issued\n          under this section if the community representative does not cancel the extreme weather\n          alert under subsection (2) and, in the opinion of the minister, extreme weather\n          conditions no longer exist."
+                        },
+                        {
+                            "@id": "d2e368",
+                            "bcl:num": "4",
+                            "bcl:text": "If the minister cancels an extreme weather alert under subsection (3),\n          the minister must immediately notify, in the prescribed manner, all of the police forces\n          in the geographical area to which the Extreme Weather Response Plan applies that the\n          extreme weather alert has been cancelled."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e378",
+                    "bcl:marginalnote": "Extreme weather alert by minister",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e386",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister may issue an extreme weather alert in the prescribed manner for a\n          geographical area if, in the opinion of the minister,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e395",
+                                    "bcl:num": "a",
+                                    "bcl:text": "extreme weather conditions exist in the geographical area and no Extreme Weather\n            Response Plan applies to the geographical area,"
+                                },
+                                {
+                                    "@id": "d2e404",
+                                    "bcl:num": "b",
+                                    "bcl:text": "extreme weather conditions exist in the geographical area that are not addressed\n            or identified in the Extreme Weather Response Plan that applies to the geographical\n            area, or"
+                                },
+                                {
+                                    "@id": "d2e414",
+                                    "bcl:num": "c",
+                                    "bcl:text": "extreme weather conditions as described in an Extreme Weather Response Plan\n            exist in the geographical area, but the community representative has not issued an\n            extreme weather alert under section 2."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e423",
+                            "bcl:num": "2",
+                            "bcl:text": "Immediately after issuing an extreme weather alert under subsection (1),\n          the minister must notify, in the prescribed manner, all of the police forces in the\n          geographical area to which the extreme weather alert applies that the minister has issued\n          an extreme weather alert."
+                        },
+                        {
+                            "@id": "d2e432",
+                            "bcl:num": "3",
+                            "bcl:text": "If, in the opinion of the minister, extreme weather conditions no longer exist in\n          a geographical area with respect to which the minister has issued an extreme weather alert\n          under subsection\n            (1), the minister must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e441",
+                                    "bcl:num": "a",
+                                    "bcl:text": "cancel, in the prescribed manner, the extreme weather alert for that\n            geographical area, and"
+                                },
+                                {
+                                    "@id": "d2e450",
+                                    "bcl:num": "b",
+                                    "bcl:text": "immediately after cancelling the extreme weather alert, notify, in the\n            prescribed manner, all of the police forces in the geographical area to which the\n            extreme weather alert applied that the minister has cancelled the extreme weather\n            alert."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e460",
+                    "bcl:marginalnote": "Delegation by minister",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e468",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister may delegate the minister's powers and duties under sections\n            2\n          and\u00a03 to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e477",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an assistant deputy minister, or"
+                                },
+                                {
+                                    "@id": "d2e486",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the chief executive officer of BC Housing."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e496",
+                            "bcl:num": "2",
+                            "bcl:text": "A delegation of the powers and duties of the minister under subsection (1)\n          must be in writing and may include any limits or conditions the minister considers\n          advisable."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e506",
+                    "bcl:marginalnote": "Assessment if person is person at risk",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e514",
+                            "bcl:num": "1",
+                            "bcl:text": "If an extreme weather alert has been issued under section 2 or 3 and is in\n          effect, a police officer may assess whether a person is a person at risk."
+                        },
+                        {
+                            "@id": "d2e523",
+                            "bcl:num": "2",
+                            "bcl:text": "In an assessment under subsection (1), a police officer must consider whether\n          all of the following apply:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e532",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person is in the geographical area to which the extreme weather alert\n            applies;"
+                                },
+                                {
+                                    "@id": "d2e542",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the person is, or reasonably appears to be, 19 years of age or older;"
+                                },
+                                {
+                                    "@id": "d2e551",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the person, in the opinion of the police officer, is suffering physical harm or\n            is at risk of suffering physical harm because of the extreme weather\n            conditions;"
+                                },
+                                {
+                                    "@id": "d2e560",
+                                    "bcl:num": "d",
+                                    "bcl:text": "any other prescribed considerations."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e571",
+                    "bcl:marginalnote": "Request to go to emergency shelter or accommodation",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e579",
+                            "bcl:num": "1",
+                            "bcl:text": "If a police officer has made an assessment under section 5 that a person is a person\n          at risk, the police officer may request the person at risk to choose to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e588",
+                                    "bcl:num": "a",
+                                    "bcl:text": "accompany the police officer to an emergency shelter, or"
+                                },
+                                {
+                                    "@id": "d2e597",
+                                    "bcl:num": "b",
+                                    "bcl:text": "go unaccompanied to",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e607",
+                                            "bcl:num": "i",
+                                            "bcl:text": "an emergency shelter, or"
+                                        },
+                                        {
+                                            "@id": "d2e616",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "any other accommodation that would protect the person at risk from the extreme\n              weather conditions."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e625",
+                            "bcl:num": "2",
+                            "bcl:text": "For purposes of subsection (1) (b) (ii), the accommodation must be\n          accommodation",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e634",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to which the person at risk can secure entry,"
+                                },
+                                {
+                                    "@id": "d2e643",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in which the person at risk is entitled or permitted to reside,"
+                                },
+                                {
+                                    "@id": "d2e652",
+                                    "bcl:num": "c",
+                                    "bcl:text": "that is a structure, vehicle or vessel primarily designed to be used as living\n            quarters and provides protection from physical harm or risk of physical harm due to\n            extreme weather conditions, and"
+                                },
+                                {
+                                    "@id": "d2e662",
+                                    "bcl:num": "d",
+                                    "bcl:text": "that meets any other prescribed conditions."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e672",
+                    "bcl:marginalnote": "Transport to emergency shelter",
+                    "bcl:num": "7",
+                    "bcl:text": "If a person at risk refuses to comply with or fails to respond to the police\n        officer's request under section 6, the police officer, using reasonable force if\n        necessary, may transport the person at risk to an emergency shelter."
+                },
+                {
+                    "@id": "d2e684",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e692",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041\n          of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e704",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting this section, the Lieutenant Governor in Council may make\n          regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e713",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing conditions for the purposes of the definition of \"extreme weather\n            conditions\";"
+                                },
+                                {
+                                    "@id": "d2e723",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prescribing designated policing units for the purposes of the definition of\n            \"police force\";"
+                                },
+                                {
+                                    "@id": "d2e732",
+                                    "bcl:num": "c",
+                                    "bcl:text": "prescribing one or more classes of constables for the purposes of the definition\n            of \"police officer\";"
+                                },
+                                {
+                                    "@id": "d2e741",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting the manner of issuing and cancelling extreme weather\n            alerts;"
+                                },
+                                {
+                                    "@id": "d2e750",
+                                    "bcl:num": "e",
+                                    "bcl:text": "respecting the manner of notifications regarding extreme weather\n            alerts;"
+                                },
+                                {
+                                    "@id": "d2e759",
+                                    "bcl:num": "f",
+                                    "bcl:text": "prescribing geographical areas respecting the issue and cancellation of extreme\n            weather alerts;"
+                                },
+                                {
+                                    "@id": "d2e768",
+                                    "bcl:num": "g",
+                                    "bcl:text": "prescribing additional considerations for a police officer when making an\n            assessment under section 5 (2) (d);"
+                                },
+                                {
+                                    "@id": "d2e778",
+                                    "bcl:num": "h",
+                                    "bcl:text": "prescribing additional conditions under section 6 (2) (d);"
+                                },
+                                {
+                                    "@id": "d2e787",
+                                    "bcl:num": "i",
+                                    "bcl:text": "defining any expression that is used but not defined in this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e796",
+                            "bcl:num": "3",
+                            "bcl:text": "A regulation under this Act may do any or all of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e805",
+                                    "bcl:num": "a",
+                                    "bcl:text": "delegate a matter to a person;"
+                                },
+                                {
+                                    "@id": "d2e814",
+                                    "bcl:num": "b",
+                                    "bcl:text": "confer a discretion on a person;"
+                                },
+                                {
+                                    "@id": "d2e823",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make different regulations in relation to different geographical areas, extreme\n            weather conditions, persons, things or circumstances, or different classes of\n            geographical areas, extreme weather conditions, persons, things or\n            circumstances."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e833",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "9",
+                    "bcl:text": "This Act comes into force on the date of Royal Assent."
+                }
+            ]
+        }
+    }
+}

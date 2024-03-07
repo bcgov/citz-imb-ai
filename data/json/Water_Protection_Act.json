@@ -1,0 +1,950 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96484_01",
+        "act:title": "Water Protection Act",
+        "act:chapter": "484",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "901199259/96484/tlc96484_f",
+            "act:tlc": "E3tlc96484"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions and interpretation",
+                    "bcl:num": "1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e23",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e32",
+                                    "bcl:text": {
+                                        "in:term": "large scale project",
+                                        "in:sup": "3",
+                                        "#text": "means a project to divert a peak instantaneous flow of 10\u00a0m or more a second of water, but does not include a project"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e44",
+                                            "bcl:num": "a",
+                                            "bcl:text": "that, on June 20, 1995, is complete or in operation, or"
+                                        },
+                                        {
+                                            "@id": "d2e54",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for which, on June 20, 1995,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e63",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "site preparation has begun, or"
+                                                },
+                                                {
+                                                    "@id": "d2e72",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the fabrication, construction, installation or supply of buildings, equipment, machinery or other facilities has begun;"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e90",
+                                    "bcl:text": {
+                                        "in:term": "major watershed",
+                                        "#text": "means any of the following 9 regions:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e99",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the Fraser Watershed, comprising the area that drains into the Fraser River and its tributaries, and includes the area inside and outside the boundaries of the Metro Vancouver Regional District that is drained by streams and their tributaries contained in whole or in part within the boundaries of the Metro Vancouver Regional District;"
+                                        },
+                                        {
+                                            "@id": "d2e109",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the Mackenzie Watershed, comprising the area that drains into the Mackenzie River and its tributaries;"
+                                        },
+                                        {
+                                            "@id": "d2e118",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the Columbia Watershed, comprising the area that drains into the Columbia River and its tributaries;"
+                                        },
+                                        {
+                                            "@id": "d2e127",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the Skeena Watershed, comprising the area that drains into the Skeena River and its tributaries;"
+                                        },
+                                        {
+                                            "@id": "d2e136",
+                                            "bcl:num": "e",
+                                            "bcl:text": "the Nass Watershed, comprising the area that drains into the Nass River and its tributaries;"
+                                        },
+                                        {
+                                            "@id": "d2e145",
+                                            "bcl:num": "f",
+                                            "bcl:text": "the Stikine Watershed, comprising the area that drains into the Stikine River and its tributaries;"
+                                        },
+                                        {
+                                            "@id": "d2e154",
+                                            "bcl:num": "g",
+                                            "bcl:text": "the Taku Watershed, comprising the area that drains into the Taku River and its tributaries;"
+                                        },
+                                        {
+                                            "@id": "d2e164",
+                                            "bcl:num": "h",
+                                            "bcl:text": "the Yukon Watershed, comprising the area that drains into the Yukon River and its tributaries;"
+                                        },
+                                        {
+                                            "@id": "d2e173",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the Coastal Watershed, comprising the rest of British Columbia;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e182",
+                                    "bcl:text": {
+                                        "in:term": "officer",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e185",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/14015",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Water Sustainability Act"
+                                                },
+                                                "#text": "an officer as defined in section 1 (1) of the , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e198",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96238_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Interpretation Act"
+                                                },
+                                                "#text": "a peace officer described in paragraph (c) of the definition of \"peace officer\" in section 29 of the ;"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e194",
+                                    "bcl:text": {
+                                        "in:term": "register",
+                                        "#text": "means the register maintained under section 9;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e203",
+                                    "bcl:text": {
+                                        "in:term": "registered licence",
+                                        "#text": "means any of the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e215",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/96483_01",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Water Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/14015",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Water Sustainability Act"
+                                                    }
+                                                ],
+                                                "#text": "the following licences issued under the  and any licence issued under that Act or the  in full or partial substitution of the rights and obligations under them:"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e254",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "licence no. CL64737;"
+                                                },
+                                                {
+                                                    "@id": "d2e252",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "licence no. FL118172;"
+                                                },
+                                                {
+                                                    "@id": "d2e232",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "licence no. C108095;"
+                                                },
+                                                {
+                                                    "@id": "d2e752",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "a licence in respect of which a person is registered under section 11 of this Act;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e228",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/24022_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Greater Vancouver Water District Act"
+                                                },
+                                                "#text": "the agreement dated August 28, 1987 entered into under the  by the Greater Vancouver Water District to sell and supply water to Point Roberts Water District No. 4;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e240",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/24022_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Greater Vancouver Water District Act"
+                                                },
+                                                "#text": "any agreement or agreements entered into under the  by the Greater Vancouver Water District in full or partial substitution for the agreement referred to in paragraph (b), if"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e152",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the substituted agreement or agreements restrict the water sold and supplied for utilization only by Point Roberts Water District No. 4 for direct distribution to the inhabitants and businesses resident in Point Roberts, and"
+                                                },
+                                                {
+                                                    "@id": "d2e261",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "in:sup": "3",
+                                                        "#text": "the net maximum quantity of bulk water that may be supplied in the aggregate under the agreement or agreements, including the agreement referred to in paragraph (b), that are in effect at any time does not exceed 3 182.2 m a day;"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e329",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "in:em": "[transition \u2014 unlicensed registrants]",
+                                                "#text": "a licence issued under section 25  of this Act;"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e342",
+                                    "bcl:text": {
+                                        "in:term": "registrant",
+                                        "#text": "means the holder of a registered licence."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e282",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "Unless a contrary intention appears, words and expressions used in this Act have the same meaning as in the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e295",
+                            "bcl:num": "3",
+                            "bcl:text": "If doubt exists as to which watershed contains all or part of a stream or aquifer,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e304",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the comptroller may resolve the doubt by an order specifying a watershed, and"
+                                },
+                                {
+                                    "@id": "d2e313",
+                                    "bcl:num": "b",
+                                    "bcl:text": "unless the order is revoked under subsection (4), the stream or aquifer or part of a stream or aquifer that was the subject of the order is deemed to be in the specified watershed."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e322",
+                            "bcl:num": "4",
+                            "bcl:text": "The comptroller may revoke an order made under subsection (3) on the basis of satisfactory evidence resolving the doubt that existed at the time the order was made."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e332",
+                    "bcl:marginalnote": "Purpose",
+                    "bcl:num": "2",
+                    "bcl:text": "The purpose of this Act is to foster sustainable use of British Columbia's water resources in continuation of the objectives of conserving and protecting the environment."
+                },
+                {
+                    "@id": "d2e344",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "3",
+                    "bcl:text": "[Repealed 2014-15-205.]"
+                },
+                {
+                    "@id": "d2e377",
+                    "bcl:marginalnote": "B.C. water removal restriction",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e385",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "Except for a registered licence, no authorization, change approval or permit under the  or a former Act, whether issued before, on or after the date this section comes into force, confers any right"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e397",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to drill for, divert or use water for removal from British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e406",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to dispose of or sell water to a person for removal from British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e416",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to convey or transport water for removal from British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e425",
+                                    "bcl:num": "d",
+                                    "bcl:text": "to remove water from British Columbia, or"
+                                },
+                                {
+                                    "@id": "d2e434",
+                                    "bcl:num": "e",
+                                    "bcl:text": "of property in respect of water removed or intended to be removed from British Columbia."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e443",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who, in British Columbia, diverts unrecorded water does not have, and does not by diverting the water acquire, any of the rights described in subsection (1) (a) to (e)."
+                        },
+                        {
+                            "@id": "d2e452",
+                            "bcl:num": "3",
+                            "bcl:text": "Despite any other enactment, a person who acquires water originating in British Columbia from another person, whether directly or indirectly, does not, by that acquisition, acquire any of the rights described in subsection (1) (a) to (e)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e462",
+                    "bcl:marginalnote": "Prohibition against B.C. water removal",
+                    "bcl:num": "5",
+                    "bcl:text": "A person must not remove water from British Columbia unless the person",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e473",
+                            "bcl:num": "a",
+                            "bcl:text": "is a registrant under a registered licence that remains in effect and complies with the registered licence,"
+                        },
+                        {
+                            "@id": "d2e482",
+                            "bcl:num": "b",
+                            "bcl:text": "[Repealed 2014-15-207.]"
+                        },
+                        {
+                            "@id": "d2e492",
+                            "bcl:num": "c",
+                            "bcl:text": "removes the water in containers of 20 litres capacity or less, of water that has been packaged in British Columbia, or"
+                        },
+                        {
+                            "@id": "d2e501",
+                            "bcl:num": "d",
+                            "bcl:text": "obtained the water outside British Columbia and, at the time of the removal, is in possession of evidence satisfactory to the comptroller to that effect."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e512",
+                    "bcl:marginalnote": "Prohibition against large scale transfers between major watersheds",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e520",
+                            "bcl:num": "1",
+                            "bcl:text": "A person must not construct or operate a large scale project capable of transferring water from one major watershed to another major watershed."
+                        },
+                        {
+                            "@id": "d2e529",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "in:sup": "3",
+                                "#text": "A person must not modify a project capable of diverting water if the modification results in, or if completed would result in, the project having the capability of transferring water at a peak instantaneous flow of 10\u00a0m or more a second from one major watershed to another major watershed."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e542",
+                    "bcl:marginalnote": "No further authorizations for B.C. water removal",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e550",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "Despite the  and the regulations under that Act, but subject to subsection (2), the comptroller or a water manager must not issue an authorization, change approval or permit that allows a person to"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e562",
+                                    "bcl:num": "a",
+                                    "bcl:text": "remove water from British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e571",
+                                    "bcl:num": "b",
+                                    "bcl:text": "divert water for removal to an area outside British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e581",
+                                    "bcl:num": "c",
+                                    "bcl:text": "construct or operate a large scale project capable of transferring water from one major watershed to another major watershed, or"
+                                },
+                                {
+                                    "@id": "d2e590",
+                                    "bcl:num": "d",
+                                    "bcl:text": "modify a project contrary to section 6 (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e599",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not apply to the issuance of a licence under",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e681",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "in:em": "[transition \u2014 unlicensed registrants]",
+                                        "#text": "section 25  of this Act, or"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e693",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/14015",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Water Sustainability Act"
+                                        },
+                                        "#text": "the  in substitution for a registered licence."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e611",
+                            "bcl:num": "3",
+                            "bcl:text": "An authorization, change approval or permit issued contrary to subsection (1) has no effect."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e621",
+                    "bcl:marginalnote": "Exception for water to be used in transit",
+                    "bcl:num": "8",
+                    "bcl:text": "Nothing in this Act prohibits the removal of water from British Columbia in the ordinary course of carrying the water in vehicles, vessels or aircraft for the use of persons or animals while the persons or animals, as the case may be, are being transported in the vehicles, vessels or aircraft."
+                },
+                {
+                    "@id": "d2e633",
+                    "bcl:marginalnote": "Register for continuing water removal",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e744",
+                            "bcl:num": "1",
+                            "bcl:text": "The comptroller must maintain for the purposes of this Act a register and must record in the register",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e644",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the name and address of each registrant,"
+                                },
+                                {
+                                    "@id": "d2e653",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for each registrant, a copy of the relevant registered licence, and"
+                                },
+                                {
+                                    "@id": "d2e663",
+                                    "bcl:num": "c",
+                                    "bcl:text": "other information that the Lieutenant Governor in Council may prescribe."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e780",
+                            "bcl:num": "2",
+                            "bcl:text": "The comptroller must publish the register by posting the register on a publicly accessible website or in another manner that ensures accessibility to the public."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e691",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "10",
+                    "bcl:text": "[Repealed 2014-15-211.]"
+                },
+                {
+                    "@id": "d2e908",
+                    "bcl:marginalnote": "Amendments to register",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e818",
+                            "bcl:num": "0.1",
+                            "bcl:text": "The comptroller must amend the register, and make the changes in registration that the comptroller considers appropriate, in order to reflect",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e826",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/14015",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Water Sustainability Act"
+                                        },
+                                        "#text": "an amendment under the  of a registered licence, or a substitution under that Act of another licence for a registered licence, other than as provided for under subsection (1) or (2) of this section, or"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e839",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/14015",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Water Sustainability Act"
+                                        },
+                                        "#text": "the suspension, cancellation, abandonment or expiry under the  of a registered licence."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e916",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "On the disposition to any person of the whole or any part of any land, mine or undertaking to which a registered licence has been made appurtenant under the , the comptroller must,"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e928",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the case of a disposition of the whole, cancel the registration of the person making the disposition, and register the other person as the registrant in respect of that registered licence, or"
+                                },
+                                {
+                                    "@id": "d2e937",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the case of a partial disposition, amend the registration of the person making the disposition to reflect the disposition and register the other person as a registrant in respect of the part disposed of to that other person."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e947",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "On any transfer or apportionment, under the , by the comptroller of the whole or part of the rights and obligations under a registered licence,"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e959",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the comptroller must amend the register as the comptroller considers appropriate in order to reflect the transfer or apportionment, as the case may be, and"
+                                },
+                                {
+                                    "@id": "d2e968",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the transfer or apportionment effects a transfer from the registrant to another person of the whole or part of the rights related to the registration of that registrant, the comptroller must,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e977",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in the case of a transfer of the whole of those rights, cancel the registration of the registrant and register the other person as the registrant in respect of that registered licence, or"
+                                        },
+                                        {
+                                            "@id": "d2e686",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the case of a partial transfer of those rights, amend the registration of the registrant to reflect the transfer of rights and register the other person as a registrant in respect of the part transferred to that other person."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e995",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "For greater certainty, nothing in this section affects the application of any provision of the  to or in respect of any licence under that Act that is a registered licence under this Act."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1009",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "12-16",
+                    "bcl:text": "[Repealed 2014-15-213.]"
+                },
+                {
+                    "@id": "d2e1395",
+                    "bcl:marginalnote": "Offences",
+                    "bcl:num": "17",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1403",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act or to the regulations."
+                            }
+                        },
+                        {
+                            "@id": "d2e1415",
+                            "bcl:num": "2",
+                            "bcl:text": "A person commits an offence who",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1424",
+                                    "bcl:num": "a",
+                                    "bcl:text": "contravenes section 5 or 6 (1) or (2), or"
+                                },
+                                {
+                                    "@id": "d2e1434",
+                                    "bcl:num": "b",
+                                    "bcl:text": "makes a statement in a record filed or provided under this Act that is false or misleading with respect to a material fact or that omits to state a material fact the omission of which makes the statement false or misleading."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1443",
+                            "bcl:num": "3",
+                            "bcl:text": "A person does not commit an offence under subsection (2) (b) if at the time of the statement the person did not know that the statement was false or misleading and, exercising due diligence, could not have known that the statement was false or misleading."
+                        },
+                        {
+                            "@id": "d2e1452",
+                            "bcl:num": "4",
+                            "bcl:text": [
+                                "A person who commits an offence under this section is liable on conviction",
+                                "or to imprisonment not exceeding 12 months, or to both a fine and imprisonment."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1461",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to a fine of not more than $200 000, and"
+                                },
+                                {
+                                    "@id": "d2e1470",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the offence is a continuing one, to a fine of not more than $200\u00a0000 for each day the offence is continued"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1483",
+                            "bcl:num": "5",
+                            "bcl:text": "If a corporation commits an offence under this Act, an employee, officer, director or agent of the corporation who authorized, permitted or acquiesced in the offence commits the offence notwithstanding that the corporation is convicted."
+                        },
+                        {
+                            "@id": "d2e1492",
+                            "bcl:num": "6",
+                            "bcl:text": "An information for or in respect of any offence against this Act or the regulations must be laid before the expiration of one year from the time of the happening of the offence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1503",
+                    "bcl:marginalnote": "Additional fine",
+                    "bcl:num": "18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1511",
+                            "bcl:num": "1",
+                            "bcl:text": "If a person is convicted of an offence under section 17 and the court is satisfied that, as a result of the commission of the offence, the person acquired any monetary benefits or that monetary benefits accrued to the person, the court may order the person to pay a fine equal to the court's estimation of the amount of those monetary benefits."
+                        },
+                        {
+                            "@id": "d2e1520",
+                            "bcl:num": "2",
+                            "bcl:text": "A fine under subsection (1) is in addition to and not in place of a fine under section\u00a017."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1530",
+                    "bcl:marginalnote": "Remedies preserved",
+                    "bcl:num": "19",
+                    "bcl:text": "A conviction or penalty for an offence under this Act does not relieve a person from any other liability."
+                },
+                {
+                    "@id": "d2e1542",
+                    "bcl:marginalnote": "Power to stop and search vehicles, vessels and aircraft",
+                    "bcl:num": "20",
+                    "bcl:text": [
+                        "An officer may",
+                        "if the officer has reasonable grounds to believe that the person is contravening or has contravened this Act, and, at the request of the person, the officer must produce proof of the officer's identity."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1553",
+                            "bcl:num": "a",
+                            "bcl:text": "stop a person, including a person who is operating a vehicle, vessel or aircraft,"
+                        },
+                        {
+                            "@id": "d2e1562",
+                            "bcl:num": "b",
+                            "bcl:text": "require the person to produce proof of identity, and"
+                        },
+                        {
+                            "@id": "d2e1572",
+                            "bcl:num": "c",
+                            "bcl:text": "without warrant, search the vehicle, vessel or aircraft,"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1585",
+                    "bcl:marginalnote": "Duty to stop",
+                    "bcl:num": "21",
+                    "bcl:text": "A person must stop, and a person who is operating a vehicle, vessel or aircraft must stop the vehicle, vessel or aircraft, when required to do so by an officer who is acting under section\u00a020 and who",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1596",
+                            "bcl:num": "a",
+                            "bcl:text": "is in uniform,"
+                        },
+                        {
+                            "@id": "d2e1605",
+                            "bcl:num": "b",
+                            "bcl:text": "displays the officer's official badge, or"
+                        },
+                        {
+                            "@id": "d2e1615",
+                            "bcl:num": "c",
+                            "bcl:text": "is in or near a vehicle that is readily identifiable as a ministry vehicle, police car, police motorcycle or other official vehicle."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1625",
+                    "bcl:marginalnote": "Duty to disclose identity",
+                    "bcl:num": "22",
+                    "bcl:text": "A person must provide proof of the person's identity when required to do so by an officer who is acting under section\u00a020 and who displays the officer's official badge or produces other proof of the officer's identity."
+                },
+                {
+                    "@id": "d2e1637",
+                    "bcl:marginalnote": "Orders for compliance",
+                    "bcl:num": "23",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1645",
+                            "bcl:num": "1",
+                            "bcl:text": "If the minister considers that a person is not complying or has not complied with this Act, the minister may apply to the Supreme Court for either or both of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1654",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an order requiring the person to comply with this Act or restraining the person from violating this Act;"
+                                },
+                                {
+                                    "@id": "d2e1663",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an order requiring the directors and officers of the person to cause the person to comply with or to cease violating this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1673",
+                            "bcl:num": "2",
+                            "bcl:text": "On application by the minister under this section, the Supreme Court may make an order it considers appropriate."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e1254",
+                    "bcl:marginalnote": "Transition \u2014 licensed registrants",
+                    "bcl:num": "24",
+                    "bcl:text": "A person who, immediately before the date this section comes into force, is recorded in the register in the \"licensed\" category in respect of a licence is, on and after that date, conclusively deemed to be a registrant in respect of that licence."
+                },
+                {
+                    "@id": "d0e1269",
+                    "bcl:marginalnote": "Transition \u2014 unlicensed registrants",
+                    "bcl:num": "25",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e1277",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "successor registrant",
+                                "#text": "In this section,  means a person"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e1285",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "in:desc": "[unlicensed category \u2014 dispositions, transfers and apportionment]",
+                                        "#text": "to whom the registration of an unlicensed registrant passes, under section\u00a013 (1) and (2) , as that section applies under subsection (3) of this section, on a disposition of the whole or a part of the land, mine or undertaking to which the unlicensed registrant's registration is appurtenant, or"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e1297",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to whom the whole or a part of the rights and obligations associated with the registration of an unlicensed registrant is transferred, under section\u00a013\u00a0(3) and (4), as that section applies under subsection (3) of this section, on a transfer or apportionment referred to in that section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1307",
+                            "bcl:num": "2",
+                            "bcl:text": "Unless a contrary intention appears, words and expressions used in this section have the same meaning as in this Act as it read immediately before this section comes into force."
+                        },
+                        {
+                            "@id": "d0e1316",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "Despite the amendments made to this Act by the , this Act, as it read immediately before this section comes into force, continues to apply in relation to a person who was an unlicensed registrant at that time, or any person who, after that time, becomes a successor registrant,"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e1328",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if the person applies for an authorization within the period provided in subsection (4) of this section, until the date a decision is made on the application, and"
+                                },
+                                {
+                                    "@id": "d0e1337",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the person fails to apply for an authorization within that period, on the expiry of that period."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1347",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "Despite section 140 (2) of the , a person who, immediately before the date this section comes into force, is recorded in the register under this Act in the \"unlicensed\" category must, within 180 days of that date, apply to the comptroller for a licence authorizing the diversion and use of the maximum annual volume of groundwater specified in the report of the comptroller under section 14 of this Act, from the well or wells the locations of which are described in that report, as amended, if applicable, under section\u00a016 (4) of this Act, as those sections apply under subsection (3) of this section, from the aquifer the location of which is described in that register in relation to the person."
+                            }
+                        },
+                        {
+                            "@id": "d0e1360",
+                            "bcl:num": "5",
+                            "bcl:text": "Despite this Act, the comptroller must issue the licence applied for to a person who is required to apply and who applies in accordance with subsection (4), subject to prescribed terms and conditions and the terms and conditions the comptroller considers advisable."
+                        },
+                        {
+                            "@id": "d0e1369",
+                            "bcl:num": "6",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "A licence issued under subsection (5) has precedence for the purposes of section\u00a022 (1) or (4) of the  from the person's date of first use, as defined in section 1 (1) of that Act, of groundwater from the aquifer and for the water use purpose to which the licence relates."
+                            }
+                        },
+                        {
+                            "@id": "d0e1382",
+                            "bcl:num": "7",
+                            "bcl:text": "A person to whom subsection (4) applies is liable for the applicable fees, rentals or charges for the water diverted and used by the person on and after the date this section comes into force as if a licence were issued to the person on that date."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1522 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@id": "22030",
+        "@xsi:schemaLocation": "https://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "act:title": "Food Delivery Service Fee Act",
+        "act:chapter": "30",
+        "act:yearenacted": "2022",
+        "act:assentedto": "November 3, 2022",
+        "act:currency": {
+            "act:tlcDirPath": "1198514681/934987227/1715300796",
+            "act:tlc": "E3tlc22030"
+        },
+        "act:content": {
+            "bcl:preamble": {
+                "bcl:text": "HIS MAJESTY, by and with the advice and consent of the Legislative Assembly of the Province of British Columbia, enacts as follows:"
+            },
+            "bcl:part": [
+                {
+                    "@id": "d1e11919",
+                    "bcl:num": "1",
+                    "bcl:text": "Interpretation",
+                    "bcl:section": {
+                        "@id": "d1e28",
+                        "bcl:marginalnote": "Definitions",
+                        "bcl:num": "1",
+                        "bcl:text": "In this Act:",
+                        "bcl:definition": [
+                            {
+                                "@id": "d1e36",
+                                "bcl:text": {
+                                    "in:term": "affiliate",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02057_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Business Corporations Act"
+                                    },
+                                    "#text": ", in relation to a corporation, has the same meaning as in section 1 (1) of the ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e43",
+                                "bcl:text": {
+                                    "in:term": "compensation",
+                                    "#text": "means, in relation to delivery services performed by an employee or contractor of a food delivery platform operator, one or both of the following:"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e49",
+                                        "bcl:num": "a",
+                                        "bcl:text": "any money or thing paid or provided, directly or indirectly, by the food delivery platform operator to, or for the benefit of, the employee or contractor;"
+                                    },
+                                    {
+                                        "@id": "d1e56",
+                                        "bcl:num": "b",
+                                        "bcl:text": "money designated by a customer as a gratuity for the employee or contractor;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e65",
+                                "bcl:text": {
+                                    "in:term": "complaint",
+                                    "in:desc": "[restaurant operators may make complaint to director]",
+                                    "#text": "means a complaint made under section 9 ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e74",
+                                "bcl:text": {
+                                    "in:term": "compliance order",
+                                    "#text": "means an order made under section 13 (1);"
+                                }
+                            },
+                            {
+                                "@id": "d1e81",
+                                "bcl:text": {
+                                    "in:term": "core services",
+                                    "#text": "means services that include both of the following, provided to a restaurant operator by a food delivery platform operator in relation to a customer's order of food or beverages from the restaurant:"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e87",
+                                        "bcl:num": "a",
+                                        "bcl:text": "delivery services;"
+                                    },
+                                    {
+                                        "@id": "d1e94",
+                                        "bcl:num": "b",
+                                        "bcl:text": "ordering services;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e102",
+                                "bcl:text": {
+                                    "in:term": "delivery services",
+                                    "#text": "means services that include both of the following, provided to a restaurant operator by a food delivery platform operator in relation to a customer's order of food or beverages from the restaurant:"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e108",
+                                        "bcl:num": "a",
+                                        "bcl:text": "the pick-up of the food or beverages from the restaurant;"
+                                    },
+                                    {
+                                        "@id": "d1e115",
+                                        "bcl:num": "b",
+                                        "bcl:text": "the delivery of the food or beverages to the customer;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e123",
+                                "bcl:text": {
+                                    "in:term": "director",
+                                    "#text": "means the director designated under section 2;"
+                                }
+                            },
+                            {
+                                "@id": "d1e130",
+                                "bcl:text": {
+                                    "in:term": "food delivery platform operator",
+                                    "#text": "means a person that provides services that include, at a minimum, core services to restaurant operators through an online platform or other prescribed method;"
+                                }
+                            },
+                            {
+                                "@id": "d1e138",
+                                "bcl:text": {
+                                    "in:term": "ordering services",
+                                    "#text": "means services that include all of the following, provided to a restaurant operator by a food delivery platform operator in relation to a customer's order of food or beverages from the restaurant:"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e144",
+                                        "bcl:num": "a",
+                                        "bcl:text": "the listing of the restaurant in a manner that enables the customer to search for the restaurant listing;"
+                                    },
+                                    {
+                                        "@id": "d1e151",
+                                        "bcl:num": "b",
+                                        "bcl:text": "the facilitation of the placement of the order by the customer;"
+                                    },
+                                    {
+                                        "@id": "d1e158",
+                                        "bcl:num": "c",
+                                        "bcl:text": "the collection or facilitation of payment from the customer for the food or beverages and the transmission of the payment to the restaurant operator;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e166",
+                                "bcl:text": {
+                                    "in:term": "reference period",
+                                    "#text": "means a period specified in, or determined in accordance with, the regulations;"
+                                }
+                            },
+                            {
+                                "@id": "d1e173",
+                                "bcl:text": {
+                                    "in:term": "restaurant",
+                                    "#text": "means an establishment in British Columbia, other than a grocery store or convenience store, where food is prepared and served to customers;"
+                                }
+                            },
+                            {
+                                "@id": "d1e180",
+                                "bcl:text": {
+                                    "in:term": "restaurant operator",
+                                    "#text": "means a person that owns or operates a restaurant."
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d1e189",
+                    "bcl:num": "2",
+                    "bcl:text": "Director",
+                    "bcl:section": {
+                        "@id": "d1e195",
+                        "bcl:marginalnote": "Director and delegation",
+                        "bcl:num": "2",
+                        "bcl:subsection": [
+                            {
+                                "@id": "d1e201",
+                                "bcl:num": "1",
+                                "bcl:text": {
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96385_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Public Service Act"
+                                    },
+                                    "#text": "The minister may designate, as the director for the purposes of this Act, a person appointed under the ."
+                                }
+                            },
+                            {
+                                "@id": "d1e208",
+                                "bcl:num": "2",
+                                "bcl:text": "The director may delegate, to a person or class of persons, any of the director's powers, functions or duties under this Act."
+                            },
+                            {
+                                "@id": "d1e215",
+                                "bcl:num": "3",
+                                "bcl:text": "A delegation under subsection (2) must be made in writing and may include any terms or conditions the director considers advisable."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d1e224",
+                    "bcl:num": "3",
+                    "bcl:text": "Prohibitions and Requirements",
+                    "bcl:division": [
+                        {
+                            "@id": "d1e230",
+                            "bcl:num": "1",
+                            "bcl:text": "Fees and Compensation",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e236",
+                                    "bcl:marginalnote": "Definitions for Division",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In this Division:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d1e244",
+                                            "bcl:text": {
+                                                "in:term": "base tier fee",
+                                                "#text": "means a fee of an amount specified in, or determined in accordance with, the regulations;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e251",
+                                            "bcl:text": {
+                                                "in:term": "base tier offer",
+                                                "#text": "means an offer to provide services, including, at a minimum, core services, in exchange for a fee that does not exceed the base tier fee;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e259",
+                                            "bcl:text": {
+                                                "in:term": "enhanced tier offer",
+                                                "#text": "means an offer to provide services, including, at a minimum, core services, in exchange for a fee that exceeds the base tier fee;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e266",
+                                            "bcl:text": {
+                                                "in:term": "threshold number",
+                                                "#text": "means a number of restaurants specified in, or determined in accordance with, the regulations."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e274",
+                                    "bcl:marginalnote": "Application of Division",
+                                    "bcl:num": "4",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e280",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to subsection (3), this Division applies to a food delivery platform operator for a reference period if, in the immediately preceding reference period, the food delivery platform operator provided core services in relation to a number of restaurants that is equal to or greater than the threshold number."
+                                        },
+                                        {
+                                            "@id": "d1e287",
+                                            "bcl:num": "2",
+                                            "bcl:text": "For the purposes of subsection (1),",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e293",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a food delivery platform operator provides core services in relation to a restaurant in a reference period if, in relation to at least one customer's order of food or beverages from the restaurant in the reference period, the food delivery platform operator provides services that include core services, and"
+                                                },
+                                                {
+                                                    "@id": "d1e300",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a food delivery platform operator is deemed to provide core services in relation to a restaurant in a reference period if an affiliate of the food delivery platform operator provides services that include core services in relation to the restaurant in the reference period."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e308",
+                                            "bcl:num": "3",
+                                            "bcl:text": [
+                                                "If, in a reference period,",
+                                                "sections 5 (1) (a) and (b) and 6 do not apply in relation to the food delivery platform operator for a prescribed period after the date that this Division becomes applicable to the food delivery platform operator."
+                                            ],
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e314",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "this Division applies to a food delivery platform operator for the reference period, and"
+                                                },
+                                                {
+                                                    "@id": "d1e321",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "this Division did not apply to the food delivery platform operator in the immediately preceding reference period,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e330",
+                                            "bcl:num": "4",
+                                            "bcl:text": "Subsection (3) does not apply in the reference period in which this section comes into force."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e338",
+                                    "bcl:marginalnote": "Fees for services that include core services",
+                                    "bcl:num": "5",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e344",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to subsection (2), if, in a reference period for which this Division applies to a food delivery platform operator, the food delivery platform operator provides services that include core services to a restaurant operator in relation to a customer's order of food or beverages,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e350",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the food delivery platform operator must not, directly or indirectly, do either of the following:",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e356",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "deduct or retain from a payment transmitted to the restaurant operator a fee for the services that exceeds the base tier fee;"
+                                                        },
+                                                        {
+                                                            "@id": "d1e363",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "demand or accept from the restaurant operator payment of a fee for the services that exceeds the base tier fee, and"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e371",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the restaurant operator is not liable to pay a fee for the services that exceeds the base tier fee."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e379",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Subsection (1) does not apply if all of the following criteria are met:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e385",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "at any time before providing the services to the restaurant operator, the food delivery platform operator made a base tier offer to the restaurant operator;"
+                                                },
+                                                {
+                                                    "@id": "d1e392",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the restaurant operator",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e398",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "rejected the base tier offer, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e405",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "accepted an enhanced tier offer made by the food delivery platform operator in accordance with subsection (3);"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e413",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "any other criteria prescribed by regulation."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e421",
+                                            "bcl:num": "3",
+                                            "bcl:text": "If a food delivery platform operator makes an enhanced tier offer to a restaurant operator, the food delivery platform operator",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e427",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "must not make any base tier offer contingent on the restaurant operator accepting the enhanced tier offer, and"
+                                                },
+                                                {
+                                                    "@id": "d1e434",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "must inform the restaurant operator that the enhanced tier offer is optional and separate from any base tier offer."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e443",
+                                            "bcl:num": "4",
+                                            "bcl:text": "For certainty, subsection (1) does not apply in relation to services provided by a food delivery platform operator before the date this section comes into force."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e452",
+                                    "bcl:marginalnote": "Right to cancel agreement",
+                                    "bcl:num": "6",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e458",
+                                            "bcl:num": "1",
+                                            "bcl:text": "This section applies if, by accepting an enhanced tier offer made by a food delivery platform operator, a restaurant operator enters into an agreement with the food delivery platform operator under which the food delivery platform operator agrees to provide services that include, at a minimum, core services to the restaurant operator for a fee that exceeds the base tier fee."
+                                        },
+                                        {
+                                            "@id": "d1e465",
+                                            "bcl:num": "2",
+                                            "bcl:text": "During a reference period for which this Division applies to a food delivery platform operator,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e471",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "it is a term of the agreement referred to in subsection (1) that the restaurant operator may cancel the agreement by giving the food delivery platform operator",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e477",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the prescribed number of days' notice, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e484",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "a shorter period of notice provided for in the agreement, and"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e492",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the agreement must contain a statement of the restaurant operator's right to cancel the agreement as described in paragraph (a)."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e501",
+                                    "bcl:marginalnote": "No reduction of compensation",
+                                    "bcl:num": "7",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e507",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A food delivery platform operator must not, for the purposes of complying with section 5 (1) (a), reduce, withhold or eliminate any compensation of an employee or contractor who performs delivery services on behalf of the food delivery platform operator."
+                                        },
+                                        {
+                                            "@id": "d1e514",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Any agreement by the employee or contractor to a reduction, withholding or elimination of compensation, as described in subsection (1), is void."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e523",
+                            "bcl:num": "2",
+                            "bcl:text": "Record-Keeping",
+                            "bcl:section": {
+                                "@id": "d1e529",
+                                "bcl:marginalnote": "Requirements to prepare, maintain and retain records",
+                                "bcl:num": "8",
+                                "bcl:subsection": [
+                                    {
+                                        "@id": "d1e535",
+                                        "bcl:num": "1",
+                                        "bcl:text": "A food delivery platform operator must prepare and maintain the following records:",
+                                        "bcl:paragraph": [
+                                            {
+                                                "@id": "d1e541",
+                                                "bcl:num": "a",
+                                                "bcl:text": "in relation to each customer's order of food and beverages for which the food delivery platform operator provides services that include core services to a restaurant operator, records respecting",
+                                                "bcl:subparagraph": [
+                                                    {
+                                                        "@id": "d1e547",
+                                                        "bcl:num": "i",
+                                                        "bcl:text": "the name and location of the restaurant in relation to which the services are provided,"
+                                                    },
+                                                    {
+                                                        "@id": "d1e554",
+                                                        "bcl:num": "ii",
+                                                        "bcl:text": "the types of services provided,"
+                                                    },
+                                                    {
+                                                        "@id": "d1e561",
+                                                        "bcl:num": "iii",
+                                                        "bcl:text": "the date the services were provided,"
+                                                    },
+                                                    {
+                                                        "@id": "d1e569",
+                                                        "bcl:num": "iv",
+                                                        "bcl:text": "the amount paid by the customer in relation to the customer's order, and"
+                                                    },
+                                                    {
+                                                        "@id": "d1e576",
+                                                        "bcl:num": "v",
+                                                        "bcl:text": "the amount of the fee paid or payable by the restaurant operator in exchange for the services;"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "@id": "d1e584",
+                                                "bcl:num": "b",
+                                                "bcl:text": "records respecting the compensation of employees and contractors of the food delivery platform operator who perform delivery services on behalf of the food delivery platform operator;"
+                                            },
+                                            {
+                                                "@id": "d1e591",
+                                                "bcl:num": "c",
+                                                "bcl:text": "if Division 1 of this Part applies to the food delivery platform operator in a reference period, records demonstrating compliance with sections 5 to 7 for the reference period;"
+                                            },
+                                            {
+                                                "@id": "d1e599",
+                                                "bcl:num": "d",
+                                                "bcl:text": "records demonstrating compliance with any compliance order imposed on the food delivery platform operator;"
+                                            },
+                                            {
+                                                "@id": "d1e606",
+                                                "bcl:num": "e",
+                                                "bcl:text": "any other prescribed records."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d1e614",
+                                        "bcl:num": "2",
+                                        "bcl:text": "A food delivery platform operator must retain the records required under subsection (1) for the prescribed period."
+                                    },
+                                    {
+                                        "@id": "d1e621",
+                                        "bcl:num": "3",
+                                        "bcl:text": "A food delivery platform operator must prepare, maintain and retain records under this section in accordance with any requirements established by regulation."
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e631",
+                    "bcl:num": "4",
+                    "bcl:text": "Enforcement",
+                    "bcl:division": [
+                        {
+                            "@id": "d1e637",
+                            "bcl:num": "1",
+                            "bcl:text": "Complaints",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e643",
+                                    "bcl:marginalnote": "Restaurant operators may make complaint to director",
+                                    "bcl:num": "9",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e649",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The following persons may make a complaint to the director respecting an alleged contravention of this Act or the regulations by a food delivery platform operator:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e655",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a restaurant operator;"
+                                                },
+                                                {
+                                                    "@id": "d1e662",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "an organization that represents restaurant operators."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e670",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A complaint made under this section must be submitted to the director",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e676",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "within the prescribed period after the date that the contravention is alleged to have occurred, and"
+                                                },
+                                                {
+                                                    "@id": "d1e683",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "in the form and manner required by the director."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e692",
+                                    "bcl:marginalnote": "Director to review complaints",
+                                    "bcl:num": "10",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e698",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "in:term": "court",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/12025_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Civil Resolution Tribunal Act"
+                                                },
+                                                "#text": "In this section,  includes the Civil Resolution Tribunal under the ."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e708",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Subject to subsection (3), the director must accept and review a complaint made in accordance with section 9."
+                                        },
+                                        {
+                                            "@id": "d1e715",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The director may refuse to accept or review a complaint or may stop or postpone reviewing a complaint if",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e721",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the complainant is not a person referred to in section 9 (1),"
+                                                },
+                                                {
+                                                    "@id": "d1e728",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "in the director's opinion, the complaint is frivolous, vexatious, trivial or not made in good faith,"
+                                                },
+                                                {
+                                                    "@id": "d1e735",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "in the director's opinion, there is not enough evidence to support the complaint,"
+                                                },
+                                                {
+                                                    "@id": "d1e743",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "a proceeding relating to the subject matter of the complaint has been commenced before a court, arbitrator or mediator, or"
+                                                },
+                                                {
+                                                    "@id": "d1e750",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "a court, arbitrator or mediator has made a decision or an award relating to the subject matter of the complaint."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e760",
+                            "bcl:num": "2",
+                            "bcl:text": "Audits and Investigations",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e766",
+                                    "bcl:marginalnote": "Director may conduct audit or investigation",
+                                    "bcl:num": "11",
+                                    "bcl:text": "The director may, on receiving a complaint or on the director's own initiative, conduct an audit or investigation to ensure the compliance of a food delivery platform operator with this Act, the regulations or a compliance order."
+                                },
+                                {
+                                    "@id": "d1e775",
+                                    "bcl:marginalnote": "Powers to require records and information",
+                                    "bcl:num": "12",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e781",
+                                            "bcl:num": "1",
+                                            "bcl:text": "For the purposes of an audit or investigation under section 11, the director may, by order, require a person who is the subject of the audit or investigation, an affiliate of the person or a director, receiver, receiver manager, officer, employee, banker, auditor or agent of the person or the person's affiliate to do one or both of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e787",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "within the period specified in the order and in the form and manner required by the director, produce or provide electronic access to, and permit inspection of, records in the custody or control of the person subject to the order;"
+                                                },
+                                                {
+                                                    "@id": "d1e794",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "within the period specified in the order and in the form and manner required by the director, provide to the director any information the director requires."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e802",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person must not",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e808",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "fail to comply with an order made by the director under subsection (1), or"
+                                                },
+                                                {
+                                                    "@id": "d1e815",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "provide false or misleading information or records to the director under subsection (1)."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e825",
+                            "bcl:num": "3",
+                            "bcl:text": "Compliance Orders and Administrative Penalties",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e831",
+                                    "bcl:marginalnote": "Compliance orders",
+                                    "bcl:num": "13",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e837",
+                                            "bcl:num": "1",
+                                            "bcl:text": "After giving a person notice and, if requested, an opportunity to be heard, the director may, if the director is satisfied that the person has contravened or is about to contravene this Act or the regulations, order the person to comply with this Act and the regulations."
+                                        },
+                                        {
+                                            "@id": "d1e844",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A request referred to in subsection (1) must be made within 30 days after the date that the person receives the notice."
+                                        },
+                                        {
+                                            "@id": "d1e851",
+                                            "bcl:num": "3",
+                                            "bcl:text": "In a compliance order, the director may order that a person take specified measures to prevent a contravention of this Act or the regulations."
+                                        },
+                                        {
+                                            "@id": "d1e859",
+                                            "bcl:num": "4",
+                                            "bcl:text": "A compliance order must describe all of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e865",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the conduct that gave rise to the order;"
+                                                },
+                                                {
+                                                    "@id": "d1e872",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the provision of this Act or the regulations that the person is alleged to have contravened or to have been about to contravene;"
+                                                },
+                                                {
+                                                    "@id": "d1e879",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "what the person must do and, if applicable, the date by which something must be done;"
+                                                },
+                                                {
+                                                    "@id": "d1e887",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "how the person subject to the order may request reconsideration of the order under section 22."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e896",
+                                    "bcl:marginalnote": "Duty to comply with compliance order",
+                                    "bcl:num": "14",
+                                    "bcl:text": "A person subject to a compliance order must comply with the order."
+                                },
+                                {
+                                    "@id": "d1e905",
+                                    "bcl:marginalnote": "Administrative penalties",
+                                    "bcl:num": "15",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e911",
+                                            "bcl:num": "1",
+                                            "bcl:text": "After giving a person notice and, if requested, an opportunity to be heard, the director may impose an administrative penalty on the person if the person",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e917",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "contravenes a prescribed provision of this Act or the regulations, or"
+                                                },
+                                                {
+                                                    "@id": "d1e924",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "fails to comply with a compliance order."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e932",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A request referred to in subsection (1) must be made within 30 days after the date that the person receives the notice."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e941",
+                                    "bcl:marginalnote": "Notice of administrative penalty",
+                                    "bcl:num": "16",
+                                    "bcl:text": "If the director imposes on a person an administrative penalty under section 15, the director must give the person a notice that specifies the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e949",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the contravention or failure in relation to which the penalty is imposed;"
+                                        },
+                                        {
+                                            "@id": "d1e956",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the amount of the penalty imposed;"
+                                        },
+                                        {
+                                            "@id": "d1e964",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the date by which the penalty must be paid;"
+                                        },
+                                        {
+                                            "@id": "d1e971",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the person's right to request a reconsideration under section 22."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e979",
+                                    "bcl:marginalnote": "Amount of administrative penalty",
+                                    "bcl:num": "17",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e985",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An administrative penalty imposed under section 15 may be",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e991",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a single amount,"
+                                                },
+                                                {
+                                                    "@id": "d1e998",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "an amount for each day the contravention or failure continues, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1005",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "an amount for each transaction in relation to which the person was in contravention of a provision referred to in section 15 (1) (a)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1013",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The amount referred to in subsection (1) (a), (b) or (c) must not exceed the amount specified in, or determined in accordance with, the regulations."
+                                        },
+                                        {
+                                            "@id": "d1e1020",
+                                            "bcl:num": "3",
+                                            "bcl:text": "In determining the amount of an administrative penalty imposed on a person under section 15, the director must consider the following matters:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1026",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "previous contraventions or failures by",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e1032",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the person,"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1039",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "if the person is an individual, a corporation for which the individual is or was an officer, director or agent, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1046",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "if the person is a corporation, an individual who is or was an officer, director or agent of the corporation;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e1054",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the gravity and magnitude of the contravention or failure;"
+                                                },
+                                                {
+                                                    "@id": "d1e1061",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "whether the contravention or failure was repeated or continuous;"
+                                                },
+                                                {
+                                                    "@id": "d1e1069",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "whether the contravention or failure was deliberate;"
+                                                },
+                                                {
+                                                    "@id": "d1e1076",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "any economic benefit derived by the person from the contravention or failure;"
+                                                },
+                                                {
+                                                    "@id": "d1e1083",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "the person's efforts to prevent or correct the contravention or failure;"
+                                                },
+                                                {
+                                                    "@id": "d1e1090",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "prescribed matters."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1099",
+                                    "bcl:marginalnote": "Payment of administrative penalty",
+                                    "bcl:num": "18",
+                                    "bcl:text": "A person on whom an administrative penalty is imposed must pay the administrative penalty to the government",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1107",
+                                            "bcl:num": "a",
+                                            "bcl:text": "within the prescribed period after",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1113",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "in:desc": "[notice of administrative penalty]",
+                                                        "#text": "the date that the person receives the notice referred to in section 16 , or"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1123",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "if the person requests a reconsideration under section 22, the date that the person receives written reasons under section 22 (3) (b), and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1131",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in accordance with any other prescribed requirements."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1139",
+                                    "bcl:marginalnote": "Recovery of administrative penalty",
+                                    "bcl:num": "19",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1145",
+                                            "bcl:num": "1",
+                                            "bcl:text": "On the date that an administrative penalty is payable under section 18, the administrative penalty constitutes a debt payable to the government by the person on which the penalty is imposed."
+                                        },
+                                        {
+                                            "@id": "d1e1152",
+                                            "bcl:num": "2",
+                                            "bcl:text": "If a person fails to pay an administrative penalty as required under this Act, the director may file a certificate in a court that has jurisdiction, and, on filing, the certificate has the same force and effect, and all proceedings may be taken on it, as if it were a judgment of the court with which it is filed."
+                                        },
+                                        {
+                                            "@id": "d1e1159",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A certificate under subsection (2) must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1165",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "be signed by the director, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1172",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "contain the following information:",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e1178",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the name of the person that is liable for the penalty;"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1185",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the contravention or failure in relation to which the penalty is imposed;"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1192",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "the amount of the penalty imposed."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1202",
+                                    "bcl:marginalnote": "Limitation period",
+                                    "bcl:num": "20",
+                                    "bcl:text": {
+                                        "in:desc": "[administrative penalties]",
+                                        "#text": "The time limit for giving a notice referred to in section 15 (1)  is 2 years after the date that evidence of the alleged contravention or failure first came to the knowledge of the director."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1216",
+                    "bcl:num": "5",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e1222",
+                            "bcl:marginalnote": "Definition for Part",
+                            "bcl:num": "21",
+                            "bcl:text": {
+                                "in:term": "determination",
+                                "#text": "In this Part,  means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1233",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a decision of the director to make a compliance order, or"
+                                },
+                                {
+                                    "@id": "d1e1240",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a determination by the director, as set out in an administrative penalty notice under section 16, of non-compliance or the amount of an administrative penalty."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1248",
+                            "bcl:marginalnote": "Reconsiderations",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1254",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person that is subject to a determination may request the director to reconsider the determination."
+                                },
+                                {
+                                    "@id": "d1e1261",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A request under subsection (1)",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1267",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must be made",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1273",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "in writing,"
+                                                },
+                                                {
+                                                    "@id": "d1e1280",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "within the prescribed period, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1287",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "in accordance with the regulations, if any, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1295",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must identify the error the person believes was made or the other grounds on which a reconsideration is requested."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1303",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On receiving a request under subsection (1), the director must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1309",
+                                            "bcl:num": "a",
+                                            "bcl:text": "reconsider the determination in accordance with the regulations, if any, and"
+                                        },
+                                        {
+                                            "@id": "d1e1316",
+                                            "bcl:num": "b",
+                                            "bcl:text": "give written reasons to the person that requested the reconsideration."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1325",
+                            "bcl:marginalnote": "Oral hearings not required",
+                            "bcl:num": "23",
+                            "bcl:text": "The director is not required to give an oral hearing to any person in respect of whom the director makes",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1333",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a determination, or"
+                                },
+                                {
+                                    "@id": "d1e1340",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a reconsideration under section 22."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1349",
+                            "bcl:marginalnote": "Giving of documents by director under this Act",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1355",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A document that is required or permitted under this Act to be given by the director to a person must be given",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1361",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in accordance with this section, or"
+                                        },
+                                        {
+                                            "@id": "d1e1368",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by any other means provided for in the regulations."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1376",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A document may be given to an individual",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1382",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by leaving the document with the individual,"
+                                        },
+                                        {
+                                            "@id": "d1e1389",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by sending the document by ordinary mail, registered mail or courier to the address where the individual carries on business or the last known address of the individual according to the records of the director, or"
+                                        },
+                                        {
+                                            "@id": "d1e1396",
+                                            "bcl:num": "c",
+                                            "bcl:text": "by sending the document by email to an email address provided by the individual."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1404",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A document may be given to a corporation",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1410",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by leaving the document with",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1416",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "an officer or director of the corporation, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1423",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "if the corporation is an extraprovincial corporation, an attorney of the corporation,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1431",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by sending the document by ordinary mail, registered mail or courier to",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1437",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the registered office of the corporation,"
+                                                },
+                                                {
+                                                    "@id": "d1e1444",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "an address for service provided by the corporation, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1451",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "if the corporation is an extraprovincial corporation, the address of an attorney of the corporation, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1459",
+                                            "bcl:num": "c",
+                                            "bcl:text": "by sending the document by email to an email address provided by the corporation."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1468",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A document may be given to a partnership",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1474",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by leaving the document with a partner,"
+                                        },
+                                        {
+                                            "@id": "d1e1481",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by sending the document by ordinary mail, registered mail or courier to the business office of the partnership, or"
+                                        },
+                                        {
+                                            "@id": "d1e1488",
+                                            "bcl:num": "c",
+                                            "bcl:text": "by sending the document by email to an email address provided by the partnership."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1496",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A document given in accordance with this section, unless received earlier, is deemed to be received as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1502",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if given by sending the document by mail or courier, on the eighth day after it is mailed or received by the courier, as applicable;"
+                                        },
+                                        {
+                                            "@id": "d1e1509",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if given by sending the document by email, on the third day after it is sent."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1518",
+                            "bcl:marginalnote": "Director must not be required to give evidence in other proceedings",
+                            "bcl:num": "25",
+                            "bcl:text": "The director or a delegate of the director must not be required by a court, board, tribunal or person to give evidence or produce records relating to information obtained for the purposes of this Act."
+                        },
+                        {
+                            "@id": "d1e1527",
+                            "bcl:marginalnote": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of  does not apply"
+                            },
+                            "bcl:num": "26",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act or the regulations."
+                            }
+                        },
+                        {
+                            "@id": "d1e1536",
+                            "bcl:marginalnote": "Regulations",
+                            "bcl:num": "27",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1542",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1549",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting any other provision of this Act, the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1555",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[definitions]",
+                                                "#text": "for the purposes of the definition of \"food delivery platform operator\" in section 1 , prescribing methods of providing core services;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1565",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for the purposes of the definition of \"reference period\" in section 1, specifying a period or respecting a method for determining a period;"
+                                        },
+                                        {
+                                            "@id": "d1e1572",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "in:desc": "[definitions for Division\u00a01 of Part\u00a03]",
+                                                "#text": "for the purposes of the definition of \"base tier fee\" in section 3 , specifying an amount or respecting a method for determining an amount;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1583",
+                                            "bcl:num": "d",
+                                            "bcl:text": "for the purposes of the definition of \"threshold number\" in section 3, specifying a number of restaurants or respecting a method for determining a number of restaurants;"
+                                        },
+                                        {
+                                            "@id": "d1e1590",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "in:desc": "[application of Division\u00a01 of Part\u00a03]",
+                                                "#text": "prescribing a period for the purposes of section 4 (3) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1600",
+                                            "bcl:num": "f",
+                                            "bcl:text": {
+                                                "in:desc": "[fees for services that include core services]",
+                                                "#text": "prescribing criteria for the purposes of section 5 (2) (c) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1610",
+                                            "bcl:num": "g",
+                                            "bcl:text": {
+                                                "in:desc": "[right to cancel agreement]",
+                                                "#text": "prescribing a number of days for the purposes of section 6 (2) (a) (i) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1620",
+                                            "bcl:num": "h",
+                                            "bcl:text": {
+                                                "in:desc": "[requirements to prepare, maintain and retain records]",
+                                                "#text": "for the purposes of section 8 ,"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1629",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "respecting other records that must be prepared and maintained by a food delivery platform operator,"
+                                                },
+                                                {
+                                                    "@id": "d1e1636",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing the period for which records must be retained, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1643",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "establishing requirements respecting the preparation, maintenance and retention of records;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1651",
+                                            "bcl:num": "i",
+                                            "bcl:text": {
+                                                "in:desc": "[restaurant operators may make complaint to director]",
+                                                "#text": "prescribing a period for the purposes of section 9 (2) (a) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1662",
+                                            "bcl:num": "j",
+                                            "bcl:text": "respecting administrative penalties, including",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1668",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "in:desc": "[imposition of administrative penalties]",
+                                                        "#text": "prescribing provisions of this Act or the regulations for the purposes of section 15 (1) (a) ,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1678",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "in:desc": "[amount of administrative penalty]",
+                                                        "#text": "specifying a maximum amount for the purposes of section 17 (1) (a), (b) or (c) , generally or for specified contraventions or failures, or respecting the manner of determining those amounts,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1688",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "prescribing matters for the purposes of section 17 (3) (g),"
+                                                },
+                                                {
+                                                    "@id": "d1e1696",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": {
+                                                        "in:desc": "[payment of administrative penalty]",
+                                                        "#text": "prescribing a period within which an administrative penalty must be paid for the purposes of section 18 (a) , and"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1706",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "respecting requirements in relation to the payment of an administrative penalty for the purposes of section 18 (b);"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1714",
+                                            "bcl:num": "k",
+                                            "bcl:text": {
+                                                "in:desc": "[reconsiderations]",
+                                                "#text": "for the purposes of section 22 ,"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1723",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "prescribing a period for requesting a reconsideration, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1730",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "respecting the reconsideration of determinations by the director under section 22 (3) (a);"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1738",
+                                            "bcl:num": "l",
+                                            "bcl:text": {
+                                                "in:desc": "[giving of documents by director under this Act]",
+                                                "#text": "providing for other means of giving documents for the purposes of section 24 (1) (b) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1748",
+                                            "bcl:num": "m",
+                                            "bcl:text": "respecting when documents given by the means referred to in paragraph (l) are deemed to be received."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1756",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation under this Act may do one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1762",
+                                            "bcl:num": "a",
+                                            "bcl:text": "make different regulations in relation to different classes of persons, places, things or circumstances;"
+                                        },
+                                        {
+                                            "@id": "d1e1769",
+                                            "bcl:num": "b",
+                                            "bcl:text": "delegate a matter to or confer a discretion on the director;"
+                                        },
+                                        {
+                                            "@id": "d1e1776",
+                                            "bcl:num": "c",
+                                            "bcl:text": "exempt persons or classes of persons from one or more requirements under this Act."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1785",
+                            "bcl:marginalnote": "Transition\u00a0\u2014 reference periods",
+                            "bcl:num": "28",
+                            "bcl:text": {
+                                "in:desc": "[application of Division\u00a01 of Part\u00a03]",
+                                "#text": "In the reference period in which this section comes into force, the reference to the immediately preceding reference period in section 4 (1)  is a reference to the reference period immediately preceding the reference period in which this section comes into force."
+                            }
+                        },
+                        {
+                            "@id": "d1e12865",
+                            "bcl:marginalnote": "Commencement",
+                            "bcl:num": "29",
+                            "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

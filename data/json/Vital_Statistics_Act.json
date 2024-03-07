@@ -1,0 +1,3014 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96479_01",
+        "act:title": "Vital Statistics Act",
+        "act:chapter": "479",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1418513667/96479/tlc96479_f",
+            "act:tlc": "E3tlc96479"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e21",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e32",
+                            "bcl:text": {
+                                "in:term": "assisted reproduction",
+                                "#text": "means a method of conceiving a child other than by sexual intercourse;"
+                            }
+                        },
+                        {
+                            "@id": "d2e41",
+                            "bcl:text": [
+                                {
+                                    "in:term": "birth",
+                                    "#text": "means the complete expulsion or extraction from its mother, irrespective of the duration of the pregnancy, of a product of conception in which, after the expulsion or extraction, there is"
+                                },
+                                "whether or not the umbilical cord has been cut or the placenta attached;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e51",
+                                    "bcl:num": "a",
+                                    "bcl:text": "breathing,"
+                                },
+                                {
+                                    "@id": "d2e60",
+                                    "bcl:num": "b",
+                                    "bcl:text": "beating of the heart,"
+                                },
+                                {
+                                    "@id": "d2e69",
+                                    "bcl:num": "c",
+                                    "bcl:text": "pulsation of the umbilical cord, or"
+                                },
+                                {
+                                    "@id": "d2e78",
+                                    "bcl:num": "d",
+                                    "bcl:text": "unmistakable movement of voluntary muscle,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e100",
+                            "bcl:text": {
+                                "in:term": "cemetery",
+                                "#text": "means land that is set apart or used as a place of burial or other disposition of dead bodies but does not include a crematorium;"
+                            }
+                        },
+                        {
+                            "@id": "d2e109",
+                            "bcl:text": {
+                                "in:term": "certificate",
+                                "#text": "means a certified extract of the prescribed particulars of a registration filed in the office of the registrar general;"
+                            }
+                        },
+                        {
+                            "@id": "d2e127",
+                            "bcl:text": {
+                                "in:term": "cremation",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/04035_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Cremation, Interment and Funeral Services Act"
+                                },
+                                "#text": "means incineration of a dead body in a crematorium as provided by the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e139",
+                            "bcl:text": {
+                                "in:term": "crematorium",
+                                "#text": "means a building fitted with appliances for the purpose of burning human remains, and includes everything incidental or ancillary to it;"
+                            }
+                        },
+                        {
+                            "@id": "d1e131",
+                            "bcl:text": {
+                                "in:term": "disposition permit",
+                                "#text": "means a permit to dispose of human remains or cremated human remains;"
+                            }
+                        },
+                        {
+                            "@id": "d2e148",
+                            "bcl:text": {
+                                "in:term": "funeral director",
+                                "#text": "means a person who has possession of a dead human body for the purpose of burial or other disposition;"
+                            }
+                        },
+                        {
+                            "@id": "d2e158",
+                            "bcl:text": {
+                                "in:term": "given name",
+                                "#text": "means a name other than a surname;"
+                            }
+                        },
+                        {
+                            "@id": "d2e167",
+                            "bcl:text": {
+                                "in:term": "incapable",
+                                "#text": "means unable because of death, illness, absence from British Columbia or otherwise;"
+                            }
+                        },
+                        {
+                            "@id": "d2e176",
+                            "bcl:text": {
+                                "in:term": "inspector",
+                                "#text": "means an Inspector of Vital Statistics;"
+                            }
+                        },
+                        {
+                            "@id": "d2e185",
+                            "bcl:text": {
+                                "in:term": "international classification",
+                                "#text": "means the International Statistical Classification of Diseases, Injuries and Causes of Death as last revised by the International Conference assembled for that purpose and published by the World Health Organization;"
+                            }
+                        },
+                        {
+                            "@id": "d2e194",
+                            "bcl:text": {
+                                "in:term": "midwife",
+                                "#text": "means a person who is"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e196",
+                                    "bcl:num": "a",
+                                    "bcl:text": "registered as a member of the British Columbia College of Nurses and Midwives, and"
+                                },
+                                {
+                                    "@id": "d2e198",
+                                    "bcl:num": "b",
+                                    "bcl:text": "authorized to practise the designated health profession of midwifery;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e203",
+                            "bcl:text": {
+                                "in:term": "occupier",
+                                "#text": "includes"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e213",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person having the management or charge of any public or private institution where persons are cared for or confined, and"
+                                },
+                                {
+                                    "@id": "d2e222",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the proprietor, manager, keeper or other person in charge of an hotel, inn, apartment, lodging house or other dwelling or accommodation;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e223",
+                            "bcl:text": {
+                                "in:term": "parent",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/11025_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Family Law Act"
+                                },
+                                "#text": "means a parent under Part 3 of the ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e235",
+                            "bcl:text": {
+                                "in:term": "registrar general",
+                                "#text": "means the registrar general of the Vital Statistics Agency, appointed in accordance with section 31 (2);"
+                            }
+                        },
+                        {
+                            "@id": "d2e231",
+                            "bcl:text": {
+                                "in:term": "registration",
+                                "#text": "means a registration under this Act of the particulars of a birth, stillbirth, adoption, marriage or death;"
+                            }
+                        },
+                        {
+                            "@id": "d2e240",
+                            "bcl:text": {
+                                "in:term": "state",
+                                "#text": "means any state or territory of the United States of America and includes the District of Columbia;"
+                            }
+                        },
+                        {
+                            "@id": "d2e249",
+                            "bcl:text": {
+                                "in:term": "stillbirth",
+                                "#text": "means the complete expulsion or extraction from its mother after at least 20\u00a0weeks' pregnancy, or after attaining a weight of at least 500\u00a0g, of a product of conception in which, after the expulsion or extraction, there is no breathing, beating of the heart, pulsation of the umbilical cord or unmistakable movement of voluntary muscle;"
+                            }
+                        },
+                        {
+                            "@id": "d1e264",
+                            "bcl:text": {
+                                "in:term": "surname",
+                                "#text": "means a hereditary name, family name or last name;"
+                            }
+                        },
+                        {
+                            "@id": "d2e258",
+                            "bcl:text": {
+                                "in:term": "vital statistics registrar",
+                                "#text": "means a vital statistics registrar appointed under section\u00a033."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e268",
+                    "bcl:marginalnote": "Duty to give notices of births",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e276",
+                            "bcl:num": "1",
+                            "bcl:text": "Each medical practitioner, nurse practitioner or midwife who attends at a birth must give notice of the birth."
+                        },
+                        {
+                            "@id": "d2e285",
+                            "bcl:num": "2",
+                            "bcl:text": "If no medical practitioner, nurse practitioner or midwife attends at a birth, the nurse or other person who attends must give notice of the birth."
+                        },
+                        {
+                            "@id": "d2e294",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96200_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Hospital Act"
+                                },
+                                "#text": "If a birth takes place at a hospital as defined in section 1 or 5 of the  and the persons having control or management of the hospital are satisfied that notice of the birth will not be given in a timely manner as required under subsections (1) and (2), notice of the birth must be given by or on behalf of the persons having control or management of the hospital."
+                            }
+                        },
+                        {
+                            "@id": "d2e307",
+                            "bcl:num": "4",
+                            "bcl:text": "If notice of a birth is given under subsection (3), subsections (1) and (2) do not apply to the birth."
+                        },
+                        {
+                            "@id": "d2e316",
+                            "bcl:num": "5",
+                            "bcl:text": "A notice under this section, in the form required by the registrar general, must be delivered to the registrar general within 48\u00a0hours after the date of the birth."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e326",
+                    "bcl:marginalnote": "Reporting of birth",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e334",
+                            "bcl:num": "1",
+                            "bcl:text": "Within 30 days after the birth of a child in British Columbia, a statement in the form and containing the information the registrar general requires respecting the birth must be completed and delivered to the registrar general as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e343",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by the mother and the father of the child;"
+                                },
+                                {
+                                    "@id": "d2e352",
+                                    "bcl:num": "b",
+                                    "bcl:text": "by the child's mother, if the father is incapable, deceased or unacknowledged by or unknown to the mother;"
+                                },
+                                {
+                                    "@id": "d2e362",
+                                    "bcl:num": "c",
+                                    "bcl:text": "by the child's father, if the mother is incapable or deceased;"
+                                },
+                                {
+                                    "@id": "d2e371",
+                                    "bcl:num": "d",
+                                    "bcl:text": "if neither parent is capable or living, or if the mother is incapable or deceased and the father is unacknowledged by or unknown to her, by the person standing in the place of the parents of the child."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e380",
+                            "bcl:num": "1.1",
+                            "bcl:text": "Despite subsection (1), if a child is born as a result of assisted reproduction, the statement referred to in that subsection must be completed and delivered to the registrar general within 30 days after the birth of the child in British Columbia as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e389",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by the parents of the child;"
+                                },
+                                {
+                                    "@id": "d2e398",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if a parent is incapable or deceased, by",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e407",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the other parent of the child, or"
+                                        },
+                                        {
+                                            "@id": "d2e417",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "if the child has more than one other parent, the child's other parents;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e426",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if the child has one parent only and paragraph (b) does not apply, by the parent of the child;"
+                                },
+                                {
+                                    "@id": "d2e435",
+                                    "bcl:num": "d",
+                                    "bcl:text": "if no parent is capable or living, by the person standing in the place of the parents of the child."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e444",
+                            "bcl:num": "2",
+                            "bcl:text": "If no person referred to in subsection (1) or (1.1) delivers a statement to the registrar general, the registrar general may prepare the statement with the information provided in the notice of birth received under section\u00a02."
+                        },
+                        {
+                            "@id": "d2e453",
+                            "bcl:num": "3",
+                            "bcl:text": "If the statement is made by a person under subsection (1) (c) or (d) or (1.1) (d), the person making the statement must make and submit with the statement an affidavit setting out the facts that require the statement to be made by the declarant."
+                        },
+                        {
+                            "@id": "d2e462",
+                            "bcl:num": "4",
+                            "bcl:text": "If a pregnancy results in the birth of more than one child, a separate statement for each child must be completed and delivered as provided in subsection (1) or (1.1), as applicable, and each statement must state the number of children born and their order of birth."
+                        },
+                        {
+                            "@id": "d2e472",
+                            "bcl:num": "5",
+                            "bcl:text": "[Repealed 2011-25-454.]"
+                        },
+                        {
+                            "@id": "d2e481",
+                            "bcl:num": "6",
+                            "bcl:text": "If a statement completed by only one parent of the child or by a person who is not the child's parent is registered, the registrar general must amend the registration of birth on application and payment of the prescribed fee by",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e490",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person or persons referred to in subsection (1) (a), (b) or (c) or (1.1) (a), (b) or (c), as applicable, or"
+                                },
+                                {
+                                    "@id": "d2e499",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a parent of the child, if the application is accompanied by a copy of an order of the court declaring the child's paternity or parentage, unless the court orders that a parent's particulars are not to be included on the child's registration of birth."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e508",
+                            "bcl:num": "6.1",
+                            "bcl:text": "Subsection (6) (b) does not apply to an order of the court declaring the child's paternity made before October 1, 2002, but",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e517",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the mother or father may apply to the court in the proceeding in which the paternity order was made for an order that the father's particulars are to be included on the child's registration of birth, and"
+                                },
+                                {
+                                    "@id": "d2e527",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the registrar general must amend the registration of birth on application of the mother or father if the application is accompanied by a copy of an order under paragraph (a)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e536",
+                            "bcl:num": "7",
+                            "bcl:text": "If a parent applies to amend the registration of birth without another parent because that other parent is incapable, the applicant must make and submit with the application an affidavit specifying the nature of the incapacity."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e546",
+                    "bcl:marginalnote": "Name of child",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e554",
+                            "bcl:num": "1",
+                            "bcl:text": "The surname of a child must be registered as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e563",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if only one parent completes the statement under section 3, the surname must be the one chosen by that parent;"
+                                },
+                                {
+                                    "@id": "d2e572",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if more than one parent completes the statement under section 3, the surname must be one chosen by them;"
+                                },
+                                {
+                                    "@id": "d2e582",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if more than one parent completes the statement under section 3, but the parents do not agree on the child's surname, the surname must be,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e591",
+                                            "bcl:num": "i",
+                                            "bcl:text": "if the parents have the same surname, the parents' surname, or"
+                                        },
+                                        {
+                                            "@id": "d2e600",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "if the parents have different surnames, a surname consisting of the parents' surnames hyphenated or combined in alphabetical order;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e609",
+                                    "bcl:num": "d",
+                                    "bcl:text": "if a person who is not the child's parent completes the statement under section 3, the surname must be,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e618",
+                                            "bcl:num": "i",
+                                            "bcl:text": "if the parents have the same surname, the parents' surname,"
+                                        },
+                                        {
+                                            "@id": "d2e627",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "if the parents have different surnames, a surname consisting of the parents' surnames hyphenated or combined in alphabetical order, or"
+                                        },
+                                        {
+                                            "@id": "d2e637",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "if only one parent is known, that parent's surname;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e646",
+                                    "bcl:num": "e",
+                                    "bcl:text": "in accordance with an order of the court under section 4.1 (1)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e655",
+                            "bcl:num": "2",
+                            "bcl:text": "Despite subsection (1),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e664",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a surname must not contain more than 2 surnames hyphenated or combined, and"
+                                },
+                                {
+                                    "@id": "d2e673",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if a parent has a hyphenated or combined surname, only one of the names in that surname may be used."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e682",
+                            "bcl:num": "3",
+                            "bcl:text": "For the purpose of subsection (1) (c) (ii) and (d) (ii) and if subsection (2) applies, the one name to be used under subsection (2) is the name that alphabetically precedes the other."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e692",
+                    "bcl:marginalnote": "Court order respecting child's name",
+                    "bcl:num": "4.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e700",
+                            "bcl:num": "1",
+                            "bcl:text": "The court may, in an order declaring a child's parentage, make an order",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e709",
+                                    "bcl:num": "a",
+                                    "bcl:text": "that the registration of a child's name be changed, or"
+                                },
+                                {
+                                    "@id": "d2e718",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the child's name has not yet been registered, requiring the child's name to be registered as specified in the order."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e728",
+                            "bcl:num": "2",
+                            "bcl:text": "If an order under subsection (1) is in respect of a child's surname, the court must order the child's surname to be",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e737",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the surname of a parent, or"
+                                },
+                                {
+                                    "@id": "d2e746",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a surname consisting of the parents' surnames hyphenated or combined in alphabetical order, in which case, section 4 (2) and (3) applies."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e755",
+                            "bcl:num": "3",
+                            "bcl:text": "Before making an order under subsection (1), the court must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e764",
+                                    "bcl:num": "a",
+                                    "bcl:text": "consider the best interests of the child, including the matters set out in section 9 (1) (a), (b) and (c),"
+                                },
+                                {
+                                    "@id": "d2e773",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the child is at least 7 years of age but less than 12, consider the views of the child, and"
+                                },
+                                {
+                                    "@id": "d2e783",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if the child is 12 years of age or older, have the child's written consent to change the child's name."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e792",
+                            "bcl:num": "4",
+                            "bcl:text": "If an order is made under subsection (1),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e801",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the registrar general must amend the child's registration of birth in respect of the child's name, consistent with the order of the court, and"
+                                },
+                                {
+                                    "@id": "d2e810",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a birth certificate issued after the making of an amendment under paragraph (a) must be prepared as if the child's original birth registration had been made containing the name as amended."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e821",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "5",
+                    "bcl:text": "[Repealed 2014-14-97.]"
+                },
+                {
+                    "@id": "d2e851",
+                    "bcl:marginalnote": "Birth registration within one year",
+                    "bcl:num": "6",
+                    "bcl:text": "If, within one year after a birth, the registrar general receives a statement in the form required by the registrar general respecting the birth, the registrar general must register the birth if satisfied as to the truth and sufficiency of the statement."
+                },
+                {
+                    "@id": "d2e863",
+                    "bcl:marginalnote": "Birth registration after one year",
+                    "bcl:num": "7",
+                    "bcl:text": [
+                        "If a birth is not registered within one year after the birth and application for the registration is",
+                        "the registrar general must register the birth if satisfied as to the truth and sufficiency of the matters stated in the application and that the application is made in good faith."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e874",
+                            "bcl:num": "a",
+                            "bcl:text": "made by any person to the registrar general in the form required by the registrar general,"
+                        },
+                        {
+                            "@id": "d2e883",
+                            "bcl:num": "b",
+                            "bcl:text": "verified by affidavit, and"
+                        },
+                        {
+                            "@id": "d2e893",
+                            "bcl:num": "c",
+                            "bcl:text": "accompanied by a statement in the form required by the registrar general respecting the birth and other evidence as may be prescribed,"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e906",
+                    "bcl:marginalnote": "Foundlings",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e914",
+                            "bcl:num": "1",
+                            "bcl:text": "If a newborn child is found deserted,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1075",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person who finds the child must provide to the person who takes charge of the child all information the person who finds the child has regarding the particulars referred to in paragraph (b), and"
+                                },
+                                {
+                                    "@id": "d1e1084",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the person who takes charge of the child must provide to the registrar general, within 7 days after taking charge of the child, the information that the person has regarding the particulars required to be registered concerning the birth of the child."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e923",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar general, on receipt of the information regarding the birth of the child and on being satisfied that every reasonable effort has been made without success to identify the child, must require the person who has charge of the child to complete the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e932",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an affidavit concerning the facts of the finding of the child;"
+                                },
+                                {
+                                    "@id": "d2e942",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a statement, to the extent the person is able, in the form required under section 3 (1)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e997",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2014-14-99.]"
+                        },
+                        {
+                            "@id": "d2e1006",
+                            "bcl:num": "4",
+                            "bcl:text": "The registrar general, on receipt of the affidavit and statement referred to in subsection (2), must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1015",
+                                    "bcl:num": "a",
+                                    "bcl:text": "review the case, and"
+                                },
+                                {
+                                    "@id": "d2e1024",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if satisfied as to the correctness and sufficiency of the matters stated, register the birth."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1033",
+                            "bcl:num": "5",
+                            "bcl:text": "A registration under subsection (4) must establish for the child a date of birth, a place of birth and a surname and given name."
+                        },
+                        {
+                            "@id": "d2e1042",
+                            "bcl:num": "6",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96046_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Child, Family and Community Service Act"
+                                },
+                                "#text": "The registrar general, on registering a birth under this section, must transmit to the director designated under the  for the purposes of this section a copy of all documents filed under this section respecting the child."
+                            }
+                        },
+                        {
+                            "@id": "d2e1055",
+                            "bcl:num": "7",
+                            "bcl:text": "If, subsequent to the registration of a birth under this section, the identity of the child is established to the satisfaction of the registrar general or further information with respect to it is received by the registrar general, the registrar general must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1064",
+                                    "bcl:num": "a",
+                                    "bcl:text": "add to or correct the registration of the birth made under this section, or"
+                                },
+                                {
+                                    "@id": "d2e1073",
+                                    "bcl:num": "b",
+                                    "bcl:text": "cancel the registration of birth made under this section and cause a new registration in accordance with the actual facts of the birth to be made and filed in substitution for the registration first made under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1082",
+                            "bcl:num": "8",
+                            "bcl:text": "If a new registration of the birth of a child is made under subsection (7),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1091",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the date of registration must be as shown on the registration first made, and"
+                                },
+                                {
+                                    "@id": "d2e1100",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a certificate in respect of the first registration must not be issued after that."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1110",
+                            "bcl:num": "9",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96046_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Child, Family and Community Service Act"
+                                },
+                                "#text": "The registrar general must promptly notify the director designated under the  for the purposes of this section of any action taken under subsection (7)."
+                            }
+                        },
+                        {
+                            "@id": "d2e1122",
+                            "bcl:num": "10",
+                            "bcl:text": "[Repealed 2004-55-5.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1132",
+                    "bcl:marginalnote": "Registration of names",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1140",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "Despite sections 4, 6 and 7, if the registrar general considers that a name that a person applying for registration of a birth or an amendment to a registration of birth seeks to give to a child",
+                                "the registrar general must"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1149",
+                                    "bcl:num": "a",
+                                    "bcl:text": "might reasonably be expected to cause",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1158",
+                                            "bcl:num": "i",
+                                            "bcl:text": "mistake or confusion, or"
+                                        },
+                                        {
+                                            "@id": "d2e1168",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "embarrassment to the child or another person,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1177",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is sought for an improper purpose, or"
+                                },
+                                {
+                                    "@id": "d2e1186",
+                                    "bcl:num": "c",
+                                    "bcl:text": "is, on any other ground, objectionable,"
+                                },
+                                {
+                                    "@id": "d2e1198",
+                                    "bcl:num": "d",
+                                    "bcl:text": "register the birth without the name applied for or refuse to amend the existing name on a birth registration, as the case may be, and"
+                                },
+                                {
+                                    "@id": "d2e1207",
+                                    "bcl:num": "e",
+                                    "bcl:text": "notify the applicant promptly of the decision."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1217",
+                            "bcl:num": "2",
+                            "bcl:text": "If, under subsection (1), the registrar general registers the birth without the name applied for or refuses to amend the existing name on a birth registration, the applicant may, within 30 days after receipt of notification of the refusal, appeal the refusal to the minister."
+                        },
+                        {
+                            "@id": "d2e1226",
+                            "bcl:num": "3",
+                            "bcl:text": "The minister may, in the best interests of the child, the applicant and the public,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1420",
+                                    "bcl:num": "a",
+                                    "bcl:text": "order the registrar general to amend the birth registration to include the name for which the applicant applied, or"
+                                },
+                                {
+                                    "@id": "d1e1429",
+                                    "bcl:num": "b",
+                                    "bcl:text": "confirm the registrar general's decision."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1235",
+                            "bcl:num": "4",
+                            "bcl:text": "The minister must promptly notify the applicant of the decision."
+                        },
+                        {
+                            "@id": "d2e1244",
+                            "bcl:num": "5",
+                            "bcl:text": "If an appeal is made to the minister under subsection (2) and the minister confirms the registrar general's decision, the applicant may, within 30 days after receipt of notification of the minister's decision, appeal to the Supreme Court."
+                        },
+                        {
+                            "@id": "d2e1253",
+                            "bcl:num": "6",
+                            "bcl:text": "On an appeal to the Supreme Court under this section, the court may consider the evidence that in the opinion of the court is relevant and may make an order it considers just."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1263",
+                    "bcl:marginalnote": "Amendments respecting given names",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1271",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to section 9 and except in a case to which section 4.1 or 26 applies, this section applies if a child's birth has been registered and an amendment to the registration is desired respecting the child's given name."
+                        },
+                        {
+                            "@id": "d2e1299",
+                            "bcl:num": "2",
+                            "bcl:text": "A parent having guardianship or another guardian of a child, with the consent of all other guardians of the child, or the child after the child has reached 19 years of age, may apply to the registrar general for an amendment in respect of a child's given name by providing",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1308",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an affidavit, in the form required by the registrar general, setting out the particulars of the amendment, and"
+                                },
+                                {
+                                    "@id": "d2e1317",
+                                    "bcl:num": "b",
+                                    "bcl:text": "other documentary evidence satisfactory to the registrar general."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1344",
+                            "bcl:num": "3",
+                            "bcl:text": "On being satisfied that the application under subsection (2) is made in good faith and on payment of the prescribed fee, the registrar general must amend the child's registration of birth."
+                        },
+                        {
+                            "@id": "d2e1354",
+                            "bcl:num": "4",
+                            "bcl:text": "An amendment under this section may be made only in respect of a name given to the child before the child reached 12 years of age."
+                        },
+                        {
+                            "@id": "d2e1363",
+                            "bcl:num": "5",
+                            "bcl:text": "An amendment to a registration of birth in respect of a given name must not be made except as provided in this Act."
+                        },
+                        {
+                            "@id": "d2e1372",
+                            "bcl:num": "6",
+                            "bcl:text": "A birth certificate issued after the making of an amendment under this section must be prepared as if the person's original birth registration had been made containing the given name as amended."
+                        },
+                        {
+                            "@id": "d2e1381",
+                            "bcl:num": "7",
+                            "bcl:text": "If a person whose signature is required under this section cannot be located after adequate search, the applicant and the registrar general may proceed without the certificate of that person."
+                        },
+                        {
+                            "@id": "d2e1390",
+                            "bcl:num": "8",
+                            "bcl:text": "The registrar general is to be the judge of the sufficiency of the evidence that the person cannot be located."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1401",
+                    "bcl:marginalnote": "Stillbirths",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1409",
+                            "bcl:num": "1",
+                            "bcl:text": "A stillbirth in British Columbia must be registered as provided in this Act."
+                        },
+                        {
+                            "@id": "d2e1418",
+                            "bcl:num": "2",
+                            "bcl:text": "Within 48 hours after a stillbirth in British Columbia, a statement, in the form required by the registrar general, respecting the stillbirth must be completed and delivered to a funeral director or a vital statistics registrar by",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1427",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a parent of the stillborn child, or"
+                                },
+                                {
+                                    "@id": "d2e1437",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an adult person, including the funeral director, having knowledge of the facts relevant to the stillbirth."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1446",
+                            "bcl:num": "3",
+                            "bcl:text": "Every medical practitioner in attendance at a stillbirth, or, if there is no medical practitioner in attendance, a medical practitioner, a nurse practitioner or a coroner, must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1657",
+                                    "bcl:num": "a",
+                                    "bcl:text": "complete the medical certificate, included in the form referred to in subsection (2), showing the cause of the stillbirth, and"
+                                },
+                                {
+                                    "@id": "d1e1666",
+                                    "bcl:num": "b",
+                                    "bcl:text": "deliver the medical certificate to the funeral director or a vital statistics registrar."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1455",
+                            "bcl:num": "4",
+                            "bcl:text": "On receipt of the statement, the funeral director must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1464",
+                                    "bcl:num": "a",
+                                    "bcl:text": "complete the statement, setting out the proposed date and place of burial or other disposition of the body, and"
+                                },
+                                {
+                                    "@id": "d2e1473",
+                                    "bcl:num": "b",
+                                    "bcl:text": "deliver or cause to be delivered the statement to a vital statistics registrar."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1482",
+                            "bcl:num": "5",
+                            "bcl:text": "On receipt of the statement, the vital statistics registrar must register the stillbirth if satisfied as to the truth and sufficiency of the statement."
+                        },
+                        {
+                            "@id": "d2e1492",
+                            "bcl:num": "6",
+                            "bcl:text": "On the registration of a stillbirth, a vital statistics registrar must promptly prepare a disposition permit and deliver it to the person requiring it for the purpose of the burial or other disposition of the body of the stillborn child."
+                        },
+                        {
+                            "@id": "d2e1501",
+                            "bcl:num": "7",
+                            "bcl:text": "Subject to this section, sections 2, 6, 7 and 17 to 24 apply to stillbirths."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1511",
+                    "bcl:marginalnote": "Registration of adoption",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1519",
+                            "bcl:num": "1",
+                            "bcl:text": "The registrar general must register an adoption on receipt of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1528",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96005_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adoption Act"
+                                        },
+                                        "#text": "a copy of the order of adoption transmitted under the , or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1540",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the notice of adoption given under section 12.1 of this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1550",
+                            "bcl:num": "2",
+                            "bcl:text": "If, at the time of the registration of the adoption, or at any time afterward, there is in the registrar general's office a registration of the birth of the person adopted, the registrar general, on production of evidence satisfactory to the registrar general of the identity of the person, must amend the original birth registration in accordance with the facts contained in the order or notice of adoption."
+                        },
+                        {
+                            "@id": "d2e1559",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "If a person is adopted under an order, judgment or decree of adoption made by a court of competent jurisdiction in another province, state or country, the registrar general,",
+                                "must, if there is in the registrar general's office a registration of the birth of that person, register the adoption in the manner referred to in subsection (1) and amend the birth registration in the manner referred to in subsection (2)."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1568",
+                                    "bcl:num": "a",
+                                    "bcl:text": "on receipt of a certified copy of the order, judgment or decree, and"
+                                },
+                                {
+                                    "@id": "d2e1577",
+                                    "bcl:num": "b",
+                                    "bcl:text": "on production of evidence satisfactory to the registrar general of the identity of the person,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1589",
+                            "bcl:num": "4",
+                            "bcl:text": "If a person born outside British Columbia is adopted in British Columbia, the registrar general may transmit to the person who has charge of the registration of births in the province, state or country in which the person was born,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1599",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96005_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adoption Act"
+                                        },
+                                        "#text": "for adoptions under the , a certified copy of the order of adoption,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1611",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for adoptions under a law of a treaty first nation, a copy of the notice of adoption under section 12.1 of this Act, if any, or"
+                                },
+                                {
+                                    "@id": "d2e1614",
+                                    "bcl:num": "c",
+                                    "bcl:text": "for adoptions under a law of the Nisg\u0331a'a Nation, a copy of the notice of adoption under section 12.1 of this Act, if any."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1621",
+                    "bcl:marginalnote": "Notice of adoptions under Nisg\u0331a'a or treaty first nation laws",
+                    "bcl:num": "12.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1629",
+                            "bcl:num": "1",
+                            "bcl:text": "If a treaty first nation makes a law in accordance with its final agreement providing for the adoption of children, the treaty first nation may give notice to the registrar general of an adoption occurring under that law."
+                        },
+                        {
+                            "@id": "d2e1633",
+                            "bcl:num": "1.1",
+                            "bcl:text": "If the Nisg\u0331a'a Lisims Government makes a law in accordance with the Nisg\u0331a'a Final Agreement providing for the adoption of children, the Nisg\u0331a'a Lisims Government may give notice to the registrar general of an adoption occurring under that law."
+                        },
+                        {
+                            "@id": "d2e1638",
+                            "bcl:num": "2",
+                            "bcl:text": "A notice under subsection (1) or (1.1) must be given in the form required by the registrar general."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1648",
+                    "bcl:marginalnote": "Special register of adoptions",
+                    "bcl:num": "13",
+                    "bcl:text": "The registrar general must maintain a special register in which the registrar general must keep",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1659",
+                            "bcl:num": "a",
+                            "bcl:text": "the original birth registrations as they appeared before being amended under section\u00a012, and"
+                        },
+                        {
+                            "@id": "d2e1668",
+                            "bcl:num": "b",
+                            "bcl:text": "the copies of all orders, judgments and decrees received by the registrar general for the purposes of section 12, other than the copy required for the purposes of section 12 (4)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1678",
+                    "bcl:marginalnote": "Birth certificate after adoption",
+                    "bcl:num": "14",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1686",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If a child born in British Columbia is adopted under the laws of British Columbia, a treaty first nation, the Nisg\u0331a'a Nation or another jurisdiction and a registration of adoption has been made under section\u00a012, a certificate of birth of that child subsequently issued by the registrar general",
+                                "and nothing must appear on any certificate of birth issued by the registrar general that would disclose that the child is an adopted child."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1695",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must be in accordance with the birth registration as amended under section 12, and"
+                                },
+                                {
+                                    "@id": "d2e1704",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96005_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adoption Act"
+                                        },
+                                        "#text": "in any case where parentage is shown, must indicate the adopting parents in accordance with the  or the notice under section 12.1 of this Act,"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1720",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96005_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Adoption Act"
+                                },
+                                "#text": "Subsection (1) is subject to sections 63 and 64 of the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1733",
+                    "bcl:marginalnote": "Birth certificate if assisted reproduction",
+                    "bcl:num": "14.1",
+                    "bcl:text": "If a child is born in British Columbia as a result of assisted reproduction, nothing must appear on any certificate issued by the registrar general that would disclose that the child was born as a result of assisted reproduction."
+                },
+                {
+                    "@id": "d2e1746",
+                    "bcl:marginalnote": "Registration of marriages",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1754",
+                            "bcl:num": "1",
+                            "bcl:text": "A marriage solemnized in British Columbia must be registered as provided in this Act."
+                        },
+                        {
+                            "@id": "d2e1763",
+                            "bcl:num": "2",
+                            "bcl:text": "A person authorized by law to solemnize marriage in British Columbia must, immediately after the person solemnizes a marriage, prepare a statement in the form required by the registrar general respecting the marriage, which statement must be signed by all of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1772",
+                                    "bcl:num": "a",
+                                    "bcl:text": "each of the parties to the marriage;"
+                                },
+                                {
+                                    "@id": "d2e1782",
+                                    "bcl:num": "b",
+                                    "bcl:text": "at least 2 witnesses to the marriage;"
+                                },
+                                {
+                                    "@id": "d2e1791",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the person by whom the marriage was solemnized."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1800",
+                            "bcl:num": "3",
+                            "bcl:text": "The person who solemnized the marriage must provide the registrar general with the statement completed under subsection (2) within 2 days after the date of the marriage."
+                        },
+                        {
+                            "@id": "d2e1809",
+                            "bcl:num": "4",
+                            "bcl:text": "On the receipt within one year from the day of a marriage of a completed statement respecting the marriage, the registrar general must register the marriage if satisfied as to the truth and sufficiency of the statement."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1819",
+                    "bcl:marginalnote": "Marriage registration after one year",
+                    "bcl:num": "16",
+                    "bcl:text": [
+                        "If a marriage is not registered within one year from the day of the marriage and application for registration of it is made by any person to the registrar general by affidavit accompanied by",
+                        "the registrar general must register the marriage if satisfied as to the truth and sufficiency of the matters stated in the application and that the application is made in good faith."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1830",
+                            "bcl:num": "a",
+                            "bcl:text": "a statement in the form required by the registrar general respecting the marriage, and"
+                        },
+                        {
+                            "@id": "d2e1839",
+                            "bcl:num": "b",
+                            "bcl:text": "other evidence as may be prescribed,"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1853",
+                    "bcl:marginalnote": "Particulars of deaths",
+                    "bcl:num": "17",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1861",
+                            "bcl:num": "1",
+                            "bcl:text": "The death of a person who dies in British Columbia must be registered as provided in this Act."
+                        },
+                        {
+                            "@id": "d2e1870",
+                            "bcl:num": "2",
+                            "bcl:text": "The personal particulars of the deceased person must, on the request of the funeral director, be set out in a statement in the form required by the registrar general and delivered to the funeral director by one of the following as applicable:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1879",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by the nearest relative of the deceased present at the death or in attendance at the last illness of the deceased;"
+                                },
+                                {
+                                    "@id": "d2e1889",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if no such relative is available, by any relative of the deceased;"
+                                },
+                                {
+                                    "@id": "d2e1898",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if no relative is available, by any adult person present at the death;"
+                                },
+                                {
+                                    "@id": "d2e1907",
+                                    "bcl:num": "d",
+                                    "bcl:text": "by any other adult person having knowledge of the facts;"
+                                },
+                                {
+                                    "@id": "d2e1916",
+                                    "bcl:num": "e",
+                                    "bcl:text": "by the occupier of the premises in which the death occurred;"
+                                },
+                                {
+                                    "@id": "d2e1925",
+                                    "bcl:num": "f",
+                                    "bcl:text": "by the coroner who has been notified of the death and has made an investigation or held an inquest regarding the death."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1935",
+                    "bcl:marginalnote": "Medical certificate",
+                    "bcl:num": "18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1943",
+                            "bcl:num": "1",
+                            "bcl:text": "A medical certificate must be prepared in accordance with subsection (2) in any of the following circumstances:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1952",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if a medical practitioner or nurse practitioner",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1961",
+                                            "bcl:num": "i",
+                                            "bcl:text": "attended the deceased during the deceased's last illness,"
+                                        },
+                                        {
+                                            "@id": "d2e1971",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "is able to certify the medical cause of death with reasonable accuracy, and"
+                                        },
+                                        {
+                                            "@id": "d2e1980",
+                                            "bcl:num": "iii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/07015_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Coroners Act"
+                                                },
+                                                "#text": "has no reason to believe that the deceased died under circumstances which require an investigation or inquest under the ;"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1992",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the death was natural and a medical practitioner or nurse practitioner",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2001",
+                                            "bcl:num": "i",
+                                            "bcl:text": "is able to certify the medical cause of death with reasonable accuracy, and"
+                                        },
+                                        {
+                                            "@id": "d2e2010",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "has received the consent of a coroner to complete and sign the medical certificate;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2019",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/07015_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Coroners Act"
+                                        },
+                                        "#text": "if a coroner conducts an investigation or inquest into the death under the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2032",
+                            "bcl:num": "2",
+                            "bcl:text": "Within 48 hours after the death, the medical practitioner, nurse practitioner or coroner, as applicable, must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2041",
+                                    "bcl:num": "a",
+                                    "bcl:text": "complete and sign a medical certificate in the form required by the registrar general stating in it the cause of death according to the international classification, and"
+                                },
+                                {
+                                    "@id": "d2e2050",
+                                    "bcl:num": "b",
+                                    "bcl:text": "make the certificate available to the funeral director."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2059",
+                            "bcl:num": "3",
+                            "bcl:text": "A funeral director, medical practitioner or nurse practitioner must promptly notify the coroner if either of the following circumstances occurs:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2068",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a death occurred without the attendance of a medical practitioner or nurse practitioner during the last illness of the deceased;"
+                                },
+                                {
+                                    "@id": "d2e2077",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the medical practitioner or nurse practitioner who attended the deceased is for any reason unable to complete the medical certificate within 48 hours after the death."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2090",
+                            "bcl:num": "4",
+                            "bcl:text": [
+                                "If a cause of death cannot be determined within 48 hours after the death and",
+                                {
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/07015_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Coroners Act"
+                                    },
+                                    "#text": "and the medical practitioner who performs the autopsy or the coroner who commences an investigation or inquest under the , as the case may be, considers that the body is no longer required for the purposes of the autopsy, investigation or inquest, the medical practitioner or the coroner, as the case may be, may, despite subsection (1), issue and must make available to the funeral director an interim medical certificate in the form required by the registrar general."
+                                }
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2099",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an autopsy is performed, or"
+                                },
+                                {
+                                    "@id": "d2e2108",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/07015_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Coroners Act"
+                                        },
+                                        "#text": "an investigation or inquest is commenced under the ,"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2126",
+                            "bcl:num": "5",
+                            "bcl:text": "After the conclusion of the autopsy, investigation or inquest referred to in subsection (4),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2136",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the medical practitioner who performed the autopsy, or the coroner, must complete and sign the medical certificate referred to in subsection (2) and deliver it to the registrar general, and"
+                                },
+                                {
+                                    "@id": "d2e2145",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/07015_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Coroners Act"
+                                        },
+                                        "#text": "the coroner must deliver a copy of any report prepared under section 13 (3) or 16 of the  to the registrar general."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2158",
+                    "bcl:marginalnote": "Statement and certificate to vital statistics registrar",
+                    "bcl:num": "19",
+                    "bcl:text": "On receipt of the statement referred to in section 17 (2) and of the medical certificate or the interim medical certificate, the funeral director must promptly deliver the statement and certificate to a vital statistics registrar."
+                },
+                {
+                    "@id": "d2e2170",
+                    "bcl:marginalnote": "Registration of death",
+                    "bcl:num": "20",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2178",
+                            "bcl:num": "1",
+                            "bcl:text": "A vital statistics registrar or the registrar general must register a death if the statement and certificate under section\u00a019 are received within one year from the date of the death and the vital statistics registrar or registrar general is satisfied as to the truth and sufficiency of the statement."
+                        },
+                        {
+                            "@id": "d2e2187",
+                            "bcl:num": "2",
+                            "bcl:text": "If a death is not registered within one year from the date of the death, and if application for registration of it is made by any person to the registrar general accompanied by the statement and certificate under section\u00a019 and other evidence as may be prescribed, the registrar general must register the death if satisfied as to the truth and sufficiency of the matters stated in the application and that the application is made in good faith."
+                        },
+                        {
+                            "@id": "d2e2196",
+                            "bcl:num": "3",
+                            "bcl:text": "On receiving a court order that declares a person to be presumed dead for all purposes, the registrar general must register the death."
+                        },
+                        {
+                            "@id": "d2e2206",
+                            "bcl:num": "4",
+                            "bcl:text": "Each month, the registrar general must provide to the chief electoral officer a list of the names and addresses of persons whose deaths were registered with a vital statistics registrar or the registrar general since the last list was provided."
+                        },
+                        {
+                            "@id": "d2e2215",
+                            "bcl:num": "5",
+                            "bcl:text": "If requested by the chief electoral officer for the purpose of resolving an objection to the registration of a voter or an elector, the registrar general must conduct a search of the register of deaths and report the results to the chief electoral officer."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2226",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "21",
+                    "bcl:text": "[Repealed 2002-74-17.]"
+                },
+                {
+                    "@id": "d2e2238",
+                    "bcl:marginalnote": "Disposition permit",
+                    "bcl:num": "22",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2246",
+                            "bcl:num": "1",
+                            "bcl:text": "On receipt of the statement and certificate under section 19, a vital statistics registrar must prepare a disposition permit and issue it to the funeral director."
+                        },
+                        {
+                            "@id": "d2e2255",
+                            "bcl:num": "2",
+                            "bcl:text": "[Repealed 2002-74-18.]"
+                        },
+                        {
+                            "@id": "d2e2264",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "A person must not",
+                                "unless a disposition permit in respect of the deceased has been obtained from a vital statistics registrar."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2274",
+                                    "bcl:num": "a",
+                                    "bcl:text": "bury or otherwise dispose of the body of a person who dies in British Columbia, or"
+                                },
+                                {
+                                    "@id": "d2e2283",
+                                    "bcl:num": "b",
+                                    "bcl:text": "remove the body from the community where the death occurred or the body was found, except temporarily for the purpose of preparing it for burial,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2295",
+                            "bcl:num": "4",
+                            "bcl:text": "If the body of a person is to be removed by a common carrier to the place of burial or other disposition, the removal must not take place unless the appropriate copies of the disposition permit have been attached to the outside of the casket."
+                        },
+                        {
+                            "@id": "d2e2304",
+                            "bcl:num": "5",
+                            "bcl:text": "A funeral director must do the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2313",
+                                    "bcl:num": "a",
+                                    "bcl:text": "at the place of burial or other disposition of a dead body, remove the copies of the disposition permit attached to the outside of the casket;"
+                                },
+                                {
+                                    "@id": "d2e2323",
+                                    "bcl:num": "b",
+                                    "bcl:text": "before the burial or other disposition of a dead body, deliver the appropriate copy of the disposition permit to the person conducting the funeral or religious service;"
+                                },
+                                {
+                                    "@id": "d2e2332",
+                                    "bcl:num": "c",
+                                    "bcl:text": "at the time of burial or other disposition of a dead body,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2341",
+                                            "bcl:num": "i",
+                                            "bcl:text": "subject to subparagraph (ii), deliver the appropriate copy of the disposition permit to the operator of the cemetery, mausoleum or crematorium, or"
+                                        },
+                                        {
+                                            "@id": "d2e2350",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "if no person is in charge of the cemetery or mausoleum at time of burial or other disposition, sign the appropriate copy of the disposition permit and write \"No person in charge\" on the face and deliver the disposition permit to the registrar general."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2359",
+                            "bcl:num": "6",
+                            "bcl:text": "If a death occurs outside British Columbia and the burial or other disposition of the body is to take place in British Columbia, a disposition permit or other document authorized under the law of the province or country in which the death occurs, signed by a vital statistics registrar or other proper officer, is sufficient authority for the burial or other disposition of the body."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2369",
+                    "bcl:marginalnote": "Cemetery or crematorium operator's duties",
+                    "bcl:num": "23",
+                    "bcl:text": "The operator of a cemetery, mausoleum or crematorium must not permit the interment or cremation of a dead body unless the operator holds the appropriate copy of the disposition permit or other document described under section 22."
+                },
+                {
+                    "@id": "d2e2381",
+                    "bcl:marginalnote": "Birth or death on aircraft or ship",
+                    "bcl:num": "24",
+                    "bcl:text": "If the birth or death of a person occurs on an aircraft or ship whose first stop after the birth or death is in British Columbia, the registrar general may register the birth or death."
+                },
+                {
+                    "@id": "d2e2393",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "25",
+                    "bcl:text": "[Repealed 2002-74-20.]"
+                },
+                {
+                    "@id": "d2e2405",
+                    "bcl:marginalnote": "Amendment to name",
+                    "bcl:num": "26",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2413",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96328_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Name Act"
+                                },
+                                "#text": "If the name of a person is changed under the  or under a statute of another province, the registrar general, on production to the registrar general of proof of the change and evidence satisfactory to the registrar general as to the identity of the person,"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2425",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if the birth or marriage of the person is registered in British Columbia, must amend the registration of birth or marriage, as applicable, to reflect the change, and"
+                                },
+                                {
+                                    "@id": "d2e2434",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96328_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Name Act"
+                                        },
+                                        "#text": "if the change was made under the  and the person was born or married in Canada but outside British Columbia, must transmit to the officer in charge of the registration of births and marriages in the jurisdiction in which the person was born or married a copy of the proof of the change of name produced to the registrar general."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2447",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96328_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Name Act"
+                                },
+                                "#text": "A birth or marriage certificate, issued after the recording of a change under this section, must be issued as if the original registration had been made in the name of the person as changed under the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2461",
+                    "bcl:marginalnote": "Amendment to sex designation",
+                    "bcl:num": "27",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2469",
+                            "bcl:num": "1",
+                            "bcl:text": "This section applies if a person's birth has been registered in British Columbia and an amendment to the registration is desired respecting the person's sex designation."
+                        },
+                        {
+                            "@id": "d2e2478",
+                            "bcl:num": "2",
+                            "bcl:text": "A person may apply to the registrar general for an amendment to the sex designation on the person's birth registration by providing all of the following in the form required by the registrar general:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2487",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an application setting out the desired amendment;"
+                                },
+                                {
+                                    "@id": "d2e2497",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a declaration, made by the applicant, stating that the applicant has assumed, identifies with and intends to maintain the gender identity that corresponds with the desired sex designation;"
+                                },
+                                {
+                                    "@id": "d2e2524",
+                                    "bcl:num": "c",
+                                    "bcl:text": "in the case of a minor who is less than 12 years of age, a statement from one of the following persons that confirms that the sex designation on the applicant's birth registration does not correspond with the applicant's gender identity:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2533",
+                                            "bcl:num": "i",
+                                            "bcl:text": "a practising registrant of the College of Physicians and Surgeons of British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e2542",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "a practising registrant of the College of Psychologists of British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e2552",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "in the case of an applicant who resides outside British Columbia, a person who is practising and who is authorized, in another province or territory, to practise a health profession equivalent to that practised by a person referred to in subparagraph (i) or (ii);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3058",
+                                    "bcl:num": "d",
+                                    "bcl:text": "in the case of a minor, the consent of all parents having guardianship and all other guardians of the minor."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2561",
+                            "bcl:num": "3",
+                            "bcl:text": "The minister may waive or modify a requirement of subsection (2)",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e3076",
+                                    "bcl:num": "a",
+                                    "bcl:text": "on application in the form required by the minister, made by the person desiring the amendment to the person's birth registration, and"
+                                },
+                                {
+                                    "@id": "d1e3085",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if satisfied that the waiver or modification would be in the person's best interests."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3096",
+                            "bcl:num": "4",
+                            "bcl:text": "On being satisfied that an application under subsection (2) is made in good faith and on payment of the prescribed fee, the registrar general must amend the person's birth registration."
+                        },
+                        {
+                            "@id": "d1e3105",
+                            "bcl:num": "5",
+                            "bcl:text": "Except as provided under section 36 (2) (d), a birth certificate issued after the making of an amendment under this section must be prepared as if the person's original birth registration had been made containing the sex designation as amended."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2571",
+                    "bcl:marginalnote": "Registrations fraudulently or improperly obtained",
+                    "bcl:num": "28",
+                    "bcl:text": "If, after the notice to and hearing of those interested parties as the registrar general considers proper, the registrar general is satisfied that a registration under this Act was fraudulently or improperly obtained, the registrar general may order that it be cancelled, and after that a certificate must not be issued in respect of the registration."
+                },
+                {
+                    "@id": "d2e2583",
+                    "bcl:marginalnote": "Corrections of errors and omissions",
+                    "bcl:num": "29",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2591",
+                            "bcl:num": "1) and (2",
+                            "bcl:text": "[Repealed 2002-74-22.]"
+                        },
+                        {
+                            "@id": "d2e2600",
+                            "bcl:num": "3",
+                            "bcl:text": "If on receipt and examination of a registration it appears to the registrar general that an error or omission exists in the registration, the registrar general must inquire into the matter and may correct the error or omission on production of evidence of the error or omission satisfactory to the registrar general."
+                        },
+                        {
+                            "@id": "d2e2609",
+                            "bcl:num": "4",
+                            "bcl:text": "If after a registration has been filed by the registrar general, it is reported to the registrar general that an error or omission exists in the registration, the registrar general must inquire into the matter, and may correct the error or omission on production of evidence of the error or omission satisfactory to the registrar general verified by affidavit and on payment of the prescribed fee."
+                        },
+                        {
+                            "@id": "d2e2619",
+                            "bcl:num": "5",
+                            "bcl:text": "If, after the correction of an error or omission application is made for a certificate, the certificate must be prepared as if the registration had been made containing correct particulars at the time of registration, except that a photostatic copy or photographic print of the registration must include both the original information and all amendments made under subsections (3) and (4)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2629",
+                    "bcl:marginalnote": "Appeal from decision of registrar general",
+                    "bcl:num": "30",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2637",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who wishes to dispute a decision of the registrar general to either accept or refuse an application for registration of a birth, stillbirth, marriage or death may, within one year of the registrar general's decision, make an application to the Supreme Court for an order requiring the registrar general",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2646",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to accept the application for registration and register the birth, stillbirth, marriage or death, as applicable, or"
+                                },
+                                {
+                                    "@id": "d2e2655",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to reject the application for registration and cancel any registration of the birth, stillbirth, marriage or death, as applicable, that was made."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2665",
+                            "bcl:num": "2",
+                            "bcl:text": "On an application under subsection (1), the court may make an order described in that subsection if the court",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2674",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is satisfied",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2683",
+                                            "bcl:num": "i",
+                                            "bcl:text": "that the application is made in good faith, and"
+                                        },
+                                        {
+                                            "@id": "d2e2692",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "of the truth and sufficiency of the evidence adduced on the application, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2701",
+                                    "bcl:num": "b",
+                                    "bcl:text": "considers the standards respecting delayed registration set out in the regulations for the guidance of the registrar general."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2710",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2004-55-10.]"
+                        },
+                        {
+                            "@id": "d2e2720",
+                            "bcl:num": "4",
+                            "bcl:text": "The clerk of the court must promptly send a copy of an order under subsection (2) to the registrar general, who must comply with the order and attach the copy to the registration."
+                        },
+                        {
+                            "@id": "d2e2729",
+                            "bcl:num": "5",
+                            "bcl:text": "If an application for a certificate or a search in respect of the registration of a birth, stillbirth, marriage or death is refused by the registrar general, an application may be made to the Supreme Court for an order under subsection (7)."
+                        },
+                        {
+                            "@id": "d2e2738",
+                            "bcl:num": "6",
+                            "bcl:text": "An application under subsection (7) must be made within one year of the refusal by the registrar general."
+                        },
+                        {
+                            "@id": "d2e2747",
+                            "bcl:num": "7",
+                            "bcl:text": [
+                                "On an application respecting a refusal referred to in subsection (5), the court may, on being satisfied that",
+                                "order the registrar general to issue the certificate or make the search."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2756",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the application is made in good faith, and"
+                                },
+                                {
+                                    "@id": "d2e2765",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the applicant has good reason for requiring the certificate or search"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2778",
+                            "bcl:num": "8",
+                            "bcl:text": "The clerk of the court must promptly forward a copy of the order to the registrar general, who must comply with it."
+                        },
+                        {
+                            "@id": "d2e2787",
+                            "bcl:num": "9",
+                            "bcl:text": "Any interested person may appeal to the Supreme Court if the registrar general makes an order to cancel",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2796",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a registration under section 28, or"
+                                },
+                                {
+                                    "@id": "d2e2805",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a certificate under section 40.1 (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2814",
+                            "bcl:num": "10",
+                            "bcl:text": "An appeal under subsection (9) may be heard at any time after the order being appealed is made."
+                        },
+                        {
+                            "@id": "d2e2824",
+                            "bcl:num": "11",
+                            "bcl:text": "On an appeal under subsection (9), the court may make an order confirming or setting aside the order of the registrar general, and the order of the court is final and is binding on the registrar general."
+                        },
+                        {
+                            "@id": "d2e2833",
+                            "bcl:num": "12",
+                            "bcl:text": "An application or appeal must not be made under this section unless at least 30 days' notice of the hearing of the application has been served on the registrar general, accompanied by",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2842",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a statement of the particulars of the application, and"
+                                },
+                                {
+                                    "@id": "d2e2851",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a copy of each paper intended to be produced to the court on the hearing of the application or appeal."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2861",
+                    "bcl:marginalnote": "The Vital Statistics Agency",
+                    "bcl:num": "31",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2869",
+                            "bcl:num": "1",
+                            "bcl:text": "There must be a Vital Statistics Agency in the minister's ministry."
+                        },
+                        {
+                            "@id": "d2e2878",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "The registrar general of vital statistics must be appointed under the  to supervise the work of the Vital Statistics Agency."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2891",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "32",
+                    "bcl:text": "[Repealed 2002-74-25.]"
+                },
+                {
+                    "@id": "d2e2904",
+                    "bcl:marginalnote": "Vital statistics registrars",
+                    "bcl:num": "33",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2912",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister may appoint vital statistics registrars necessary for carrying out this Act."
+                        },
+                        {
+                            "@id": "d2e2921",
+                            "bcl:num": "2",
+                            "bcl:text": "[Repealed 2014-14-119.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2931",
+                    "bcl:marginalnote": "Enforcement duties of vital statistics registrars",
+                    "bcl:num": "34",
+                    "bcl:text": "A vital statistics registrar must",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e2942",
+                            "bcl:num": "a",
+                            "bcl:text": "under the supervision and direction of the registrar general and in accordance with the regulations, enforce this Act, and"
+                        },
+                        {
+                            "@id": "d2e2951",
+                            "bcl:num": "b",
+                            "bcl:text": "immediately report any violation of this Act to the registrar general."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2961",
+                    "bcl:marginalnote": "Searches of registration records",
+                    "bcl:num": "35",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2969",
+                            "bcl:num": "1",
+                            "bcl:text": "If a person applies in the form required by the registrar general and pays the prescribed fee, and if the registrar general is satisfied that the information is not to be used for an unlawful or improper purpose, the registrar general must make a search for the registration of any birth, stillbirth, marriage, death, change of name or adoption."
+                        },
+                        {
+                            "@id": "d2e2978",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar general must make a written report on the search to the person who applied under subsection (1) stating whether or not the birth, stillbirth, marriage, death, change of name or adoption is registered or recorded and the report must not contain further information."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2988",
+                    "bcl:marginalnote": "Birth certificates",
+                    "bcl:num": "36",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2996",
+                            "bcl:num": "1",
+                            "bcl:text": "A certificate of birth may be issued by the registrar general, on application in the form required by the registrar general and on payment of the prescribed fee, only to the following persons:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3005",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person who is the subject of the certificate;"
+                                },
+                                {
+                                    "@id": "d2e3014",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a parent of the person who is subject of the certificate, if that person is less than 19 years of age or is incapable;"
+                                },
+                                {
+                                    "@id": "d2e3024",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a guardian of the person who is subject of the certificate, if that person is less than 19 years of age or is incapable;"
+                                },
+                                {
+                                    "@id": "d2e3033",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a person who has written authorization from a person described in paragraph (a), (b) or (c) to be issued the certificate;"
+                                },
+                                {
+                                    "@id": "d2e3042",
+                                    "bcl:num": "e",
+                                    "bcl:text": "an officer of any provincial government or the government of Canada who requires the certificate for use in the discharge of official duties;"
+                                },
+                                {
+                                    "@id": "d2e3051",
+                                    "bcl:num": "f",
+                                    "bcl:text": "any other person who satisfies the registrar general concerning the good faith of the person's cause for requiring the certificate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3060",
+                            "bcl:num": "2",
+                            "bcl:text": "A birth certificate must contain all of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3069",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the name of the person;"
+                                },
+                                {
+                                    "@id": "d2e3079",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the date of birth;"
+                                },
+                                {
+                                    "@id": "d2e3088",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the place of birth;"
+                                },
+                                {
+                                    "@id": "d2e3097",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the sex of the person, unless the applicant for the certificate requests, as part of the application under subsection (1), that the person's sex not be included;"
+                                },
+                                {
+                                    "@id": "d2e3106",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the date of registration;"
+                                },
+                                {
+                                    "@id": "d2e3115",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the serial number of the registration."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3124",
+                            "bcl:num": "3",
+                            "bcl:text": "A birth certificate may contain the names and places of birth of the parents."
+                        },
+                        {
+                            "@id": "d2e3134",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96005_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Adoption Act"
+                                },
+                                "#text": "Subject to sections 63 (2) and 64 (3) of the , a certified copy or certified electronic extract of a registration of birth, or of a portion of the copy or extract, may be issued, on application in the form required by the registrar general and on payment of the prescribed fee, by the registrar general only to the following persons:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3146",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a person who is eligible to receive a certificate of birth under subsection (1);"
+                                },
+                                {
+                                    "@id": "d2e3155",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a parent of the person who is the subject of the registration, regardless of the age or capability of that person;"
+                                },
+                                {
+                                    "@id": "d2e3164",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if the person described under subsection (1) (a) is deceased, the nearest living relative of that person;"
+                                },
+                                {
+                                    "@id": "d2e3173",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96005_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adoption Act"
+                                        },
+                                        "#text": "a person who requires the copy or extract to comply with section 32 (b) of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3185",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/08028_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Health Act"
+                                        },
+                                        "#text": "a medical health officer designated under the  who requires the copy or extract for use in the discharge of official duties;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3198",
+                                    "bcl:num": "f",
+                                    "bcl:text": "any person, if",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3207",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the person described under subsection (1) (a) has been deceased for 20 years or more, or"
+                                        },
+                                        {
+                                            "@id": "d2e3216",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "more than 120 years have passed since the birth of the person described under subsection (1) (a);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3225",
+                                    "bcl:num": "g",
+                                    "bcl:text": "any other person who satisfies the registrar general concerning the good faith of the person's cause for requiring the copy or extract."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3235",
+                    "bcl:marginalnote": "Marriage certificates",
+                    "bcl:num": "37",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3243",
+                            "bcl:num": "1",
+                            "bcl:text": "A certificate of marriage may be issued by the registrar general, on application in the form required by the registrar general and on payment of the prescribed fee, only to the following persons:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3252",
+                                    "bcl:num": "a",
+                                    "bcl:text": "either party to the marriage;"
+                                },
+                                {
+                                    "@id": "d2e3261",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a person who has written authorization from a person described in paragraph (a) to be issued the certificate;"
+                                },
+                                {
+                                    "@id": "d2e3271",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an officer of any provincial government or the government of Canada who requires the certificate for use in the discharge of official duties;"
+                                },
+                                {
+                                    "@id": "d2e3280",
+                                    "bcl:num": "d",
+                                    "bcl:text": "any other person who satisfies the registrar general concerning the good faith of the person's cause for requiring the certificate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3289",
+                            "bcl:num": "2",
+                            "bcl:text": "A certified copy or certified electronic extract of a registration of marriage may be issued by the registrar general, on application in the form required by the registrar general and on payment of the prescribed fee, only to the following persons:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3298",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a person who is eligible to receive a certificate of marriage under subsection (1);"
+                                },
+                                {
+                                    "@id": "d2e3307",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if a person described under subsection (1) (a) is deceased, the nearest living relative of that person;"
+                                },
+                                {
+                                    "@id": "d2e3316",
+                                    "bcl:num": "c",
+                                    "bcl:text": "any person, if",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3326",
+                                            "bcl:num": "i",
+                                            "bcl:text": "both parties described under subsection (1) (a) have been deceased for 20 years or more, or"
+                                        },
+                                        {
+                                            "@id": "d2e3335",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "more than 75 years have passed since the marriage of the parties described under subsection (1) (a);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3344",
+                                    "bcl:num": "d",
+                                    "bcl:text": "any other person who satisfies the registrar general concerning the good faith of the person's cause for requiring the copy or extract."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3354",
+                    "bcl:marginalnote": "Death certificate",
+                    "bcl:num": "38",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3362",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), any person, on application in the form required by the registrar general, the furnishing of information satisfactory to the registrar general and the payment of the prescribed fee, may obtain from the registrar general a certificate of death."
+                        },
+                        {
+                            "@id": "d2e3371",
+                            "bcl:num": "2",
+                            "bcl:text": "A certificate issued in respect of the registration of a death must not be issued in a manner as to disclose the cause of death as certified on the medical certificate, except",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3380",
+                                    "bcl:num": "a",
+                                    "bcl:text": "on the authority in writing of the deputy minister, or"
+                                },
+                                {
+                                    "@id": "d2e3390",
+                                    "bcl:num": "b",
+                                    "bcl:text": "on the order of a court."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3399",
+                            "bcl:num": "3",
+                            "bcl:text": "A certified copy or certified electronic extract of a registration of a death or stillbirth may be issued by the registrar general, on application in the form required by the registrar general and on payment of the prescribed fee, only to the following persons:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3408",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the nearest living relative of the deceased;"
+                                },
+                                {
+                                    "@id": "d2e3417",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a medical practitioner or nurse practitioner who requires the copy or extract for use in the treatment of a member of the deceased's immediate family, if the family member's illness, in the opinion of the medical practitioner or nurse practitioner, may be life threatening;"
+                                },
+                                {
+                                    "@id": "d2e3426",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a person who is authorized by a court order to be issued the copy or extract;"
+                                },
+                                {
+                                    "@id": "d2e3435",
+                                    "bcl:num": "d",
+                                    "bcl:text": "an officer of any provincial government or the government of Canada who requires the copy or extract for use in the discharge of official duties;"
+                                },
+                                {
+                                    "@id": "d2e3445",
+                                    "bcl:num": "e",
+                                    "bcl:text": "any person, if more than 20 years have passed since the death of the deceased;"
+                                },
+                                {
+                                    "@id": "d2e3454",
+                                    "bcl:num": "f",
+                                    "bcl:text": "any other person who satisfies the registrar general concerning the good faith of the person's cause for requiring the copy or extract."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3463",
+                            "bcl:num": "4",
+                            "bcl:text": "Any person, on application in the form required by the registrar general and payment of the prescribed fee, may, before the inclusion of the registration in any return to the registrar general, obtain from a vital statistics registrar a certificate in the form required by the registrar general of a death of which there is a registration in the vital statistics registrar's office."
+                        },
+                        {
+                            "@id": "d2e3472",
+                            "bcl:num": "5",
+                            "bcl:text": "Except under subsection (4), no certificate and no certified copy or certified electronic extract must be issued by a vital statistics registrar."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3483",
+                    "bcl:marginalnote": "Certificates generally",
+                    "bcl:num": "39",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3491",
+                            "bcl:num": "1",
+                            "bcl:text": "[Repealed 2002-74-30.]"
+                        },
+                        {
+                            "@id": "d2e3500",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar general may refuse to issue a certificate, certified copy or certified electronic extract if the registrar general has reason to believe that the document is to be used for an unlawful or improper purpose."
+                        },
+                        {
+                            "@id": "d2e3509",
+                            "bcl:num": "3",
+                            "bcl:text": "A vital statistics registrar may refuse to issue a certificate of death if the vital statistics registrar has reason to believe that the document is to be used for an unlawful or improper purpose."
+                        },
+                        {
+                            "@id": "d2e3519",
+                            "bcl:num": "4",
+                            "bcl:text": "The deputy minister may, by a written order signed by the deputy minister and directed to the registrar general, require the registrar general, when issuing a certificate, certified copy or certified electronic extract under this section,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3528",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to dispense with the production of the authority in writing of the deputy minister required under section 38 (2), or"
+                                },
+                                {
+                                    "@id": "d2e3537",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to dispense with the production of that written authority in the cases, or in the circumstances, as the deputy minister may set out in the order."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3546",
+                            "bcl:num": "5",
+                            "bcl:text": "The registrar general must comply with an order under subsection (4)."
+                        },
+                        {
+                            "@id": "d2e3555",
+                            "bcl:num": "6",
+                            "bcl:text": "If the deputy minister has issued an order under subsection (4), the deputy minister may at any time amend or revoke it or issue a further order under it."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3565",
+                    "bcl:marginalnote": "Who is to issue certificates",
+                    "bcl:num": "40",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3573",
+                            "bcl:num": "1",
+                            "bcl:text": "Except as provided in section 38 (4), a certificate, certified copy or certified electronic extract issued under section 36, 37, 38 or 39 must be issued by the registrar general."
+                        },
+                        {
+                            "@id": "d2e3582",
+                            "bcl:num": "2",
+                            "bcl:text": "A person other than a person authorized under this Act to do so must not issue any document that purports to be issued under this Act."
+                        },
+                        {
+                            "@id": "d2e3591",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "If the signature of",
+                                "the signature may be written or reproduced by any method."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3601",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the registrar general or acting registrar general is required for any purposes of this Act, or"
+                                },
+                                {
+                                    "@id": "d2e3610",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a vital statistics registrar specifically designated in writing by the registrar general is required on any certificate issued under this Act,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3622",
+                            "bcl:num": "4",
+                            "bcl:text": "Unless cancelled under section 40.1, a document or certificate issued under this Act under the signature of a person described in subsection (3) is valid, even if the signatory ceased to hold office before the issue of the document or certificate."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3632",
+                    "bcl:marginalnote": "Cancellation of certificates",
+                    "bcl:num": "40.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3640",
+                            "bcl:num": "1",
+                            "bcl:text": "The registrar general may order that a certificate be cancelled on or after the occurrence of any of the following events in respect of a person named in the certificate:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3649",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the registration of birth is amended under section 3;"
+                                },
+                                {
+                                    "@id": "d2e3658",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an amendment to a birth registration in respect of a name is made under section 4.1 (4) (a);"
+                                },
+                                {
+                                    "@id": "d2e3668",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the registration of a foundling is cancelled under section 8 (7) (b);"
+                                },
+                                {
+                                    "@id": "d2e3677",
+                                    "bcl:num": "d",
+                                    "bcl:text": "an amendment to a birth registration in respect of a given name is made under section 10 (3);"
+                                },
+                                {
+                                    "@id": "d2e3686",
+                                    "bcl:num": "e",
+                                    "bcl:text": "an adoption order is registered and the original birth registration amended under section 12;"
+                                },
+                                {
+                                    "@id": "d2e3695",
+                                    "bcl:num": "f",
+                                    "bcl:text": "a marriage is annulled;"
+                                },
+                                {
+                                    "@id": "d2e3704",
+                                    "bcl:num": "g",
+                                    "bcl:text": "a death;"
+                                },
+                                {
+                                    "@id": "d2e3713",
+                                    "bcl:num": "h",
+                                    "bcl:text": "an amendment to a birth or marriage registration in respect of a change of name is made under section 26 (1) (a);"
+                                },
+                                {
+                                    "@id": "d2e3723",
+                                    "bcl:num": "i",
+                                    "bcl:text": "an amendment to a birth registration in respect of a sex designation is made under section 27 (4);"
+                                },
+                                {
+                                    "@id": "d2e3732",
+                                    "bcl:num": "j",
+                                    "bcl:text": "a registration is cancelled under section 28;"
+                                },
+                                {
+                                    "@id": "d2e3741",
+                                    "bcl:num": "k",
+                                    "bcl:text": "an error or omission is corrected under section 29."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3750",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar general may order that a certificate be cancelled if, after the notice to and hearing of those interested parties as the registrar general considers proper, the registrar general is satisfied that the certificate",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3759",
+                                    "bcl:num": "a",
+                                    "bcl:text": "was obtained, or is being possessed or used, fraudulently or for improper purposes,"
+                                },
+                                {
+                                    "@id": "d2e3768",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is being used in a manner that violates this Act or the regulations, or"
+                                },
+                                {
+                                    "@id": "d2e3778",
+                                    "bcl:num": "c",
+                                    "bcl:text": "is invalid for any reason other than a reason listed under subsection (1)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3787",
+                            "bcl:num": "3",
+                            "bcl:text": "If a certificate is cancelled under subsection (1) or (2), the registrar general may make an order requiring the delivery, to the registrar general, of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3796",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the certificate, and"
+                                },
+                                {
+                                    "@id": "d2e3805",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any certified copy or certified electronic extract of the registration on which the certificate was based."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3814",
+                            "bcl:num": "4",
+                            "bcl:text": "If an order is made under subsection (3), any person having possession or control of the certificate, certified copy or certified electronic extract must deliver it to the registrar general within the time specified by the registrar general."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3824",
+                    "bcl:marginalnote": "Certificates or copies as evidence",
+                    "bcl:num": "41",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3832",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (3), a certificate, or a certified copy or certified electronic extract of a registration, is admissible in court as evidence of the facts recorded in the certificate, certified copy or certified electronic extract, as applicable."
+                        },
+                        {
+                            "@id": "d2e3841",
+                            "bcl:num": "2",
+                            "bcl:text": "It is not necessary to prove the signature or official position of the person who has signed a certificate, certified copy or certified electronic extract described under subsection (1)."
+                        },
+                        {
+                            "@id": "d2e3850",
+                            "bcl:num": "3",
+                            "bcl:text": "A certificate that has been cancelled under section 40.1, or a certified copy or certified electronic extract of a registration that has been cancelled under section 8 or 28, is admissible in court as evidence only",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3860",
+                                    "bcl:num": "a",
+                                    "bcl:text": "of the fact of the certificate, certified copy or certified electronic extract having been issued, and"
+                                },
+                                {
+                                    "@id": "d2e3869",
+                                    "bcl:num": "b",
+                                    "bcl:text": "of the information contained on the face of the certificate or registration, without being evidence of the truth of that information."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3879",
+                    "bcl:marginalnote": "Information-sharing agreements",
+                    "bcl:num": "41.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3887",
+                            "bcl:num": "1",
+                            "bcl:text": "The registrar general may enter into an information-sharing agreement with a body listed in subsection (2), under which information from the records in the office of the registrar general or of a vital statistics registrar may be disclosed, including disclosure of information",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3896",
+                                    "bcl:num": "a",
+                                    "bcl:text": "on a bulk or regular basis, and"
+                                },
+                                {
+                                    "@id": "d2e3905",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "that would be considered \"personal information\" under the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3918",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar general may enter into an information-sharing agreement under subsection (1) only with the following bodies:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3927",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an agency or ministry of the government of British Columbia, of another province, or of Canada, including a Crown corporation;"
+                                },
+                                {
+                                    "@id": "d2e3936",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "an Indigenous governing entity, an educational body, a health care body or a social services body, as those terms are defined in the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3948",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a public body in another jurisdiction of Canada that is equivalent to one described in paragraph (b);"
+                                },
+                                {
+                                    "@id": "d2e3957",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a prescribed body that is public in nature."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3966",
+                            "bcl:num": "3",
+                            "bcl:text": "An information-sharing agreement under subsection (1) must identify all of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3976",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the persons, by name, title or position, who may have access to the information under the agreement;"
+                                },
+                                {
+                                    "@id": "d2e3985",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the circumstances in which information may be disclosed under the agreement;"
+                                },
+                                {
+                                    "@id": "d2e3994",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the limits, if any, on",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e4003",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the disclosure of information by the registrar general under the agreement, and"
+                                        },
+                                        {
+                                            "@id": "d2e4012",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the use or disclosure of the information obtained under the agreement by persons identified under paragraph (a);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e4021",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the conditions, if any, on the disclosure of information under the agreement, including",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e4031",
+                                            "bcl:num": "i",
+                                            "bcl:text": "conditions respecting the storage of disclosed information by persons identified under paragraph (a), and"
+                                        },
+                                        {
+                                            "@id": "d2e4040",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "conditions respecting the monitoring of compliance with the agreement;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e4049",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the term of the agreement and the circumstances in which the agreement may be renewed, suspended or terminated."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e4058",
+                            "bcl:num": "4",
+                            "bcl:text": "An information-sharing agreement under subsection (1)",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e4067",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is not effective until the agreement is approved by order of the minister, and"
+                                },
+                                {
+                                    "@id": "d2e4076",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must not be amended except with approval by order of the minister."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e4086",
+                            "bcl:num": "5",
+                            "bcl:text": "An order under subsection (4) (a) must identify all of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e4095",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the information-sharing agreement, by referring to the parties to the agreement and the date on which the agreement is executed;"
+                                },
+                                {
+                                    "@id": "d2e4104",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the type or nature of the information that may be disclosed;"
+                                },
+                                {
+                                    "@id": "d2e4113",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the purpose for which the disclosed information may be collected or used."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e4122",
+                            "bcl:num": "6",
+                            "bcl:text": "Despite subsection (4), the registrar general may enter into or amend an information-sharing agreement as described in subsection (1) without approval of the minister if all of the following conditions are met:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e4131",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the information being disclosed is limited to information respecting the registration of births or deaths;"
+                                },
+                                {
+                                    "@id": "d2e4141",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the information is being disclosed only to an agency or ministry of the government of British Columbia, of another province, or of Canada, including a Crown corporation;"
+                                },
+                                {
+                                    "@id": "d2e4150",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the information is being disclosed only for the purpose of verifying information held by the agency or ministry, or determining entitlement to a benefit, privilege or other interest;"
+                                },
+                                {
+                                    "@id": "d2e4159",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the information-sharing agreement identifies the information set out in subsection (3) and is signed by the agency or ministry and the registrar general."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e4169",
+                    "bcl:marginalnote": "Power to take affidavits",
+                    "bcl:num": "42",
+                    "bcl:text": "The registrar general, inspector and every vital statistics registrar has, for the purposes of this Act only, the powers of a commissioner for taking affidavits for British Columbia."
+                },
+                {
+                    "@id": "d1e5229",
+                    "bcl:marginalnote": "Power to obtain additional evidence",
+                    "bcl:num": "42.1",
+                    "bcl:text": "If the registrar general is not satisfied as to the truth and sufficiency of a record or statement, or of evidence, required to be given under this Act, the registrar general may, in order to obtain additional evidence as may be necessary,",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d1e5240",
+                            "bcl:num": "a",
+                            "bcl:text": "require the attendance of the person who provided the record, signed the statement or gave the evidence, or of any other person, and"
+                        },
+                        {
+                            "@id": "d1e5249",
+                            "bcl:num": "b",
+                            "bcl:text": "examine that person respecting any matter relating to that record, statement or evidence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e4182",
+                    "bcl:marginalnote": "Publication of statistical information",
+                    "bcl:num": "43",
+                    "bcl:text": "The registrar general may compile, publish and distribute statistical information respecting the births, stillbirths, marriages, deaths, adoptions and changes of name registered during any period the registrar general may consider necessary and in the public interest."
+                },
+                {
+                    "@id": "d2e4194",
+                    "bcl:marginalnote": "Annual report",
+                    "bcl:num": "44",
+                    "bcl:text": "As soon as convenient after January\u00a01 in each year, the registrar general must make, for the use of the Legislative Assembly and for public information, a statistical report of the births, stillbirths, marriages, deaths, adoptions and changes of name registered during the preceding calendar year."
+                },
+                {
+                    "@id": "d2e4206",
+                    "bcl:marginalnote": "Records property of government",
+                    "bcl:num": "45",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e4214",
+                            "bcl:num": "1",
+                            "bcl:text": "All records, books and other documents pertaining to any office under this Act are the property of the government."
+                        },
+                        {
+                            "@id": "d2e4223",
+                            "bcl:num": "2",
+                            "bcl:text": "If a vacancy occurs in any office under this Act, the person who has the possession, custody or control of books, records or other documents pertaining to the office must give up possession of and deliver them to the successor in office or to any person appointed by the registrar general to demand and receive them."
+                        },
+                        {
+                            "@id": "d2e4232",
+                            "bcl:num": "3",
+                            "bcl:text": "A person who fails to comply with subsection (2) commits an offence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e4242",
+                    "bcl:marginalnote": "Confidential information",
+                    "bcl:num": "46",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e4250",
+                            "bcl:num": "1",
+                            "bcl:text": "A vital statistics registrar or a person employed in the service of the government must not",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e4259",
+                                    "bcl:num": "a",
+                                    "bcl:text": "communicate or allow to be communicated to any person not entitled to it any information obtained under this Act, or"
+                                },
+                                {
+                                    "@id": "d2e4268",
+                                    "bcl:num": "b",
+                                    "bcl:text": "allow the person to inspect or have access to records containing information obtained under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e4278",
+                            "bcl:num": "2",
+                            "bcl:text": "Nothing in subsection (1) prohibits the completion, furnishing or publication of statistical data that does not disclose specific information with respect to a particular person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e4288",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "47",
+                    "bcl:text": "[Repealed 2014-14-128.]"
+                },
+                {
+                    "@id": "d2e4300",
+                    "bcl:marginalnote": "Establish forms",
+                    "bcl:num": "48",
+                    "bcl:text": "The registrar general may establish the forms to be used for the purposes of this Act and, unless specified by this Act, the particulars to be included in a certificate issued under this Act."
+                },
+                {
+                    "@id": "d2e4313",
+                    "bcl:marginalnote": "Failure to carry out duties",
+                    "bcl:num": "49",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e4321",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who fails to give a notice or to furnish any statement, certificate or particulars required under this Act, within the time limited by this Act, commits an offence and is liable on conviction to a fine of not more than $50\u00a0000."
+                        },
+                        {
+                            "@id": "d2e4330",
+                            "bcl:num": "2",
+                            "bcl:text": "If more than one person is required to give a notice or to register or to furnish any statement, certificate or particulars required under this Act and the duty is carried out by any of those persons, the other or others are absolved from the performance of the duty."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e4340",
+                    "bcl:marginalnote": "Interference with public notice",
+                    "bcl:num": "50",
+                    "bcl:text": "A person who wilfully removes, defaces or destroys a public notice relating to the registration of births, stillbirths, marriages or deaths commits an offence."
+                },
+                {
+                    "@id": "d2e4352",
+                    "bcl:marginalnote": "Failure to obtain permit for transportation of body",
+                    "bcl:num": "51",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e4360",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2) and any other Act, a common carrier transporting or carrying, or accepting through its agents or employees for transportation or carriage, the body of a deceased person without the disposition permit issued under this Act commits an offence."
+                        },
+                        {
+                            "@id": "d2e4369",
+                            "bcl:num": "2",
+                            "bcl:text": "If the death occurred outside British Columbia and the body is accompanied by a disposition permit issued in accordance with the law in force where the death occurred, the disposition permit is sufficient to authorize the transportation or carriage of the body into or through British Columbia."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e4379",
+                    "bcl:marginalnote": "Prohibition against other registration systems",
+                    "bcl:num": "52",
+                    "bcl:text": "A system of registration of births, deaths or marriages must not be maintained or continued in British Columbia other than as authorized by this Act."
+                },
+                {
+                    "@id": "d2e4391",
+                    "bcl:marginalnote": "Requirements for prosecutions",
+                    "bcl:num": "53",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e4399",
+                            "bcl:num": "1",
+                            "bcl:text": "A prosecution must not be commenced under this Act without the consent of the deputy minister."
+                        },
+                        {
+                            "@id": "d2e4408",
+                            "bcl:num": "2",
+                            "bcl:text": "A prosecution under this Act must be commenced within 10 years after the offence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e4418",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "54",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e4426",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e4438",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e4447",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing the duties of and records to be kept by the vital statistics registrars;"
+                                },
+                                {
+                                    "@id": "d2e4457",
+                                    "bcl:num": "b",
+                                    "bcl:text": "designating the persons who may have access to or may be given copies of or information from the records in the office of the registrar general or of a vital statistics registrar and prescribing an oath of secrecy to be taken by those persons;"
+                                },
+                                {
+                                    "@id": "d2e4466",
+                                    "bcl:num": "b.1",
+                                    "bcl:text": "prescribing bodies with which the registrar general may enter into information-sharing agreements under section 41.1 (2) (d);"
+                                },
+                                {
+                                    "@id": "d2e4475",
+                                    "bcl:num": "c",
+                                    "bcl:text": "providing for the registration of births, stillbirths, marriages, deaths, adoptions or changes of name in cases not otherwise provided for in this Act;"
+                                },
+                                {
+                                    "@id": "d2e4484",
+                                    "bcl:num": "c.1",
+                                    "bcl:text": "in respect of a child born as a result of assisted reproduction, respecting the information that must be provided on registration of the child's birth;"
+                                },
+                                {
+                                    "@id": "d2e4493",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96005_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adoption Act"
+                                        },
+                                        "#text": "prescribing the fees to be paid for searches, certificates and anything done or permitted to be done under this Act or section\u00a063 or 64 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e4505",
+                                    "bcl:num": "e",
+                                    "bcl:text": "providing for the waiver of payment of prescribed fees in favour of any person or class of persons;"
+                                },
+                                {
+                                    "@id": "d2e4515",
+                                    "bcl:num": "f",
+                                    "bcl:text": "designating the persons who may sign registrations;"
+                                },
+                                {
+                                    "@id": "d2e4524",
+                                    "bcl:num": "g",
+                                    "bcl:text": "prescribing the evidence on which the registrar general may register a birth, stillbirth, marriage or death after one year from the date of it;"
+                                },
+                                {
+                                    "@id": "d2e4533",
+                                    "bcl:num": "h",
+                                    "bcl:text": "prescribing the evidence on which the registrar general may make a registration of birth under section 8 (1);"
+                                },
+                                {
+                                    "@id": "d2e4542",
+                                    "bcl:num": "i",
+                                    "bcl:text": "[Repealed 2002-74-36.]"
+                                },
+                                {
+                                    "@id": "d2e4551",
+                                    "bcl:num": "j",
+                                    "bcl:text": "respecting restrictions or prohibitions on the use of a birth, marriage or death certificate, or classes of those certificates."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e4560",
+                            "bcl:num": "3",
+                            "bcl:text": "A regulation made under subsection (2) (c.1) may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e4570",
+                                    "bcl:num": "a",
+                                    "bcl:text": "establish classes of persons and make regulations that are different for different classes of persons, and"
+                                },
+                                {
+                                    "@id": "d2e4579",
+                                    "bcl:num": "b",
+                                    "bcl:text": "adopt by reference, in whole or in part and with any changes the Lieutenant Governor in Council considers appropriate, a regulation, code, standard or rule",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e4588",
+                                            "bcl:num": "i",
+                                            "bcl:text": "enacted as or under a law of another jurisdiction, including a foreign jurisdiction, or"
+                                        },
+                                        {
+                                            "@id": "d2e4597",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "set by a provincial, national or international body or any other body that may make codes, standards or rules."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e4606",
+                            "bcl:num": "4",
+                            "bcl:text": "Unless otherwise stated, a code, standard or rule referred to in subsection (3) is adopted as amended from time to time."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

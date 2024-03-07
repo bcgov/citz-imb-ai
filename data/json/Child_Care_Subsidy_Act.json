@@ -1,0 +1,763 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96026_01",
+        "act:title": "Child Care Subsidy Act",
+        "act:chapter": "26",
+        "act:yearenacted": {
+            "@revised": "RSBC",
+            "#text": "1996"
+        },
+        "act:currency": {
+            "act:tlcDirPath": "781755088/96026/tlc96026_f",
+            "act:tlc": "E3tlc96026"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "child care",
+                                "#text": "means the care and supervision of a child in a child care setting, other than"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e35",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by the child's parent, or"
+                                },
+                                {
+                                    "@id": "d2e45",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96412_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "School Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96216_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Independent School Act"
+                                            }
+                                        ],
+                                        "#text": "while the child is attending an educational program provided under the , the  or a law of a treaty first nation in relation to kindergarten to grade 12 education;"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e60",
+                            "bcl:text": {
+                                "in:term": "child care setting",
+                                "#text": "means any setting in which child care is provided, including"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e69",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02075_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Community Care and Assisted Living Act"
+                                        },
+                                        "#text": "a facility licensed under the  to provide child care, and"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e81",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the child's own home;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e90",
+                            "bcl:text": {
+                                "in:term": "child care subsidy",
+                                "#text": "means a payment made under this Act to or for a parent to subsidize the costs of child care;"
+                            }
+                        },
+                        {
+                            "@id": "d2e99",
+                            "bcl:text": {
+                                "in:term": "parent",
+                                "#text": "includes a person with whom a child resides and who stands in place of a parent of the child."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e109",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "2-3",
+                    "bcl:text": "[Repealed 2001-4-21.]"
+                },
+                {
+                    "@id": "d2e121",
+                    "bcl:marginalnote": "Child care subsidies",
+                    "bcl:num": "4",
+                    "bcl:text": "Subject to the regulations, the minister may pay child care subsidies."
+                },
+                {
+                    "@id": "d2e133",
+                    "bcl:marginalnote": "Information and verification",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e141",
+                            "bcl:num": "1",
+                            "bcl:text": "For the purpose of determining or auditing eligibility for child care subsidies, the minister may do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e150",
+                                    "bcl:num": "a",
+                                    "bcl:text": "direct a person who has applied for a child care subsidy, or to or for whom a child care subsidy is paid, to supply the minister with information within the time and in the manner specified by the minister;"
+                                },
+                                {
+                                    "@id": "d2e159",
+                                    "bcl:num": "b",
+                                    "bcl:text": "seek verification of any information supplied by a person referred to in paragraph\u00a0(a);"
+                                },
+                                {
+                                    "@id": "d2e169",
+                                    "bcl:num": "c",
+                                    "bcl:text": "direct a person referred to in paragraph (a) to supply verification of any information supplied by that person or another person;"
+                                },
+                                {
+                                    "@id": "d2e178",
+                                    "bcl:num": "d",
+                                    "bcl:text": "collect from a person information about another person if",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e187",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the information relates to the application for or payment of a child care subsidy, and"
+                                        },
+                                        {
+                                            "@id": "d2e196",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the minister has not solicited the information from the person who provides it."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e205",
+                            "bcl:num": "2",
+                            "bcl:text": "A person to or for whom a child care subsidy is paid must notify the minister, within the time and in the manner specified by regulation, of any change in circumstances affecting their eligibility under this Act."
+                        },
+                        {
+                            "@id": "d2e214",
+                            "bcl:num": "3",
+                            "bcl:text": "If a person fails to comply with a direction under subsection (1) (a) or (c) or with subsection (2), the minister may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e224",
+                                    "bcl:num": "a",
+                                    "bcl:text": "declare the person ineligible for a child care subsidy until the person complies, or"
+                                },
+                                {
+                                    "@id": "d2e233",
+                                    "bcl:num": "b",
+                                    "bcl:text": "reduce the person's child care subsidy."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e242",
+                            "bcl:num": "4",
+                            "bcl:text": "For the purpose of auditing child care subsidies, the minister may direct child care providers to supply the minister with information about any child care they provide that is subsidized under this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e252",
+                    "bcl:marginalnote": "Reconsideration and appeal rights",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e260",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to section 6.1, a person may request the minister to reconsider a decision made under this Act about any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e269",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a decision that results in a refusal to pay a child care subsidy to or for the person;"
+                                },
+                                {
+                                    "@id": "d2e278",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a decision that results in a discontinuance or reduction of the person's child care subsidy."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e288",
+                            "bcl:num": "2",
+                            "bcl:text": "A request under subsection (1) must be made, and the decision reconsidered, within the time limits and in accordance with any rules specified in the regulations."
+                        },
+                        {
+                            "@id": "d2e297",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/02040_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Employment and Assistance Act"
+                                },
+                                "#text": "Subject to section 6.1, a person who is dissatisfied with the outcome of a request for a reconsideration under subsection\u00a0(1) may appeal the decision that is the outcome of the request to the Employment and Assistance Appeal Tribunal appointed under section\u00a019 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e309",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/02040_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Employment and Assistance Act"
+                                },
+                                "#text": "A right of appeal given under subsection (3) is subject to the time limits and other requirements set out in the  and the regulations under that Act."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e323",
+                    "bcl:marginalnote": "No appeal from decision based on same circumstances",
+                    "bcl:num": "6.1",
+                    "bcl:text": [
+                        "If a person reapplies for a child care subsidy after",
+                        "no right of reconsideration or appeal exists in respect of the second or a subsequent application unless there has been a change in circumstances relevant to the determination referred to in paragraph (a)."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e334",
+                            "bcl:num": "a",
+                            "bcl:text": "the person's eligibility for the child care subsidy has been determined under this Act,"
+                        },
+                        {
+                            "@id": "d2e343",
+                            "bcl:num": "b",
+                            "bcl:text": "a right of appeal under section 6 (3) has been exercised in respect of the determination referred to in paragraph (a), and"
+                        },
+                        {
+                            "@id": "d2e353",
+                            "bcl:num": "c",
+                            "bcl:text": "the decision of the tribunal in respect of the appeal referred to in paragraph (b) has been implemented,"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e366",
+                    "bcl:marginalnote": "Overpayments, repayments and assignments",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e374",
+                            "bcl:num": "1",
+                            "bcl:text": "If a child care subsidy is paid to or for a person who is not entitled to it, that person is liable to repay to the government the amount to which the person was not entitled."
+                        },
+                        {
+                            "@id": "d2e383",
+                            "bcl:num": "2",
+                            "bcl:text": "Subject to the regulations, the minister may enter into an agreement, or may accept any right assigned, for the repayment of a child care subsidy."
+                        },
+                        {
+                            "@id": "d2e392",
+                            "bcl:num": "3",
+                            "bcl:text": "A repayment agreement may be entered into before or after a child care subsidy is paid."
+                        },
+                        {
+                            "@id": "d2e402",
+                            "bcl:num": "4",
+                            "bcl:text": "An amount that a person is liable to repay under subsection (1) or under an agreement entered into under subsection (2) is a debt due to the government and may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e411",
+                                    "bcl:num": "a",
+                                    "bcl:text": "be recovered by it in a court of competent jurisdiction, or"
+                                },
+                                {
+                                    "@id": "d2e420",
+                                    "bcl:num": "b",
+                                    "bcl:text": "be deducted by it from any subsequent child care subsidy or from an amount payable to that person by the government under a prescribed enactment."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e429",
+                            "bcl:num": "5",
+                            "bcl:text": "The minister's decision about the amount a person is liable to repay under subsection\u00a0(1) or under an agreement entered into under subsection (2) is not open to appeal under section\u00a06\u00a0(3)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e439",
+                    "bcl:marginalnote": "No garnishment, attachment, execution or seizure",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e447",
+                            "bcl:num": "1",
+                            "bcl:text": "Child care subsidies are exempt from garnishment, attachment, execution or seizure under any Act."
+                        },
+                        {
+                            "@id": "d2e456",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96138_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Financial Administration Act"
+                                },
+                                "#text": "Subsection (1) does not prevent a child care subsidy being retained by way of a deduction or set-off under this Act, the  or a prescribed Act."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e469",
+                    "bcl:marginalnote": "Agreements",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e477",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), the minister may enter into an agreement with any person or group of persons."
+                        },
+                        {
+                            "@id": "d2e486",
+                            "bcl:num": "2",
+                            "bcl:text": "With the prior approval of the Lieutenant Governor in Council, the minister may enter into any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e495",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an agreement with the government of Canada, or an agency of that government, about financial arrangements or other matters relating to child care subsidies;"
+                                },
+                                {
+                                    "@id": "d2e505",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a reciprocal agreement with the government of another province of Canada, or an agency of that government, respecting child care subsidies;"
+                                },
+                                {
+                                    "@id": "d2e514",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an information-sharing agreement with",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e523",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the government of Canada or an agency of that government,"
+                                        },
+                                        {
+                                            "@id": "d2e532",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the government of a province or other jurisdiction in Canada or an agency of that government,"
+                                        },
+                                        {
+                                            "@id": "d2e541",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the government of a state of the United States, or an agency of that government,"
+                                        },
+                                        {
+                                            "@id": "d2e550",
+                                            "bcl:num": "iv",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "a public body as defined in the , or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e563",
+                                            "bcl:num": "v",
+                                            "bcl:text": "a legal entity representing an aboriginal community."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e572",
+                            "bcl:num": "3",
+                            "bcl:text": "An information-sharing agreement may only be entered into under subsection (2) for the purposes of the administration of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e581",
+                                    "bcl:num": "a",
+                                    "bcl:text": "this Act,"
+                                },
+                                {
+                                    "@id": "d2e590",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96215_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Income Tax Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/I-3.3/index.html",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Income Tax Act"
+                                            }
+                                        ],
+                                        "#text": "the  or the  (Canada), or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e605",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a social benefit program operated by a government, agency, public body or legal entity referred to in subsection (2) (c)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e614",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "in:term": "information-sharing agreement",
+                                "#text": "In this section,  includes a data-matching agreement but does not include an agreement to share"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e627",
+                                    "bcl:num": "a",
+                                    "bcl:text": "information obtained by the minister for the purposes of another Act administered by the minister, or"
+                                },
+                                {
+                                    "@id": "d2e636",
+                                    "bcl:num": "b",
+                                    "bcl:text": "information obtained by the minister pursuant to an agreement under this section."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e646",
+                    "bcl:marginalnote": "Offence of supplying false or misleading information",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e654",
+                            "bcl:num": "1",
+                            "bcl:text": "A person commits an offence who supplies, in an application under this Act or when required or directed under section 5 (1), (2) or (4) or the regulations, information that is false or misleading with respect to a material fact."
+                        },
+                        {
+                            "@id": "d2e663",
+                            "bcl:num": "2",
+                            "bcl:text": "A person does not commit an offence under subsection (1) if, at the time the information was supplied, the person did not know that it was false or misleading and, with the exercise of reasonable diligence, could not have known that it was false or misleading."
+                        },
+                        {
+                            "@id": "d2e672",
+                            "bcl:num": "3",
+                            "bcl:text": "A person who commits an offence under this section is liable on conviction to a fine of not more than $2\u00a0000 or to imprisonment for not more than 6\u00a0months or to both."
+                        },
+                        {
+                            "@id": "d2e682",
+                            "bcl:num": "4",
+                            "bcl:text": "In addition, the court may order a person convicted of an offence under this section to pay the government all or part of any amount that person received under this Act as a result of committing the offence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e692",
+                    "bcl:marginalnote": "Other provisions relating to offences",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e700",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act or the regulations."
+                            }
+                        },
+                        {
+                            "@id": "d2e712",
+                            "bcl:num": "2",
+                            "bcl:text": "The time limit for laying an information for an offence under this Act is 12\u00a0months after the facts on which the information is based first came to the minister's attention."
+                        },
+                        {
+                            "@id": "d2e721",
+                            "bcl:num": "3",
+                            "bcl:text": "A document purporting to have been issued by the minister, certifying the date on which the minister became aware of the facts on which the information is based,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e731",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is admissible without proof of the signature or official character of the person appearing to have signed the certificate, and"
+                                },
+                                {
+                                    "@id": "d2e740",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is proof of the certified facts unless there is evidence to the contrary."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e751",
+                    "bcl:marginalnote": "Delegation of minister's powers and duties",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e759",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to the regulations, the minister may delegate to any person or class of persons any or all of the minister's powers, duties and functions under this Act, except",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e768",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the power to enter into an agreement under section 9 (2), and"
+                                },
+                                {
+                                    "@id": "d2e777",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the power to prescribe forms."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e787",
+                            "bcl:num": "2",
+                            "bcl:text": "A delegation of the powers, duties or functions of the minister must be in writing and may include any limits or conditions the minister considers advisable."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e797",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e805",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e817",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e826",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting applications for child care subsidies and the information, authorizations and verifications that must be supplied in support of an application;"
+                                },
+                                {
+                                    "@id": "d2e836",
+                                    "bcl:num": "b",
+                                    "bcl:text": "governing eligibility for child care subsidies, including the types of child care for which, and the age limits of the children for whom, child care subsidies may be paid;"
+                                },
+                                {
+                                    "@id": "d2e845",
+                                    "bcl:num": "c",
+                                    "bcl:text": "prescribing rules for determining the income of parents who apply for or receive child care subsidies;"
+                                },
+                                {
+                                    "@id": "d2e854",
+                                    "bcl:num": "d",
+                                    "bcl:text": "prescribing how the amount, or the maximum amount, of a child care subsidy is to be determined;"
+                                },
+                                {
+                                    "@id": "d2e863",
+                                    "bcl:num": "e",
+                                    "bcl:text": "regulating when and how child care subsidies are paid;"
+                                },
+                                {
+                                    "@id": "d2e872",
+                                    "bcl:num": "f",
+                                    "bcl:text": "respecting the duties of parents to or for whom child care subsidies are paid, including their duty to notify the minister of any change in circumstances affecting their eligibility;"
+                                },
+                                {
+                                    "@id": "d2e881",
+                                    "bcl:num": "g",
+                                    "bcl:text": "specifying additional circumstances in which the minister may declare a parent ineligible for a child care subsidy or may reduce a child care subsidy;"
+                                },
+                                {
+                                    "@id": "d2e891",
+                                    "bcl:num": "h",
+                                    "bcl:text": "respecting the provision, in child care settings, of services to children with special needs;"
+                                },
+                                {
+                                    "@id": "d2e900",
+                                    "bcl:num": "i",
+                                    "bcl:text": "prescribing, for the purposes of section 7, the circumstances in which repayment agreements may be entered into or assignments accepted, and the terms to be included in those agreements or assignments;"
+                                },
+                                {
+                                    "@id": "d2e909",
+                                    "bcl:num": "j",
+                                    "bcl:text": "respecting the duty to notify the minister under section 5 (2);"
+                                },
+                                {
+                                    "@id": "d2e918",
+                                    "bcl:num": "k",
+                                    "bcl:text": "specifying time limits and other rules for the purposes of section 6 (2);"
+                                },
+                                {
+                                    "@id": "d2e927",
+                                    "bcl:num": "l",
+                                    "bcl:text": "respecting reinstatement of child care subsidies pending reconsiderations and appeals;"
+                                },
+                                {
+                                    "@id": "d2e936",
+                                    "bcl:num": "m",
+                                    "bcl:text": "prescribing enactments for the purposes of sections 7 (4) (b) and 8 (2);"
+                                },
+                                {
+                                    "@id": "d2e946",
+                                    "bcl:num": "n",
+                                    "bcl:text": "respecting terms and conditions that are to be included in information-sharing agreements under section 9 (2);"
+                                },
+                                {
+                                    "@id": "d2e955",
+                                    "bcl:num": "o",
+                                    "bcl:text": "prescribing how accounts are to be submitted to the minister for child care subsidized under this Act and the information to be supplied with those accounts;"
+                                },
+                                {
+                                    "@id": "d2e964",
+                                    "bcl:num": "p",
+                                    "bcl:text": "prescribing the records to be kept and the reports to be made to the minister by child care providers under this Act;"
+                                },
+                                {
+                                    "@id": "d2e973",
+                                    "bcl:num": "q",
+                                    "bcl:text": "governing investigations and audits to determine eligibility for child care subsidies or to ensure compliance with this Act and the regulations;"
+                                },
+                                {
+                                    "@id": "d2e982",
+                                    "bcl:num": "r",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02075_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Community Care and Assisted Living Act"
+                                        },
+                                        "#text": "establishing a register of child care settings that are not licensed under the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e994",
+                                    "bcl:num": "s",
+                                    "bcl:text": "respecting the delegation of the powers, duties and functions of the minister;"
+                                },
+                                {
+                                    "@id": "d2e1004",
+                                    "bcl:num": "t",
+                                    "bcl:text": "defining any word or expression used in this Act or the regulations."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1013",
+                            "bcl:num": "3",
+                            "bcl:text": "In making regulations under this Act, the Lieutenant Governor in Council may do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1022",
+                                    "bcl:num": "a",
+                                    "bcl:text": "delegate a matter to a person;"
+                                },
+                                {
+                                    "@id": "d2e1031",
+                                    "bcl:num": "b",
+                                    "bcl:text": "confer a discretion on a person;"
+                                },
+                                {
+                                    "@id": "d2e1040",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make different regulations for different categories of child care providers or other persons, or for different types of child care or child care settings."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1050",
+                    "bcl:marginalnote": "Forms",
+                    "bcl:num": "14",
+                    "bcl:text": "The minister may do either or both of the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1061",
+                            "bcl:num": "a",
+                            "bcl:text": "prescribe forms for use under this Act;"
+                        },
+                        {
+                            "@id": "d2e1070",
+                            "bcl:num": "b",
+                            "bcl:text": "specify forms for use under this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1080",
+                    "bcl:marginalnote": "Transitional regulations",
+                    "bcl:num": "15",
+                    "bcl:text": {
+                        "in:doc": "Guaranteed Available Income for Need Act",
+                        "#text": "The Lieutenant Governor in Council may make regulations considered necessary or advisable to more effectively bring this Act into operation and to facilitate the transition from the operation of the  to the operation of this Act."
+                    }
+                },
+                {
+                    "@id": "d2e1095",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "16",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,756 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96270_01",
+        "act:title": "Livestock Act",
+        "act:chapter": "270",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "76470131/96270/tlc96270_f",
+            "act:tlc": "E3tlc96270"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "at large",
+                                "#text": "does not apply to livestock that is"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e35",
+                                    "bcl:num": "a",
+                                    "bcl:text": "tethered,"
+                                },
+                                {
+                                    "@id": "d2e45",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the direct or continuous charge of a person,"
+                                },
+                                {
+                                    "@id": "d2e54",
+                                    "bcl:num": "c",
+                                    "bcl:text": "confined in a structure, or"
+                                },
+                                {
+                                    "@id": "d2e63",
+                                    "bcl:num": "d",
+                                    "bcl:text": "on enclosed land owned or occupied by the owner of the livestock;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e72",
+                            "bcl:text": {
+                                "in:term": "brand inspector",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96271_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Livestock Identification Act"
+                                },
+                                "#text": "means an inspector as defined in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e84",
+                            "bcl:text": {
+                                "in:term": "director",
+                                "#text": "means the person appointed by the minister to administer this Act;"
+                            }
+                        },
+                        {
+                            "@id": "d2e93",
+                            "bcl:text": {
+                                "in:term": "enclosed land",
+                                "#text": "means land that is surrounded by a natural or human made barrier sufficient to exclude or contain livestock;"
+                            }
+                        },
+                        {
+                            "@id": "d2e103",
+                            "bcl:text": {
+                                "in:term": "game",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14016",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Animal Health Act"
+                                },
+                                "#text": "has the same meaning as in a regulation made under the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e115",
+                            "bcl:text": {
+                                "in:term": "grazier",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/04071_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Range Act"
+                                },
+                                "#text": "means a person who grazes cattle at large under the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e127",
+                            "bcl:text": {
+                                "in:term": "keeper",
+                                "#text": "means a keeper appointed under this Act for a pound district and, in respect of livestock impounded outside a pound district, includes the person who impounded the livestock;"
+                            }
+                        },
+                        {
+                            "@id": "d2e136",
+                            "bcl:text": {
+                                "in:term": "livestock",
+                                "#text": "means cattle, goats, horses, sheep, swine and game and includes any other animal designated by regulation;"
+                            }
+                        },
+                        {
+                            "@id": "d2e145",
+                            "bcl:text": {
+                                "in:term": "owner",
+                                "#text": "includes,"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e154",
+                                    "bcl:num": "a",
+                                    "bcl:text": "with respect to land, a person who holds land under a lease or other arrangement, and"
+                                },
+                                {
+                                    "@id": "d2e164",
+                                    "bcl:num": "b",
+                                    "bcl:text": "with respect to livestock, any person who has a property interest in an animal and includes the person's agent."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e174",
+                    "bcl:marginalnote": "Conflict with bylaws",
+                    "bcl:num": "2",
+                    "bcl:text": "This Act and the regulations prevail if there is a conflict between",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e185",
+                            "bcl:num": "a",
+                            "bcl:text": "this Act or the regulations, and"
+                        },
+                        {
+                            "@id": "d2e194",
+                            "bcl:num": "b",
+                            "bcl:text": "a municipal bylaw."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e204",
+                    "bcl:marginalnote": "Livestock districts",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e212",
+                            "bcl:num": "1",
+                            "bcl:text": "The Lieutenant Governor in Council may, by regulation and on the recommendation of the director, establish a livestock district."
+                        },
+                        {
+                            "@id": "d2e221",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/04071_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Range Act"
+                                },
+                                "#text": "Subject to the , this Act and a rule made by a bull control committee for a bull control area, a livestock owner may allow the owner's livestock to be at large in a livestock district."
+                            }
+                        },
+                        {
+                            "@id": "d2e233",
+                            "bcl:num": "3",
+                            "bcl:text": "In the event of a dispute between graziers respecting a bull being at large in a livestock district the director may order that the owner of the bull must not allow the bull to be at large in the livestock district."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e243",
+                    "bcl:marginalnote": "Bull control areas",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e251",
+                            "bcl:num": "1",
+                            "bcl:text": "Graziers in a livestock district may apply to the director to establish a bull control area in all or part of the district."
+                        },
+                        {
+                            "@id": "d2e260",
+                            "bcl:num": "2",
+                            "bcl:text": "The director may, by regulation, establish a bull control area."
+                        },
+                        {
+                            "@id": "d2e269",
+                            "bcl:num": "3",
+                            "bcl:text": "The members of a bull control committee established under the regulations constitute a corporation under the name set out in the order."
+                        },
+                        {
+                            "@id": "d2e279",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02057_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Business Corporations Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02057_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Business Corporations Act"
+                                    }
+                                ],
+                                "#text": "The  does not apply to a bull control committee, but the Lieutenant Governor in Council may declare that all or part of the  does apply to the committee."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e295",
+                    "bcl:marginalnote": "Powers of bull control committee",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e303",
+                            "bcl:num": "1",
+                            "bcl:text": "A bull control committee may determine the number, breed, breeding, quality and age of bulls allowed at large in the bull control area."
+                        },
+                        {
+                            "@id": "d2e312",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), a bull control committee may make rules as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e321",
+                                    "bcl:num": "a",
+                                    "bcl:text": "establishing the proportion of bulls to cows and heifers if all are allowed at large in the same area;"
+                                },
+                                {
+                                    "@id": "d2e331",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting the provision by a grazier of bulls for bull service to cows or heifers at large in the bull control area or, if bulls cannot be provided by a grazier, the provision of bulls by the committee and the fees payable by the owner of the cows or heifers to the committee for providing bulls;"
+                                },
+                                {
+                                    "@id": "d2e340",
+                                    "bcl:num": "c",
+                                    "bcl:text": "respecting the disposition of money collected by the committee;"
+                                },
+                                {
+                                    "@id": "d2e349",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting the removal of bulls from the bull control area;"
+                                },
+                                {
+                                    "@id": "d2e358",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04071_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Range Act"
+                                        },
+                                        "#text": "subject to the , respecting the periods of time during which bulls approved by the committee may run at large in the bull control area."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e370",
+                            "bcl:num": "3",
+                            "bcl:text": "A committee must file a copy of each rule made by it with the director within 30\u00a0days after making the rule, and the director must make the rules available to any person who asks to see them."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e381",
+                    "bcl:marginalnote": "Pound districts",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e389",
+                            "bcl:num": "1",
+                            "bcl:text": "Owners of land outside a municipality who reside within the boundaries of a proposed pound district may apply to the director to establish a pound district whether or not the land in respect of which the request is made is in a livestock district."
+                        },
+                        {
+                            "@id": "d2e398",
+                            "bcl:num": "2",
+                            "bcl:text": "The director may, by regulation, establish a pound district."
+                        },
+                        {
+                            "@id": "d2e407",
+                            "bcl:num": "3",
+                            "bcl:text": "For each pound district, the director or a person designated in writing by the director may appoint one or more keepers."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e417",
+                    "bcl:marginalnote": "Immunity of keepers",
+                    "bcl:num": "7",
+                    "bcl:text": [
+                        "No action or other proceeding for damages lies against a keeper for any act done or omitted to be done in good faith in the",
+                        "under this Act, or for any neglect or default in the performance or exercise in good faith of that duty or power."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e428",
+                            "bcl:num": "a",
+                            "bcl:text": "performance or the intended performance of any duty, or"
+                        },
+                        {
+                            "@id": "d2e437",
+                            "bcl:num": "b",
+                            "bcl:text": "exercise or the intended exercise of any power"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e451",
+                    "bcl:marginalnote": "Capture of animals at large",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e459",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsections\u00a0(2) to (2.2), animals at large in the following circumstances may be captured by a keeper, peace officer, person authorized by the director, the livestock owner or the owner of land on which the livestock is at large:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e468",
+                                    "bcl:num": "a",
+                                    "bcl:text": "livestock on enclosed land or in a pound district;"
+                                },
+                                {
+                                    "@id": "d2e477",
+                                    "bcl:num": "b",
+                                    "bcl:text": "stallions and bulls apparently over one year old on land other than land in a livestock district;"
+                                },
+                                {
+                                    "@id": "d2e487",
+                                    "bcl:num": "c",
+                                    "bcl:text": "swine on land other than land of the owner of the swine;"
+                                },
+                                {
+                                    "@id": "d2e496",
+                                    "bcl:num": "d",
+                                    "bcl:text": "game on land other than land of the owner of the game."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e505",
+                            "bcl:num": "2",
+                            "bcl:text": "Animals are not subject to capture under subsection (1) if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e514",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the animal is on the land of its owner,"
+                                },
+                                {
+                                    "@id": "d2e523",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the animal's owner has the consent of the owner of the land on which the animal is at large, or"
+                                },
+                                {
+                                    "@id": "d2e532",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04071_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Range Act"
+                                        },
+                                        "#text": "the animal's owner is permitted under this Act or the  to have the animal at large."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e575",
+                            "bcl:num": "2.1",
+                            "bcl:text": "A person who is authorized to capture animals at large under subsection (1) may enter land owned by another person for the purpose of capturing animals at large only if the person",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e583",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has consent of the owner or occupier of the land, and"
+                                },
+                                {
+                                    "@id": "d1e592",
+                                    "bcl:num": "b",
+                                    "bcl:text": "disturbs as little as possible, and causes no damage to, the land and any property on the land."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e602",
+                            "bcl:num": "2.2",
+                            "bcl:text": "Nothing in subsection (2.1) authorizes a person to enter a building or structure without consent of the owner or occupier of the building or structure."
+                        },
+                        {
+                            "@id": "d2e545",
+                            "bcl:num": "3",
+                            "bcl:text": "Despite subsections (1) and (2), a person who is authorized to capture animals at large under subsection (1) is authorized to capture any livestock found at large on",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e554",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a highway listed in B.C. Reg. 26/58 in Schedule\u00a01 of section\u00a019.07 or Schedule\u00a02 of section\u00a019.08, or"
+                                },
+                                {
+                                    "@id": "d2e563",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a prescribed highway or portion of a highway."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e573",
+                    "bcl:marginalnote": "Sale of unclaimed impounded animals",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e581",
+                            "bcl:num": "1",
+                            "bcl:text": "The keeper must, in accordance with the regulations, sell unclaimed impounded animals and apply the proceeds of the sale as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e590",
+                                    "bcl:num": "a",
+                                    "bcl:text": "first, to the expenses of the sale of the livestock;"
+                                },
+                                {
+                                    "@id": "d2e599",
+                                    "bcl:num": "b",
+                                    "bcl:text": "second, to the expenses incurred in capturing, impounding and caring for the livestock;"
+                                },
+                                {
+                                    "@id": "d2e609",
+                                    "bcl:num": "c",
+                                    "bcl:text": "third, to payment of the prescribed fees."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e618",
+                            "bcl:num": "2",
+                            "bcl:text": "The keeper must pay the balance, if any, to the owner of the livestock sold."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e628",
+                    "bcl:marginalnote": "Reimbursement of keeper",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e636",
+                            "bcl:num": "1",
+                            "bcl:text": "If the amount realized at a sale of unclaimed impounded livestock is insufficient to pay for the expenses of its capture, impounding, care and sale and the prescribed fees, or if the livestock has been otherwise sold or destroyed in accordance with the regulations, the Minister of Finance must pay to the keeper, out of the consolidated revenue fund and without an appropriation other than this section, the amount to which the keeper is entitled under the regulations, less any amount received from the sale."
+                        },
+                        {
+                            "@id": "d2e645",
+                            "bcl:num": "2",
+                            "bcl:text": "Payments made to a keeper out of the consolidated revenue fund under this section constitute a debt owing from the livestock owner to the government, and the debt is recoverable as a simple contract debt."
+                        },
+                        {
+                            "@id": "d2e654",
+                            "bcl:num": "3",
+                            "bcl:text": "Expenses and fees are chargeable by a keeper only for the period from the date of impounding to the earliest date that a sale could reasonably have been made."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e664",
+                    "bcl:marginalnote": "Liability and trespass",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e672",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (3), the owner of livestock is liable for damage caused by the livestock while the livestock is at large contrary to this Act or the regulations or any other enactment."
+                        },
+                        {
+                            "@id": "d2e681",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purpose of subsection (1), livestock is to be considered at large even if it is tethered."
+                        },
+                        {
+                            "@id": "d2e690",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsection (1) does not apply if an owner establishes that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e700",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the owner's livestock was at large as a result of an act or omission of a person over whom the owner had no control, or"
+                                },
+                                {
+                                    "@id": "d2e709",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the owner took reasonable care to ensure that the livestock was not capable of escaping and being at large contrary to this Act, the regulations or any other enactment."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e718",
+                            "bcl:num": "4",
+                            "bcl:text": "A proceeding must not be brought for trespass if livestock strays into unenclosed land that is located outside a pound district."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e729",
+                    "bcl:marginalnote": "Dogs causing injury or damage",
+                    "bcl:num": "11.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e737",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "running at large",
+                                "#text": "For the purposes of this section,  does not apply to a dog that is under control by being"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e749",
+                                    "bcl:num": "a",
+                                    "bcl:text": "on the property of its owner or of another person who has the care and control of the dog,"
+                                },
+                                {
+                                    "@id": "d2e758",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in direct and continuous charge of a person who is competent to control it,"
+                                },
+                                {
+                                    "@id": "d2e768",
+                                    "bcl:num": "c",
+                                    "bcl:text": "securely confined within an enclosure, or"
+                                },
+                                {
+                                    "@id": "d2e777",
+                                    "bcl:num": "d",
+                                    "bcl:text": "securely fastened so that it is unable to roam."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e786",
+                            "bcl:num": "2",
+                            "bcl:text": "A person may kill a dog if the person finds the dog",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e795",
+                                    "bcl:num": "a",
+                                    "bcl:text": "running at large, and"
+                                },
+                                {
+                                    "@id": "d2e804",
+                                    "bcl:num": "b",
+                                    "bcl:text": "attacking or viciously pursuing livestock."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e814",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "12\u201318",
+                    "bcl:text": "[Repealed 2002-12-17.]"
+                },
+                {
+                    "@id": "d2e826",
+                    "bcl:marginalnote": "Offences and penalty",
+                    "bcl:num": "19",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e834",
+                            "bcl:num": "1",
+                            "bcl:text": "A person must not do any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e843",
+                                    "bcl:num": "a",
+                                    "bcl:text": "allow livestock to be at large contrary to this Act;"
+                                },
+                                {
+                                    "@id": "d2e852",
+                                    "bcl:num": "b",
+                                    "bcl:text": "capture or impound livestock contrary to this Act;"
+                                },
+                                {
+                                    "@id": "d2e862",
+                                    "bcl:num": "c",
+                                    "bcl:text": "free or attempt to free or otherwise interfere with captured or impounded livestock;"
+                                },
+                                {
+                                    "@id": "d2e871",
+                                    "bcl:num": "d",
+                                    "bcl:text": "leave open a gate, let down a bar or make a gap in a fence where the person knows or reasonably ought to know that livestock might escape;"
+                                },
+                                {
+                                    "@id": "d2e880",
+                                    "bcl:num": "e",
+                                    "bcl:text": "having caused either directly or indirectly a gap in a fence, fail to take reasonable steps to notify the land owner of the existence of the gap where the person knows or reasonably ought to know that livestock might escape;"
+                                },
+                                {
+                                    "@id": "d2e889",
+                                    "bcl:num": "f",
+                                    "bcl:text": "contravene a rule made by a bull control committee;"
+                                },
+                                {
+                                    "@id": "d2e898",
+                                    "bcl:num": "g",
+                                    "bcl:text": "contravene an order made by the director under section 3 (3);"
+                                },
+                                {
+                                    "@id": "d2e907",
+                                    "bcl:num": "h) and (i",
+                                    "bcl:text": "[Repealed 2002-12-18.]"
+                                },
+                                {
+                                    "@id": "d2e917",
+                                    "bcl:num": "j",
+                                    "bcl:text": "contravene a regulation made by the minister under section 20 (3)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e926",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who contravenes subsection (1) commits an offence and is liable to a penalty not exceeding $2 000."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e936",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "20",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e944",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e956",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e965",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting the establishment, disestablishment and variation in the boundaries of livestock districts;"
+                                },
+                                {
+                                    "@id": "d2e975",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting the establishment, disestablishment and variation in the boundaries of bull control areas by the director;"
+                                },
+                                {
+                                    "@id": "d2e984",
+                                    "bcl:num": "c",
+                                    "bcl:text": "respecting the establishment, disestablishment and variation in the boundaries of pound districts by the director;"
+                                },
+                                {
+                                    "@id": "d2e993",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting the establishment, constitution and membership of bull control committees;"
+                                },
+                                {
+                                    "@id": "d2e1002",
+                                    "bcl:num": "e",
+                                    "bcl:text": "respecting the types of livestock that may be allowed at large in a livestock district and the times at which and conditions under which livestock may be allowed at large in the district;"
+                                },
+                                {
+                                    "@id": "d2e1011",
+                                    "bcl:num": "f",
+                                    "bcl:text": "respecting the powers and duties of keepers and the director;"
+                                },
+                                {
+                                    "@id": "d2e1020",
+                                    "bcl:num": "g",
+                                    "bcl:text": "respecting the powers of persons to capture and impound livestock found at large and the duties of those persons relative to the livestock;"
+                                },
+                                {
+                                    "@id": "d2e1030",
+                                    "bcl:num": "h",
+                                    "bcl:text": "respecting the sale or destruction of impounded livestock and the disposition of proceeds unclaimed by an owner;"
+                                },
+                                {
+                                    "@id": "d2e1039",
+                                    "bcl:num": "i",
+                                    "bcl:text": "specifying the fees and expenses to be imposed on the owner of impounded livestock;"
+                                },
+                                {
+                                    "@id": "d2e1048",
+                                    "bcl:num": "j",
+                                    "bcl:text": "specifying the fees and expenses to be imposed by the director on a person unlawfully capturing livestock and empowering the director to collect them."
+                                },
+                                {
+                                    "@id": "d2e1057",
+                                    "bcl:num": "k) to (o",
+                                    "bcl:text": "[Repealed 2002-12-19.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1066",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/04071_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Range Act"
+                                },
+                                "#text": "Subject to the , the minister may prescribe the proportion of bulls to cows and heifers that must be maintained by a person allowing livestock to be at large in a livestock district."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

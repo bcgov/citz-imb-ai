@@ -1,0 +1,2448 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_97045_01",
+        "act:title": "Builders Lien Act",
+        "act:chapter": "45",
+        "act:yearenacted": "1997",
+        "act:assentedto": "July 30, 1997",
+        "act:currency": {
+            "act:tlcDirPath": "1944036832/97045/tlc97045_f",
+            "act:tlc": "E3tlc97045"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e25",
+                    "bcl:marginalnote": "Definitions and interpretation",
+                    "bcl:num": "1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e33",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e42",
+                                    "bcl:text": {
+                                        "in:term": "certificate of completion",
+                                        "#text": "means a certificate under section 7\n          stating that work under a contract or subcontract has been completed and includes an order\n          made under section\u00a07\u00a0(5);"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e51",
+                                    "bcl:text": {
+                                        "in:term": "claim of lien",
+                                        "#text": "means a claim of lien in the prescribed\n          form;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e61",
+                                    "bcl:text": {
+                                        "in:term": "class of lien claimants",
+                                        "#text": "means all lien claimants engaged by\n          the same person in connection with an improvement;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e70",
+                                    "bcl:text": {
+                                        "in:term": "completed",
+                                        "#text": ", if used with reference to a contract or\n          subcontract in respect of an improvement, means substantially completed or performed, not\n          necessarily totally completed or performed;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e79",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "contractor",
+                                            "#text": "means a person engaged by an owner to do one or\n          more of the following in relation to an improvement:"
+                                        },
+                                        "but does not include a worker;"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e88",
+                                            "bcl:num": "a",
+                                            "bcl:text": "perform or provide work;"
+                                        },
+                                        {
+                                            "@id": "d2e97",
+                                            "bcl:num": "b",
+                                            "bcl:text": "supply material;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e110",
+                                    "bcl:text": {
+                                        "in:term": "court",
+                                        "#text": "means the Supreme Court;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e119",
+                                    "bcl:text": {
+                                        "in:term": "head contractor",
+                                        "#text": "means a contractor who is engaged to do\n          substantially all of the work respecting an improvement, whether or not others are engaged\n          as subcontractors, material suppliers or workers;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e128",
+                                    "bcl:text": {
+                                        "in:term": "holdback period",
+                                        "#text": "means the period of time calculated under\n          section\u00a08;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e137",
+                                    "bcl:text": {
+                                        "in:term": "improvement",
+                                        "#text": "includes anything made, constructed, erected,\n          built, altered, repaired or added to, in, on or under land, and attached to it or intended\n          to become a part of it, and also includes any clearing, excavating, digging, drilling,\n          tunnelling, filling, grading or ditching of, in, on or under land;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e146",
+                                    "bcl:text": {
+                                        "in:term": "land title office",
+                                        "#text": "means the land title office for the land\n          title district or districts in which the land or any part of it is located and on which\n          the improvement is made or is being made;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e155",
+                                    "bcl:text": {
+                                        "in:term": "lien claimant",
+                                        "#text": "means a person who files a claim of lien under\n          this Act;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e165",
+                                    "bcl:text": {
+                                        "in:term": "lien holder",
+                                        "#text": "means a person entitled to a lien under this\n          Act;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e174",
+                                    "bcl:text": {
+                                        "in:term": "material",
+                                        "#text": "means movable property that is delivered to the land\n          on which the improvement is located and is intended to become part of the improvement,\n          either directly or in a transformed state, or is consumed or used in the making of the\n          improvement, including equipment rented without an operator;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e183",
+                                    "bcl:text": {
+                                        "in:term": "material supplier",
+                                        "#text": "means a contractor or subcontractor who\n          supplies only material in relation to an improvement;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e192",
+                                    "bcl:text": {
+                                        "in:term": "notice of certification of completion",
+                                        "#text": "means a notice in the\n          prescribed form stating that a certificate of completion or a court order to the same\n          effect has been issued;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e201",
+                                    "bcl:text": {
+                                        "in:term": "notice of interest",
+                                        "#text": "means a notice in the prescribed form\n          warning other persons that the owner's interest in the land described in the notice is not\n          bound by a lien claimed under this Act in respect of an improvement on the land unless\n          that improvement is undertaken at the express request of the owner;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e210",
+                                    "bcl:text": {
+                                        "in:term": "notice to commence an action",
+                                        "#text": "means a notice in the prescribed\n          form requiring a claim holder to commence an action to enforce a claim of lien;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e220",
+                                    "bcl:text": {
+                                        "in:term": "operator",
+                                        "#text": "means an individual who operates equipment at an\n          improvement site but does not include an individual who temporarily or periodically is\n          present at the improvement site to install, inspect, service, empty or remove\n          equipment;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e229",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "owner",
+                                            "#text": "includes a person who has, at the time a claim of lien\n          is filed under this Act, an estate or interest, whether legal or equitable, in the land on\n          which the improvement is located, at whose request and"
+                                        },
+                                        "work is done or material is supplied, and includes all persons claiming under the\n          owner, but does not include a mortgagee unless the mortgagee is in possession of the\n          land;"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e238",
+                                            "bcl:num": "a",
+                                            "bcl:text": "on whose credit,"
+                                        },
+                                        {
+                                            "@id": "d2e247",
+                                            "bcl:num": "b",
+                                            "bcl:text": "on whose behalf,"
+                                        },
+                                        {
+                                            "@id": "d2e256",
+                                            "bcl:num": "c",
+                                            "bcl:text": "with whose knowledge or consent, or"
+                                        },
+                                        {
+                                            "@id": "d2e265",
+                                            "bcl:num": "d",
+                                            "bcl:text": "for whose direct benefit"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e278",
+                                    "bcl:text": {
+                                        "in:term": "registrar",
+                                        "#text": "means the registrar of a land title\n          office;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e287",
+                                    "bcl:text": {
+                                        "in:term": "required holdback",
+                                        "#text": "means, in relation to a contract or\n          subcontract, the amount required under section\u00a04 to be retained from payments under that\n          contract or subcontract, less any payments made under an entitlement to payment arising\n          under section\u00a09;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e296",
+                                    "bcl:text": {
+                                        "in:term": "services",
+                                        "#text": "includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e305",
+                                            "bcl:num": "a",
+                                            "bcl:text": "services as an architect or engineer whether provided before or after the\n            construction of an improvement has begun, and"
+                                        },
+                                        {
+                                            "@id": "d2e314",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the rental of equipment, with an operator, for use in making an\n            improvement;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e324",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "subcontractor",
+                                            "#text": "means a person engaged by a contractor or\n          another subcontractor to do one or more of the following in relation to an\n          improvement:"
+                                        },
+                                        "but does not include a worker or a person engaged by an architect, an engineer or\n          a material supplier;"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e333",
+                                            "bcl:num": "a",
+                                            "bcl:text": "perform or provide work;"
+                                        },
+                                        {
+                                            "@id": "d2e342",
+                                            "bcl:num": "b",
+                                            "bcl:text": "supply material;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e354",
+                                    "bcl:text": {
+                                        "in:term": "wages",
+                                        "#text": "means money earned by a worker for work and\n          includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e363",
+                                            "bcl:num": "a",
+                                            "bcl:text": "salaries, commissions or money, paid or payable by an employer to an employee\n            for work,"
+                                        },
+                                        {
+                                            "@id": "d2e373",
+                                            "bcl:num": "b",
+                                            "bcl:text": "money that is paid or payable by an employer as an incentive and that relates to\n            hours of work, production or efficiency,"
+                                        },
+                                        {
+                                            "@id": "d2e382",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96113_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Employment Standards Act"
+                                                },
+                                                "#text": "money, including the amount of any liability under section 63 of the , required to be paid by an\n            employer to an employee under that Act,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e394",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96113_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Employment Standards Act"
+                                                },
+                                                "#text": "money required to be paid in accordance with a determination or an order of the\n            tribunal under the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e406",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96113_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Employment Standards Act"
+                                                },
+                                                "#text": "money required under a contract of employment to be paid, for an employee's\n              benefit, to a fund, insurer or other person and includes money payable under Parts\u00a010 and 11 of the\n              , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e418",
+                                            "bcl:num": "f",
+                                            "bcl:text": "money required to be paid under a collective agreement;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e427",
+                                    "bcl:text": {
+                                        "in:term": "work",
+                                        "#text": "means work, labour or services, skilled or unskilled, on\n          an improvement;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e437",
+                                    "bcl:text": {
+                                        "in:term": "worker",
+                                        "#text": "means an individual engaged by an owner, contractor or\n          subcontractor for wages in any kind of work, whether engaged under a contract of service\n          or not, but does not include an architect or engineer or a person engaged by an architect\n          or engineer."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e446",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of this Act, a head contract, contract or subcontract is\n          substantially performed if the work to be done under that contract is capable of\n          completion or correction at a cost of not more than",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e455",
+                                    "bcl:num": "a",
+                                    "bcl:text": "3% of the first $500\u00a0000 of the contract price,"
+                                },
+                                {
+                                    "@id": "d2e464",
+                                    "bcl:num": "b",
+                                    "bcl:text": "2% of the next $500\u00a0000 of the contract price, and"
+                                },
+                                {
+                                    "@id": "d2e473",
+                                    "bcl:num": "c",
+                                    "bcl:text": "1% of the balance of the contract price."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e482",
+                            "bcl:num": "3",
+                            "bcl:text": "For the purposes of this Act, an improvement is completed if the improvement or a\n          substantial part of it is ready for use or is being used for the purpose\n          intended."
+                        },
+                        {
+                            "@id": "d2e492",
+                            "bcl:num": "4",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/98043_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Strata Property Act"
+                                },
+                                "#text": "For the purposes of this Act, the construction of a strata lot, as defined by the\n            , is completed, or a contract for its\n          construction is substantially performed, not later than the date the strata lot is first\n          occupied."
+                            }
+                        },
+                        {
+                            "@id": "d2e504",
+                            "bcl:num": "4.1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/98043_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Strata Property Act"
+                                },
+                                "#text": "With respect to common property or common assets held by a strata corporation\n          under the , for the purposes of sections\n            7\n          and 41\n          of this Act, and any other provision of this Act specified in the regulations, the strata\n          corporation is deemed to be the owner."
+                            }
+                        },
+                        {
+                            "@id": "d2e516",
+                            "bcl:num": "4.2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/98043_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Strata Property Act"
+                                },
+                                "#text": "With respect to common property or common assets held by a strata corporation\n          under the , for the purposes of section 25 of\n          this Act and any other provision of this Act specified in the regulations, a reference to\n          an owner includes the strata corporation."
+                            }
+                        },
+                        {
+                            "@id": "d2e528",
+                            "bcl:num": "5",
+                            "bcl:text": "For the purposes of this Act, a contract or improvement is deemed to be abandoned\n          on the expiry of a period of 30\u00a0days during which no work has been done in connection with\n          the contract or improvement, unless the cause for the cessation of work was and continued\n          to be a strike, lockout, sickness, weather conditions, holidays, a court order, shortage\n          of material or other similar cause."
+                        },
+                        {
+                            "@id": "d2e537",
+                            "bcl:num": "6",
+                            "bcl:text": "Anything that may be done under this Act by or with reference to an owner,\n          contractor, subcontractor, worker or mortgagee is valid if done by or with reference to an\n          agent of that person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e547",
+                    "bcl:marginalnote": "Exemptions",
+                    "bcl:num": "1.1",
+                    "bcl:text": "Nothing in this Act extends to any of the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e558",
+                            "bcl:num": "a",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/04044_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Transportation\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/04044_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Transportation Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02065_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Transportation\n              Investment Act"
+                                    }
+                                ],
+                                "#text": "a highway, as defined by the , or to any improvement done or caused to be done on it by a\n          municipality, the minister responsible for the administration of the , the Transportation Investment\n          Corporation, a concessionaire as defined by the , the BC Transportation Financing Authority or its\n          subsidiaries, the South Coast British Columbia Transportation Authority or its\n          subsidiaries or any other public body designated by regulation;"
+                            }
+                        },
+                        {
+                            "@id": "d2e576",
+                            "bcl:num": "a.1",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/03014_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Coastal\n              Ferry Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/04044_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Transportation Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/03014_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Coastal Ferry Act"
+                                    }
+                                ],
+                                "#text": "continuing highway properties, as defined in section 30 (1) of the , or any improvement done or caused to be done on them by\n          a municipality, the minister responsible for the administration of the  or BC Transportation Financing\n          Authority or its subsidiaries or by the ferry operator, within the meaning of the\n            , to which those properties are leased\n          under that Act;"
+                            }
+                        },
+                        {
+                            "@id": "d2e595",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96157_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Forest\n            Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96300_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Ministry of Forests and\n              Range Act"
+                                    }
+                                ],
+                                "#text": "a forest service road, as defined in the , or any improvement done or caused to be done by or for the\n          minister responsible for the administration of the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e611",
+                    "bcl:marginalnote": "Lien for work and material",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e619",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "Subject to this Act, a contractor, subcontractor or worker who, in relation to an\n          improvement,",
+                                "has a lien for the price of the work and material, to the extent that the price\n          remains unpaid, on all of the following:"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e628",
+                                    "bcl:num": "a",
+                                    "bcl:text": "performs or provides work,"
+                                },
+                                {
+                                    "@id": "d2e637",
+                                    "bcl:num": "b",
+                                    "bcl:text": "supplies material, or"
+                                },
+                                {
+                                    "@id": "d2e647",
+                                    "bcl:num": "c",
+                                    "bcl:text": "does any combination of those things referred to in paragraphs\n              (a) and (b)"
+                                },
+                                {
+                                    "@id": "d2e659",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the interest of the owner in the improvement;"
+                                },
+                                {
+                                    "@id": "d2e668",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the improvement itself;"
+                                },
+                                {
+                                    "@id": "d2e677",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the land in, on or under which the improvement is located;"
+                                },
+                                {
+                                    "@id": "d2e686",
+                                    "bcl:num": "g",
+                                    "bcl:text": "the material delivered to or placed on the land."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e696",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection\n            (1) does not create a lien in favour of a person who performs or provides\n          work or supplies material to an architect, engineer or material supplier."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e706",
+                    "bcl:marginalnote": "Deemed authorization",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e714",
+                            "bcl:num": "1",
+                            "bcl:text": "An improvement done with the prior knowledge, but not at the request, of an owner\n          is deemed to have been done at the request of the owner."
+                        },
+                        {
+                            "@id": "d2e723",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection\n            (1) does not apply to an improvement made after the owner has filed a notice\n          of interest in the land title office."
+                        },
+                        {
+                            "@id": "d2e732",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsection\n            (1) does not apply to an improvement on land owned by the\n          government."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e742",
+                    "bcl:marginalnote": "Holdback",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e750",
+                            "bcl:num": "1",
+                            "bcl:text": "The person primarily liable on each contract, and the person primarily liable on\n          each subcontract, under which a lien may arise under this Act must retain a holdback equal\n          to 10% of the greater of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e759",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the value of the work or material as they are actually provided under the\n            contract or subcontract, and"
+                                },
+                                {
+                                    "@id": "d2e768",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the amount of any payment made on account of the contract or subcontract\n            price."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e778",
+                            "bcl:num": "2",
+                            "bcl:text": "The obligation to retain the holdback under subsection (1) applies whether or\n          not the contract or subcontract provides for periodic payments or payment on\n          completion."
+                        },
+                        {
+                            "@id": "d2e787",
+                            "bcl:num": "3",
+                            "bcl:text": "For the purposes of subsection (1), value must be calculated on the basis of\n          the contract or subcontract price or, if there is no specific price, on the basis of the\n          actual value of the work or material."
+                        },
+                        {
+                            "@id": "d2e796",
+                            "bcl:num": "4",
+                            "bcl:text": "Subject to section 5 (4), if a mortgagee is a savings institution\n          and is authorized by the owner to disburse the money secured by a mortgage, the mortgagee\n          may retain as a holdback the amount required to be retained by the owner as the payor on\n          the contract and the retention by the mortgagee of that amount is deemed to be compliance\n          with this section by the owner."
+                        },
+                        {
+                            "@id": "d2e805",
+                            "bcl:num": "5",
+                            "bcl:text": "Subject to section 5 (4), a mortgagee who retains or agrees to\n          retain a holdback under subsection (4) of this section",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e814",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has the same rights and obligations in relation to the holdback as if it had\n            been retained by the owner, and"
+                                },
+                                {
+                                    "@id": "d2e823",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is liable to the owner or any lien holder who suffers loss or damage as a result\n            of the failure of the mortgagee",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e833",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to retain the holdback as agreed, or"
+                                        },
+                                        {
+                                            "@id": "d2e842",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to fulfill the mortgagee's obligations in relation to the holdback."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e851",
+                            "bcl:num": "6",
+                            "bcl:text": "Despite subsection (1) (a), a holdback must not be retained from a worker, material\n          supplier, architect or engineer."
+                        },
+                        {
+                            "@id": "d2e860",
+                            "bcl:num": "7) and (8",
+                            "bcl:text": "[Not in force.]"
+                        },
+                        {
+                            "@id": "d2e869",
+                            "bcl:num": "9",
+                            "bcl:text": "Subject to section 34, a holdback required to be retained under\n          this section is subject to a lien under this Act, and each holdback is charged with\n          payment of all persons engaged, in connection with the improvement, by or under the person\n          from whom the holdback is retained."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e880",
+                    "bcl:marginalnote": "Holdback account",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e888",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (8), an owner must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e897",
+                                    "bcl:num": "a",
+                                    "bcl:text": "establish at a savings institution a holdback account for each contract under\n            which a lien may arise,"
+                                },
+                                {
+                                    "@id": "d2e906",
+                                    "bcl:num": "b",
+                                    "bcl:text": "pay into the holdback account the amount the owner is required to retain under\n            section\u00a04, and"
+                                },
+                                {
+                                    "@id": "d2e916",
+                                    "bcl:num": "c",
+                                    "bcl:text": "administer the holdback account together with the contractor from whom the\n            holdback was retained."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e925",
+                            "bcl:num": "2",
+                            "bcl:text": "Subject to sections 9 and 34, all amounts deposited into a\n          holdback account",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e934",
+                                    "bcl:num": "a",
+                                    "bcl:text": "are charged with payment of all liens arising under the contractor from whom the\n            holdback was retained,"
+                                },
+                                {
+                                    "@id": "d2e943",
+                                    "bcl:num": "b",
+                                    "bcl:text": "subject to paragraph\u00a0(a), are held in trust for the contractor\n            referred to in paragraph\u00a0(a), and"
+                                },
+                                {
+                                    "@id": "d2e952",
+                                    "bcl:num": "c",
+                                    "bcl:text": "must not be paid out of the account without the agreement of all the persons who\n            administer the account."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e961",
+                            "bcl:num": "3",
+                            "bcl:text": "An administrator of a holdback account may apply to the court for directions\n          respecting administration of the account, and the court may make any order it considers\n          appropriate, including one or more of the following orders:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e971",
+                                    "bcl:num": "a",
+                                    "bcl:text": "that the owner establish and maintain a holdback account as sole\n            administrator;"
+                                },
+                                {
+                                    "@id": "d2e980",
+                                    "bcl:num": "b",
+                                    "bcl:text": "that some or all of the money in the holdback account be paid into court under\n            section\u00a023 for the removal of claims of lien;"
+                                },
+                                {
+                                    "@id": "d2e989",
+                                    "bcl:num": "c",
+                                    "bcl:text": "that an administrator be removed or replaced;"
+                                },
+                                {
+                                    "@id": "d2e998",
+                                    "bcl:num": "d",
+                                    "bcl:text": "that a lien holder be paid."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1007",
+                            "bcl:num": "4",
+                            "bcl:text": "If the mortgagee retains a holdback under section 4 (4), this section other\n          than this subsection does not apply."
+                        },
+                        {
+                            "@id": "d2e1016",
+                            "bcl:num": "5",
+                            "bcl:text": "If there is more than one owner, only one of the owners is required to establish\n          and administer the holdback account."
+                        },
+                        {
+                            "@id": "d2e1026",
+                            "bcl:num": "6",
+                            "bcl:text": "Unless otherwise agreed, interest on the holdback account accrues to the owner\n          during the holdback period and after that accrues to the credit of the contractor from\n          whom the holdback was retained."
+                        },
+                        {
+                            "@id": "d2e1035",
+                            "bcl:num": "7",
+                            "bcl:text": "Failure by the owner to comply with subsection (l) (b) constitutes an act of\n          default under the contract and the contractor, on 10 days' notice, may suspend operations\n          for as long as the default continues."
+                        },
+                        {
+                            "@id": "d2e1044",
+                            "bcl:num": "8",
+                            "bcl:text": "This section does not apply to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1053",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96138_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Financial Administration Act"
+                                        },
+                                        "#text": "if it is an owner, the government, a government corporation as defined in the\n               or any other public body\n            designated, by name or by class, by regulation, or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1065",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a contract in respect of an improvement, if the aggregate value of work and\n            material provided is less than $100\u00a0000."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1075",
+                    "bcl:marginalnote": "Prohibited application of holdback",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1083",
+                            "bcl:num": "1",
+                            "bcl:text": "If a contractor or subcontractor defaults under a contract or subcontract, the\n          required holdback must not be applied to the completion of the contract or subcontract, or\n          for the payment of damages, or for any other purpose until the possibility of any lien\n          arising under the person in default is exhausted."
+                        },
+                        {
+                            "@id": "d2e1092",
+                            "bcl:num": "2",
+                            "bcl:text": "A payment applied contrary to this section does not reduce the liability under\n          this Act of the person making the payment."
+                        },
+                        {
+                            "@id": "d2e1101",
+                            "bcl:num": "3",
+                            "bcl:text": "This section does not apply to money held in excess of the required\n          holdback."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1111",
+                    "bcl:marginalnote": "Certificate of completion",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1119",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "payment certifier",
+                                "#text": "In this section,  means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1131",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an architect, engineer or other person identified in the contract or subcontract\n            as the person responsible for payment certification, or"
+                                },
+                                {
+                                    "@id": "d2e1140",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if there is no person as described in paragraph (a),",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1150",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the owner acting alone in respect of amounts due to the contractor,\n              or"
+                                        },
+                                        {
+                                            "@id": "d2e1159",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the owner and the contractor acting together in respect of amounts due to any\n              subcontractor."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1168",
+                            "bcl:num": "2",
+                            "bcl:text": "A lien holder in respect of an improvement may, by making a written request,\n          require that the payment certifier for the improvement deliver to the lien\n          holder",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1177",
+                                    "bcl:num": "a",
+                                    "bcl:text": "particulars of any certificate of completion issued under this section before\n            and after the request, or"
+                                },
+                                {
+                                    "@id": "d2e1186",
+                                    "bcl:num": "b",
+                                    "bcl:text": "particulars of certificates of completion issued, before and after the request,\n            with respect to stipulated contracts or subcontracts."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1195",
+                            "bcl:num": "3",
+                            "bcl:text": "On the request of a contractor or subcontractor, the payment certifier must,\n          within 10\u00a0days after the date of the request, determine whether the contract or\n          subcontract has been completed and, if the payment certifier determines that it has been\n          completed, the payment certifier must issue a certificate of completion."
+                        },
+                        {
+                            "@id": "d2e1205",
+                            "bcl:num": "4",
+                            "bcl:text": "If a certificate of completion is issued, the payment certifier must, within\n          7\u00a0days,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1214",
+                                    "bcl:num": "a",
+                                    "bcl:text": "deliver a copy of the certificate to the owner, the head contractor, if any, and\n            the person at whose request the certificate was issued,"
+                                },
+                                {
+                                    "@id": "d2e1223",
+                                    "bcl:num": "b",
+                                    "bcl:text": "deliver a notice of certification of completion to all persons who submitted a\n            request under subsection (2) in relation to the contract or subcontract, and"
+                                },
+                                {
+                                    "@id": "d2e1232",
+                                    "bcl:num": "c",
+                                    "bcl:text": "post, in a prominent place on the improvement, a notice of certification of\n            completion."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1241",
+                            "bcl:num": "5",
+                            "bcl:text": "If the payment certifier fails or refuses to issue a certificate of completion as\n          provided in subsection (3), the court may, on application by the person who requested\n          the certificate and on being satisfied that the contract or subcontract has been\n          completed, make an order declaring that the contract or subcontract has been\n          completed."
+                        },
+                        {
+                            "@id": "d2e1250",
+                            "bcl:num": "6",
+                            "bcl:text": "An order under subsection (5)",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1260",
+                                    "bcl:num": "a",
+                                    "bcl:text": "may be made on terms and conditions as to costs or otherwise that the court\n            considers just, and"
+                                },
+                                {
+                                    "@id": "d2e1269",
+                                    "bcl:num": "b",
+                                    "bcl:text": "has the same effect as a certificate of completion issued by a payment\n            certifier."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1278",
+                            "bcl:num": "7",
+                            "bcl:text": "If an order is made under subsection (5) declaring that a contract or subcontract\n          has been completed, the payment certifier must comply with subsection (4) as if the order\n          were a certificate of completion."
+                        },
+                        {
+                            "@id": "d2e1287",
+                            "bcl:num": "8",
+                            "bcl:text": "A payment certifier who receives a request under subsection (3) and who fails or\n          refuses, without reasonable excuse and within the time specified in that subsection, to\n          issue a certificate of completion respecting the contract or subcontract is liable to\n          anyone who suffers loss or damage as a result."
+                        },
+                        {
+                            "@id": "d2e1296",
+                            "bcl:num": "9",
+                            "bcl:text": "A payment certifier who fails or refuses to comply with subsection (4)\n            or \n            (7) is liable to anyone who suffers loss or damage as a result."
+                        },
+                        {
+                            "@id": "d2e1305",
+                            "bcl:num": "10",
+                            "bcl:text": "A certificate of completion may be in the prescribed form and, if it is in the\n          prescribed form, it is sufficient to comply with this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1315",
+                    "bcl:marginalnote": "Holdback period",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1323",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If a certificate of completion is issued with respect to a contract or\n          subcontract, the holdback period in relation to",
+                                "expires at the end of 55 days after the certificate of completion is\n          issued."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1332",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the contract or subcontract, and"
+                                },
+                                {
+                                    "@id": "d2e1341",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any subcontract under the contract or subcontract"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1354",
+                            "bcl:num": "2",
+                            "bcl:text": "The holdback period for a contract or subcontract that is not governed by\n          subsection\u00a0(1) expires at the end of 55 days after",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1363",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the head contract is completed, abandoned or terminated, if the owner engaged a\n            head contractor, or"
+                                },
+                                {
+                                    "@id": "d2e1372",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the improvement is completed or abandoned, if paragraph (a) does not\n            apply."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1381",
+                            "bcl:num": "3",
+                            "bcl:text": "[Not in force.]"
+                        },
+                        {
+                            "@id": "d2e1390",
+                            "bcl:num": "4",
+                            "bcl:text": "Payment of a holdback required to be retained under section 4 may be made after expiry\n          of the holdback period, and all liens of the person to whom the holdback is paid, and of\n          any person engaged by or under the person to whom the holdback is paid, are then\n          discharged unless in the meantime a claim of lien is filed by one of those persons or\n          proceedings are commenced to enforce a lien against the holdback."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1400",
+                    "bcl:marginalnote": "Rights on payment of holdback",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1408",
+                            "bcl:num": "1",
+                            "bcl:text": "A contractor is entitled to receive, from the holdback retained by the owner from\n          the contractor, an amount equal to the holdback amount applicable to a subcontract\n          if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1417",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a certificate of completion has been issued in respect of the subcontract to\n            which the contractor was a party, and"
+                                },
+                                {
+                                    "@id": "d2e1426",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the holdback period established under section 8 (1) has expired\n            without any claims of lien being filed that arose under the subcontract."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1436",
+                            "bcl:num": "2",
+                            "bcl:text": "An owner is deemed to have complied with the requirements of section\u00a04 even if the\n          amount retained has been reduced to a lesser percentage than is required by that section\n          if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1445",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an amount is paid to a contractor in accordance with subsection\n              (1) of this section, and"
+                                },
+                                {
+                                    "@id": "d2e1454",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the amount retained by the owner would have complied with the requirements of\n            section\u00a04 had no payments been made under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1463",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsections (1) and (2) apply if a certificate of completion is given in\n          relation to a subcontract to which a contractor is not a party."
+                        },
+                        {
+                            "@id": "d2e1472",
+                            "bcl:num": "4",
+                            "bcl:text": "If a contractor is entitled to an amount under subsection\u00a0(1), payment may be made\n          from the holdback account established under section\u00a05."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1482",
+                    "bcl:marginalnote": "Contract money received constitutes trust fund",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1490",
+                            "bcl:num": "1",
+                            "bcl:text": "Money received by a contractor or subcontractor on account of the price of the\n          contract or subcontract constitutes a trust fund for the benefit of persons engaged in\n          connection with the improvement by that contractor or subcontractor and the contractor or\n          subcontractor is the trustee of the fund."
+                        },
+                        {
+                            "@id": "d2e1499",
+                            "bcl:num": "2",
+                            "bcl:text": "Until all of the beneficiaries of the fund referred to in subsection (1)\n          are paid, a contractor or subcontractor must not appropriate any part of the fund to that\n          person's own use or to a use not authorized by the trust."
+                        },
+                        {
+                            "@id": "d2e1508",
+                            "bcl:num": "3",
+                            "bcl:text": "If the liens of a class of lien claimants are discharged under this Act by the\n          payment of an amount that is less than the amount owing to the person who engaged the\n          class, the members of the class are subrogated to the rights under subsections\n            (1) and (2) of the person who engaged the class."
+                        },
+                        {
+                            "@id": "d2e1518",
+                            "bcl:num": "4",
+                            "bcl:text": "Subsections (1) and (2) do not apply to money received by an architect,\n          engineer or material supplier."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1529",
+                    "bcl:marginalnote": "Certain applications of trust fund deemed not to be appropriation or\n        conversion",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1537",
+                            "bcl:num": "1",
+                            "bcl:text": "A contractor or subcontractor commits an offence if that person",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1546",
+                                    "bcl:num": "a",
+                                    "bcl:text": "appropriates or converts any part of a fund in contravention of section\u00a010,\n            or"
+                                },
+                                {
+                                    "@id": "d2e1555",
+                                    "bcl:num": "b",
+                                    "bcl:text": "contravenes section 13 (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1565",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who commits an offence under subsection (1) (a) is liable to a\n          fine of not more than $10 000 or to imprisonment for a term of not more than 2 years, or\n          both."
+                        },
+                        {
+                            "@id": "d2e1574",
+                            "bcl:num": "3",
+                            "bcl:text": "If a contractor or subcontractor is a corporation, a director or officer of the\n          corporation who knowingly assents to or acquiesces in an offence under subsection (1)\n            (a) by the corporation commits the offence in addition to the\n          corporation."
+                        },
+                        {
+                            "@id": "d2e1583",
+                            "bcl:num": "4",
+                            "bcl:text": "Despite subsections (1) to (3),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1592",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to the extent that a contractor or subcontractor has paid for work or material\n            supplied under a contract or subcontract, the retention by the contractor or\n            subcontractor of trust money in an amount equal to the amount paid is not an\n            appropriation or conversion that contravenes section\u00a010, and"
+                                },
+                                {
+                                    "@id": "d2e1601",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if money is loaned to a person on whom a trust is imposed by section\u00a010 and is\n            used to pay for all or part of work or material supplied, trust money may be applied to\n            discharge the loan to the extent that the lender's money was so used by the trustee, and\n            money so applied is not an appropriation or conversion that contravenes\n            section\u00a010."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1610",
+                            "bcl:num": "5",
+                            "bcl:text": "An information must not be laid in respect of an alleged offence under subsection (1)\n            or \n            (3) more than 3 years after the alleged offence occurred."
+                        },
+                        {
+                            "@id": "d2e1620",
+                            "bcl:num": "6",
+                            "bcl:text": "Subsection (4) (b) does not limit the rights of a lender who, in the ordinary\n          course of business, receives money in good faith from a person on whom a trust is imposed\n          under section\u00a010."
+                        },
+                        {
+                            "@id": "d2e1629",
+                            "bcl:num": "7",
+                            "bcl:text": "If a contractor or subcontractor commingles, with other money, any part of the\n          fund referred to in section 10, that, of itself, does not constitute a breach of the trust\n          created under section 10 (1) or a contravention of section 10 (2)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1639",
+                    "bcl:marginalnote": "Crediting of money earmarked for particular improvement",
+                    "bcl:num": "12",
+                    "bcl:text": "If a person makes a payment from money in a trust fund constituted in respect of a\n        particular improvement, a person who receives the money must credit it against the debt in\n        respect of the improvement."
+                },
+                {
+                    "@id": "d2e1651",
+                    "bcl:marginalnote": "Garnishment and money in court",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1659",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96078_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Court Order Enforcement\n              Act"
+                                },
+                                "#text": "In the case of money owing to a contractor or subcontractor that would, if paid to\n          the contractor or subcontractor, be subject to a trust under section\u00a010, the money, if it\n          is paid into court under an attachment under the , is subject to a trust as if it had been paid to the\n          contractor or subcontractor, and the interest of the garnishor is subordinate to the\n          interest of the beneficiaries of the trust."
+                            }
+                        },
+                        {
+                            "@id": "d2e1671",
+                            "bcl:num": "2",
+                            "bcl:text": "A garnishee under an attachment referred to in subsection (1) must, at the time\n          of payment into court, file in the court registry a notice in the prescribed form and\n          deliver a copy of the notice to the garnishor."
+                        },
+                        {
+                            "@id": "d2e1680",
+                            "bcl:num": "3",
+                            "bcl:text": "If a notice is filed under subsection (2), the registrar of the court must not pay\n          out of court without an order of the court any money paid into court under subsection\n          (1)."
+                        },
+                        {
+                            "@id": "d2e1690",
+                            "bcl:num": "4",
+                            "bcl:text": "Money held in a holdback account established under section\u00a05 is not subject to\n          garnishment."
+                        },
+                        {
+                            "@id": "d2e1699",
+                            "bcl:num": "5",
+                            "bcl:text": "If money is paid into court under this Act by a contractor, subcontractor or\n          owner, the money becomes or remains subject to the trust imposed by section\u00a010."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1709",
+                    "bcl:marginalnote": "Limitation period",
+                    "bcl:num": "14",
+                    "bcl:text": "An action by a beneficiary or against a trustee of a trust created under section\u00a010\n        must not be commenced later than one\u00a0year after",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1720",
+                            "bcl:num": "a",
+                            "bcl:text": "the head contract is completed, abandoned or terminated, or"
+                        },
+                        {
+                            "@id": "d2e1729",
+                            "bcl:num": "b",
+                            "bcl:text": "if the owner did not engage a head contractor, the completion or abandonment of\n          the improvement in respect of which the money over which a trust is claimed became\n          available."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1739",
+                    "bcl:marginalnote": "Claim of lien to be in prescribed form",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1747",
+                            "bcl:num": "1",
+                            "bcl:text": "Except as provided in section 18, a claim of lien is made by filing in the\n          land title office a claim of lien in the prescribed form."
+                        },
+                        {
+                            "@id": "d2e1756",
+                            "bcl:num": "2",
+                            "bcl:text": "An agent who represents more than one lien claimant may, with respect to a\n          particular improvement, make a single claim of lien on behalf of all of the lien claimants\n          represented, and the prescribed form may be altered accordingly for that\n          purpose."
+                        },
+                        {
+                            "@id": "d2e1765",
+                            "bcl:num": "3",
+                            "bcl:text": "The registrar must not allow a claim of lien to be filed unless satisfied that the\n          land is adequately described."
+                        },
+                        {
+                            "@id": "d2e1775",
+                            "bcl:num": "4",
+                            "bcl:text": "On the filing of the claim of lien in the land title office, the registrar must\n          endorse a memorandum of the filing on the register of title to the land or against the\n          estate or interest in the land described in the claim of lien."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1785",
+                    "bcl:marginalnote": "General lien",
+                    "bcl:num": "16",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1793",
+                            "bcl:num": "1",
+                            "bcl:text": "If an owner enters into a single contract for improvements on more than one parcel\n          of land, a lien claimant providing work or material under that contract, or under a\n          subcontract under that contract, may choose to have the lien follow the form of the\n          contract and be a lien against each parcel for the price of all work and material provided\n          to all of the parcels of land."
+                        },
+                        {
+                            "@id": "d2e1802",
+                            "bcl:num": "2",
+                            "bcl:text": "If a lien is claimed under subsection (1) against several parcels of land, on\n          application to the court by any person with an interest in or charge on the land, the\n          court may apportion the lien among the parcels for the purpose of determining the lien\n          claimant's rights as against persons having rights in particular parcels."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1813",
+                    "bcl:marginalnote": "No claim under $200",
+                    "bcl:num": "17",
+                    "bcl:text": "A claim of lien must not be filed if the amount of the claim or aggregate of joined\n        claims is less than $200."
+                },
+                {
+                    "@id": "d2e1825",
+                    "bcl:marginalnote": {
+                        "in:doc": "Mineral Tenure\n            Act",
+                        "#text": "Procedure to file a claim of lien under the"
+                    },
+                    "bcl:num": "18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1835",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/00_96292_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Mineral Tenure Act"
+                                },
+                                "#text": "In order to file a claim of lien in respect of a mineral title held under the\n             other than a Crown granted mineral\n          claim, the lien claimant must"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1847",
+                                    "bcl:num": "a",
+                                    "bcl:text": "file in the office of the gold commissioner in which the mineral title is\n            recorded a claim of lien in the prescribed form, and"
+                                },
+                                {
+                                    "@id": "d2e1856",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the property that is the subject of a mineral title is registered in a land\n            title office, also file in the land title office a copy of the claim of lien."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1866",
+                            "bcl:num": "2",
+                            "bcl:text": "On the filing of the claim of lien under subsection (1), the gold\n          commissioner must endorse a memorandum of the filing on the record of the mineral title in\n          the gold commissioner's office."
+                        },
+                        {
+                            "@id": "d2e1875",
+                            "bcl:num": "3",
+                            "bcl:text": "If the property that is the subject of a mineral title described in the claim of\n          lien is registered in a land title office, the registrar must endorse a memorandum of the\n          filing on the register of title to the land or against the estate or interest in the land\n          or mineral title described in the claim of lien."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1885",
+                    "bcl:marginalnote": "Liability for wrongful filing",
+                    "bcl:num": "19",
+                    "bcl:text": "A person who files a claim of lien against an estate or interest in land to which\n        the lien claimed does not attach is liable for costs and damages incurred by an owner of any\n        estate or interest in the land as a result of the wrongful filing of the claim of\n        lien."
+                },
+                {
+                    "@id": "d2e1897",
+                    "bcl:marginalnote": "Time for filing claim of lien",
+                    "bcl:num": "20",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1905",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "If a certificate of completion has been issued with respect to a contract or\n          subcontract, the claims of lien of",
+                                "may be filed no later than 45 days after the date on which the certificate of\n          completion was issued."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1914",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the contractor or subcontractor, and"
+                                },
+                                {
+                                    "@id": "d2e1923",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any persons engaged by or under the contractor or subcontractor"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1936",
+                            "bcl:num": "2",
+                            "bcl:text": "A claim of lien that is not governed by subsection (1) may be filed no\n          later than 45\u00a0days after",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1945",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the head contract has been completed, abandoned or terminated, if the owner\n            engaged a head contractor, or"
+                                },
+                                {
+                                    "@id": "d2e1954",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the improvement has been completed or abandoned, if paragraph\n              (a) does not apply."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1963",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsection (1) does not operate to extend or renew the time for filing of a\n          claim of lien if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1972",
+                                    "bcl:num": "a",
+                                    "bcl:text": "that time would otherwise be determined with reference to the time an earlier\n            certificate of completion was issued, or"
+                                },
+                                {
+                                    "@id": "d2e1982",
+                                    "bcl:num": "b",
+                                    "bcl:text": "time had started to run under subsection (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1991",
+                            "bcl:num": "4",
+                            "bcl:text": "On the filing of a claim of lien under this Act, the registrar or gold\n          commissioner has no duty to inquire as to whether or not the lien claimant has complied\n          with the time limit for filing the claim of lien."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2001",
+                    "bcl:marginalnote": "When claim of lien takes effect",
+                    "bcl:num": "21",
+                    "bcl:text": "A claim of lien filed under this Act takes effect from the time work began or the\n        time the first material was supplied for which the lien is claimed, and it has priority over\n        all judgments, executions, attachments and receiving orders recovered, issued or made after\n        that date."
+                },
+                {
+                    "@id": "d2e2013",
+                    "bcl:marginalnote": "Lien extinguished if not filed as required by Act",
+                    "bcl:num": "22",
+                    "bcl:text": "A lien in respect of which a claim of lien is not filed in the manner and within the\n        time provided in this Act is extinguished."
+                },
+                {
+                    "@id": "d2e2026",
+                    "bcl:marginalnote": "Removal of claims of lien by payment of total amount\n        recoverable",
+                    "bcl:num": "23",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2034",
+                            "bcl:num": "1",
+                            "bcl:text": "If a claim of lien is filed by one or more members of a class of lien claimants,\n          other than a class of lien claimants engaged by an owner, the owner, contractor,\n          subcontractor or mortgagee authorized by the owner to disburse money secured by a mortgage\n          may, on application, pay into court the lesser of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2043",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the total amount of the claim or claims filed, and"
+                                },
+                                {
+                                    "@id": "d2e2052",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the amount owing by the payor to the person engaged by the payor through whom\n            the liens are claimed provided the amount is at least equal to the required holdback in\n            relation to the contract or subcontract between the payor and that person or, if the\n            payment is made by a purchaser to whom section\u00a035 applies, 10% of the purchase price of\n            the improvement."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2062",
+                            "bcl:num": "2",
+                            "bcl:text": "Payment into court under an order made under subsection (1) discharges the\n          owner from liability in respect of the claims of lien filed and",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2071",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the money paid into court stands in place of the improvement and the land or\n            mineral title, and"
+                                },
+                                {
+                                    "@id": "d2e2080",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the order must provide that the claims of lien be removed from the title to the\n            land or mineral title."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2089",
+                            "bcl:num": "3",
+                            "bcl:text": "If an application has been made under subsection (1) and the claims of\n          lien have been removed under subsection (2), and if additional claims of lien are\n          filed by persons claiming through the same person engaged by the payor with respect to the\n          lien claimants whose claims of lien were removed under subsection (2), application may be\n          made under subsection (1) to have the additional claims of lien removed under subsection (2)\n          on payment into court of whatever additional sum is necessary to bring the amount in court\n          up to the amount that would have been paid into court if the additional claims of lien had\n          been filed at the time of the prior application."
+                        },
+                        {
+                            "@id": "d2e2098",
+                            "bcl:num": "4",
+                            "bcl:text": "An application under subsection (1) or (3) may be brought by an\n          application in proceedings that have been commenced to enforce a claim of lien, or by\n          petition, and the court may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2107",
+                                    "bcl:num": "a",
+                                    "bcl:text": "hear and receive evidence, by affidavit or orally or otherwise, that it\n            considers necessary in order to determine the proper amount to be paid into\n            court,"
+                                },
+                                {
+                                    "@id": "d2e2117",
+                                    "bcl:num": "b",
+                                    "bcl:text": "direct the trial of an issue to determine the amount to be paid into court,\n            and"
+                                },
+                                {
+                                    "@id": "d2e2126",
+                                    "bcl:num": "c",
+                                    "bcl:text": "refuse the application if it is of the opinion that the determination of the\n            total amount that may be recovered by lien claimants should be made at the trial of the\n            action."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2135",
+                            "bcl:num": "5",
+                            "bcl:text": "If the amount held back by the payor from the person engaged by the payor through\n          whom the liens are claimed exceeds the required holdback in relation to the contract or\n          subcontract between the payor and that person, and that person has defaulted in completing\n          or carrying out the contract or subcontract with the payor, for the purposes of subsections\n            (1) and (3) the amount owing by the payor to that person does\n          not include any amount that the payor is entitled to apply to remedy the default or\n          complete the contract or subcontract."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2145",
+                    "bcl:marginalnote": "Cancellation of claim of lien by giving security",
+                    "bcl:num": "24",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2153",
+                            "bcl:num": "1",
+                            "bcl:text": "A person against whose land a claim of lien has been filed, and a contractor,\n          subcontractor or any other person liable on a contract or subcontract in connection with\n          an improvement on the land, may apply to a court to have the claim of lien cancelled on\n          giving sufficient security for the payment of the claim."
+                        },
+                        {
+                            "@id": "d2e2162",
+                            "bcl:num": "2",
+                            "bcl:text": "The court hearing the application under subsection (1) may, after\n          considering all relevant circumstances, order the cancellation of the claim of lien on the\n          giving of security satisfactory to the court."
+                        },
+                        {
+                            "@id": "d2e2171",
+                            "bcl:num": "3",
+                            "bcl:text": "The value of the security required under an order under subsection (2)\n          may be less than the amount of the claim of lien."
+                        },
+                        {
+                            "@id": "d2e2181",
+                            "bcl:num": "4",
+                            "bcl:text": "The registrar or gold commissioner in whose office a claim of lien is filed must,\n          on receiving an order or certified copy of the order made under subsection\n          (2), file it and cancel the claim of lien as to the property affected by the\n          order."
+                        },
+                        {
+                            "@id": "d2e2190",
+                            "bcl:num": "5",
+                            "bcl:text": "The giving of security for the payment of a claim of lien under subsection\u00a0(1)\n          does not make the owner liable for a greater sum than provided for in\n          section\u00a034."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2200",
+                    "bcl:marginalnote": "Powers of court, registrar or gold commissioner to remove claim of\n        lien",
+                    "bcl:num": "25",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2208",
+                            "bcl:num": "1",
+                            "bcl:text": "An owner, contractor, subcontractor, lien claimant or agent of any of them may at\n          any time apply to the court, registrar or gold commissioner and the court, registrar or\n          gold commissioner may cancel a claim of lien if satisfied that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2217",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a lien is extinguished under section 22 or 33,"
+                                },
+                                {
+                                    "@id": "d2e2226",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an action to enforce the claim of lien has been dismissed and no appeal from the\n            dismissal has been taken within the time limited for the appeal,"
+                                },
+                                {
+                                    "@id": "d2e2236",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an action to enforce the claim of lien has been discontinued, or"
+                                },
+                                {
+                                    "@id": "d2e2245",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the claim of lien has been satisfied."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2254",
+                            "bcl:num": "2",
+                            "bcl:text": "An owner, contractor, subcontractor, lien claimant or agent of any of them may at\n          any time apply to the court and the court may cancel a claim of lien if satisfied\n          that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2263",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the claim of lien does not relate to the land against which it is filed,\n            or"
+                                },
+                                {
+                                    "@id": "d2e2272",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the claim of lien is vexatious, frivolous or an abuse of process."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2281",
+                            "bcl:num": "3",
+                            "bcl:text": "An application under subsection (1) or (2) may be made without notice to\n          any other person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2291",
+                    "bcl:marginalnote": "Enforcement of claim",
+                    "bcl:num": "26",
+                    "bcl:text": "A claim of lien may be enforced by an action according to the Supreme Court Civil\n        Rules."
+                },
+                {
+                    "@id": "d2e2303",
+                    "bcl:marginalnote": "Local venue for proceedings under this Act",
+                    "bcl:num": "27",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96253_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Law and Equity Act"
+                        },
+                        "#text": "Section\n          21 of the  applies to a\n        proceeding in respect of a claim of lien or other proceeding under this Act in the same way\n        that section applies to a foreclosure proceeding on a mortgage."
+                    }
+                },
+                {
+                    "@id": "d2e2318",
+                    "bcl:marginalnote": "Proof of filing of claim of lien",
+                    "bcl:num": "28",
+                    "bcl:text": "In a proceeding to enforce a claim of lien, the production of a copy of the claim of\n        lien disclosing the date of its filing and certified by the registrar or gold commissioner\n        is proof, in the absence of evidence to the contrary, of the filing of the claim of lien and\n        the date of its filing."
+                },
+                {
+                    "@id": "d2e2331",
+                    "bcl:marginalnote": "Evidence of delivery of material",
+                    "bcl:num": "29",
+                    "bcl:text": "If a person to whom material is supplied signs an acknowledgement of receipt of the\n        material stating that it is received for inclusion in an improvement at a named address, the\n        acknowledgement is proof, in the absence of evidence to the contrary, that the material was\n        delivered to the land described by the address."
+                },
+                {
+                    "@id": "d2e2343",
+                    "bcl:marginalnote": "Counterclaim and judgment for creditor",
+                    "bcl:num": "30",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2351",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to the rights of lien claimants engaged by or under the plaintiff, a\n          defendant in an action to enforce a claim of lien may set up by way of counterclaim any\n          right or claim arising out of the same transaction for any amount, whether the\n          counterclaim is for damages or not."
+                        },
+                        {
+                            "@id": "d2e2360",
+                            "bcl:num": "2",
+                            "bcl:text": "On the trial of an action to enforce a claim of lien, the court may, so far as the\n          parties before it are debtor and creditor, give judgment for any indebtedness or liability\n          arising out of the claim of lien in the same manner as if the indebtedness or liability\n          had been the subject of an action in the court without reference to this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2370",
+                    "bcl:marginalnote": "Court may order sale",
+                    "bcl:num": "31",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2378",
+                            "bcl:num": "1",
+                            "bcl:text": "In an action to enforce a claim of lien, the court may declare that the lien\n          claimant is entitled to a lien for the amount found to be due."
+                        },
+                        {
+                            "@id": "d2e2387",
+                            "bcl:num": "2",
+                            "bcl:text": "If the owner has not been discharged under section 23 (2) of all liability\n          for claims of lien, the court may order the sale of the land or the improvement, or the\n          material supplied or the interest of the owner in any of them."
+                        },
+                        {
+                            "@id": "d2e2396",
+                            "bcl:num": "3",
+                            "bcl:text": "If an estate or interest sold in proceedings under this Act is a leasehold\n          interest, the purchaser at the sale is conclusively deemed to be an assignee of the\n          lease."
+                        },
+                        {
+                            "@id": "d2e2406",
+                            "bcl:num": "4",
+                            "bcl:text": "For the purpose of effecting a sale of the land, the court may order that any or\n          all claims of lien filed in connection with the improvement be removed from the title\n          subject to conditions that it considers appropriate."
+                        },
+                        {
+                            "@id": "d2e2415",
+                            "bcl:num": "5",
+                            "bcl:text": "The proceeds of the sale under this section must be paid into court and must be\n          allocated in accordance with section\u00a036."
+                        },
+                        {
+                            "@id": "d2e2424",
+                            "bcl:num": "6",
+                            "bcl:text": "No order for the sale of an interest in land owned by the Crown or a municipality\n          may be made, but the court may give judgment for an amount equal to the maximum liability\n          under this Act, as owner against either of them, and any money realized on the judgment\n          must be dealt with as if it were the proceeds of a sale of the interest in\n          land."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2434",
+                    "bcl:marginalnote": "Priority of secured lender",
+                    "bcl:num": "32",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2442",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), the amount secured in good faith by a\n          registered mortgage as either a direct or contingent liability of the mortgagor has\n          priority over the amount secured by a claim of lien."
+                        },
+                        {
+                            "@id": "d2e2451",
+                            "bcl:num": "2",
+                            "bcl:text": "Despite subsection (1), an advance by a mortgagee that results in an increase in the\n          direct or contingent liability of a mortgagor, or both, under a registered mortgage\n          occurring after the time a claim of lien is filed ranks in priority after the amount\n          secured by that claim of lien."
+                        },
+                        {
+                            "@id": "d2e2460",
+                            "bcl:num": "3",
+                            "bcl:text": "In a proceeding for the enforcement of a claim of lien,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2470",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the court may order the sale of mortgaged land at an upset price of at least the\n            amount secured by all registered mortgages that have priority over the claim of lien,\n            court ordered costs and the costs of the sale, and"
+                                },
+                                {
+                                    "@id": "d2e2479",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the amount secured by any registered mortgages must be satisfied out of the\n            proceeds of the sale in the order of their priorities and in priority over the claim of\n            lien to the extent provided under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2488",
+                            "bcl:num": "4",
+                            "bcl:text": "A mortgagee who applies mortgage money in payment of a claim of lien that has been\n          filed is subrogated to the rights and priority of the lien claimant to the extent of the\n          money applied."
+                        },
+                        {
+                            "@id": "d2e2497",
+                            "bcl:num": "5",
+                            "bcl:text": "Despite subsections (1) and (2) or any other enactment, if one or more claims of\n          lien are filed in a land title office in relation to an improvement, a mortgagee may apply\n          to the court for an order that one or more further advances under the mortgage are to have\n          priority over the claims of lien."
+                        },
+                        {
+                            "@id": "d2e2506",
+                            "bcl:num": "6",
+                            "bcl:text": "On an application by a mortgagee under subsection (5), the court must\n          make the order if it is satisfied that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2515",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the advances will be applied to complete the improvement, and"
+                                },
+                                {
+                                    "@id": "d2e2525",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the advances will result in an increased value of the land and the improvement\n            at least equal to the amount of the proposed advances."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2534",
+                            "bcl:num": "7",
+                            "bcl:text": "An amount secured in good faith by a registered right to purchase land has the\n          same priority over the amount secured by a claim of lien as has the amount secured by a\n          registered mortgage under subsections (1) and (2)."
+                        },
+                        {
+                            "@id": "d2e2543",
+                            "bcl:num": "8",
+                            "bcl:text": "For the purposes of this Act, the vendor under a registered right to purchase is\n          deemed to be a mortgagee under a registered mortgage, and the amount secured in good faith\n          by the registered right to purchase is subject to this section as though the amount had\n          been secured in good faith under a registered mortgage."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2553",
+                    "bcl:marginalnote": "Limitation and notice to commence an action",
+                    "bcl:num": "33",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2561",
+                            "bcl:num": "1",
+                            "bcl:text": "If a claim of lien has been filed, an action to enforce the claim of lien must be\n          commenced and, unless the claim of lien has been removed or cancelled under section\u00a023 or\n            24,\n          a certificate of pending litigation in respect of the action must be registered, not later\n          than one year from the date of its filing, in the land title office or gold commissioner's\n          office in which the claim has been filed."
+                        },
+                        {
+                            "@id": "d2e2570",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "Despite subsection (1),",
+                                "may serve on a lien claimant, or other lien claimants, as the case may be, a\n          notice to commence an action to enforce the claim of lien and to register in the land\n          title office or in the gold commissioner's office, as the case may be, a certificate of\n          pending litigation within 21 days after service of the notice."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2579",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an owner, or"
+                                },
+                                {
+                                    "@id": "d2e2589",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a lien claimant who has commenced an action"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2601",
+                            "bcl:num": "3",
+                            "bcl:text": "The notice served under subsection (2) must be in the prescribed form, and\n          service is validly effected if the notice is",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2610",
+                                    "bcl:num": "a",
+                                    "bcl:text": "served personally on the lien claimant, or"
+                                },
+                                {
+                                    "@id": "d2e2619",
+                                    "bcl:num": "b",
+                                    "bcl:text": "mailed or delivered to the address for service given in the claim of\n            lien."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2628",
+                            "bcl:num": "4",
+                            "bcl:text": "If service is by mail the notice is conclusively deemed to have been served on the\n          eighth day after deposit of the notice in the Canada Post Office at any place in\n          Canada."
+                        },
+                        {
+                            "@id": "d2e2638",
+                            "bcl:num": "5",
+                            "bcl:text": "Unless an action to enforce a claim of lien is commenced and a certificate of\n          pending litigation is registered within the time provided in this section, the lien is\n          extinguished."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2648",
+                    "bcl:marginalnote": "Limit of claims",
+                    "bcl:num": "34",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2656",
+                            "bcl:num": "1",
+                            "bcl:text": "The maximum aggregate amount that may be recovered under this Act by all lien\n          holders who claim under the same contractor or subcontractor is equal to the greater\n          of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2665",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the amount owing to the contractor or subcontractor by the person who engaged\n            the contractor or subcontractor, and"
+                                },
+                                {
+                                    "@id": "d2e2674",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the amount of the required holdback in relation to the contract between the\n            contractor or subcontractor and the person who engaged the contractor or\n            subcontractor."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2684",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of subsection (1) (a),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2693",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an amount claimed by way of counterclaim against a contractor or subcontractor\n            by the person who engaged the contractor or subcontractor does not reduce the amount\n            owing to the contractor or subcontractor by that person,"
+                                },
+                                {
+                                    "@id": "d2e2702",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a payment that is made in bad faith to a contractor or subcontractor by the\n            person who engaged the contractor or subcontractor does not reduce the amount owing to\n            the contractor or subcontractor by that person, and"
+                                },
+                                {
+                                    "@id": "d2e2711",
+                                    "bcl:num": "c",
+                                    "bcl:text": [
+                                        "a payment to a contractor or subcontractor by the person who engaged the\n            contractor or subcontractor that is made",
+                                        "does not, to the extent of the lien, reduce the amount owing to the contractor\n            or subcontractor by that person."
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2720",
+                                            "bcl:num": "i",
+                                            "bcl:text": "after a claim of lien has been filed by a lien holder claiming under the\n              contractor or subcontractor,"
+                                        },
+                                        {
+                                            "@id": "d2e2729",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "if the person has actual notice of the claim of lien, and"
+                                        },
+                                        {
+                                            "@id": "d2e2739",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "if the claim of lien has not been removed or cancelled from the title to the\n              land, under section\u00a023 or\u00a024 or otherwise, at the time the payment was\n              made,"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2751",
+                            "bcl:num": "3",
+                            "bcl:text": "Despite subsection (2), a person may, on the default of another person that the\n          first person engaged, apply money held by the first person in excess of the required\n          holdback in order to remedy that default or compensate for damage caused by the\n          default."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2762",
+                    "bcl:marginalnote": "Maximum claim against purchaser's interest",
+                    "bcl:num": "35",
+                    "bcl:text": [
+                        "The amount that may be claimed under this Act against the interest of a purchaser in\n        good faith of an improvement in respect of claims of lien filed after the latest\n        of",
+                        "must not exceed 10% of the purchase price of the improvement."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e2773",
+                            "bcl:num": "a",
+                            "bcl:text": "acceptance for registration of the purchaser's interest at a land title office or\n          gold commissioner's office,"
+                        },
+                        {
+                            "@id": "d2e2782",
+                            "bcl:num": "b",
+                            "bcl:text": "completion, abandonment or termination of the head contract for construction of\n          the improvement, and"
+                        },
+                        {
+                            "@id": "d2e2792",
+                            "bcl:num": "c",
+                            "bcl:text": "completion or abandonment of the improvement if the owner did not engage a head\n          contractor"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2805",
+                    "bcl:marginalnote": "Allocation of proceeds from sale",
+                    "bcl:num": "36",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2813",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "owner's discharge sum",
+                                "#text": "In this section,  means an amount that,\n          if paid into court by the owner under section\u00a023, would be sufficient to discharge the\n          owner from liability with respect to all claims of lien filed by persons other than\n          contractors or workers engaged by the owner."
+                            }
+                        },
+                        {
+                            "@id": "d2e2825",
+                            "bcl:num": "2",
+                            "bcl:text": "Subject to any order of the court in relation to the discharge of any prior\n          encumbrances or an order under section 32 (3), the proceeds from a sale under section\n          31 must be distributed as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2834",
+                                    "bcl:num": "a",
+                                    "bcl:text": [
+                                        "the lesser of",
+                                        "must be applied to the payments of the claims of persons other than persons\n            engaged by the owner and be distributed under section 37;"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2844",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the difference between the owner's discharge sum and any amount previously\n              paid into court by or on behalf of the owner under section\u00a023, and"
+                                        },
+                                        {
+                                            "@id": "d2e2853",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the proceeds from the sale under section\u00a031"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2865",
+                                    "bcl:num": "b",
+                                    "bcl:text": "proceeds in excess of the amount allocated under paragraph\u00a0(a) must be applied\n            to pay the claims of lien of persons engaged by the owner and to pay the owner, and be\n            distributed under section\u00a038."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2875",
+                    "bcl:marginalnote": "Distribution among claimants not engaged by owner",
+                    "bcl:num": "37",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2883",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e2892",
+                                    "bcl:text": {
+                                        "in:term": [
+                                            "available holdback fund",
+                                            "holdback funds\n            available"
+                                        ],
+                                        "#text": "or \u00a0means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2904",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the amount paid into court under section\u00a023, and"
+                                        },
+                                        {
+                                            "@id": "d2e2914",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the amount available for distribution under this section as calculated under\n              section\u00a036\u00a0(2)\u00a0(a);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2923",
+                                    "bcl:text": {
+                                        "in:term": "priority computation base",
+                                        "#text": "of a class of lien claimants means\n          the lesser of"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2932",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the amount owing to the person who engaged the class of lien claimants,\n            and"
+                                        },
+                                        {
+                                            "@id": "d2e2941",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the total amount of the claims of the class members."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2950",
+                            "bcl:num": "2",
+                            "bcl:text": "The available holdback funds must be applied to pay and be distributed to\n          subcontractors and workers other than workers engaged by the owner according to the\n          following priority:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2959",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the costs of the lien claimants of and incidental to the proceedings of filing\n            and enforcing their claims of lien;"
+                                },
+                                {
+                                    "@id": "d2e2969",
+                                    "bcl:num": "b",
+                                    "bcl:text": "up to 6 weeks' wages, if that much is owed, to workers;"
+                                },
+                                {
+                                    "@id": "d2e2978",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the amount of money owed",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2987",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to the workers in excess of 6 weeks' wages, and"
+                                        },
+                                        {
+                                            "@id": "d2e2996",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to the subcontractors."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3005",
+                            "bcl:num": "3",
+                            "bcl:text": "The holdback funds available to a category of lien claimants constituted under\n            subsection (2)\n            (a) or (b) must be distributed proportionally among the members of the\n          category so that a single member of the category is entitled to that proportion of the\n          amount recovered that the amount of the member's lien bears to the aggregate amount of the\n          liens of all members of the category."
+                        },
+                        {
+                            "@id": "d2e3014",
+                            "bcl:num": "4",
+                            "bcl:text": "Before the holdback funds available to lien claimants in the category constituted\n          under subsection\n            (2) (c) are distributed, the holdback funds must be allocated proportionally\n          among the classes of lien claimants so that each class is allocated that proportion of the\n          available holdback funds that the priority computation base of the class bears to the\n          aggregate amount of the priority computation bases of all classes, including that of the\n          class whose allocation is being assessed."
+                        },
+                        {
+                            "@id": "d2e3024",
+                            "bcl:num": "5",
+                            "bcl:text": "The portion of the available holdback funds allocated to a class under subsection (4)\n          must be distributed proportionally among the members of the class so that a single member\n          of the class is entitled to that proportion of the allocated funds that the amount of the\n          member's lien bears to the aggregate amount of the liens of all members of the\n          class."
+                        },
+                        {
+                            "@id": "d2e3033",
+                            "bcl:num": "6",
+                            "bcl:text": "In a distribution under this section a lien claimant is not entitled to recover\n          more than the amount of the claimant's lien claim and entitlement to costs under subsection (2)\n            (a)."
+                        },
+                        {
+                            "@id": "d2e3042",
+                            "bcl:num": "7",
+                            "bcl:text": "Money distributed under this section is subject to sections\u00a010,\u00a011\n          and\u00a014."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3052",
+                    "bcl:marginalnote": "Distribution among claimants engaged by owner",
+                    "bcl:num": "38",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3060",
+                            "bcl:num": "1",
+                            "bcl:text": "The portion of the proceeds of sale allocated under section 36 (2) (b) must be applied\n          to pay the claims of lien of contractors and workers engaged by the owner, and to pay the\n          owner, and distributed according to the following priority:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3069",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the costs of lien claimants of and incidental to the proceedings of filing and\n            enforcing their claims of lien;"
+                                },
+                                {
+                                    "@id": "d2e3078",
+                                    "bcl:num": "b",
+                                    "bcl:text": "up to 6 weeks' wages, if that much is owed, to workers;"
+                                },
+                                {
+                                    "@id": "d2e3088",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the amount of money owed",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3097",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to the workers in excess of 6 weeks' wages, and"
+                                        },
+                                        {
+                                            "@id": "d2e3106",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to the contractors;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3115",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the owner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3124",
+                            "bcl:num": "2",
+                            "bcl:text": "The funds available to the members of a category of lien claimants constituted\n          under each of subsection (1) (a), (b) or (c) must be distributed proportionally among the\n          members of that category so that a single member of the category is entitled to that\n          proportion of the amount recovered that the amount of the member's lien bears to the\n          aggregate amount of the liens of all members of the category, but a lien claimant is not\n          entitled to recover more than the amount of the claimant's lien and entitlement to costs\n          under subsection\n            (1) (a)."
+                        },
+                        {
+                            "@id": "d2e3133",
+                            "bcl:num": "3",
+                            "bcl:text": "Money distributed under this section is subject to sections\u00a010,\u00a011\n          and\u00a014."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3143",
+                    "bcl:marginalnote": "During continuance of lien, property not to be removed",
+                    "bcl:num": "39",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3151",
+                            "bcl:num": "1",
+                            "bcl:text": "During the continuance of a lien, material must not be removed from the land or\n          the improvement to the prejudice of a lien holder."
+                        },
+                        {
+                            "@id": "d2e3160",
+                            "bcl:num": "2",
+                            "bcl:text": "An attempt at removal may be restrained on application to the court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3170",
+                    "bcl:marginalnote": "Subcontractor's lien enforceable despite noncompletion by\n        another",
+                    "bcl:num": "40",
+                    "bcl:text": "A subcontractor may enforce the subcontractor's lien despite the noncompletion or\n        abandonment of the contract or subcontract by the contractor or other subcontractor under\n        whom the first subcontractor claims."
+                },
+                {
+                    "@id": "d2e3183",
+                    "bcl:marginalnote": "Right to information",
+                    "bcl:num": "41",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3191",
+                            "bcl:num": "1",
+                            "bcl:text": "A lien holder or a beneficiary of a trust under this Act may, at any time, by\n          delivering a written request, require",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3200",
+                                    "bcl:num": "a",
+                                    "bcl:text": "from the owner",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3209",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the terms of the head contract or contract under which the lien holder of\n              beneficiary claims, including the names of the parties to the contract, the contract\n              price and the state of accounts between the owner and the head contractor,"
+                                        },
+                                        {
+                                            "@id": "d2e3219",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the name and address of the savings institution in which a holdback account\n              has been opened, and the account number,"
+                                        },
+                                        {
+                                            "@id": "d2e3228",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "particulars of credits to and payments from the holdback account, including\n              the dates of credits and payments, and the balance at the time the information is\n              given, and"
+                                        },
+                                        {
+                                            "@id": "d2e3237",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "particulars of any labour and material payment bond posted by the contractor\n              with the owner in respect of the head contract or contract under which the lien holder\n              or beneficiary claims, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3246",
+                                    "bcl:num": "b",
+                                    "bcl:text": "from a mortgagee or an unpaid vendor",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3255",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the terms of the mortgage or agreement for sale,"
+                                        },
+                                        {
+                                            "@id": "d2e3264",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the case of a mortgage, particulars of the amount advanced under the\n              mortgage, including the dates of advances, and of any arrears in payment,\n              and"
+                                        },
+                                        {
+                                            "@id": "d2e3274",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "in the case of an agreement for sale, particulars of the amount secured under\n              the agreement for sale and any arrears in payment."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3283",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "The owner may request in writing from",
+                                "the following information:"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3292",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a subcontractor when a claim of lien has been filed or a written notice of a\n            claim of lien has been received by the owner, and"
+                                },
+                                {
+                                    "@id": "d2e3301",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the contractor, at any time,"
+                                },
+                                {
+                                    "@id": "d2e3313",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the terms of any subcontract, including the names of the parties to the\n            subcontract, the subcontract price and the state of accounts between the contractor and\n            a subcontractor or between a subcontractor and another subcontractor, or any other\n            person providing work or material;"
+                                },
+                                {
+                                    "@id": "d2e3323",
+                                    "bcl:num": "d",
+                                    "bcl:text": "particulars of any labour and material payment bond posted by a subcontractor\n            with the contractor or by a subcontractor with another subcontractor."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3332",
+                            "bcl:num": "3",
+                            "bcl:text": "The person to whom a request is made under subsection (1) or (2) must\n          comply within 10 days after the day the request is delivered."
+                        },
+                        {
+                            "@id": "d2e3341",
+                            "bcl:num": "4",
+                            "bcl:text": "A person who fails to comply in writing with a request within the time provided in\n            subsection\n            (3), or who knowingly or negligently misstates the information requested, is\n          liable to the person requesting the information for any resulting loss or\n          damage."
+                        },
+                        {
+                            "@id": "d2e3350",
+                            "bcl:num": "5",
+                            "bcl:text": [
+                                "On the failure of a person to comply with a request made under subsection (2)\n          within the time provided, the owner may also, if the request is made of",
+                                "until the contractor or subcontractor, as the case may be, has complied with the\n          request."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3359",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a contractor, withhold further payments to the contractor, or"
+                                },
+                                {
+                                    "@id": "d2e3368",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a subcontractor, instruct the contractor or another subcontractor to withhold\n            further payments to the subcontractor"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3381",
+                            "bcl:num": "6",
+                            "bcl:text": "The court may, on application by an interested person at any time before or after\n          an action is commenced for the enforcement of a claim of lien,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3390",
+                                    "bcl:num": "a",
+                                    "bcl:text": "order that the owner, mortgagee, vendor, contractor or subcontractor produce for\n            inspection all contracts, subcontracts, documents, books or records relating to the\n            contract or subcontract or to the payment of the contract or subcontract\n            price,"
+                                },
+                                {
+                                    "@id": "d2e3399",
+                                    "bcl:num": "b",
+                                    "bcl:text": "order that any person referred to in paragraph (a) deliver to the\n            applicant copies of any documents referred to in that paragraph, and"
+                                },
+                                {
+                                    "@id": "d2e3408",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make an order as to the costs of the application."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3418",
+                    "bcl:marginalnote": "Certain acts, agreements, assignments void",
+                    "bcl:num": "42",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3426",
+                            "bcl:num": "1",
+                            "bcl:text": "A conveyance, mortgage or charge of or on land given for the purpose of granting a\n          lien holder a preference or priority is void for that purpose."
+                        },
+                        {
+                            "@id": "d2e3435",
+                            "bcl:num": "2",
+                            "bcl:text": "An agreement that this Act is not to apply, or that the remedies provided by it\n          are not to be available for a person's benefit, is void."
+                        },
+                        {
+                            "@id": "d2e3444",
+                            "bcl:num": "3",
+                            "bcl:text": "A device by an owner, contractor or subcontractor adopted to defeat the priority\n          given by this Act to a worker for the worker's wages is void as against the\n          worker."
+                        },
+                        {
+                            "@id": "d2e3454",
+                            "bcl:num": "4",
+                            "bcl:text": "No assignment by the contractor or subcontractor of any money due in respect of\n          the contract or subcontract is valid as against any lien or trust created by this\n          Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3464",
+                    "bcl:marginalnote": "Lien may be assigned",
+                    "bcl:num": "43",
+                    "bcl:text": "A lien holder may assign in writing the lien holder's lien rights and, if not\n        assigned, lien rights may pass by operation of law."
+                },
+                {
+                    "@id": "d2e3476",
+                    "bcl:marginalnote": "Insurance money",
+                    "bcl:num": "44",
+                    "bcl:text": "If all or part of property subject to a lien under this Act is destroyed by fire,\n        insurance money receivable by the owner, mortgagee or other encumbrancer as a result of the\n        fire stands in place of the property so destroyed, and is, after satisfying any mortgage,\n        charge or encumbrance, in the manner and to the extent set out in section\u00a036, subject to the\n        claims of all persons for liens to the same extent as if the insurance money were realized\n        by the sale of the property in an action to enforce a claim of lien."
+                },
+                {
+                    "@id": "d2e3488",
+                    "bcl:marginalnote": "Offence",
+                    "bcl:num": "45",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3496",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who knowingly files or causes an agent to file a claim of lien containing\n          a false statement commits an offence."
+                        },
+                        {
+                            "@id": "d2e3505",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who commits an offence under subsection (1) is liable to a fine\n          not exceeding the greater of $2 000 and the amount by which the stated claim exceeds the\n          actual claim."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3515",
+                    "bcl:marginalnote": {
+                        "in:doc": "Offence Act",
+                        "#text": "Application of"
+                    },
+                    "bcl:num": "46",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Section\n          5 of the  does not apply to this Act or\n        to the regulations."
+                    }
+                },
+                {
+                    "@id": "d2e3533",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "47",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3541",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041\n          of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e3553",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may\n          make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e3562",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing forms for the purposes of this Act;"
+                                },
+                                {
+                                    "@id": "d2e3572",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prescribing a fee to be paid for filing a claim of lien, and providing for the\n            fee to be calculated on",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3581",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the number of parcels of land to which the claim of lien purports to attach,\n              or"
+                                        },
+                                        {
+                                            "@id": "d2e3590",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the amount of the claim of lien;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3599",
+                                    "bcl:num": "c",
+                                    "bcl:text": "respecting the administration of holdback accounts;"
+                                },
+                                {
+                                    "@id": "d2e3608",
+                                    "bcl:num": "d",
+                                    "bcl:text": "governing rights in relation to holdback accounts on a sale of an improvement by\n            an owner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3617",
+                            "bcl:num": "3",
+                            "bcl:text": "The Lieutenant Governor in Council may make regulations the Lieutenant Governor in\n          Council considers necessary or advisable for meeting or removing any difficulty arising\n          out of the transition to this Act from the Act repealed by this Act and for preserving and\n          giving effect to the rights of persons arising under the repealed Act except as those\n          rights are expressly varied by this Act, and the regulations may be made to apply\n          generally or to a particular case or class of cases."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3627",
+                    "bcl:marginalnote": "Transition",
+                    "bcl:num": "48",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e3635",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "transition project",
+                                "#text": "In this section,  means an improvement for\n          which the time for filing liens has not yet expired under the Act repealed by this\n          Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e3647",
+                            "bcl:num": "2",
+                            "bcl:text": "This Act applies to a transition project unless all parties agree that the Act\n          repealed by this Act continues to apply."
+                        },
+                        {
+                            "@id": "d2e3656",
+                            "bcl:num": "3",
+                            "bcl:text": "Despite this Act there is no obligation to create or maintain a holdback account\n          under section\u00a05 on a transition project."
+                        },
+                        {
+                            "@id": "d2e3666",
+                            "bcl:num": "4",
+                            "bcl:text": "If this Act requires a person not previously required to retain a holdback under\n          the Act repealed by this Act to retain a holdback, it is sufficient compliance with this\n          Act if, in relation to a transition project, the person retains a holdback only with\n          respect to advances or payments made after this Act comes into force."
+                        },
+                        {
+                            "@id": "d2e3675",
+                            "bcl:num": "5",
+                            "bcl:text": {
+                                "in:term": "required holdback",
+                                "#text": "Despite subsection (4), for the purposes of sections 23 and 34, in\n          relation to a transition project,  means the amount\n          that would have been retained if this Act had applied to the transition project from the\n          time the improvement was started."
+                            }
+                        },
+                        {
+                            "@id": "d2e3687",
+                            "bcl:num": "6",
+                            "bcl:text": "In respect of a transition project, nothing done in compliance with the law in\n          force immediately before this Act comes into force is invalidated by subsection\n          (2)."
+                        },
+                        {
+                            "@id": "d2e3696",
+                            "bcl:num": "7",
+                            "bcl:text": "[Not in force.]"
+                        },
+                        {
+                            "@id": "d2e3705",
+                            "bcl:num": "8",
+                            "bcl:text": "In respect of a transition project, on the coming into force of this Act money\n          paid into court under section 20 (4) of the Act repealed by this Act or under\n          an order of the court under section 33 (2) of the Act repealed by this Act is deemed\n          to be money paid into court under section 23 of this Act."
+                        },
+                        {
+                            "@id": "d2e3714",
+                            "bcl:num": "9",
+                            "bcl:text": "Parties to a dispute respecting a transition project may apply to the court for\n          directions as to the application of this section and the regulations to the circumstances\n          of the dispute."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3724",
+                    "bcl:marginalnote": "Spent",
+                    "bcl:num": {
+                        "in:em": "49-54"
+                    },
+                    "bcl:text": {
+                        "in:em": "[Consequential amendments and repeal. Spent. 1997-45-49 to 54.]"
+                    }
+                },
+                {
+                    "@id": "d2e3742",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "55",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in\n        Council."
+                }
+            ]
+        }
+    }
+}

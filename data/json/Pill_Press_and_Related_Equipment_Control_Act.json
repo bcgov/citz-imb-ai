@@ -1,0 +1,2253 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@id": "18024",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "act:title": "Pill Press and Related Equipment Control Act",
+        "act:chapter": "24",
+        "act:yearenacted": "2018",
+        "act:assentedto": "May 31, 2018",
+        "act:currency": {
+            "act:tlcDirPath": "1922970521/1032841765/1674418621",
+            "act:tlc": "E3tlc18024"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d1e271",
+                    "bcl:num": "1",
+                    "bcl:text": "Definitions",
+                    "bcl:section": {
+                        "@id": "d1e38",
+                        "bcl:marginalnote": "Definitions",
+                        "bcl:num": "1",
+                        "bcl:text": "In this Act:",
+                        "bcl:definition": [
+                            {
+                                "@id": "d1e79",
+                                "bcl:text": {
+                                    "in:term": "authorized owner",
+                                    "in:desc": "[who may own, possess or use controlled equipment]",
+                                    "#text": "means a person who is authorized under section 2 (1)  to own controlled equipment;"
+                                }
+                            },
+                            {
+                                "@id": "d1e91",
+                                "bcl:text": {
+                                    "in:term": "authorized seller",
+                                    "in:desc": "[who may sell controlled equipment]",
+                                    "#text": "means a person who is authorized under section 4 (1)  to sell controlled equipment;"
+                                }
+                            },
+                            {
+                                "@id": "d1e102",
+                                "bcl:text": {
+                                    "in:term": "controlled activity",
+                                    "#text": "means the ownership, possession, use or sale of controlled equipment;"
+                                }
+                            },
+                            {
+                                "@id": "d1e110",
+                                "bcl:text": {
+                                    "in:term": "controlled equipment",
+                                    "#text": ", subject to the regulations, means the following:"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e117",
+                                        "bcl:num": "a",
+                                        "bcl:text": "a machine, whether semi-automatic, automated or capable of being automated, that may be used to",
+                                        "bcl:subparagraph": [
+                                            {
+                                                "@id": "d1e125",
+                                                "bcl:num": "i",
+                                                "bcl:text": "compact or mould powdered, granular or semi-solid material to produce cohesive solid tablets, or"
+                                            },
+                                            {
+                                                "@id": "d1e134",
+                                                "bcl:num": "ii",
+                                                "bcl:text": "fill capsules with powdered, granular, semi-solid or liquid material;"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@id": "d1e144",
+                                        "bcl:num": "b",
+                                        "bcl:text": "a die, mould or punch ordinarily used with a machine described in paragraph (a);"
+                                    },
+                                    {
+                                        "@id": "d1e153",
+                                        "bcl:num": "c",
+                                        "bcl:text": "a pharmaceutical mixer or blender;"
+                                    },
+                                    {
+                                        "@id": "d1e162",
+                                        "bcl:num": "d",
+                                        "bcl:text": "prescribed types of equipment or parts of equipment that may be used to make, or used in association with making, tablets or capsules;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e172",
+                                "bcl:text": {
+                                    "in:term": "health college",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/00_96183_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Health Professions Act"
+                                    },
+                                    "#text": "has the same meaning as \"college\" under the ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e183",
+                                "bcl:text": {
+                                    "in:term": "inspector",
+                                    "in:desc": "[inspectors]",
+                                    "#text": "means an inspector appointed under section 16 ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e193",
+                                "bcl:text": {
+                                    "in:term": "peace officer",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96238_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Interpretation Act"
+                                    },
+                                    "#text": "means a person described in paragraph (c) of the definition of \"peace officer\" in section 29 of the ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e204",
+                                "bcl:text": {
+                                    "in:term": "registrar",
+                                    "in:desc": "[registrar]",
+                                    "#text": "means, unless the context otherwise requires, the registrar appointed under section 13 (1) ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e211",
+                                "bcl:text": {
+                                    "in:term": "registration",
+                                    "in:desc": "[grant of waiver or registration]",
+                                    "#text": "means, unless the context otherwise requires, a registration granted under section 8 (2)  that authorizes the holder to sell controlled equipment;"
+                                }
+                            },
+                            {
+                                "@id": "d1e221",
+                                "bcl:text": {
+                                    "in:term": "sell",
+                                    "#text": "includes offer for sale, expose for sale, have in possession for sale, distribute, give, transfer, lend, send, rent or otherwise dispose of, whether or not for consideration and whether by wholesale, retail or private sale;"
+                                }
+                            },
+                            {
+                                "@id": "d1e228",
+                                "bcl:text": {
+                                    "in:term": "waiver",
+                                    "#text": "means a waiver granted under section 8 (1) that authorizes the holder to own, possess or use controlled equipment."
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d1e237",
+                    "bcl:num": "2",
+                    "bcl:text": "Dealing With Controlled Equipment",
+                    "bcl:division": [
+                        {
+                            "@id": "d1e245",
+                            "bcl:num": "1",
+                            "bcl:text": "Requirements to Deal With Controlled Equipment",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e253",
+                                    "bcl:marginalnote": "Who may own, possess or use controlled equipment",
+                                    "bcl:num": "2",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e261",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to subsections (2) to (4), a person must not own, possess or use controlled equipment unless the person is one of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e269",
+                                                    "bcl:num": "a) and (b",
+                                                    "bcl:text": "[Not in force.]"
+                                                },
+                                                {
+                                                    "@id": "d1e340",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "a person who",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e348",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "is authorized under an enactment of British Columbia or Canada to manufacture a drug or natural health product,"
+                                                        },
+                                                        {
+                                                            "@id": "d1e357",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "uses controlled equipment only to make a drug or natural health product that the person is authorized to manufacture, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e366",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "is acting in accordance with the limits and conditions, if any, of the person's authorization;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e377",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "a person who",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e385",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "holds a waiver or registration, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e394",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "is acting in accordance with the limits and conditions, if any, of the person's waiver or registration;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e404",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "a person who",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e412",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "is within a prescribed group of persons, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e421",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "is acting in accordance with the limits and conditions, if any, of the regulations."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e432",
+                                            "bcl:num": "2",
+                                            "bcl:text": "[Not in force.]"
+                                        },
+                                        {
+                                            "@id": "d1e444",
+                                            "bcl:num": "3",
+                                            "bcl:text": "An employee or agent of an authorized owner may possess and use the authorized owner's controlled equipment if the employee or agent",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e452",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "is acting in the course of that employee's or agent's duties, and"
+                                                },
+                                                {
+                                                    "@id": "d1e461",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "does not use the controlled equipment for any purpose other than the purpose for which the authorized owner may use the equipment."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e472",
+                                            "bcl:num": "4",
+                                            "bcl:text": {
+                                                "in:desc": "[exceptions for possession]",
+                                                "#text": "A person who is authorized to possess controlled equipment under section 3  may possess, but not use, the controlled equipment."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e485",
+                                    "bcl:marginalnote": "Exceptions for possession",
+                                    "bcl:num": "3",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e493",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person who is in the business of",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e501",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "transporting goods is authorized to possess controlled equipment for the purpose of transporting controlled equipment on behalf of an authorized owner,"
+                                                },
+                                                {
+                                                    "@id": "d1e510",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "repairing goods is authorized to possess controlled equipment for the purpose of repairing controlled equipment on behalf of an authorized owner, or"
+                                                },
+                                                {
+                                                    "@id": "d1e519",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "destroying goods is authorized to possess controlled equipment for the purpose of destroying controlled equipment on behalf of",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e527",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "an authorized owner, in which case, the person must destroy the equipment within 10 days of receiving the equipment, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e536",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the registrar, in which case, the person must destroy the equipment in accordance with the directions of the registrar."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e547",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person is authorized to possess controlled equipment if the person is",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e555",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "acting in accordance with",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e563",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "an enactment of British Columbia or Canada, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e572",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "a court order, or"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e582",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "within a prescribed group of persons, acting in accordance with the limits and conditions, if any, of the regulations."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e593",
+                                    "bcl:marginalnote": "Who may sell controlled equipment",
+                                    "bcl:num": "4",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e601",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person must not sell controlled equipment unless the person",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e609",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "holds a registration and is acting in accordance with the limits and conditions, if any, of the registration, or"
+                                                },
+                                                {
+                                                    "@id": "d1e618",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "is acting in accordance with",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e626",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "an enactment of British Columbia or Canada, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e635",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "a court order."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e646",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An authorized seller must not sell controlled equipment to any person in British Columbia other than to an authorized owner."
+                                        },
+                                        {
+                                            "@id": "d1e655",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Before selling controlled equipment, an authorized seller must collect from the intended purchaser prescribed information respecting the purchaser's identity and authority to own controlled equipment."
+                                        },
+                                        {
+                                            "@id": "d1e665",
+                                            "bcl:num": "4",
+                                            "bcl:text": "An authorized seller must not receive, as any part of the consideration for the sale of controlled equipment, cash or a prescribed type of consideration."
+                                        },
+                                        {
+                                            "@id": "d1e674",
+                                            "bcl:num": "5",
+                                            "bcl:text": "An authorized seller who sells controlled equipment must do all of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e682",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "make a record of each sale",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e690",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "that is in the form required by the registrar, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e699",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "that includes the information referred to in subsection (3) and any additional prescribed information;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e709",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "give to the purchaser a copy of the record made under paragraph (a);"
+                                                },
+                                                {
+                                                    "@id": "d1e718",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "give to the registrar, in the form and manner required by the registrar and within 10 days of completing the sale,",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e726",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "a copy of the records made under paragraph (a), and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e735",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "any further information, including personal information, about the purchaser that the registrar requires."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e748",
+                                    "bcl:marginalnote": "General duties of authorized owners",
+                                    "bcl:num": "5",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e756",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An authorized owner must ensure that controlled equipment is stored securely and in accordance with the regulations, if any."
+                                        },
+                                        {
+                                            "@id": "d1e765",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Subject to subsection (3), an authorized owner must notify the registrar in accordance with subsection (4) on the happening of any of the following events:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e773",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the authorized owner takes possession of controlled equipment that",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e781",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "is newly imported into British Columbia,"
+                                                        },
+                                                        {
+                                                            "@id": "d1e790",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "is newly constructed, manufactured or assembled, whether by the authorized owner or another person, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e799",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "was sold to the authorized owner;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e809",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the location at which the authorized owner ordinarily stores controlled equipment changes;"
+                                                },
+                                                {
+                                                    "@id": "d1e818",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "controlled equipment of the authorized owner is lost, stolen or destroyed;"
+                                                },
+                                                {
+                                                    "@id": "d1e828",
+                                                    "bcl:num": "d) and (e",
+                                                    "bcl:text": "[Not in force.]"
+                                                },
+                                                {
+                                                    "@id": "d1e849",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "the authorized owner is a person described in section 2 (1) (c) and the person's authority to manufacture a drug or natural health product is suspended or cancelled;"
+                                                },
+                                                {
+                                                    "@id": "d1e858",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "the authorized owner is an authorized seller described in section 4 (1) (a) and has been charged with or convicted of an offence under",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e866",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": {
+                                                                "bcl:link": {
+                                                                    "@resource": "leg",
+                                                                    "@xlink:href": "/legislation/18029",
+                                                                    "@xlink:type": "locator",
+                                                                    "in:doc": "Cannabis Control and Licensing Act"
+                                                                },
+                                                                "#text": "this Act or the ,"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d1e875",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": {
+                                                                "bcl:link": [
+                                                                    {
+                                                                        "@resource": "leg",
+                                                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                                                        "@xlink:type": "locator",
+                                                                        "in:doc": "Criminal Code"
+                                                                    },
+                                                                    {
+                                                                        "@resource": "leg",
+                                                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-38.8/index.html",
+                                                                        "@xlink:type": "locator",
+                                                                        "in:doc": "Controlled Drugs and Substances Act"
+                                                                    },
+                                                                    {
+                                                                        "@resource": "leg",
+                                                                        "@xlink:href": "https://laws-lois.justice.gc.ca/eng/acts/C-24.5/index.html",
+                                                                        "@xlink:type": "locator",
+                                                                        "in:doc": "Cannabis Act"
+                                                                    }
+                                                                ],
+                                                                "#text": "the , the  (Canada) or the  (Canada), or"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d1e896",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "a prescribed enactment."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e907",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Subsection (2) (a), (b) and (c) does not apply to dies described in paragraph (b) of the definition of \"controlled equipment\"."
+                                        },
+                                        {
+                                            "@id": "d1e917",
+                                            "bcl:num": "4",
+                                            "bcl:text": "Notice under subsection (2) must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e925",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "be made in the form and manner required by the registrar,"
+                                                },
+                                                {
+                                                    "@id": "d1e934",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "be given",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e942",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "no later than the next business day of the registrar, in the case of a notice given under subsection (2) (c), or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e951",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "within 10 days after the event, in any other case, and"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e961",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "include",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e969",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the basis on which, under section 2, the person is an authorized owner,"
+                                                        },
+                                                        {
+                                                            "@id": "d1e978",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the location at which controlled equipment will ordinarily be stored, in the case of a notice given under subsection (2) (b),"
+                                                        },
+                                                        {
+                                                            "@id": "d1e987",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "prescribed records or information, if any, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e997",
+                                                            "bcl:num": "iv",
+                                                            "bcl:text": "any further information, including personal information, that the registrar requires."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1009",
+                                    "bcl:marginalnote": "Duties in respect of records",
+                                    "bcl:num": "6",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1017",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An authorized owner must keep the following records for at least the prescribed period:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1025",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a record, or copy of a record, that the authorized owner is required to make or to give to or collect from another person under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e1034",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a copy of the authorized owner's waiver or registration;"
+                                                },
+                                                {
+                                                    "@id": "d1e1043",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "other records that must be made under the regulations, if any."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1053",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An authorized owner must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1061",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "keep a record described in subsection (1) in a manner and at a location that is readily accessible on request of the registrar or an inspector, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1070",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "produce the record on request of the registrar or an inspector within the time requested."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1080",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Without limiting subsection (2) (b) of this section, an authorized seller may be requested to produce, and if requested must produce, records under that subsection that contain personal information respecting purchasers of controlled equipment."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1091",
+                            "bcl:num": "2",
+                            "bcl:text": "Waivers and Registrations",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e1099",
+                                    "bcl:marginalnote": "Applications for waivers and registrations",
+                                    "bcl:num": "7",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1107",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person may apply to the registrar for a waiver or registration by submitting",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1115",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "an application in the form and manner required by the registrar, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1124",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the prescribed fee, if any."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1134",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An application must include all of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1142",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "proof of the applicant's identity;"
+                                                },
+                                                {
+                                                    "@id": "d1e1151",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "if an applicant is not an individual, information respecting the applicant's ownership and management;"
+                                                },
+                                                {
+                                                    "@id": "d1e1160",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "prescribed records and information, if any."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1170",
+                                            "bcl:num": "3",
+                                            "bcl:text": "In addition to the matters set out in subsection (2), an application for a waiver must include a declaration in the form required by the registrar stating all of the following with respect to the controlled equipment to which the waiver is to apply:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1178",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the type of controlled equipment;"
+                                                },
+                                                {
+                                                    "@id": "d1e1187",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the purpose for which the controlled equipment is to be used;"
+                                                },
+                                                {
+                                                    "@id": "d1e1196",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the location at which the controlled equipment is to be stored."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1207",
+                                            "bcl:num": "4",
+                                            "bcl:text": "In addition to the matters set out in subsection (2), an application for a registration must include the applicant's authorization or, if the applicant is not an individual, the authorization of each owner and manager of the applicant, for the registrar",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1215",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "to carry out prescribed checks, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1224",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "to use the fingerprints of the applicant, owner or manager, as applicable, if necessary to verify the results of a criminal record check."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1235",
+                                    "bcl:marginalnote": "Grant of waiver or registration",
+                                    "bcl:num": "8",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1243",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The registrar may grant to an applicant a waiver to own, possess or use controlled equipment, with or without limits and conditions, if the registrar is satisfied of both of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1251",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "in:desc": "[applications for waivers and registrations]",
+                                                        "#text": "that the applicant will use and store controlled equipment only in accordance with the declaration referred to in section 7 (3) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1263",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "that it is not contrary to the public interest that the applicant be permitted to perform a controlled activity."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1273",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The registrar may grant to an applicant a registration to sell controlled equipment, with or without limits and conditions, if the registrar is satisfied of all of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1281",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "that the applicant will not use controlled equipment for an unlawful purpose;"
+                                                },
+                                                {
+                                                    "@id": "d1e1290",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "that nothing in the applicant's conduct, character or repute, or if the applicant is not an individual, the conduct, character or repute of any owner or manager of the applicant, would make it undesirable for the applicant to perform a controlled activity;"
+                                                },
+                                                {
+                                                    "@id": "d1e1299",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "that it is not contrary to the public interest that the applicant be permitted to perform a controlled activity."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1309",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Waivers and registrations expire on the earlier of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1317",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "5 years from the date of issue;"
+                                                },
+                                                {
+                                                    "@id": "d1e1326",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "an earlier date, if any, set by the registrar."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1337",
+                                            "bcl:num": "4",
+                                            "bcl:text": "Waivers and registrations are not transferable."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1347",
+                                    "bcl:marginalnote": "Refusal to grant waiver or registration",
+                                    "bcl:num": "9",
+                                    "bcl:text": "If the registrar refuses to grant a waiver or registration, the registrar must give written notice to the applicant of",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1358",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the refusal and the reasons for it, and"
+                                        },
+                                        {
+                                            "@id": "d1e1367",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the process for requesting a reconsideration of the refusal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1378",
+                                    "bcl:marginalnote": "Suspension and cancellation",
+                                    "bcl:num": "10",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1386",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "in:term": "holder",
+                                                "#text": "In this section,  means the holder of a waiver or registration."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1398",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The registrar may suspend or cancel a waiver or registration if the registrar is no longer satisfied that the holder meets the applicable conditions to have been granted the waiver or registration."
+                                        },
+                                        {
+                                            "@id": "d1e1407",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The registrar must give to the holder written notice of",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1415",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the suspension or cancellation and the reasons for it,"
+                                                },
+                                                {
+                                                    "@id": "d1e1424",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the date on which the suspension or cancellation begins and, in the case of a suspension, the circumstances under which it ends, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1433",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the process for requesting a reconsideration of the suspension or cancellation."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1444",
+                                    "bcl:marginalnote": "Reconsideration",
+                                    "bcl:num": "11",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1452",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person may request the registrar to reconsider a decision to refuse to grant a waiver or registration or to suspend or to cancel a waiver or registration",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1460",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "within 30 days after receiving notice of the decision, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1469",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "within the period of time specified by the registrar, if the registrar is satisfied that",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e1477",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "special circumstances existed that prevented the person from making the request within the required time, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1486",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "an injustice would otherwise result."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1497",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A request for reconsideration must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1505",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "be made in writing, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1514",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "identify the error the person believes was made or the other grounds on which a reconsideration is requested."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1524",
+                                            "bcl:num": "3",
+                                            "bcl:text": "On receiving a request for reconsideration, the registrar must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1532",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "hold a hearing in writing or as otherwise specified by the registrar,"
+                                                },
+                                                {
+                                                    "@id": "d1e1541",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "confirm, vary or cancel the decision after the hearing, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1550",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "notify the person in writing of the decision made under paragraph (b) and the reasons for it."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1561",
+                                    "bcl:marginalnote": "Police records",
+                                    "bcl:num": "12",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96367_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Police Act"
+                                        },
+                                        "#text": "The commissioner of the provincial police force and a chief constable as defined in section 1 of the  must provide any records that the registrar may require for the purpose of making a decision under this Division, except a record or part of a record"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1572",
+                                            "bcl:num": "a",
+                                            "bcl:text": "that is subject to solicitor-client privilege, or"
+                                        },
+                                        {
+                                            "@id": "d1e1581",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in relation to which disclosure",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1589",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "would be an offence under an enactment of British Columbia or Canada, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1598",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96165_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                        },
+                                                        "#text": "could reasonably be expected to do any of the things described in section 15 (1) of the ."
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1615",
+                    "bcl:num": "3",
+                    "bcl:text": "Administration and Enforcement",
+                    "bcl:division": [
+                        {
+                            "@id": "d1e1623",
+                            "bcl:num": "1",
+                            "bcl:text": "Administration",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e1631",
+                                    "bcl:marginalnote": "Registrar",
+                                    "bcl:num": "13",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1639",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96385_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Public Service Act"
+                                                },
+                                                "#text": "The minister must appoint, under the , an individual as registrar for the purpose of administering this Act."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1652",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Without limiting any other provision of this Act or the regulations, the registrar may do all of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1660",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "exempt a person from, or modify, a requirement or condition of the Act or regulations;"
+                                                },
+                                                {
+                                                    "@id": "d1e1669",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "in:desc": "[search and seizure]",
+                                                        "#text": "make forms for the purposes of this Act, other than forms for the purposes of section 21 ."
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1683",
+                                    "bcl:marginalnote": "Personal information",
+                                    "bcl:num": "14",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1691",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The registrar may establish one or more registries for the purpose of recording information respecting",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1699",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "controlled equipment in British Columbia, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1708",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "authorized owners."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1718",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The registrar may collect personal information for the purpose of",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1726",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "administering this Act, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1735",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "fulfilling the terms of an information-sharing agreement made under this Act."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1745",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The registrar may use personal information collected under this Act for the following purposes:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1753",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "to record personal information in a registry;"
+                                                },
+                                                {
+                                                    "@id": "d1e1762",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "to make a decision in respect of a waiver or registration;"
+                                                },
+                                                {
+                                                    "@id": "d1e1771",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "to verify information given under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e1781",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "to act in accordance with the terms of an information-sharing agreement made under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e1790",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "to inspect for compliance with, or to investigate a contravention of, this Act, the regulations or a limit or condition of a waiver or registration."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1801",
+                                            "bcl:num": "4",
+                                            "bcl:text": "The registrar may disclose personal information as follows for a purpose set out in subsection (3):",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1809",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "to a person responsible for exercising powers or performing duties under this Act as necessary for exercising the power or performing the duty;"
+                                                },
+                                                {
+                                                    "@id": "d1e1818",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "to a person or body identified in an information-sharing agreement made under this Act, in accordance with the terms of the agreement."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1828",
+                                            "bcl:num": "5",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "Nothing in this section is intended to limit the authority of the registrar to collect, use or disclose personal information under the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1842",
+                                    "bcl:marginalnote": "Information-sharing agreements",
+                                    "bcl:num": "15",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1850",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to subsection (2), the minister may enter into a written agreement to share information, including personal information, with any person or group of persons for the purpose of administering this Act or an enactment of another jurisdiction having a similar purpose."
+                                        },
+                                        {
+                                            "@id": "d1e1859",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An agreement under subsection (1) requires the prior approval of the Lieutenant Governor in Council unless the agreement is with any of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1867",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a ministry of the government of British Columbia or an agency or corporation of that ministry;"
+                                                },
+                                                {
+                                                    "@id": "d1e1876",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the government of Canada, the government of a jurisdiction within Canada, or an agency or corporation of any of those governments;"
+                                                },
+                                                {
+                                                    "@id": "d1e1885",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "a health college;"
+                                                },
+                                                {
+                                                    "@id": "d1e1895",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "a law enforcement agency within Canada."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1907",
+                            "bcl:num": "2",
+                            "bcl:text": "Enforcement",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e1915",
+                                    "bcl:marginalnote": "Inspectors",
+                                    "bcl:num": "16",
+                                    "bcl:text": "The registrar may appoint, by name, title or position, employees of a ministry of the government as inspectors."
+                                },
+                                {
+                                    "@id": "d1e1927",
+                                    "bcl:marginalnote": "Others who may exercise inspection powers",
+                                    "bcl:num": "17",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1935",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The registrar may authorize, by name, title or position, the following persons to exercise powers or perform duties as if the person were an inspector:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1943",
+                                                    "bcl:num": "a) and (b",
+                                                    "bcl:text": "[Not in force.]"
+                                                },
+                                                {
+                                                    "@id": "d1e1977",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "any other person who the registrar under this Act is satisfied has the training and experience necessary to exercise a power or perform a duty of an inspector."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1987",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The registrar may set limits and conditions on the exercise of powers and performance of duties by a person referred to in subsection (1)."
+                                        },
+                                        {
+                                            "@id": "d1e1996",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A reference in a provision of this Act to an inspector includes a reference to a person referred to in subsection (1) if, and to the extent that, the person is authorized to exercise a power or perform a duty to which the provision applies."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2006",
+                                    "bcl:marginalnote": "Inspection powers",
+                                    "bcl:num": "18",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2014",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An inspector may exercise a power under this section to",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2022",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "in:desc": [
+                                                            "[who may sell controlled equipment]",
+                                                            "[general duties of authorized owners]"
+                                                        ],
+                                                        "#text": "seek further information for the purposes of section 4 (5) (c) (ii)  or 5 (4) (c) (iv) ,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2037",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "in:desc": [
+                                                            "[Waivers and Registrations]",
+                                                            "[Dealing With Controlled Equipment]"
+                                                        ],
+                                                        "#text": "provide information to the registrar for the purpose of making a decision under Division 2  of Part 2 , or"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2052",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "monitor compliance with a provision of this Act, a regulation or a condition of a person's waiver or registration, if any."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2062",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Subject to subsection (5), an inspector may, for the purposes of an inspection, enter and inspect a vehicle, place or premises",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2070",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "of a person who is",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e2078",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the subject of a requirement for further information under section\u00a04\u00a0(5) (c) (ii) or 5 (4) (c) (iv) or a decision under Division 2 of Part 2, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e2087",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "authorized to perform a controlled activity, or"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e2097",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "where the inspector reasonably believes controlled equipment to be present."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2107",
+                                            "bcl:num": "3",
+                                            "bcl:text": "An inspector may do any of the following for the purposes of an inspection:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2115",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "question a person, including inquiring into any business, affairs or conduct of a person;"
+                                                },
+                                                {
+                                                    "@id": "d1e2124",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "require, by order, that a record or thing be produced for inspection;"
+                                                },
+                                                {
+                                                    "@id": "d1e2133",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "inspect, audit or examine a record or thing;"
+                                                },
+                                                {
+                                                    "@id": "d1e2143",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "make a record, including an electronic record, of a vehicle, place or premises or of a thing in or on a vehicle, place or premises;"
+                                                },
+                                                {
+                                                    "@id": "d1e2152",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "remove a record or thing for review and copying, or seize a record or thing that may be required as evidence;"
+                                                },
+                                                {
+                                                    "@id": "d1e2161",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "take a prescribed action."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2172",
+                                            "bcl:num": "4",
+                                            "bcl:text": "If a record or thing is removed or seized during an inspection, the inspector",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2180",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "may make copies of, take extracts from or otherwise record it, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2189",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "must give a receipt to the person from whom it is taken."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2199",
+                                            "bcl:num": "5",
+                                            "bcl:text": {
+                                                "in:desc": "[search and seizure]",
+                                                "#text": "An inspector must not enter a private dwelling for the purposes of an inspection except with the consent of the occupant or under the authority of a warrant issued under section 21 ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2213",
+                                    "bcl:marginalnote": "Identification and assistance",
+                                    "bcl:num": "19",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2221",
+                                            "bcl:num": "1",
+                                            "bcl:text": "On request of a person whose vehicle, place or premises an inspector enters, the inspector must produce identification provided by the minister for this purpose."
+                                        },
+                                        {
+                                            "@id": "d1e2230",
+                                            "bcl:num": "2",
+                                            "bcl:text": "On request of the registrar or an inspector, a peace officer may assist an inspector in carrying out an inspection."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2240",
+                                    "bcl:marginalnote": "Seizure during inspection",
+                                    "bcl:num": "20",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2248",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An inspector may exercise a power under this section if",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2256",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "controlled equipment is found while exercising a power of inspection or enforcement under this Act, another enactment of British Columbia, an enactment of Canada or a court order, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2265",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the search for or seizure of controlled equipment is not expressly authorized in the circumstances."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2275",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An inspector may do any of the following in the circumstances set out in subsection (1):",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2283",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "require, by order, a person to stop using controlled equipment;"
+                                                },
+                                                {
+                                                    "@id": "d1e2292",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "require, by order, a person to produce evidence described in subsection (3) that the performance of controlled activities is authorized under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e2301",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "verify the evidence produced by",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e2309",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": {
+                                                                "in:desc": "[personal information]",
+                                                                "#text": "searching a registry referred to in section 14 (1) ,"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d1e2321",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "[Not in force.]"
+                                                        },
+                                                        {
+                                                            "@id": "d1e2330",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": {
+                                                                "in:desc": [
+                                                                    "[who may own, possess or use controlled equipment]",
+                                                                    "[exceptions for possession]",
+                                                                    "[who may sell controlled equipment]"
+                                                                ],
+                                                                "#text": "consulting with the administrator of an enactment referred to in section 2 (1) (c) (i) , 3 (2) (a) (i)  or 4 (1) (b) (i) , or"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d1e2349",
+                                                            "bcl:num": "iv",
+                                                            "bcl:text": "taking a prescribed action;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e2360",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "seize controlled equipment if evidence is not produced or cannot be verified."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2370",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The following is evidence for the purposes of subsection (2) (b):",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2378",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a copy of a waiver or registration;"
+                                                },
+                                                {
+                                                    "@id": "d1e2387",
+                                                    "bcl:num": "b) and (c",
+                                                    "bcl:text": "[Not in force.]"
+                                                },
+                                                {
+                                                    "@id": "d1e2410",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "a licence, permit or other proof of authorization granted under an enactment referred to in section 2 (1) (c) (i), 3 (2) (a) (i) or 4 (1) (b) (i);"
+                                                },
+                                                {
+                                                    "@id": "d1e2419",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "a copy of a court order referred to in section 3 (2) (a) (ii) or 4 (1) (b) (ii);"
+                                                },
+                                                {
+                                                    "@id": "d1e2428",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "prescribed evidence."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2439",
+                                            "bcl:num": "4",
+                                            "bcl:text": "An inspector must return controlled equipment seized under subsection (2) (d) if, within 30 days after the inspection or enforcement action, evidence described in subsection (3) is produced to the inspector and, if the inspector believes it to be necessary, verified by taking an action described in subsection (2) (c)."
+                                        },
+                                        {
+                                            "@id": "d1e2448",
+                                            "bcl:num": "5",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96338_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Offence Act"
+                                                },
+                                                "#text": "Sections 24 to 24.2 of the  apply in respect of a thing seized but not returned under this section as if the thing had been brought before a justice in accordance with section 21 (6) that Act."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2458",
+                                    "bcl:marginalnote": "Search and seizure",
+                                    "bcl:num": "21",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2466",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96338_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Offence Act"
+                                                },
+                                                "#text": "A justice within the meaning of the  may issue a warrant under subsection (2) if satisfied by information on oath in the prescribed form that there are reasonable grounds to believe that there is in a vehicle, place or premises, including premises or a part of premises occupied solely as a private dwelling,"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2474",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "any thing on or in respect of which an offence under this Act has been or is believed to have been committed, or"
+                                                },
+                                                {
+                                                    "@id": "d1e2483",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "any thing that there is reasonable grounds to believe may provide evidence of the commission of an offence under this Act."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2493",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A warrant",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2501",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "must be in the prescribed form, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2510",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "may authorize a person named in the warrant or a peace officer to search the vehicle, place or premises for the thing referred to in subsection (1), and to seize and remove that thing."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2520",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Despite subsection (1), if the conditions for obtaining a warrant exist and a peace officer has a reasonable belief that the delay necessary to obtain the warrant would result in the loss or destruction of evidence, the peace officer may, without a warrant,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2528",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "enter and search a vehicle, place or premises, other than a private dwelling, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2537",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "seize and remove any thing that the peace officer has reasonable grounds to believe may provide evidence of the commission of an offence under this Act."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2548",
+                                            "bcl:num": "4",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96338_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Offence Act"
+                                                },
+                                                "#text": "Sections 24 to 24.2 of the  apply in respect of a thing seized under this section as if the thing had been brought before a justice in accordance with section 21 (6) that Act."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2558",
+                                    "bcl:marginalnote": "Offences",
+                                    "bcl:num": "22",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2566",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96338_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Offence Act"
+                                                },
+                                                "#text": "Section 5 of the  does not apply in respect of this Act or the regulations."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2579",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person who contravenes any of the following provisions commits an offence:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2587",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "in:desc": "[who may own, possess or use controlled equipment]",
+                                                        "#text": "section 2 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2599",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "in:desc": "[who may sell controlled equipment]",
+                                                        "#text": "section 4 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2611",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": {
+                                                        "in:desc": "[general duties of authorized owners]",
+                                                        "#text": "section 5 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2624",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": {
+                                                        "in:desc": "[duties in respect of records]",
+                                                        "#text": "section 6 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2636",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": {
+                                                        "in:desc": "[transitional \u2014 continuing controlled activities]",
+                                                        "#text": "section 28 (2) and (4) ."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2649",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A person who does any of the following commits an offence:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2657",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "in:desc": [
+                                                            "[inspection powers]",
+                                                            "[seizure during inspection]"
+                                                        ],
+                                                        "#text": "fails to comply with an order of an inspector made under section 18 (3)  or 20 (2) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2672",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "authorizes or permits another person to commit, or acquiesces in the commission of, an offence under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e2681",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "knowingly provides false or misleading information to a person who is exercising a power or performing a duty under this Act, or a person acting under the order or direction of that person;"
+                                                },
+                                                {
+                                                    "@id": "d1e2691",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "wilfully interferes with or obstructs a person who is exercising a power or performing a duty under this Act, or a person acting under the order or direction of that person."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2702",
+                                    "bcl:marginalnote": "Offence by corporation or employee",
+                                    "bcl:num": "23",
+                                    "bcl:text": {
+                                        "in:desc": "[offences]",
+                                        "#text": "Without limiting section 22 (3) (b) ,"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2716",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if a corporation commits an offence under this Act, an employee, an officer, a director or an agent of the corporation who authorized, permitted or acquiesced in the offence commits the offence whether or not the corporation is convicted, and"
+                                        },
+                                        {
+                                            "@id": "d1e2725",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if an employee commits an offence under this Act, an employer who authorized, permitted or acquiesced in the offence commits the offence whether or not the employee is identified or convicted."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2735",
+                                    "bcl:marginalnote": "Certificate evidence",
+                                    "bcl:num": "24",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2743",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A certificate signed by the registrar regarding the status of a waiver, registration or a document in the registrar's records is proof, in the absence of evidence to the contrary, of the matters stated in the certificate."
+                                        },
+                                        {
+                                            "@id": "d1e2752",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A document, or a certified copy of a document, issued by the registrar is proof, in the absence of evidence to the contrary, of the matters stated in the document and the registrar's authority to issue that document."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2763",
+                                    "bcl:marginalnote": "Defences",
+                                    "bcl:num": "25",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2771",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person must not be convicted of an offence under this Act if the person proves that the person",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2779",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "exercised due diligence by taking all reasonable steps to avoid committing the offence, or"
+                                                },
+                                                {
+                                                    "@id": "d1e2788",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "reasonably believed in the existence of facts that, if true, would establish that the person did not contravene this Act, a regulation or a condition of the person's waiver or registration."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2798",
+                                            "bcl:num": "2",
+                                            "bcl:text": {
+                                                "in:desc": "[who may sell controlled equipment]",
+                                                "#text": "Without limiting subsection (1) of this section, a person must not be convicted of an offence under section 4 (2)  if the person proves that the person"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2809",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "collected the records and information referred to in section 4 (3),"
+                                                },
+                                                {
+                                                    "@id": "d1e2818",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "examined the records and information, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2827",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "reasonably believed that the records and information",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e2835",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "were that of the intended purchaser, in the case of records and information respecting the intended purchaser's identity, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e2844",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "had not been altered or otherwise falsified."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2856",
+                                    "bcl:marginalnote": "Penalties",
+                                    "bcl:num": "26",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e2864",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96338_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Offence Act"
+                                                },
+                                                "#text": "Section 4 of the  does not apply in respect of this Act or the regulations."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2877",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person who commits an offence under this Act is liable,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e2885",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "on a first conviction, to a fine of not more than $200\u00a0000,"
+                                                },
+                                                {
+                                                    "@id": "d1e2894",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "on a second conviction for the same offence or another offence, to a fine of not more than $350\u00a0000, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2903",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "on each subsequent conviction for the same offence or another offence, to a fine of not more than $500\u00a0000 or to a term of imprisonment not exceeding 6 months, or both."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2913",
+                                            "bcl:num": "3",
+                                            "bcl:text": "If a person commits an offence under this Act and continues to commit the offence, separate penalties may be imposed in respect of the offence for each day the original offence continues."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2925",
+                    "bcl:num": "4",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e2933",
+                            "bcl:marginalnote": "Regulation-making powers",
+                            "bcl:num": "27",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2941",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e2954",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2962",
+                                            "bcl:num": "a",
+                                            "bcl:text": "[Not in force.]"
+                                        },
+                                        {
+                                            "@id": "d1e2974",
+                                            "bcl:num": "b",
+                                            "bcl:text": "providing that types of equipment, parts of equipment or equipment used for prescribed purposes is or is not controlled equipment, including providing that a manual machine that may be used for a purpose described in paragraph (a) of the definition of \"controlled equipment\" in section 1 is controlled equipment;"
+                                        },
+                                        {
+                                            "@id": "d1e2983",
+                                            "bcl:num": "c",
+                                            "bcl:text": "[Not in force.]"
+                                        },
+                                        {
+                                            "@id": "d1e2996",
+                                            "bcl:num": "d",
+                                            "bcl:text": "respecting additional persons who are authorized to perform a controlled activity and setting limits and conditions on that authorization;"
+                                        },
+                                        {
+                                            "@id": "d1e3005",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[who may sell controlled equipment]",
+                                                    "[general duties of authorized owners]",
+                                                    "[duties in respect of records]"
+                                                ],
+                                                "#text": "prescribing records and information for the purposes of sections 4\u00a0(3) and (5)\u00a0(a) , 5\u00a0(4)\u00a0(c)\u00a0(iii)  and 6\u00a0(1)\u00a0(c) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e3023",
+                                            "bcl:num": "f",
+                                            "bcl:text": "prescribing types of consideration that cannot be received for the sale of controlled equipment;"
+                                        },
+                                        {
+                                            "@id": "d1e3032",
+                                            "bcl:num": "g",
+                                            "bcl:text": "respecting the storage of controlled equipment;"
+                                        },
+                                        {
+                                            "@id": "d1e3041",
+                                            "bcl:num": "h",
+                                            "bcl:text": "prescribing enactments for the purpose of section 5 (2) (g) (iii);"
+                                        },
+                                        {
+                                            "@id": "d1e3050",
+                                            "bcl:num": "i",
+                                            "bcl:text": "requiring a person who is authorized to perform a controlled activity to make records in addition to the records referred to in this Act;"
+                                        },
+                                        {
+                                            "@id": "d1e3060",
+                                            "bcl:num": "j",
+                                            "bcl:text": "for the purpose of any record that must be made under this Act,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e3068",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "respecting the required content and form of the record, and"
+                                                },
+                                                {
+                                                    "@id": "d1e3077",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing the period for which a record must be kept;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e3087",
+                                            "bcl:num": "k",
+                                            "bcl:text": {
+                                                "in:desc": "[applications for waivers and registrations]",
+                                                "#text": "for the purposes of section 7 ,"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e3098",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "prescribing fees,"
+                                                },
+                                                {
+                                                    "@id": "d1e3107",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "respecting the types of checks that may or must be made for the purpose of section 7 (4) (a), and"
+                                                },
+                                                {
+                                                    "@id": "d1e3116",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "respecting additional records and information to be included with an application;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e3126",
+                                            "bcl:num": "l",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[inspection powers]",
+                                                    "[seizure during inspection]"
+                                                ],
+                                                "#text": "respecting additional actions inspectors may take for the purposes of an inspection under section 18 (3)  or to verify evidence produced under section 20 (2) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e3141",
+                                            "bcl:num": "m",
+                                            "bcl:text": "respecting additional evidence that may be produced for the purposes of section 20 (2);"
+                                        },
+                                        {
+                                            "@id": "d1e3150",
+                                            "bcl:num": "n",
+                                            "bcl:text": {
+                                                "in:desc": "[search and seizure]",
+                                                "#text": "prescribing forms for the purposes of section 21 ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3163",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation made under this Act may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3171",
+                                            "bcl:num": "a",
+                                            "bcl:text": "establish classes of persons,"
+                                        },
+                                        {
+                                            "@id": "d1e3180",
+                                            "bcl:num": "b",
+                                            "bcl:text": "make regulations that are different for different classes, and"
+                                        },
+                                        {
+                                            "@id": "d1e3189",
+                                            "bcl:num": "c",
+                                            "bcl:text": "provide that one or more classes are exempt, with or without conditions, from one or more provisions of this Act or a regulation made under it."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3200",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A regulation made under this Act may confer a discretion on the registrar."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3213",
+                            "bcl:marginalnote": "Transition \u2014 continuing controlled activities",
+                            "bcl:num": "28",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3221",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "in-force date",
+                                        "in:desc": "[Requirements to Deal With Controlled Equipment]",
+                                        "#text": "In this section,  means the date on which Division 1  of Part 2 comes into force."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e3236",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person who owned controlled equipment before the in-force date and is authorized to continue to own the controlled equipment on the in-force date must give prescribed records and information to the registrar",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3244",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the form and manner required by the registrar, and"
+                                        },
+                                        {
+                                            "@id": "d1e3253",
+                                            "bcl:num": "b",
+                                            "bcl:text": "within the period set by the regulations."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3263",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person who is in the business of selling controlled equipment before the in-force date may, if the person applies for a registration before the prescribed date, continue to sell controlled equipment until",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3271",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the registration is granted, and afterwards in accordance with the limits and conditions of the registration, or"
+                                        },
+                                        {
+                                            "@id": "d1e3280",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the registration is refused, and afterwards until the date set by the registrar as the date by which controlled equipment owned or possessed by the person must be sold or destroyed, as required by the registrar."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3291",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "in:desc": "[who may sell controlled equipment]",
+                                        "#text": "A person who contracted to sell controlled equipment before the in-force date but will not, under the terms of the contract, deliver the controlled equipment until on or after the in-force date is exempt from the requirements of section 4  but must give to the registrar"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3302",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a notice of the sale",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e3310",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "in the form and manner required by the registrar, and"
+                                                },
+                                                {
+                                                    "@id": "d1e3319",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "within 10 days of the in-force date, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e3329",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any records or information requested by the registrar, within the time requested."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3339",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A person who owned controlled equipment before the in-force date but is not authorized to continue to own the controlled equipment on the in-force date may, if the person applies for a waiver before the prescribed date, continue to own the controlled equipment until",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3347",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the waiver is granted, and afterwards in accordance with the limits and conditions of the waiver, or"
+                                        },
+                                        {
+                                            "@id": "d1e3356",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the waiver is refused, and afterwards until the date set by the registrar as the date by which the controlled equipment must be sold or destroyed, as required by the registrar."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3366",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The Lieutenant Governor in Council may make regulations as contemplated by this section."
+                                }
+                            ]
+                        }
+                    ],
+                    "bcl:transitionalhead": "Transitional Provision"
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Amendment to this Act",
+                "bcl:num": "29",
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of section 29.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "@id": "d0e52291",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:em": "29"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": null
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/E3tlc18024",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Pill Press and Related Equipment Control Act"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "bcl:section": {
+                "@id": "d1e325",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "30",
+                "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+            }
+        }
+    }
+}

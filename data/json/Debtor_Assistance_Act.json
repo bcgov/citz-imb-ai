@@ -1,0 +1,425 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96093_01",
+        "act:title": "Debtor Assistance Act",
+        "act:chapter": "93",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1421132707/96093/tlc96093_f",
+            "act:tlc": "E3tlc96093"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "debt",
+                                "#text": "includes secured and unsecured debts, money owing under a guarantee, and money owing under a mortgage, pledge, charge or lien on or against property of a debtor;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "debtor",
+                                "#text": "means a person other than a corporation who"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e45",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is experiencing difficulty in paying the person's debts, or"
+                                },
+                                {
+                                    "@id": "d2e54",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is or may become unable to pay the person's debts as they become due, and includes the person's legal representatives after the person's death;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e63",
+                            "bcl:text": {
+                                "in:term": "director",
+                                "#text": "means the Director of Debtor Assistance appointed under section\u00a02;"
+                            }
+                        },
+                        {
+                            "@id": "d2e72",
+                            "bcl:text": {
+                                "in:term": "minister",
+                                "#text": "includes a person designated in writing by the minister."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e82",
+                    "bcl:marginalnote": "Director and staff",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e90",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "The minister may, under the , appoint a Director of Debtor Assistance, deputy directors, and other employees required to carry out this Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e102",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service Act"
+                                },
+                                "#text": "Despite the , the minister may"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e114",
+                                    "bcl:num": "a",
+                                    "bcl:text": "employ persons on a temporary or part time basis or as specialists and consultants,"
+                                },
+                                {
+                                    "@id": "d2e124",
+                                    "bcl:num": "b",
+                                    "bcl:text": "determine their remuneration, and"
+                                },
+                                {
+                                    "@id": "d2e133",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/02040_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Employment and Assistance Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/02041_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Employment and Assistance for Persons with Disabilities Act"
+                                            }
+                                        ],
+                                        "#text": "without limiting the generality of paragraphs (a) and (b), employ a person to or for whom income assistance is provided under the  or disability assistance is provided under the ."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e149",
+                    "bcl:marginalnote": "Court clerks",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e157",
+                            "bcl:num": "1",
+                            "bcl:text": "On recommendation of the Attorney General, the Lieutenant Governor in Council may appoint persons appointed or employed under section\u00a02 as clerks of a court in British Columbia."
+                        },
+                        {
+                            "@id": "d2e166",
+                            "bcl:num": "2",
+                            "bcl:text": "Even if a person is acting as a clerk of a court in a proceeding, the person may in the same proceeding exercise the powers and carry out the responsibilities of a person appointed or employed under section\u00a02."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e176",
+                    "bcl:marginalnote": "Director a corporation",
+                    "bcl:num": "4",
+                    "bcl:text": "The director is a corporation and has the rights, powers and duties given to and conferred or imposed on the director by this or any other Act."
+                },
+                {
+                    "@id": "d2e188",
+                    "bcl:marginalnote": "Powers of director",
+                    "bcl:num": "5",
+                    "bcl:text": "For the purpose of carrying out this Act the director has power and authority to any or all of the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e199",
+                            "bcl:num": "a",
+                            "bcl:text": "advise and assist a debtor in adjusting the debtor's debts and in working out satisfactory arrangements for the settlement of the debts with the debtor's creditors;"
+                        },
+                        {
+                            "@id": "d2e208",
+                            "bcl:num": "b",
+                            "bcl:text": "arrange meetings between a debtor and the debtor's creditors to try to bring about satisfactory arrangements for the settlement of the debtor's debts with the debtor's creditors;"
+                        },
+                        {
+                            "@id": "d2e218",
+                            "bcl:num": "c",
+                            "bcl:text": "advise and assist a debtor in the preparation of a plan or scheme for settlement of the debtor's debts before a board or court involved in the adjudication or settlement of debts;"
+                        },
+                        {
+                            "@id": "d2e227",
+                            "bcl:num": "d",
+                            "bcl:text": "if appropriate, aid a debtor in obtaining postponements, adjustments or extensions of time for the payment of the debtor's debts;"
+                        },
+                        {
+                            "@id": "d2e236",
+                            "bcl:num": "e",
+                            "bcl:text": "act as an intermediary in negotiations between a debtor and the debtor's creditors in the adjustment and settlement of debts;"
+                        },
+                        {
+                            "@id": "d2e245",
+                            "bcl:num": "f",
+                            "bcl:text": "generally render service, advice and assistance to a debtor who is unable to meet the debtor's liabilities and who, through proceedings in the courts or otherwise, is being pressed for payment or harassed by the debtor's creditors;"
+                        },
+                        {
+                            "@id": "d2e254",
+                            "bcl:num": "g",
+                            "bcl:text": "operate programs, or enter into agreements with a person, for the purpose of studying, researching, counselling or providing other services for the improvement of problems affecting debtors;"
+                        },
+                        {
+                            "@id": "d2e263",
+                            "bcl:num": "h",
+                            "bcl:text": "provide financial or other assistance to a person referred to in paragraph (g);"
+                        },
+                        {
+                            "@id": "d2e273",
+                            "bcl:num": "i",
+                            "bcl:text": "conduct, or arrange and finance, programs for the dissemination of information respecting problems affecting debtors;"
+                        },
+                        {
+                            "@id": "d2e282",
+                            "bcl:num": "j",
+                            "bcl:text": "with the approval of the Lieutenant Governor in Council, enter into agreements with any department of the government of Canada or of a province for a purpose referred to in paragraph (g)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e293",
+                    "bcl:marginalnote": "Powers of inquiry",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e301",
+                            "bcl:num": "1",
+                            "bcl:text": "The director, or a person authorized in writing by the director, may make inquiries with regard to the assets and liabilities of a debtor who applies for assistance under this Act or in respect of whom a referral has been made by a court."
+                        },
+                        {
+                            "@id": "d2e310",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purpose of an inquiry under subsection (1), the director may make an order requiring any person who the director considers has any knowledge of the affairs of the debtor, including the debtor, the debtor's employees and agents and the debtor's creditors, to do either or both of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e319",
+                                    "bcl:num": "a",
+                                    "bcl:text": "attend, in person or by electronic means, before the director to answer questions on oath or affirmation, or in any other manner;"
+                                },
+                                {
+                                    "@id": "d2e329",
+                                    "bcl:num": "b",
+                                    "bcl:text": "produce for the director a record or thing in the person's possession or control."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e338",
+                            "bcl:num": "3",
+                            "bcl:text": "The director may apply to the Supreme Court for an order",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e347",
+                                    "bcl:num": "a",
+                                    "bcl:text": "directing a person to comply with an order made under subsection (2), or"
+                                },
+                                {
+                                    "@id": "d2e356",
+                                    "bcl:num": "b",
+                                    "bcl:text": "directing any officers and governing members of a person to cause the person to comply with an order made under subsection (2)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e366",
+                    "bcl:marginalnote": "Contempt proceeding for uncooperative person",
+                    "bcl:num": "6.1",
+                    "bcl:text": "The failure or refusal of a person subject to an order under section 6 to do any of the following makes the person, on application to the Supreme Court by the director, liable to be committed for contempt as if in breach of an order or judgment of the Supreme Court:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e377",
+                            "bcl:num": "a",
+                            "bcl:text": "attend before the director;"
+                        },
+                        {
+                            "@id": "d2e386",
+                            "bcl:num": "b",
+                            "bcl:text": "take an oath or make an affirmation;"
+                        },
+                        {
+                            "@id": "d2e396",
+                            "bcl:num": "c",
+                            "bcl:text": "answer questions;"
+                        },
+                        {
+                            "@id": "d2e405",
+                            "bcl:num": "d",
+                            "bcl:text": "produce records or things in the person's possession or control."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e415",
+                    "bcl:marginalnote": "Director may receive money",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e423",
+                            "bcl:num": "1",
+                            "bcl:text": "The director may receive money in trust from a debtor for transmission to the debtor's creditors according to the debtor's instructions."
+                        },
+                        {
+                            "@id": "d2e432",
+                            "bcl:num": "2",
+                            "bcl:text": "Despite any other Act, money paid to the director under subsection (1) does not form part of the consolidated revenue fund."
+                        },
+                        {
+                            "@id": "d2e441",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2002-12-5.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e451",
+                    "bcl:marginalnote": "Reference to director by court",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e459",
+                            "bcl:num": "1",
+                            "bcl:text": "A court may refer to the director for an inquiry and written report any question in a proceeding that relates to the financial resources of a debtor and the debtor's ability to pay the debtor's debts."
+                        },
+                        {
+                            "@id": "d2e468",
+                            "bcl:num": "2",
+                            "bcl:text": "The director may, in preparing a report under subsection\u00a0(1), and if the director is satisfied that the information continues to be accurate, rely on information the director may have previously obtained under section\u00a06, without the necessity of a further inquiry."
+                        },
+                        {
+                            "@id": "d2e477",
+                            "bcl:num": "3",
+                            "bcl:text": "A report under subsection (1) may, if it is signed by the director, be received by the court as proof of the truth of the facts stated in it without the necessity of proving the director's appointment, authority and signature; and the court may incorporate the report, wholly or partially, into a judgment."
+                        },
+                        {
+                            "@id": "d2e487",
+                            "bcl:num": "4",
+                            "bcl:text": "This section applies only to those areas of British Columbia designated by the Lieutenant Governor in Council."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e497",
+                    "bcl:marginalnote": "Protection from liability",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e505",
+                            "bcl:num": "1",
+                            "bcl:text": "A person appointed or employed under section\u00a02, including the director in the director's corporate capacity, is not liable for loss or damage by reason of anything in good faith done or not done by the person under this Act."
+                        },
+                        {
+                            "@id": "d2e514",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not relieve the person appointed or employed under section\u00a02, including the director in the director's corporate capacity, from liability to account for all money that comes into the person's possession or control because of the person's office of employment."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e524",
+                    "bcl:marginalnote": "Annual report",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e532",
+                            "bcl:num": "1",
+                            "bcl:text": "The director must submit annually to the minister a report respecting the director's corporate activities, financial and otherwise, for the immediately preceding fiscal year."
+                        },
+                        {
+                            "@id": "d2e541",
+                            "bcl:num": "2",
+                            "bcl:text": "The report must be laid before the Legislature within 15\u00a0days after the opening of the first session in the succeeding year."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e552",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e560",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "For the purpose of carrying out this Act, the Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e572",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e581",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting the powers, duties and functions of the director;"
+                                },
+                                {
+                                    "@id": "d2e591",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting proceedings and forms;"
+                                },
+                                {
+                                    "@id": "d2e600",
+                                    "bcl:num": "c",
+                                    "bcl:text": "prescribing fees to be charged for any service performed under this Act;"
+                                },
+                                {
+                                    "@id": "d2e609",
+                                    "bcl:num": "d",
+                                    "bcl:text": "designating areas of British Columbia for section\u00a08."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
