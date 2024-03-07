@@ -21,6 +21,24 @@ services:
       - vrm
   ########################### End Postgres ####################################
 
+  ########################## Pythyon Flask #########################################
+  flaskcontainer:
+    build:
+      context: ../backend
+      dockerfile: ../backend/Dockerfile  
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-root}
+      - POSTGRES_DB=${POSTGRES_DB:-ai_db}
+    ports:
+      - "8000:8000"
+    depends_on: 
+      - postgres
+    networks:
+      - vrm
+  
+  ########################## End Pythyon Flask #########################################
+
   ########################### Networks Definition #############################
 networks:
   vrm:
