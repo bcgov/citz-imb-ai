@@ -11,11 +11,15 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 COPY init.py /app/init.py
+COPY init.ipynb /app/init.ipynb
 COPY app.py /app/app.py
 COPY DB /app/DB
-CMD [ "python3", "-m" , "flask", "run"]
+    
+RUN useradd -ms /bin/bash jupyter
+EXPOSE 8888                                           
+ENTRYPOINT ["jupyter", "notebook","--allow-root","--ip=0.0.0.0","--port=8888","--no-browser"]
 
-RUN python init.py
+#RUN python init.py
 
 
 
