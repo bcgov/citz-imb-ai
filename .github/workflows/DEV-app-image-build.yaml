@@ -8,7 +8,7 @@ on:
 
 jobs:
   # Job to build, tag, and push the APP image
-  AIR-App-Build-Tag-Push:
+  ZUBA-App-Build-Tag-Push:
     environment: dev
     runs-on: ubuntu-latest
     steps:
@@ -26,29 +26,29 @@ jobs:
           openshift_token: ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
           namespace: ${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}
 
-      # Login to BC Gov Docker Image Repository
-      - name: Login to Openshift Docker
+      # Login to BC Gov Artifactory Docker Image Repository
+      - name: Login to Artifactory
         run : |
-          docker login ${{ secrets.PUBLIC_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+          docker login ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
 
       # Build the APP image
       - name: Build APP Image
         run: |
-          docker-compose -f compose.prod.yaml build frontend
+          docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ${{ vars.APP_NAME }}
 
       # Tag the APP image
       - name: Tag APP Image
         run: |
-          docker tag vrm_frontend ${{ secrets.PUBLIC_IMAGE_REPOSITORY }}/${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}/vrm-app:${{github.event.pull_request.number}}
+          docker tag ${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
 
       # Push the APP image
       - name: Push APP Image
         run: |
-          docker push ${{ secrets.PUBLIC_IMAGE_REPOSITORY }}/${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}/vrm-app:${{github.event.pull_request.number}}
+          docker push ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
 
 # Job to update the wiki with the latest build image tag information
   Update_Wiki_Tags:
-    needs: [AIR-App-Build-Tag-Push]
+    needs: [ZUBA-App-Build-Tag-Push]
     name: Update table in wiki
     runs-on: ubuntu-latest
     env:
@@ -88,16 +88,3 @@ jobs:
           fi
           echo "Pushing changes to wiki"
           git commit -m "Value populated at image build App" && git push "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.wiki.git"
-
-      # Add Comment To the PR
-      - name: Add Comment To the PR
-        if: github.event.action == 'opened'
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "🚀 **Deployment Information**\n\nThe APP Image has been built with the tag: **`${{github.event.pull_request.number}}`**. Please make sure to utilize this specific tag when promoting these changes to the TEST and PROD environments during the APP deployment. For more updates please monitor [Image Tags](https://github.com/bcgov/citz-imb-ai/wiki/Image-tags) Page on Wiki."
-            })
