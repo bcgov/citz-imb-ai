@@ -1,11 +1,7 @@
 FROM python:3.12-slim
 
 # Set the working directory in the container
-RUN apt-get update -y \ 
-    && apt-get install vim -y \
-    && apt-get install iputils-ping -y\
-    && apt-get install net-tools -y  \
-    && apt-get install dnsutils -y  
+RUN apt-get update -y 
 
 WORKDIR /app
 COPY requirements.txt /app/requirements.txt
