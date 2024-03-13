@@ -76,6 +76,9 @@ jobs:
 
         yq e ".backend.image.tag = \"$NEW_TAG\"" -i "$FILE_PATH"
 
+        git config user.email "brandon.bouchard@gov.bc.ca"
+        git config user.name "Bottle7"
+
         git add "$FILE_PATH"
         git commit -m "Update backend image tag to $NEW_TAG"
         git push
