@@ -40,15 +40,10 @@ jobs:
       run: |
         docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ${{ vars.APP_NAME }}
 
-    # List Docker Images
-    - name: List Images
-      run: |
-        docker images
-
     # Tag the APP image
     - name: Tag APP Image
       run: |
-        docker tag ${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
+        docker tag docker_${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
 
     # Push the APP image
     - name: Push APP Image
