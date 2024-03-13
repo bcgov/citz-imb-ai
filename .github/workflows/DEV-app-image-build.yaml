@@ -3,88 +3,120 @@ name: DEV App Build on PR
 
 on:
   pull_request:
-    types: [opened, synchronize, ready_for_review] # Triggered by opened or changed pull requests.
-    branches: [main]
+    types:
+    - opened
+    - synchronize
+    - ready_for_review
+    branches:
+    - main
 
 jobs:
   # Job to build, tag, and push the APP image
-  ZUBA-App-Build-Tag-Push:
+  app-build-tag-push:
     environment: dev
     runs-on: ubuntu-latest
     steps:
-      # Checkout the repository
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-      # Login to the Openshift Cluster
-      - name: Login to Openshift
-        uses: redhat-actions/oc-login@v1
-        with:
-          openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
-          openshift_token: ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
-          namespace: ${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}
+    # Login to the Openshift Cluster
+    - name: Login to Openshift
+      uses: redhat-actions/oc-login@v1
+      with:
+        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        openshift_token: ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+        namespace: ${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}
 
-      # Login to BC Gov Artifactory Docker Image Repository
-      - name: Login to Artifactory
-        run : |
-          docker login ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+    # Login to BC Gov Artifactory Docker Image Repository
+    - name: Login to Artifactory
+      run : |
+        docker login ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
 
-      # Build the APP image
-      - name: Build APP Image
-        run: |
-          docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ${{ vars.APP_NAME }}
+    # Build the APP image
+    - name: Build APP Image
+      run: |
+        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ${{ vars.APP_NAME }}
 
-      # Tag the APP image
-      - name: Tag APP Image
-        run: |
-          docker tag ${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
+    # Tag the APP image
+    - name: Tag APP Image
+      run: |
+        docker tag ${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
 
-      # Push the APP image
-      - name: Push APP Image
-        run: |
-          docker push ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
+    # Push the APP image
+    - name: Push APP Image
+      run: |
+        docker push ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/b875cc-app:${{github.event.pull_request.number}}
+
+  update-gitops-image-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install yq
+      run: |
+        curl -Lo yq "https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64"
+        chmod +x yq
+        mv yq /home/runner/bin
+
+    - name: Setup SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.MANIFEST_REPO_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+    - name: Clone, Update, and Commit Changes
+      run: |
+        FILE_PATH="citz-imb-ai/values.yaml"
+        NEW_TAG="${{ github.event.pull_request.number }}"
+
+        yq e ".backend.image.tag = \"$NEW_TAG\"" -i "$FILE_PATH"
+
+        git add "$FILE_PATH"
+        git commit -m "Update backend image tag to $NEW_TAG"
+        git push
 
 # Job to update the wiki with the latest build image tag information
-  Update_Wiki_Tags:
-    needs: [ZUBA-App-Build-Tag-Push]
+  update-wiki-tags:
+    needs:
+    - app-build-tag-push
     name: Update table in wiki
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
 
     steps:
-      # Checkout the repository
-      - name: Checkout
-        uses: actions/checkout@v3
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
 
-      # Clone wiki repository
-      - name: Clone wiki repository
-        run: |
-          echo "Cloning wiki repo https://github.com/$GITHUB_REPOSITORY.wiki.git"
-          git clone "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.wiki.git" ./wiki
+    # Clone wiki repository
+    - name: Clone wiki repository
+      run: |
+        echo "Cloning wiki repo https://github.com/$GITHUB_REPOSITORY.wiki.git"
+        git clone "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.wiki.git" ./wiki
 
-      # Setup Python
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+    # Setup Python
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
 
-      # Run update wiki python script
-      - name: Run update wiki python script
-        run: python ./.github/helpers/update-wiki-table.py ./wiki/Image-tags.md App "Latest Build Image Tag" "${{github.event.pull_request.number}}"
+    # Run update wiki python script
+    - name: Run update wiki python script
+      run: python ./.github/helpers/update-wiki-table.py ./wiki/Image-tags.md App "Latest Build Image Tag" "${{github.event.pull_request.number}}"
 
-      # Commit and push changes to wiki
-      - name: Commit and push changes to wiki
-        run: |
-          cd ./wiki
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add .
-          if git diff-index --quiet HEAD; then
-            echo "Nothing changed"
-            exit 0
-          fi
-          echo "Pushing changes to wiki"
-          git commit -m "Value populated at image build App" && git push "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.wiki.git"
+    # Commit and push changes to wiki
+    - name: Commit and push changes to wiki
+      run: |
+        cd ./wiki
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        git add .
+        if git diff-index --quiet HEAD; then
+          echo "Nothing changed"
+          exit 0
+        fi
+        echo "Pushing changes to wiki"
+        git commit -m "Value populated at image build App" && git push "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.wiki.git"
