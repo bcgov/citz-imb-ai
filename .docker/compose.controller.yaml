@@ -25,7 +25,7 @@ services:
   ai_interface:
     build:
       context: ../backend
-      dockerfile: ../backend/Dockerfile  
+      dockerfile: ../backend/Dockerfile
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-root}
@@ -34,17 +34,17 @@ services:
       - POSTGRES_PORT=${POSTGRES_PORT:-5432}
     ports:
       - "8888:8888"
-    depends_on: 
+    depends_on:
       - postgres
     networks:
-      - vrm
-  
+      - zuba
+
   ########################## AI Interface #########################################
 
   ########################### Networks Definition #############################
 networks:
-  vrm:
-    name: vrm-net
+  zuba:
+    name: zuba-net
     driver: bridge
   ########################### End Networks Definition #########################
 
