@@ -68,6 +68,9 @@ jobs:
 
     - name: Clone, Update, and Commit Changes
       run: |
+        git clone git@github.com:bcgov-c/tenant-gitops-b875cc.git
+        cd tenant-gitops-b875cc
+
         FILE_PATH="citz-imb-ai/values.yaml"
         NEW_TAG="${{ github.event.pull_request.number }}"
 
