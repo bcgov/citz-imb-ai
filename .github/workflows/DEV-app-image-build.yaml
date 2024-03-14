@@ -50,36 +50,3 @@ jobs:
       run: |
         docker push ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/zuba-app:${{ github.event.pull_request.number }}
 
-  update-gitops-image-tag:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Install yq
-      run: |
-        curl -Lo yq "https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64"
-        chmod +x yq
-        mv yq /home/runner/bin
-
-    - name: Setup SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.MANIFEST_REPO_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-
-    - name: Clone, Update, and Commit Changes
-      run: |
-        git clone git@github.com:bcgov-c/tenant-gitops-b875cc.git
-        cd tenant-gitops-b875cc
-
-        FILE_PATH="citz-imb-ai/values.yaml"
-        NEW_TAG="${{ github.event.pull_request.number }}"
-
-        yq e ".backend.image.tag = \"$NEW_TAG\"" -i "$FILE_PATH"
-
-        git config user.email "brandon.bouchard@gov.bc.ca"
-        git config user.name "Bottle7"
-
-        git add "$FILE_PATH"
-        git commit -m "Update backend image tag to $NEW_TAG"
-        git push
-
