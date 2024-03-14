@@ -4,7 +4,8 @@ FROM python:3.12-slim
 RUN apt-get update -y
 
 WORKDIR /app
-COPY ./.deps /app/.deps
+COPY .deps /app/.deps
+COPY requirements.txt /app/requirements.txt
 RUN pip install --no-index --find-links=/app/.deps -r requirements.txt
 COPY init.py /app/init.py
 COPY init.ipynb /app/init.ipynb
