@@ -15,7 +15,7 @@ COPY .deps .
 COPY requirements.txt .
 
 # Install cached dependencies and allow for missing package retrieval
-RUN pip install --no-index --find-links=/app/.deps -r requirements.txt || \
+RUN pip install --no-index --find-links=./.deps -r requirements.txt || \
     pip install -r requirements.txt
 
 COPY init.py /app/init.py
