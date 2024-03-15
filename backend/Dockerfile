@@ -1,7 +1,8 @@
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 # Set the working directory in the container
-RUN apt-get update -y
+RUN apt-get update -y \
+    && apt-get install vim -y
 
 WORKDIR /app
 COPY . .

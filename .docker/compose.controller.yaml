@@ -32,6 +32,11 @@ services:
       - POSTGRES_DB=${POSTGRES_DB:-ai_db}
       - POSTGRES_HOST=postgres
       - POSTGRES_PORT=${POSTGRES_PORT:-5432}
+      - TRULENS_USER=${TRULENS_USER:-postgres}
+      - TRULENS_PASSWORD=${TRULENS_PASSWORD:-root}
+      - TRULENS_DB=${TRULENS_DB:-trulens}
+      - TRULENS_PORT=${TRULENS_PORT:-5432}
+      - TRULENS_HOST=trulens
     ports:
       - "8888:8888"
     depends_on:
@@ -40,6 +45,27 @@ services:
       - zuba
 
   ########################## AI Interface #########################################
+
+  ##################### AI Performance Tracking ####################################
+  trulens:
+    container_name: trulens
+    image: postgres:16.2
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${TRULENS_USER:-postgres}
+      - POSTGRES_PASSWORD=${TRULENS_PASSWORD:-root}
+      - POSTGRES_DB=${TRULENS_DB:-trulens}
+    volumes:
+      - trulensdata:/var/lib/postgresql/data
+    ports:
+      - '${POSTGRES_PORT:-5433}:5432'
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1']
+      interval: 5s
+      timeout: 3s
+    networks:
+      - vrm
+  ##################### End AI Performance Tracking ################################
 
   ########################### Networks Definition #############################
 networks:
@@ -51,5 +77,6 @@ networks:
   ########################### Volumes Definition ##############################
 volumes:
   pgdata:
+  trulensdata:
 
   ########################### End Volumes Definition ##########################
