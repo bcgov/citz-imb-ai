@@ -67,7 +67,25 @@ services:
       - vrm
   ##################### End AI Performance Tracking ################################
 
-  ########################### Networks Definition #############################
+  ########################## Mistral #########################################
+  mistral:
+    container_name: mistral
+    restart: unless-stopped
+    build:
+      context: ../mistral
+      dockerfile: Dockerfile
+    volumes:
+      - mistral:/media
+    ports:
+      - "8080:8080"
+    platform: linux/amd64
+    networks:
+      - vrm
+
+
+  ########################## End of Mistral ##############################################
+
+  ########################### Networks Definition ################################
 networks:
   vrm:
     name: vrm-net
