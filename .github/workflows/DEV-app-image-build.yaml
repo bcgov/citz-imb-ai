@@ -29,8 +29,8 @@ jobs:
         cache: 'pip'
         cache-dependency-path: '**/requirements.txt'
 
-    - name: Cache Dependencies
-      run: pip install -r backend/requirements.txt --target=./backend/.deps
+    - name: Install Dependencies
+      run: pip install -r backend/requirements.txt
 
     # Login to the Openshift Cluster
     - name: Login to Openshift
