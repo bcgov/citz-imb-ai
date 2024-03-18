@@ -6,13 +6,15 @@ RUN apt-get update -y \
 
 WORKDIR /app
 COPY requirements.txt /app/requirements.txt
-RUN pip install -r requirements.txt
-COPY init.py /app/init.py
-COPY init.ipynb /app/init.ipynb
-COPY app.py /app/app.py
 COPY DB /app/DB
-COPY s3.py /app/s3.py
-COPY trulens.py /app/trulens.py 
+COPY ./*.py /app/
+COPY ./*.ipynb /app/
+RUN pip install -r requirements.txt
+#COPY init.py /app/init.py
+#COPY init.ipynb /app/init.ipynb
+#COPY app.py /app/app.py
+#COPY s3.py /app/s3.py
+#COPY trulens.py /app/trulens.py
 
 RUN useradd -ms /bin/bash jupyter
 EXPOSE 8888                                           
