@@ -17,7 +17,7 @@ RUN pip install -r requirements.txt
 #COPY trulens.py /app/trulens.py
 
 RUN useradd -ms /bin/bash jupyter
-EXPOSE 8888                                           
+EXPOSE 8888 8501                                           
 ENTRYPOINT ["jupyter", "notebook","--allow-root","--ip=0.0.0.0","--port=8888","--no-browser"]
 
 

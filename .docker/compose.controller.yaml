@@ -39,6 +39,7 @@ services:
       - TRULENS_HOST=trulens
     ports:
       - "8888:8888"
+      - "8501:8501"
     depends_on: 
       - postgres
     networks:
