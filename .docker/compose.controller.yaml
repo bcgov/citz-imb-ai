@@ -18,14 +18,14 @@ services:
       interval: 5s
       timeout: 3s
     networks:
-      - vrm
+      - zuba
   ########################### End Postgres ####################################
 
   ########################## AI Interface #########################################
   ai_interface:
     build:
       context: ../backend
-      dockerfile: ../backend/Dockerfile  
+      dockerfile: ../backend/Dockerfile
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-root}
@@ -39,11 +39,11 @@ services:
       - TRULENS_HOST=trulens
     ports:
       - "8888:8888"
-    depends_on: 
+    depends_on:
       - postgres
     networks:
-      - vrm
-  
+      - zuba
+
   ########################## AI Interface #########################################
 
   ##################### AI Performance Tracking ####################################
@@ -64,13 +64,13 @@ services:
       interval: 5s
       timeout: 3s
     networks:
-      - vrm
+      - zuba
   ##################### End AI Performance Tracking ################################
 
   ########################### Networks Definition #############################
 networks:
-  vrm:
-    name: vrm-net
+  zuba:
+    name: zuba-net
     driver: bridge
   ########################### End Networks Definition #########################
 

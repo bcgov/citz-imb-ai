@@ -1,0 +1,62 @@
+# GitHub Actions workflow for building and tagging the APP image on PR
+name: DEV App Build on PR
+
+on:
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - ready_for_review
+    branches:
+    - main
+
+jobs:
+  # Job to build, tag, and push the APP image
+  app-build-tag-push:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Cache for Dependencies
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+        cache-dependency-path: '**/requirements.txt'
+
+    - name: Install Dependencies
+      run: pip install -r backend/requirements.txt
+
+    # Login to the Openshift Cluster
+    - name: Login to Openshift
+      uses: redhat-actions/oc-login@v1
+      with:
+        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        openshift_token: ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+        namespace: ${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}
+
+    # Login to BC Gov Artifactory Docker Image Repository
+    - name: Login to Artifactory
+      run : |
+        docker login ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }} -u ${{ secrets.ARTIFACTORY_SA_NAME }} -p ${{ secrets.ARTIFACTORY_SA_PASSWORD }}
+
+    # Build the APP image
+    - name: Build APP Image
+      run: |
+        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ${{ vars.APP_NAME }}
+
+    # Tag the APP image
+    - name: Tag APP Image
+      run: |
+        docker tag docker_${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/zuba-app:${{github.event.pull_request.number}}
+
+    # Push the APP image
+    - name: Push APP Image
+      run: |
+        docker push ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/zuba-app:${{ github.event.pull_request.number }}
+
