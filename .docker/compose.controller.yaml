@@ -25,7 +25,7 @@ services:
   ai_interface:
     build:
       context: ../backend
-      dockerfile: ../backend/Dockerfile
+      dockerfile: ../backend/Dockerfile  
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-root}
@@ -39,7 +39,7 @@ services:
       - TRULENS_HOST=trulens
     ports:
       - "8888:8888"
-    depends_on:
+    depends_on: 
       - postgres
     networks:
       - zuba
