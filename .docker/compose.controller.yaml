@@ -26,6 +26,7 @@ services:
     build:
       context: ../backend
       dockerfile: ../backend/Dockerfile  
+    platform: linux/amd64
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-root}
