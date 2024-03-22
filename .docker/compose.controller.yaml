@@ -25,12 +25,13 @@ services:
 
   ai_interface:
     user: root
-    image: quay.io/jupyter/datascience-notebook:latest
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
     restart: always
     volumes:
       - ./notebooks:/home/jupyternb
     environment:
-      - JUPYTER_TOKEN=token
       - NB_USER=jupyternb
       - NB_UID=1000
       - NB_GID=100
