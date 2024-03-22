@@ -24,7 +24,6 @@ services:
   ########################## AI Interface #########################################
 
   ai_interface:
-    container_name: jupyter-datascience
     user: root
     image: quay.io/jupyter/datascience-notebook:latest
     restart: always
