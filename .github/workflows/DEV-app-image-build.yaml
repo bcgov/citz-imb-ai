@@ -46,7 +46,7 @@ jobs:
     # Tag the APP image
     - name: Tag APP Image
       run: |
-        docker tag ${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/zuba-app:${{github.event.pull_request.number}}
+        docker tag docker_${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/zuba-app:${{github.event.pull_request.number}}
 
     # Push the APP image
     - name: Push APP Image
