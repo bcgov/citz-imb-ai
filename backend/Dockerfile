@@ -4,9 +4,12 @@ FROM python:3.11-slim
 RUN apt-get update -y \
     && apt-get install vim -y
 
-WORKDIR /home/jupyter 
+WORKDIR /app
 
 COPY . .
+
+
+WORKDIR /home/jupyter 
 
 RUN pip install --upgrade pip
 RUN pip install notebook
