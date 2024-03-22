@@ -11,14 +11,19 @@ COPY . .
 
 WORKDIR /home/jupyter 
 
-RUN pip install --upgrade pip
-RUN pip install notebook
-
 RUN useradd -ms /bin/bash jupyter
 
 USER jupyter
 
-ENV PATH="/usr/local/bin:${PATH}"
+RUN chmod 777 /home/jupyter
+
+RUN pip install --upgrade pip
+RUN pip install notebook
+
+
+# ENV PATH="/usr/local/bin:${PATH}"
+
+ENV PATH="/root/.local/share:${PATH}"
 
 EXPOSE 8888
 
