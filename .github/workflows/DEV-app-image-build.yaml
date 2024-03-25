@@ -40,6 +40,9 @@ jobs:
       run: |
         docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ${{ vars.APP_NAME }}
 
+    - run: |
+        docker images
+
     # Tag the APP image
     - name: Tag APP Image
       run: |
