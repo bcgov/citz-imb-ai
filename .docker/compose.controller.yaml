@@ -98,24 +98,23 @@ services:
       - zuba
   ######################## End NEO4J ############################################
 
-  ########################### Networks Definition #############################
-  ########################## Mistral #########################################
-  mistral:
-    container_name: mistral
+  ########################## gradio #########################################
+  gradio:
+    container_name: gradio
     restart: unless-stopped
     build:
-      context: ../mistral
+      context: ../gradio
       dockerfile: Dockerfile
-    volumes:
-      - mistral:/media
     ports:
       - "8080:8080"
     platform: linux/amd64
     networks:
-      - vrm
+      - zuba
 
+  ########################## End of gradio ##############################################
 
-  ########################## End of Mistral ##############################################
+  ########################### Networks Definition #############################
+
 
   ########################### Networks Definition ################################
 networks:
