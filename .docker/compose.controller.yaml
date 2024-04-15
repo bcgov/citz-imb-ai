@@ -87,6 +87,7 @@ services:
       - NEO4JLABS_PLUGINS=["apoc"]
     volumes:
       - neo4j:/var/lib/neo4j/data
+      - neo4j-backup:/var/lib/neo4j/backups
     ports:
       - '${NEO4J_PORT:-7474}:7474'
       - '${NEO4J_PORT:-7687}:7687'
@@ -98,7 +99,22 @@ services:
       - zuba
   ######################## End NEO4J ############################################
 
-  ########################### Networks Definition #############################
+  ########################## gradio #########################################
+  gradio:
+    container_name: gradio
+    restart: unless-stopped
+    build:
+      context: ../gradio
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    platform: linux/amd64
+    networks:
+      - zuba
+
+  ########################## End of gradio ##############################################
+
+  ########################### Networks Definition ################################
 networks:
   zuba:
     name: zuba-net
@@ -110,5 +126,6 @@ volumes:
   pgdata:
   trulensdata:
   neo4j:
+  neo4j-backup:
 
   ########################### End Volumes Definition ##########################
