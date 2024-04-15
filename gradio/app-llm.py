@@ -47,9 +47,9 @@ kg = Neo4jGraph(
 # load embeddings
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-# model_name = "/Users/msihag/repos/citz-imb-ai/backend/models/phi-1_5"
-# tokenizer = AutoTokenizer.from_pretrained(model_name)
-# model = AutoModelForCausalLM.from_pretrained(model_name)
+model_name = "/Users/msihag/repos/citz-imb-ai/backend/models/phi-2"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
 
 cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
 
@@ -143,19 +143,21 @@ class RAG_from_scratch:
         Generate answer from context.
         """
         messages=f"""
-Use the following pieces of information to answer the user's question.
-Laws and Acts can be used interchangeably.
-If the answer is not in the documents, just say that you don't know. 
-Don't try to make up an answer. dont write Question/Answer, just write the answer when done stop generating text.
 
 Context: 
 
 {context_str}
 
-Question: 
+user's question: 
 
 {query}
-Only return the helpful answer below and nothing else.
+
+Use the above pieces of information to answer the user's question.
+
+If the answer is not in the context, just say "I don't know". 
+Don't try to make up an answer.
+
+Answer:
                     """
         return messages
         
@@ -174,18 +176,17 @@ Only return the helpful answer below and nothing else.
     def query(self, query: str, history) -> str:
         context_str = self.retrieve(query)
         rerank = self.reranked(context_str, query)
-        return rerank
-        # prompt = self.genprompt(query, rerank)
+        prompt = self.genprompt(query, rerank)
         # print(prompt)
         # compressed_prompt = self.promptcompression(prompt, query)
         # tokenize
         # print(compressed_prompt)
-        # inputs = tokenizer(prompt, return_tensors="pt")
-        # text = ''
-        # for i in generate(inputs):
-        #     text += i
-        #     print(text)
-        #     yield text
+        inputs = tokenizer(prompt, return_tensors="pt")
+        text = ''
+        for i in generate(inputs):
+            text += i
+            print(text)
+            yield text
 
 rag = RAG_from_scratch()
 
@@ -209,4 +210,4 @@ demo = gr.ChatInterface(
         )
 
 
-demo.launch(server_name="0.0.0.0", server_port=9997, share=True)
+demo.launch(server_name="0.0.0.0", server_port=9995, share=True)

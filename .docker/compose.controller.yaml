@@ -87,6 +87,7 @@ services:
       - NEO4JLABS_PLUGINS=["apoc"]
     volumes:
       - neo4j:/var/lib/neo4j/data
+      - neo4j-backup:/var/lib/neo4j/backups
     ports:
       - '${NEO4J_PORT:-7474}:7474'
       - '${NEO4J_PORT:-7687}:7687'
@@ -113,9 +114,6 @@ services:
 
   ########################## End of gradio ##############################################
 
-  ########################### Networks Definition #############################
-
-
   ########################### Networks Definition ################################
 networks:
   zuba:
@@ -128,5 +126,6 @@ volumes:
   pgdata:
   trulensdata:
   neo4j:
+  neo4j-backup:
 
   ########################### End Volumes Definition ##########################
