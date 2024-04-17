@@ -1,0 +1,262 @@
+
+
+Multilateral Instrument 96-101
+
+
+Trade Repositories and
+
+Derivatives Data Reporting
+
+
+
+Securities Act
+
+
+
+
+Data Field
+
+
+Description
+
+
+
+
+
+Cleared
+
+State whether the derivative has been cleared by a clearing
+agency.
+
+
+
+
+Electronic trading venue identifier
+
+
+State whether the transaction was executed on an electronic
+trading venue.
+
+
+
+Collateralization
+
+State whether the derivative is collateralized.
+
+
+
+
+Unique product identifier
+
+
+Unique product identification code based on the taxonomy of the
+product.
+
+
+
+
+Contract or instrument type
+
+
+The name of the contract or instrument type (e.g., swap, swaption,
+forward, option, basis swap, index swap, basket swap).
+
+
+
+
+Underlying asset identifier 1
+
+
+The unique identifier of the asset referenced in the derivative.
+
+
+
+
+Underlying asset identifier 2
+
+
+The unique identifier of the second asset referenced in the
+derivative, if more than one.
+
+If more than two assets identified in the derivative, state the
+unique identifiers for those additional underlying assets.
+
+
+
+
+Asset class
+
+Major asset class of the product (e.g., interest rate, credit,
+commodity, foreign exchange, equity).
+
+
+
+
+Effective date or start date
+
+
+The date the derivative becomes effective or starts.
+
+
+
+
+Maturity, termination or end date
+
+
+The date the derivative expires.
+
+
+
+
+Payment frequency or dates
+
+
+The dates or frequency the derivative requires payments to be made
+(e.g., quarterly, monthly).
+
+
+
+
+Reset frequency or dates
+
+
+The dates or frequency at which the price resets (e.g., quarterly,
+semi-annually, annually).
+
+
+
+
+Day count convention
+
+
+Factor used to calculate the payments (e.g., 30/360, actual/360).
+
+
+
+Price 1
+
+The price, rate, yield, spread, coupon or similar characteristic
+of the derivative. This should not include any premiums such as
+commissions, collateral premiums or accrued interest.
+
+
+
+Price 2
+
+The price, rate, yield, spread, coupon or similar characteristic
+of the derivative. This should not include any premiums such as
+commissions, collateral premiums or accrued interest.
+
+
+
+
+Price notation type 1
+
+
+The manner in which the price is expressed (e.g., percentage,
+basis points).
+
+
+
+
+Price notation type 2
+
+
+The manner in which the price is expressed (e.g., percentage,
+basis points).
+
+
+
+
+Notional amount leg 1
+
+
+Total notional amount(s) of leg 1 of the derivative.
+
+
+
+
+Notional amount leg 2
+
+
+Total notional amount(s) of leg 2 of the derivative.
+
+
+
+Currency leg 1
+
+Currency of leg 1.
+
+
+
+Currency leg 2
+
+Currency of leg 2.
+
+
+
+
+Settlement currency
+
+
+The currency used to determine the cash settlement amount.
+
+
+
+Embedded option
+
+State whether the option is an embedded option.
+
+
+
+
+Option exercise date
+
+
+The date(s) on which the option may be exercised.
+
+
+
+Option premium
+
+Fixed premium paid by the buyer to the seller.
+
+
+
+
+Strike price
+
+(cap/floor rate)
+
+
+The strike price of the option.
+
+
+
+Option style
+
+State whether the option can be exercised on a fixed date or
+anytime during the life of the derivative (e.g., American,
+European, Bermudan, Asian).
+
+
+
+Option type
+Put, call.
+
+
+Action
+
+Describe the type of event to the derivative (e.g., new
+transaction, modification or cancellation of existing derivative).
+
+
+
+
+Execution timestamp
+
+
+The time and date of execution of a derivative, including a
+novation, expressed using Coordinated Universal Time (UTC).
+
+

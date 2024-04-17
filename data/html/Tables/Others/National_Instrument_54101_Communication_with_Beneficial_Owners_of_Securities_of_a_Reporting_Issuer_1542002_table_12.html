@@ -1,0 +1,334 @@
+<html>
+  <head></head>
+  <body>
+    <div id="title">
+      <h2>
+        National Instrument 54-101
+        <br />
+        <em>
+          Communication with Beneficial Owners of
+          <br />
+          Securities of a Reporting Issuer
+        </em>
+      </h2>
+    </div>
+    <div id="actname">
+      <h2>Securities Act</h2>
+    </div>
+    <table
+      align="center"
+      border="1"
+      cellpadding="3"
+      cellspacing="0"
+      class="tablestyle2"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <strong> HEADER RECORD DESCRIPTION </strong>
+          </td>
+          <td>
+            <strong> TYPE </strong>
+          </td>
+          <td>
+            <strong> LENGTH </strong>
+          </td>
+          <td>
+            <strong> POSITION </strong>
+          </td>
+          <td>
+            <strong> COMMENTS </strong>
+          </td>
+        </tr>
+        <tr>
+          <td>RECORD TYPE</td>
+          <td>A</td>
+          <td>1</td>
+          <td>1</td>
+          <td>Header record = A</td>
+        </tr>
+        <tr>
+          <td>FINS NUMBER</td>
+          <td>A</td>
+          <td>4</td>
+          <td>2-5</td>
+          <td>Prefix T, M, V or C</td>
+        </tr>
+        <tr>
+          <td>ISIN</td>
+          <td>A</td>
+          <td>12</td>
+          <td>6-17</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>3</td>
+          <td>18-20</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>SECURITY DESC.</td>
+          <td>A</td>
+          <td>32</td>
+          <td>21-52</td>
+          <td>Security Description</td>
+        </tr>
+        <tr>
+          <td valign="top">RECORD DATE</td>
+          <td valign="top">N</td>
+          <td valign="top">8</td>
+          <td valign="top">53-60</td>
+          <td>
+            Format
+            <br />
+            YYYYMMDD
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">CREATION DATE</td>
+          <td valign="top">N</td>
+          <td valign="top">8</td>
+          <td valign="top">61-68</td>
+          <td>
+            Format
+            <br />
+            YYYYMMDD
+          </td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>250</td>
+          <td>69-318</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>
+            <strong> DETAIL RECORD DESCRIPTION </strong>
+          </td>
+          <td>
+            <strong> TYPE </strong>
+          </td>
+          <td>
+            <strong> LENGTH </strong>
+          </td>
+          <td>
+            <strong> POSITION </strong>
+          </td>
+          <td>
+            <strong> COMMENTS </strong>
+          </td>
+        </tr>
+        <tr>
+          <td>RECORD TYPE</td>
+          <td>A</td>
+          <td>1</td>
+          <td>1</td>
+          <td>Detail Record = B</td>
+        </tr>
+        <tr>
+          <td>FINS NUMBER</td>
+          <td>A</td>
+          <td>4</td>
+          <td>2-5</td>
+          <td>Same as in Header record</td>
+        </tr>
+        <tr>
+          <td>ISIN</td>
+          <td>A</td>
+          <td>12</td>
+          <td>6-17</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>3</td>
+          <td>18-20</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>20</td>
+          <td>21-40</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>NAME</td>
+          <td>A</td>
+          <td>32</td>
+          <td>41-72</td>
+          <td>Holder Name</td>
+        </tr>
+        <tr>
+          <td>ADDRESS</td>
+          <td>A</td>
+          <td>32 x 6</td>
+          <td>73-264</td>
+          <td>Occurs 6 times</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>32</td>
+          <td>265-296</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>POSTAL CODE</td>
+          <td>A</td>
+          <td>9</td>
+          <td>297-305</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td valign="top">POSTAL REGION</td>
+          <td valign="top">A</td>
+          <td valign="top">1</td>
+          <td valign="top">306</td>
+          <td>
+            C=Canada;
+            <br />
+            U=USA;
+            <br />
+            F=Foreign; (other than USA);
+            <br />
+            H=Hand Deliver
+          </td>
+        </tr>
+        <tr>
+          <td>NOTICE AND ACCESS</td>
+          <td>A</td>
+          <td>1</td>
+          <td>307</td>
+          <td>
+            Y=Full Package;
+            <br />
+            N=Notice Only
+          </td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>1</td>
+          <td>308</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>EMAIL ADDRESS</td>
+          <td>A</td>
+          <td>32</td>
+          <td>309-340</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>LANGUAGE CODE</td>
+          <td>A</td>
+          <td>1</td>
+          <td>341</td>
+          <td>
+            E=English;
+            <br />
+            F=French
+          </td>
+        </tr>
+        <tr>
+          <td>NUMBER OF SHARES</td>
+          <td>N</td>
+          <td>9</td>
+          <td>342-350</td>
+          <td>Shareholder Position</td>
+        </tr>
+        <tr>
+          <td valign="top">RECEIVE ALL MATERIAL</td>
+          <td valign="top">A</td>
+          <td valign="top">1</td>
+          <td valign="top">351</td>
+          <td valign="top">
+            A – ALL Material,
+            <br />
+            S – Material for SPECIAL Meetings only,
+            <br />
+            D – DECLINE to receive Materials
+          </td>
+        </tr>
+        <tr>
+          <td>AGREE TO ELECTRONIC DELIVERY BY INTERMEDIARY</td>
+          <td>A</td>
+          <td>1</td>
+          <td>352</td>
+          <td>Y/N</td>
+        </tr>
+        <tr>
+          <td>
+            <strong> TRAILER RECORD DESCRIPTION </strong>
+          </td>
+          <td>
+            <strong> TYPE </strong>
+          </td>
+          <td>
+            <strong> LENGTH </strong>
+          </td>
+          <td>
+            <strong> POSITION </strong>
+          </td>
+          <td>
+            <strong> COMMENTS </strong>
+          </td>
+        </tr>
+        <tr>
+          <td>RECORD TYPE</td>
+          <td>A</td>
+          <td>1</td>
+          <td>1</td>
+          <td>Trailer record = C</td>
+        </tr>
+        <tr>
+          <td>FINS NUMBER</td>
+          <td>A</td>
+          <td>4</td>
+          <td>2-5</td>
+          <td>Same as in Header Record</td>
+        </tr>
+        <tr>
+          <td>ISIN</td>
+          <td>A</td>
+          <td>12</td>
+          <td>6-17</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>3</td>
+          <td>18-20</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TOTAL SHAREHOLDERS</td>
+          <td>N</td>
+          <td>7</td>
+          <td>21-27</td>
+          <td>Number of "B" type records</td>
+        </tr>
+        <tr>
+          <td>TOTAL SHARES</td>
+          <td>N</td>
+          <td>11</td>
+          <td>27-38</td>
+          <td>Total Shares on "B" type records</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td>X</td>
+          <td>280</td>
+          <td>39-318</td>
+          <td>Blank</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

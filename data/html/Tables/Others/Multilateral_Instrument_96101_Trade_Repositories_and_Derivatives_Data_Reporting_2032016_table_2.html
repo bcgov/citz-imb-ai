@@ -1,0 +1,832 @@
+<html>
+  <head></head>
+  <body>
+    <div id="title">
+      <h2>
+        Multilateral Instrument 96-101
+        <br />
+        <em>
+          Trade Repositories and
+          <br />
+          Derivatives Data Reporting
+        </em>
+      </h2>
+    </div>
+    <div id="actname">
+      <h2>Securities Act</h2>
+    </div>
+    <table
+      align="center"
+      border="1"
+      cellpadding="3"
+      cellspacing="0"
+      class="tablestyle2"
+    >
+      <tbody>
+        <tr>
+          <td align="center" colname="c1" valign="center" width="110">
+            <strong> Data Field </strong>
+          </td>
+          <td align="center" colname="c2" valign="center" width="500">
+            <strong> Description </strong>
+          </td>
+          <td align="center" colname="c3" valign="center" width="110">
+            <strong> Required for Pre-existing Derivatives </strong>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td align="left" colname="c1" valign="center" width="110">
+            Transaction identifier
+          </td>
+          <td align="left" colname="c2" valign="center" width="500">
+            The unique transaction identifier as provided by the recognized
+            trade repository or the identifier as identified by the two
+            counterparties, electronic trading venue of execution or clearing
+            agency.
+          </td>
+          <td align="center" colname="c3" valign="center" width="110">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Master agreement type
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The type of master agreement, if used for the reported derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Master agreement version
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Date of the master agreement version (e.g., 2002, 2006).
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Cleared</td>
+          <td align="left" colname="c2" valign="center">
+            State whether the derivative has been cleared by a clearing agency.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Intent to clear</td>
+          <td align="left" colname="c2" valign="center">
+            State whether the derivative will be cleared by a clearing agency.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Clearing agency</td>
+          <td align="left" colname="c2" valign="center">
+            LEI of the clearing agency where the derivative is or will be
+            cleared.
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Clearing member</td>
+          <td align="left" colname="c2" valign="center">
+            LEI of the clearing member, if the clearing member is not a
+            counterparty.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Clearing exemption</td>
+          <td align="left" colname="c2" valign="center">
+            State whether one or more of the counterparties to the derivative
+            are exempted from a mandatory clearing requirement.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Broker/Clearing intermediary
+          </td>
+          <td align="left" colname="c2" valign="center">
+            LEI of the broker acting as an intermediary for the reporting
+            counterparty without becoming a counterparty.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Electronic trading venue identifier
+          </td>
+          <td align="left" colname="c2" valign="center">
+            LEI of the electronic trading venue where the transaction was
+            executed.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Inter-affiliate</td>
+          <td align="left" colname="c2" valign="center">
+            State whether the derivative is between two affiliated entities.
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Collateralization</td>
+          <td align="left" colname="c2" valign="center">
+            State whether the derivative is collateralized.
+            <br />
+            Field Values:
+            <p class="schIndent1">
+              •  Fully (initial and variation margin required to be posted by
+              both parties);
+            </p>
+            <p class="schIndent1">
+              •  Partially (variation only required to be posted by both
+              parties);
+            </p>
+            <p class="schIndent1">
+              •  One-way (one party will be required to post some form of
+              collateral);
+            </p>
+            <p class="schIndent1">•  Uncollateralized.</p>
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Identifier of reporting counterparty
+          </td>
+          <td align="left" colname="c2" valign="center">
+            LEI of the reporting counterparty or, in case of an individual, its
+            client code.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Identifier of non-reporting counterparty
+          </td>
+          <td align="left" colname="c2" valign="center">
+            LEI of the non-reporting counterparty or, in case of an individual,
+            its client code.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Counterparty side</td>
+          <td align="left" colname="c2" valign="center">
+            State whether the reporting counterparty was the buyer or seller. In
+            the case of swaps, other than credit default, the buyer will
+            represent the payer of leg 1 and the seller will be the payer of leg
+            2.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Identifier of agent reporting the derivative
+          </td>
+          <td align="left" colname="c2" valign="center">
+            LEI of the agent reporting the derivative if reporting of the
+            derivative has been delegated by the reporting counterparty.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Jurisdiction of reporting counterparty
+          </td>
+          <td align="left" colname="c2" valign="center">
+            If the reporting counterparty is a local counterparty under the
+            derivatives data reporting rules of Manitoba, Ontario or Québec, or
+            is a local counterparty under paragraph (a) or (c) of the definition
+            of location counterparty in the derivatives data reporting rules of
+            any other jurisdiction of Canada, state all such jurisdictions.
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Jurisdiction of non-reporting counterparty
+          </td>
+          <td align="left" colname="c2" valign="center">
+            If the non-reporting counterparty is a local counterparty under the
+            derivatives data reporting rules of Manitoba, Ontario or Québec, or
+            is a local counterparty under paragraph (a) or (c) of the definition
+            of location counterparty in the derivatives data reporting rules of
+            any other jurisdiction of Canada, state all such jurisdictions.
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="top">
+            <strong>
+              A. Common
+              <br />
+              Data
+            </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center">
+            These fields are required to be reported for all derivatives even if
+            the
+            <br />
+            information may be entered in an Additional Asset Information field
+            below.
+            <p align="left">
+              A field is not required to be reported if the unique product
+              identifier
+              <br />
+              adequately describes the data required in that field.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Unique product identifier
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Unique product identification code based on the taxonomy of the
+            product.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Contract or instrument type
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The name of the contract or instrument type (e.g., swap, swaption,
+            forward, option, basis swap, index swap, basket swap).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Underlying asset identifier 1
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The unique identifier of the asset referenced in the derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Underlying asset identifier 2
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The unique identifier of the second asset referenced in the
+            derivative, if more than one.
+            <p align="left">
+              If more than two assets identified in the derivative, report the
+              unique identifiers for those additional underlying assets.
+            </p>
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Asset class</td>
+          <td align="left" colname="c2" valign="center">
+            Major asset class of the product (e.g., interest rate, credit,
+            commodity, foreign exchange, equity).
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Effective date or start date
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The date the derivative becomes effective or starts.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Maturity, termination or end date
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The date the derivative expires.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Payment frequency or dates
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The dates or frequency the derivative requires payments to be made
+            (e.g., quarterly, monthly).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Reset frequency or dates
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The dates or frequency at which the price resets (e.g., quarterly,
+            semi-annually, annually).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Day count convention
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Factor used to calculate the payments (e.g., 30/360, actual/360).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Delivery type</td>
+          <td align="left" colname="c2" valign="center">
+            State whether derivative is settled physically or in cash.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Price 1</td>
+          <td align="left" colname="c2" valign="center">
+            The price, rate, yield, spread, coupon or similar characteristic of
+            the derivative. This must not include any premiums such as
+            commissions, collateral premiums or accrued interest.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Price 2</td>
+          <td align="left" colname="c2" valign="center">
+            The price, rate, yield, spread, coupon or similar characteristic of
+            the derivative. This must not include any premiums such as
+            commissions, collateral premiums or accrued interest.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Price notation type 1
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The manner in which the price is expressed (e.g., percentage, basis
+            points).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Price notation type 2
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The manner in which the price is expressed (e.g., percentage, basis
+            points).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Price multiplier</td>
+          <td align="left" colname="c2" valign="center">
+            The number of units of the underlying reference entity represented
+            by 1 unit of the derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Notional amount leg 1
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Total notional amount(s) of leg 1 of the derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Notional amount leg 2
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Total notional amount(s) of leg 2 of the derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Currency leg 1</td>
+          <td align="left" colname="c2" valign="center">Currency of leg 1.</td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Currency leg 2</td>
+          <td align="left" colname="c2" valign="center">Currency of leg 2.</td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Settlement currency</td>
+          <td align="left" colname="c2" valign="center">
+            The currency used to determine the cash settlement amount.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Up-front payment</td>
+          <td align="left" colname="c2" valign="center">
+            Amount of any up-front payment.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Currency or currencies of up-front payment
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The currency or currencies in which any up-front payment is made by
+            one counterparty to another.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Embedded option</td>
+          <td align="left" colname="c2" valign="center">
+            State whether the option is an embedded option.
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong>
+              B. Additional
+              <br />
+              Asset
+              <br />
+              Information
+            </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center">
+            These fields are required to be reported for the respective types of
+            derivatives
+            <br />
+            set out below, even if the information is entered in a Common Data
+            field above.
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong>
+              i) Interest rate
+              <br />
+              derivatives
+            </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center"></td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Fixed rate leg 1</td>
+          <td align="left" colname="c2" valign="center">
+            The rate used to determine the payment amount for leg 1 of the
+            derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Fixed rate leg 2</td>
+          <td align="left" colname="c2" valign="center">
+            The rate used to determine the payment amount for leg 2 of the
+            derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Floating rate leg 1</td>
+          <td align="left" colname="c2" valign="center">
+            The floating rate used to determine the payment amount for leg 1 of
+            the derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Floating rate leg 2</td>
+          <td align="left" colname="c2" valign="center">
+            The floating rate used to determine the payment amount for leg 2 of
+            the derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Fixed rate day count convention
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Factor used to calculate the fixed payer payments (e.g., 30/360,
+            actual/360).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Fixed leg payment frequency or dates
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Frequency or dates of payments for the fixed rate leg of the
+            derivative (e.g., quarterly, semi-annually, annually).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Floating leg payment frequency or dates
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Frequency or dates of payments for the floating rate leg of the
+            derivative (e.g., quarterly, semi-annually, annually).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Floating rate reset frequency or dates
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The dates or frequency at which the floating leg of the derivative
+            resets (e.g., quarterly, semi-annually, annually).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong>
+              ii) Currency
+              <br />
+              derivatives
+            </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center"></td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Exchange rate</td>
+          <td align="left" colname="c2" valign="center">
+            Contractual rate(s) of exchange of the currencies.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong>
+              iii) Commodity
+              <br />
+              derivatives
+            </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center"></td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Sub-asset class</td>
+          <td align="left" colname="c2" valign="center">
+            Specific information to identify the type of commodity derivative
+            (e.g., Agriculture, Power, Oil, Natural Gas, Freights, Metals,
+            Index, Environmental, Exotic).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Quantity</td>
+          <td align="left" colname="c2" valign="center">
+            Total quantity in the unit of measure of an underlying commodity.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Unit of measure</td>
+          <td align="left" colname="c2" valign="center">
+            Unit of measure for the quantity of each side of the derivative
+            (e.g., barrels, bushels).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Grade</td>
+          <td align="left" colname="c2" valign="center">
+            Grade of product being delivered (e.g., grade of oil).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Delivery point</td>
+          <td align="left" colname="c2" valign="center">
+            The delivery location.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Load type</td>
+          <td align="left" colname="c2" valign="center">
+            For power, load profile for the delivery.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Transmission days</td>
+          <td align="left" colname="c2" valign="center">
+            For power, the delivery days of the week.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Transmission duration
+          </td>
+          <td align="left" colname="c2" valign="center">
+            For power, the hours of day transmission starts and ends.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong> C. Options </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center">
+            These fields are required to be reported for options derivatives,
+            even if the information
+            <br />
+            is entered in a Common Data field above.
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Option exercise date
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The date(s) on which the option may be exercised.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Option premium</td>
+          <td align="left" colname="c2" valign="center">
+            Fixed premium paid by the buyer to the seller.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Strike price
+            <br />
+            (cap/floor rate)
+          </td>
+          <td align="left" colname="c2" valign="center">
+            The strike price of the option.
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Option style</td>
+          <td align="left" colname="c2" valign="center">
+            State whether the option can be exercised on a fixed date or anytime
+            during the life of the derivative (e.g., American, European,
+            Bermudan, Asian).
+          </td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Option type</td>
+          <td align="left" colname="c2" valign="center">Put, call.</td>
+          <td align="center" colname="c3" valign="center">Y</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong> D. Event Data </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center"></td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Action</td>
+          <td align="left" colname="c2" valign="center">
+            Describes the type of event to the derivative (e.g., new
+            transaction, modification or cancellation of existing derivative).
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Execution timestamp</td>
+          <td align="left" colname="c2" valign="center">
+            The time and date of execution of a transaction, including a
+            novation, expressed using Coordinated Universal Time (UTC).
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If available)
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Post-transaction events
+          </td>
+          <td align="left" colname="c2" valign="center">
+            State whether the report results from a post-transaction service
+            (e.g., compression, reconciliation) or from a life-cycle event
+            (e.g., amendment).
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Reporting timestamp</td>
+          <td align="left" colname="c2" valign="center">
+            The time and date the derivative was submitted to the trade
+            repository, expressed using UTC.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong>
+              E. Valuation
+              <br />
+              Data
+            </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center">
+            These fields are required to be reported on a continuing basis for
+            all reported
+            <br />
+            derivatives, including reported pre-existing derivatives.
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            Value of derivative calculated by the reporting counterparty
+          </td>
+          <td align="left" colname="c2" valign="center">
+            Mark-to-market valuation or mark-to-model valuation of the
+            derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Valuation currency</td>
+          <td align="left" colname="c2" valign="center">
+            State the currency used when reporting the value of the derivative.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Valuation date</td>
+          <td align="left" colname="c2" valign="center">
+            Date of the latest mark-to-market or mark-to-model valuation.
+          </td>
+          <td align="center" colname="c3" valign="center">N</td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">
+            <strong>
+              F. Other
+              <br />
+              Details
+            </strong>
+          </td>
+          <td align="left" colname="c2" colspan="2" valign="center"></td>
+        </tr>
+        <tr>
+          <td align="left" colname="c1" valign="center">Other details</td>
+          <td align="left" colname="c2" valign="center">
+            Where the terms of the derivative cannot be effectively reported in
+            the above prescribed fields, provide any additional information that
+            may be necessary.
+          </td>
+          <td align="center" colname="c3" valign="center">
+            Y
+            <br />
+            (If applicable)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
