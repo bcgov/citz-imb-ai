@@ -78,7 +78,6 @@ services:
   neo4j:
     container_name: neo4j
     image: neo4j:5.18.1
-    restart: unless-stopped
     environment:
       - USERNAME=${NEO4J_USERNAME:-neo4j}
       - PASSWORD=${NEO4J_PASSWORD:-12345678}
@@ -87,7 +86,9 @@ services:
       - NEO4JLABS_PLUGINS=["apoc"]
     volumes:
       - neo4j:/var/lib/neo4j/data
-      - neo4j-backup:/var/lib/neo4j/backups
+      - neo4j-backup:/var/lib/neo4j/data/backups
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     ports:
       - '${NEO4J_PORT:-7474}:7474'
       - '${NEO4J_PORT:-7687}:7687'
