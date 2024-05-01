@@ -9,3 +9,5 @@
 
 Note :: Add future dependences in requirement.txt so that we can keep track of the them and avoid code breakage
 
+For all the example notebooks click here: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/backend)
+
