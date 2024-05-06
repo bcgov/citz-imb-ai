@@ -19,7 +19,7 @@ import json
 app = FastAPI()
 kg = None
 tru = None
-APP_ID = 'TopK_Feedback_New'
+APP_ID = 'TopK_Feedback_System_v1'
 #rag = RAG_from_scratch()
 
 templates = Jinja2Templates(directory="templates")
@@ -64,11 +64,23 @@ async def feedback(feedback: str = Form(...), index: str = Form(...),
         return {"status": True, "rows": rows}
     else:
         return {"status": False}
+    
+
+@app.get("/fetch_feedback/")
+async def fetch_all_feedback():
+    global tru
+    if tru is None:
+        tru = connect_trulens()
+    rows = fetch_all_feedback()
+    if rows:
+        return {"status": True, "rows": rows}
+    else:
+        return {"status": False}    
 
 def retrieval(query_str, embeddings, kg):
     return neo4j_vector_search(query_str, embeddings, kg)
 
-def fetch_human_feedback(record_id):
+def tru_connect():
     TRULENS_USER = os.getenv('TRULENS_USER')
     TRULENS_PASSWORD = os.getenv('TRULENS_PASSWORD')
     TRULENS_DB = os.getenv('TRULENS_DB')
@@ -80,6 +92,20 @@ def fetch_human_feedback(record_id):
         user=TRULENS_USER,
         password=TRULENS_PASSWORD
     )
+    return conn
+
+def fetch_all_feedback():
+    conn = tru_connect()
+    cur = conn.cursor()  # creating a cursor
+    cur.execute("""SELECT R.input, R.record_json as record_json, F.multi_result, F.result, R.app_id result FROM public.records R 
+    LEFT Join feedbacks F ON F.record_id = R.record_id WHERE
+    R.app_id = %s""",
+    (APP_ID,))
+    rows = cur.fetchall()
+    return rows
+
+def fetch_human_feedback(record_id):
+    conn = tru_connect()
     cur = conn.cursor()  # creating a cursor
     cur.execute("""
     SELECT R.input, F.multi_result, F.result, R.app_id result FROM public.records R 
@@ -195,4 +221,4 @@ def model_response(prompt):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=10000)
