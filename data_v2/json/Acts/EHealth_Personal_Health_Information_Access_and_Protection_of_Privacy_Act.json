@@ -1,0 +1,2312 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_08038_01",
+        "act:title": "E-Health (Personal Health Information Access and Protection of Privacy) Act",
+        "act:chapter": "38",
+        "act:yearenacted": "2008",
+        "act:assentedto": "May 29, 2008",
+        "act:currency": {
+            "act:tlcDirPath": "414786120/08038/tlc08038_f",
+            "act:tlc": "E3tlc08038"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e21",
+                    "bcl:num": "1",
+                    "bcl:text": "Definitions and Interpretation",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e30",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e41",
+                                    "bcl:text": {
+                                        "in:term": "administrator",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e50",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the case of a health information bank in the custody or under the control of the ministry of the minister, or a ministry database, the chief data steward, and"
+                                        },
+                                        {
+                                            "@id": "d2e60",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[establishment or designation of health information banks]",
+                                                "#text": "in the case of a health information bank in the custody or under the control of a health care body other than the ministry of the minister, a person authorized to administer the health information bank under section 3\u00a0;"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e72",
+                                    "bcl:text": {
+                                        "in:term": "chief data steward",
+                                        "#text": "means a person employed in the ministry of the minister who is designated by the minister as the chief data steward for the purposes of this Act;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e81",
+                                    "bcl:text": {
+                                        "in:term": "commissioner",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "means the commissioner under the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e93",
+                                    "bcl:text": {
+                                        "in:term": "data stewardship committee",
+                                        "in:desc": "[appointment of data stewardship committee]",
+                                        "#text": "means the data stewardship committee established under section 12\u00a0;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e105",
+                                    "bcl:text": {
+                                        "in:term": "designation order",
+                                        "#text": "means an order establishing or designating a health information bank under section 3;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e114",
+                                    "bcl:text": {
+                                        "in:term": "disclosure directive",
+                                        "in:desc": "[making and revoking disclosure directives]",
+                                        "#text": "means a written instruction under section 9\u00a0;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e127",
+                                    "bcl:text": {
+                                        "in:term": "employee",
+                                        "#text": ", in relation to a health care body, includes a volunteer and a person retained under a contract to perform services;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e136",
+                                    "bcl:text": {
+                                        "in:term": "health care body",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e145",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the ministry of the minister,"
+                                        },
+                                        {
+                                            "@id": "d2e154",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "a health care body as defined in the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e166",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the Provincial Health Services Authority, and"
+                                        },
+                                        {
+                                            "@id": "d2e175",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a society that reports to the Provincial Health Services Authority;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e185",
+                                    "bcl:text": {
+                                        "in:term": "health information bank",
+                                        "#text": "means a health information bank established or designated under section 3;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e194",
+                                    "bcl:text": {
+                                        "in:term": "health research purpose",
+                                        "in:desc": "[collection and use of personal health information]",
+                                        "#text": "means the purpose described in section 4 (h)\u00a0;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e206",
+                                    "bcl:text": {
+                                        "in:term": "ministry database",
+                                        "#text": "means a database that is"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e215",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the custody or control of the ministry of the minister, and"
+                                        },
+                                        {
+                                            "@id": "d2e224",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribed for the purposes of this Act;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e233",
+                                    "bcl:text": {
+                                        "in:term": "person",
+                                        "#text": "includes a health care body;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e243",
+                                    "bcl:text": {
+                                        "in:term": "personal health information",
+                                        "#text": "means recorded information about an identifiable individual that is related to the individual's health or the provision of health services to the individual;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e252",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "protected information",
+                                            "#text": "means"
+                                        },
+                                        "that is contained in a health information bank or ministry database;"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e261",
+                                            "bcl:num": "a",
+                                            "bcl:text": "personal health information, or"
+                                        },
+                                        {
+                                            "@id": "d2e270",
+                                            "bcl:num": "b",
+                                            "bcl:text": "information related to a health service provider"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e282",
+                                    "bcl:text": {
+                                        "in:term": "regional health board",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96180_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Health Authorities Act"
+                                        },
+                                        "#text": "means a regional health board designated under section 4 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e295",
+                                    "bcl:text": {
+                                        "in:term": "through",
+                                        "#text": ", in relation to the collection or disclosure of personal health information through a health information bank, includes collection and disclosure of personal health information both into and from a health information bank."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e305",
+                            "bcl:marginalnote": "Interpretation",
+                            "bcl:num": "2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e313",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                        },
+                                        "#text": "If a provision of this Act refers to a provision of the , a reference in that Act to"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e325",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a \"public body\" is to be read for the purposes of this Act as a reference to a health care body, and"
+                                        },
+                                        {
+                                            "@id": "d2e334",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the \"head of a public body\" is to be read for the purposes of this Act as a reference to the head of a health care body."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e344",
+                                    "bcl:num": "2",
+                                    "bcl:text": [
+                                        "For the purposes of",
+                                        "a reference to a person includes a person having authority under the common law or an enactment to make personal and health care decisions in respect of the person."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e353",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[Disclosure Directives]",
+                                                "#text": "Division 2\u00a0 of Part 2, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e365",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[one's own personal health information to be available]",
+                                                "#text": "section 17\u00a0, in relation to a person's own personal health information,"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e381",
+                    "bcl:num": "2",
+                    "bcl:text": "Administration of Health Information Banks",
+                    "bcl:division": [
+                        {
+                            "@id": "d2e390",
+                            "bcl:num": "1",
+                            "bcl:text": "Establishment or Designation of Health Information Banks",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e403",
+                                    "bcl:marginalnote": "Establishment or designation of health information banks",
+                                    "bcl:num": "3",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e411",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to the regulations, the minister may by order establish or designate a database containing personal health information as a health information bank, if",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e420",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the database is in the custody or under the control of a health care body, and"
+                                                },
+                                                {
+                                                    "@id": "d2e429",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "in:desc": "[collection and use of personal health information]",
+                                                        "#text": "the collection and use of personal health information through the database is for a purpose set out in section 4\u00a0."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e442",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A designation order must do all of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e451",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "identify the type or nature of personal health information to be contained in the health information bank, and the source of the personal health information;"
+                                                },
+                                                {
+                                                    "@id": "d2e460",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "in the case of a health information bank in the custody or under the control of a health care body other than the ministry of the minister, authorize one individual who is an employee of the health care body to administer the health information bank;"
+                                                },
+                                                {
+                                                    "@id": "d2e469",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "identify the purposes, as set out in section 4, for which personal health information may be collected and used through the health information bank;"
+                                                },
+                                                {
+                                                    "@id": "d2e478",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": {
+                                                        "in:desc": "[disclosure of personal health information]",
+                                                        "#text": "identify the purposes, if any, as set out in section 5\u00a0, for which personal health information may be disclosed from the health information bank;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e490",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "authorize one or more persons to collect, use or disclose personal health information through the health information bank;"
+                                                },
+                                                {
+                                                    "@id": "d2e500",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "identify from whom personal health information may be collected into the health information bank, including identifying whether personal health information may be collected other than directly from the individual whom the personal health information is about;"
+                                                },
+                                                {
+                                                    "@id": "d2e509",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "except in the case of disclosure for a health research purpose, identify to whom personal health information contained in the health information bank may be disclosed;"
+                                                },
+                                                {
+                                                    "@id": "d2e518",
+                                                    "bcl:num": "h",
+                                                    "bcl:text": "identify the limits or conditions, if any, on the collection, storage, use or disclosure of personal health information contained in or disclosed from a health information bank."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e527",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A designation order may describe a person by name, title, position or class."
+                                        },
+                                        {
+                                            "@id": "d2e536",
+                                            "bcl:num": "4",
+                                            "bcl:text": "A designation order is not effective until notice of the designation order is published in the Gazette."
+                                        },
+                                        {
+                                            "@id": "d2e545",
+                                            "bcl:num": "5",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[disclosure for health research purposes]",
+                                                    "[information-sharing agreements required for disclosure]"
+                                                ],
+                                                "#text": "If a health information bank is established or designated by a designation order, personal health information may be collected, used and, subject to sections 14\u00a0 and 19 , disclosed through the health information bank by a person who is authorized to do so by the designation order, according to the terms of the designation order."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e561",
+                                    "bcl:marginalnote": "Collection and use of personal health information",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A designation order may authorize the collection and use of personal health information only for one or more of the following purposes:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e572",
+                                            "bcl:num": "a",
+                                            "bcl:text": "to identify an individual who needs or is receiving health services;"
+                                        },
+                                        {
+                                            "@id": "d2e581",
+                                            "bcl:num": "b",
+                                            "bcl:text": "to provide health services to, or facilitate the care of, an individual;"
+                                        },
+                                        {
+                                            "@id": "d2e591",
+                                            "bcl:num": "c",
+                                            "bcl:text": "to identify a person who is providing health services;"
+                                        },
+                                        {
+                                            "@id": "d2e600",
+                                            "bcl:num": "d",
+                                            "bcl:text": "to prevent or manage chronic conditions, at the individual or population level;"
+                                        },
+                                        {
+                                            "@id": "d2e609",
+                                            "bcl:num": "e",
+                                            "bcl:text": "to facilitate health insurance and health service billing, including for the purposes of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e618",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a payment in respect of health services or prescribed drugs, devices or pharmaceutical services to be made to or by the government of British Columbia or a public body,"
+                                                },
+                                                {
+                                                    "@id": "d2e627",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "authorizing, administering, processing, verifying or cancelling such a payment,"
+                                                },
+                                                {
+                                                    "@id": "d2e636",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "resolving an issue regarding such a payment, or"
+                                                },
+                                                {
+                                                    "@id": "d2e646",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "audits by a federal or Provincial government payment agency that makes reimbursement for the cost of health services or prescribed drugs, devices or pharmaceutical services;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e655",
+                                            "bcl:num": "f",
+                                            "bcl:text": "to assess and address public health needs;"
+                                        },
+                                        {
+                                            "@id": "d2e664",
+                                            "bcl:num": "g",
+                                            "bcl:text": "to engage in health system planning, management, evaluation or improvement, including",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e673",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "health service development, management, delivery, monitoring and evaluation,"
+                                                },
+                                                {
+                                                    "@id": "d2e682",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the compilation of statistical information,"
+                                                },
+                                                {
+                                                    "@id": "d2e691",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "public health surveillance, and"
+                                                },
+                                                {
+                                                    "@id": "d2e701",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "the assessment of the safety and effectiveness of health services;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e710",
+                                            "bcl:num": "h",
+                                            "bcl:text": "to conduct or facilitate research into health issues;"
+                                        },
+                                        {
+                                            "@id": "d2e719",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to assess and address threats to public health."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e729",
+                                    "bcl:marginalnote": "Disclosure of personal health information",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A designation order may authorize the disclosure of personal health information only for one or more of the following purposes:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e740",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[collection and use of personal health information]",
+                                                "#text": "if disclosure is inside Canada, a purpose set out in section 4 (a) to (g) ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e752",
+                                            "bcl:num": "b",
+                                            "bcl:text": "[Repealed 2012-22-82.]"
+                                        },
+                                        {
+                                            "@id": "d2e762",
+                                            "bcl:num": "c",
+                                            "bcl:text": "if disclosure is inside or outside Canada, a purpose set out in section 4 (h) or (i)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e772",
+                                    "bcl:marginalnote": "Requests for information by authorized persons",
+                                    "bcl:num": "6",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e780",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person authorized under a designation order to collect personal health information into a health information bank may request a health care body or a prescribed person to provide information or records that contain personal health information and that are in the custody or under the control of the health care body or prescribed person if",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e789",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the information or records being requested have a reasonable and direct connection to the purpose for which collection is authorized under the designation order, and"
+                                                },
+                                                {
+                                                    "@id": "d2e798",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the person making the request is acting in accordance with the terms of the designation order."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e808",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Subject to any other enactment that prohibits disclosure, a health care body or a prescribed person to whom a request is made under subsection (1) must comply with the request in the manner and at the times requested if the information or records are in the custody or under the control of the health care body or prescribed person."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e818",
+                                    "bcl:marginalnote": "Complaints respecting requests for information",
+                                    "bcl:num": "7",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e826",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "in:term": "request for information",
+                                                "in:desc": "[requests for information by authorized persons]",
+                                                "#text": "In this section,  means a request for information or records made under section 6\u00a0."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e841",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person who receives a request for information may make a complaint to the commissioner, and the commissioner may investigate and attempt to resolve the complaint."
+                                        },
+                                        {
+                                            "@id": "d2e850",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Section 6 (2) is suspended, in respect of the request for information that is the subject of the complaint, during the period of the commissioner's investigation, if any."
+                                        },
+                                        {
+                                            "@id": "d2e860",
+                                            "bcl:num": "4",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "Sections 44 to 48 and 49 (1) and (2) of the  apply to an investigation under subsection (2) of this section, and, for these purposes, a reference in those sections to an investigation, inquiry or audit under that Act is to be read as a reference to an investigation under this section."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e872",
+                                            "bcl:num": "5",
+                                            "bcl:text": "If an investigation is made under this section, the commissioner must, after the investigation, do one of the following by order:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e881",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "if the commissioner determines that the person making the request for information is acting within that person's authority under a designation order, either",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e890",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "require the person making the complaint to provide the information or records in accordance with the request for information, or"
+                                                        },
+                                                        {
+                                                            "@id": "d2e899",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "require the person making the request for information to reconsider the request;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e908",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "if the commissioner determines that the person making the request for information is not acting within that person's authority under a designation order, require the person to withdraw the request and, if applicable, destroy personal health information collected outside the person's authority."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e918",
+                                            "bcl:num": "6",
+                                            "bcl:text": "If an order is made under subsection (5),",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e927",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the commissioner may specify terms or conditions in the order, and"
+                                                },
+                                                {
+                                                    "@id": "d2e936",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the persons affected by the order must comply within 30 days of its issuance."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e945",
+                                            "bcl:num": "7",
+                                            "bcl:text": "If an investigation is not made under this section, section 6 (2) applies."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e955",
+                            "bcl:num": "2",
+                            "bcl:text": "Disclosure Directives",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e968",
+                                    "bcl:marginalnote": "Authorization of disclosure directives",
+                                    "bcl:num": "8",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e976",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to subsection (3), the minister must in a designation order authorize a person whose personal health information is contained in the health information bank that is the subject of the designation order to make a disclosure directive."
+                                        },
+                                        {
+                                            "@id": "d2e985",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An authorization under subsection (1) may limit the making of disclosure directives to",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e994",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "in:desc": "[establishment or designation of health information banks]",
+                                                        "#text": "one or more types of personal health information, as identified in the designation order under section 3 (2) (a)\u00a0, contained in the health information bank,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1007",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "one or more purposes, as identified in the designation order under section 3 (2) (d), for which personal health information may be disclosed from the health information bank, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1016",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "one or more persons or classes of persons, as identified in the designation order under section 3 (2) (g)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1025",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Subsection (1) does not apply in respect of a health information bank if the data stewardship committee recommends to the minister that disclosure directives should not be made in respect of the health information bank."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1035",
+                                    "bcl:marginalnote": "Making and revoking disclosure directives",
+                                    "bcl:num": "9",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1043",
+                                            "bcl:num": "1",
+                                            "bcl:text": "If in a designation order the minister authorizes the making of disclosure directives, a person may, subject to the regulations,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1052",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "make a disclosure directive as authorized by the designation order, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1061",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "revoke a disclosure directive the person has made."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1071",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person who makes or revokes a disclosure directive must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1080",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "make the disclosure directive or revocation in writing,"
+                                                },
+                                                {
+                                                    "@id": "d2e1089",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "comply with any prescribed conditions respecting the making or revoking of disclosure directives, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1098",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "forward to a prescribed person the disclosure directive or revocation and, if applicable, the prescribed records."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1107",
+                                            "bcl:num": "3",
+                                            "bcl:text": "Until the contrary is demonstrated, every person is presumed to be capable of understanding the nature of a disclosure directive and the consequences of making or revoking a disclosure directive."
+                                        },
+                                        {
+                                            "@id": "d2e1116",
+                                            "bcl:num": "4",
+                                            "bcl:text": "A disclosure directive takes effect when activated in the health information bank to which it relates."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1126",
+                                    "bcl:marginalnote": "Effect of disclosure directives",
+                                    "bcl:num": "10",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1134",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person who is otherwise permitted to collect, use or disclose personal health information from a health information bank must not do so in any manner that is inconsistent with a disclosure directive except as follows:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1143",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "to notify a person that a disclosure directive applies to personal health information that would otherwise be available to the person;"
+                                                },
+                                                {
+                                                    "@id": "d2e1152",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96165_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                        },
+                                                        "#text": "for a purpose described in section 33 (2) (e) of the ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1165",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "with the express consent of the person who made the disclosure directive;"
+                                                },
+                                                {
+                                                    "@id": "d2e1174",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": {
+                                                        "in:desc": "[exception \u2014 urgent or emergency health care]",
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96181_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Health Care (Consent) and Care Facility (Admission) Act"
+                                                        },
+                                                        "#text": "if section 12\u00a0 of the  applies and a health care provider acting under that section reasonably believes that the personal health information may be required to provide health care in accordance with that section."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1189",
+                                            "bcl:num": "2",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96181_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Health Care (Consent) and Care Facility (Admission) Act"
+                                                },
+                                                "#text": "For the purposes of subsection (1) (d), a reference in section 12 of the  to an \"adult\" is to be read for the purposes of this section as a reference to a person having a disclosure directive."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1202",
+                            "bcl:num": "3",
+                            "bcl:text": "Data Stewardship Committee",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1214",
+                                    "bcl:marginalnote": "Role of data stewardship committee",
+                                    "bcl:num": "11",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1222",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The role of the data stewardship committee is to consider requests for the disclosure, for a health research purpose, of protected information."
+                                        },
+                                        {
+                                            "@id": "d2e1231",
+                                            "bcl:num": "2",
+                                            "bcl:text": "In addition to the data stewardship committee's role under subsection (1), the data stewardship committee may make recommendations to the minister for the purposes of section 8 (3)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1241",
+                                    "bcl:marginalnote": "Appointment of data stewardship committee",
+                                    "bcl:num": "12",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1249",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The minister must appoint a data stewardship committee consisting of not more than 12 persons."
+                                        },
+                                        {
+                                            "@id": "d2e1258",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The committee appointed under subsection (1) must include at least",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1267",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "one person from within the ministry of the minister,"
+                                                },
+                                                {
+                                                    "@id": "d2e1277",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "one person chosen as representative of either regional health boards or the Provincial Health Services Authority,"
+                                                },
+                                                {
+                                                    "@id": "d2e1286",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/00_96183_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Health Professions Act"
+                                                        },
+                                                        "#text": "one person nominated by the board for the college responsible for carrying out the objects of the  in respect of the health profession of medicine,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1295",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/00_96183_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Health Professions Act"
+                                                        },
+                                                        "#text": "one person nominated by the board for the college responsible for carrying out the objects of the  in respect of the health profession of pharmacy,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1304",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/00_96183_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Health Professions Act"
+                                                        },
+                                                        "#text": "one person nominated by the board for the college responsible for carrying out the objects of the  in respect of the health profession of nursing,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1316",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "one person engaged in health research generally,"
+                                                },
+                                                {
+                                                    "@id": "d2e1325",
+                                                    "bcl:num": "f.1",
+                                                    "bcl:text": "one person engaged in pharmaceutical research, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1335",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "up to 3 persons chosen as representative of the general public."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1344",
+                                            "bcl:num": "2.1",
+                                            "bcl:text": "The chief data steward is a non-voting member of the committee appointed under subsection (1)."
+                                        },
+                                        {
+                                            "@id": "d2e1353",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The minister may designate a chair and one or more vice chairs of the data stewardship committee from among the persons appointed to that committee."
+                                        },
+                                        {
+                                            "@id": "d2e1362",
+                                            "bcl:num": "4",
+                                            "bcl:text": "Members of the data stewardship committee may be paid",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1371",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "remuneration set by the minister, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1380",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "reasonable and necessary travel and out of pocket expenses incurred in carrying out the work of the data stewardship committee."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1391",
+                                    "bcl:marginalnote": "Data stewardship committee",
+                                    "bcl:num": "13",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1399",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to this Act, the data stewardship committee may make rules governing the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1408",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the calling and conduct of its meetings;"
+                                                },
+                                                {
+                                                    "@id": "d2e1417",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the establishment of panels of the data stewardship committee to conduct business of that committee;"
+                                                },
+                                                {
+                                                    "@id": "d2e1427",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the practices and procedures of the panels established under paragraph (b);"
+                                                },
+                                                {
+                                                    "@id": "d2e1436",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "the quorum of the data stewardship committee or of the panels established under paragraph (b);"
+                                                },
+                                                {
+                                                    "@id": "d2e1445",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "other matters respecting the conduct of the work of the data stewardship committee or of the panels established under paragraph (b), including the fees that may be charged by a health care body for information to defray the cost to the health care body to provide the information."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1454",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The data stewardship committee must establish policies and procedures respecting the disclosure of information under this Division."
+                                        },
+                                        {
+                                            "@id": "d2e1463",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A member of the data stewardship committee must take reasonable steps, in accordance with the regulations, to avoid or manage a conflict of interest."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1473",
+                                    "bcl:marginalnote": "Disclosure for health research purposes",
+                                    "bcl:num": "14",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1481",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person may request protected information for a health research purpose only by submitting to the data stewardship committee",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1490",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "a request in the form and in the manner required by the data stewardship committee, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1499",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "information required by the data stewardship committee for the purposes of evaluating the request."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1509",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The data stewardship committee may approve the request if both of the following apply:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1518",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "in the case of a request to disclose personal health information, all of the requirements set out in subsection (2.1) are met;"
+                                                },
+                                                {
+                                                    "@id": "d2e1527",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "in the case of a request to disclose protected information outside Canada, there is express consent, in writing, to the disclosure from each person who is the subject of the protected information."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1536",
+                                            "bcl:num": "2.1",
+                                            "bcl:text": "The requirements for the purposes of subsection (2) (a) are as follows:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1545",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the request is for a health research purpose that cannot reasonably be accomplished unless personal health information is disclosed;"
+                                                },
+                                                {
+                                                    "@id": "d2e1554",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "if the protected information is contained in a health information bank, the disclosure is authorized under the terms of the applicable designation order;"
+                                                },
+                                                {
+                                                    "@id": "d2e1564",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the disclosure is on condition that it not be used for the purpose of contacting a person to participate in the health research, unless the commissioner approves",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e1573",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the health research purpose,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1582",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the use of disclosed personal health information for the purpose of contacting a person to participate in the health research, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1591",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "the manner in which contact is to be made, including the information to be made available to persons contacted;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e1600",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "any data linkage is not harmful to the individuals who are the subjects of the personal health information, and the benefits to be derived from the record linkage are clearly in the public interest;"
+                                                },
+                                                {
+                                                    "@id": "d2e1609",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "the data stewardship committee has imposed conditions relating to",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e1619",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "security and confidentiality,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1628",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the removal or destruction of individual identifiers at the earliest reasonable time, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1637",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "the prohibition of any subsequent use or disclosure of personal health information without the express authorization of the data stewardship committee."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1646",
+                                            "bcl:num": "3",
+                                            "bcl:text": "If the data stewardship committee approves the request, the administrator may, subject to any conditions set by the data stewardship committee on approving the request, disclose the information to the person who made the request."
+                                        },
+                                        {
+                                            "@id": "d2e1655",
+                                            "bcl:num": "4",
+                                            "bcl:text": "An administrator must not disclose information under subsection (3) except under an information-sharing agreement",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1664",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "with the person who made the request, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1674",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "in:desc": "[information-sharing agreements required for disclosure]",
+                                                        "#text": "made, whether or not personal health information is disclosed, in accordance with section 19 (2) and (3) ."
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1687",
+                                    "bcl:marginalnote": "Repealed",
+                                    "bcl:num": "15",
+                                    "bcl:text": "[Repealed 2012-22-86.]"
+                                },
+                                {
+                                    "@id": "d2e1699",
+                                    "bcl:marginalnote": "Reports by data stewardship committee",
+                                    "bcl:num": "16",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1707",
+                                            "bcl:num": "1",
+                                            "bcl:text": "At least once each year, the data stewardship committee must report to the minister respecting",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1716",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the activities of the data stewardship committee,"
+                                                },
+                                                {
+                                                    "@id": "d2e1725",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "information-sharing agreements entered into by an administrator under this Division, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1735",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "any matter the minister requires."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1744",
+                                            "bcl:num": "2",
+                                            "bcl:text": "After making a report under subsection (1), the data stewardship committee must promptly publish the report."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1754",
+                            "bcl:num": "4",
+                            "bcl:text": "Other Matters Relating to Disclosure",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1766",
+                                    "bcl:marginalnote": "Not in force",
+                                    "bcl:num": "17",
+                                    "bcl:text": "[Not in force.]"
+                                },
+                                {
+                                    "@id": "d2e1779",
+                                    "bcl:marginalnote": "Purposes for which disclosure always authorized",
+                                    "bcl:num": "18",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1787",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An administrator may disclose personal health information inside Canada from a health information bank for one or more of the following purposes:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1796",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96165_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                        },
+                                                        "#text": "a purpose described in section 33 (2) (s) and (3) (d) of the ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1808",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "to investigate or discipline a person regulated by a governing body of a health profession that has authority, under an enactment, to investigate or discipline the person;"
+                                                },
+                                                {
+                                                    "@id": "d2e1818",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "to monitor, by a governing body of a health profession, the practice of a health profession that is, under an enactment, regulated by that body;"
+                                                },
+                                                {
+                                                    "@id": "d2e1827",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "a purpose for which the person who is the subject of the personal health information has expressly consented."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1836",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An administrator may disclose personal health information inside or outside Canada from a health information bank for one or more of the following purposes:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1845",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96165_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                        },
+                                                        "#text": "a purpose described in section 33 (2) (a), (e), (h), (l), (m), (o), (p), (t), (u) or (v), (3) (a), (b) or (c), (8) or (9) of the , or"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e1857",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a purpose for which the person who is the subject of the personal health information has expressly consented in writing."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1866",
+                                            "bcl:num": "3",
+                                            "bcl:text": {
+                                                "in:desc": [
+                                                    "[disclosure for health research purposes]",
+                                                    "[information-sharing agreements]"
+                                                ],
+                                                "#text": "Sections 14\u00a0 and 19  do not apply to the disclosure of personal health information under this section."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1882",
+                                    "bcl:marginalnote": "Information-sharing agreements required for disclosure",
+                                    "bcl:num": "19",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1890",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Personal health information contained in a health information bank may be disclosed only if",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1899",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "disclosure is authorized by the terms of the designation order that relates to the health information bank,"
+                                                },
+                                                {
+                                                    "@id": "d2e1908",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the administrator of the health information bank enters into an information-sharing agreement under this section, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1918",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "if personal health information is to be disclosed on a bulk or regular basis, it is disclosed only to one or more of the following persons:",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e1927",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "an agency or ministry of the government of British Columbia, of another province or of Canada, including a Crown corporation;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1936",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "a health care body;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1945",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": {
+                                                                "bcl:link": {
+                                                                    "@resource": "leg",
+                                                                    "@xlink:href": "/legislation/96165_00",
+                                                                    "@xlink:type": "locator",
+                                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                                },
+                                                                "#text": "an Indigenous governing entity, an educational body or a social services body, as those terms are defined in the ;"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d2e1957",
+                                                            "bcl:num": "iv",
+                                                            "bcl:text": "a public body in another jurisdiction of Canada that is equivalent to one described in subparagraphs (ii) and (iii);"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1966",
+                                                            "bcl:num": "v",
+                                                            "bcl:text": "a health service provider;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1976",
+                                                            "bcl:num": "vi",
+                                                            "bcl:text": "a body responsible for the regulation of health professionals;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1985",
+                                                            "bcl:num": "vii",
+                                                            "bcl:text": "an association of health professionals;"
+                                                        },
+                                                        {
+                                                            "@id": "d2e1994",
+                                                            "bcl:num": "viii",
+                                                            "bcl:text": "a prescribed body that is public in nature."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2003",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An information-sharing agreement must identify all of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e2012",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the persons, by name, title, position or class, who may collect, use or disclose information under the agreement;"
+                                                },
+                                                {
+                                                    "@id": "d2e2021",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the circumstances in which information may be disclosed under the agreement;"
+                                                },
+                                                {
+                                                    "@id": "d2e2031",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the limits, if any, on",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e2040",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the disclosure of information by the administrator under the agreement, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2049",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the use or disclosure of the information obtained under the agreement by persons identified under paragraph (a);"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e2058",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "the conditions, if any, on the disclosure of information under the agreement, including conditions respecting",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e2067",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "security and confidentiality,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2076",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the removal or destruction of individual identifiers at the earliest reasonable time,"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2086",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "the prohibition of any subsequent use or disclosure of personal health information without express authorization, and"
+                                                        },
+                                                        {
+                                                            "@id": "d2e2095",
+                                                            "bcl:num": "iv",
+                                                            "bcl:text": "the monitoring of compliance with the agreement;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d2e2104",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "the term of the agreement and the circumstances in which the agreement may be renewed, suspended or terminated."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2113",
+                                            "bcl:num": "3",
+                                            "bcl:text": "An information-sharing agreement must include a requirement that",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e2122",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "protected information disclosed under the agreement will not be used or disclosed for the purpose of market research, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2131",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "if disclosure is for a health research purpose, the person to whom information is disclosed must comply with",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e2141",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": {
+                                                                "in:desc": "[data stewardship committee]",
+                                                                "#text": "the data stewardship committee's policies and procedures established under section 13 (2)\u00a0, and"
+                                                            }
+                                                        },
+                                                        {
+                                                            "@id": "d2e2153",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": {
+                                                                "in:desc": "[disclosure for health research purposes]",
+                                                                "#text": "any conditions imposed under section 14 (2.1) (e)\u00a0."
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2166",
+                                    "bcl:marginalnote": "No market research",
+                                    "bcl:num": "20",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e2174",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "This section applies despite Part 2 of the , any provision of this Act, and any term of a designation order."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2186",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person must not disclose, for the purpose of market research, any of the following information that is contained in a health information bank or ministry database:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e2195",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "personal health information;"
+                                                },
+                                                {
+                                                    "@id": "d2e2205",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "information related to health service providers."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2215",
+                    "bcl:num": "3",
+                    "bcl:text": "General Matters",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2224",
+                            "bcl:marginalnote": "Protection of privacy",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2232",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Personal health information must not be collected into a health information bank or used in a health information bank for any purpose or in any manner other than in accordance with the designation order in respect of the health information bank."
+                                },
+                                {
+                                    "@id": "d2e2241",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Personal health information contained in a health information bank must not be disclosed for any purpose or in any manner other than",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2250",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in accordance with the designation order in respect of the health information bank, or"
+                                        },
+                                        {
+                                            "@id": "d2e2260",
+                                            "bcl:num": "b",
+                                            "bcl:text": "as permitted under this Act."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2270",
+                            "bcl:marginalnote": "Whistle-blower protection",
+                            "bcl:num": "22",
+                            "bcl:text": "A person must not dismiss, suspend, demote, discipline, harass or otherwise disadvantage another person, or deny another person a benefit, because",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2281",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the other person, acting in good faith and on the basis of reasonable belief, has notified the minister, an administrator or the commissioner",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2290",
+                                            "bcl:num": "i",
+                                            "bcl:text": "that a person has contravened or is about to contravene this Act, or"
+                                        },
+                                        {
+                                            "@id": "d2e2300",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "that a person has collected, used or disclosed, or is about to collect, use or disclose, personal health information in a manner that contravenes the terms or conditions of a designation order,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2309",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the other person, acting in good faith and on the basis of reasonable belief, has done or stated an intention of doing anything that is required to be done in order to avoid having any person contravene this Act,"
+                                },
+                                {
+                                    "@id": "d2e2318",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the other person, acting in good faith and on the basis of reasonable belief, has refused to do or stated an intention of refusing to do anything that is in contravention of this Act, or"
+                                },
+                                {
+                                    "@id": "d2e2327",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the person believes that the other person will do anything described in any of paragraphs (a) to (c)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2338",
+                            "bcl:marginalnote": "Provider registry",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2346",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:desc": "[establishment or designation of health information banks]",
+                                        "#text": "Despite section 3\u00a0, the minister may by order designate a database that contains personal information of health service providers as a health information bank."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2358",
+                                    "bcl:num": "2",
+                                    "bcl:text": "This Act applies to a database designated under subsection (1) as if the database contained personal health information, and a reference in this Act to \"personal health information\" must be read as a reference to the personal information of health service providers."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2368",
+                            "bcl:marginalnote": "Offences and penalties",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2376",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who contravenes any of the following sections commits an offence and is liable to a fine of up to $200 000:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2385",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[effect of disclosure directives]",
+                                                "#text": "section 10\u00a0;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2397",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[no disclosure for market research purposes]",
+                                                "#text": "section 20\u00a0;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2410",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "in:desc": "[protection of privacy]",
+                                                "#text": "section 21\u00a0;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2422",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "in:desc": "[whistle-blower protection]",
+                                                "#text": "section 22\u00a0."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2434",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a corporation commits an offence under this section, an officer, director or agent of the corporation who authorizes, permits or acquiesces in the commission of the offence also commits an offence, whether or not the corporation is prosecuted for the offence."
+                                },
+                                {
+                                    "@id": "d2e2443",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In a prosecution for an offence under this section, it is a defence for the person charged to prove that the person exercised due diligence to avoid the commission of the offence."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2453",
+                            "bcl:marginalnote": {
+                                "in:doc": "Offence Act",
+                                "#text": "does not apply"
+                            },
+                            "bcl:num": "25",
+                            "bcl:text": {
+                                "in:desc": "[general offence]",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5\u00a0 of the  does not apply in respect of this Act or the regulations made under it."
+                            }
+                        },
+                        {
+                            "@id": "d2e2474",
+                            "bcl:marginalnote": "Regulations",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2482",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2494",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2503",
+                                            "bcl:num": "a",
+                                            "bcl:text": "defining \"health services\", \"health service provider\" and \"health system\" for the purposes of this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2513",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[establishment or designation of health information banks]",
+                                                "#text": "prescribing databases, by name or by class, that must not be designated as a health information bank under section 3\u00a0;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2525",
+                                            "bcl:num": "c",
+                                            "bcl:text": "limiting or prohibiting classes of persons from making disclosure directives;"
+                                        },
+                                        {
+                                            "@id": "d2e2534",
+                                            "bcl:num": "d",
+                                            "bcl:text": "respecting",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2543",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the manner in which a disclosure directive must be made,"
+                                                },
+                                                {
+                                                    "@id": "d2e2552",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "conditions that apply to the making or revocation of a disclosure directive,"
+                                                },
+                                                {
+                                                    "@id": "d2e2561",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "to whom a disclosure directive must be provided, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2571",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "records that must accompany a disclosure directive;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2580",
+                                            "bcl:num": "e",
+                                            "bcl:text": "respecting conflicts of interest in relation to members of the data stewardship committee, including defining conflicts of interest and providing rules for the management of conflicts of interest;"
+                                        },
+                                        {
+                                            "@id": "d2e2589",
+                                            "bcl:num": "f",
+                                            "bcl:text": {
+                                                "in:desc": "[one's own personal health information to be available]",
+                                                "#text": "for the purposes of section 17\u00a0, including"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2601",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "respecting the information that may, or must not, be made available,"
+                                                },
+                                                {
+                                                    "@id": "d2e2610",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "respecting how personal health information is to be made available, including putting conditions on direct access to personal health information,"
+                                                },
+                                                {
+                                                    "@id": "d2e2619",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "respecting information that must be removed from a record before the record is made available, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2629",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "respecting fees that may be charged by administrators for making available the information referred to in subsection (1) (c) of that section;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2638",
+                                            "bcl:num": "g",
+                                            "bcl:text": {
+                                                "in:desc": "[information-sharing agreements required for disclosure]",
+                                                "#text": "defining \"bulk or regular\" for the purposes of section 19\u00a0;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e2777",
+                                            "bcl:num": "g.1",
+                                            "bcl:text": {
+                                                "in:desc": "[no market research]",
+                                                "#text": "prescribing activities or circumstances that do or do not comprise market research for the purpose of section 20 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2650",
+                                            "bcl:num": "h",
+                                            "bcl:text": "for any other matter for which regulations are contemplated by this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2659",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A power to make a regulation under this Act in respect of a person includes a power to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2668",
+                                            "bcl:num": "a",
+                                            "bcl:text": "establish classes of persons, and"
+                                        },
+                                        {
+                                            "@id": "d2e2677",
+                                            "bcl:num": "b",
+                                            "bcl:text": "make regulations that are different for different classes of persons."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "bcl:conseqhead": [
+                {
+                    "bcl:text": "Amendments to this Act",
+                    "bcl:num": "27-28",
+                    "bcl:conseqnote": {
+                        "bcl:editorialnote": {
+                            "in:em": "[Note: See Table of Legislative Changes for the status of sections 27 to 46.]"
+                        }
+                    },
+                    "oasis:table": {
+                        "@style": "1",
+                        "@id": "d0e2844",
+                        "oasis:tgroup": {
+                            "@cols": "3",
+                            "@width": "510",
+                            "oasis:colspec": [
+                                {
+                                    "@colname": "c1",
+                                    "@colnum": "1",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c2",
+                                    "@colnum": "2",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c3",
+                                    "@colnum": "3",
+                                    "@align": "center",
+                                    "@border": "0"
+                                }
+                            ],
+                            "oasis:thead": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "@valign": "top",
+                                            "@width": "100",
+                                            "oasis:line": {
+                                                "in:strong": "Section(s)"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": {
+                                                "in:strong": null
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "375",
+                                            "oasis:line": {
+                                                "in:strong": "Affected Act"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "oasis:tbody": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "@valign": "top",
+                                            "@width": "100",
+                                            "oasis:line": {
+                                                "in:em": "27-28"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "top",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "375",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E3tlc08038",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "E-Health (Personal Health Information Access and Protection of Privacy) Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "bcl:text": "Consequential Amendments",
+                    "bcl:num": "29-46",
+                    "oasis:table": {
+                        "@style": "1",
+                        "@id": "d0e2931",
+                        "oasis:tgroup": {
+                            "@cols": "3",
+                            "@width": "510",
+                            "oasis:colspec": [
+                                {
+                                    "@colname": "c1",
+                                    "@colnum": "1",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c2",
+                                    "@colnum": "2",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c3",
+                                    "@colnum": "3",
+                                    "@align": "center",
+                                    "@border": "0"
+                                }
+                            ],
+                            "oasis:thead": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "@valign": "top",
+                                            "@width": "100",
+                                            "oasis:line": {
+                                                "in:strong": "Section(s)"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "top",
+                                            "@width": "35",
+                                            "oasis:line": {
+                                                "in:strong": null
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "375",
+                                            "oasis:line": {
+                                                "in:strong": "Affected Act"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "oasis:tbody": {
+                                "oasis:trow": [
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "@valign": "top",
+                                                "@width": "100",
+                                                "oasis:line": {
+                                                    "in:em": "29"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@valign": "top",
+                                                "@width": "375",
+                                                "oasis:line": {
+                                                    "in:doc": "Adult Guardianship and Planning Statutes Amendment Act, 2007"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "@valign": "top",
+                                                "@width": "100",
+                                                "oasis:line": {
+                                                    "in:em": "30-32"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@valign": "top",
+                                                "@width": "375",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/E2tlc96165",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "@valign": "top",
+                                                "@width": "100",
+                                                "oasis:line": {
+                                                    "in:em": "33"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@valign": "top",
+                                                "@width": "375",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/E2tlc96179",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Health Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "@valign": "top",
+                                                "@width": "100",
+                                                "oasis:line": {
+                                                    "in:em": "34-38"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@valign": "top",
+                                                "@width": "375",
+                                                "oasis:line": {
+                                                    "in:doc": "Health Statutes Amendment Act, 2007"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "@valign": "top",
+                                                "@width": "100",
+                                                "oasis:line": {
+                                                    "in:em": "39-42"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@valign": "top",
+                                                "@width": "375",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/E2tlc96363a",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Pharmacists, Pharmacy Operations and Drug Scheduling Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "@valign": "top",
+                                                "@width": "100",
+                                                "oasis:line": {
+                                                    "in:em": "43-46"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@valign": "top",
+                                                "@width": "375",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/E3tlc03077",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Pharmacy Operations and Drug Scheduling Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ],
+            "bcl:section": {
+                "@id": "d2e2871",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "47",
+                "bcl:text": "The provisions of this Act referred to in column 1 of the following table come into force as set out in column 2 of the table:",
+                "oasis:table": {
+                    "@style": "2",
+                    "@id": "d0e3165",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "@width": "660",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "1"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "1"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "1"
+                            }
+                        ],
+                        "oasis:tbody": {
+                            "oasis:trow": [
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "center",
+                                            "@valign": "top",
+                                            "@width": "60",
+                                            "oasis:line": "Item"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "top",
+                                            "@width": "200",
+                                            "oasis:line": {
+                                                "in:br": null,
+                                                "in:strong": "Provisions of Act",
+                                                "#text": "Column 1"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "300",
+                                            "oasis:line": {
+                                                "in:br": null,
+                                                "in:strong": "Commencement",
+                                                "#text": "Column 2"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "center",
+                                            "@valign": "top",
+                                            "@width": "60",
+                                            "oasis:line": "1"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "top",
+                                            "@width": "200",
+                                            "oasis:line": "Anything not elsewhere covered by this table"
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "300",
+                                            "oasis:line": "The date of Royal Assent"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "center",
+                                            "@valign": "top",
+                                            "@width": "60",
+                                            "oasis:line": "2"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "top",
+                                            "@width": "200",
+                                            "oasis:line": "Sections 1 to 28"
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "300",
+                                            "oasis:line": "By regulation of the Lieutenant Governor in Council"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "center",
+                                            "@valign": "top",
+                                            "@width": "60",
+                                            "oasis:line": "3"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "top",
+                                            "@width": "200",
+                                            "oasis:line": "Sections 30 to 33"
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "300",
+                                            "oasis:line": "By regulation of the Lieutenant Governor in Council"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "center",
+                                            "@valign": "top",
+                                            "@width": "60",
+                                            "oasis:line": "4"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "top",
+                                            "@width": "200",
+                                            "oasis:line": "Sections 39 to 46"
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "@valign": "top",
+                                            "@width": "300",
+                                            "oasis:line": "By regulation of the Lieutenant Governor in Council"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

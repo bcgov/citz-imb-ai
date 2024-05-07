@@ -1,0 +1,812 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96454_01",
+        "act:title": "Tourist Accommodation (Assessment Relief) Act",
+        "act:chapter": "454",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1089244767/96454/tlc96454_f",
+            "act:tlc": "E3tlc96454"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "assessed value",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96020_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Assessment Act"
+                                },
+                                "#text": "means the assessed value determined under the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e38",
+                            "bcl:text": {
+                                "in:term": "designated Act",
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96021_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Assessment Authority Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96038_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "British Columbia Transit Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/03026_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Community Charter"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96202_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Hospital District Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96239_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Islands Trust Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/r15001_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Local Government Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96325_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Municipal Finance Authority Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/99002_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Nisg\u0331a'a Final Agreement Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96367_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Police Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96412_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "School Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/98030_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "South Coast British Columbia Transportation Authority Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96448_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Taxation (Rural Area) Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/07038_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Treaty First Nation Taxation Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96469_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "University Endowment Land Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/vanch_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Vancouver Charter"
+                                    }
+                                ],
+                                "#text": "means the , the , the , the , the , the , the , the , the , the , the , the , the , the  or the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e92",
+                            "bcl:text": [
+                                {
+                                    "in:term": "eligible property",
+                                    "#text": "means land that, with its improvements,"
+                                },
+                                "and includes a campground, recreational vehicle park or trailer park that comes within a class of property designated under that section;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e101",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is used to provide overnight accommodation to guests, and"
+                                },
+                                {
+                                    "@id": "d2e110",
+                                    "bcl:num": "b",
+                                    "bcl:text": "comes within a class of property designated under section 3 (2) (a),"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e122",
+                            "bcl:text": {
+                                "in:term": "improvements",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96020_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Assessment Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e134",
+                            "bcl:text": {
+                                "in:term": "land",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96020_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Assessment Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d0e172",
+                            "bcl:text": {
+                                "in:term": "rural area",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96020_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Assessment Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e147",
+                            "bcl:text": {
+                                "in:term": "strata lot",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/98043_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Strata Property Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e159",
+                            "bcl:text": {
+                                "in:term": "strata plan",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/98043_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Strata Property Act"
+                                },
+                                "#text": "has the same meaning as in the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e172",
+                    "bcl:marginalnote": "Reduction in assessed value for eligible property located in municipality",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e180",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), if an eligible property is located in a municipality, the assessed value of the eligible property, for the purpose of its taxation under a designated Act, is to be reduced by the smaller of the following amounts:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e189",
+                                    "bcl:num": "a",
+                                    "bcl:text": "$150\u00a0000 less 15% of the amount by which the assessed value is over $2\u00a0000\u00a0000;"
+                                },
+                                {
+                                    "@id": "d2e198",
+                                    "bcl:num": "b",
+                                    "bcl:text": "50% of the assessed value."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e208",
+                            "bcl:num": "2",
+                            "bcl:text": "If an eligible property referred to in subsection (1) is a strata lot that is included in a strata plan, the assessed value of the eligible property, for the purpose of its taxation under a designated Act, is to be reduced by the amount determined by the following formula:",
+                            "oasis:table": [
+                                {
+                                    "@style": "1",
+                                    "@id": "d0e267",
+                                    "oasis:tgroup": {
+                                        "@cols": "4",
+                                        "oasis:colspec": [
+                                            {
+                                                "@colname": "c1",
+                                                "@colnum": "1"
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@colnum": "2"
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@colnum": "3"
+                                            },
+                                            {
+                                                "@colname": "c4",
+                                                "@colnum": "4"
+                                            }
+                                        ],
+                                        "oasis:tbody": {
+                                            "oasis:trow": [
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "@rowspan": "3",
+                                                            "oasis:line": "A = B"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "@rowspan": "3",
+                                                            "oasis:line": {
+                                                                "in:graphic": {
+                                                                    "@href": "/document/ID/statreg/bracket_left72.gif",
+                                                                    "@height": "50",
+                                                                    "@width": "7"
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "oasis:line": "C"
+                                                        },
+                                                        {
+                                                            "@colname": "c4",
+                                                            "@rowspan": "3",
+                                                            "oasis:line": {
+                                                                "in:graphic": {
+                                                                    "@href": "/document/ID/statreg/bracket_right72.gif",
+                                                                    "@height": "50",
+                                                                    "@width": "7"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": {
+                                                        "@colname": "c3",
+                                                        "oasis:line": {
+                                                            "in:hr": null
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "oasis:entry": {
+                                                        "@colname": "c3",
+                                                        "oasis:line": "D"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "@style": "4",
+                                    "@id": "d0e323",
+                                    "oasis:tgroup": {
+                                        "@cols": "4",
+                                        "oasis:colspec": [
+                                            {
+                                                "@colname": "c1",
+                                                "@colnum": "1"
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@colnum": "2"
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@colnum": "3"
+                                            },
+                                            {
+                                                "@colname": "c4",
+                                                "@colnum": "4"
+                                            }
+                                        ],
+                                        "oasis:tbody": {
+                                            "oasis:trow": [
+                                                {
+                                                    "oasis:entry": {
+                                                        "@colname": "c1",
+                                                        "@namest": "1",
+                                                        "@nameend": "4",
+                                                        "@colspan": "4",
+                                                        "oasis:line": "where"
+                                                    }
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "@valign": "top",
+                                                            "oasis:line": "A"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "@valign": "top",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@namest": "3",
+                                                            "@nameend": "5",
+                                                            "@colspan": "3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "the amount of the reduction under this section;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "@valign": "top",
+                                                            "oasis:line": "B"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "@valign": "top",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@namest": "3",
+                                                            "@nameend": "5",
+                                                            "@colspan": "3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "the smaller of the following amounts:"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "oasis:line": null
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "oasis:line": null
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "(a)"
+                                                        },
+                                                        {
+                                                            "@colname": "c4",
+                                                            "@valign": "top",
+                                                            "oasis:line": "$150\u00a0000 less 15% of the amount by which the total of the assessed values of all the strata lots included in the strata plan that are eligible property, is over $2\u00a0000\u00a0000;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "oasis:line": null
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "oasis:line": null
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "(b)"
+                                                        },
+                                                        {
+                                                            "@colname": "c4",
+                                                            "@valign": "top",
+                                                            "oasis:line": "50% of the total of the assessed values of all the strata lots in the strata plan that are eligible property;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "@valign": "top",
+                                                            "oasis:line": "C"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "@valign": "top",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@namest": "3",
+                                                            "@nameend": "5",
+                                                            "@colspan": "3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "the assessed value of the eligible property;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "@valign": "top",
+                                                            "oasis:line": "D"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "@valign": "top",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@namest": "3",
+                                                            "@nameend": "5",
+                                                            "@colspan": "3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "the total of the assessed values of all the strata lots included in the strata plan that are eligible property."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e334",
+                            "bcl:num": "3",
+                            "bcl:text": "If the amount determined under subsection (1) or (2) in respect of an eligible property is a negative amount, no change is to be made in the assessed value of the eligible property."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e504",
+                    "bcl:marginalnote": "Reduction in assessed value for eligible property located in rural area",
+                    "bcl:num": "2.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e512",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), if an eligible property is located in a rural area, the assessed value of the eligible property, for the purpose of its taxation under a designated Act, is to be reduced by the smaller of the following amounts:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e520",
+                                    "bcl:num": "a",
+                                    "bcl:text": "$500\u00a0000 less 15% of the amount by which the assessed value is over $4\u00a0000\u00a0000;"
+                                },
+                                {
+                                    "@id": "d0e529",
+                                    "bcl:num": "b",
+                                    "bcl:text": "50% of the assessed value."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e539",
+                            "bcl:num": "2",
+                            "bcl:text": "If an eligible property referred to in subsection (1) is a strata lot that is included in a strata plan, the assessed value of the eligible property, for the purpose of its taxation under a designated Act, is to be reduced by the amount determined by the following formula:",
+                            "oasis:table": [
+                                {
+                                    "@style": "1",
+                                    "@id": "d0e547",
+                                    "oasis:tgroup": {
+                                        "@cols": "4",
+                                        "oasis:colspec": [
+                                            {
+                                                "@colname": "c1",
+                                                "@colnum": "1"
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@colnum": "2"
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@colnum": "3"
+                                            },
+                                            {
+                                                "@colname": "c4",
+                                                "@colnum": "4"
+                                            }
+                                        ],
+                                        "oasis:tbody": {
+                                            "oasis:trow": [
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "@rowspan": "3",
+                                                            "oasis:line": "A = B"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "@rowspan": "3",
+                                                            "oasis:line": {
+                                                                "in:graphic": {
+                                                                    "@href": "/document/ID/statreg/bracket_left72.gif",
+                                                                    "@height": "50",
+                                                                    "@width": "7"
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "oasis:line": "C"
+                                                        },
+                                                        {
+                                                            "@colname": "c4",
+                                                            "@rowspan": "3",
+                                                            "oasis:line": {
+                                                                "in:graphic": {
+                                                                    "@href": "/document/ID/statreg/bracket_right72.gif",
+                                                                    "@height": "50",
+                                                                    "@width": "7"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": {
+                                                        "@colname": "c3",
+                                                        "oasis:line": {
+                                                            "in:hr": null
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "oasis:entry": {
+                                                        "@colname": "c3",
+                                                        "oasis:line": "D"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "@style": "4",
+                                    "@id": "d0e597",
+                                    "oasis:tgroup": {
+                                        "@cols": "4",
+                                        "oasis:colspec": [
+                                            {
+                                                "@colname": "c1",
+                                                "@colnum": "1"
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@colnum": "2"
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "@colnum": "3"
+                                            },
+                                            {
+                                                "@colname": "c4",
+                                                "@colnum": "4"
+                                            }
+                                        ],
+                                        "oasis:tbody": {
+                                            "oasis:trow": [
+                                                {
+                                                    "oasis:entry": {
+                                                        "@colname": "c1",
+                                                        "@namest": "1",
+                                                        "@nameend": "4",
+                                                        "@colspan": "4",
+                                                        "oasis:line": "where"
+                                                    }
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "oasis:line": "A"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@colspan": "2",
+                                                            "oasis:line": "the amount of the reduction under this section;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "@rowspan": "3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "B"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "@rowspan": "3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@colspan": "2",
+                                                            "@valign": "top",
+                                                            "oasis:line": "the smaller of the following amounts:"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "(a)"
+                                                        },
+                                                        {
+                                                            "@colname": "c4",
+                                                            "oasis:line": "$500\u00a0000 less 15% of the amount by which the total of the assessed values of all the strata lots included in the strata plan that are eligible property, is over $4\u00a0000\u00a0000;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@valign": "top",
+                                                            "oasis:line": "(b)"
+                                                        },
+                                                        {
+                                                            "@colname": "c4",
+                                                            "oasis:line": "50% of the total of the assessed values of all the strata lots in the strata plan that are eligible property;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "oasis:line": "C"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@colspan": "2",
+                                                            "oasis:line": "the assessed value of the eligible property;"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "oasis:entry": [
+                                                        {
+                                                            "@colname": "c1",
+                                                            "oasis:line": "D"
+                                                        },
+                                                        {
+                                                            "@colname": "c2",
+                                                            "oasis:line": "="
+                                                        },
+                                                        {
+                                                            "@colname": "c3",
+                                                            "@colspan": "2",
+                                                            "oasis:line": "the total of the assessed values of all the strata lots included in the strata plan that are eligible property."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e697",
+                            "bcl:num": "3",
+                            "bcl:text": "If the amount determined under subsection (1) or (2) in respect of an eligible property is a negative amount, no change is to be made in the assessed value of the eligible property."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e344",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e352",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e364",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e373",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96020_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Assessment Act"
+                                        },
+                                        "#text": "designating as an eligible class of property for the purposes of this Act a class of property prescribed under section\u00a019 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e386",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prescribing, with respect to one or more classes of property, the method or order of calculating the amount by which the assessed value of eligible property in that class is reduced under section 2 (1) or (2) or 2.1 (1) or (2)."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

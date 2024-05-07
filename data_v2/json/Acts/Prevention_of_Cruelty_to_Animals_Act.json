@@ -1,0 +1,2301 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96372_01",
+        "act:title": "Prevention of Cruelty to Animals Act",
+        "act:chapter": "372",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1922970521/96372/tlc96372_f",
+            "act:tlc": "E3tlc96372"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e21",
+                    "bcl:num": "1",
+                    "bcl:text": "Interpretation and Application",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e30",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e38",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this Act:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d2e47",
+                                            "bcl:text": {
+                                                "in:term": "authorized agent",
+                                                "#text": "means a person appointed as an authorized agent under section 10 (1);"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e56",
+                                            "bcl:text": {
+                                                "in:term": "justice",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96338_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Offence Act"
+                                                },
+                                                "#text": "means a justice as defined in the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e69",
+                                            "bcl:text": {
+                                                "in:term": "operator",
+                                                "#text": "means a person who engages in a regulated activity, and includes any person who assists, directs, supervises or employs that person for the purpose of doing the regulated activity;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e78",
+                                            "bcl:text": {
+                                                "in:term": "person responsible",
+                                                "#text": ", in relation to an animal, includes a person who"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e87",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "owns an animal,"
+                                                },
+                                                {
+                                                    "@id": "d2e96",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "has custody or control of an animal, or"
+                                                },
+                                                {
+                                                    "@id": "d2e105",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "is an operator in relation to an animal;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e114",
+                                            "bcl:text": {
+                                                "in:term": "registered veterinarian",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/10015_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Veterinarians Act"
+                                                },
+                                                "#text": "means an individual who is authorized under the  to practise veterinary medicine;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e127",
+                                            "bcl:text": {
+                                                "in:term": "regulated activity",
+                                                "#text": "means a prescribed activity in relation to the breeding, care, keeping, training, use, transportation, disposition, assembly or killing of animals;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e136",
+                                            "bcl:text": {
+                                                "in:term": "rules",
+                                                "#text": ", in relation to the society, includes, except in section 5, the constitution, bylaws and regulations of the society;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e145",
+                                            "bcl:text": [
+                                                {
+                                                    "in:term": "service animal",
+                                                    "#text": "means an animal that is trained"
+                                                },
+                                                "and that is engaged in activities relating to the service for which it is trained;"
+                                            ],
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e154",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "to assist in law enforcement activities, whether the animal is used by a peace officer or a person acting under the direction of a peace officer, or"
+                                                },
+                                                {
+                                                    "@id": "d2e163",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "for use",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d2e172",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "by a person within a prescribed class of persons, or"
+                                                        },
+                                                        {
+                                                            "@id": "d2e182",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "for prescribed purposes,"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e194",
+                                            "bcl:text": {
+                                                "in:term": "society",
+                                                "#text": "means the society continued under section 3."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e203",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For the purposes of this Act, an animal is in distress if it is",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e212",
+                                            "bcl:num": "a",
+                                            "bcl:text": "deprived of adequate food, water, shelter, ventilation, light, space, exercise, care or veterinary treatment,"
+                                        },
+                                        {
+                                            "@id": "d2e221",
+                                            "bcl:num": "a.1",
+                                            "bcl:text": "kept in conditions that are unsanitary,"
+                                        },
+                                        {
+                                            "@id": "d2e231",
+                                            "bcl:num": "a.2",
+                                            "bcl:text": "not protected from excessive heat or cold,"
+                                        },
+                                        {
+                                            "@id": "d2e240",
+                                            "bcl:num": "b",
+                                            "bcl:text": "injured, sick, in pain or suffering, or"
+                                        },
+                                        {
+                                            "@id": "d2e249",
+                                            "bcl:num": "c",
+                                            "bcl:text": "abused or neglected."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e258",
+                                    "bcl:num": "3",
+                                    "bcl:text": "[Repealed 2011-7-1.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e268",
+                            "bcl:marginalnote": "Application",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96488_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Wildlife Act"
+                                },
+                                "#text": "This Act does not apply to wildlife, as defined in the , that is not in captivity."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e283",
+                    "bcl:num": "2",
+                    "bcl:text": "The Society",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e292",
+                            "bcl:marginalnote": "Society continued",
+                            "bcl:num": "3",
+                            "bcl:text": "The society under the name of \"The British Columbia Society for the Prevention of Cruelty to Animals\" is continued with perpetual succession and a corporate seal."
+                        },
+                        {
+                            "@id": "d2e305",
+                            "bcl:marginalnote": "Membership of society",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e313",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In addition to those persons who immediately before April\u00a06,\u00a01968, were members of the society, the membership of the society consists of those persons who, in accordance with the rules of the society, are admitted to membership."
+                                },
+                                {
+                                    "@id": "d2e322",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The rules of the society may provide for different categories of members."
+                                },
+                                {
+                                    "@id": "d2e331",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The members of the society are subject to the rules and hold their membership subject to the rules."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e341",
+                            "bcl:marginalnote": "Constitution of society",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e349",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The society may amend or replace its constitution, bylaws, rules and regulations."
+                                },
+                                {
+                                    "@id": "d2e358",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsection (1), the constitution, bylaws, rules and regulations of the society in force immediately before April 6, 1968 continue in force, and the society is governed by them."
+                                },
+                                {
+                                    "@id": "d2e367",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subject to subsection (4), the power to make bylaws, rules or regulations may be delegated to any committee, branch or officer of the society."
+                                },
+                                {
+                                    "@id": "d2e377",
+                                    "bcl:num": "4",
+                                    "bcl:text": "No delegation may be made under subsection (3)",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e386",
+                                            "bcl:num": "a",
+                                            "bcl:text": "with respect to a matter reserved by the constitution, bylaws, rules or regulations to a meeting of the members of the society, or"
+                                        },
+                                        {
+                                            "@id": "d2e395",
+                                            "bcl:num": "b",
+                                            "bcl:text": "with respect to a bylaw relating to policies and operational procedures of the society for administering the enforcement powers of this Act."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e405",
+                            "bcl:marginalnote": "Monitoring of enforcement bylaws",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e413",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The society must file with the minister a copy of every bylaw made under section\u00a05 that relates to policies and operational procedures of the society for administering the enforcement powers of this Act within 7\u00a0days after it is made."
+                                },
+                                {
+                                    "@id": "d2e422",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may disallow a bylaw that relates to the matters described in subsection\u00a0(1)."
+                                },
+                                {
+                                    "@id": "d2e431",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The power of disallowance under subsection (2) applies to bylaws made both before and after the day on which this section comes into force."
+                                },
+                                {
+                                    "@id": "d2e441",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the minister considers it to be in the public interest, the minister may, by order and in respect of the matters described in subsection (1), make a new bylaw or amend or repeal an existing bylaw."
+                                },
+                                {
+                                    "@id": "d2e450",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A new bylaw or an amendment or a repeal of an existing bylaw made by order of the minister under subsection (4)",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e459",
+                                            "bcl:num": "a",
+                                            "bcl:text": "comes into force on the date the order is made, unless a later date is specified in the order, and"
+                                        },
+                                        {
+                                            "@id": "d2e468",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prevails to the extent of any conflict or inconsistency with a bylaw made by the society."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e477",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Written notice of the intention to make, amend or repeal a bylaw by order of the minister under subsection (4) must be given by the minister to the society at least 90 days before the order comes into force, unless a shorter notice period is specified in the written notice."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e487",
+                            "bcl:marginalnote": "Reporting requirements",
+                            "bcl:num": "6.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e495",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may, by order, require the society to do one or both of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e504",
+                                            "bcl:num": "a",
+                                            "bcl:text": "report on any matter relevant to the administration of this Act or the exercise of powers or performance of duties under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e513",
+                                            "bcl:num": "b",
+                                            "bcl:text": "make a report under paragraph (a) public."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e523",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The society must comply with an order made under subsection (1) in the manner and form, and within the time, set out in the order."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e533",
+                            "bcl:marginalnote": "Powers of society",
+                            "bcl:num": "7",
+                            "bcl:text": "The society may do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e544",
+                                    "bcl:num": "a",
+                                    "bcl:text": "receive, take, hold, enjoy and manage all gifts, devises, bequests, legacies, subscriptions and donations of property that are made or given to it;"
+                                },
+                                {
+                                    "@id": "d2e553",
+                                    "bcl:num": "b",
+                                    "bcl:text": "acquire, hold, lease, sell, convey and mortgage any property necessary to carry out the work of the society;"
+                                },
+                                {
+                                    "@id": "d2e563",
+                                    "bcl:num": "c",
+                                    "bcl:text": "establish and operate public shelters for stray and seized animals;"
+                                },
+                                {
+                                    "@id": "d2e572",
+                                    "bcl:num": "d",
+                                    "bcl:text": "enter agreements with the government and with any municipality or regional district to act as pound keeper in a defined area in British Columbia."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e582",
+                            "bcl:marginalnote": "Branches",
+                            "bcl:num": "8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e590",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (3), the branches of the society are continued."
+                                },
+                                {
+                                    "@id": "d2e599",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The society may form and establish branches in its discretion anywhere in British Columbia."
+                                },
+                                {
+                                    "@id": "d2e608",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Branches are subject to the control and direction of the society and may, in accordance with the rules of the society, be",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e618",
+                                            "bcl:num": "a",
+                                            "bcl:text": "dissolved by the society, or"
+                                        },
+                                        {
+                                            "@id": "d2e627",
+                                            "bcl:num": "b",
+                                            "bcl:text": "suspended by the society or its executive committee."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e636",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the society establishes a branch, it must promptly send the Registrar of Companies a notice setting out the date the branch was formed, the title of the branch, the locality and powers of the branch, and the other information the registrar may require."
+                                },
+                                {
+                                    "@id": "d2e645",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The society must notify the registrar when a branch ceases to exist."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e656",
+                            "bcl:marginalnote": "Corporate duties and obligations",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e664",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The society must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e673",
+                                            "bcl:num": "a",
+                                            "bcl:text": "have an address in British Columbia to which all communications and notices may be sent and at which all process may be served, and"
+                                        },
+                                        {
+                                            "@id": "d2e682",
+                                            "bcl:num": "b",
+                                            "bcl:text": "file with the Registrar of Companies notice of every change of address within 14 days after the change is made."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e692",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Every general meeting of the society must be held in British Columbia."
+                                },
+                                {
+                                    "@id": "d2e701",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The society must hold an annual general meeting."
+                                },
+                                {
+                                    "@id": "d2e710",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Within 14 days after the annual general meeting, the society must file with the Registrar of Companies",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e719",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an audited financial statement in the form of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e728",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a balance sheet containing general particulars of assets and liabilities, and"
+                                                },
+                                                {
+                                                    "@id": "d2e737",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a statement of income and expenditure, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e747",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a list of directors of the society, stating each director's address and date of appointment or election."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e756",
+                                    "bcl:num": "5",
+                                    "bcl:text": "In addition to the filings required under subsection (4) (b), on request by the Registrar of Companies, the society must furnish the registrar with particulars of directors of the society."
+                                },
+                                {
+                                    "@id": "d2e765",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The society and each of its branches must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e774",
+                                            "bcl:num": "a",
+                                            "bcl:text": "maintain a register of members, and"
+                                        },
+                                        {
+                                            "@id": "d2e783",
+                                            "bcl:num": "b",
+                                            "bcl:text": "record in it the name and address of every person admitted as a member of the society."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e792",
+                                    "bcl:num": "7",
+                                    "bcl:text": "Failure, refusal or neglect by the society to observe or perform a duty or obligation created or imposed by this section or section 8 (4) or (5) is an offence."
+                                },
+                                {
+                                    "@id": "d2e802",
+                                    "bcl:num": "8",
+                                    "bcl:text": "If the society commits an offence under subsection (7), it is liable on conviction to a penalty of not more than $100."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e812",
+                    "bcl:num": "2.1",
+                    "bcl:text": "Standards of Care",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e821",
+                            "bcl:marginalnote": "Duties of persons responsible for animals",
+                            "bcl:num": "9.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e829",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person responsible for an animal must care for the animal, including protecting the animal from circumstances that are likely to cause the animal to be in distress."
+                                },
+                                {
+                                    "@id": "d2e838",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person responsible for an animal must not cause or permit the animal to be, or to continue to be, in distress."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e848",
+                            "bcl:marginalnote": "Duties of operators",
+                            "bcl:num": "9.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e856",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "An operator engaging in a regulated activity",
+                                        "a regulation respecting the regulated activity."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e865",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must comply with each requirement and duty set out in, and"
+                                        },
+                                        {
+                                            "@id": "d2e874",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must not engage in any practice or carry out any procedure that is prohibited under"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e887",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An operator who is an employer must ensure that employees are adequately trained and sufficiently equipped to comply with any requirement or duty set out in a regulation respecting the regulated activity in which the operator is engaged."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e897",
+                            "bcl:marginalnote": "Transportation of animals",
+                            "bcl:num": "9.3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e905",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person responsible for an animal must not transport the animal by vehicle unless the animal is",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e914",
+                                            "bcl:num": "a",
+                                            "bcl:text": "inside the passenger compartment, or"
+                                        },
+                                        {
+                                            "@id": "d2e923",
+                                            "bcl:num": "b",
+                                            "bcl:text": "confined or secured in a manner that will prevent the animal from",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e933",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "falling from the vehicle,"
+                                                },
+                                                {
+                                                    "@id": "d2e942",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "being injured during transport, or"
+                                                },
+                                                {
+                                                    "@id": "d2e951",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "causing a hazard to the safe operation of other vehicles."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e960",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person responsible for an animal must not attach the animal to a vehicle that is in operation unless the animal is confined or secured as described in subsection (1) (b)."
+                                },
+                                {
+                                    "@id": "d2e969",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subsections (1) and (2) do not apply to a person operating a vehicle that is designed for use as a mobility aid for persons with a disability and that is being used for that purpose."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e979",
+                    "bcl:num": "3",
+                    "bcl:text": "Relieving Distress in Animals",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e989",
+                            "bcl:marginalnote": "Authorized agents",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e997",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The society may appoint an officer or employee of the society or any other person as an authorized agent for the purposes of this Act."
+                                },
+                                {
+                                    "@id": "d2e1006",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96367_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Police Act"
+                                        },
+                                        "#text": "An authorized agent may exercise the powers of an authorized agent under this Act or any other law relating to the prevention of cruelty to animals only if the authorized agent has been appointed as a special provincial constable under the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1019",
+                            "bcl:marginalnote": "Abandoned animals",
+                            "bcl:num": "10.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1027",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "abandoned animal",
+                                        "#text": "In this section,  includes an animal that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1039",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is apparently ownerless,"
+                                        },
+                                        {
+                                            "@id": "d2e1048",
+                                            "bcl:num": "b",
+                                            "bcl:text": "is found straying,"
+                                        },
+                                        {
+                                            "@id": "d2e1058",
+                                            "bcl:num": "c",
+                                            "bcl:text": "is found in a rental unit after expiry of the tenancy agreement in respect of the rental unit, or"
+                                        },
+                                        {
+                                            "@id": "d2e1067",
+                                            "bcl:num": "d",
+                                            "bcl:text": "if a person agreed to care for the animal, is not retrieved from that person within 4 days following the end of that agreement."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1076",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If an authorized agent is of the opinion that an animal is an abandoned animal, the authorized agent may take custody of the animal and arrange for food, water, shelter, care and veterinary treatment for it."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1086",
+                            "bcl:marginalnote": "Relieving distress in animals",
+                            "bcl:num": "11",
+                            "bcl:text": [
+                                "If an authorized agent is of the opinion that an animal is in distress and the person responsible for the animal",
+                                "the authorized agent may, in accordance with sections 13 and 14, take any action that the authorized agent considers necessary to relieve the animal's distress, including, without limitation, taking custody of the animal and arranging for food, water, shelter, care and veterinary treatment for it."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1097",
+                                    "bcl:num": "a",
+                                    "bcl:text": "does not promptly take steps that will relieve its distress, or"
+                                },
+                                {
+                                    "@id": "d2e1106",
+                                    "bcl:num": "b",
+                                    "bcl:text": "cannot be found immediately and informed of the animal's distress,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1120",
+                            "bcl:marginalnote": "Relieving critical distress in animals",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1128",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "critical distress",
+                                        "#text": "In this section,  means distress in an animal of such a nature that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1140",
+                                            "bcl:num": "a",
+                                            "bcl:text": "immediate veterinary treatment cannot prolong the animal's life, or"
+                                        },
+                                        {
+                                            "@id": "d2e1149",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prolonging the animal's life would result in the animal suffering unduly."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1159",
+                                    "bcl:num": "2",
+                                    "bcl:text": [
+                                        "If, in the opinion of",
+                                        "an animal is in critical distress, the registered veterinarian or authorized agent may destroy the animal or have the animal destroyed."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1168",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a registered veterinarian, or"
+                                        },
+                                        {
+                                            "@id": "d2e1177",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an authorized agent, if a registered veterinarian is not readily available,"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1190",
+                            "bcl:marginalnote": "Authority to enter with a warrant",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1198",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "An authorized agent who believes, on reasonable grounds,",
+                                        "may enter the premises, vehicle, aircraft or vessel with a warrant issued under subsection (2) for the purpose of"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1207",
+                                            "bcl:num": "a",
+                                            "bcl:text": "that there is an animal in distress in any premises, vehicle, aircraft or vessel, or"
+                                        },
+                                        {
+                                            "@id": "d2e1216",
+                                            "bcl:num": "b",
+                                            "bcl:text": "that an offence under section 24 has been committed and that there is in any premises, vehicle, aircraft or vessel, any thing that will afford evidence of that offence,"
+                                        },
+                                        {
+                                            "@id": "d2e1229",
+                                            "bcl:num": "c",
+                                            "bcl:text": "determining whether any action authorized by this Act should be taken to relieve the animal's distress, or"
+                                        },
+                                        {
+                                            "@id": "d2e1238",
+                                            "bcl:num": "d",
+                                            "bcl:text": "searching for, and seizing, any thing that will afford evidence of an offence under section\u00a024."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1247",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A justice who is satisfied by information on oath in the prescribed form that there are reasonable grounds",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1256",
+                                            "bcl:num": "a",
+                                            "bcl:text": "under paragraph (1) (a), may issue a warrant in the prescribed form authorizing an authorized agent to enter the premises, vehicle, aircraft or vessel for the purpose of taking any action authorized by this Act to relieve the animal's distress, and"
+                                        },
+                                        {
+                                            "@id": "d2e1265",
+                                            "bcl:num": "b",
+                                            "bcl:text": "under paragraph (1) (b), may issue a warrant in the prescribed form authorizing an authorized agent to enter the premises, vehicle, aircraft or vessel for the purpose of searching for, and seizing, a thing that will afford evidence of an offence under section\u00a024."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1275",
+                                    "bcl:num": "2.1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "If an authorized agent believes that it would be impracticable to appear personally before a justice to apply for a warrant under this section, the authorized agent may submit an information on oath by telephone or other means of telecommunication and, for this purpose, section 22 of the  applies."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1287",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A justice may issue a warrant under subsection (2) or (2.1) for either or both of the purposes referred to in subsection (2)."
+                                },
+                                {
+                                    "@id": "d2e1296",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A warrant issued under subsection (2) or (2.1) is subject to the conditions specified in the warrant."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1306",
+                            "bcl:marginalnote": "Authority to enter without a warrant",
+                            "bcl:num": "14",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1314",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "critical distress",
+                                        "#text": "In this section,  means distress in an animal of such a nature that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1326",
+                                            "bcl:num": "a",
+                                            "bcl:text": "immediate veterinary treatment cannot prolong the animal's life,"
+                                        },
+                                        {
+                                            "@id": "d2e1335",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prolonging the animal's life would result in the animal suffering unduly, or"
+                                        },
+                                        {
+                                            "@id": "d2e1345",
+                                            "bcl:num": "c",
+                                            "bcl:text": "immediate veterinary intervention is necessary to prevent the imminent death of the animal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1354",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An authorized agent who believes on reasonable grounds that there is an animal in critical distress in any premises, other than a dwelling house, or in any vehicle, aircraft or vessel, may enter the premises, vehicle, aircraft or vessel without a warrant for the purpose of taking any action authorized by this Act to relieve that critical distress."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1365",
+                            "bcl:marginalnote": "Entry to determine distress",
+                            "bcl:num": "15",
+                            "bcl:text": "An authorized agent may, without a warrant, during ordinary business hours enter any premises, other than a dwelling house, where animals are kept for sale, hire or exhibition for the purpose of determining whether any animal is in distress in the premises."
+                        },
+                        {
+                            "@id": "d2e1377",
+                            "bcl:marginalnote": "Inspection",
+                            "bcl:num": "15.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1385",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (3), an authorized agent may enter any premises or a vehicle where an operator is engaging in a regulated activity for the purpose of determining whether this Act and the regulations made under it are being complied with."
+                                },
+                                {
+                                    "@id": "d2e1394",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsection (3), an authorized agent who believes on reasonable grounds that premises or a vehicle is being used for the purposes of carrying out a regulated activity may enter the premises to determine",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1403",
+                                            "bcl:num": "a",
+                                            "bcl:text": "whether the premises or vehicle is being used for the purposes of carrying out a regulated activity, and"
+                                        },
+                                        {
+                                            "@id": "d2e1413",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if so, who the operator is in relation to the regulated activity being carried out."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1422",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Entry under subsection (1) or (2) may be without a warrant or the consent of the person responsible for the premises or vehicle only if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1431",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the premises or vehicle is not used as a dwelling house, and"
+                                        },
+                                        {
+                                            "@id": "d2e1440",
+                                            "bcl:num": "b",
+                                            "bcl:text": "entry is during ordinary business hours."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1450",
+                            "bcl:marginalnote": "Inspection powers",
+                            "bcl:num": "15.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1458",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For the purposes of an inspection under section 15.1, an authorized agent may do one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1467",
+                                            "bcl:num": "a",
+                                            "bcl:text": "be accompanied or assisted by a person who has special, expert or professional knowledge of a matter relevant to the inspection;"
+                                        },
+                                        {
+                                            "@id": "d2e1476",
+                                            "bcl:num": "b",
+                                            "bcl:text": "require a person to produce relevant records or things in the person's possession or control;"
+                                        },
+                                        {
+                                            "@id": "d2e1486",
+                                            "bcl:num": "c",
+                                            "bcl:text": "inspect, copy or remove relevant records or things;"
+                                        },
+                                        {
+                                            "@id": "d2e1495",
+                                            "bcl:num": "d",
+                                            "bcl:text": [
+                                                "require a person to",
+                                                "in relation to a requirement set out in a regulation made under section 26 (2) (e), (f), (g), (h) or (j);"
+                                            ],
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1504",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "demonstrate a skill, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1513",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "operate a thing or carry out a procedure as directed by the authorized agent"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1525",
+                                            "bcl:num": "e",
+                                            "bcl:text": "make records in respect of a person, place or thing;"
+                                        },
+                                        {
+                                            "@id": "d2e1535",
+                                            "bcl:num": "f",
+                                            "bcl:text": "take samples and perform analyses and tests, including tests in which a sample is destroyed."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1544",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If an authorized agent removes records or things under subsection (1) (c), the authorized agent must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1553",
+                                            "bcl:num": "a",
+                                            "bcl:text": "provide a receipt for the records or things to the person from whom they were taken, and"
+                                        },
+                                        {
+                                            "@id": "d2e1562",
+                                            "bcl:num": "b",
+                                            "bcl:text": "subject to a power under this or any other enactment to order a thing destroyed, promptly return the records or things",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1571",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "when they have served the purposes for which they were taken, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1580",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "if an action or a proceeding is taken under this or any other enactment as a result of an inspection, and the records or things are relevant to the action or proceeding, no later than 3 months after the conclusion of the action or proceeding."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1590",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "Sections 23 to 24.2 of the  do not apply to the removal of records or things under subsection (1) (c) of this Act."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1603",
+                            "bcl:marginalnote": "Identification",
+                            "bcl:num": "16",
+                            "bcl:text": "An authorized agent exercising a power under section\u00a013, 14 or 15 must, on demand, produce the authorized agent's certificate of appointment to the owner or occupant of any premises, vehicle, aircraft or vessel entered under those sections."
+                        },
+                        {
+                            "@id": "d2e1615",
+                            "bcl:marginalnote": "Disposition of abandoned animals taken into custody",
+                            "bcl:num": "17",
+                            "bcl:text": "If an animal is taken into custody under section 10.1 and",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1626",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the owner is unknown, the society may destroy, sell or otherwise dispose of the animal after the society has held the animal for a period of at least 4 days, or"
+                                },
+                                {
+                                    "@id": "d2e1635",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the owner is known, the society",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1645",
+                                            "bcl:num": "i",
+                                            "bcl:text": "must give to the owner notice, in accordance with section 19, that the society may destroy, sell or otherwise dispose of the animal and that a review of the decision may be requested under section 20.2, and"
+                                        },
+                                        {
+                                            "@id": "d2e1654",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "may, no earlier than 4 days after giving notice, destroy, sell or otherwise dispose of the animal."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1664",
+                            "bcl:marginalnote": "Disposition of animals in distress taken into custody",
+                            "bcl:num": "18",
+                            "bcl:text": "If an animal is taken into custody under section 11, the society",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1675",
+                                    "bcl:num": "a",
+                                    "bcl:text": [
+                                        "must give notice, in accordance with section 19, to",
+                                        "that the society may destroy, sell or otherwise dispose of the animal and that a review of the decision may be requested under section 20.2, and"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1684",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the person from whom the animal was taken, and"
+                                        },
+                                        {
+                                            "@id": "d2e1694",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "if the person from whom the animal was taken is not the owner and the owner is known, the owner"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1706",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may, no earlier than 14 days after giving notice, destroy, sell or otherwise dispose of the animal."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1717",
+                            "bcl:marginalnote": "Form of notice",
+                            "bcl:num": "19",
+                            "bcl:text": "The notice referred to in sections 17 (b) and 18 must be in writing and",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1728",
+                                    "bcl:num": "a",
+                                    "bcl:text": "mailed to or served personally on the person to whom notice must be given, or"
+                                },
+                                {
+                                    "@id": "d2e1737",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if it cannot be mailed to or served personally on the person to whom notice must be given,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1747",
+                                            "bcl:num": "i",
+                                            "bcl:text": "published at least 3 times at 2 day intervals in a newspaper circulating in the area in which the animal was taken into custody, or"
+                                        },
+                                        {
+                                            "@id": "d2e1756",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "posted in a conspicuous place at either the last known address of the person to whom notice must be given or the location at which the animal was taken into custody."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1766",
+                            "bcl:marginalnote": "Animal is property of new owner",
+                            "bcl:num": "19.1",
+                            "bcl:text": "If an animal has been sold or otherwise disposed of under section 17 or 18, all rights and interests in the animal",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1777",
+                                    "bcl:num": "a",
+                                    "bcl:text": "vest in the person to whom it has been sold or otherwise disposed of, and"
+                                },
+                                {
+                                    "@id": "d2e1786",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the former owner ceases to have any of those rights and interests."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1796",
+                            "bcl:marginalnote": "Costs of taking action and proceeds of disposition",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1804",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The owner of an animal taken into custody or destroyed under this Act is liable to the society for the reasonable costs incurred by the society under this Act with respect to the animal."
+                                },
+                                {
+                                    "@id": "d2e1813",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The society may require the owner to pay all or part of the costs, with or without conditions, for which the owner is liable under subsection (1) before returning the animal."
+                                },
+                                {
+                                    "@id": "d2e1822",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subject to subsection (4), the society may retain the proceeds of a sale or other disposition of an animal under section\u00a017 or 18."
+                                },
+                                {
+                                    "@id": "d2e1832",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the proceeds of a sale or other disposition exceed the costs referred to in subsection\u00a0(1), the owner of the animal may, within 6 months of the date the animal was taken into custody, claim the balance from the society."
+                                },
+                                {
+                                    "@id": "d2e1841",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Payment of costs under subsection (2) of this section does not prevent an appeal under section 20.3."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1851",
+                    "bcl:num": "3.1",
+                    "bcl:text": "Reviews and Appeals",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1860",
+                            "bcl:marginalnote": "Definition",
+                            "bcl:num": "20.1",
+                            "bcl:text": {
+                                "in:term": "board",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96330_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Natural Products Marketing (BC) Act"
+                                },
+                                "#text": "In this Part,  means the British Columbia Farm Industry Review Board continued under the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1878",
+                            "bcl:marginalnote": "Review of decisions",
+                            "bcl:num": "20.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1886",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The society may review a decision of an authorized agent to take custody of an animal under section 10.1 or 11",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1895",
+                                            "bcl:num": "a",
+                                            "bcl:text": "on request of a person who owns, or is an operator in relation to, the animal,"
+                                        },
+                                        {
+                                            "@id": "d2e1904",
+                                            "bcl:num": "b",
+                                            "bcl:text": "on request of a person from whom custody of the animal was taken under section\u00a010.1 or\u00a011, or"
+                                        },
+                                        {
+                                            "@id": "d2e1914",
+                                            "bcl:num": "c",
+                                            "bcl:text": "on its own initiative."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1923",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A request for a review may be made to the society",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1932",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the form required by the society, and"
+                                        },
+                                        {
+                                            "@id": "d2e1941",
+                                            "bcl:num": "b",
+                                            "bcl:text": "within,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1950",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "if section 17 (b) applies, 4 days after notice is given as required by that section, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1959",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "if section 18 applies, 14 days after notice is given as required by that section."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1969",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a review is requested in accordance with subsection (2), the society",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1978",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must review the decision, and"
+                                        },
+                                        {
+                                            "@id": "d2e1987",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must not destroy, sell or otherwise dispose of the animal, except to return the animal to its owner or to the person from whom custody was taken."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1996",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The society, following a review, must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2005",
+                                            "bcl:num": "a",
+                                            "bcl:text": "return the animal to its owner or to the person from whom custody was taken, with or without conditions respecting",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2014",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the food, water, shelter, care or veterinary treatment to be provided to that animal, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2024",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "any matter that the society considers necessary to maintain the well-being of that animal, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2033",
+                                            "bcl:num": "b",
+                                            "bcl:text": "affirm the notice that the animal will be destroyed, sold or otherwise disposed of."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2042",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The society must provide to the person who requested the review",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2051",
+                                            "bcl:num": "a",
+                                            "bcl:text": "written reasons for an action taken under subsection (4), and"
+                                        },
+                                        {
+                                            "@id": "d2e2060",
+                                            "bcl:num": "b",
+                                            "bcl:text": "notice that an appeal may be made under section 20.3."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2069",
+                                    "bcl:num": "6",
+                                    "bcl:text": "If the society affirms a notice under subsection (4) (b), the society must not destroy, sell or otherwise dispose of the animal for at least 4 days after providing reasons and notice under subsection (5)."
+                                },
+                                {
+                                    "@id": "d2e2079",
+                                    "bcl:num": "7",
+                                    "bcl:text": "A person may not request further review under this section of the same decision."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2090",
+                            "bcl:marginalnote": "Appeals",
+                            "bcl:num": "20.3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2098",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who owns, or is an operator in relation to, an animal, or a person from whom custody of an animal was taken under section 10.1 or 11, may appeal to the board one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2107",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if no action has been taken under section 20.2 (4) within 28 days after a request for a review is made, the decision to take custody of the animal under section\u00a010.1 or\u00a011;"
+                                        },
+                                        {
+                                            "@id": "d2e2116",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if action has been taken under section 20.2 (4) (b), the decision to affirm a notice under section 19 that the animal will be destroyed, sold or otherwise disposed of;"
+                                        },
+                                        {
+                                            "@id": "d2e2126",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the amount of costs for which an owner is liable under section 20 (1);"
+                                        },
+                                        {
+                                            "@id": "d2e2135",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the amount of costs that an owner must pay under section 20 (2) before the animal is returned to the owner."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2144",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person referred to in subsection (1) may file a notice of appeal with the board as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2153",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in respect of an appeal under subsection (1) (a), no earlier than 28 days after the request for a review is made;"
+                                        },
+                                        {
+                                            "@id": "d2e2162",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in respect of an appeal under subsection (1) (b), within 4 days after receiving reasons under section 20.2 (5) (a);"
+                                        },
+                                        {
+                                            "@id": "d2e2171",
+                                            "bcl:num": "c",
+                                            "bcl:text": "in respect of an appeal under subsection (1) (c) or (d), no later than 4 days following receipt, by the owner, of a demand for payment of costs."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2181",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person who files a notice of appeal must provide",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2190",
+                                            "bcl:num": "a",
+                                            "bcl:text": "to the society, immediately on filing the notice of appeal, a copy of the filed notice of appeal, and"
+                                        },
+                                        {
+                                            "@id": "d2e2199",
+                                            "bcl:num": "b",
+                                            "bcl:text": "to the board, as soon as reasonably practicable, every document in relation to the matter under appeal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2208",
+                                    "bcl:num": "4",
+                                    "bcl:text": "On receiving notice under subsection (3), the society is a party to the appeal and must provide to the board, as soon as reasonably practicable, every bylaw and document in relation to the matter under appeal."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2218",
+                            "bcl:marginalnote": "Interim stays",
+                            "bcl:num": "20.4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2226",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If, at the time of receiving a copy of the filed notice of appeal under section\u00a020.3\u00a0(3)\u00a0(a), the society has custody of the animal that is the subject of the appeal, the society",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2235",
+                                            "bcl:num": "a",
+                                            "bcl:text": "continues to have custody of that animal, and"
+                                        },
+                                        {
+                                            "@id": "d2e2244",
+                                            "bcl:num": "b",
+                                            "bcl:text": "unless section 12 applies, must not destroy, sell or otherwise dispose of that animal until the board makes a final determination of the appeal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2254",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If subsection (1) of this section applies,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2263",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the owner of the animal remains liable, under section 20 (1), to the society for the reasonable costs incurred by the society with respect to that animal, and"
+                                        },
+                                        {
+                                            "@id": "d2e2272",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the board, on application by the society and at any time after the society receives the copy of the filed notice of appeal, may require the owner of the animal to pay all or part of those costs."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2482",
+                            "bcl:marginalnote": {
+                                "in:doc": "Administrative Tribunals Act",
+                                "#text": "Application of"
+                            },
+                            "bcl:num": "20.41",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2492",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/04045_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Administrative Tribunals Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96330_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Natural Products Marketing (BC) Act"
+                                            }
+                                        ],
+                                        "#text": "For the purposes of carrying out its powers and duties under this Act, the following provisions of the  apply to the board in addition to those incorporated under section 3.1 of the :"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2508",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[Practice and Procedure]",
+                                                "#text": "Part 4 , except the following:"
+                                            },
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e2519",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "in:desc": "[notice of hearing by publication]",
+                                                        "#text": "section 21 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2531",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "in:desc": "[notice of appeal (exclusive of prescribed fee)]",
+                                                        "#text": "section 23 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2543",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": {
+                                                        "in:desc": "[time limit for appeals]",
+                                                        "#text": "section 24 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2556",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": {
+                                                        "in:desc": "[appeal does not operate as stay]",
+                                                        "#text": "section 25 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2568",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": {
+                                                        "in:desc": "[interveners]",
+                                                        "#text": "section 33 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e2580",
+                                                    "bcl:num": "vi",
+                                                    "bcl:text": {
+                                                        "in:desc": "[party power to compel witnesses and order disclosure]",
+                                                        "#text": "section 34 (1) and (2) ;"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2593",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[tribunal without jurisdiction to apply the Human Rights Code]",
+                                                "#text": "section 46.3 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2605",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "in:desc": "[power to award costs]",
+                                                "#text": "section 47 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2618",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "in:desc": "[contempt proceedings for uncooperative witness or other person]",
+                                                "#text": "section 49 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2630",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "in:desc": "[Decisions]",
+                                                "#text": "Part 7 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2642",
+                                            "bcl:num": "f",
+                                            "bcl:text": {
+                                                "in:desc": "[immunity protection for tribunal and members]",
+                                                "#text": "section 56 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2654",
+                                            "bcl:num": "g",
+                                            "bcl:text": {
+                                                "in:desc": "[power to make regulations]",
+                                                "#text": "section 60 (1) (a) to (i) and (2) ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2667",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96330_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Natural Products Marketing (BC) Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/04045_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Administrative Tribunals Act"
+                                            }
+                                        ],
+                                        "#text": "Despite section 3.1 of the , the following provisions of the  do not apply to the board in carrying out its powers and duties under this Act:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2683",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[limited jurisdiction and discretion to decline jurisdiction to apply the Human Rights Code]",
+                                                "#text": "section 46.2 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e2695",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[standard of review with privative clause]",
+                                                "#text": "section 58 ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2282",
+                            "bcl:marginalnote": "Hearings",
+                            "bcl:num": "20.5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2290",
+                                    "bcl:num": "1",
+                                    "bcl:text": "[Repealed 2015-10-151.]"
+                                },
+                                {
+                                    "@id": "d2e2348",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For the purposes of making a determination in an appeal, the board may, with consent of the owner or occupier,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2357",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enter any premises",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2366",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "from which the animal that is the subject of the appeal has been taken into custody, or"
+                                                },
+                                                {
+                                                    "@id": "d2e2375",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "on which a person intends to keep the animal that is the subject of the appeal if the person regains custody of that animal, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2385",
+                                            "bcl:num": "b",
+                                            "bcl:text": "inspect the premises and any equipment or other thing on the premises that are relevant to the determination of the appeal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2394",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the owner or occupier does not consent to one or more of the matters referred to in subsection (2), the board may draw an adverse inference from the refusal to consent."
+                                },
+                                {
+                                    "@id": "d2e2403",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The board, at any time before making a determination in an appeal, may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2412",
+                                            "bcl:num": "a",
+                                            "bcl:text": "inquire into matters relevant to the appeal, and, as part of that inquiry, obtain the advice of persons who are knowledgeable about those matters, and"
+                                        },
+                                        {
+                                            "@id": "d2e2421",
+                                            "bcl:num": "b",
+                                            "bcl:text": "determine, subject to any regulations made under section 26 (2) (o), the remuneration of the persons referred to in paragraph (a) of this subsection."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2431",
+                            "bcl:marginalnote": "Determination of appeal",
+                            "bcl:num": "20.6",
+                            "bcl:text": "On hearing an appeal in respect of an animal, the board may do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2442",
+                                    "bcl:num": "a",
+                                    "bcl:text": "require the society to return the animal to its owner or to the person from whom custody was taken, with or without conditions respecting",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2451",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the food, water, shelter, care or veterinary treatment to be provided to that animal, and"
+                                        },
+                                        {
+                                            "@id": "d2e2461",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "any matter that the board considers necessary to maintain the well-being of that animal;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2470",
+                                    "bcl:num": "b",
+                                    "bcl:text": "permit the society, in the society's discretion, to destroy, sell or otherwise dispose of the animal;"
+                                },
+                                {
+                                    "@id": "d2e2479",
+                                    "bcl:num": "c",
+                                    "bcl:text": "confirm or vary the amount of costs for which the owner is liable under section\u00a020\u00a0(1) or that the owner must pay under section 20 (2)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2489",
+                    "bcl:num": "4",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2498",
+                            "bcl:marginalnote": "Aid by police",
+                            "bcl:num": "21",
+                            "bcl:text": "A peace officer must assist the authorized agents of the society in enforcing this or any other law relating to the prevention of cruelty to animals."
+                        },
+                        {
+                            "@id": "d2e2511",
+                            "bcl:marginalnote": "Others who may act as authorized agents",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2519",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The following persons may exercise the powers of an authorized agent under this Act in a part of British Columbia in which the society does not function through an authorized agent:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2528",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a peace officer who has jurisdiction in that part of British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e2537",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a person appointed by the minister for the purpose of exercising the powers of an authorized agent in that part of British Columbia."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2547",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may, by order, require persons appointed under subsection (1) (b) to complete a specified training program or to hold specified qualifications."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2557",
+                            "bcl:marginalnote": "Duty to report distress",
+                            "bcl:num": "22.1",
+                            "bcl:text": "A registered veterinarian who believes on reasonable grounds that a person responsible for an animal is, or is likely, causing or permitting the animal to be in distress in contravention of this Act must promptly report, to the best of the registered veterinarian's knowledge and belief, all of the following information to an authorized agent:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2568",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the reason for believing that an animal is in distress;"
+                                },
+                                {
+                                    "@id": "d2e2577",
+                                    "bcl:num": "b",
+                                    "bcl:text": "sufficient information to contact the person responsible for the animal, including the person's name and address;"
+                                },
+                                {
+                                    "@id": "d2e2587",
+                                    "bcl:num": "c",
+                                    "bcl:text": "sufficient information to identify the animal."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2597",
+                            "bcl:marginalnote": "Obstruction",
+                            "bcl:num": "23",
+                            "bcl:text": [
+                                "A person must not wilfully or knowingly",
+                                "a person in the discharge of duties or the exercise of powers under this Act."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2608",
+                                    "bcl:num": "a",
+                                    "bcl:text": "interfere with or obstruct, or"
+                                },
+                                {
+                                    "@id": "d2e2617",
+                                    "bcl:num": "b",
+                                    "bcl:text": "provide false or misleading information to"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2631",
+                            "bcl:marginalnote": "Service animals",
+                            "bcl:num": "23.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2639",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person must not do, or attempt to do, any of the following without lawful excuse or authority:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2648",
+                                            "bcl:num": "a",
+                                            "bcl:text": "harm a service animal;"
+                                        },
+                                        {
+                                            "@id": "d2e2657",
+                                            "bcl:num": "b",
+                                            "bcl:text": "touch, directly or indirectly, a service animal;"
+                                        },
+                                        {
+                                            "@id": "d2e2667",
+                                            "bcl:num": "c",
+                                            "bcl:text": "interfere with or obstruct a service animal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2676",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person responsible for an animal must take reasonable steps to prevent the animal from doing a thing described in subsection (1)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2686",
+                            "bcl:marginalnote": "Harm to animals by persons",
+                            "bcl:num": "23.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2694",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person must not cause an animal to be in distress."
+                                },
+                                {
+                                    "@id": "d2e2703",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person who kills an animal",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2712",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must comply with prescribed requirements, and"
+                                        },
+                                        {
+                                            "@id": "d2e2722",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must not, in killing the animal, cause the animal to be in distress or do anything that is prohibited by the regulations."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2732",
+                            "bcl:marginalnote": "Harm to animals by animals",
+                            "bcl:num": "23.3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2740",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person responsible for an animal must take reasonable steps to prevent the animal from attacking or otherwise harming another animal."
+                                },
+                                {
+                                    "@id": "d2e2749",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person must not use an animal for, or breed, raise, train or dispose of an animal for the purpose of having the animal used for,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2758",
+                                            "bcl:num": "a",
+                                            "bcl:text": "baiting or fighting another animal, or"
+                                        },
+                                        {
+                                            "@id": "d2e2768",
+                                            "bcl:num": "b",
+                                            "bcl:text": "another prescribed activity that involves an animal attacking or harming another animal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2777",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person must not possess equipment ordinarily used for the breeding, raising or training of animals for a purpose described in subsection (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2788",
+                            "bcl:marginalnote": "Offences",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2796",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who contravenes section 9.1, 9.2, 9.3, 23, 23.1, 23.2 or 23.3 commits an offence."
+                                },
+                                {
+                                    "@id": "d2e2805",
+                                    "bcl:num": "2",
+                                    "bcl:text": "[Repealed 2011-7-6.]"
+                                },
+                                {
+                                    "@id": "d2e2814",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a person is convicted of an offence under subsection (1), a justice may, in addition to any other penalty that may be imposed for the offence, prohibit the person from owning or having custody or control of an animal for a period of time specified by the justice."
+                                },
+                                {
+                                    "@id": "d2e2824",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A justice may make an order under subsection (3) on any terms the justice considers appropriate."
+                                },
+                                {
+                                    "@id": "d2e2833",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A person who fails to comply with an order made under subsection (3) commits an offence."
+                                },
+                                {
+                                    "@id": "d2e2842",
+                                    "bcl:num": "6",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96367_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Police Act"
+                                        },
+                                        "#text": "A proceeding for an offence under this Act may not be commenced in any court more than 3 years after the facts on which the proceeding is based first come to the knowledge of an authorized agent who is a special provincial constable under the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2855",
+                            "bcl:marginalnote": "Offence by corporation or employee",
+                            "bcl:num": "24.01",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2863",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a corporation commits an offence under this Act, an employee, an officer, a director or an agent of the corporation who authorized, permitted or acquiesced in the offence commits the offence whether or not the corporation is convicted."
+                                },
+                                {
+                                    "@id": "d2e2872",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If an employee commits an offence under this Act, an employer who authorized, permitted or acquiesced in the offence commits the offence whether or not the employee is identified or convicted."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2882",
+                            "bcl:marginalnote": "Defence",
+                            "bcl:num": "24.02",
+                            "bcl:text": "A person must not be convicted of an offence under this Act in relation to an animal in distress if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2893",
+                                    "bcl:num": "a",
+                                    "bcl:text": [
+                                        "the person is",
+                                        "the person is practising veterinary medicine in accordance with the standards of the profession,"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2902",
+                                            "bcl:num": "i",
+                                            "bcl:text": "a registered veterinarian,"
+                                        },
+                                        {
+                                            "@id": "d2e2912",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "an employee of a registered veterinarian who is acting under the supervision of the registered veterinarian, or"
+                                        },
+                                        {
+                                            "@id": "d2e2921",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "an enrolled student of veterinary medicine who is an employee of a registered veterinarian and is acting as authorized by the registered veterinarian, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2933",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the person is an operator and the distress results from an activity that is carried out in accordance with the prescribed standards of care that apply to the regulated activity in which the operator is engaged, or"
+                                },
+                                {
+                                    "@id": "d2e2942",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the distress results from an activity that is carried out in accordance with reasonable and generally accepted practices of animal management that apply to the activity in which the person is engaged, unless the person is an operator and those practices are inconsistent with prescribed standards."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2952",
+                            "bcl:marginalnote": "Penalties",
+                            "bcl:num": "24.1",
+                            "bcl:text": "A person who commits an offence under this Act is liable on conviction to a fine not exceeding $75 000 or to imprisonment for a term not exceeding 2 years, or to both."
+                        },
+                        {
+                            "@id": "d2e2964",
+                            "bcl:marginalnote": "Animals taken into custody",
+                            "bcl:num": "24.2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Sections 23 to 24.2 of the  do not apply to an animal taken into custody under this Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e2979",
+                            "bcl:marginalnote": "Order of custody",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2987",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An authorized agent may apply to the Supreme Court for an order of custody of an animal in respect of which a charge has been laid under section 24."
+                                },
+                                {
+                                    "@id": "d2e2996",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An applicant under subsection (1) may retain custody of an animal in respect of which the application is made pending the outcome of any proceedings under section\u00a024, despite the fact that the owner of the animal",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3005",
+                                            "bcl:num": "a",
+                                            "bcl:text": "has paid the costs incurred by the society for which the owner is liable under section\u00a020, and"
+                                        },
+                                        {
+                                            "@id": "d2e3015",
+                                            "bcl:num": "b",
+                                            "bcl:text": "has requested the authorized agent to return the animal."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3024",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The Supreme Court may make an order under this section on any terms it considers appropriate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3035",
+                            "bcl:marginalnote": "Immunity",
+                            "bcl:num": "25.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3043",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (2), no legal proceeding for damages lies or may be commenced or maintained against the society, an authorized agent or a member, officer, agent or employee of the society because of anything done or omitted",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3052",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the performance or intended performance, by an authorized agent, of any duty under this Act, or"
+                                        },
+                                        {
+                                            "@id": "d2e3061",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the exercise or intended exercise, by an authorized agent, of any power under this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3071",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subsection (1) does not apply to a person referred to in that subsection in relation to anything done or omitted in bad faith."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3081",
+                            "bcl:marginalnote": "Immunity for registered veterinarians",
+                            "bcl:num": "25.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3089",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (2), no legal proceeding for damages lies or may be commenced or maintained against a registered veterinarian because of anything done or omitted",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e3337",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in relation to the destruction of an animal under section 12 (2), or"
+                                        },
+                                        {
+                                            "@id": "d0e3346",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the making of a report as required under section 22.1."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3098",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subsection (1) does not apply to a registered veterinarian in relation to anything done or omitted in bad faith."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3108",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3116",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3128",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3137",
+                                            "bcl:num": "a",
+                                            "bcl:text": "requiring the society to make bylaws with respect to the policies and operational procedures of the society for administering the enforcement provisions of this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e3147",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing the form of an information to obtain a warrant and the form of a warrant for the purposes of section\u00a013;"
+                                        },
+                                        {
+                                            "@id": "d2e3156",
+                                            "bcl:num": "c",
+                                            "bcl:text": "prescribing activities for the purposes of the definition of \"regulated activity\" in section 1 (1);"
+                                        },
+                                        {
+                                            "@id": "d2e3165",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing purposes and classes of persons for the purposes of the definition of \"service animal\" in section 1 (1);"
+                                        },
+                                        {
+                                            "@id": "d2e3174",
+                                            "bcl:num": "e",
+                                            "bcl:text": "respecting standards that operators must comply with when engaging in a regulated activity;"
+                                        },
+                                        {
+                                            "@id": "d2e3183",
+                                            "bcl:num": "f",
+                                            "bcl:text": "respecting standards in relation to design, construction, maintenance and operation of facilities used when engaging in a regulated activity;"
+                                        },
+                                        {
+                                            "@id": "d2e3192",
+                                            "bcl:num": "g",
+                                            "bcl:text": "prohibiting operators from engaging in specified practices or carrying out specified procedures when engaging in a regulated activity;"
+                                        },
+                                        {
+                                            "@id": "d2e3202",
+                                            "bcl:num": "h",
+                                            "bcl:text": "respecting practices and procedures to be used in the killing of animals, including prohibiting certain practices and procedures;"
+                                        },
+                                        {
+                                            "@id": "d2e3211",
+                                            "bcl:num": "i",
+                                            "bcl:text": "prescribing activities for the purposes of section 23.3 (2);"
+                                        },
+                                        {
+                                            "@id": "d2e3220",
+                                            "bcl:num": "j",
+                                            "bcl:text": "exempting",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3229",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "operators engaging in regulated activities from one or more provisions of a regulation made under this section, or"
+                                                },
+                                                {
+                                                    "@id": "d2e3238",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "persons from section 23.2 (2) or 23.3, or from one or more provisions of a regulation made under paragraph (h) of this section;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e3247",
+                                            "bcl:num": "k",
+                                            "bcl:text": "imposing requirements or conditions on operators or other persons exempted under paragraph (j);"
+                                        },
+                                        {
+                                            "@id": "d2e3257",
+                                            "bcl:num": "l",
+                                            "bcl:text": "respecting generally accepted practices of animal management that apply to a regulated activity;"
+                                        },
+                                        {
+                                            "@id": "d2e3266",
+                                            "bcl:num": "m",
+                                            "bcl:text": "establishing classes of persons, animals or regulated activities and making different regulations for different classes;"
+                                        },
+                                        {
+                                            "@id": "d2e3275",
+                                            "bcl:num": "n",
+                                            "bcl:text": "for the purpose of section 20.3 (2) (c), respecting demands for payment of costs, including deemed receipt by an owner;"
+                                        },
+                                        {
+                                            "@id": "d2e3284",
+                                            "bcl:num": "o",
+                                            "bcl:text": "for the purpose of section 20.5 (4), respecting the remuneration of persons referred to in that section."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3293",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation made under this Act may adopt by reference, in whole or in part and with any changes the Lieutenant Governor in Council considers appropriate, a regulation, code, standard or rule",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3302",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enacted as or under a law of another jurisdiction, including a foreign jurisdiction,"
+                                        },
+                                        {
+                                            "@id": "d2e3312",
+                                            "bcl:num": "b",
+                                            "bcl:text": "set by a provincial, national or international body or any other body that may make codes, standards or rules, or"
+                                        },
+                                        {
+                                            "@id": "d2e3321",
+                                            "bcl:num": "c",
+                                            "bcl:text": "set by or in consultation with",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e3330",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the society, or"
+                                                },
+                                                {
+                                                    "@id": "d2e3339",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "an organization, one purpose of which is to set standards in relation to a regulated activity."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3348",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Unless otherwise stated, a code, standard or rule referred to in subsection (3) (a) or (b) is adopted as amended from time to time."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

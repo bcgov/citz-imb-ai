@@ -1,0 +1,363 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96209_01",
+        "act:title": "Human Resource Facility Act",
+        "act:chapter": "209",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "712470149/96209/tlc96209_f",
+            "act:tlc": "E3tlc96209"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "For the purposes of this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "assistance",
+                                "#text": "includes a grant, loan, guarantee or indemnity and includes assistance under section 1.1, 1.2 or 2;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "authority",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/04060_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Community Living Authority Act"
+                                },
+                                "#text": "means an authority established under the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e48",
+                            "bcl:text": {
+                                "in:term": "human resource facility",
+                                "#text": "means land and improvements, all or part of which provide or are intended to provide any of the services referred to in section\u00a01.1\u00a0or\u00a01.2, and includes land and improvements designated as a human resource facility;"
+                            }
+                        },
+                        {
+                            "@id": "d2e57",
+                            "bcl:text": {
+                                "in:term": "human resource facility agreement",
+                                "#text": "means an agreement made by the minister or any agent of the government with a person who has received or is to receive assistance to acquire, develop or operate a human resource facility;"
+                            }
+                        },
+                        {
+                            "@id": "d2e66",
+                            "bcl:text": {
+                                "in:term": "human resource purposes",
+                                "#text": "means the purposes listed in section 1.1."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e76",
+                    "bcl:marginalnote": "Grants and other financial assistance",
+                    "bcl:num": "1.1",
+                    "bcl:text": "Out of money appropriated by the Legislature and subject to the regulations, the minister may provide a grant or other assistance to a person for the purpose of acquiring, developing or operating facilities by means of a human resource facility agreement for one or more of the following purposes:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e87",
+                            "bcl:num": "a",
+                            "bcl:text": "a residence or facility for the care of children;"
+                        },
+                        {
+                            "@id": "d2e96",
+                            "bcl:num": "b",
+                            "bcl:text": "a special home for the care of persons with disabilities;"
+                        },
+                        {
+                            "@id": "d2e106",
+                            "bcl:num": "c",
+                            "bcl:text": "an activity centre or workshop for persons with disabilities;"
+                        },
+                        {
+                            "@id": "d2e115",
+                            "bcl:num": "d",
+                            "bcl:text": "a residence or facility for the support or treatment of persons with addictions;"
+                        },
+                        {
+                            "@id": "d2e124",
+                            "bcl:num": "e",
+                            "bcl:text": "a special human resource facility or program designated by the Lieutenant Governor in Council."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e134",
+                    "bcl:marginalnote": "Financial assistance \u2014 research and administrative support services",
+                    "bcl:num": "1.2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e142",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "human resource operator",
+                                "#text": "In this section,  means a person who operates a facility for a human resource purpose."
+                            }
+                        },
+                        {
+                            "@id": "d2e154",
+                            "bcl:num": "2",
+                            "bcl:text": "In addition to assistance provided under section 1.1, the minister may, out of money appropriated by the Legislature and subject to the regulations, provide a grant or other assistance to a person for the purpose of acquiring, developing or operating facilities by means of a human resource facility agreement if the person, to the extent specified by the minister in the human resource facility agreement,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e163",
+                                    "bcl:num": "a",
+                                    "bcl:text": "conducts research related to a human resource purpose, or"
+                                },
+                                {
+                                    "@id": "d2e173",
+                                    "bcl:num": "b",
+                                    "bcl:text": "provides administrative support services under contract to a human resource operator."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e183",
+                    "bcl:marginalnote": "Other assistance",
+                    "bcl:num": "2",
+                    "bcl:text": "The Lieutenant Governor in Council may make a disposition of land, with or without improvements, or a structure to a person for a purpose referred to in section\u00a01.1\u00a0or\u00a01.2."
+                },
+                {
+                    "@id": "d2e195",
+                    "bcl:marginalnote": "Human resource facility agreements",
+                    "bcl:num": "2.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e203",
+                            "bcl:num": "1",
+                            "bcl:text": "[Repealed 2004-60-108.]"
+                        },
+                        {
+                            "@id": "d2e212",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting the terms that may be included in an agreement under this Act, a human resource facility agreement may include a restriction that all or part of the human resource facility may be used only for human resource purposes."
+                        },
+                        {
+                            "@id": "d2e221",
+                            "bcl:num": "3",
+                            "bcl:text": "If a human resource facility agreement includes a restriction under subsection (2), the minister or other agent of the government must file a written notice in the land title office containing",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e231",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a description of the human resource facility sufficient for the registrar to identify it in the records of the land title office, and"
+                                },
+                                {
+                                    "@id": "d2e240",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a statement that the human resource facility is subject to a human resource facility agreement that includes a restriction under subsection (2)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e249",
+                            "bcl:num": "4",
+                            "bcl:text": "When a notice is filed under subsection (3), the registrar must make a notation of the filing in the proper register against the title to the land affected."
+                        },
+                        {
+                            "@id": "d2e258",
+                            "bcl:num": "5",
+                            "bcl:text": "Unless the written consent of the minister is filed in the land title office,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e267",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a person who owns or leases a human resource facility must not transfer, mortgage, lease or otherwise dispose of that person's interest in the human resource facility, and"
+                                },
+                                {
+                                    "@id": "d2e276",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the registrar must not register a transfer or other disposition referred to in paragraph (a)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e286",
+                            "bcl:num": "6",
+                            "bcl:text": "In the event of any omission, mistake or misfeasance by the registrar or the staff of the registrar in relation to the making of a notation of a filing or the registration of a transfer or other disposition under this section,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e295",
+                                    "bcl:num": "a",
+                                    "bcl:text": "neither the registrar, nor the government nor the Land Title and Survey Authority of British Columbia is liable vicariously,"
+                                },
+                                {
+                                    "@id": "d2e304",
+                                    "bcl:num": "a.1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "neither the assurance fund nor the Land Title and Survey Authority of British Columbia, as a nominal defendant, is liable under Part 19.1 of the , and"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e316",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96250_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Land Title Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96250_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Land Title Act"
+                                            }
+                                        ],
+                                        "#text": "neither the assurance fund nor the minister charged with the administration of the , as a nominal defendant, is liable under Part\u00a020 of the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e331",
+                            "bcl:num": "7",
+                            "bcl:text": "Once a notation is made under subsection (4),",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e340",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the human resource facility agreement and, if applicable, any amendment to it is binding on all persons who acquire an interest in the land affected, and"
+                                },
+                                {
+                                    "@id": "d2e350",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if a transfer, mortgage, lease or other disposition of a person's interest in a human resource facility is registered without the written consent of the minister being filed as required under this section, the minister may apply to the Supreme Court for an order for specific performance of the human resource facility agreement by the new owner or for any other remedy."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e361",
+                    "bcl:marginalnote": "Duty to file agreements",
+                    "bcl:num": "2.2",
+                    "bcl:text": "A copy of each human resource facility agreement under section 2.1 entered into by the minister or an authority must be filed at a central office location designated by the minister."
+                },
+                {
+                    "@id": "d2e373",
+                    "bcl:marginalnote": "Minister's power to delegate",
+                    "bcl:num": "2.3",
+                    "bcl:text": "The minister, subject to any terms or conditions the minister considers advisable, may delegate any or all of the minister's powers, duties and functions under this Act to an authority."
+                },
+                {
+                    "@id": "d2e385",
+                    "bcl:marginalnote": "Transfer of agreements",
+                    "bcl:num": "2.4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e393",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister, in writing, may transfer to an authority any existing human resource facility agreement."
+                        },
+                        {
+                            "@id": "d2e402",
+                            "bcl:num": "2",
+                            "bcl:text": "On the effective date of a transfer under subsection (1), all rights and obligations of the minister under the agreement cease to be the rights and obligations of the minister and become the rights and obligations of the authority."
+                        },
+                        {
+                            "@id": "d2e411",
+                            "bcl:num": "3",
+                            "bcl:text": "A reference to the minister in an agreement transferred is deemed to be a reference to the authority."
+                        },
+                        {
+                            "@id": "d2e421",
+                            "bcl:num": "4",
+                            "bcl:text": "If a transfer is made under subsection (1), the minister must give written notice of the transfer to the registrar."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e431",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e439",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e451",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e460",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing the terms and conditions on which and the manner in which assistance as defined in section\u00a01 may be provided under this Act;"
+                                },
+                                {
+                                    "@id": "d2e470",
+                                    "bcl:num": "b",
+                                    "bcl:text": "defining, for the purposes of this Act, the words \"persons with addictions\", \"persons with disabilities\", \"facilities\" and \"centres\";"
+                                },
+                                {
+                                    "@id": "d2e479",
+                                    "bcl:num": "c",
+                                    "bcl:text": "defining a word or phrase used but not defined in this Act;"
+                                },
+                                {
+                                    "@id": "d2e488",
+                                    "bcl:num": "d",
+                                    "bcl:text": "for the purposes of section 1.1 (e), designating land and improvements",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e497",
+                                            "bcl:num": "i",
+                                            "bcl:text": "of a specific facility or program as a human resource facility or program, or"
+                                        },
+                                        {
+                                            "@id": "d2e506",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "of a category of facility or program as human resource facilities or programs."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

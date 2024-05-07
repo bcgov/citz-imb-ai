@@ -1,0 +1,634 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96337_01",
+        "act:title": "Occupiers Liability Act",
+        "act:chapter": "337",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "667588372/96337/tlc96337_f",
+            "act:tlc": "1263407501"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "limited liability entity",
+                                "#text": ", in relation to a resource road, means\n          each of the following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e35",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the maintainer, if any, of the resource road;"
+                                },
+                                {
+                                    "@id": "d2e45",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the government;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e54",
+                            "bcl:text": {
+                                "in:term": "maintainer",
+                                "#text": ", in relation to a resource road, means the person,\n          including, without limitation, the government, that is obligated or authorized under an\n          enactment to maintain the resource road, but does not include a prescribed person or a\n          person within a prescribed class of persons;"
+                            }
+                        },
+                        {
+                            "@id": "d2e63",
+                            "bcl:text": {
+                                "in:term": "motor vehicle",
+                                "#text": "means a vehicle that is"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e72",
+                                    "bcl:num": "a",
+                                    "bcl:text": "intended to be self-propelled, and"
+                                },
+                                {
+                                    "@id": "d2e81",
+                                    "bcl:num": "b",
+                                    "bcl:text": "designed primarily for travel on land on surfaces other than rails;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e90",
+                            "bcl:text": [
+                                {
+                                    "in:term": "occupier",
+                                    "#text": "means a person who"
+                                },
+                                "and, for this Act, there may be more than one occupier of the same\n          premises;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e100",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is in physical possession of premises, or"
+                                },
+                                {
+                                    "@id": "d2e109",
+                                    "bcl:num": "b",
+                                    "bcl:text": "has responsibility for, and control over, the condition of premises, the\n            activities conducted on those premises and the persons allowed to enter those\n            premises,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e121",
+                            "bcl:text": {
+                                "in:term": "premises",
+                                "#text": "includes"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e130",
+                                    "bcl:num": "a",
+                                    "bcl:text": "land and structures or either of them, excepting portable structures and\n            equipment other than those described in paragraph (c),"
+                                },
+                                {
+                                    "@id": "d2e139",
+                                    "bcl:num": "b",
+                                    "bcl:text": "ships and vessels,"
+                                },
+                                {
+                                    "@id": "d2e149",
+                                    "bcl:num": "c",
+                                    "bcl:text": "trailers and portable structures designed or used for a residence, business or\n            shelter, and"
+                                },
+                                {
+                                    "@id": "d2e158",
+                                    "bcl:num": "d",
+                                    "bcl:text": "railway locomotives, railway cars, vehicles and aircraft while not in\n            operation;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e167",
+                            "bcl:text": [
+                                {
+                                    "in:term": "resource road",
+                                    "#text": "means any road or portion of a road that\n          is"
+                                },
+                                {
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/04044_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Transportation Act"
+                                    },
+                                    "#text": "but does not include a municipal highway or a provincial public highway as those\n          terms are defined in the ;"
+                                }
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e176",
+                                    "bcl:num": "a",
+                                    "bcl:text": "on Crown land, and"
+                                },
+                                {
+                                    "@id": "d2e185",
+                                    "bcl:num": "b",
+                                    "bcl:text": "used or intended for use by motor vehicles,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e201",
+                            "bcl:text": {
+                                "in:term": "tenancy",
+                                "#text": "includes a statutory tenancy, an implied tenancy and\n          any contract conferring the right of occupation, and \"landlord\" must be construed\n          accordingly."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e211",
+                    "bcl:marginalnote": "Application of Act",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e219",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to section 3 (4), and sections 4 and 9 and subsection (2) of this section, this\n          Act determines the care that an occupier is required to show toward persons entering on\n          the premises in respect of dangers to them, or to their property on the premises, or to\n          the property on the premises of persons who have not themselves entered on the premises,\n          that are due to the state of the premises, or to anything done or omitted to be done on\n          the premises, and for which the occupier is responsible by law."
+                        },
+                        {
+                            "@id": "d2e228",
+                            "bcl:num": "2",
+                            "bcl:text": "This Act establishes the duty of care to which a limited liability entity is\n          subject in relation to a resource road in all circumstances other than those referred to\n          in section\u00a03.1\u00a0(2)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e238",
+                    "bcl:marginalnote": "Occupiers' duty of care",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e246",
+                            "bcl:num": "1",
+                            "bcl:text": "An occupier of premises owes a duty to take that care that in all the\n          circumstances of the case is reasonable to see that a person, and the person's property,\n          on the premises, and property on the premises of a person, whether or not that person\n          personally enters on the premises, will be reasonably safe in using the\n          premises."
+                        },
+                        {
+                            "@id": "d2e255",
+                            "bcl:num": "2",
+                            "bcl:text": "The duty of care referred to in subsection (1) applies in relation to the",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e264",
+                                    "bcl:num": "a",
+                                    "bcl:text": "condition of the premises,"
+                                },
+                                {
+                                    "@id": "d2e274",
+                                    "bcl:num": "b",
+                                    "bcl:text": "activities on the premises, or"
+                                },
+                                {
+                                    "@id": "d2e283",
+                                    "bcl:num": "c",
+                                    "bcl:text": "conduct of third parties on the premises."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e292",
+                            "bcl:num": "3",
+                            "bcl:text": "Despite subsection (1), an occupier has no duty of care to a person in respect of\n          risks willingly assumed by that person other than a duty not to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e301",
+                                    "bcl:num": "a",
+                                    "bcl:text": "create a danger with intent to do harm to the person or damage to the person's\n            property, or"
+                                },
+                                {
+                                    "@id": "d2e310",
+                                    "bcl:num": "b",
+                                    "bcl:text": "act with reckless disregard to the safety of the person or the integrity of the\n            person's property."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e319",
+                            "bcl:num": "3.1",
+                            "bcl:text": "A person who is trespassing on premises while committing, or with the intention of\n          committing, a criminal act is deemed to have willingly assumed all risks and the occupier\n          of those premises is subject only to the duty of care set out in subsection\n          (3)."
+                        },
+                        {
+                            "@id": "d2e329",
+                            "bcl:num": "3.2",
+                            "bcl:text": "A person who enters any of the categories of premises described in subsection\n            (3.3) is deemed to have willingly assumed all risks and the occupier of those\n          premises is subject only to the duty of care set out in subsection (3) if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e338",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person who enters is trespassing, or"
+                                },
+                                {
+                                    "@id": "d2e347",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the entry is for the purpose of a recreational activity and",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e356",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the occupier receives no payment or other consideration for the entry or\n              activity of the person, other than a payment or other consideration from a government\n              or government agency or a non-profit recreational club or association, and"
+                                        },
+                                        {
+                                            "@id": "d2e365",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the occupier is not providing the person with living accommodation on those\n              premises."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e374",
+                            "bcl:num": "3.3",
+                            "bcl:text": "The categories of premises referred to in subsection (3.2) are as\n          follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e384",
+                                    "bcl:num": "a",
+                                    "bcl:text": "premises that the occupier uses primarily for agricultural purposes;"
+                                },
+                                {
+                                    "@id": "d2e393",
+                                    "bcl:num": "b",
+                                    "bcl:text": "rural premises that are",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e402",
+                                            "bcl:num": "i",
+                                            "bcl:text": "used for forestry or range purposes,"
+                                        },
+                                        {
+                                            "@id": "d2e411",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "vacant or undeveloped premises,"
+                                        },
+                                        {
+                                            "@id": "d2e420",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "forested or wilderness premises, or"
+                                        },
+                                        {
+                                            "@id": "d2e429",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "private roads reasonably marked as private roads;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e439",
+                                    "bcl:num": "c",
+                                    "bcl:text": "recreational trails reasonably marked as recreational trails;"
+                                },
+                                {
+                                    "@id": "d2e448",
+                                    "bcl:num": "d",
+                                    "bcl:text": "utility rights of way and corridors excluding structures located on\n            them."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e457",
+                            "bcl:num": "4",
+                            "bcl:text": "Nothing in this section relieves an occupier of premises of a duty to exercise, in\n          a particular case, a higher standard of care which, in that case, is incumbent on the\n          person because of an enactment or rule of law imposing special standards of care on\n          particular classes of person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e467",
+                    "bcl:marginalnote": "Duty of care of limited liability entities",
+                    "bcl:num": "3.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e475",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), a person who enters onto or otherwise uses a resource\n          road is deemed to have willingly assumed all risks, and a person who is, in relation to\n          the resource road, a limited liability entity is, in relation to that resource road,\n          subject only to the duty of care set out in section 3 (3) and, for that\n          purpose, a reference in section\u00a03\u00a0(3) to an occupier is deemed to include a\n          reference to a limited liability entity."
+                        },
+                        {
+                            "@id": "d2e484",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection\n            (1) does not apply in relation to the duty of care to which a limited\n          liability entity is subject in relation to a resource road",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e493",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in prescribed circumstances,"
+                                },
+                                {
+                                    "@id": "d2e503",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the person in relation to whom the duty of care is owed is a prescribed\n            person or a person within a prescribed class of persons, or"
+                                },
+                                {
+                                    "@id": "d2e512",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if under another enactment or at law a limited liability entity is subject to a\n            more limited duty of care than the duty of care to which the limited liability entity is\n            subject under subsection (1)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e521",
+                            "bcl:num": "3",
+                            "bcl:text": "In the situation referred to in subsection (2) (c), the limited liability entity is\n          subject to the more limited duty of care."
+                        },
+                        {
+                            "@id": "d2e530",
+                            "bcl:num": "4",
+                            "bcl:text": "A reference in sections 4 and 5 to an occupier in relation to premises is deemed to\n          include a reference to a limited liability entity in relation to a resource\n          road."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e540",
+                    "bcl:marginalnote": "Contracting out",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e548",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsections (2), (3) and (4), if an occupier is permitted\n          by law to extend, restrict, modify or exclude the occupier's duty of care to any person by\n          express agreement, or by express stipulation or notice, the occupier must take reasonable\n          steps to bring that extension, restriction, modification or exclusion to the attention of\n          that person."
+                        },
+                        {
+                            "@id": "d2e557",
+                            "bcl:num": "2",
+                            "bcl:text": "An occupier must not restrict, modify or exclude the occupier's duty of care under\n            subsection\n            (1) with respect to a person who is",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e566",
+                                    "bcl:num": "a",
+                                    "bcl:text": "not privy to the express agreement, or"
+                                },
+                                {
+                                    "@id": "d2e576",
+                                    "bcl:num": "b",
+                                    "bcl:text": "empowered or permitted to enter or use the premises without the consent or\n            permission of the occupier."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e585",
+                            "bcl:num": "3",
+                            "bcl:text": "If an occupier is bound by contract to permit persons who are not privy to the\n          contract to enter or use the premises, the duty of care of the occupier to those persons\n          must, despite anything to the contrary in that contract, not be restricted, modified or\n          excluded by it."
+                        },
+                        {
+                            "@id": "d2e594",
+                            "bcl:num": "4",
+                            "bcl:text": "This section applies to all express contracts."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e605",
+                    "bcl:marginalnote": "Independent contractors",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e613",
+                            "bcl:num": "1",
+                            "bcl:text": "Despite section 3 (1), if damage is caused by the negligence of an independent\n          contractor engaged by the occupier, the occupier is not on that account liable under this\n          Act if, in all the circumstances,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e622",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the occupier exercised reasonable care in the selection and supervision of the\n            independent contractor, and"
+                                },
+                                {
+                                    "@id": "d2e631",
+                                    "bcl:num": "b",
+                                    "bcl:text": "it was reasonable that the work that the independent contractor was engaged to\n            do should have been undertaken."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e641",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection\n            (1) must not be construed as restricting or excluding the liability, imposed\n          by any other Act, of an occupier for the negligence of the occupier's independent\n          contractor."
+                        },
+                        {
+                            "@id": "d2e650",
+                            "bcl:num": "3",
+                            "bcl:text": "If there is damage under the circumstances set out in subsection (1),\n          and there is more than one occupier of the premises, each occupier is entitled to rely on\n            subsection\n            (1)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e660",
+                    "bcl:marginalnote": "Tenancy relationship",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e668",
+                            "bcl:num": "1",
+                            "bcl:text": "If premises are occupied or used under a tenancy under which a landlord is\n          responsible for the maintenance or repair of the premises, it is the duty of the landlord\n          to show toward any person who, or whose property, may be on the premises the same care in\n          respect of risks arising from failure on the landlord's part in carrying out the\n          landlord's responsibility, as is required by this Act to be shown by an occupier of\n          premises toward persons entering on or using the premises."
+                        },
+                        {
+                            "@id": "d2e677",
+                            "bcl:num": "2",
+                            "bcl:text": "If premises are occupied under a subtenancy, subsection (1) applies to a\n          landlord who is responsible for the maintenance or repair of the premises comprised in the\n          subtenancy."
+                        },
+                        {
+                            "@id": "d2e686",
+                            "bcl:num": "3",
+                            "bcl:text": "For the purposes of this section",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e696",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a landlord is not in default of the landlord's duty under subsection\n              (1) unless the default would be actionable at the suit of the\n            occupier,"
+                                },
+                                {
+                                    "@id": "d2e705",
+                                    "bcl:num": "b",
+                                    "bcl:text": "nothing relieves a landlord of a duty the landlord may have apart from this\n            section, and"
+                                },
+                                {
+                                    "@id": "d2e714",
+                                    "bcl:num": "c",
+                                    "bcl:text": "obligations imposed by an enactment in respect of a tenancy are deemed to be\n            imposed by the tenancy."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e723",
+                            "bcl:num": "4",
+                            "bcl:text": "This section applies to all tenancies."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e733",
+                    "bcl:marginalnote": {
+                        "in:doc": "Negligence Act",
+                        "#text": "Application of"
+                    },
+                    "bcl:num": "7",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96333_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Negligence Act"
+                        },
+                        "#text": "The  applies to this Act."
+                    }
+                },
+                {
+                    "@id": "d2e750",
+                    "bcl:marginalnote": "Crown bound",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e758",
+                            "bcl:num": "1",
+                            "bcl:text": "Except as otherwise provided in subsections (2) and (3), the Crown and its agencies\n          are bound by this Act."
+                        },
+                        {
+                            "@id": "d2e767",
+                            "bcl:num": "2",
+                            "bcl:text": "Despite subsection (1) but subject to subsection (3), this Act does not\n          apply to the government or to the Crown in right of Canada or to a municipality if the\n          government, the Crown in right of Canada or the municipality is the occupier of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e776",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a public highway, other than a recreational trail referred to in section 3 (3.3)\n              (c),"
+                                },
+                                {
+                                    "@id": "d2e786",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a public road,"
+                                },
+                                {
+                                    "@id": "d2e795",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96157_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Forest Act"
+                                        },
+                                        "#text": "a road under the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e807",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96318_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Motor Vehicle\n                Act"
+                                        },
+                                        "#text": "a private road as defined in section 2 (1) of the , other than a private road referred to in section 3 (3.3) (b)\n              (iv) of this Act, or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e819",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96189_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Industrial Roads\n                Act"
+                                        },
+                                        "#text": "an industrial road as defined in the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e831",
+                            "bcl:num": "3",
+                            "bcl:text": "This Act does not apply to the government if the government is the occupier of a\n          resource road, except to the extent provided in section 3.1."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e841",
+                    "bcl:marginalnote": "Act not to affect certain relationships",
+                    "bcl:num": "9",
+                    "bcl:text": "This Act does not apply to or affect the liability of",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e852",
+                            "bcl:num": "a",
+                            "bcl:text": "an employer in respect of the employer's duties to an employee,"
+                        },
+                        {
+                            "@id": "d2e861",
+                            "bcl:num": "b",
+                            "bcl:text": "a person under a contract for the hire of, or for the carriage for reward of\n          persons or property in, any vehicle, vessel, aircraft or other means of\n          transport,"
+                        },
+                        {
+                            "@id": "d2e871",
+                            "bcl:num": "c",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96206_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Hotel Keepers Act"
+                                },
+                                "#text": "a person under the , or"
+                            }
+                        },
+                        {
+                            "@id": "d2e883",
+                            "bcl:num": "d",
+                            "bcl:text": "a person under a contract of bailment."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e893",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e901",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the\n            ."
+                            }
+                        },
+                        {
+                            "@id": "d2e913",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may\n          make regulations respecting any matter for which regulations are contemplated by this\n          Act."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

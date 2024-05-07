@@ -1,0 +1,2834 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96187_01",
+        "act:title": "Heritage Conservation Act",
+        "act:chapter": "187",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "712470149/96187/tlc96187_f",
+            "act:tlc": "E3tlc96187"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e21",
+                    "bcl:num": "1",
+                    "bcl:text": "Introduction",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e30",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e41",
+                                    "bcl:text": {
+                                        "in:term": "alter",
+                                        "#text": "means to change in any manner and, without limiting this, includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e50",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/97045_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Builders Lien Act"
+                                                },
+                                                "#text": "the making of an improvement, as defined in the , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e63",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any action that detracts from the heritage value of a heritage site or a heritage object;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e77",
+                                    "bcl:text": {
+                                        "in:term": "authorized official",
+                                        "#text": "means a person or class of persons"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e84",
+                                            "bcl:num": "a",
+                                            "bcl:text": "employed in any ministry of the government, and"
+                                        },
+                                        {
+                                            "@id": "d1e93",
+                                            "bcl:num": "b",
+                                            "bcl:text": "authorized by the minister in writing to be an official for the purposes of a provision of this Act or the regulations;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e72",
+                                    "bcl:text": {
+                                        "in:term": "conservation",
+                                        "#text": "includes any activity undertaken to protect, preserve or enhance the heritage value of heritage property;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e90",
+                                    "bcl:text": {
+                                        "in:term": "first nation",
+                                        "#text": "means, as the context requires, an aboriginal people sharing a common traditional territory and having a common traditional language, culture and laws, or the duly mandated governing body of one or more such people;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e99",
+                                    "bcl:text": {
+                                        "in:term": "heritage inspection",
+                                        "#text": "means a physical examination and other research necessary"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e108",
+                                            "bcl:num": "a",
+                                            "bcl:text": "to identify the heritage value of property or a portion of it, and"
+                                        },
+                                        {
+                                            "@id": "d2e118",
+                                            "bcl:num": "b",
+                                            "bcl:text": "to establish, if the property is a heritage site or heritage object,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e127",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the need for protection and conservation, or"
+                                                },
+                                                {
+                                                    "@id": "d2e136",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "conformance with heritage protection requirements;"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e145",
+                                    "bcl:text": {
+                                        "in:term": "heritage investigation",
+                                        "#text": "means an archaeological or other systematic study of heritage property to reveal its history, and may include the recording, removal and analysis of artifacts, features and other material necessary for the purpose of the heritage investigation;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e154",
+                                    "bcl:text": {
+                                        "in:term": "heritage object",
+                                        "#text": "means, whether designated or not, personal property that has heritage value to British Columbia, a community or an aboriginal people;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e163",
+                                    "bcl:text": {
+                                        "in:term": "heritage site",
+                                        "#text": "means, whether designated or not, land, including land covered by water, that has heritage value to British Columbia, a community or an aboriginal people;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e173",
+                                    "bcl:text": {
+                                        "in:term": "heritage value",
+                                        "#text": "means the historical, cultural, aesthetic, scientific or educational worth or usefulness of a site or object;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e182",
+                                    "bcl:text": {
+                                        "in:term": "heritage wreck",
+                                        "#text": "means the remains of a wrecked vessel or aircraft if"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e191",
+                                            "bcl:num": "a",
+                                            "bcl:text": "2 or more years have passed from the date that the vessel or aircraft sank, was washed ashore or crashed, or"
+                                        },
+                                        {
+                                            "@id": "d2e200",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the vessel or aircraft has been abandoned by its owner and the government has agreed to accept the abandonment for the purposes of this Act;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e209",
+                                    "bcl:text": {
+                                        "in:term": "local government",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96239_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Islands Trust Act"
+                                        },
+                                        "#text": "includes the council of a municipality, the board of a regional district, and the Trust Council and a local trust committee established under the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e221",
+                                    "bcl:text": {
+                                        "in:term": "Provincial heritage object",
+                                        "#text": "means a heritage object designated under section\u00a09;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e231",
+                                    "bcl:text": {
+                                        "in:term": "Provincial heritage site",
+                                        "#text": "means a heritage site designated under section\u00a09 or a Provincial heritage property designated under section 11.1."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e241",
+                            "bcl:marginalnote": "Purpose of Act",
+                            "bcl:num": "2",
+                            "bcl:text": "The purpose of this Act is to encourage and facilitate the protection and conservation of heritage property in British Columbia."
+                        },
+                        {
+                            "@id": "d2e253",
+                            "bcl:marginalnote": "Provincial heritage register",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e261",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister must establish and maintain one or more registers, to be known collectively as the Provincial heritage register, for the recording of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e270",
+                                            "bcl:num": "a",
+                                            "bcl:text": "Provincial heritage sites;"
+                                        },
+                                        {
+                                            "@id": "d2e279",
+                                            "bcl:num": "b",
+                                            "bcl:text": "Provincial heritage objects;"
+                                        },
+                                        {
+                                            "@id": "d2e289",
+                                            "bcl:num": "c",
+                                            "bcl:text": "heritage sites and heritage objects that are included in a schedule under section\u00a04\u00a0(4)\u00a0(a);"
+                                        },
+                                        {
+                                            "@id": "d2e298",
+                                            "bcl:num": "d",
+                                            "bcl:text": "other known heritage sites and heritage objects that are, in the opinion of the minister, protected under section 12.1;"
+                                        },
+                                        {
+                                            "@id": "d2e307",
+                                            "bcl:num": "e",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/r15001_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Local Government Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/vanch_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Vancouver Charter"
+                                                    }
+                                                ],
+                                                "#text": "buildings, structures and sites for which the minister has received notice from a local government under section 595 (1) of the  or section\u00a0602\u00a0(1) of the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e322",
+                                            "bcl:num": "f",
+                                            "bcl:text": "other prescribed heritage property."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e331",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsections (3) and (4), information in the Provincial heritage register must be available for inspection by any person during regular business hours."
+                                },
+                                {
+                                    "@id": "d2e340",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96165_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/15027",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Information Management Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/03012_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Museum Act"
+                                            }
+                                        ],
+                                        "#text": "Despite the , the minister may refuse to disclose information in the Provincial heritage register, information in the digital archives under the  and other information obtained in the administration of this Act or the  if any of the following apply:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e356",
+                                            "bcl:num": "a",
+                                            "bcl:text": "disclosure of the information could, in the opinion of the minister, result in damage to or interfere with the conservation of a heritage site or heritage object;"
+                                        },
+                                        {
+                                            "@id": "d2e365",
+                                            "bcl:num": "b",
+                                            "bcl:text": "disclosure of the information would violate an agreement made under section\u00a04;"
+                                        },
+                                        {
+                                            "@id": "d2e374",
+                                            "bcl:num": "c",
+                                            "bcl:text": "anthropological information that is of traditional social, spiritual or other cultural importance to a living community",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e383",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "was obtained under conditions of confidentiality, or"
+                                                },
+                                                {
+                                                    "@id": "d2e392",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "is confidential at the request of representatives of the community whose heritage is represented by the information."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e401",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The inspection of information in the Provincial heritage register is subject to reasonable conditions the minister may impose."
+                                },
+                                {
+                                    "@id": "d2e411",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Without limiting subsection (4), the minister may require payment of a prescribed fee to inspect the information in the Provincial heritage register."
+                                },
+                                {
+                                    "@id": "d2e420",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Protection of a heritage site or heritage object is not affected by an error or omission in the Provincial heritage register or, except for a Provincial heritage site or Provincial heritage object, by a failure to register property in the Provincial heritage register."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e430",
+                            "bcl:marginalnote": "Agreements with first nations",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e438",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Province may enter into a formal agreement with a first nation with respect to the conservation and protection of heritage sites and heritage objects that represent the cultural heritage of the aboriginal people who are represented by that first nation."
+                                },
+                                {
+                                    "@id": "d2e447",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An agreement under subsection (1) must be in writing and must be approved by the Lieutenant Governor in Council."
+                                },
+                                {
+                                    "@id": "d2e456",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subsection (2) does not apply to an agreement that is entered into under section\u00a020\u00a0(1)\u00a0(b)."
+                                },
+                                {
+                                    "@id": "d2e466",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Without limiting subsection (1), an agreement made under this section may include one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e475",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a schedule of heritage sites and heritage objects that are of particular spiritual, ceremonial or other cultural value to the aboriginal people for the purpose of protection under section 12.1\u00a0(2)\u00a0(h);"
+                                        },
+                                        {
+                                            "@id": "d2e484",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a schedule of heritage sites and heritage objects of cultural value to the aboriginal people that are not included in a schedule under paragraph (a);"
+                                        },
+                                        {
+                                            "@id": "d2e493",
+                                            "bcl:num": "c",
+                                            "bcl:text": "circumstances under which the requirements of sections 12.1 (1) and (2) and 12.2 (1) do not apply with respect to heritage sites and heritage objects, or to types of heritage sites and heritage objects, for which the first nation administers its own heritage protection;"
+                                        },
+                                        {
+                                            "@id": "d2e502",
+                                            "bcl:num": "d",
+                                            "bcl:text": "policies or procedures that will apply to the issuance of or refusal to issue a permit under section 12.2 or 12.4 with respect to",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e511",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "sites and objects identified in a schedule under paragraph (a) or (b), or"
+                                                },
+                                                {
+                                                    "@id": "d2e521",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "other sites and objects or types of sites and objects identified in the agreement;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e530",
+                                            "bcl:num": "e",
+                                            "bcl:text": "provisions with regard to the delegation of ministerial authority under section 20.1;"
+                                        },
+                                        {
+                                            "@id": "d2e539",
+                                            "bcl:num": "f",
+                                            "bcl:text": "any other provisions the parties agree on."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e548",
+                                    "bcl:num": "5",
+                                    "bcl:text": "For the purpose of section 12.1 (2), if an agreement includes a schedule under subsection\u00a0(4)\u00a0(a), the agreement must identify actions which would constitute a desecration or which would detract from the heritage value of scheduled sites and objects, and different actions may be identified for different sites or objects or for different classes of sites or objects."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e559",
+                            "bcl:marginalnote": "Act is binding on the government",
+                            "bcl:num": "5",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "Despite section 14 (2) of the , this Act and the regulations and orders made under it are binding on the government."
+                            }
+                        },
+                        {
+                            "@id": "d2e574",
+                            "bcl:marginalnote": "Act prevails over conflicting legislation",
+                            "bcl:num": "6",
+                            "bcl:text": "If, with respect to any matter affecting the conservation of a heritage site or heritage object referred to in section 12.1 (2), there is a conflict between this Act and any other Act, this Act prevails."
+                        },
+                        {
+                            "@id": "d2e586",
+                            "bcl:marginalnote": "Provincial heritage policies",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e594",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may, with the approval of the Lieutenant Governor in Council, establish policies and standards for the identification, conservation, management and disposition of any heritage site or heritage object owned or managed by the government."
+                                },
+                                {
+                                    "@id": "d2e603",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/10017_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Haida Gwaii Reconciliation Act"
+                                        },
+                                        "#text": "Despite subsection (1), policies and standards established by the Haida Gwaii Management Council under section 7 (2) of the  for the identification and conservation of heritage sites within the management area, as defined in section 1 (1) of that Act, must be given effect in that management area as if they were policies and standards established under subsection (1) of this section."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e616",
+                            "bcl:marginalnote": "No derogation of aboriginal and treaty rights",
+                            "bcl:num": "8",
+                            "bcl:text": "For greater certainty, no provision of this Act and no provision in an agreement entered into under section\u00a04 abrogates or derogates from the aboriginal and treaty rights of a first nation or of any aboriginal peoples."
+                        },
+                        {
+                            "@id": "d2e628",
+                            "bcl:marginalnote": "Application of Act to treaty lands",
+                            "bcl:num": "8.1",
+                            "bcl:text": "If a treaty first nation, in accordance with its final agreement, makes laws for the conservation and protection of, and access to, heritage sites and heritage objects on its treaty lands, sections 9, 12.1 to 12.8, 16.1, 18 and 20\u00a0(1)\u00a0(a) do not apply in relation to those treaty lands."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e640",
+                    "bcl:num": "2",
+                    "bcl:text": "Provincial Heritage Conservation",
+                    "bcl:division": [
+                        {
+                            "@id": "d1e756",
+                            "bcl:num": "1",
+                            "bcl:text": "Designation"
+                        },
+                        {
+                            "@id": "d1e1462",
+                            "bcl:num": "2",
+                            "bcl:text": "Permits"
+                        },
+                        {
+                            "@id": "d1e2515",
+                            "bcl:num": "3",
+                            "bcl:text": "Administration and Enforcement"
+                        },
+                        {
+                            "@id": "d1e3098",
+                            "bcl:num": "4",
+                            "bcl:text": "General"
+                        }
+                    ],
+                    "bcl:section": [
+                        {
+                            "@id": "d2e650",
+                            "bcl:marginalnote": "Heritage designation",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e658",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e667",
+                                            "bcl:num": "a",
+                                            "bcl:text": "designate land as a Provincial heritage site, or"
+                                        },
+                                        {
+                                            "@id": "d2e676",
+                                            "bcl:num": "b",
+                                            "bcl:text": "designate an object as a Provincial heritage object."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e686",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A designation under subsection (1) (a) may apply to land that does not have heritage value if, in the opinion of the Lieutenant Governor in Council, designation is necessary or desirable for the conservation of heritage property that is",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e695",
+                                            "bcl:num": "a",
+                                            "bcl:text": "designated under this section,"
+                                        },
+                                        {
+                                            "@id": "d2e704",
+                                            "bcl:num": "b",
+                                            "bcl:text": "protected under section 12.1 (2),"
+                                        },
+                                        {
+                                            "@id": "d2e713",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/r15001_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Local Government Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/vanch_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Vancouver Charter"
+                                                    }
+                                                ],
+                                                "#text": "protected heritage property under the  or the , or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e728",
+                                            "bcl:num": "d",
+                                            "bcl:text": "designated under section 11.1."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e737",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A designation made under this section may do one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e747",
+                                            "bcl:num": "a",
+                                            "bcl:text": "apply to a single property or to part of a property;"
+                                        },
+                                        {
+                                            "@id": "d2e756",
+                                            "bcl:num": "b",
+                                            "bcl:text": "apply to more than one property including properties owned by different persons;"
+                                        },
+                                        {
+                                            "@id": "d2e765",
+                                            "bcl:num": "c",
+                                            "bcl:text": "establish policies or procedures regarding the provision of financial or other support for the conservation of a heritage site or heritage object;"
+                                        },
+                                        {
+                                            "@id": "d2e774",
+                                            "bcl:num": "d",
+                                            "bcl:text": "specify types of alterations to the property which may be made without a permit under section 12.4;"
+                                        },
+                                        {
+                                            "@id": "d2e783",
+                                            "bcl:num": "e",
+                                            "bcl:text": "specify policies or procedures concerning the issuing of permits under section 12.4 with respect to a property."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e793",
+                            "bcl:marginalnote": "Designation procedure",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e801",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Before a designation is made under section\u00a09, the minister must serve notice of the proposed designation on the following persons:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e810",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the case of land,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e819",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "all persons who, according to the records of the land title office, have a registered interest in the land to be designated,"
+                                                },
+                                                {
+                                                    "@id": "d2e829",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the local government or local governments having jurisdiction over the land to be designated, and"
+                                                },
+                                                {
+                                                    "@id": "d2e838",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the first nation or first nations within whose traditional territory the land to be designated lies;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e847",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the case of objects,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e856",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the person who has possession of the object,"
+                                                },
+                                                {
+                                                    "@id": "d2e865",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96359_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Personal Property Security Act"
+                                                        },
+                                                        "#text": "all parties who, according to the records of the personal property registry established under the , have a registered interest in the object, and"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d2e877",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "any other person or party who, in the opinion of the minister, is or may be the owner of the object or has or may have a proprietary interest in the object;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e887",
+                                            "bcl:num": "c",
+                                            "bcl:text": "any other prescribed person."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e896",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person or party served with notice under subsection (1) may serve the minister with a notice of objection to the proposed designation within 30 days after receiving the notice of the proposed designation."
+                                },
+                                {
+                                    "@id": "d2e905",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On receiving a notice of objection, the minister must review the objection and may then amend or cancel the proposed designation as the minister considers appropriate."
+                                },
+                                {
+                                    "@id": "d2e914",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Before a designation is made, the minister must advise the Lieutenant Governor in Council if any notice of objection to the proposed designation has been received and, if so received, provide the Lieutenant Governor in Council with a copy of each notice of objection received, the results of the review of the notice or notices of objection and the terms and conditions of any amendment to the proposed designation."
+                                },
+                                {
+                                    "@id": "d2e923",
+                                    "bcl:num": "5",
+                                    "bcl:text": [
+                                        "Within 30\u00a0days after",
+                                        "the minister must serve notice on the persons entitled to notice under subsection (1) that a designation has or has not been made."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e932",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the minister cancels a proposed designation,"
+                                        },
+                                        {
+                                            "@id": "d2e942",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the Lieutenant Governor in Council makes a designation, or"
+                                        },
+                                        {
+                                            "@id": "d2e951",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the Lieutenant Governor in Council decides not to make a designation,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e963",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Within 30 days after a designation is made, the minister must register a description of the designated property in the Provincial heritage register established under section\u00a03\u00a0(1) and,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e972",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the case of land, file a notice of the designation in the land title office in the manner provided under section\u00a032, or"
+                                        },
+                                        {
+                                            "@id": "d2e981",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96312_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Miscellaneous Registrations Act, 1992"
+                                                },
+                                                "#text": "in the case of personal property, file a notice of the designation in the personal property registry under the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e994",
+                                    "bcl:num": "7",
+                                    "bcl:text": "No designation is invalid because of inadvertent and minor non-compliance with this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1004",
+                            "bcl:marginalnote": "Compensation for heritage designation",
+                            "bcl:num": "11",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1012",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a designation under section\u00a09 causes, or will cause at the time of designation, a reduction in the market value of the designated property, the government must compensate an owner of the designated property who makes an application under subsection\u00a0(2), and the compensation must be in an amount or in a form the minister and the owner agree on or, failing an agreement, in an amount or in a form determined by binding arbitration under subsection\u00a0(4)."
+                                },
+                                {
+                                    "@id": "d2e1021",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The owner of a designated property may apply to the minister for compensation for the reduction in the market value of the designated property."
+                                },
+                                {
+                                    "@id": "d2e1030",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An application under subsection (2)",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1040",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must be made, in order for the owner to be entitled to compensation under this section, no later than one year after the designation under section\u00a09, and"
+                                        },
+                                        {
+                                            "@id": "d2e1049",
+                                            "bcl:num": "b",
+                                            "bcl:text": "may be made before the designation under section\u00a09."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1058",
+                                    "bcl:num": "4",
+                                    "bcl:text": [
+                                        "If the minister and the owner are unable to agree",
+                                        {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/20002",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Arbitration Act"
+                                            },
+                                            "#text": "then either the minister or the owner may refer the matter to binding arbitration under the ."
+                                        }
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1067",
+                                            "bcl:num": "a",
+                                            "bcl:text": "that the owner is entitled to compensation under subsection (1), or"
+                                        },
+                                        {
+                                            "@id": "d2e1076",
+                                            "bcl:num": "b",
+                                            "bcl:text": "on the amount or form of compensation,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1092",
+                                    "bcl:num": "5",
+                                    "bcl:text": "An arbitration under this section must be by a single arbitrator unless the minister and the owner agree to the appointment of an arbitration panel."
+                                },
+                                {
+                                    "@id": "d2e1101",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The arbitrator or arbitration panel, in determining whether the owner is entitled to compensation and the amount or form of compensation, must consider",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1110",
+                                            "bcl:num": "a",
+                                            "bcl:text": "eligibility for financial and other support for conservation of the heritage site or heritage object, and"
+                                        },
+                                        {
+                                            "@id": "d2e1119",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any other benefits that are available because of the designation of the property."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1128",
+                                    "bcl:num": "7",
+                                    "bcl:text": "Compensation must not be paid, and an arbitration must not continue, if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1137",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the minister cancels the proposed designation, or"
+                                        },
+                                        {
+                                            "@id": "d2e1147",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the Lieutenant Governor in Council does not make the designation."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1156",
+                                    "bcl:num": "8",
+                                    "bcl:text": "Nothing in this section authorizes the government to give any financial or other benefit to an owner except that which is commensurate with the reduction in market value of the designated property as caused by that designation."
+                                },
+                                {
+                                    "@id": "d2e1165",
+                                    "bcl:num": "9",
+                                    "bcl:text": "Compensation under this section only applies to property that is designated as a Provincial heritage site or a Provincial heritage object under section 9 and does not apply in the case of property that, immediately before a designation under section 9, is",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1174",
+                                            "bcl:num": "a",
+                                            "bcl:text": "already designated as a Provincial heritage site under section 9 or a Provincial heritage property under section 11.1,"
+                                        },
+                                        {
+                                            "@id": "d2e1183",
+                                            "bcl:num": "b",
+                                            "bcl:text": "already designated as a Provincial heritage object under section 9,"
+                                        },
+                                        {
+                                            "@id": "d2e1192",
+                                            "bcl:num": "c",
+                                            "bcl:text": "protected under section 12.1 (2), or"
+                                        },
+                                        {
+                                            "@id": "d2e1202",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/r15001_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Local Government Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/vanch_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Vancouver Charter"
+                                                    }
+                                                ],
+                                                "#text": "designated under section 611 of the  or section 593 of the ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1378",
+                            "bcl:marginalnote": "Provincial heritage properties",
+                            "bcl:num": "11.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1386",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may, by order, designate a heritage site on Crown land as a Provincial heritage property and the Provincial heritage property includes the collection of accessioned artifacts associated with that heritage site."
+                                },
+                                {
+                                    "@id": "d1e1395",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96344_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Park Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may, by regulation, provide that any provision of the  applies to a Provincial heritage property designated under subsection (1), and all authorities, rights, duties and other matters under those provisions apply in relation to the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1407",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96344_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Park Act"
+                                                },
+                                                "#text": "the minister as though the minister was the minister under the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1420",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96344_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Park Act"
+                                                },
+                                                "#text": "directors or officers assigned by the minister to administer a Provincial heritage property as though they were directors or officers under the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1433",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96344_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Park Act"
+                                                },
+                                                "#text": "the Provincial heritage property as though it were a Class A park under the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1447",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a park use permit applies in respect of land when that land is designated as a Provincial heritage property under subsection (1), the permit is deemed to have been issued under this section by the minister and subsection (2) applies for the purposes of interpretation of that permit."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1218",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "12",
+                            "bcl:text": "[Repealed 2019-26-13.]"
+                        },
+                        {
+                            "@id": "d1e1492",
+                            "bcl:marginalnote": "Heritage protection",
+                            "bcl:num": "12.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1500",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Except as authorized by a permit issued under section 12.2 or 12.4, a person must not remove, or attempt to remove, from British Columbia a heritage object that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1508",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is protected under subsection (2), or"
+                                        },
+                                        {
+                                            "@id": "d1e1517",
+                                            "bcl:num": "b",
+                                            "bcl:text": "has been removed from a site protected under subsection (2)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1527",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Except as authorized by a permit issued under section 12.2 or 12.4 or an order issued under section 12.3, a person must not do any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1535",
+                                            "bcl:num": "a",
+                                            "bcl:text": "damage, desecrate or alter a Provincial heritage site or a Provincial heritage object or remove from a Provincial heritage site or Provincial heritage object any heritage object or material that constitutes part of the site or object;"
+                                        },
+                                        {
+                                            "@id": "d1e1544",
+                                            "bcl:num": "b",
+                                            "bcl:text": "damage, desecrate or alter a burial place that has historical or archaeological value or remove human remains or any heritage object from a burial place that has historical or archaeological value;"
+                                        },
+                                        {
+                                            "@id": "d1e1553",
+                                            "bcl:num": "c",
+                                            "bcl:text": "damage, alter, cover or move an aboriginal rock painting or aboriginal rock carving that has historical or archaeological value;"
+                                        },
+                                        {
+                                            "@id": "d1e1563",
+                                            "bcl:num": "d",
+                                            "bcl:text": "damage, excavate, dig in or alter, or remove any heritage object from, a site that contains artifacts, features, materials or other physical evidence of human habitation or use before 1846;"
+                                        },
+                                        {
+                                            "@id": "d1e1572",
+                                            "bcl:num": "e",
+                                            "bcl:text": "damage or alter a heritage wreck or remove any heritage object from a heritage wreck;"
+                                        },
+                                        {
+                                            "@id": "d1e1581",
+                                            "bcl:num": "f",
+                                            "bcl:text": "damage, excavate, dig in or alter, or remove any heritage object from, an archaeological site not otherwise protected under this section for which identification standards have been established by regulation;"
+                                        },
+                                        {
+                                            "@id": "d1e1590",
+                                            "bcl:num": "g",
+                                            "bcl:text": "damage, excavate, dig in or alter, or remove any heritage object from, a site that contains artifacts, features, materials or other physical evidence of unknown origin if the site may be protected under paragraphs (b) to\u00a0(f);"
+                                        },
+                                        {
+                                            "@id": "d1e1599",
+                                            "bcl:num": "h",
+                                            "bcl:text": "damage, desecrate or alter a site or object that is identified in a schedule under section 4\u00a0(4)\u00a0(a);"
+                                        },
+                                        {
+                                            "@id": "d1e1608",
+                                            "bcl:num": "i",
+                                            "bcl:text": "damage, excavate or alter, or remove any heritage object from, a property that is subject to an order under section 12.3\u00a0(1) or\u00a016.1."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1618",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The Lieutenant Governor in Council may make regulations respecting the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1626",
+                                            "bcl:num": "a",
+                                            "bcl:text": "defining the extent of types of sites protected under subsection (2), except heritage sites or objects protected under subsection (2)\u00a0(h);"
+                                        },
+                                        {
+                                            "@id": "d1e1635",
+                                            "bcl:num": "b",
+                                            "bcl:text": "identifying types of features, material or evidence for which the requirements of subsection (2)\u00a0(d) and\u00a0(g) do not apply, which may be different for different types of sites;"
+                                        },
+                                        {
+                                            "@id": "d1e1644",
+                                            "bcl:num": "c",
+                                            "bcl:text": "establishing identification standards for archaeological sites to be protected under subsection (2)\u00a0(f);"
+                                        },
+                                        {
+                                            "@id": "d1e1654",
+                                            "bcl:num": "d",
+                                            "bcl:text": "identifying actions that are deemed to derogate from the heritage value of a site or object, or classes of sites or objects, protected under subsection (2), except with respect to sites protected under subsection (2)\u00a0(h)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1665",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The minister may, after providing an opportunity for consultation with the first nation whose heritage site or object would be affected,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1673",
+                                            "bcl:num": "a",
+                                            "bcl:text": "define the extent of a site protected under subsection (2), or"
+                                        },
+                                        {
+                                            "@id": "d1e1682",
+                                            "bcl:num": "b",
+                                            "bcl:text": "exempt a site or object from subsection (2) on any terms and conditions the minister considers appropriate if the minister considers that the site or object lacks sufficient heritage value to justify its conservation."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1692",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Subsection (4) does not apply to a site or object protected under subsection (2)\u00a0(h)."
+                                },
+                                {
+                                    "@id": "d1e1701",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Except as authorized by a permit issued under section 12.4, a person must not damage, alter or remove",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1709",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a notice erected under section 17, or"
+                                        },
+                                        {
+                                            "@id": "d1e1718",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a plaque or marker installed under section 18."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1729",
+                            "bcl:marginalnote": "Heritage inspection and heritage investigation by permit",
+                            "bcl:num": "12.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1737",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person must not excavate or otherwise alter land for the purposes of archaeological research or searching for artifacts of aboriginal origin except under a permit issued under this section or an order issued under section\u00a012.3."
+                                },
+                                {
+                                    "@id": "d1e1746",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may, by permit, authorize a heritage inspection or heritage investigation of any property."
+                                },
+                                {
+                                    "@id": "d1e1755",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The person named as a proponent in an application for a permit under subsection (2) is liable to pay for a heritage inspection or heritage investigation authorized by the permit."
+                                },
+                                {
+                                    "@id": "d1e1765",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A permit issued under subsection (2) does not authorize entry onto land or into a building without the permission of the owner or occupier."
+                                },
+                                {
+                                    "@id": "d1e1774",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Sections 12.4 to 12.8, except sections 12.4 (3) (c), 12.5\u00a0(2) and\u00a0(3) and 12.6\u00a0(3), apply to permits authorized under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1784",
+                            "bcl:marginalnote": "Heritage inspection and heritage investigation by ministerial order",
+                            "bcl:num": "12.3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1792",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may order that a heritage inspection or heritage investigation be conducted if the minister considers that one or more of the following apply:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1800",
+                                            "bcl:num": "a",
+                                            "bcl:text": "land may contain a heritage site or heritage object protected under section 12.1;"
+                                        },
+                                        {
+                                            "@id": "d1e1809",
+                                            "bcl:num": "b",
+                                            "bcl:text": "land that may have heritage value, or that may include a heritage site or heritage object, may be subject to subdivision;"
+                                        },
+                                        {
+                                            "@id": "d1e1818",
+                                            "bcl:num": "c",
+                                            "bcl:text": "property may be subject to alienation from government ownership;"
+                                        },
+                                        {
+                                            "@id": "d1e1828",
+                                            "bcl:num": "d",
+                                            "bcl:text": "property that may have heritage value, or land that may include heritage property, may be subject to alteration by natural or human causes;"
+                                        },
+                                        {
+                                            "@id": "d1e1837",
+                                            "bcl:num": "e",
+                                            "bcl:text": "an object that may have heritage value may be subject to removal from British Columbia."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1847",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A heritage inspection or heritage investigation order made under subsection (1)",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1855",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must state the purpose of the heritage inspection or heritage investigation,"
+                                        },
+                                        {
+                                            "@id": "d1e1864",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must specify how long the order is to remain in effect,"
+                                        },
+                                        {
+                                            "@id": "d1e1873",
+                                            "bcl:num": "c",
+                                            "bcl:text": "must require that the heritage inspection or heritage investigation be carried out expeditiously,"
+                                        },
+                                        {
+                                            "@id": "d1e1883",
+                                            "bcl:num": "d",
+                                            "bcl:text": "may provide that property covered by the order is subject to protection under section 12.1 while the order remains in effect, and"
+                                        },
+                                        {
+                                            "@id": "d1e1892",
+                                            "bcl:num": "e",
+                                            "bcl:text": "may require that the owner take actions to preserve the integrity and condition of property covered by the order while the order remains in effect."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1902",
+                                    "bcl:num": "3",
+                                    "bcl:text": [
+                                        "If an order for a heritage inspection or heritage investigation made under subsection (1) relates to",
+                                        "the minister may require the person purchasing, subdividing, developing or using the property to undertake or pay for the heritage inspection or heritage investigation."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1910",
+                                            "bcl:num": "a",
+                                            "bcl:text": "alienation of government-owned property,"
+                                        },
+                                        {
+                                            "@id": "d1e1919",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a public work authorized to be undertaken under an Act,"
+                                        },
+                                        {
+                                            "@id": "d1e1928",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the extraction or harvesting of resources from land,"
+                                        },
+                                        {
+                                            "@id": "d1e1938",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the subdivision of land, or"
+                                        },
+                                        {
+                                            "@id": "d1e1947",
+                                            "bcl:num": "e",
+                                            "bcl:text": "changes in use or development of land,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1961",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A person must not interfere with a heritage inspection or heritage investigation ordered under subsection\u00a0(1)."
+                                },
+                                {
+                                    "@id": "d1e1970",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A person whose property is damaged during the course of a heritage inspection or heritage investigation ordered under subsection (1) is entitled to have the damage repaired at the expense of the government or, if the damage cannot be repaired, to compensation from the government."
+                                },
+                                {
+                                    "@id": "d1e1979",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Section 12.5 (1) applies to orders made under this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1989",
+                            "bcl:marginalnote": "Power to issue or amend permits",
+                            "bcl:num": "12.4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1997",
+                                    "bcl:num": "1",
+                                    "bcl:text": "To carry out an action referred to in section 12.1, a person must apply for a permit or for a permit to be amended, as applicable, and the minister may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2005",
+                                            "bcl:num": "a",
+                                            "bcl:text": "issue the permit,"
+                                        },
+                                        {
+                                            "@id": "d1e2014",
+                                            "bcl:num": "b",
+                                            "bcl:text": "amend the permit, or"
+                                        },
+                                        {
+                                            "@id": "d1e2023",
+                                            "bcl:num": "c",
+                                            "bcl:text": "refuse to issue or amend the permit."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2033",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An application submitted to the minister under this section must be",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2041",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the form and manner required by the minister, and"
+                                        },
+                                        {
+                                            "@id": "d1e2050",
+                                            "bcl:num": "b",
+                                            "bcl:text": "accompanied by any information and content specified by the minister."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2060",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The minister may refuse to issue or amend a permit under this section if the minister considers that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2068",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the action to be authorized under the permit would unreasonably compromise the heritage protection of the property,"
+                                        },
+                                        {
+                                            "@id": "d1e2077",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the information provided in the application is insufficient to determine if the action to be authorized under the permit would unreasonably compromise the heritage protection of the property,"
+                                        },
+                                        {
+                                            "@id": "d1e2086",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a heritage inspection or heritage investigation would be required to remedy the insufficiency of information provided in the application to determine if the action to be authorized under the permit would unreasonably compromise the heritage protection of the property, or"
+                                        },
+                                        {
+                                            "@id": "d1e2096",
+                                            "bcl:num": "d",
+                                            "bcl:text": "any other prescribed consideration applies."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2107",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Considerations that may be prescribed under subsection (3)\u00a0(d) include considerations relating to any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2115",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the application for the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2124",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2133",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the applicant for the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2143",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the permit holder."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2154",
+                            "bcl:marginalnote": "Permit requirements, specifications and conditions",
+                            "bcl:num": "12.5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2162",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A permit issued under section 12.4 (1) may include requirements, specifications and conditions that the minister considers appropriate, including",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2170",
+                                            "bcl:num": "a",
+                                            "bcl:text": "being limited to a period of time or location,"
+                                        },
+                                        {
+                                            "@id": "d1e2179",
+                                            "bcl:num": "b",
+                                            "bcl:text": "requiring the permit holder to consult with or obtain the consent of one or more parties whose heritage the property represents or may represent,"
+                                        },
+                                        {
+                                            "@id": "d1e2188",
+                                            "bcl:num": "c",
+                                            "bcl:text": "requiring the permit holder to provide the minister with reports satisfactory to the minister, and"
+                                        },
+                                        {
+                                            "@id": "d1e2198",
+                                            "bcl:num": "d",
+                                            "bcl:text": "specifying a repository for heritage objects that are removed from the heritage property."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2208",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Despite any other enactment, a permit issued under section 12.4 (1) may specify the siting, dimensions, form, exterior design and finish of new construction or renovations to a building or structure."
+                                },
+                                {
+                                    "@id": "d1e2217",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A permit does not authorize the permit holder to enter property, or to make any alteration to property, without the permission of the owner or occupier."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2227",
+                            "bcl:marginalnote": "Amending, suspending or cancelling permits \u2014 new information available to minister",
+                            "bcl:num": "12.6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2235",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may, in accordance with subsection (2), do the following in respect of a permit issued under section 12.4\u00a0(1):",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2243",
+                                            "bcl:num": "a",
+                                            "bcl:text": "amend the requirements, specifications and conditions of the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2252",
+                                            "bcl:num": "b",
+                                            "bcl:text": "suspend the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2261",
+                                            "bcl:num": "c",
+                                            "bcl:text": "cancel the permit."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2271",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may take any action under subsection (1) if the minister",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2279",
+                                            "bcl:num": "a",
+                                            "bcl:text": "has new information respecting the heritage value of a property that was not considered when the permit was issued or amended, and"
+                                        },
+                                        {
+                                            "@id": "d1e2288",
+                                            "bcl:num": "b",
+                                            "bcl:text": "considers that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e2296",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the action authorized under the permit would unreasonably compromise the heritage protection of the property,"
+                                                },
+                                                {
+                                                    "@id": "d1e2305",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the information submitted when the permit was issued or amended is no longer sufficient to determine if the action to be authorized under the permit would unreasonably compromise the heritage protection of the property, or"
+                                                },
+                                                {
+                                                    "@id": "d1e2314",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "any other prescribed consideration applies."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2325",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The minister may suspend a permit under subsection (1) (b) if the minister",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2333",
+                                            "bcl:num": "a",
+                                            "bcl:text": "has new information respecting the heritage value of a property that was not considered when the permit was issued or amended, and"
+                                        },
+                                        {
+                                            "@id": "d1e2342",
+                                            "bcl:num": "b",
+                                            "bcl:text": "considers that a heritage inspection or heritage investigation is required to determine if the action authorized under the permit would unreasonably compromise the heritage protection of the property."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2353",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Considerations that may be prescribed under subsection (2) (b) (iii) include considerations relating to either of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2361",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2370",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the permit holder."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2382",
+                            "bcl:marginalnote": "Amending, suspending or cancelling permits \u2014 enforcement",
+                            "bcl:num": "12.7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2390",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may, in accordance with subsection (2), do the following in respect of a permit issued under section 12.4\u00a0(1):",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2398",
+                                            "bcl:num": "a",
+                                            "bcl:text": "amend the requirements, specifications and conditions of the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2407",
+                                            "bcl:num": "b",
+                                            "bcl:text": "suspend the permit;"
+                                        },
+                                        {
+                                            "@id": "d1e2416",
+                                            "bcl:num": "c",
+                                            "bcl:text": "cancel the permit."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2426",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may take any action under subsection (1) if the minister has reasonable and probable grounds to believe any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2434",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the application for the permit included false or misleading information with respect to a material fact;"
+                                        },
+                                        {
+                                            "@id": "d1e2443",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the application for the permit omitted to state a material fact, the omission of which makes information in the application false or misleading;"
+                                        },
+                                        {
+                                            "@id": "d1e2452",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the permit holder has contravened or is in default of a requirement, specification or condition of the permit, whether or not the permit holder is charged with an offence under this Act;"
+                                        },
+                                        {
+                                            "@id": "d1e2462",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the permit holder has contravened a provision of this Act or the regulations, whether or not the permit holder is charged with an offence under this Act;"
+                                        },
+                                        {
+                                            "@id": "d1e2471",
+                                            "bcl:num": "e",
+                                            "bcl:text": "a prescribed circumstance has occurred in respect of the permit, the application for the permit or the permit holder."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2482",
+                            "bcl:marginalnote": "Subsequent amendment, suspension or cancellation of permit",
+                            "bcl:num": "12.8",
+                            "bcl:text": "For certainty, if the minister amends or suspends a permit under section 12.6\u00a0(2) or\u00a0(3) or\u00a012.7, the minister may subsequently amend, suspend or cancel the permit in accordance with section 12.6\u00a0(2) or\u00a0(3) or\u00a012.7, as applicable."
+                        },
+                        {
+                            "@id": "d2e1395",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "13-14",
+                            "bcl:text": "[Repealed 2019-26-15.]"
+                        },
+                        {
+                            "@id": "d2e1857",
+                            "bcl:marginalnote": "Entry authority for heritage inspection and heritage investigation orders",
+                            "bcl:num": "15",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1865",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An order made under section 12.3 authorizes the person or persons conducting the heritage inspection or heritage investigation to enter land identified in the order at any reasonable time for the purposes of the heritage inspection or heritage investigation."
+                                },
+                                {
+                                    "@id": "d2e1874",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Before entering or when entering land under subsection (1), the person conducting the heritage inspection or heritage investigation must make a reasonable attempt to notify the owner or occupier of the land and, if requested, present proof of his or her authorization."
+                                },
+                                {
+                                    "@id": "d2e1883",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Except as provided in subsection (4), nothing in this section or in an order made under section 12.3 authorizes entry into a building without the permission of the owner or occupier."
+                                },
+                                {
+                                    "@id": "d2e1893",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A justice may issue a warrant authorizing a person to enter land or a building to conduct a heritage inspection or heritage investigation ordered under section 12.3 if the justice is satisfied that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1902",
+                                            "bcl:num": "a",
+                                            "bcl:text": "there are reasonable grounds to believe that entry is required to achieve the purposes of the order, and"
+                                        },
+                                        {
+                                            "@id": "d2e1911",
+                                            "bcl:num": "b",
+                                            "bcl:text": "there are reasonable grounds to believe that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1920",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "an emergency exists,"
+                                                },
+                                                {
+                                                    "@id": "d2e1929",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the person conducting the heritage inspection or heritage investigation has been unable to notify the owner or occupier after making a reasonable attempt to do so,"
+                                                },
+                                                {
+                                                    "@id": "d2e1938",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the admission has been refused or refusal is anticipated, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1948",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "the notification may defeat the purpose of the entry."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1957",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A warrant issued under subsection (4) continues in force until the purpose for which the entry is required has been satisfied."
+                                },
+                                {
+                                    "@id": "d2e1966",
+                                    "bcl:num": "6",
+                                    "bcl:text": "If a heritage inspection or heritage investigation conducted under the authority of a warrant under subsection (4) requires entry into a building, the person conducting the heritage inspection or heritage investigation must be accompanied by a peace officer."
+                                },
+                                {
+                                    "@id": "d2e1975",
+                                    "bcl:num": "7",
+                                    "bcl:text": "On completion of a heritage inspection or heritage investigation ordered under section 12.3, if the owner of land was not notified under subsection (2), the person undertaking the heritage inspection or heritage investigation must mail a notice informing the owner that a heritage inspection or heritage investigation has been conducted."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2685",
+                            "bcl:marginalnote": "Entry and inspection",
+                            "bcl:num": "15.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2693",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "dwelling",
+                                        "#text": "In subsections (2) and (4),  means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2704",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a structure occupied as a private residence, and"
+                                        },
+                                        {
+                                            "@id": "d1e2713",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if only part of a structure is occupied as a private residence, that part of the structure."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2723",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For any purposes related to the administration or enforcement of the Act, the regulations, a permit, an order, an agreement or an application for a permit, an authorized official may enter, at any reasonable time, on land or premises, other than a dwelling, if the authorized official has reasonable grounds to believe that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2731",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the land or premises contains a site or object that has or may have heritage value,"
+                                        },
+                                        {
+                                            "@id": "d1e2740",
+                                            "bcl:num": "b",
+                                            "bcl:text": "activities are being, have been or will be carried out by a person who, under this Act, is required to hold a permit, an order or an agreement to carry out that activity, or"
+                                        },
+                                        {
+                                            "@id": "d1e2749",
+                                            "bcl:num": "c",
+                                            "bcl:text": "records concerning the activities referred to in paragraph (b) are being kept on the land or premises."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2759",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An authorized official who enters land or premises under this section may do any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2767",
+                                            "bcl:num": "a",
+                                            "bcl:text": "inspect anything or any activity that is reasonably related to the purpose of the inspection;"
+                                        },
+                                        {
+                                            "@id": "d1e2776",
+                                            "bcl:num": "b",
+                                            "bcl:text": "take samples and carry out tests and examinations;"
+                                        },
+                                        {
+                                            "@id": "d1e2785",
+                                            "bcl:num": "c",
+                                            "bcl:text": "require, for the purposes of inspection or copying, production of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e2793",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a permit, order or agreement that is required for the activity, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2802",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a record required to be kept under the Act, regulations or requirements, specifications and conditions of a permit, order or agreement;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2813",
+                                            "bcl:num": "d",
+                                            "bcl:text": "require, for the purposes of inspection, production of proof of identity by any of the following persons:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e2821",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a person who is in possession or apparent possession of the land or premises;"
+                                                },
+                                                {
+                                                    "@id": "d1e2830",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a person who has custody or control, or apparent custody or control, of the records being inspected;"
+                                                },
+                                                {
+                                                    "@id": "d1e2839",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "a person who has custody or control, or apparent custody or control, of the property being inspected;"
+                                                },
+                                                {
+                                                    "@id": "d1e2849",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "a person who is in charge of or conducting the activity being inspected;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2859",
+                                            "bcl:num": "e",
+                                            "bcl:text": "make inquiries the authorized official considers necessary."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2870",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Nothing in this section authorizes entry into a dwelling without the permission of the owner or occupier."
+                                },
+                                {
+                                    "@id": "d1e2879",
+                                    "bcl:num": "5",
+                                    "bcl:text": "An authorized official may be accompanied by a peace officer."
+                                },
+                                {
+                                    "@id": "d1e2888",
+                                    "bcl:num": "6",
+                                    "bcl:text": "An authorized official must provide proof of identity if requested by a person described in subsection (3)\u00a0(d)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2898",
+                            "bcl:marginalnote": "Warrant to search and seize evidence",
+                            "bcl:num": "15.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2906",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "A justice of the peace may issue a warrant under section 21 or 22 of the  to an authorized official to enter premises and search for and seize evidence of a contravention of this Act or the regulations."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e2919",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "Sections 23 to 24.2 of the  apply to the search and seizure of evidence described in subsection (1) of this section."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2934",
+                            "bcl:marginalnote": "Obligation of person inspected",
+                            "bcl:num": "15.3",
+                            "bcl:text": [
+                                "A person who is required by an authorized official to produce",
+                                "must produce, if and as required by the authorized official, the requested permit, order, agreement, record or identification."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2945",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a permit, order or agreement under section 15.1 (3) (c) (i),"
+                                },
+                                {
+                                    "@id": "d1e2954",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a record under section 15.1 (3) (c) (ii), or"
+                                },
+                                {
+                                    "@id": "d1e2964",
+                                    "bcl:num": "c",
+                                    "bcl:text": "proof of identity under section 15.1 (3) (d)"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1985",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "16",
+                            "bcl:text": "[Repealed 2019-26-19.]"
+                        },
+                        {
+                            "@id": "d1e2998",
+                            "bcl:marginalnote": "Stop work orders",
+                            "bcl:num": "16.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3006",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "If the minister considers that a property",
+                                        "the minister may issue, to a person or class of persons, a stop work order that prohibits any alteration of the property for a period of up to 120 days."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3014",
+                                            "bcl:num": "a",
+                                            "bcl:text": "has or may have heritage value, and"
+                                        },
+                                        {
+                                            "@id": "d1e3023",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for any reason, is likely to be altered, is being altered or has been altered,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3036",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may include in the stop work order any requirements, specifications or conditions the minister considers appropriate."
+                                },
+                                {
+                                    "@id": "d1e3045",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In prescribed circumstances, if any, the minister may extend, for a prescribed period of time, the following stop work orders:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3053",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a stop work order issued for a period of 120 days;"
+                                        },
+                                        {
+                                            "@id": "d1e3062",
+                                            "bcl:num": "b",
+                                            "bcl:text": "consecutive stop work orders that total a period of 120 days;"
+                                        },
+                                        {
+                                            "@id": "d1e3071",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a stop work order that has been extended under this subsection."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1997",
+                            "bcl:marginalnote": "Notices and immunity",
+                            "bcl:num": "17",
+                            "bcl:text": "The minister may erect and maintain a notice referring to this Act, or an order made under this Part, on or near a Provincial heritage site, and an action for loss, damage or trespass must not be brought for anything done or omitted in good faith under this section."
+                        },
+                        {
+                            "@id": "d2e2009",
+                            "bcl:marginalnote": "Promotion of heritage value",
+                            "bcl:num": "18",
+                            "bcl:text": "The minister may acknowledge the heritage value of any heritage site or heritage object by issuing a certificate or, with the permission of the owner, by installing a commemorative plaque or marker."
+                        },
+                        {
+                            "@id": "d2e2021",
+                            "bcl:marginalnote": "Unclaimed objects in heritage collections",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2029",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A public museum, archive or other heritage conservation organization that has possession of an object that it does not own, or is uncertain as to whether it owns, may apply to the Supreme Court for an order vesting ownership of the object in the museum, archive or organization if one of the following applies:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2038",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a reasonable attempt has been made to locate the owner of the object and",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2047",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "at least 25 years have passed since the making of a written agreement with the owner of the object for custody of the object, or"
+                                                },
+                                                {
+                                                    "@id": "d2e2057",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "at least 10 years have passed since the making of an oral agreement with the owner of the object for custody of the object and there is no known written custody agreement;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2066",
+                                            "bcl:num": "b",
+                                            "bcl:text": "at least 2 years have passed since the museum, archive or organization gave to the owner of the object a notice of the termination of a custody agreement with respect to the object;"
+                                        },
+                                        {
+                                            "@id": "d2e2075",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the owner of the object cannot be identified or the circumstances of the acquisition of the object are not known;"
+                                        },
+                                        {
+                                            "@id": "d2e2084",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the object was acquired from a person who may not have been the true owner."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2093",
+                                    "bcl:num": "2",
+                                    "bcl:text": "On application under subsection (1), the court may, with respect to the object that is the subject of the application, make an order vesting ownership of the object in",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2102",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the museum, archive or organization that made the application, or"
+                                        },
+                                        {
+                                            "@id": "d2e2112",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any other party the court considers is the most appropriate to own the object having regard to any heritage value the object may possess."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2121",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Before making an order under subsection (2), the court must be satisfied that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2130",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a requirement of subsection (1) has been met,"
+                                        },
+                                        {
+                                            "@id": "d2e2139",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the limitation in subsection (6) does not apply,"
+                                        },
+                                        {
+                                            "@id": "d2e2148",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a reasonable attempt has been made to notify any other parties who may have an interest in the application, and"
+                                        },
+                                        {
+                                            "@id": "d2e2157",
+                                            "bcl:num": "d",
+                                            "bcl:text": "all parties the court considers to have an interest in the application have been given a reasonable opportunity to be heard."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2167",
+                                    "bcl:num": "4",
+                                    "bcl:text": "An order under subsection (2) may include any terms or conditions that the court considers appropriate."
+                                },
+                                {
+                                    "@id": "d2e2176",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If an order vesting ownership is made under this section, the previous owner has no further claim to ownership of the object or to compensation for the object."
+                                },
+                                {
+                                    "@id": "d2e2185",
+                                    "bcl:num": "6",
+                                    "bcl:text": "This section does not apply to an object that has cultural heritage value to an aboriginal people."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2195",
+                            "bcl:marginalnote": "Powers of the minister",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2203",
+                                    "bcl:num": "1",
+                                    "bcl:text": "To further the purposes of this Act, the minister may do one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2212",
+                                            "bcl:num": "a",
+                                            "bcl:text": "acquire, manage and conserve property or acquire an interest in property;"
+                                        },
+                                        {
+                                            "@id": "d2e2221",
+                                            "bcl:num": "b",
+                                            "bcl:text": "enter into agreements with a person, organization, local government, first nation or the government of Canada or of a province;"
+                                        },
+                                        {
+                                            "@id": "d2e2231",
+                                            "bcl:num": "c",
+                                            "bcl:text": "conduct and arrange exhibits or activities to inform and stimulate the interest of the public in any matter related to the purposes of this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2240",
+                                            "bcl:num": "d",
+                                            "bcl:text": "subject to a trust or agreement under which a property was obtained, dispose of the property and execute instruments required to effect the disposal;"
+                                        },
+                                        {
+                                            "@id": "d2e2249",
+                                            "bcl:num": "e",
+                                            "bcl:text": "receive, by donation, public subscription, devise, bequest or otherwise, money or property;"
+                                        },
+                                        {
+                                            "@id": "d2e2258",
+                                            "bcl:num": "f",
+                                            "bcl:text": "assist in or undertake research, study or publication respecting heritage conservation;"
+                                        },
+                                        {
+                                            "@id": "d2e2267",
+                                            "bcl:num": "g",
+                                            "bcl:text": "provide grants, advice and services to other parties having aims and objectives consistent with the purposes of this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2276",
+                                            "bcl:num": "h",
+                                            "bcl:text": "establish and maintain one or more inventories of heritage sites and heritage objects, including a list of heritage buildings for which the Alternate Compliance Methods of the British Columbia Building Code may apply."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2286",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Property acquired by the minister under this Act is the property of the government and title to the property may vest in the name of the government."
+                                },
+                                {
+                                    "@id": "d2e2295",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96245_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Act"
+                                        },
+                                        "#text": "Despite the , property acquired by the minister under this Act may be dealt with by the minister under this Act."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3430",
+                            "bcl:marginalnote": "Ministerial delegation and subdelegation",
+                            "bcl:num": "20.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3438",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (3), the minister may delegate the minister's powers and duties under this Act to a person or class of persons employed in any ministry of the government."
+                                },
+                                {
+                                    "@id": "d1e3447",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A delegation in respect of an authority under section 17, 18, or 20 (1) (c) and (f) may be subdelegated to a person or class of persons employed in any ministry of the government."
+                                },
+                                {
+                                    "@id": "d1e3456",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The minister may not delegate the authority in section 22."
+                                },
+                                {
+                                    "@id": "d1e3466",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A delegation under subsection (1) or subdelegation under subsection (2)",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3474",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must be in writing, and"
+                                        },
+                                        {
+                                            "@id": "d1e3483",
+                                            "bcl:num": "b",
+                                            "bcl:text": "may contain any conditions or restrictions the minister, or the person performing the subdelegation, considers appropriate."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3493",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a power or duty has been delegated under subsection (1) or subdelegated under subsection (2), a reference to the minister in relation to that power or duty includes the delegate or subdelegate, as applicable."
+                                },
+                                {
+                                    "@id": "d1e3502",
+                                    "bcl:num": "6",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "This section does not restrict or limit the authority in section 23 of the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2309",
+                            "bcl:marginalnote": "Preservation intervention",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2317",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the minister considers that property protected under section 12.1\u00a0(2) is subject to damage or deterioration, the minister may order the owner, subject to requirements, specifications and conditions that the minister considers appropriate, to preserve the property at the expense of the government."
+                                },
+                                {
+                                    "@id": "d2e2326",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the minister considers that property protected under section 12.1\u00a0(2) is subject to damage or deterioration and is being unreasonably neglected by the owner, the minister may order the owner, subject to requirements, specifications and conditions that the minister considers appropriate, to preserve the property",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3546",
+                                            "bcl:num": "a",
+                                            "bcl:text": "at the expense of the owner, or"
+                                        },
+                                        {
+                                            "@id": "d1e3555",
+                                            "bcl:num": "b",
+                                            "bcl:text": "at the expense of the owner and the government on a cost-sharing basis."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2336",
+                            "bcl:marginalnote": "Advisory committees",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2344",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may establish or authorize one or more committees to act in an advisory capacity on matters relating to this Act or to the conservation of heritage sites, heritage objects and other heritage resources."
+                                },
+                                {
+                                    "@id": "d2e2353",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may appoint, or provide for the manner of appointment of, the members of any committee established under this section\u00a0and may set the terms of reference for the committee."
+                                },
+                                {
+                                    "@id": "d2e2362",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The members of any committee established or authorized under this section must be paid reasonable and necessary travelling and incidental expenses incurred in the discharge of their duties under this Act, and may be paid remuneration for services in an amount determined by the Lieutenant Governor in Council."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2372",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "23",
+                            "bcl:text": "[Repealed 2019-26-25.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2457",
+                    "bcl:num": "3",
+                    "bcl:section": {
+                        "@id": "d2e2463",
+                        "bcl:marginalnote": "Repealed",
+                        "bcl:num": "24-31",
+                        "bcl:text": "[Repealed 2003-15-13.]"
+                    }
+                },
+                {
+                    "@id": "d2e2475",
+                    "bcl:num": "4",
+                    "bcl:text": "General Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2485",
+                            "bcl:marginalnote": "Notice of heritage status on land title",
+                            "bcl:num": "32",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2493",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister must file a written notice in the land title office with respect to land that is designated under section\u00a09."
+                                },
+                                {
+                                    "@id": "d2e2502",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may file a written notice in the land title office with respect to land",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2511",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for which a notice has been given under section 10 (1),"
+                                        },
+                                        {
+                                            "@id": "d2e2521",
+                                            "bcl:num": "b",
+                                            "bcl:text": "that, in the opinion of the minister, is protected under section 12.1 (2),"
+                                        },
+                                        {
+                                            "@id": "d2e2530",
+                                            "bcl:num": "c",
+                                            "bcl:text": "for which an order is in effect under section 12.3, 16.1 or 21, or"
+                                        },
+                                        {
+                                            "@id": "d2e2539",
+                                            "bcl:num": "d",
+                                            "bcl:text": "that, in the opinion of the minister, has been altered in contravention of section 12.1 (2)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2548",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On receipt of a notice under subsection (1) or (2) in which the affected land is described sufficiently to be identified in the records of the land title office, the registrar must make a note of the filing on the title of the land."
+                                },
+                                {
+                                    "@id": "d2e2557",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the basis on which notice was filed under subsection (1) or (2) no longer applies to the land, the minister must notify the land title office."
+                                },
+                                {
+                                    "@id": "d2e2566",
+                                    "bcl:num": "5",
+                                    "bcl:text": "On receipt of a notice under subsection (4), the registrar must cancel the note made under subsection (1) or (2)."
+                                },
+                                {
+                                    "@id": "d2e2576",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Notification to the land title office under subsections (1), (2) or (4) must be made in a form satisfactory to the registrar of the land title district."
+                                },
+                                {
+                                    "@id": "d2e2585",
+                                    "bcl:num": "7",
+                                    "bcl:text": "The protection of property under this Act is not affected by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2594",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an error or omission in a notice given by the minister to the registrar,"
+                                        },
+                                        {
+                                            "@id": "d2e2603",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an error or omission in a note made by the registrar under this section, or"
+                                        },
+                                        {
+                                            "@id": "d2e2612",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a failure by the registrar to make or cancel a note on a land title."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2621",
+                                    "bcl:num": "8",
+                                    "bcl:text": "In the event of any omission, mistake or misfeasance by the registrar or the staff of the registrar in relation to the making or cancelling of a note under this section,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2631",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the registrar is not liable and neither the government nor the Land Title and Survey Authority of British Columbia is vicariously liable,"
+                                        },
+                                        {
+                                            "@id": "d2e2640",
+                                            "bcl:num": "a.1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96250_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Land Title Act"
+                                                },
+                                                "#text": "the assurance fund or the Land Title and Survey Authority of British Columbia as a nominal defendant is not liable under Part 19.1 of the , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e2652",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/96250_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Land Title Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/96250_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Land Title Act"
+                                                    }
+                                                ],
+                                                "#text": "the assurance fund or the minister charged with the administration of the  as a nominal defendant is not liable under Part 20 of the ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2668",
+                            "bcl:marginalnote": "Notice of heritage status in relation to treaty lands",
+                            "bcl:num": "32.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2676",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "If a treaty first nation, under its own laws, designates a parcel of its treaty lands, the indefeasible title to which is registered under the , for the purpose of conserving and protecting heritage sites and heritage objects, the treaty first nation must file a written notice in the land title office."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2688",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the basis on which a notice was filed under subsection (1) no longer applies to the land, the treaty first nation must notify the land title office."
+                                },
+                                {
+                                    "@id": "d2e2697",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Section 32 (3) and (5) to (8) applies as if a notice given under subsection (1) or (2) of this section were given under section 32 (1) or (4)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2707",
+                            "bcl:marginalnote": "Service of documents",
+                            "bcl:num": "33",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2715",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Where this Act requires service of a document on a person, other than service in relation to a court application under section\u00a019, the document is sufficiently served on a person if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2724",
+                                            "bcl:num": "a",
+                                            "bcl:text": "it is served personally on the person,"
+                                        },
+                                        {
+                                            "@id": "d2e2733",
+                                            "bcl:num": "b",
+                                            "bcl:text": "it is sent by registered mail, or a method of delivery that provides proof of delivery, to the person's actual or last known address, or"
+                                        },
+                                        {
+                                            "@id": "d2e2743",
+                                            "bcl:num": "c",
+                                            "bcl:text": "in the circumstances described in subsection (2), it is published in accordance with that subsection."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2752",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a document cannot be served personally on a person and the person's actual or last known address cannot be determined after reasonable steps for the purpose have been taken, the document may be served by publishing a notice in the prescribed form in 2 issues, at least one week apart, of a newspaper having general circulation",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2761",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the area where the person to be served was last known to reside or carry on business according to the information available to the person serving the document, or"
+                                        },
+                                        {
+                                            "@id": "d2e2770",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the area in which the land is situated if the document relates to land owned by the person to be served."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2779",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A document served under subsection (1) (b) is deemed to be received on the earlier of",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2788",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the date the person to whom it is sent actually receives the document, and"
+                                        },
+                                        {
+                                            "@id": "d2e2798",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the expiry of 10\u00a0days after the date on which the document was sent."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2808",
+                            "bcl:marginalnote": "Civil remedies respecting contraventions",
+                            "bcl:num": "34",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2816",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The minister may apply to the Supreme Court for an injunction restraining a person from committing, or continuing to commit, a contravention of this Act or the regulations."
+                                },
+                                {
+                                    "@id": "d2e2825",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The minister may apply to the Supreme Court for a restoration or compliance order if a person",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2834",
+                                            "bcl:num": "a",
+                                            "bcl:text": "fails to comply with or contravenes the requirements, specifications or conditions of a permit issued under section 12.2 or 12.4,"
+                                        },
+                                        {
+                                            "@id": "d2e2844",
+                                            "bcl:num": "b",
+                                            "bcl:text": "fails to comply with or contravenes an order made under section 12.3 or 21,"
+                                        },
+                                        {
+                                            "@id": "d2e2853",
+                                            "bcl:num": "c",
+                                            "bcl:text": "removes property, or attempts to remove property, from British Columbia in contravention of section 12.1 (1),"
+                                        },
+                                        {
+                                            "@id": "d2e2862",
+                                            "bcl:num": "d",
+                                            "bcl:text": "moves, removes, damages, desecrates, alters, excavates or digs in property, or removes objects from property in contravention of section 12.1 (2), or"
+                                        },
+                                        {
+                                            "@id": "d2e2871",
+                                            "bcl:num": "e",
+                                            "bcl:text": "contravenes a regulation made under section 11.1 (2) or 37 (2) (e)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2880",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An order of the court in respect of an application under subsection (2) may include one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2889",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a requirement that the person restore the property to which the matter relates to its condition before the contravention on requirements, specifications and conditions the court specifies;"
+                                        },
+                                        {
+                                            "@id": "d2e2899",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a requirement that the person undertake, as the court considers appropriate, compensatory conservation work on the property that was affected or on other heritage property, or that conservation work be performed by others at the expense of that person;"
+                                        },
+                                        {
+                                            "@id": "d2e2908",
+                                            "bcl:num": "c",
+                                            "bcl:text": "an authorization that the minister may undertake conservation work at the expense of the person;"
+                                        },
+                                        {
+                                            "@id": "d2e2917",
+                                            "bcl:num": "d",
+                                            "bcl:text": "any other requirements the court considers advisable."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2926",
+                                    "bcl:num": "4",
+                                    "bcl:text": "This section applies whether or not a person is charged with an offence under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2936",
+                            "bcl:marginalnote": "Immunity",
+                            "bcl:num": "35",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2944",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Except as provided in section 11 or 12.3 (5), no compensation is payable to a person for any loss or damage, or for any reduction in the value of property, that results from the operation of this Act, the performance in good faith of any duty under this Act or the exercise in good faith of any power under this Act."
+                                },
+                                {
+                                    "@id": "d2e2953",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An action for damages must not be brought against the minister, an employee of the government, a member of a committee established or authorized under section\u00a022 or a person who is subject to the direction of the minister, because of anything done or omitted to be done in good faith in the performance or intended performance of a duty or in the exercise or intended exercise of a power under this Act."
+                                },
+                                {
+                                    "@id": "d2e2962",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subsection (2) does not absolve the government from vicarious liability for an act or omission of a person referred to in that subsection for which act or omission the government would be vicariously liable if the subsection were not in force."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2972",
+                            "bcl:marginalnote": "Offence and penalty",
+                            "bcl:num": "36",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2980",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who does any of the following commits an offence:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2989",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96344_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Park Act"
+                                                },
+                                                "#text": "contravenes section 12.1 (6), 12.2 (1), 12.3\u00a0(4) or 15.3 or a provision of the  referred to in section 11.1\u00a0(2) of this Act as it applies to a Provincial heritage property;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e3001",
+                                            "bcl:num": "b",
+                                            "bcl:text": "fails to comply with or contravenes a requirement, specification or condition of an order or permit under section 11.1\u00a0(2), 12.2\u00a0(2), 12.3\u00a0(1), 12.4\u00a0(1)\u00a0(a) or\u00a0(b), 16.1, 19\u00a0(2), 21 or\u00a034\u00a0(3);"
+                                        },
+                                        {
+                                            "@id": "d2e3011",
+                                            "bcl:num": "c",
+                                            "bcl:text": "contravenes a regulation made under section 11.1\u00a0(2) or\u00a037\u00a0(2)\u00a0(e);"
+                                        },
+                                        {
+                                            "@id": "d2e3020",
+                                            "bcl:num": "d",
+                                            "bcl:text": "contravenes section 12.1 (1) or (2);"
+                                        },
+                                        {
+                                            "@id": "d1e4284",
+                                            "bcl:num": "e",
+                                            "bcl:text": "hinders, obstructs, impedes or otherwise interferes with an authorized official in the performance of the authorized official's duties or the exercise of the authorized official's powers under this Act or the regulations."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e4299",
+                                    "bcl:num": "1.1",
+                                    "bcl:text": "If a contravention or failure continues for more than one day, the person is guilty of a separate offence for each day on which the contravention or failure continues."
+                                },
+                                {
+                                    "@id": "d1e4308",
+                                    "bcl:num": "1.2",
+                                    "bcl:text": "A proceeding, conviction or penalty for an offence under this Act does not relieve a person from any other liability."
+                                },
+                                {
+                                    "@id": "d2e3029",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person convicted of an offence under subsection (1) (a) to (c) or (e) is liable to a fine of not more than $2\u00a0000 or to imprisonment for a term of not more than 6 months or to both."
+                                },
+                                {
+                                    "@id": "d2e3038",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person convicted of an offence under subsection (1) (d) is liable,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3047",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if the person is an individual, to a fine of not more than $50\u00a0000 or to imprisonment for a term of not more than 2 years or to both, or"
+                                        },
+                                        {
+                                            "@id": "d2e3056",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the person is a corporation, to a fine of not more than $1\u00a0000\u00a0000."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3066",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If a corporation commits an offence under this Act, an employee, officer, director or agent of the corporation who authorized, permitted or acquiesced in the offence also commits the offence and is liable,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3075",
+                                            "bcl:num": "a",
+                                            "bcl:text": "if it is an offence under subsection (1) (a) to (c) or (e), to the penalty set out in subsection\u00a0(2), or"
+                                        },
+                                        {
+                                            "@id": "d2e3084",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if it is an offence under subsection (1) (d), to the penalty set out in subsection\u00a0(3)\u00a0(a)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3093",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "Section\u00a05 of the  does not apply to this Act or the regulations."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3105",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The time limit for laying an information respecting an offence under this Act is 3 years after the facts on which the information is based first came to the knowledge of",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3114",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a police officer, police constable, constable or other person employed for the preservation and maintenance of the public peace, or"
+                                        },
+                                        {
+                                            "@id": "d2e3124",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an authorized official."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3133",
+                                    "bcl:num": "7",
+                                    "bcl:text": "A document purporting to have been issued by the authorized official referred to in subsection (6)\u00a0(b) certifying the day on which the authorized official became aware of the facts on which an information is based, is admissible without proof of the signature of the official appearing to have signed the document, and in the absence of evidence to the contrary, is proof of the matter certified."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3144",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "37",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3152",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e3164",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3173",
+                                            "bcl:num": "a",
+                                            "bcl:text": "respecting the form, content and manner of giving notice in relation to this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e3183",
+                                            "bcl:num": "b",
+                                            "bcl:text": "respecting the form, content and manner of giving information for registration in the Provincial heritage register under section\u00a03;"
+                                        },
+                                        {
+                                            "@id": "d2e3192",
+                                            "bcl:num": "c",
+                                            "bcl:text": "respecting the administration and conservation of Provincial heritage properties;"
+                                        },
+                                        {
+                                            "@id": "d2e3201",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing fees for a service, or for use of or admission to a facility, under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e3210",
+                                            "bcl:num": "e",
+                                            "bcl:text": "respecting the maintenance of order at Provincial heritage properties;"
+                                        },
+                                        {
+                                            "@id": "d2e3219",
+                                            "bcl:num": "f",
+                                            "bcl:text": "respecting heritage property that may be recorded in the Provincial heritage register under section 3 (1) (f);"
+                                        },
+                                        {
+                                            "@id": "d2e3228",
+                                            "bcl:num": "g",
+                                            "bcl:text": "prescribing persons entitled to notice under section 10 (1) (c);"
+                                        },
+                                        {
+                                            "@id": "d2e3238",
+                                            "bcl:num": "h",
+                                            "bcl:text": "prescribing the manner in which a notice of designation under section 10 (6) (b) is to be filed in the personal property registry;"
+                                        },
+                                        {
+                                            "@id": "d2e3247",
+                                            "bcl:num": "i",
+                                            "bcl:text": "respecting the conduct of a heritage inspection or heritage investigation under sections 12.2 and 12.3;"
+                                        },
+                                        {
+                                            "@id": "d1e4595",
+                                            "bcl:num": "j",
+                                            "bcl:text": "prescribing reasons to refuse an application to issue or amend a permit for the purposes of section 12.4\u00a0(3)\u00a0(d);"
+                                        },
+                                        {
+                                            "@id": "d1e4604",
+                                            "bcl:num": "k",
+                                            "bcl:text": "prescribing circumstances to amend, suspend or cancel a permit for the purposes of section 12.6\u00a0(2)\u00a0(b)\u00a0(iii);"
+                                        },
+                                        {
+                                            "@id": "d1e4613",
+                                            "bcl:num": "l",
+                                            "bcl:text": "prescribing circumstances to amend, suspend or cancel a permit for the purposes of section 12.7\u00a0(e);"
+                                        },
+                                        {
+                                            "@id": "d1e4622",
+                                            "bcl:num": "m",
+                                            "bcl:text": "prescribing the circumstances or the period of time for the extension of a stop work order for the purposes of section 16.1\u00a0(3)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e4637",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In making a regulation under this Act, the Lieutenant Governor in Council may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e4645",
+                                            "bcl:num": "a",
+                                            "bcl:text": "define classes of properties, persons, sites, objects, circumstances or areas, including, for the purposes of section 3\u00a0(1)\u00a0(f), classes of heritage properties, and"
+                                        },
+                                        {
+                                            "@id": "d1e4654",
+                                            "bcl:num": "b",
+                                            "bcl:text": "establish different regulations for different classes of properties, persons, sites, objects, circumstances or areas, including, for the purposes of section 3\u00a0(1)\u00a0(f), different classes of heritage properties."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3257",
+                            "bcl:marginalnote": "Continuation of former designations",
+                            "bcl:num": "38",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3265",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "former Act",
+                                        "#text": "In this section,  means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3277",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:doc": "Archaeological and Historic Sites Protection Act",
+                                                "#text": "the , S.B.C. 1972, c.\u00a04,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e3289",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:doc": "Archaeological and Historic Sites Protection Act",
+                                                "#text": "the , R.S.B.C. 1960, c.\u00a015, or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e3302",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "in:doc": "Historic Objects Preservation Act",
+                                                "#text": "the , R.S.B.C. 1948, c.\u00a0145."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3314",
+                                    "bcl:num": "2",
+                                    "bcl:text": "All heritage designations made under a former Act that have not been rescinded are continued as if they were designated by the Lieutenant Governor in Council under section\u00a09, but a continuance under this subsection\u00a0does not entitle any person to compensation under section\u00a011."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

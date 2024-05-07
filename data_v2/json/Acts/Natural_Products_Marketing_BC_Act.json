@@ -1,0 +1,1838 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96330_01",
+        "act:title": "Natural Products Marketing (BC) Act",
+        "act:chapter": "330",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "757987613/96330/tlc96330_f",
+            "act:tlc": "E3tlc96330"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d0e28",
+                            "bcl:text": {
+                                "in:term": "biosecurity program",
+                                "#text": "means a program that, for the purpose of protecting\n          and promoting the safety of a natural product, does one or more of the\n          following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e35",
+                                    "bcl:num": "a",
+                                    "bcl:text": "establishes standards or certification programs;"
+                                },
+                                {
+                                    "@id": "d0e44",
+                                    "bcl:num": "b",
+                                    "bcl:text": "requires persons engaged in the production of the natural product to",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e52",
+                                            "bcl:num": "i",
+                                            "bcl:text": "meet established standards,"
+                                        },
+                                        {
+                                            "@id": "d0e61",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "be certified according to an established program,"
+                                        },
+                                        {
+                                            "@id": "d0e70",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "take specified measures,"
+                                        },
+                                        {
+                                            "@id": "d0e79",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "implement specified procedures or procedures for specified purposes,\n              or"
+                                        },
+                                        {
+                                            "@id": "d0e88",
+                                            "bcl:num": "v",
+                                            "bcl:text": "keep specified records;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e98",
+                                    "bcl:num": "c",
+                                    "bcl:text": "imposes conditions, restrictions or prohibitions on persons engaged in the\n            production of natural products;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "commission",
+                                "#text": "means a marketing commission established under\n          section\u00a012;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "federal Act",
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/A-6/index.html",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Agricultural Products Marketing Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/F-4/index.html",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Farm Products Agencies Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-15/index.html",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Canadian Dairy Commission Act"
+                                    }
+                                ],
+                                "#text": "means the  (Canada), the\n             (Canada) or the  (Canada),\n          or any of them, as the case may be;"
+                            }
+                        },
+                        {
+                            "@id": "d2e54",
+                            "bcl:text": {
+                                "in:term": "federal board",
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/F-4/index.html",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Farm Products Agencies Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-15/index.html",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Canadian Dairy Commission Act"
+                                    }
+                                ],
+                                "#text": "means the Governor in Council or the National Farm\n          Products Council or an agency established under the  (Canada) or the Canadian Dairy\n          Commission established under the  (Canada),\n          as the case may be;"
+                            }
+                        },
+                        {
+                            "@id": "d2e69",
+                            "bcl:text": {
+                                "in:term": "marketing",
+                                "#text": "includes producing, packing, buying, selling, storing,\n          shipping for sale, offering for sale or storage, and in respect of a natural product\n          includes its transportation in any manner by any person;"
+                            }
+                        },
+                        {
+                            "@id": "d2e78",
+                            "bcl:text": {
+                                "in:term": "marketing board",
+                                "#text": "means a marketing board established under\n          section\u00a010;"
+                            }
+                        },
+                        {
+                            "@id": "d2e87",
+                            "bcl:text": {
+                                "in:term": "natural product",
+                                "#text": "means a product of agriculture or of the sea, lake or\n          river and an article of food or drink wholly or partly manufactured or derived from such\n          product;"
+                            }
+                        },
+                        {
+                            "@id": "d2e96",
+                            "bcl:text": {
+                                "in:term": "Provincial board",
+                                "#text": "means the British Columbia Farm Industry Review Board\n          constituted under section 3 (1);"
+                            }
+                        },
+                        {
+                            "@id": "d2e105",
+                            "bcl:text": {
+                                "in:term": "Provincial jurisdiction",
+                                "#text": "means the legislative jurisdiction or\n          competence of the Legislature;"
+                            }
+                        },
+                        {
+                            "@id": "d2e115",
+                            "bcl:text": {
+                                "in:term": "regulated product",
+                                "#text": "means a natural product the regulation of the\n          marketing of which is provided for in a scheme approved or established under this\n          Act;"
+                            }
+                        },
+                        {
+                            "@id": "d2e124",
+                            "bcl:text": {
+                                "in:term": "vehicle",
+                                "#text": "includes a motor vehicle, wagon, railway car, ship, boat or\n          other thing in which a natural product can be transported."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e134",
+                    "bcl:marginalnote": "Marketing schemes, marketing boards and commissions",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e142",
+                            "bcl:num": "1",
+                            "bcl:text": "The purpose and intent of this Act is to provide for the promotion, control and\n          regulation of the marketing of natural products, including",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e246",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the prohibition of all or part of that marketing, and"
+                                },
+                                {
+                                    "@id": "d0e255",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the establishment of biosecurity programs, and the imposition of requirements in\n            relation to insurance, for those engaged in the production of natural\n            products."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e151",
+                            "bcl:num": "2",
+                            "bcl:text": "The Lieutenant Governor in Council may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e160",
+                                    "bcl:num": "a",
+                                    "bcl:text": "establish, amend and revoke schemes for the promotion, control and regulation of\n            the marketing of natural products,"
+                                },
+                                {
+                                    "@id": "d2e170",
+                                    "bcl:num": "b",
+                                    "bcl:text": "constitute marketing boards and commissions to administer the schemes,\n            and"
+                                },
+                                {
+                                    "@id": "d2e179",
+                                    "bcl:num": "c",
+                                    "bcl:text": "vest in those marketing boards and commissions the powers considered necessary\n            or advisable to enable them to carry out effectively the purpose and intent of this\n            Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e188",
+                            "bcl:num": "3",
+                            "bcl:text": "A scheme may relate to all or part of British Columbia and may relate to one or\n          more natural products or to a grade or class of product."
+                        },
+                        {
+                            "@id": "d2e197",
+                            "bcl:num": "4",
+                            "bcl:text": "The method by which the members of a marketing board or commission are to be\n          chosen, whether by appointment or election, or partly the one and partly the other, may be\n          set out in the scheme that the marketing board or commission is authorized to\n          administer."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e207",
+                    "bcl:marginalnote": "Constitution of Provincial board",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e215",
+                            "bcl:num": "1",
+                            "bcl:text": "The British Columbia Farm Industry Review Board is continued consisting of up to\n          10 individuals appointed as follows by the Lieutenant Governor in Council after a\n          merit-based\n          process:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e224",
+                                    "bcl:num": "a",
+                                    "bcl:text": "one member designated as the chair;"
+                                },
+                                {
+                                    "@id": "d2e233",
+                                    "bcl:num": "b",
+                                    "bcl:text": "one or more members designated as vice chairs after consultation with the\n            chair;"
+                                },
+                                {
+                                    "@id": "d2e243",
+                                    "bcl:num": "c",
+                                    "bcl:text": "other members appointed after consultation with the chair."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e252",
+                            "bcl:num": "2",
+                            "bcl:text": "[Repealed 2003-47-49.]"
+                        },
+                        {
+                            "@id": "d2e261",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2004-45-120.]"
+                        },
+                        {
+                            "@id": "d2e270",
+                            "bcl:num": "4",
+                            "bcl:text": "The Provincial board has the power and capacity of a legal person."
+                        },
+                        {
+                            "@id": "d2e279",
+                            "bcl:num": "5",
+                            "bcl:text": "[Repealed 2004-45-120.]"
+                        },
+                        {
+                            "@id": "d2e288",
+                            "bcl:num": "6",
+                            "bcl:text": "The Provincial board may, with the approval of the Lieutenant Governor in Council,\n          acquire, hold and dispose of real property."
+                        },
+                        {
+                            "@id": "d2e298",
+                            "bcl:num": "7",
+                            "bcl:text": "[Repealed 2004-45-120.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e308",
+                    "bcl:marginalnote": {
+                        "in:doc": "Administrative Tribunals Act",
+                        "#text": "Application of  to Provincial\n        board"
+                    },
+                    "bcl:num": "3.1",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/04045_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Administrative Tribunals\n        Act"
+                        },
+                        "#text": "The following provisions of the  apply to the Provincial board:"
+                    },
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d1e438",
+                            "bcl:num": "a",
+                            "bcl:text": {
+                                "in:desc": "[Interpretation and Application]",
+                                "#text": "Part 1 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e450",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "in:desc": "[Appointments]",
+                                "#text": "Part 2 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e463",
+                            "bcl:num": "c",
+                            "bcl:text": {
+                                "in:desc": "[Clustering]",
+                                "#text": "Part 3 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e475",
+                            "bcl:num": "d",
+                            "bcl:text": {
+                                "in:desc": "[staff of tribunal]",
+                                "#text": "section 27 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e487",
+                            "bcl:num": "e",
+                            "bcl:text": {
+                                "in:desc": "[facilitated settlement]",
+                                "#text": "section 28 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e499",
+                            "bcl:num": "f",
+                            "bcl:text": {
+                                "in:desc": "[disclosure protection]",
+                                "#text": "section 29 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e511",
+                            "bcl:num": "g",
+                            "bcl:text": {
+                                "in:desc": "[tribunal duties]",
+                                "#text": "section 30 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e523",
+                            "bcl:num": "h",
+                            "bcl:text": {
+                                "in:desc": "[discretion to refer questions of law to\n          court]",
+                                "#text": "section 43 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e536",
+                            "bcl:num": "i",
+                            "bcl:text": {
+                                "in:desc": "[tribunal without jurisdiction over Canadian Charter of Rights\n            and Freedoms issues]",
+                                "#text": "section 45 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e548",
+                            "bcl:num": "j",
+                            "bcl:text": {
+                                "in:desc": "[notice to Attorney General if constitutional question raised\n            in application]",
+                                "#text": "section 46 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e560",
+                            "bcl:num": "k",
+                            "bcl:text": {
+                                "in:desc": "[limited jurisdiction and discretion to decline jurisdiction\n            to apply the Human Rights Code]",
+                                "#text": "section 46.2 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e572",
+                            "bcl:num": "l",
+                            "bcl:text": {
+                                "in:desc": "[maintenance of order at hearings]",
+                                "#text": "section 48 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e584",
+                            "bcl:num": "m",
+                            "bcl:text": {
+                                "in:desc": "[compulsion protection]",
+                                "#text": "section 55 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e596",
+                            "bcl:num": "n",
+                            "bcl:text": {
+                                "in:desc": "[time limit for judicial review]",
+                                "#text": "section 57 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e609",
+                            "bcl:num": "o",
+                            "bcl:text": {
+                                "in:desc": "[standard of review with privative\n          clause]",
+                                "#text": "section 58 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e621",
+                            "bcl:num": "p",
+                            "bcl:text": {
+                                "in:desc": "[surveys]",
+                                "#text": "section 59.1 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e633",
+                            "bcl:num": "q",
+                            "bcl:text": {
+                                "in:desc": "[reporting]",
+                                "#text": "section 59.2 ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e645",
+                            "bcl:num": "r",
+                            "bcl:text": {
+                                "in:desc": "[application of Freedom of Information and Protection of\n            Privacy Act]",
+                                "#text": "section 61 ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e326",
+                    "bcl:marginalnote": "Cooperation with federal board",
+                    "bcl:num": "4",
+                    "bcl:text": "The Provincial board and every marketing board or commission may",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e337",
+                            "bcl:num": "a",
+                            "bcl:text": "cooperate with the federal board to regulate the marketing of a natural product of\n          British Columbia,"
+                        },
+                        {
+                            "@id": "d2e346",
+                            "bcl:num": "b",
+                            "bcl:text": "act jointly with the federal board, and"
+                        },
+                        {
+                            "@id": "d2e356",
+                            "bcl:num": "c",
+                            "bcl:text": "perform the functions and duties and exercise the powers under this\n          Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e367",
+                    "bcl:marginalnote": "Exercise of powers under federal Act",
+                    "bcl:num": "5",
+                    "bcl:text": "With the approval of the Lieutenant Governor in Council, the Provincial board and\n        every marketing board or commission may perform a function or duty and exercise a power\n        imposed or conferred on it by or under the federal Act, with reference to the marketing of a\n        natural product."
+                },
+                {
+                    "@id": "d2e379",
+                    "bcl:marginalnote": "Delegation",
+                    "bcl:num": "6",
+                    "bcl:text": "With the approval of the Lieutenant Governor in Council, the Provincial board, a\n        marketing board or a commission may grant authority to the federal board to perform on its\n        behalf any power or function relating to trade in British Columbia that the marketing board\n        or commission may perform."
+                },
+                {
+                    "@id": "d2e391",
+                    "bcl:marginalnote": "Exercise of powers by federal board",
+                    "bcl:num": "7",
+                    "bcl:text": "With the approval of the Lieutenant Governor in Council, the federal board may\n        exercise its powers with reference to the marketing of a natural product in any manner and\n        under any circumstances within Provincial jurisdiction, to the similar extent and with the\n        similar effect as those powers are exercisable by it under the federal Act with reference to\n        the marketing of that natural product."
+                },
+                {
+                    "@id": "d2e403",
+                    "bcl:marginalnote": "Supervisory power",
+                    "bcl:num": "7.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e411",
+                            "bcl:num": "1",
+                            "bcl:text": "The Provincial board",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e420",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has general supervision over all marketing boards or commissions established\n            under this Act, and"
+                                },
+                                {
+                                    "@id": "d2e429",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must perform the other duties and functions and exercise the authority the\n            Lieutenant Governor in Council prescribes in order to carry out the purposes of this\n            Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e439",
+                            "bcl:num": "2",
+                            "bcl:text": "The Provincial board may exercise its powers under this section at any time, with\n          or without a hearing, and in the manner it considers appropriate to the\n          circumstances."
+                        },
+                        {
+                            "@id": "d2e448",
+                            "bcl:num": "3",
+                            "bcl:text": "In the exercise of its powers under this section, the Provincial board may make an\n          order requiring a person to do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e457",
+                                    "bcl:num": "a",
+                                    "bcl:text": "attend as required;"
+                                },
+                                {
+                                    "@id": "d2e466",
+                                    "bcl:num": "b",
+                                    "bcl:text": "take an oath or affirmation;"
+                                },
+                                {
+                                    "@id": "d2e475",
+                                    "bcl:num": "c",
+                                    "bcl:text": "answer questions;"
+                                },
+                                {
+                                    "@id": "d2e484",
+                                    "bcl:num": "d",
+                                    "bcl:text": "produce records or things in their custody or possession."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e494",
+                            "bcl:num": "4",
+                            "bcl:text": "If a person fails to comply with an order under subsection (3), the Provincial\n          board may apply to the Supreme Court for one or both of the following orders:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e503",
+                                    "bcl:num": "a",
+                                    "bcl:text": "directing the person to comply with the order of the Provincial\n            board;"
+                                },
+                                {
+                                    "@id": "d2e512",
+                                    "bcl:num": "b",
+                                    "bcl:text": "directing any director or officer of the person to cause that person to comply\n            with the order of the Provincial board."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e521",
+                            "bcl:num": "5",
+                            "bcl:text": "Subsections\n            (3) and (4) do not limit the conduct for which a finding of\n          contempt may be made by the court in respect of conduct by a person in a proceeding before\n          the Provincial board."
+                        },
+                        {
+                            "@id": "d2e530",
+                            "bcl:num": "6",
+                            "bcl:text": "The failure or refusal of a person to comply with an order under subsection (4)\n          makes the person, on application to the court by the Provincial board, liable to be\n          committed for contempt as if in breach of an order or judgment of the court."
+                        },
+                        {
+                            "@id": "d2e539",
+                            "bcl:num": "7",
+                            "bcl:text": "In the exercise of its powers under this section the Provincial board may make\n          rules governing its procedure and the quorum in supervisory matters, including its\n          meetings, and may make rules and issue orders governing the procedure for any exercise of\n          its supervisory powers."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e549",
+                    "bcl:marginalnote": "Appeals from a marketing board or commission order, decision or\n        determination",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e557",
+                            "bcl:num": "1",
+                            "bcl:text": "A person aggrieved by or dissatisfied with an order, decision or determination of\n          a marketing board or commission may appeal the order, decision or determination to the\n          Provincial board."
+                        },
+                        {
+                            "@id": "d2e566",
+                            "bcl:num": "2) and (3",
+                            "bcl:text": "[Repealed 2004-45-123.]"
+                        },
+                        {
+                            "@id": "d2e575",
+                            "bcl:num": "4",
+                            "bcl:text": "The marketing board or commission from which an appeal is made must promptly\n          provide the Provincial board with every bylaw, order, rule and other document touching on\n          the matter under appeal."
+                        },
+                        {
+                            "@id": "d2e585",
+                            "bcl:num": "5",
+                            "bcl:text": "On its own motion or, on the written request of a party to an appeal under\n            subsection\n            (1), the Provincial board may direct that a party to the appeal provide the\n          Provincial board and other parties to the appeal with a copy of each document the\n          Provincial board specifies in its direction."
+                        },
+                        {
+                            "@id": "d2e594",
+                            "bcl:num": "6",
+                            "bcl:text": "The Provincial board need not hold a hearing or give notice to other parties to\n          the appeal before making a direction under subsection (5)."
+                        },
+                        {
+                            "@id": "d2e603",
+                            "bcl:num": "7",
+                            "bcl:text": "[Repealed 2004-45-123.]"
+                        },
+                        {
+                            "@id": "d2e612",
+                            "bcl:num": "8",
+                            "bcl:text": "If, after an appeal is filed, an appeal panel considers that all or part of the\n          subject matter of the appeal is more appropriately dealt with in a supervisory process\n          under its supervisory power, the appeal panel, after giving the appellant and the\n          marketing board or commission an opportunity to be heard, may defer further consideration\n          of the appeal until after the supervisory process is completed."
+                        },
+                        {
+                            "@id": "d2e621",
+                            "bcl:num": "8.1) to (8.3",
+                            "bcl:text": "[Repealed 2004-45-123.]"
+                        },
+                        {
+                            "@id": "d2e630",
+                            "bcl:num": "8.4",
+                            "bcl:text": "If an appeal is deferred under subsection (8) and the supervisory process has been\n          completed, the appellant may give notice that it intends to proceed with the appeal, and\n          the Provincial board must proceed with and decide the appeal."
+                        },
+                        {
+                            "@id": "d2e640",
+                            "bcl:num": "9",
+                            "bcl:text": "On hearing an appeal under subsection (1), the Provincial board may do any of the\n          following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e649",
+                                    "bcl:num": "a",
+                                    "bcl:text": "make an order confirming, reversing or varying the order, decision or\n            determination under appeal;"
+                                },
+                                {
+                                    "@id": "d2e658",
+                                    "bcl:num": "b",
+                                    "bcl:text": "refer the matter back to the marketing board or commission with or without\n            directions;"
+                                },
+                                {
+                                    "@id": "d2e667",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make another order it considers appropriate in the circumstances."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e676",
+                            "bcl:num": "10) and (11",
+                            "bcl:text": "[Repealed 2004-45-123.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e686",
+                    "bcl:marginalnote": {
+                        "in:doc": "Administrative Tribunals Act",
+                        "#text": "Application of  to Provincial board for\n        purpose of appeals"
+                    },
+                    "bcl:num": "8.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e697",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/04045_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Administrative Tribunals Act"
+                                },
+                                "#text": "For the purposes of an appeal under section 8 of this Act, the following\n          provisions of the  apply to\n          the Provincial board in addition to those incorporated under section 3.1 of this\n          Act:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1070",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "in:desc": "[Practice and Procedure]",
+                                        "#text": "Part 4 , except the\n            following:"
+                                    },
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e1081",
+                                            "bcl:num": "i",
+                                            "bcl:text": {
+                                                "in:desc": "[notice of hearing by publication]",
+                                                "#text": "section 21 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1093",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "in:desc": "[notice of appeal (exclusive of prescribed\n              fee)]",
+                                                "#text": "section 23 ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1105",
+                                            "bcl:num": "iii",
+                                            "bcl:text": {
+                                                "in:desc": "[party power to compel witnesses and order\n                disclosure]",
+                                                "#text": "section 34 (1) and (2) ;"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1118",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "in:desc": "[power to award costs]",
+                                        "#text": "section 47 ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1130",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "in:desc": "[contempt proceeding for uncooperative witness or other\n              person]",
+                                        "#text": "section 49 ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1143",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "in:desc": "[decisions]",
+                                        "#text": "section 50 ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1155",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "in:desc": "[final decision]",
+                                        "#text": "section 51 ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1167",
+                                    "bcl:num": "f",
+                                    "bcl:text": {
+                                        "in:desc": "[notice of decision]",
+                                        "#text": "section 52 ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1179",
+                                    "bcl:num": "g",
+                                    "bcl:text": {
+                                        "in:desc": "[power to make\n            regulations]",
+                                        "#text": "section 60 (1) (a) to (i) and (2) ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e709",
+                            "bcl:num": "2",
+                            "bcl:text": "A power of the Provincial board to make an order or require a person to do\n          something under this section applies to a marketing board or commission and to a member of\n          the marketing board or commission."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e720",
+                    "bcl:marginalnote": "Rules about participation of marketing board or commission in an\n        appeal",
+                    "bcl:num": "8.2",
+                    "bcl:text": "The Provincial board may make rules respecting the participation of a marketing\n        board or commission in an appeal under section 8."
+                },
+                {
+                    "@id": "d2e732",
+                    "bcl:marginalnote": "Power to correct errors and omissions and to clarify\n        decision",
+                    "bcl:num": "8.3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e740",
+                            "bcl:num": "1",
+                            "bcl:text": "On its own initiative or on the application of a party, the Provincial board may\n          amend a final decision to correct any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e749",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a clerical or typographical error;"
+                                },
+                                {
+                                    "@id": "d2e758",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an accidental or inadvertent error, omission or other similar\n            mistake;"
+                                },
+                                {
+                                    "@id": "d2e768",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an arithmetical error made in a computation."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e777",
+                            "bcl:num": "2",
+                            "bcl:text": "Unless the Provincial board determines otherwise, an amendment under subsection (1)\n          must not be made more than 30 days after all parties have been served with the final\n          decision."
+                        },
+                        {
+                            "@id": "d2e786",
+                            "bcl:num": "3",
+                            "bcl:text": "Within 30 days after being served with the final decision, a party may apply to\n          the Provincial board for clarification of the final decision and the Provincial board may\n          amend the final decision only if the Provincial board considers that the amendment will\n          clarify the final decision."
+                        },
+                        {
+                            "@id": "d2e795",
+                            "bcl:num": "4",
+                            "bcl:text": "The Provincial board may not amend a final decision other than in the\n          circumstances described in subsections (1) to (3)."
+                        },
+                        {
+                            "@id": "d2e804",
+                            "bcl:num": "5",
+                            "bcl:text": "This section must not be construed as limiting the Provincial board's ability on\n          its own initiative to reopen an application in order to cure a jurisdictional\n          defect."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e814",
+                    "bcl:marginalnote": "Enforcement of Provincial board's final decision",
+                    "bcl:num": "8.4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e822",
+                            "bcl:num": "1",
+                            "bcl:text": "The Provincial board, a party in whose favour the Provincial board makes a final\n          decision or a person designated in the final decision may file a certified copy of the\n          final decision with the Supreme Court."
+                        },
+                        {
+                            "@id": "d2e831",
+                            "bcl:num": "2",
+                            "bcl:text": "A final decision filed under subsection (1) has the same force and effect, and all\n          proceedings may be taken on it, as if it were a judgment of the Supreme Court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e841",
+                    "bcl:marginalnote": "Review of an order, decision or determination",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e849",
+                            "bcl:num": "1",
+                            "bcl:text": "The Provincial board has exclusive jurisdiction to inquire into, hear and\n          determine all those matters and questions of fact, law and discretion arising or required\n          to be determined by the Provincial board under this Act or a federal Act and to make any\n          order permitted to be made."
+                        },
+                        {
+                            "@id": "d2e858",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Provincial board has exclusive\n          jurisdiction to inquire into, hear and determine whether a decision, order or\n          determination of a marketing board or commission accords with either or both of the\n          following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e867",
+                                    "bcl:num": "a",
+                                    "bcl:text": "sound marketing policy;"
+                                },
+                                {
+                                    "@id": "d2e877",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a scheme or the orders of the marketing board or commission."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e886",
+                            "bcl:num": "3",
+                            "bcl:text": "A decision, order or determination of the Provincial board under this Act on a\n          matter in respect of which the Provincial board has exclusive jurisdiction is final and\n          conclusive and is not open to question or review in any court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e896",
+                    "bcl:marginalnote": "Marketing boards",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e904",
+                            "bcl:num": "1",
+                            "bcl:text": "In accordance with section 2, the Lieutenant Governor in Council may\n          provide for the establishment of a marketing board to administer, under the supervision of\n          the Provincial board, regulations for the promotion, control and regulation of the\n          marketing of a regulated product."
+                        },
+                        {
+                            "@id": "d2e913",
+                            "bcl:num": "2",
+                            "bcl:text": "A marketing board has the power and capacity of a legal person."
+                        },
+                        {
+                            "@id": "d2e922",
+                            "bcl:num": "3",
+                            "bcl:text": "With the approval of the Lieutenant Governor in Council, a marketing board may\n          acquire, hold and dispose of real property."
+                        },
+                        {
+                            "@id": "d2e932",
+                            "bcl:num": "4",
+                            "bcl:text": "[Repealed 2003-7-47.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e942",
+                    "bcl:marginalnote": "Powers of marketing boards and commissions",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e950",
+                            "bcl:num": "1",
+                            "bcl:text": "Without limiting other provisions of this Act, the Lieutenant Governor in Council\n          may vest in a marketing board or commission any or all of the following powers:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e959",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to regulate the time and place at which and to designate the agency through\n            which a regulated product must be marketed;"
+                                },
+                                {
+                                    "@id": "d2e968",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to determine the manner of distribution, the quantity and quality, grade or\n            class of a regulated product that is to be marketed by a person at any time;"
+                                },
+                                {
+                                    "@id": "d2e978",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to prohibit the marketing of a grade, quality or class of a regulated\n            product;"
+                                },
+                                {
+                                    "@id": "d2e987",
+                                    "bcl:num": "d",
+                                    "bcl:text": "to determine the charges that may be made by a designated agency for its\n            services;"
+                                },
+                                {
+                                    "@id": "d2e996",
+                                    "bcl:num": "e",
+                                    "bcl:text": "to exempt from a determination or order a person or class of persons engaged in\n            the marketing of a regulated product or a class, variety or grade of it;"
+                                },
+                                {
+                                    "@id": "d2e1005",
+                                    "bcl:num": "f",
+                                    "bcl:text": "to require persons engaged in the marketing of a regulated product to register\n            with and obtain licences from the marketing board or commission;"
+                                },
+                                {
+                                    "@id": "d2e1014",
+                                    "bcl:num": "g",
+                                    "bcl:text": "to set and collect yearly, half yearly, quarterly or monthly licence fees from\n            persons engaged in the marketing of a regulated product;"
+                                },
+                                {
+                                    "@id": "d2e1023",
+                                    "bcl:num": "h",
+                                    "bcl:text": "for the purposes of paragraph (g) and in respect of the persons affected\n            by a regulation under that paragraph",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1033",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to classify those persons into groups and set the licence fees payable by the\n              members of the different groups in different amounts,"
+                                        },
+                                        {
+                                            "@id": "d2e1042",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to set and collect from those persons fees for services rendered or to be\n              rendered by the marketing board or commission, and"
+                                        },
+                                        {
+                                            "@id": "d2e1051",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "to recover the licence and other fees by proceedings in a court of competent\n              jurisdiction;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1060",
+                                    "bcl:num": "i",
+                                    "bcl:text": "to cancel a licence for violation of a provision of the scheme or of an order of\n            the marketing board or commission or of the regulations;"
+                                },
+                                {
+                                    "@id": "d2e1069",
+                                    "bcl:num": "j",
+                                    "bcl:text": "to require full information relating to the marketing of a regulated product\n            from all persons engaged in marketing activities, to require periodic returns to be made\n            by those persons and to inspect the books and premises of those persons;"
+                                },
+                                {
+                                    "@id": "d2e1078",
+                                    "bcl:num": "k",
+                                    "bcl:text": "to set the prices, maximum prices, minimum prices or both maximum and minimum\n            prices at which a regulated product or a grade or class of it may be bought or sold in\n            British Columbia or that must be paid for a regulated product by a designated agency and\n            to set different prices for different parts of British Columbia;"
+                                },
+                                {
+                                    "@id": "d2e1088",
+                                    "bcl:num": "l",
+                                    "bcl:text": "to authorize a designated agency to conduct pools for the distribution of all\n            proceeds received from the sale of a regulated product and to require that designated\n            agency to distribute the proceeds of sale, after deducting all necessary and proper\n            disbursements, expenses and charges, so that each person receives a share of the total\n            proceeds in relation to the amount, variety, size, grade and class of a regulated\n            product delivered by the person and to make those payments until the total net proceeds\n            are distributed;"
+                                },
+                                {
+                                    "@id": "d2e1097",
+                                    "bcl:num": "m",
+                                    "bcl:text": "subject to section 16 (2) (b), to require the person in charge of\n            a vehicle or other form of conveyance in which a regulated product could be transported\n            to permit a member or employee of the marketing board or commission to search the\n            vehicle;"
+                                },
+                                {
+                                    "@id": "d2e1106",
+                                    "bcl:num": "n",
+                                    "bcl:text": "to seize and dispose of any regulated product kept or marketed in violation of\n            an order of the marketing board or commission;"
+                                },
+                                {
+                                    "@id": "d2e1115",
+                                    "bcl:num": "o",
+                                    "bcl:text": "to set and collect levies or charges from designated persons engaged in the\n            marketing of the whole or part of a regulated product and for that purpose to classify\n            those persons into groups and set the levies or charges payable by the members of the\n            different groups in different amounts, and to use those levies or charges and other\n            money and licence fees received by the marketing board or commission",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1124",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to carry out the purposes of the scheme,"
+                                        },
+                                        {
+                                            "@id": "d2e1133",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to pay the expenses of the marketing board or commission,"
+                                        },
+                                        {
+                                            "@id": "d2e1143",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "to pay costs and losses incurred in marketing a regulated product,"
+                                        },
+                                        {
+                                            "@id": "d2e1152",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "to equalize or adjust returns received by producers of regulated products\n              during the periods the marketing board or commission may determine, and"
+                                        },
+                                        {
+                                            "@id": "d2e1161",
+                                            "bcl:num": "v",
+                                            "bcl:text": "to set aside reserves for the purposes referred to in this\n              paragraph;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1170",
+                                    "bcl:num": "p",
+                                    "bcl:text": "to delegate its powers to the extent and in the manner the marketing board or\n            commission considers necessary or advisable for the proper operation of the scheme under\n            which the marketing board or commission is constituted, but a power in paragraph\n              (f), (g) (h) or (i) must not be exercised by any person\n            other than the federal board, a marketing board or a commission;"
+                                },
+                                {
+                                    "@id": "d2e1179",
+                                    "bcl:num": "q",
+                                    "bcl:text": "to make orders and rules considered by the marketing board or commission\n            necessary or advisable to promote, control and regulate effectively the marketing of a\n            regulated product, and to amend or revoke them;"
+                                },
+                                {
+                                    "@id": "d2e1188",
+                                    "bcl:num": "r",
+                                    "bcl:text": "to purchase a regulated product in relation to which it may exercise its powers\n            and package, process, store, ship, insure, export, sell or otherwise dispose of the\n            product purchased by it;"
+                                },
+                                {
+                                    "@id": "d2e1198",
+                                    "bcl:num": "s",
+                                    "bcl:text": "to inquire into and determine the amount of surplus of a regulated\n            product;"
+                                },
+                                {
+                                    "@id": "d2e1207",
+                                    "bcl:num": "t",
+                                    "bcl:text": "to acquire all or part of a surplus of a regulated product as the marketing\n            board or commission may determine;"
+                                },
+                                {
+                                    "@id": "d2e1216",
+                                    "bcl:num": "u",
+                                    "bcl:text": "to market a surplus of a regulated product that it acquires;"
+                                },
+                                {
+                                    "@id": "d2e1225",
+                                    "bcl:num": "v",
+                                    "bcl:text": "to require a person who receives a regulated product for marketing from a\n            producer to deduct from the money payable by the person to the producer licence fees,\n            levies or charges payable by the producer to the marketing board or commission and to\n            remit them to the marketing board or commission."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1234",
+                            "bcl:num": "2",
+                            "bcl:text": "The Provincial board may, at any time, amend, vary or cancel an order or rule made\n          before or after February\u00a011,\u00a01975 by a marketing board or commission under a power vested\n          in it under this section and sections\u00a013 and\u00a014, or under a power exercisable under the\n          federal Act."
+                        },
+                        {
+                            "@id": "d2e1243",
+                            "bcl:num": "3",
+                            "bcl:text": "An order or rule made under subsection (1) may be limited as to time or\n          place."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1254",
+                    "bcl:marginalnote": "Marketing commission",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1262",
+                            "bcl:num": "1",
+                            "bcl:text": "In accordance with section 2, the Lieutenant Governor in Council may\n          provide for the establishment of a marketing commission to administer, under the\n          supervision of the Provincial board, regulations for the promotion, control and regulation\n          of the marketing of a regulated product."
+                        },
+                        {
+                            "@id": "d2e1271",
+                            "bcl:num": "2",
+                            "bcl:text": "A commission has the power and capacity of a legal person."
+                        },
+                        {
+                            "@id": "d2e1280",
+                            "bcl:num": "3",
+                            "bcl:text": "With the approval of the Lieutenant Governor in Council, a commission may acquire,\n          hold and dispose of real property."
+                        },
+                        {
+                            "@id": "d2e1290",
+                            "bcl:num": "4",
+                            "bcl:text": "[Repealed 2003-7-49.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1300",
+                    "bcl:marginalnote": "Power to alter schemes",
+                    "bcl:num": "13",
+                    "bcl:text": "Subject to this Act, if a marketing board is established under section 10 or a\n        commission is established under section\u00a012, the Lieutenant Governor in Council may, in\n        accordance with section 2, concerning a natural product, make orders establishing, amending\n        and revoking schemes, the objects of those schemes being the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1311",
+                            "bcl:num": "a",
+                            "bcl:text": "to initiate and carry out programs for regulating, promoting, stimulating,\n          increasing and improving the marketing of that natural product;"
+                        },
+                        {
+                            "@id": "d2e1320",
+                            "bcl:num": "b",
+                            "bcl:text": "to initiate, support or conduct programs for promoting, stimulating, increasing\n          and improving the economic position of persons engaged in the marketing of that natural\n          product;"
+                        },
+                        {
+                            "@id": "d2e1330",
+                            "bcl:num": "c",
+                            "bcl:text": "to initiate, support or conduct advertising, educational, promotional and research\n          programs relating to the marketing of that natural product."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1340",
+                    "bcl:marginalnote": "Additional powers",
+                    "bcl:num": "14",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e1610",
+                            "bcl:num": "1",
+                            "bcl:text": "In addition to exercising any powers vested under section\u00a011, a marketing board or\n          commission may, for a scheme,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1351",
+                                    "bcl:num": "a",
+                                    "bcl:text": "establish quality standards for a regulated product,"
+                                },
+                                {
+                                    "@id": "d0e1635",
+                                    "bcl:num": "a.1",
+                                    "bcl:text": "establish or designate a biosecurity program, and require persons engaged in the\n            production of a natural product to implement or comply with the biosecurity\n            program,"
+                                },
+                                {
+                                    "@id": "d0e1644",
+                                    "bcl:num": "a.2",
+                                    "bcl:text": "require persons engaged in the production of a natural product to maintain\n            insurance, as specified by the marketing board or commission, against losses resulting\n            from",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e1652",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the interruption or termination of production, for any reason, or"
+                                        },
+                                        {
+                                            "@id": "d0e1661",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/14016",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Animal\n                  Health Act"
+                                                },
+                                                "#text": "a notifiable or reportable disease within the meaning of the , and"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1360",
+                                    "bcl:num": "b",
+                                    "bcl:text": "carry out advertising, educational and research programs."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1689",
+                            "bcl:num": "2",
+                            "bcl:text": "The following persons may issue directives with respect to biosecurity programs:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e1697",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/14016",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Animal Health\n                Act"
+                                        },
+                                        "#text": "the chief veterinarian under the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e1710",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/00_08028_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Health\n                Act"
+                                        },
+                                        "#text": "the provincial health officer under the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e1723",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the Provincial board."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1733",
+                            "bcl:num": "3",
+                            "bcl:text": "If a directive is issued under subsection (2), a marketing board or commission to\n          which the directive applies must implement the directive."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1370",
+                    "bcl:marginalnote": "Enforcement of Act and regulations",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1378",
+                            "bcl:num": "1",
+                            "bcl:text": "On application by the Provincial board, a marketing board or commission and on\n          being satisfied that a provision of this Act or the regulations or a provision of a\n          marketing scheme made by the Provincial board, marketing board or commission under this\n          Act or an order, rule, determination or decision of the Provincial board, marketing board\n          or commission made under this Act or made under powers exercisable, with the approval of\n          the Lieutenant Governor in Council, under the federal Act, is not being complied with, the\n          Supreme Court may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1387",
+                                    "bcl:num": "a",
+                                    "bcl:text": "order and require a person to do promptly or within or at the time specified in\n            the order, an act or thing that the court considers necessary for the purpose of\n            compelling that person to comply with this Act, the regulations, the marketing scheme or\n            the order, rule, determination or decision of the Provincial board, marketing board or\n            commission, and"
+                                },
+                                {
+                                    "@id": "d2e1396",
+                                    "bcl:num": "b",
+                                    "bcl:text": "forbid, restrain or enjoin the doing or continuing of an act or thing that is\n            contrary to this Act, the regulations, the marketing scheme or the order, rule,\n            determination or decision of the Provincial board, marketing board or\n            commission."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1406",
+                            "bcl:num": "2",
+                            "bcl:text": "If special circumstances require, on an application under subsection (1)\n          made without notice to anyone, the court may make an interim order but the order must not\n          be for a longer period of time than the court considers necessary for the purpose of\n          enabling the matter to be heard and determined."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1416",
+                    "bcl:marginalnote": "Search and seizure",
+                    "bcl:num": "16",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1424",
+                            "bcl:num": "1",
+                            "bcl:text": "With the approval of the Lieutenant Governor in Council and subject to terms and\n          conditions the Lieutenant Governor in Council may impose, the Provincial board or a\n          marketing board or commission may designate a person or class of persons to exercise, on\n          behalf of the Provincial board, a marketing board or commission a power given to the\n          Provincial board, marketing board or commission under this section or under a power\n          exercisable under the federal Act."
+                        },
+                        {
+                            "@id": "d0e1812",
+                            "bcl:num": "1.1",
+                            "bcl:text": "The powers under subsection (2) may be exercised if the Provincial board, a\n          marketing board, a commission, or a member of one them, has reasonable grounds to believe\n          that a person is not complying with",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e1820",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a provision of this Act or of a regulation, scheme, rule or requirement made\n            under this Act or the federal Act, or"
+                                },
+                                {
+                                    "@id": "d0e1829",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an order, determination or decision made under this Act or the federal\n            Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1839",
+                            "bcl:num": "1.2",
+                            "bcl:text": "Nothing in this section affects the exercise by a marketing board or commission of\n          the powers referred to in section 11 (1) (j)."
+                        },
+                        {
+                            "@id": "d2e1433",
+                            "bcl:num": "2",
+                            "bcl:text": "The Provincial board, marketing board, commission or person designated under\n          subsection (1) may do one or more of the following for the purpose of inspecting and\n          examining a regulated product:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1442",
+                                    "bcl:num": "a",
+                                    "bcl:text": "stop and detain a vehicle or other form of conveyance that contains or that the\n            Provincial board, marketing board, commission or person has reason to believe contains,\n            a regulated product;"
+                                },
+                                {
+                                    "@id": "d2e1452",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if accompanied by a peace officer, without a warrant, enter and search the\n            vehicle or conveyance referred to in paragraph (a) and require that the driver or\n            operator of the vehicle or conveyance take it to a place specified by the person\n            searching the vehicle or conveyance so that all or part of the cargo may be there\n            unloaded and detained for the purposes of subsection (3);"
+                                },
+                                {
+                                    "@id": "d2e1461",
+                                    "bcl:num": "c",
+                                    "bcl:text": "with a warrant, enter land or premises in which a regulated product is being\n            marketed or in which the Provincial board, marketing board, commission or person has\n            reason to believe a regulated product is being marketed and search the land or\n            premises."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1470",
+                            "bcl:num": "3",
+                            "bcl:text": "If a person designated under subsection (1) stops and detains a vehicle or conveyance\n          under subsection\n            (2) or enters a vehicle, conveyance, land or premises under subsection\n          (2), the person may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1479",
+                                    "bcl:num": "a",
+                                    "bcl:text": "require the licensee, occupier or person in charge of the vehicle, conveyance,\n            land or premises or the owner or consignee of a regulated product found in the vehicle,\n            conveyance or premises or on the land",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e1932",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to assist with the stoppage, detention, entry, inspection or examination and,\n              for those purposes, require that person to attend at the vehicle, conveyance, land or\n              premises,"
+                                        },
+                                        {
+                                            "@id": "d0e1941",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to produce records that, under the Act, are required to be kept,\n              and"
+                                        },
+                                        {
+                                            "@id": "d0e1950",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "to provide samples of a natural product or a thing used in relation to the\n              marketing of a natural product, or assist in taking samples, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1488",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if, during an inspection or examination, it appears that there is non-compliance\n            as described in subsection (1.1), seize and take away, for the purpose of\n            evidence,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1497",
+                                            "bcl:num": "i",
+                                            "bcl:text": "any property, including books, records and other documents that the person has\n              reason to believe relate to the marketing of a regulated product, and retain them\n              until their production in a court proceeding arising out of the failure to comply is\n              required or until it otherwise appears that retention is no longer required or make\n              copies of them, and"
+                                        },
+                                        {
+                                            "@id": "d2e1507",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "a regulated product or a natural product that the person has reason to believe\n              might be a regulated product and a receptacle containing that product."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1516",
+                            "bcl:num": "4",
+                            "bcl:text": "If a person is convicted under this Act, anything that was detained or seized\n          under this section in respect of the offence is forfeited and becomes the property of the\n          government."
+                        },
+                        {
+                            "@id": "d2e1525",
+                            "bcl:num": "5",
+                            "bcl:text": "The minister may direct the disposal of anything forfeited to the government in\n          the manner and subject to the terms and conditions the minister may specify."
+                        },
+                        {
+                            "@id": "d2e1534",
+                            "bcl:num": "6",
+                            "bcl:text": "The government or a person acting under the authority of this Act is not liable\n          for loss or damage arising from the destruction or deterioration of anything seized or\n          detained under this section during a period it is under seizure or detention lawfully made\n          under this Act."
+                        },
+                        {
+                            "@id": "d2e1543",
+                            "bcl:num": "7",
+                            "bcl:text": "If a person is not convicted under this Act, anything detained or seized under\n          this section may, in the discretion of the court having jurisdiction in the matter, be\n          returned to the person entitled to it, or disposed of in the manner the court may order,\n          and the court may, in a proper case, if there is loss or damage arising from the\n          destruction or deterioration of anything that was detained or seized, order the Provincial\n          board or the marketing board or commission that authorized the detention or seizure to pay\n          compensation for the loss or damage to the person entitled to it."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e2031",
+                    "bcl:marginalnote": "Monitoring biosecurity programs",
+                    "bcl:num": "16.1",
+                    "bcl:text": "For the purpose of monitoring compliance with a biosecurity program, a marketing\n        board or commission may, without limiting any other power of a marketing board or commission\n        under this Act, require a person who is subject to the biosecurity program to do one or more\n        of the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d0e2042",
+                            "bcl:num": "a",
+                            "bcl:text": "keep records;"
+                        },
+                        {
+                            "@id": "d0e2051",
+                            "bcl:num": "b",
+                            "bcl:text": "make reports;"
+                        },
+                        {
+                            "@id": "d0e2060",
+                            "bcl:num": "c",
+                            "bcl:text": "take a sample of a natural product or a thing used in relation to the production\n          of a natural product, submit a sample to a specified person or permit a specified person\n          to take a sample;"
+                        },
+                        {
+                            "@id": "d0e2069",
+                            "bcl:num": "d",
+                            "bcl:text": "permit a person designated under section 16 (1) or another specified person\n          to",
+                            "bcl:subparagraph": [
+                                {
+                                    "@id": "d0e2077",
+                                    "bcl:num": "i",
+                                    "bcl:text": "examine records or samples,"
+                                },
+                                {
+                                    "@id": "d0e2086",
+                                    "bcl:num": "ii",
+                                    "bcl:text": "examine a vehicle, conveyance, land or premises,"
+                                },
+                                {
+                                    "@id": "d0e2095",
+                                    "bcl:num": "iii",
+                                    "bcl:text": "examine equipment or a natural product found in or on a vehicle, conveyance,\n            land or premises, or"
+                                },
+                                {
+                                    "@id": "d0e2104",
+                                    "bcl:num": "iv",
+                                    "bcl:text": "question the person who is subject to the biosecurity program or an employee of\n            that person."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2341",
+                    "bcl:marginalnote": "Administrative action for failure to comply with biosecurity program",
+                    "bcl:num": "16.2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2349",
+                            "bcl:num": "1",
+                            "bcl:text": "If satisfied on a balance of probabilities that a person who is subject to a biosecurity program has failed to comply with a requirement of the program, a marketing board or commission may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2357",
+                                    "bcl:num": "a",
+                                    "bcl:text": "impose an administrative penalty of up to $10\u00a0000, and"
+                                },
+                                {
+                                    "@id": "d1e2366",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if an administrative penalty is imposed, suspend or withhold any licence or certificate issued by the marketing board or commission to the person until the administrative penalty is paid."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2376",
+                            "bcl:num": "2",
+                            "bcl:text": "An administrative penalty may be imposed",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2384",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by serving notice of the administrative penalty in a manner approved by the Provincial board, and"
+                                },
+                                {
+                                    "@id": "d1e2393",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in accordance with any policies and procedures approved by the Provincial board."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2403",
+                            "bcl:num": "3",
+                            "bcl:text": "Before a marketing board or commission imposes an administrative penalty on a person, the marketing board or commission must consider the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2411",
+                                    "bcl:num": "a",
+                                    "bcl:text": "previous enforcement actions against the person under this Act;"
+                                },
+                                {
+                                    "@id": "d1e2420",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the gravity and magnitude of the contravention;"
+                                },
+                                {
+                                    "@id": "d1e2429",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the extent of the harm to persons or property resulting from the contravention;"
+                                },
+                                {
+                                    "@id": "d1e2439",
+                                    "bcl:num": "d",
+                                    "bcl:text": "whether the contravention was repeated or continuous;"
+                                },
+                                {
+                                    "@id": "d1e2448",
+                                    "bcl:num": "e",
+                                    "bcl:text": "whether the contravention was deliberate;"
+                                },
+                                {
+                                    "@id": "d1e2457",
+                                    "bcl:num": "f",
+                                    "bcl:text": "any economic benefit derived by the person from the contravention;"
+                                },
+                                {
+                                    "@id": "d1e2466",
+                                    "bcl:num": "g",
+                                    "bcl:text": "the person's efforts to correct the contravention."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2477",
+                            "bcl:num": "4",
+                            "bcl:text": "A person subject to an administrative penalty",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e2485",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must pay the administrative penalty within 30 days from receiving notice under subsection\u00a0(2), and"
+                                },
+                                {
+                                    "@id": "d1e2494",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may dispute the administrative penalty, or the amount of the administrative penalty, by doing both of the following within 30 days from receiving notice under subsection\u00a0(2):",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e2502",
+                                            "bcl:num": "i",
+                                            "bcl:text": "pay the administrative penalty;"
+                                        },
+                                        {
+                                            "@id": "d1e2511",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "after the administrative penalty has been paid, appeal to the Provincial board under section 8."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2522",
+                            "bcl:num": "5",
+                            "bcl:text": "If a corporation fails to comply with a requirement of a biosecurity program, an employee, an officer, a director or an agent of the corporation who authorized, permitted or acquiesced in the contravention is also liable under this section even though the corporation is liable for or pays an administrative penalty."
+                        },
+                        {
+                            "@id": "d1e2531",
+                            "bcl:num": "6",
+                            "bcl:text": "The sanctions provided for in this section apply in addition to any fines, penalties, orders, rules, determinations or decisions that may be imposed or made under this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e2541",
+                    "bcl:marginalnote": "Recovery of administrative penalties",
+                    "bcl:num": "16.3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e2549",
+                            "bcl:num": "1",
+                            "bcl:text": "An administrative penalty under section 16.2 may be recovered as a debt due to the government."
+                        },
+                        {
+                            "@id": "d1e2558",
+                            "bcl:num": "2",
+                            "bcl:text": "If a person fails to pay an administrative penalty as required, the marketing board or commission that imposed the administrative penalty may file with the Supreme Court a certified copy of the notice referred to in section 16.2 (2) (a)."
+                        },
+                        {
+                            "@id": "d1e2567",
+                            "bcl:num": "3",
+                            "bcl:text": "A notice filed under subsection (2) has the same force and effect, and all proceedings may be taken on it, as if it were a judgment of the Supreme Court."
+                        },
+                        {
+                            "@id": "d1e2577",
+                            "bcl:num": "4",
+                            "bcl:text": "All administrative penalties received under this Division must be paid into the consolidated revenue fund."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1553",
+                    "bcl:marginalnote": "Enforcement",
+                    "bcl:num": "17",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1561",
+                            "bcl:num": "1",
+                            "bcl:text": "An order, rule, determination or decision made by the Provincial board, a\n          marketing board or commission or under this Act or made under a power exercisable under\n          the federal Act, may be enforced, and the breach of an order, rule, determination or\n          decision may be restrained, without proof of damage and whether or not a penalty is\n          imposed for the breach, by action or proceeding in the Supreme Court."
+                        },
+                        {
+                            "@id": "d2e1570",
+                            "bcl:num": "2",
+                            "bcl:text": "An action or proceeding under subsection (1) may be brought or taken by and in the\n          name of the Provincial board or a marketing board or commission, and neither the\n          government nor the Attorney General is a necessary party to the action or\n          proceeding."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1581",
+                    "bcl:marginalnote": "Offences",
+                    "bcl:num": "18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1589",
+                            "bcl:num": "1",
+                            "bcl:text": "A person commits an offence if the person fails to comply with",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e2165",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a provision of this Act or of a regulation, scheme, rule or requirement made\n            under this Act or the federal Act, or"
+                                },
+                                {
+                                    "@id": "d0e2174",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an order, determination or decision made under this Act or the federal\n            Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1598",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who commits an offence under subsection (1) is liable on\n          conviction",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1607",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to a fine of not more than $20\u00a0000,"
+                                },
+                                {
+                                    "@id": "d2e1617",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to imprisonment not longer than 6\u00a0months, or"
+                                },
+                                {
+                                    "@id": "d2e1626",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to both a fine and imprisonment."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1635",
+                            "bcl:num": "3",
+                            "bcl:text": "In a prosecution for an offence under this Act",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1644",
+                                    "bcl:num": "a",
+                                    "bcl:text": "it is not necessary for the informant or person prosecuting to prove that the\n            natural product in respect of which the prosecution is instituted was produced in the\n            area to which a scheme for the regulation of the natural product relates, and"
+                                },
+                                {
+                                    "@id": "d2e1653",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the defendant pleads or alleges that the natural product was not produced in\n            the area to which the scheme relates, the burden of proof is on the\n            defendant."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1662",
+                            "bcl:num": "4",
+                            "bcl:text": "Evidence of an order, rule, determination or decision of the Provincial board or a\n          marketing board or commission may be given in any court of British Columbia by production\n          of a copy purporting to be certified as a true copy by a member of the Provincial board,\n          marketing board or commission, without proof of the signature or official position of the\n          person appearing to have certified the copy."
+                        },
+                        {
+                            "@id": "d2e1672",
+                            "bcl:num": "5",
+                            "bcl:text": "In a prosecution for an offence under this Act, the act or omission complained of,\n          for which the prosecution was instituted, is, unless the defendant proves to the contrary,\n          deemed to relate to the marketing of the natural product in other than interprovincial or\n          export trade."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1682",
+                    "bcl:marginalnote": "Immunity protection for Provincial board, its members and\n        others",
+                    "bcl:num": "19",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1690",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "decision maker",
+                                "#text": "In this section,  includes the Provincial board,\n          a member of the Provincial board or a staff officer of the Provincial board who\n          participates in a dispute resolution process."
+                            }
+                        },
+                        {
+                            "@id": "d2e1702",
+                            "bcl:num": "2",
+                            "bcl:text": "Subject to subsection (3), no legal proceeding for damages lies or\n          may be commenced or maintained against a decision maker, a marketing board, a commission\n          or an agency or their members appointed under the federal Act or under this Act, because\n          of anything done or omitted",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1711",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the performance or intended performance of any duty under this Act,\n            or"
+                                },
+                                {
+                                    "@id": "d2e1721",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the exercise or intended exercise of any power under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1730",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsection\n            (2) does not apply to a person referred to in that subsection in relation to\n          anything done or omitted by that person in bad faith."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1740",
+                    "bcl:marginalnote": "Appropriation",
+                    "bcl:num": "20",
+                    "bcl:text": "The Minister of Finance, on the requisition of the minister, must pay all sums\n        necessary to pay the salaries of the members of the Provincial board and its staff and to\n        meet the expenses necessarily incurred in the carrying out of this Act, but not the expenses\n        of administering a scheme under this Act."
+                },
+                {
+                    "@id": "d2e1752",
+                    "bcl:marginalnote": "Constitutionality",
+                    "bcl:num": "21",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1760",
+                            "bcl:num": "1",
+                            "bcl:text": "The purpose and intent of the Legislature is to confine the provisions of this Act\n          within the competence of the Legislature, and all its provisions are to be construed so as\n          to give effect to this purpose and intent."
+                        },
+                        {
+                            "@id": "d2e1769",
+                            "bcl:num": "2",
+                            "bcl:text": "If any provision or section is held or found to be beyond the powers of the\n          Legislature, the provision or section must be read distributively, and the provision or\n          section so far as it deals with matters within the competence of the Legislature is to\n          stand and be valid and operative, and has the same effect as if the provision or section\n          had dealt with those matters exclusively."
+                        },
+                        {
+                            "@id": "d2e1778",
+                            "bcl:num": "3",
+                            "bcl:text": "The remaining provisions and sections of this Act must not be deemed or held to be\n          inoperative or beyond the powers of the Legislature, but are valid and operative, and have\n          the same effect as if they had been originally enacted as separate and independent\n          enactments and as the only provisions of this Act."
+                        },
+                        {
+                            "@id": "d2e1788",
+                            "bcl:num": "4",
+                            "bcl:text": "All the provisions of this Act that are within the powers of the Legislature\n          remain in full force even if some provisions are held to be beyond the powers of the\n          Legislature, the intention of the Legislature being to give separate and independent\n          effect, to the extent of its powers, to every enactment and provision in this\n          Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1798",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "22",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1806",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041\n          of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1818",
+                            "bcl:num": "2",
+                            "bcl:text": "The Lieutenant Governor in Council may, by regulation, vest in the Provincial\n          board or any marketing board or commission the authorities and powers considered necessary\n          or advisable with reference to the marketing of a natural product so far as it is within\n          Provincial jurisdiction, and to enable the Provincial board or a marketing board or\n          commission, either alone or in cooperation with the federal board, to exercise effective\n          control of the marketing of natural products to the full extent intended by this Act and\n          the federal Act."
+                        },
+                        {
+                            "@id": "d2e1827",
+                            "bcl:num": "3",
+                            "bcl:text": "Without limiting subsections (1) and (2), the Lieutenant Governor in\n          Council may make regulations for the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1837",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the appointment of marketing boards or commissions in British Columbia to\n            cooperate with and act as agents of the federal board;"
+                                },
+                                {
+                                    "@id": "d2e1846",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the appointment of marketing boards or commissions to exercise in British\n            Columbia an authority or function that may be conferred on a local board under the\n            federal Act, and otherwise to cooperate and act in the administration and carrying out\n            of schemes for the regulation of the marketing of natural products authorized under the\n            federal Act or this Act;"
+                                },
+                                {
+                                    "@id": "d2e1855",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the approval of a scheme for the regulation of the marketing of a natural\n            product for which the approval of the Lieutenant Governor in Council is necessary for a\n            purpose of the federal Act;"
+                                },
+                                {
+                                    "@id": "d2e1864",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the authorizing and giving effect to a scheme for the regulation of the\n            marketing in British Columbia of a natural product;"
+                                },
+                                {
+                                    "@id": "d2e1873",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the submission of a scheme for the regulation of the marketing of a natural\n            product to a plebiscite in the area of British Columbia covered by the\n            scheme;"
+                                },
+                                {
+                                    "@id": "d2e1882",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the termination and annulment of an approval given or scheme authorized by the\n            Lieutenant Governor in Council under this Act and the disposition of the assets of a\n            marketing board if its appointment or authority is annulled;"
+                                },
+                                {
+                                    "@id": "d2e1892",
+                                    "bcl:num": "g",
+                                    "bcl:text": "the imposition of penalties for enforcing a provision of the\n            regulations."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1901",
+                            "bcl:num": "4",
+                            "bcl:text": "[Repealed 2004-45-127.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1911",
+                    "bcl:marginalnote": "Granting of approval by Lieutenant Governor in Council",
+                    "bcl:num": "23",
+                    "bcl:text": "An approval that the Lieutenant Governor in Council is authorized or required to\n        give for a purpose of this Act may be given by regulation applicable to all cases or a class\n        of cases, or by an order in a particular case."
+                },
+                {
+                    "@id": "d2e1924",
+                    "bcl:marginalnote": "Exercise of powers whether or not federal Act in\n        existence",
+                    "bcl:num": "24",
+                    "bcl:text": "All powers vested in the Lieutenant Governor in Council or in the Provincial board,\n        a marketing board, a commission or a person under this Act may be exercised to their fullest\n        extent, even though the federal Act may or may not be existing or operative or that the\n        federal board may or may not be existing or operative."
+                }
+            ]
+        }
+    }
+}

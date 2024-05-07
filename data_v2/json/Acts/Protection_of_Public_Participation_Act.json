@@ -1,0 +1,394 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@id": "19003",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "act:title": "Protection of Public Participation Act",
+        "act:chapter": "3",
+        "act:yearenacted": "2019",
+        "act:assentedto": "March 25, 2019",
+        "act:currency": {
+            "act:tlcDirPath": "1922970521/260283436/970564330",
+            "act:tlc": "E3tlc19003"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d1e26",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d1e37",
+                            "bcl:text": {
+                                "in:term": "administrative proceeding",
+                                "#text": "means an application or other process for bringing a matter before a tribunal;"
+                            }
+                        },
+                        {
+                            "@id": "d1e45",
+                            "bcl:text": {
+                                "in:term": "applicant",
+                                "#text": "means a person making an application under section 4;"
+                            }
+                        },
+                        {
+                            "@id": "d1e54",
+                            "bcl:text": {
+                                "in:term": "court",
+                                "#text": "means the Supreme Court of British Columbia;"
+                            }
+                        },
+                        {
+                            "@id": "d1e62",
+                            "bcl:text": {
+                                "in:term": "dismissal order",
+                                "#text": "means an order under section 4 dismissing a proceeding;"
+                            }
+                        },
+                        {
+                            "@id": "d1e70",
+                            "bcl:text": {
+                                "in:term": "expression",
+                                "#text": "means any communication, whether it is made verbally or non-verbally, publicly or privately, and whether it is directed or not directed at a person or entity;"
+                            }
+                        },
+                        {
+                            "@id": "d1e78",
+                            "bcl:text": {
+                                "in:term": "proceeding",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96443_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Supreme Court Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e90",
+                            "bcl:text": {
+                                "in:term": "respondent",
+                                "#text": "means a person responding to an application made under section 4;"
+                            }
+                        },
+                        {
+                            "@id": "d1e98",
+                            "bcl:text": {
+                                "in:term": "tribunal",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96241_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Judicial Review Procedure Act"
+                                },
+                                "#text": "has the same meaning as in the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e111",
+                    "bcl:marginalnote": "Application",
+                    "bcl:num": "2",
+                    "bcl:text": "This Act applies in respect of proceedings commenced on or after May 15, 2018."
+                },
+                {
+                    "@id": "d1e123",
+                    "bcl:marginalnote": "Qualified privilege",
+                    "bcl:num": "3",
+                    "bcl:text": "If an oral or written communication on a matter of public interest, between persons who have a direct interest in the matter, has qualified privilege, that communication has qualified privilege regardless of whether the communication is witnessed or reported by the media or other persons."
+                },
+                {
+                    "@id": "d1e135",
+                    "bcl:marginalnote": "Application to court",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e143",
+                            "bcl:num": "1",
+                            "bcl:text": "In a proceeding, a person against whom the proceeding has been brought may apply for a dismissal order under subsection (2) on the basis that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e151",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the proceeding arises from an expression made by the applicant, and"
+                                },
+                                {
+                                    "@id": "d1e160",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the expression relates to a matter of public interest."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e170",
+                            "bcl:num": "2",
+                            "bcl:text": "If the applicant satisfies the court that the proceeding arises from an expression referred to in subsection (1), the court must make a dismissal order unless the respondent satisfies the court that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e178",
+                                    "bcl:num": "a",
+                                    "bcl:text": "there are grounds to believe that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e186",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the proceeding has substantial merit, and"
+                                        },
+                                        {
+                                            "@id": "d1e195",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the applicant has no valid defence in the proceeding, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e205",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the harm likely to have been or to be suffered by the respondent as a result of the applicant's expression is serious enough that the public interest in continuing the proceeding outweighs the public interest in protecting that expression."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e217",
+                    "bcl:marginalnote": "No further steps",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e225",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), if an applicant serves on a respondent an application for a dismissal order under section 4, no party may take further steps in the proceeding until the application, including any appeals, has been finally resolved."
+                        },
+                        {
+                            "@id": "d1e234",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not apply to an application for an injunction."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e244",
+                    "bcl:marginalnote": "No amendments unless permitted",
+                    "bcl:num": "6",
+                    "bcl:text": "Unless the court orders otherwise, a respondent may not amend the respondent's pleadings",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d1e255",
+                            "bcl:num": "a",
+                            "bcl:text": "in order to prevent or avoid a dismissal order under section 4, or"
+                        },
+                        {
+                            "@id": "d1e264",
+                            "bcl:num": "b",
+                            "bcl:text": "in order to continue the proceeding if the proceeding is dismissed."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e274",
+                    "bcl:marginalnote": "Costs",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e282",
+                            "bcl:num": "1",
+                            "bcl:text": "If the court makes a dismissal order under section 4, the applicant is entitled to costs on the application and in the proceeding, assessed as costs on a full indemnity basis unless the court considers that assessment inappropriate in the circumstances."
+                        },
+                        {
+                            "@id": "d1e291",
+                            "bcl:num": "2",
+                            "bcl:text": "If, on an application for a dismissal order under section 4, the court does not dismiss the proceeding, the respondent is not entitled to costs on that application unless the court considers it appropriate in the circumstances."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e301",
+                    "bcl:marginalnote": "Award for damages",
+                    "bcl:num": "8",
+                    "bcl:text": "On an application for a dismissal order under section 4, the court may, on its own motion or on application by the applicant, award the damages it considers appropriate against a respondent if it finds that the respondent brought the proceeding in bad faith or for an improper purpose."
+                },
+                {
+                    "@id": "d1e313",
+                    "bcl:marginalnote": "Procedure on application",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e321",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to this Act, an application for a dismissal order under section 4 must be made in accordance with the Supreme Court Civil Rules."
+                        },
+                        {
+                            "@id": "d1e330",
+                            "bcl:num": "2",
+                            "bcl:text": "An application for a dismissal order under section 4 may be made at any time after the proceeding has commenced."
+                        },
+                        {
+                            "@id": "d1e339",
+                            "bcl:num": "3",
+                            "bcl:text": "An application for a dismissal order under section 4 must be heard as soon as practicable."
+                        },
+                        {
+                            "@id": "d1e349",
+                            "bcl:num": "4",
+                            "bcl:text": "Subject to subsections (5) and (6) of this section, on an application for a dismissal order under section 4, evidence must be given by affidavit."
+                        },
+                        {
+                            "@id": "d1e358",
+                            "bcl:num": "5",
+                            "bcl:text": "An applicant or respondent may, before the hearing of the application,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e366",
+                                    "bcl:num": "a",
+                                    "bcl:text": "call, out of court before an official reporter, the witness who swore or affirmed the affidavit for cross-examination on the witness's affidavit, and"
+                                },
+                                {
+                                    "@id": "d1e375",
+                                    "bcl:num": "b",
+                                    "bcl:text": "cross-examine the witness on the witness's affidavit, provided that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e383",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the total period of cross-examination of all applicants in the proceeding does not exceed 7 hours in duration, and"
+                                        },
+                                        {
+                                            "@id": "d1e392",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the total period of cross-examination of all respondents in the proceeding does not exceed 7 hours in duration."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e403",
+                            "bcl:num": "6",
+                            "bcl:text": "The court may extend the period permitted for cross-examination under subsection (5) if the court considers it necessary in the interests of justice."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e413",
+                    "bcl:marginalnote": "Appeals",
+                    "bcl:num": "10",
+                    "bcl:text": "An appeal of a dismissal order under this Act to the Court of Appeal must be heard as soon as practicable."
+                },
+                {
+                    "@id": "d1e426",
+                    "bcl:marginalnote": "Stay of administrative proceedings",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e434",
+                            "bcl:num": "1",
+                            "bcl:text": "This section applies if a respondent has commenced an administrative proceeding that the applicant believes to be related to the same matter of public interest alleged by the applicant to be the basis of the proceeding that is the subject of the applicant's application for a dismissal order under section\u00a04."
+                        },
+                        {
+                            "@id": "d1e443",
+                            "bcl:num": "2",
+                            "bcl:text": "The applicant may serve the tribunal with a copy of the notice of the application for the dismissal order."
+                        },
+                        {
+                            "@id": "d1e452",
+                            "bcl:num": "3",
+                            "bcl:text": "Service by the applicant on the tribunal under subsection (2) operates as a stay of the administrative proceeding."
+                        },
+                        {
+                            "@id": "d1e462",
+                            "bcl:num": "4",
+                            "bcl:text": "The tribunal must give to each party a notice of the stay and a copy of the notice of the application that was served on the tribunal."
+                        },
+                        {
+                            "@id": "d1e471",
+                            "bcl:num": "5",
+                            "bcl:text": "A stay of an administrative proceeding under subsection (3) remains effective until",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e479",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the application for a dismissal order, including any appeals, has been finally resolved, or"
+                                },
+                                {
+                                    "@id": "d1e488",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an earlier date, if, on application, the court considers that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e496",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the proceeding that is the subject of the application for a dismissal order and the administrative proceeding that was stayed under subsection (3) are not connected enough to warrant a stay, or"
+                                        },
+                                        {
+                                            "@id": "d1e505",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the stay is causing, or would likely cause, a party undue hardship."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e516",
+                            "bcl:num": "6",
+                            "bcl:text": "An application for the costs of any proceeding under this section must be heard only on the basis of written submissions unless",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e524",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the tribunal is satisfied that a party would suffer significant prejudice if the tribunal did not allow oral submissions, or"
+                                },
+                                {
+                                    "@id": "d1e533",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the applicant and respondent consent to oral submissions and the tribunal agrees."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e544",
+                    "bcl:marginalnote": "Rights not limited",
+                    "bcl:num": "12",
+                    "bcl:text": "The remedies under this Act are in addition to any other right or remedy that may be available to an applicant or a respondent."
+                },
+                {
+                    "@id": "d1e556",
+                    "bcl:marginalnote": {
+                        "in:doc": "Offence Act",
+                        "#text": "Application of"
+                    },
+                    "bcl:num": "13",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Section 5 of the  does not apply to this Act."
+                    }
+                },
+                {
+                    "@id": "d1e574",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "14",
+                    "bcl:text": "This Act comes into force on the date of Royal Assent."
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,338 @@
+Multilateral Instrument 96-101
+Trade Repositories and
+Derivatives Data Reporting
+Securities Act
+Data Field
+Description
+Required for Pre-existing Derivatives
+Transaction identifier
+The unique transaction identifier as provided by the recognized
+trade repository or the identifier as identified by the two
+counterparties, electronic trading venue of execution or clearing
+agency.
+Y
+Master agreement type
+The type of master agreement, if used for the reported derivative.
+N
+Master agreement version
+Date of the master agreement version (e.g., 2002, 2006).
+N
+Cleared
+State whether the derivative has been cleared by a clearing
+agency.
+Y
+Intent to clear
+State whether the derivative will be cleared by a clearing agency.
+N
+Clearing agency
+LEI of the clearing agency where the derivative is or will be
+cleared.
+Y
+(If available)
+Clearing member
+LEI of the clearing member, if the clearing member is not a
+counterparty.
+N
+Clearing exemption
+State whether one or more of the counterparties to the derivative
+are exempted from a mandatory clearing requirement.
+N
+Broker/Clearing intermediary
+LEI of the broker acting as an intermediary for the reporting
+counterparty without becoming a counterparty.
+N
+Electronic trading venue identifier
+LEI of the electronic trading venue where the transaction was
+executed.
+Y
+Inter-affiliate
+State whether the derivative is between two affiliated entities.
+Y
+(If available)
+Collateralization
+State whether the derivative is collateralized.
+Field Values:
+•  Fully (initial and variation margin required to be
+posted by both parties);
+•  Partially (variation only required to be posted by
+both parties);
+•  One-way (one party will be required to post some
+form of collateral);
+•  Uncollateralized.
+N
+Identifier of reporting counterparty
+LEI of the reporting counterparty or, in case of an individual,
+its client code.
+Y
+Identifier of non-reporting counterparty
+LEI of the non-reporting counterparty or, in case of an
+individual, its client code.
+Y
+Counterparty side
+State whether the reporting counterparty was the buyer or seller.
+In the case of swaps, other than credit default, the buyer will
+represent the payer of leg 1 and the seller will be the payer of
+leg 2.
+Y
+Identifier of agent reporting the derivative
+LEI of the agent reporting the derivative if reporting of the
+derivative has been delegated by the reporting counterparty.
+N
+Jurisdiction of reporting counterparty
+If the reporting counterparty is a local counterparty under the
+derivatives data reporting rules of Manitoba, Ontario or Québec,
+or is a local counterparty under paragraph (a) or (c) of the
+definition of location counterparty in the derivatives data
+reporting rules of any other jurisdiction of Canada, state all
+such jurisdictions.
+Y
+(If available)
+Jurisdiction of non-reporting counterparty
+If the non-reporting counterparty is a local counterparty under
+the derivatives data reporting rules of Manitoba, Ontario or
+Québec, or is a local counterparty under paragraph (a) or (c) of
+the definition of location counterparty in the derivatives data
+reporting rules of any other jurisdiction of Canada, state all
+such jurisdictions.
+Y
+(If available)
+A. Common
+Data
+These fields are required to be reported for all derivatives even
+if the
+information may be entered in an Additional Asset Information
+field below.
+A field is not required to be reported if the unique product
+identifier
+adequately describes the data required in that field.
+Unique product identifier
+Unique product identification code based on the taxonomy of the
+product.
+N
+Contract or instrument type
+The name of the contract or instrument type (e.g., swap, swaption,
+forward, option, basis swap, index swap, basket swap).
+Y
+Underlying asset identifier 1
+The unique identifier of the asset referenced in the derivative.
+Y
+Underlying asset identifier 2
+The unique identifier of the second asset referenced in the
+derivative, if more than one.
+If more than two assets identified in the derivative, report the
+unique identifiers for those additional underlying assets.
+Y
+Asset class
+Major asset class of the product (e.g., interest rate, credit,
+commodity, foreign exchange, equity).
+Y
+(If available)
+Effective date or start date
+The date the derivative becomes effective or starts.
+Y
+Maturity, termination or end date
+The date the derivative expires.
+Y
+Payment frequency or dates
+The dates or frequency the derivative requires payments to be made
+(e.g., quarterly, monthly).
+Y
+Reset frequency or dates
+The dates or frequency at which the price resets (e.g., quarterly,
+semi-annually, annually).
+Y
+Day count convention
+Factor used to calculate the payments (e.g., 30/360, actual/360).
+Y
+Delivery type
+State whether derivative is settled physically or in cash.
+Y
+Price 1
+The price, rate, yield, spread, coupon or similar characteristic
+of the derivative. This must not include any premiums such as
+commissions, collateral premiums or accrued interest.
+Y
+Price 2
+The price, rate, yield, spread, coupon or similar characteristic
+of the derivative. This must not include any premiums such as
+commissions, collateral premiums or accrued interest.
+Y
+Price notation type 1
+The manner in which the price is expressed (e.g., percentage,
+basis points).
+Y
+Price notation type 2
+The manner in which the price is expressed (e.g., percentage,
+basis points).
+Y
+Price multiplier
+The number of units of the underlying reference entity represented
+by 1 unit of the derivative.
+Y
+(If available)
+Notional amount leg 1
+Total notional amount(s) of leg 1 of the derivative.
+Y
+Notional amount leg 2
+Total notional amount(s) of leg 2 of the derivative.
+Y
+Currency leg 1
+Currency of leg 1.
+Y
+Currency leg 2
+Currency of leg 2.
+Y
+Settlement currency
+The currency used to determine the cash settlement amount.
+Y
+Up-front payment
+Amount of any up-front payment.
+N
+Currency or currencies of up-front payment
+The currency or currencies in which any up-front payment is made
+by one counterparty to another.
+N
+Embedded option
+State whether the option is an embedded option.
+Y
+(If available)
+B. Additional
+Asset
+Information
+These fields are required to be reported for the respective types
+of derivatives
+set out below, even if the information is entered in a Common Data
+field above.
+i) Interest rate
+derivatives
+Fixed rate leg 1
+The rate used to determine the payment amount for leg 1 of the
+derivative.
+Y
+Fixed rate leg 2
+The rate used to determine the payment amount for leg 2 of the
+derivative.
+Y
+Floating rate leg 1
+The floating rate used to determine the payment amount for leg 1
+of the derivative.
+Y
+Floating rate leg 2
+The floating rate used to determine the payment amount for leg 2
+of the derivative.
+Y
+Fixed rate day count convention
+Factor used to calculate the fixed payer payments (e.g., 30/360,
+actual/360).
+Y
+Fixed leg payment frequency or dates
+Frequency or dates of payments for the fixed rate leg of the
+derivative (e.g., quarterly, semi-annually, annually).
+Y
+Floating leg payment frequency or dates
+Frequency or dates of payments for the floating rate leg of the
+derivative (e.g., quarterly, semi-annually, annually).
+Y
+Floating rate reset frequency or dates
+The dates or frequency at which the floating leg of the derivative
+resets (e.g., quarterly, semi-annually, annually).
+Y
+ii) Currency
+derivatives
+Exchange rate
+Contractual rate(s) of exchange of the currencies.
+Y
+iii) Commodity
+derivatives
+Sub-asset class
+Specific information to identify the type of commodity derivative
+(e.g., Agriculture, Power, Oil, Natural Gas, Freights, Metals,
+Index, Environmental, Exotic).
+Y
+Quantity
+Total quantity in the unit of measure of an underlying commodity.
+Y
+Unit of measure
+Unit of measure for the quantity of each side of the derivative
+(e.g., barrels, bushels).
+Y
+Grade
+Grade of product being delivered (e.g., grade of oil).
+Y
+Delivery point
+The delivery location.
+N
+Load type
+For power, load profile for the delivery.
+Y
+Transmission days
+For power, the delivery days of the week.
+Y
+Transmission duration
+For power, the hours of day transmission starts and ends.
+Y
+C. Options
+These fields are required to be reported for options derivatives,
+even if the information
+is entered in a Common Data field above.
+Option exercise date
+The date(s) on which the option may be exercised.
+Y
+Option premium
+Fixed premium paid by the buyer to the seller.
+Y
+Strike price
+(cap/floor rate)
+The strike price of the option.
+Y
+Option style
+State whether the option can be exercised on a fixed date or
+anytime during the life of the derivative (e.g., American,
+European, Bermudan, Asian).
+Y
+Option type
+Put, call.
+Y
+D. Event Data
+Action
+Describes the type of event to the derivative (e.g., new
+transaction, modification or cancellation of existing derivative).
+N
+Execution timestamp
+The time and date of execution of a transaction, including a
+novation, expressed using Coordinated Universal Time (UTC).
+Y
+(If available)
+Post-transaction events
+State whether the report results from a post-transaction service
+(e.g., compression, reconciliation) or from a life-cycle event
+(e.g., amendment).
+N
+Reporting timestamp
+The time and date the derivative was submitted to the trade
+repository, expressed using UTC.
+N
+E. Valuation
+Data
+These fields are required to be reported on a continuing basis for
+all reported
+derivatives, including reported pre-existing derivatives.
+Value of derivative calculated by the reporting counterparty
+Mark-to-market valuation or mark-to-model valuation of the
+derivative.
+N
+Valuation currency
+State the currency used when reporting the value of the
+derivative.
+N
+Valuation date
+Date of the latest mark-to-market or mark-to-model valuation.
+N
+F. Other
+Details
+Other details
+Where the terms of the derivative cannot be effectively reported
+in the above prescribed fields, provide any additional information
+that may be necessary.
+Y
+(If applicable)

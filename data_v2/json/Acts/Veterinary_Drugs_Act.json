@@ -1,0 +1,759 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@id": "18002",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "act:title": "Veterinary Drugs Act",
+        "act:chapter": "2",
+        "act:yearenacted": {
+            "@revised": "RSBC",
+            "#text": "2018"
+        },
+        "act:deposited": "Deposited with Clerk of the Legislative Assembly on August 20, 2018",
+        "act:currency": {
+            "act:tlcDirPath": "1418513667/886190449/1341655884",
+            "act:tlc": "E3tlc18002"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d1e29",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d1e41",
+                            "bcl:text": {
+                                "in:term": "animal",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e48",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an animal, whether alive or dead, other than a human, and"
+                                },
+                                {
+                                    "@id": "d1e57",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any other living organism other than a plant;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e67",
+                            "bcl:text": {
+                                "in:term": "drug",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/03077_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Pharmacy Operations and Drug Scheduling Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e80",
+                            "bcl:text": {
+                                "in:term": "medicated feed",
+                                "#text": "means animal feed containing a veterinary drug;"
+                            }
+                        },
+                        {
+                            "@id": "d1e88",
+                            "bcl:text": {
+                                "in:term": "minister",
+                                "#text": "includes a person designated in writing by the minister;"
+                            }
+                        },
+                        {
+                            "@id": "d1e96",
+                            "bcl:text": {
+                                "in:term": "pharmacist",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/00_96183_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Health Professions Act"
+                                },
+                                "#text": "has the same meaning as in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d1e108",
+                            "bcl:text": {
+                                "in:term": "veterinarian",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/10015_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Veterinarians Act"
+                                },
+                                "#text": "means an individual who is authorized under the  to practise veterinary medicine;"
+                            }
+                        },
+                        {
+                            "@id": "d1e120",
+                            "bcl:text": {
+                                "in:term": "veterinary drug",
+                                "#text": "means"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e127",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a drug used, or intended or represented to be used, as a drug for the treatment, prevention or diagnosis of a disease of an animal, and"
+                                },
+                                {
+                                    "@id": "d1e136",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a drug listed or included by reference in the regulations."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e147",
+                    "bcl:marginalnote": "Prohibited uses, sales and representations",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e155",
+                            "bcl:num": "1",
+                            "bcl:text": "Despite this Act or the regulations, the minister may prohibit the use in British Columbia of any veterinary drug for veterinary purposes."
+                        },
+                        {
+                            "@id": "d1e164",
+                            "bcl:num": "2",
+                            "bcl:text": "A person must not sell or represent any thing for sale as a drug or as a particular drug if the thing is not what it is represented to be."
+                        },
+                        {
+                            "@id": "d1e173",
+                            "bcl:num": "3",
+                            "bcl:text": "A person must not sell a drug after the date on which the drug is indicated or labeled to expire."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e183",
+                    "bcl:marginalnote": "Who may manufacture or sell",
+                    "bcl:num": "3",
+                    "bcl:text": "A person must not manufacture or sell medicated feeds or sell veterinary drugs unless the person",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d1e194",
+                            "bcl:num": "a",
+                            "bcl:text": "is a pharmacist or veterinarian, or"
+                        },
+                        {
+                            "@id": "d1e203",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "in:desc": "[licence to manufacture or sell]",
+                                "#text": "has a valid licence issued under section 4  and manufactures or sells medicated feeds or sells veterinary drugs in compliance with the regulations and the terms and conditions of the licence."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e216",
+                    "bcl:marginalnote": "Licence to manufacture or sell",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e224",
+                            "bcl:num": "1",
+                            "bcl:text": "A person may apply to the minister for a licence to manufacture or sell medicated feeds or sell veterinary drugs by submitting",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e232",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an application in the prescribed form, and"
+                                },
+                                {
+                                    "@id": "d1e241",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the prescribed fee."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e251",
+                            "bcl:num": "2",
+                            "bcl:text": "The minister may issue a licence on terms or conditions the minister sets or the regulations prescribe."
+                        },
+                        {
+                            "@id": "d1e260",
+                            "bcl:num": "3",
+                            "bcl:text": "If the minister determines that a person licensed under this section has contravened a term or condition of the person's licence, the minister may cancel that person's licence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e271",
+                    "bcl:marginalnote": "If veterinary drug dispenser required",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e279",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d1e287",
+                                    "bcl:text": {
+                                        "in:term": "authorized person",
+                                        "in:desc": "[who may manufacture or sell]",
+                                        "#text": "means a person who, under section 3 , may manufacture or sell a medicated feed or sell a veterinary drug;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e298",
+                                    "bcl:text": {
+                                        "in:term": "chief veterinarian",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/14016",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Animal Health Act"
+                                        },
+                                        "#text": "has the same meaning as in the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e310",
+                                    "bcl:text": {
+                                        "in:term": "veterinary drug dispenser",
+                                        "#text": "means a person licensed under the regulations to dispense veterinary drugs."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e319",
+                            "bcl:num": "2",
+                            "bcl:text": "If the regulations require a veterinary drug dispenser to be on the premises of an authorized person, the authorized person must inform the chief veterinarian of the name and licence number of the veterinary drug dispenser normally present on the authorized person's premises during business hours."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e329",
+                    "bcl:marginalnote": "Exceptions",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e337",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "wholesaler",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/03077_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Pharmacy Operations and Drug Scheduling Act"
+                                },
+                                "#text": "In this section,  has the same meaning as in the ."
+                            }
+                        },
+                        {
+                            "@id": "d1e353",
+                            "bcl:num": "2",
+                            "bcl:text": "Nothing in this Act or the regulations prevents",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e361",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a pharmacist or veterinarian from directly dispensing a drug to the owner, or an agent of the owner, of an animal for which the drug has been prescribed, or"
+                                },
+                                {
+                                    "@id": "d1e370",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "in:desc": "[licence to manufacture or sell]",
+                                        "#text": "a wholesaler or manufacturer from selling a veterinary drug to a person licensed under section 4  to manufacture or sell medicated feed containing, or to sell, the veterinary drug."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e384",
+                    "bcl:marginalnote": "Appointment and powers of inspectors",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e392",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister may appoint inspectors."
+                        },
+                        {
+                            "@id": "d1e401",
+                            "bcl:num": "2",
+                            "bcl:text": "An inspector may do the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e409",
+                                    "bcl:num": "a",
+                                    "bcl:text": "enter, during normal business hours, premises in which medicated feeds or veterinary drugs are sold to determine whether this Act and the regulations are being complied with;"
+                                },
+                                {
+                                    "@id": "d1e418",
+                                    "bcl:num": "b",
+                                    "bcl:text": "examine and seize records relating to the manufacture, use or sale of medicated feeds or veterinary drugs;"
+                                },
+                                {
+                                    "@id": "d1e427",
+                                    "bcl:num": "c",
+                                    "bcl:text": "enter any premises to inspect any of the following things, and remove the thing or a sample of the thing, if the inspector believes on reasonable grounds that the thing contains a substance specified by the minister to be harmful to the health of humans or animals:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e435",
+                                            "bcl:num": "i",
+                                            "bcl:text": "agricultural or horticultural crops;"
+                                        },
+                                        {
+                                            "@id": "d1e444",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "products;"
+                                        },
+                                        {
+                                            "@id": "d1e453",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "animals, animal products or animal feed;"
+                                        },
+                                        {
+                                            "@id": "d1e463",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "medicated feed or veterinary drugs;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e474",
+                                    "bcl:num": "d",
+                                    "bcl:text": "examine and remove medicated feeds or veterinary drugs from premises at which they are manufactured or sold, if the inspector believes on reasonable grounds that the sale of the medicated feeds or veterinary drugs is prohibited or that the stated expiry date has passed;"
+                                },
+                                {
+                                    "@id": "d1e483",
+                                    "bcl:num": "e",
+                                    "bcl:text": "perform other duties imposed by the minister."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e493",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "in:desc": "[dealing with things removed during inspection]",
+                                "#text": "An inspector may keep any thing removed under this section to be dealt with under section 8 ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e506",
+                    "bcl:marginalnote": "Dealing with things removed during inspection",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e514",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:desc": "[appointment and powers of inspectors]",
+                                "#text": "If a thing removed under section 7 (2) (c)  and analyzed contains a substance the minister considers to be dangerous to the health of a human or animal, the minister may do either of the following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e525",
+                                    "bcl:num": "a",
+                                    "bcl:text": "direct the thing to be destroyed;"
+                                },
+                                {
+                                    "@id": "d1e534",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prohibit the sale, manufacture or use of the thing for the period the minister considers necessary."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e544",
+                            "bcl:num": "2",
+                            "bcl:text": "If a medicated feed or veterinary drug removed under section 7 (2) cannot be lawfully sold by the person from whom the medicated feed or veterinary drug was removed, the minister may direct that it be destroyed."
+                        },
+                        {
+                            "@id": "d1e553",
+                            "bcl:num": "3",
+                            "bcl:text": "The minister and the government are not liable to pay compensation for an economic loss that may occur as a result of any action taken in good faith under this section."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e563",
+                    "bcl:marginalnote": "Offences",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e571",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act."
+                            }
+                        },
+                        {
+                            "@id": "d1e584",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "in:desc": [
+                                    "[prohibited uses, sales and representations]",
+                                    "[who may manufacture or sell]"
+                                ],
+                                "#text": "A person who contravenes section 2 (2) or (3)  or 3  commits an offence."
+                            }
+                        },
+                        {
+                            "@id": "d1e599",
+                            "bcl:num": "3",
+                            "bcl:text": "If a person contravenes this Act or the regulations in the course of employment, the employer or manager of the person is deemed to have contravened the same enactment."
+                        },
+                        {
+                            "@id": "d1e609",
+                            "bcl:num": "4",
+                            "bcl:text": "If a corporation commits an offence under this Act, an officer, director, employee or agent of the corporation who directed, authorized, assented to, acquiesced or participated in the commission of the offence is deemed to have contravened the same enactment."
+                        },
+                        {
+                            "@id": "d1e618",
+                            "bcl:num": "5",
+                            "bcl:text": "In a prosecution under this Act, it is sufficient to prove that the accused has committed on one occasion any of the acts prohibited by this Act or the regulations."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e628",
+                    "bcl:marginalnote": "Onus on defendant",
+                    "bcl:num": "10",
+                    "bcl:text": "If evidence is introduced against a defendant in a prosecution under this Act that a sign, title, advertisement or word has been published or used contrary to this Act or the regulations, the onus is on the defendant to prove that it was not published or used by that defendant."
+                },
+                {
+                    "@id": "d1e641",
+                    "bcl:marginalnote": "Certificate of analysis",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e649",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "certificate",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/F-27/index.html",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Food and Drugs Act"
+                                },
+                                "#text": "In this section,  means a certificate of analysis from an analyst designated under the  (Canada) stating"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e664",
+                                    "bcl:num": "a",
+                                    "bcl:text": "that the analyst has analyzed or examined a substance, and"
+                                },
+                                {
+                                    "@id": "d1e673",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the result of the analysis or examination."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e683",
+                            "bcl:num": "2",
+                            "bcl:text": "A certificate is admissible in evidence in a proceeding under this Act and is evidence of the statements contained in the certificate."
+                        },
+                        {
+                            "@id": "d1e692",
+                            "bcl:num": "3",
+                            "bcl:text": "The person against whom a certificate is to be used may, with leave of the court, require the analyst to attend and be cross-examined."
+                        },
+                        {
+                            "@id": "d1e702",
+                            "bcl:num": "4",
+                            "bcl:text": "Reasonable notice of an intention to introduce a certificate in evidence must be given to the person against whom the certificate is to be used, along with a copy of that certificate."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e712",
+                    "bcl:marginalnote": "Recovery of payment",
+                    "bcl:num": "12",
+                    "bcl:text": "A person who sells anything in contravention of this Act or the regulations is not entitled to recover payment for the sale."
+                },
+                {
+                    "@id": "d1e724",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e732",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d1e745",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e753",
+                                    "bcl:num": "a",
+                                    "bcl:text": "for the purposes of the definition of \"veterinary drug\" in section 1, respecting the listing of a drug or inclusion of a drug by reference in a drug schedule;"
+                                },
+                                {
+                                    "@id": "d1e762",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting the amount of a drug listed or included by reference in a drug schedule that may be",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e770",
+                                            "bcl:num": "i",
+                                            "bcl:text": "added to feeding mashes to prevent, control or treat animal diseases, or"
+                                        },
+                                        {
+                                            "@id": "d1e779",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "used to prevent, control or treat specific animal diseases;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e789",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "in:desc": "[licence to manufacture or sell]",
+                                        "#text": "for the purposes of section 4 , respecting"
+                                    },
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e800",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the form of an application, application fees and the qualifications required by applicants, and"
+                                        },
+                                        {
+                                            "@id": "d1e809",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the issuing of licences;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e820",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting licence duration, renewal, cancellation, suspension, extent and production;"
+                                },
+                                {
+                                    "@id": "d1e829",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "in:desc": "[if veterinary drug dispenser required]",
+                                        "#text": "for the purposes of section 5 , respecting"
+                                    },
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e840",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the presence of a veterinary drug dispenser if veterinary drugs or medicated feeds are sold, and"
+                                        },
+                                        {
+                                            "@id": "d1e849",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "training and licensing for veterinary drug dispensers;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e859",
+                                    "bcl:num": "f",
+                                    "bcl:text": "respecting the keeping and inspection of registers of licences and the submission of fees;"
+                                },
+                                {
+                                    "@id": "d1e868",
+                                    "bcl:num": "g",
+                                    "bcl:text": "respecting the storage, transportation and sale of veterinary drugs;"
+                                },
+                                {
+                                    "@id": "d1e877",
+                                    "bcl:num": "h",
+                                    "bcl:text": {
+                                        "in:desc": "[appointment and powers of inspectors]",
+                                        "#text": "for the purposes of section 7 (2) (c) , respecting"
+                                    },
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e888",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the analysis of a thing listed in that provision, and"
+                                        },
+                                        {
+                                            "@id": "d1e897",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the maximum residue content of a veterinary drug in a thing subject to analysis under that provision;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e907",
+                                    "bcl:num": "i",
+                                    "bcl:text": "establishing an advisory committee on veterinary drugs and specifying the committee's duties."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Revision Schedule \u2014 Consequential Amendments to Other Acts",
+                "bcl:num": null,
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of this Revision Schedule.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "@id": "d1e54",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": [
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "1"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E3tlc08038",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "E-Health (Personal Health Information Access and Protection of Privacy) Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "2-3"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E3tlc03077",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Pharmacy Operations and Drug Scheduling Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

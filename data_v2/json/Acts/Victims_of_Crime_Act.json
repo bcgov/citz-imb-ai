@@ -1,0 +1,827 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96478_01",
+        "act:title": "Victims of Crime Act",
+        "act:chapter": "478",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1418513667/96478/tlc96478_f",
+            "act:tlc": "E3tlc96478"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "accused",
+                                "#text": "means a person who is charged with an offence;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "child",
+                                "#text": "includes"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e45",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a child of a victim born after the death of the victim,"
+                                },
+                                {
+                                    "@id": "d2e54",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a stepchild of a victim, and"
+                                },
+                                {
+                                    "@id": "d2e63",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a person who, although not a child of the victim, is like a child to the victim;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e72",
+                            "bcl:text": {
+                                "in:term": "justice system personnel",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96367_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Police Act"
+                                },
+                                "#text": "means auxiliary constables, chief constables, chief officers, designated constables, enforcement officers, municipal constables, provincial constables, special municipal constables and special provincial constables as defined in section\u00a01 of the  and persons working in positions designated by the Attorney General;"
+                            }
+                        },
+                        {
+                            "@id": "d2e84",
+                            "bcl:text": {
+                                "in:term": "offence",
+                                "#text": "means, except in section 15, a contravention, that harmed a victim, of an enactment of British Columbia or Canada;"
+                            }
+                        },
+                        {
+                            "@id": "d2e93",
+                            "bcl:text": {
+                                "in:term": "offender",
+                                "#text": "means a person convicted of an offence;"
+                            }
+                        },
+                        {
+                            "@id": "d2e103",
+                            "bcl:text": {
+                                "in:term": "parent",
+                                "#text": "includes"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e112",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a stepparent of the victim,"
+                                },
+                                {
+                                    "@id": "d2e121",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a person who has, in law or in fact, the guardianship or custody of the victim or who is responsible for the care or financial support of the victim, and"
+                                },
+                                {
+                                    "@id": "d2e130",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a person who, although not a parent of the victim, is like a parent to the victim;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e139",
+                            "bcl:text": {
+                                "in:term": "sentence",
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/Y-1.5/index.html",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Youth Criminal Justice Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/03085_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Youth Justice Act"
+                                    }
+                                ],
+                                "#text": "includes a sentence as defined in the  (Canada) or the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e154",
+                            "bcl:text": {
+                                "in:term": "special account",
+                                "#text": "means the Victim Surcharge Special Account established under section\u00a09;"
+                            }
+                        },
+                        {
+                            "@id": "d2e164",
+                            "bcl:text": {
+                                "in:term": "spouse",
+                                "#text": "means a person who"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e173",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is married to another person, or"
+                                },
+                                {
+                                    "@id": "d2e182",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is living with another person in a marriage-like relationship;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e191",
+                            "bcl:text": [
+                                {
+                                    "in:term": "victim",
+                                    "#text": "means an individual who suffers, in relation to an offence,"
+                                },
+                                "but does not include a person listed within the definition of \"justice system personnel\" in relation to an offence to which the person responds in the line of duty;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e200",
+                                    "bcl:num": "a",
+                                    "bcl:text": "physical or mental injury or economic loss as a result of an act or omission that forms the basis of the offence, or"
+                                },
+                                {
+                                    "@id": "d2e209",
+                                    "bcl:num": "b",
+                                    "bcl:text": "significant emotional trauma and is an individual against whom the offence was perpetrated or, with respect to an individual against whom the offence was perpetrated, is a spouse, sibling, child or parent of the individual,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e222",
+                            "bcl:text": {
+                                "in:term": "victim service",
+                                "#text": "means a service that is designed to assist victims and is provided or funded by the government."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e232",
+                    "bcl:marginalnote": "Right to courtesy and respect",
+                    "bcl:num": "2",
+                    "bcl:text": "All justice system personnel must treat a victim with courtesy and respect and must not discriminate against a victim on the basis of race, colour, ancestry, place of origin, religion, marital status, family status, physical or mental disability, gender, sexual orientation, political belief or age."
+                },
+                {
+                    "@id": "d2e244",
+                    "bcl:marginalnote": "Legal representation of victims",
+                    "bcl:num": "3",
+                    "bcl:text": "On request by a victim, the Attorney General must take reasonable measures to ensure that the victim is provided with advice and representation by a lawyer if",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e255",
+                            "bcl:num": "a",
+                            "bcl:text": "the victim requires representation independent from that of Crown counsel in response to an application for disclosure of information, not in the possession of the police or Crown counsel, relating to the personal history of the victim, and"
+                        },
+                        {
+                            "@id": "d2e264",
+                            "bcl:num": "b",
+                            "bcl:text": "the victim would not otherwise receive this representation because of a lack of financial resources."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e274",
+                    "bcl:marginalnote": "Presentation of the victim's perception of the impact of the offence",
+                    "bcl:num": "4",
+                    "bcl:text": "Crown counsel must ensure that a victim is given a reasonable opportunity to have admissible evidence concerning the impact of the offence, as perceived by the victim, presented to the court before sentence is imposed for the offence."
+                },
+                {
+                    "@id": "d2e286",
+                    "bcl:marginalnote": "Information that must be offered",
+                    "bcl:num": "5",
+                    "bcl:text": "Justice system personnel must offer a victim general information concerning",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e297",
+                            "bcl:num": "a",
+                            "bcl:text": "the structure and operation of the justice system,"
+                        },
+                        {
+                            "@id": "d2e306",
+                            "bcl:num": "b",
+                            "bcl:text": "victim services,"
+                        },
+                        {
+                            "@id": "d2e316",
+                            "bcl:num": "c",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96165_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                },
+                                "#text": "the ,"
+                            }
+                        },
+                        {
+                            "@id": "d2e328",
+                            "bcl:num": "d",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/01038_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Crime Victim Assistance Act"
+                                },
+                                "#text": "the , and"
+                            }
+                        },
+                        {
+                            "@id": "d2e340",
+                            "bcl:num": "e",
+                            "bcl:text": "this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e351",
+                    "bcl:marginalnote": "Information that must be given on request",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e359",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/Y-1.5/index.html",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Youth Criminal Justice Act"
+                                },
+                                "#text": "Subject to the  (Canada) and insofar as this does not prejudice an investigation or prosecution of an offence, justice system personnel must arrange, on request, for a victim to obtain information on the following matters relating to the offence:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e371",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the status of the police investigation;"
+                                },
+                                {
+                                    "@id": "d2e380",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the specific counts with which the accused is charged or for which the offender is convicted;"
+                                },
+                                {
+                                    "@id": "d2e390",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the reasons why a decision was made respecting charges;"
+                                },
+                                {
+                                    "@id": "d2e399",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the name of the accused;"
+                                },
+                                {
+                                    "@id": "d2e408",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the date, location and reasons for each court appearance that is likely to affect the final disposition, sentence or bail status of the accused;"
+                                },
+                                {
+                                    "@id": "d2e417",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the outcome of each court appearance that is likely to affect the final disposition, sentence or bail status of the accused;"
+                                },
+                                {
+                                    "@id": "d2e426",
+                                    "bcl:num": "g",
+                                    "bcl:text": "the length of any sentence that the offender is serving and the date the sentence began;"
+                                },
+                                {
+                                    "@id": "d2e435",
+                                    "bcl:num": "h",
+                                    "bcl:text": "the means for the victim to report breaches of the terms of supervision by the offender released under supervision;"
+                                },
+                                {
+                                    "@id": "d2e445",
+                                    "bcl:num": "i",
+                                    "bcl:text": "the means to contact agencies that may grant or amend conditions of parole or authorize release from custody of the offender;"
+                                },
+                                {
+                                    "@id": "d2e454",
+                                    "bcl:num": "j",
+                                    "bcl:text": "the eligibility and review dates applicable to the offender and how to make representations in any proceedings that may lead to a change in the custodial status or release conditions of the offender."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e463",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/Y-1.5/index.html",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Youth Criminal Justice Act"
+                                },
+                                "#text": "Subject to the  (Canada), justice system personnel must arrange, on request, for a victim to obtain copies of orders and permits setting conditions for the accused or offender that are relevant to the safety of the victim."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e476",
+                    "bcl:marginalnote": "Information that will be given in appropriate circumstances",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e484",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/04046_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Correction Act"
+                                },
+                                "#text": "The minister charged with the administration of the  or the designate of the minister must give the following information relating to the offence to a victim on request if, in the opinion of the person giving the information, the interests of the victim outweigh the privacy interest of the accused or offender in the circumstances:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e496",
+                                    "bcl:num": "a",
+                                    "bcl:text": "whether the offender is in custody and, if the offender is in custody, the name and address of the institution where the sentence is being served;"
+                                },
+                                {
+                                    "@id": "d2e505",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the accused or offender is in custody and is to be released, the date the release will begin, the length of the release and the terms of supervision during that release;"
+                                },
+                                {
+                                    "@id": "d2e515",
+                                    "bcl:num": "c",
+                                    "bcl:text": "if the accused or offender is released from custody under supervision and the terms of supervision are to change, the nature of the change and the date the change begins;"
+                                },
+                                {
+                                    "@id": "d2e524",
+                                    "bcl:num": "d",
+                                    "bcl:text": "if the offender is or will be on supervised probation, parole or temporary absence, the area of British Columbia where the offender may be and whether the offender will be in the vicinity of the victim while travelling to that area."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e533",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96165_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/Y-1.5/index.html",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Youth Criminal Justice Act"
+                                    }
+                                ],
+                                "#text": "Subsection (1) applies despite the  but is subject to the  (Canada)."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e549",
+                    "bcl:marginalnote": "Goals",
+                    "bcl:num": "8",
+                    "bcl:text": "To the extent that it is practicable, the government must promote the following goals:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e560",
+                            "bcl:num": "a",
+                            "bcl:text": "to develop victim services and promote equal access to victim services at all locations throughout British Columbia;"
+                        },
+                        {
+                            "@id": "d2e569",
+                            "bcl:num": "b",
+                            "bcl:text": "to have victims adequately protected against intimidation and retaliation;"
+                        },
+                        {
+                            "@id": "d2e579",
+                            "bcl:num": "c",
+                            "bcl:text": "to have property of victims obtained by offenders in the course of offences returned promptly to the victims by the police if the retention is not needed for investigation or prosecution purposes;"
+                        },
+                        {
+                            "@id": "d2e588",
+                            "bcl:num": "d",
+                            "bcl:text": "to have justice system personnel trained to respond appropriately to victims;"
+                        },
+                        {
+                            "@id": "d2e597",
+                            "bcl:num": "e",
+                            "bcl:text": "to give proper recognition to the need of victims for timely investigation and prosecution of offences;"
+                        },
+                        {
+                            "@id": "d2e606",
+                            "bcl:num": "f",
+                            "bcl:text": "to have facilities in courthouses that accommodate victims awaiting courtroom appearance separately from the accused and witnesses for the accused;"
+                        },
+                        {
+                            "@id": "d2e615",
+                            "bcl:num": "g",
+                            "bcl:text": "to afford victims throughout British Columbia equal access to",
+                            "bcl:subparagraph": [
+                                {
+                                    "@id": "d2e624",
+                                    "bcl:num": "i",
+                                    "bcl:text": "courtrooms and prosecutors' offices that are designed to be used by persons with physical disabilities,"
+                                },
+                                {
+                                    "@id": "d2e634",
+                                    "bcl:num": "ii",
+                                    "bcl:text": "interpreters for speakers of any language, and"
+                                },
+                                {
+                                    "@id": "d2e643",
+                                    "bcl:num": "iii",
+                                    "bcl:text": "culturally sensitive services for aboriginal persons and members of ethno-cultural minorities."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e653",
+                    "bcl:marginalnote": "Victim surcharge levy",
+                    "bcl:num": "8.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e661",
+                            "bcl:num": "1",
+                            "bcl:text": "If a fine is imposed on a person under a prescribed enactment of British Columbia, the person must pay to the government, at the time and place where the fine is payable, a victim surcharge levy calculated in accordance with the prescribed formula."
+                        },
+                        {
+                            "@id": "d2e670",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Without limiting subsection (1), if a person pays or is obligated to pay a fine under the , the person must pay to the government, at the time and place where the fine is payable, a victim surcharge levy calculated in accordance with the prescribed formula."
+                            }
+                        },
+                        {
+                            "@id": "d2e682",
+                            "bcl:num": "3) to (6",
+                            "bcl:text": "[Repealed 1997-10-29.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e692",
+                    "bcl:marginalnote": "Victim Surcharge Special Account",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e700",
+                            "bcl:num": "1",
+                            "bcl:text": "The Victim Surcharge Special Account is continued as a special account of the consolidated revenue fund."
+                        },
+                        {
+                            "@id": "d2e709",
+                            "bcl:num": "2",
+                            "bcl:text": "The Attorney General must pay into the special account money paid to the government under section\u00a08.1."
+                        },
+                        {
+                            "@id": "d2e718",
+                            "bcl:num": "3",
+                            "bcl:text": "The special account consists of",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e728",
+                                    "bcl:num": "a",
+                                    "bcl:text": "payments made by the Attorney General under subsection (2),"
+                                },
+                                {
+                                    "@id": "d2e737",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Criminal Code"
+                                        },
+                                        "#text": "victim fine surcharge money that under section 737 of the  the Lieutenant Governor in Council directs be paid into the special account,"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e762",
+                                    "bcl:num": "b.1",
+                                    "bcl:text": {
+                                        "in:desc": "[payments from trust fund to Victim Surcharge Special Account]",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/16024_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Profits of Criminal Notoriety Act"
+                                        },
+                                        "#text": "payments made by the Minister of Finance under section 17  of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e749",
+                                    "bcl:num": "c",
+                                    "bcl:text": "donations people make to the special account,"
+                                },
+                                {
+                                    "@id": "d2e758",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96138_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Financial Administration Act"
+                                        },
+                                        "#text": "any money transferred to the special account from a vote, as defined in the , and"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e770",
+                                    "bcl:num": "e",
+                                    "bcl:text": "any interest and other income of the special account."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e779",
+                            "bcl:num": "4",
+                            "bcl:text": "The Attorney General may pay money out of the special account to do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e789",
+                                    "bcl:num": "a",
+                                    "bcl:text": "defray the costs incurred under sections\u00a03 to 8;"
+                                },
+                                {
+                                    "@id": "d2e798",
+                                    "bcl:num": "b",
+                                    "bcl:text": "pay costs associated with the administration of the special account;"
+                                },
+                                {
+                                    "@id": "d2e807",
+                                    "bcl:num": "c",
+                                    "bcl:text": "provide funding, directly or indirectly, to a service or project, all or any part of which may benefit victims or lead to the development of services that may benefit victims."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e816",
+                            "bcl:num": "5",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96138_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Financial Administration Act"
+                                },
+                                "#text": "Subsection (4) applies despite section 21 (3) of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e828",
+                            "bcl:num": "6",
+                            "bcl:text": "The special account must not be used to provide direct compensation to individual victims."
+                        },
+                        {
+                            "@id": "d2e837",
+                            "bcl:num": "7",
+                            "bcl:text": "The cumulative total of amounts paid out of the special account under subsection (4) must not exceed the cumulative total of money paid into the special account under subsection (3)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e847",
+                    "bcl:marginalnote": "No cause of action created by this Act",
+                    "bcl:num": "10",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Subject to section 82 (7) of the , no cause of action, right of appeal, claim for damages or other remedy in law exists because of this Act or anything done or omitted to be done under this Act."
+                    }
+                },
+                {
+                    "@id": "d2e863",
+                    "bcl:marginalnote": "Validity of proceeding, etc.",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e871",
+                            "bcl:num": "1",
+                            "bcl:text": "A proceeding in respect of an offence must not be delayed or held to be invalid on the grounds that a right granted by this Act has been infringed or denied or that this Act has not been complied with, and the court must not make an order respecting the conduct of that proceeding or the validity or propriety of an order, conviction, sentence or any other thing done in that proceeding on those grounds."
+                        },
+                        {
+                            "@id": "d2e880",
+                            "bcl:num": "2",
+                            "bcl:text": "An order, conviction or sentence may not be appealed on the grounds that a right granted by this Act has been infringed or denied."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e890",
+                    "bcl:marginalnote": "Ombudsperson",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e898",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96340_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Ombudsperson Act"
+                                },
+                                "#text": "The  applies to this Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e910",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96087_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Crown Counsel Act"
+                                },
+                                "#text": "Despite subsection (1), the Ombudsperson must refuse to investigate the appropriateness of a decision by a member of the Criminal Justice Branch of the Ministry of Attorney General, or a special prosecutor as described in section 7 of the ,"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e922",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to approve the prosecution of an offence,"
+                                },
+                                {
+                                    "@id": "d2e932",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to decline to approve the prosecution of an offence,"
+                                },
+                                {
+                                    "@id": "d2e941",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to delay proceeding with the prosecution of an offence,"
+                                },
+                                {
+                                    "@id": "d2e950",
+                                    "bcl:num": "d",
+                                    "bcl:text": "to stay the prosecution of an offence,"
+                                },
+                                {
+                                    "@id": "d2e959",
+                                    "bcl:num": "e",
+                                    "bcl:text": "to conduct or decline to conduct an appeal or other proceeding in respect of an offence, or"
+                                },
+                                {
+                                    "@id": "d2e968",
+                                    "bcl:num": "f",
+                                    "bcl:text": "to exercise any other aspect of prosecutorial discretion."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e978",
+                    "bcl:marginalnote": "Annual report",
+                    "bcl:num": "13",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96022_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Attorney General Act"
+                        },
+                        "#text": "The annual report under section 6 of the  must include a report on the administration of this Act."
+                    }
+                },
+                {
+                    "@id": "d2e993",
+                    "bcl:marginalnote": "Employers are not to penalize",
+                    "bcl:num": "14",
+                    "bcl:text": "An employer must not discharge, suspend, intimidate, coerce, impose any financial or other penalty on or otherwise discriminate against an employee because that person is absent from work",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1004",
+                            "bcl:num": "a",
+                            "bcl:text": "to appear in court as a witness in a proceeding respecting an offence, or"
+                        },
+                        {
+                            "@id": "d2e1013",
+                            "bcl:num": "b",
+                            "bcl:text": "to attend at a meeting with justice system personnel at the request of those personnel to assist in an investigation or preparation for the prosecution of an offence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1023",
+                    "bcl:marginalnote": "Offence",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1031",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who contravenes section 14 commits an offence and is liable on conviction to a fine of not more than $2\u00a0000 or to imprisonment for a term of not more than 6 months or to both."
+                        },
+                        {
+                            "@id": "d2e1040",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to the Act."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1053",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "16",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1061",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1073",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting the generality of subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1082",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing an enactment for the purposes of section 8.1 (1);"
+                                },
+                                {
+                                    "@id": "d2e1092",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prescribing the formula for the purposes of section 8.1 (1) and (2);"
+                                },
+                                {
+                                    "@id": "d2e1101",
+                                    "bcl:num": "c",
+                                    "bcl:text": "[Repealed 1997-3-4.]"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

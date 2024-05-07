@@ -1,0 +1,790 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_12019_01",
+        "act:title": "Emergency Intervention Disclosure Act",
+        "act:chapter": "19",
+        "act:yearenacted": "2012",
+        "act:assentedto": "May 31, 2012",
+        "act:currency": {
+            "act:tlcDirPath": "414786120/1262480807/1397131412",
+            "act:tlc": "E3tlc12019"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e25",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e36",
+                            "bcl:text": {
+                                "in:term": "applicant",
+                                "#text": "means a person who applies for a testing order or on\n          whose behalf an application for a testing order is made;"
+                            }
+                        },
+                        {
+                            "@id": "d2e45",
+                            "bcl:text": {
+                                "in:term": "court",
+                                "#text": "means the Provincial Court of British\n          Columbia;"
+                            }
+                        },
+                        {
+                            "@id": "d2e55",
+                            "bcl:text": {
+                                "in:term": "physician",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "means a medical practitioner as defined in section 29 of the\n            ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e67",
+                            "bcl:text": {
+                                "in:term": "qualified analyst",
+                                "#text": "means a person referred to in section 7 who\n          has the prescribed qualifications;"
+                            }
+                        },
+                        {
+                            "@id": "d2e76",
+                            "bcl:text": {
+                                "in:term": "source individual",
+                                "#text": "means an individual whom an applicant\n          identifies as the individual with whose bodily substance the applicant came into contact\n          in a circumstance referred to in section 3 (1);"
+                            }
+                        },
+                        {
+                            "@id": "d2e85",
+                            "bcl:text": {
+                                "in:term": "test results",
+                                "#text": "means results of an analysis conducted by a\n          qualified analyst under section 7 for the purposes referred to in section 5 (2)\n            (a);"
+                            }
+                        },
+                        {
+                            "@id": "d2e94",
+                            "bcl:text": {
+                                "in:term": "testing order",
+                                "#text": "means an order under section 5\n          (1)."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e104",
+                    "bcl:marginalnote": "Notice of intention",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e112",
+                            "bcl:num": "1",
+                            "bcl:text": "An individual who intends to apply under section 3 (1) for a testing order\n          in respect of another individual must provide notice of that intention to the other\n          individual in accordance with the regulations."
+                        },
+                        {
+                            "@id": "d2e121",
+                            "bcl:num": "2",
+                            "bcl:text": "An individual may not apply under section 3 (1) for a testing order\n          until at least 3 days have expired since the date the individual provided notice under\n          subsection (1) of this section."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e131",
+                    "bcl:marginalnote": "Application for testing order",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e139",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to section 2, an individual may apply to the court for a testing order if the\n          individual has come into contact with a bodily substance of another individual in any of\n          the following circumstances:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e148",
+                                    "bcl:num": "a",
+                                    "bcl:text": "while providing emergency health services;"
+                                },
+                                {
+                                    "@id": "d2e157",
+                                    "bcl:num": "b",
+                                    "bcl:text": "while performing the individual's duties as a firefighter, an emergency medical\n            assistant or a peace officer;"
+                                },
+                                {
+                                    "@id": "d2e167",
+                                    "bcl:num": "c",
+                                    "bcl:text": "while being involved in a prescribed circumstance or while carrying out a\n            prescribed activity."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e176",
+                            "bcl:num": "2",
+                            "bcl:text": "If an individual who came into contact with the bodily substance of another\n          individual in a circumstance referred to in subsection (1) is not able to apply\n          for a testing order under that subsection, a representative of the individual may apply on\n          behalf of the individual."
+                        },
+                        {
+                            "@id": "d2e185",
+                            "bcl:num": "3",
+                            "bcl:text": "An application for a testing order must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e194",
+                                    "bcl:num": "a",
+                                    "bcl:text": "include a physician's report, as prescribed, and anything else\n            prescribed,"
+                                },
+                                {
+                                    "@id": "d2e203",
+                                    "bcl:num": "b",
+                                    "bcl:text": "be made within 30 days of the date of the contact referred to in subsection\n              (1),"
+                                },
+                                {
+                                    "@id": "d2e212",
+                                    "bcl:num": "c",
+                                    "bcl:text": "be made in accordance with the regulations, and"
+                                },
+                                {
+                                    "@id": "d2e222",
+                                    "bcl:num": "d",
+                                    "bcl:text": "be served on the source individual at least 4 days before the court hears the\n            application."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e231",
+                            "bcl:num": "4",
+                            "bcl:text": "The court must hear an application for a testing order as soon as practicable and\n          may, on application or on the court's own motion, order that the public is excluded from\n          all or part of a hearing."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e241",
+                    "bcl:marginalnote": "If giving notice is impossible or impracticable",
+                    "bcl:num": "4",
+                    "bcl:text": "Despite sections 2 and 3 (3) (d), the court may hear an application made under\n          section 3\n          (1) without notice to the source individual if the applicant satisfies the\n        court that, in the circumstances, complying with section 2 or 3 (3) (d) within a reasonable\n        time is impossible or impracticable."
+                },
+                {
+                    "@id": "d2e253",
+                    "bcl:marginalnote": "Testing order",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e261",
+                            "bcl:num": "1",
+                            "bcl:text": "On an application made under section 3 (1), the court may make a testing order if the\n          court, having considered the physician's report and any other evidence the court considers\n          relevant, is satisfied of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e270",
+                                    "bcl:num": "a",
+                                    "bcl:text": "subject to section 4, the applicant has complied with sections\n              2\n            and 3\n            (3) (d);"
+                                },
+                                {
+                                    "@id": "d2e279",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the applicant has come into contact with a bodily substance of the source\n            individual in one of the circumstances set out in section 3 (1);"
+                                },
+                                {
+                                    "@id": "d2e289",
+                                    "bcl:num": "c",
+                                    "bcl:text": "there are reasonable grounds to believe that the applicant may have been\n            exposed, as a result of the contact, to a pathogen that causes a prescribed communicable\n            disease;"
+                                },
+                                {
+                                    "@id": "d2e298",
+                                    "bcl:num": "d",
+                                    "bcl:text": "an analysis of the applicant's bodily fluids would not determine, in a timely\n            manner, whether the applicant has been infected;"
+                                },
+                                {
+                                    "@id": "d2e307",
+                                    "bcl:num": "e",
+                                    "bcl:text": "taking a sample of a bodily fluid from the source individual would not endanger\n            the source individual's life or health;"
+                                },
+                                {
+                                    "@id": "d2e316",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the information to be obtained under the testing order cannot reasonably be\n            obtained in any other manner;"
+                                },
+                                {
+                                    "@id": "d2e325",
+                                    "bcl:num": "g",
+                                    "bcl:text": "the testing order is necessary to decrease or eliminate the risk to the health\n            of the applicant as a result of the contact."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e334",
+                            "bcl:num": "2",
+                            "bcl:text": "A testing order",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e344",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must require the source individual, within the time specified in the order, to\n            attend at a prescribed health facility identified in the order so that a sample of any\n            bodily fluid specified in the order may be taken from the source individual for the\n            purpose of determining whether the source individual is infected with a pathogen that\n            causes a prescribed communicable disease,"
+                                },
+                                {
+                                    "@id": "d2e353",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must require the prescribed health facility identified in the order to ensure,\n            on compliance by the source individual with the requirement referred to in paragraph\n            (a), that a sample of a bodily fluid, specified in the order, of the source\n            individual is taken for the purpose referred to in that paragraph,"
+                                },
+                                {
+                                    "@id": "d2e362",
+                                    "bcl:num": "c",
+                                    "bcl:text": "must require the applicant to serve the testing order and any other prescribed\n            information, within the time specified in the order, on",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e371",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the source individual, and"
+                                        },
+                                        {
+                                            "@id": "d2e380",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the prescribed health facility identified in the order, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e389",
+                                    "bcl:num": "d",
+                                    "bcl:text": "may address any other matters and contain any additional directions that the\n            court considers necessary."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e399",
+                            "bcl:num": "3",
+                            "bcl:text": "If the source individual named in a testing order is a minor or an incapacitated\n          adult, the testing order must require the applicable of the following to take all\n          reasonable steps to ensure that the source individual complies with the testing\n          order:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e408",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a guardian of the minor;"
+                                },
+                                {
+                                    "@id": "d2e417",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a person in a prescribed relationship to the incapacitated adult."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e426",
+                            "bcl:num": "4",
+                            "bcl:text": "A decision of the court under subsection (1) may be appealed to the Supreme\n          Court."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e437",
+                    "bcl:marginalnote": "Obligations of person who takes sample",
+                    "bcl:num": "6",
+                    "bcl:text": "A person at a prescribed health facility who, under a testing order, takes from the\n        source individual a sample of a bodily fluid specified in the testing order",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e448",
+                            "bcl:num": "a",
+                            "bcl:text": "must deliver the sample, a copy of the testing order and any other prescribed\n          information to a qualified analyst for the purpose of having the sample analyzed,\n          and"
+                        },
+                        {
+                            "@id": "d2e457",
+                            "bcl:num": "b",
+                            "bcl:text": "must not use the sample in any manner other than the manner specified in the order\n          or for any purpose other than the purposes of the order."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e467",
+                    "bcl:marginalnote": "Qualified analyst",
+                    "bcl:num": "7",
+                    "bcl:text": "A qualified analyst who receives a sample delivered in accordance with section 6 must do\n        all of the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e478",
+                            "bcl:num": "a",
+                            "bcl:text": "conduct an analysis of the sample;"
+                        },
+                        {
+                            "@id": "d2e487",
+                            "bcl:num": "b",
+                            "bcl:text": "ensure that the sample is not used for any purpose other than the analysis\n          required by the testing order;"
+                        },
+                        {
+                            "@id": "d2e497",
+                            "bcl:num": "c",
+                            "bcl:text": "ensure that the sample is not released to any person unless",
+                            "bcl:subparagraph": [
+                                {
+                                    "@id": "d2e506",
+                                    "bcl:num": "i",
+                                    "bcl:text": "the person is acting on behalf of the analyst for the purposes of carrying out\n            the analysis required by the testing order, and"
+                                },
+                                {
+                                    "@id": "d2e515",
+                                    "bcl:num": "ii",
+                                    "bcl:text": "the qualified analyst is satisfied that no other person has access to the sample\n            while it is in the custody of that person;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e524",
+                            "bcl:num": "d",
+                            "bcl:text": "promptly provide a written report of the results of the analysis, a copy of the\n          testing order and any other prescribed information to",
+                            "bcl:subparagraph": [
+                                {
+                                    "@id": "d2e533",
+                                    "bcl:num": "i",
+                                    "bcl:text": "the applicant's physician, and"
+                                },
+                                {
+                                    "@id": "d2e542",
+                                    "bcl:num": "ii",
+                                    "bcl:text": "either",
+                                    "bcl:clause": [
+                                        {
+                                            "@id": "d2e552",
+                                            "bcl:num": "A",
+                                            "bcl:text": "the source individual's physician, or"
+                                        },
+                                        {
+                                            "@id": "d2e561",
+                                            "bcl:num": "B",
+                                            "bcl:text": "the prescribed person, if the source individual's physician is not known to\n              the qualified analyst;"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e570",
+                            "bcl:num": "e",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/08028_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Health Act"
+                                },
+                                "#text": "ensure that the results of the analysis are not disclosed except in accordance\n          with this Act or the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e583",
+                    "bcl:marginalnote": "Test results",
+                    "bcl:num": "8",
+                    "bcl:text": "As soon as reasonably possible after receiving under section 7 (d) test results from a\n        qualified analyst,",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e594",
+                            "bcl:num": "a",
+                            "bcl:text": "the applicant's physician must notify the applicant of the test results,\n          and"
+                        },
+                        {
+                            "@id": "d2e603",
+                            "bcl:num": "b",
+                            "bcl:text": "the source individual's physician or the prescribed person, as the case may be,\n          must notify the source individual of the test results."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e613",
+                    "bcl:marginalnote": "Confidentiality",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e621",
+                            "bcl:num": "1",
+                            "bcl:text": "A person must not use or disclose any information concerning an applicant or a\n          source individual if that information comes to the person's knowledge in the course of\n          carrying out responsibilities under this Act or as a result of obtaining a testing\n          order."
+                        },
+                        {
+                            "@id": "d2e630",
+                            "bcl:num": "2",
+                            "bcl:text": "The prohibition in subsection (1) does not apply to disclosure in the\n          following circumstances:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e639",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the course of administering this Act or of carrying out a duty imposed or\n            exercising a power conferred under this Act;"
+                                },
+                                {
+                                    "@id": "d2e649",
+                                    "bcl:num": "b",
+                                    "bcl:text": "as required by law;"
+                                },
+                                {
+                                    "@id": "d2e658",
+                                    "bcl:num": "c",
+                                    "bcl:text": "with the consent of the person the information is about;"
+                                },
+                                {
+                                    "@id": "d2e667",
+                                    "bcl:num": "d",
+                                    "bcl:text": "in the course of a consultation between qualified health\n            professionals;"
+                                },
+                                {
+                                    "@id": "d2e676",
+                                    "bcl:num": "e",
+                                    "bcl:text": "in the case of information respecting a person who is a minor or represented\n            adult, to a guardian of that person;"
+                                },
+                                {
+                                    "@id": "d2e685",
+                                    "bcl:num": "f",
+                                    "bcl:text": "in prescribed circumstances."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e694",
+                            "bcl:num": "3",
+                            "bcl:text": "A person who is subpoenaed or otherwise compelled to give evidence in a legal\n          proceeding, other than a proceeding for the purposes of section 5 (1) or an appeal under\n            section 5\n            (4), must not, by answering a question or producing a document, disclose\n          information described in subsection (1), unless the judge or other person presiding over\n          the proceeding first examines the information, with the public excluded, and determines\n          that the information should be disclosed, having regard to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e704",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the probative value of the information,"
+                                },
+                                {
+                                    "@id": "d2e713",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the relevance of the information to the proceeding, and"
+                                },
+                                {
+                                    "@id": "d2e722",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the effect of the disclosure on the privacy of the person the information is\n            about."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e732",
+                    "bcl:marginalnote": "Costs",
+                    "bcl:num": "10",
+                    "bcl:text": "Subject to the regulations, an applicant is responsible for paying the prescribed\n        costs relating to a testing order."
+                },
+                {
+                    "@id": "d2e744",
+                    "bcl:marginalnote": "Immunity",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e752",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), no legal proceeding for damages lies or may be commenced or\n          maintained against a person because of anything done or omitted",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e761",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the exercise or intended exercise of any power under this Act,"
+                                },
+                                {
+                                    "@id": "d2e770",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the performance or intended performance of any duty under this Act,\n            or"
+                                },
+                                {
+                                    "@id": "d2e780",
+                                    "bcl:num": "c",
+                                    "bcl:text": "in the taking, under a testing order, of a sample from a source\n            individual."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e789",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection\n            (1) does not apply to a person referred to in that subsection in relation to\n          anything done or omitted by that person in bad faith."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e800",
+                    "bcl:marginalnote": "Notice and service",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e808",
+                            "bcl:num": "1",
+                            "bcl:text": "All documents or notifications required to be given to or served on a person must\n          be given or served in accordance with the regulations."
+                        },
+                        {
+                            "@id": "d2e817",
+                            "bcl:num": "2",
+                            "bcl:text": "If a person is required under this Act to provide a notice to or serve a document\n          on another person, the first person may instead provide the notice to or serve the\n          document on a person in a prescribed category of persons, if any."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e827",
+                    "bcl:marginalnote": "Offences",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e835",
+                            "bcl:num": "1",
+                            "bcl:text": "A source individual who contravenes a testing order commits an offence and is\n          liable on conviction to a fine of not more than $10 000."
+                        },
+                        {
+                            "@id": "d2e844",
+                            "bcl:num": "2",
+                            "bcl:text": "A person who contravenes section 9 of this Act commits an offence and is liable\n          on conviction,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e853",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the case of an individual, to a fine of not more than $10 000, and"
+                                },
+                                {
+                                    "@id": "d2e863",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the case of a corporation, to a fine of not more than $25 000."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e872",
+                            "bcl:num": "3",
+                            "bcl:text": "If an offence under this section continues for more than one day, separate fines,\n          each not exceeding the maximum fine for that offence, may be imposed for each day the\n          offence continues."
+                        },
+                        {
+                            "@id": "d2e881",
+                            "bcl:num": "4",
+                            "bcl:text": "The time limit for laying an information to commence a prosecution for an offence\n          under this Act is 2 years after the date on which the act or omission that is alleged to\n          constitute the offence occurred."
+                        },
+                        {
+                            "@id": "d2e890",
+                            "bcl:num": "5",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section\n            5 of the  does not apply to this\n          Act."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e903",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "14",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e911",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the\n            ."
+                            }
+                        },
+                        {
+                            "@id": "d2e923",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may\n          make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e932",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing diseases or conditions as communicable diseases for the purposes of\n            this Act;"
+                                },
+                                {
+                                    "@id": "d2e942",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prescribing qualifications for the purposes of the definition of \"qualified\n            analyst\" in section 1;"
+                                },
+                                {
+                                    "@id": "d2e951",
+                                    "bcl:num": "c",
+                                    "bcl:text": "respecting the notice to be provided under section 2, including prescribing\n            forms for that purpose;"
+                                },
+                                {
+                                    "@id": "d2e960",
+                                    "bcl:num": "d",
+                                    "bcl:text": "prescribing circumstances and activities for the purposes of section 3 (1)\n              (c);"
+                                },
+                                {
+                                    "@id": "d2e969",
+                                    "bcl:num": "e",
+                                    "bcl:text": "respecting applications for testing orders, including prescribing forms for that\n            purpose;"
+                                },
+                                {
+                                    "@id": "d2e978",
+                                    "bcl:num": "f",
+                                    "bcl:text": "respecting physician's reports referred to in section 3 (3) (a);"
+                                },
+                                {
+                                    "@id": "d2e987",
+                                    "bcl:num": "g",
+                                    "bcl:text": "respecting the taking and analysis of samples of bodily substances obtained\n            under the authority of a testing order;"
+                                },
+                                {
+                                    "@id": "d2e997",
+                                    "bcl:num": "h",
+                                    "bcl:text": "prescribing health facilities for the purposes of sections 5 and\n              6;"
+                                },
+                                {
+                                    "@id": "d2e1006",
+                                    "bcl:num": "i",
+                                    "bcl:text": "prescribing information for the purposes of sections 5 (2) (c), 6 (a) and 7\n            (d);"
+                                },
+                                {
+                                    "@id": "d2e1015",
+                                    "bcl:num": "j",
+                                    "bcl:text": "prescribing persons in relation to incapacitated adults for the purpose of\n              section 5 (3)\n              (b);"
+                                },
+                                {
+                                    "@id": "d2e1024",
+                                    "bcl:num": "k",
+                                    "bcl:text": "prescribing persons for the purposes of section 7 (d) (ii)\n            (B);"
+                                },
+                                {
+                                    "@id": "d2e1033",
+                                    "bcl:num": "l",
+                                    "bcl:text": "respecting the handling, retention and destruction of samples of bodily\n            substances and related records;"
+                                },
+                                {
+                                    "@id": "d2e1042",
+                                    "bcl:num": "m",
+                                    "bcl:text": "prescribing circumstances when confidential information under this Act may be\n            disclosed;"
+                                },
+                                {
+                                    "@id": "d2e1052",
+                                    "bcl:num": "n",
+                                    "bcl:text": "prescribing circumstances in which the government may be responsible for paying\n            the costs referred to in section 10 and prescribing costs for the purposes of\n            that section;"
+                                },
+                                {
+                                    "@id": "d2e1061",
+                                    "bcl:num": "o",
+                                    "bcl:text": "respecting notice and service for the purposes of section 12, including prescribing\n            categories of persons who, in prescribed circumstances, may be notified or served\n            instead of the person identified in the Act;"
+                                },
+                                {
+                                    "@id": "d2e1070",
+                                    "bcl:num": "p",
+                                    "bcl:text": "defining words and phrases used but not defined in this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1079",
+                            "bcl:num": "3",
+                            "bcl:text": "In making a regulation under subsection (1) or (2), the Lieutenant Governor in\n          Council may make different regulations for different persons, things, decisions or\n          activities."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1143",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "16",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in\n        Council."
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Consequential Amendment",
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of section 15.]"
+                    }
+                },
+                "bcl:num": "15",
+                "oasis:table": {
+                    "@style": "1",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "center",
+                                        "oasis:line": {
+                                            "in:em": "15"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": null
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "@align": "center",
+                                        "oasis:line": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/E2tlc96492",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Workers Compensation Act"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,303 @@
+<html>
+  <head></head>
+  <body>
+    <div id="title">
+      <h2>"Point in Time" Regulation Content</h2>
+      <h4>
+        <em> Securities Act </em>
+      </h4>
+      <h3 style="line-height: 110%">
+        National Instrument 54-101 Communication With Beneficial Owners of
+        Securities of a Reporting Issuer
+      </h3>
+      <h3>B.C. Reg. 154/2002</h3>
+    </div>
+    <table
+      align="center"
+      border="0"
+      cellpadding="3"
+      cellspacing="0"
+      class="tablestyle1"
+    >
+      <tbody>
+        <tr>
+          <td align="center">
+            <strong> HEADER RECORD DESCRIPTION </strong>
+          </td>
+          <td align="center">
+            <strong> TYPE </strong>
+          </td>
+          <td width="10"></td>
+          <td align="center">
+            <strong> LENGTH </strong>
+          </td>
+          <td align="center">
+            <strong> COMMENTS </strong>
+          </td>
+        </tr>
+        <tr>
+          <td>RECORD TYPE</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">1</td>
+          <td>Header record = A</td>
+        </tr>
+        <tr>
+          <td>FINS NUMBER</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">4</td>
+          <td>Prefix T, M, V or C</td>
+        </tr>
+        <tr>
+          <td>
+            ISIN
+            <a href="#footnote_3">
+              <sup> 3 </sup>
+            </a>
+          </td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">12</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">3</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>SECURITY DESC.</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">32</td>
+          <td>Security Description</td>
+        </tr>
+        <tr>
+          <td>RECORD DATE</td>
+          <td align="center">N</td>
+          <td width="10"></td>
+          <td align="center">8</td>
+          <td>Format YYYYMMDD</td>
+        </tr>
+        <tr>
+          <td>CREATION DATE</td>
+          <td align="center">N</td>
+          <td width="10"></td>
+          <td align="center">8</td>
+          <td>Format YYYYMMDD</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">250</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td align="center">
+            <strong> DETAIL RECORD DESCRIPTION </strong>
+          </td>
+          <td align="center">
+            <strong> TYPE </strong>
+          </td>
+          <td width="10"></td>
+          <td align="center">
+            <strong> LENGTH </strong>
+          </td>
+          <td align="center">
+            <strong> COMMENTS </strong>
+          </td>
+        </tr>
+        <tr>
+          <td>RECORD TYPE</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">1</td>
+          <td>Detail Record = B</td>
+        </tr>
+        <tr>
+          <td>FINS NUMBER</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">4</td>
+          <td>Same as in Header record</td>
+        </tr>
+        <tr>
+          <td>
+            ISIN
+            <a href="#footnote_1">
+              <sup> 1 </sup>
+            </a>
+          </td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">12</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">3</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">20</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>NAME</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">32</td>
+          <td>Holder Name</td>
+        </tr>
+        <tr>
+          <td>ADDRESS</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">32 x 6</td>
+          <td>Occurs 6 times</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">32</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>POSTAL CODE</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">9</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>POSTAL REGION</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">1</td>
+          <td>C-Canada; U-USA; F-Foreign (other than USA); H-Hand Deliver</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">2</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>E - MAIL ADDRESS</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">32</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>LANGUAGE CODE</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">1</td>
+          <td>E-English; F-French</td>
+        </tr>
+        <tr>
+          <td>NUMBER OF SHARES</td>
+          <td align="center">N</td>
+          <td width="10"></td>
+          <td align="center">9</td>
+          <td>Shareholder Position</td>
+        </tr>
+        <tr>
+          <td>RECEIVE ALL MATERIAL</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">1</td>
+          <td>Y/N</td>
+        </tr>
+        <tr>
+          <td>AGREE TO ELECTRONIC DELIVERY BY INTERMEDIARY</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">1</td>
+          <td>Y/N</td>
+        </tr>
+        <tr>
+          <td align="center">
+            <strong> TRAILER RECORD DESCRIPTION </strong>
+          </td>
+          <td align="center">
+            <strong> TYPE </strong>
+          </td>
+          <td width="10"></td>
+          <td align="center">
+            <strong> LENGTH </strong>
+          </td>
+          <td align="center">
+            <strong> COMMENTS </strong>
+          </td>
+        </tr>
+        <tr>
+          <td>RECORD TYPE</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">1</td>
+          <td>Trailer record = C</td>
+        </tr>
+        <tr>
+          <td>FINS NUMBER</td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">4</td>
+          <td>Same as in Header record</td>
+        </tr>
+        <tr>
+          <td>
+            ISIN
+            <a href="#footnote_3">
+              <sup> 3 </sup>
+            </a>
+          </td>
+          <td align="center">A</td>
+          <td width="10"></td>
+          <td align="center">12</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">3</td>
+          <td>Blank</td>
+        </tr>
+        <tr>
+          <td>TOTAL SHAREHOLDERS</td>
+          <td align="center">N</td>
+          <td width="10"></td>
+          <td align="center">7</td>
+          <td>Number of "B" type records</td>
+        </tr>
+        <tr>
+          <td>TOTAL SHARES</td>
+          <td align="center">N</td>
+          <td width="10"></td>
+          <td align="center">11</td>
+          <td>Total shares on "B" records</td>
+        </tr>
+        <tr>
+          <td>FILLER</td>
+          <td align="center">X</td>
+          <td width="10"></td>
+          <td align="center">280</td>
+          <td>Blank</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

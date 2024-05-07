@@ -1,0 +1,1094 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_09020_01",
+        "act:title": "Labour Mobility Act",
+        "act:chapter": "20",
+        "act:yearenacted": "2009",
+        "act:assentedto": "October 29, 2009",
+        "act:currency": {
+            "act:tlcDirPath": "76470131/09020/tlc09020_f",
+            "act:tlc": "E3tlc09020"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e21",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e32",
+                            "bcl:text": {
+                                "in:term": "Agreement",
+                                "#text": "means the Canadian Free Trade Agreement that entered into force on July\u00a01, 2017, as amended from time to time;"
+                            }
+                        },
+                        {
+                            "@id": "d2e41",
+                            "bcl:text": {
+                                "in:term": "applicable BC regulator",
+                                "#text": ", in relation to an occupation, means the\n          regulatory authority that is authorized to issue certification in British Columbia in\n          relation to that occupation;"
+                            }
+                        },
+                        {
+                            "@id": "d2e51",
+                            "bcl:text": {
+                                "in:term": "approved measure",
+                                "#text": "means a measure approved under section\n          2;"
+                            }
+                        },
+                        {
+                            "@id": "d2e60",
+                            "bcl:text": {
+                                "in:term": "BC equivalent occupation",
+                                "#text": ", in relation to an extraprovincial occupation,\n          means an occupation in British Columbia that consists of a set of jobs that is the same as\n          or is substantially similar to the set of jobs that constitutes the extraprovincial\n          occupation;"
+                            }
+                        },
+                        {
+                            "@id": "d2e69",
+                            "bcl:text": {
+                                "in:term": "Canadian jurisdiction",
+                                "#text": "means a jurisdiction the government of which is a\n          party to the Agreement;"
+                            }
+                        },
+                        {
+                            "@id": "d2e78",
+                            "bcl:text": {
+                                "in:term": "certification",
+                                "#text": ", in relation to a worker, means a certificate, licence,\n          registration or other form of official recognition issued to the worker by a regulatory\n          authority of a Canadian jurisdiction that attests to the worker being qualified and, if\n          applicable, authorized to do one or both of the following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e87",
+                                    "bcl:num": "a",
+                                    "bcl:text": "practise a particular occupation in the Canadian jurisdiction;"
+                                },
+                                {
+                                    "@id": "d2e96",
+                                    "bcl:num": "b",
+                                    "bcl:text": "use in the Canadian jurisdiction a particular occupational title, designation or\n            abbreviated title or designation;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e106",
+                            "bcl:text": {
+                                "in:term": "extraprovincial occupation",
+                                "#text": "means an occupation in relation to which a\n          worker holds a certification in a Canadian jurisdiction other than British\n          Columbia;"
+                            }
+                        },
+                        {
+                            "@id": "d2e115",
+                            "bcl:text": {
+                                "in:term": "governing Act",
+                                "#text": ", in relation to an occupation, means the Act under which\n          certification may be issued in British Columbia in relation to that occupation;"
+                            }
+                        },
+                        {
+                            "@id": "d2e124",
+                            "bcl:text": {
+                                "in:term": "measure",
+                                "#text": "includes a practice, policy, standard and procedure;"
+                            }
+                        },
+                        {
+                            "@id": "d2e133",
+                            "bcl:text": {
+                                "in:term": "occupation",
+                                "#text": "means a set of jobs that, with some variation, are similar\n          in their main tasks or duties or in the type of work performed;"
+                            }
+                        },
+                        {
+                            "@id": "d2e142",
+                            "bcl:text": {
+                                "in:term": "occupational standard",
+                                "#text": "means the skills, knowledge and abilities\n          required for an occupation as established by a regulatory authority of a Canadian\n          jurisdiction and against which the qualifications of an individual in that occupation are\n          assessed;"
+                            }
+                        },
+                        {
+                            "@id": "d2e151",
+                            "bcl:text": [
+                                {
+                                    "in:term": "regulatory authority",
+                                    "#text": ", in relation to British Columbia or another\n          Canadian jurisdiction, means a person or other body, whether or not a governmental entity,\n          that has, by an enactment, been granted authority to set or implement measures related to\n          any of the following:"
+                                },
+                                "and, in relation to British Columbia, includes any other person or body that may\n          be prescribed by the Lieutenant Governor in Council;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e161",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the establishment of occupational standards or certification\n            requirements;"
+                                },
+                                {
+                                    "@id": "d2e170",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the assessment of the qualifications of workers against established occupational\n            standards or certification requirements;"
+                                },
+                                {
+                                    "@id": "d2e179",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the official recognition that an individual meets established occupational\n            standards or certification requirements,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e191",
+                            "bcl:text": {
+                                "in:term": "terms",
+                                "#text": "includes practice limitations and practice\n          restrictions;"
+                            }
+                        },
+                        {
+                            "@id": "d2e200",
+                            "bcl:text": {
+                                "in:term": "worker",
+                                "#text": "means an individual, whether employed, self-employed or\n          unemployed, who performs or seeks to perform work for pay or profit."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e210",
+                    "bcl:marginalnote": "Approved measures",
+                    "bcl:num": "2",
+                    "bcl:text": "An applicable BC regulator must not propose or apply, in relation to an occupation\n        or an application for certification in relation to an occupation, a measure that constitutes\n        an inconsistent measure referred to in paragraph 1 of Article 707 of the Agreement, unless\n        that measure is approved by both the minister charged with administration of this Act and\n        the minister responsible for the Act under which the occupation is or may be\n        regulated."
+                },
+                {
+                    "@id": "d2e222",
+                    "bcl:marginalnote": "Application of Agreement",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e230",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), a worker who holds a certification in relation to an\n          extraprovincial occupation may, if there is a BC equivalent occupation in relation to\n          which certification may be issued,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e239",
+                                    "bcl:num": "a",
+                                    "bcl:text": "apply to the applicable BC regulator for certification in relation to that BC\n            equivalent occupation, and"
+                                },
+                                {
+                                    "@id": "d2e248",
+                                    "bcl:num": "b",
+                                    "bcl:text": "practise the BC equivalent occupation in British Columbia",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e258",
+                                            "bcl:num": "i",
+                                            "bcl:text": "after obtaining that certification, and"
+                                        },
+                                        {
+                                            "@id": "d2e267",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in accordance with the governing Act and the applicable regulations, bylaws,\n              rules, resolutions and measures under that Act."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e276",
+                            "bcl:num": "2",
+                            "bcl:text": "A worker who holds a certification in relation to an extraprovincial occupation\n          may, if there is a BC equivalent occupation, practise the BC equivalent occupation in\n          British Columbia without obtaining the certification referred to in subsection (1) (b)\n            (i), but only if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e285",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the applicable BC regulator for the BC equivalent occupation is a prescribed\n            regulatory authority,"
+                                },
+                                {
+                                    "@id": "d2e294",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the BC equivalent occupation is a prescribed occupation or an occupation within\n            a prescribed class of occupations, or"
+                                },
+                                {
+                                    "@id": "d2e303",
+                                    "bcl:num": "c",
+                                    "bcl:text": "certification is not required to practise the BC equivalent occupation in\n            British Columbia."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e313",
+                            "bcl:num": "3",
+                            "bcl:text": "A regulatory authority that is authorized to issue certification in British\n          Columbia in relation to an occupation must, without limiting any other obligations to\n          which the regulatory authority is subject under this Act or Chapter Seven of the\n          Agreement, ensure that there is published on the regulatory authority's website or on a\n          readily accessible website of the government each measure that relates to certification of\n          workers in relation to that occupation, including, without limitation,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e322",
+                                    "bcl:num": "a",
+                                    "bcl:text": "any measure that relates to applications referred to in subsection (1)\n              (a) that are made in relation to that occupation, and"
+                                },
+                                {
+                                    "@id": "d2e331",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the form of application to be used in relation to those applications."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e340",
+                            "bcl:num": "4",
+                            "bcl:text": "If a regulatory authority that is authorized to issue certification in British\n          Columbia in relation to an occupation is provided with an application in relation to that\n          occupation under subsection (1) (a), the regulatory authority",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e349",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must consider and determine the application in a manner consistent with the\n            government's obligations under Chapter Seven of the Agreement,"
+                                },
+                                {
+                                    "@id": "d2e358",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must issue any certification required by Chapter Seven of the Agreement,\n            and"
+                                },
+                                {
+                                    "@id": "d2e368",
+                                    "bcl:num": "c",
+                                    "bcl:text": "may impose on any certification issued in response to the application any terms,\n            conditions or requirements that the regulatory authority is authorized to impose on the\n            certification in accordance with one or more of the following:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e377",
+                                            "bcl:num": "i",
+                                            "bcl:text": "Chapter Seven of the Agreement;"
+                                        },
+                                        {
+                                            "@id": "d2e386",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "this Act or the governing Act, or any regulation, bylaw, rule, resolution or\n              measure under this Act or the governing Act, to the extent that those terms,\n              conditions or requirements are not inconsistent with the government's obligations\n              under Chapter Seven of the Agreement."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e395",
+                            "bcl:num": "5",
+                            "bcl:text": "A worker who holds a certification in relation to an extraprovincial occupation\n          and who is authorized to practise the BC equivalent occupation in British Columbia in\n          accordance with this section may use, in British Columbia, the occupational title,\n          designation or abbreviated title or designation applicable to the BC equivalent\n          occupation."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e405",
+                    "bcl:marginalnote": "Reviews",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e413",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "administrative review and appeal",
+                                "#text": "In this section,  does not\n          include review by or appeal to a court."
+                            }
+                        },
+                        {
+                            "@id": "d2e425",
+                            "bcl:num": "2",
+                            "bcl:text": "If, on a worker's application for certification referred to in section 3 (1)\n            (a), the applicable BC regulator issues the certification on terms,\n          conditions or requirements or refuses the application,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e434",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the worker may exercise all rights of administrative review and appeal, if any,\n            available under the governing Act in relation to the application, and"
+                                },
+                                {
+                                    "@id": "d2e444",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if, after completing all of the administrative review and appeal processes\n            referred to in paragraph (a), the worker alleges that the decision reached in respect of\n            his or her application is not in accordance with this Act and Chapter Seven of the\n            Agreement, the worker may, within 60 days after being notified of the decision and\n            despite any enactment to the contrary other than section 6.1 of this Act, refer\n            the decision to the Supreme Court for review."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e453",
+                            "bcl:num": "3",
+                            "bcl:text": "Each person or body conducting an administrative review or appeal referred to in\n            subsection (2)\n            (a) must consider and determine the administrative review or appeal in\n          accordance with the obligations imposed on the government and the regulatory authority\n          under the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e462",
+                                    "bcl:num": "a",
+                                    "bcl:text": "this Act;"
+                                },
+                                {
+                                    "@id": "d2e471",
+                                    "bcl:num": "b",
+                                    "bcl:text": "Chapter Seven of the Agreement;"
+                                },
+                                {
+                                    "@id": "d2e480",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to the extent that it does not conflict with paragraphs (a) and (b), the\n            governing Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e489",
+                            "bcl:num": "4",
+                            "bcl:text": "A reference to the Supreme Court under subsection (2) (b) must be made in\n          the form of a stated case that identifies, as the question of law to be determined,\n          whether the decision under review was consistent with the government's obligations under\n          Chapter Seven of the Agreement."
+                        },
+                        {
+                            "@id": "d2e499",
+                            "bcl:num": "5",
+                            "bcl:text": "On a stated case under subsection (4) of this section,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e508",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the applicable BC regulator, if other than the government, must deliver a copy\n            of the filed notice of stated case and material to the government, and"
+                                },
+                                {
+                                    "@id": "d2e517",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the court must",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e526",
+                                            "bcl:num": "i",
+                                            "bcl:text": "determine whether the decision under review was consistent with the\n              government's obligations under Chapter Seven of the Agreement, and"
+                                        },
+                                        {
+                                            "@id": "d2e535",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "if the court determines that the decision was not consistent with the\n              government's obligations under Chapter Seven of the Agreement, refer the application\n              back to the applicable BC regulator with directions."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e544",
+                            "bcl:num": "6",
+                            "bcl:text": "In a direction under subsection (5) (b) (ii), the court must not interfere\n          with a valid exercise of discretion by the applicable BC regulator if the court determines\n          that the applicable BC regulator's discretion was exercised reasonably."
+                        },
+                        {
+                            "@id": "d2e554",
+                            "bcl:num": "7",
+                            "bcl:text": "If an application is referred back to the applicable BC regulator under subsection (5) (b)\n            (ii), the applicable BC regulator must reconsider the application and make a\n          decision on that application in accordance with those directions."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e564",
+                    "bcl:marginalnote": "Mobility provisions",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e572",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e581",
+                                    "bcl:text": {
+                                        "in:term": "authorizing enactment",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96183_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Health\n                Professions Act"
+                                        },
+                                        "#text": "means an enactment, other than the , under which a regulatory authority may make a\n            mobility provision;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e593",
+                                    "bcl:text": {
+                                        "in:term": "mobility provision",
+                                        "#text": "means a bylaw, rule, resolution, measure or other\n            record that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e603",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is made under an authorizing enactment, and"
+                                        },
+                                        {
+                                            "@id": "d2e612",
+                                            "bcl:num": "b",
+                                            "bcl:text": "affects or may affect the ability of a worker who holds a certification in\n              relation to an extraprovincial occupation to practise the BC equivalent occupation in\n              British Columbia."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e621",
+                            "bcl:num": "2",
+                            "bcl:text": "A regulatory authority's ability under an authorizing enactment to make a mobility\n          provision includes the power to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e630",
+                                    "bcl:num": "a",
+                                    "bcl:text": "amend the mobility provision to make it comply with this Act, the regulations\n            and the Agreement, and"
+                                },
+                                {
+                                    "@id": "d2e639",
+                                    "bcl:num": "b",
+                                    "bcl:text": "repeal the mobility provision if it does not comply with this Act, the\n            regulations and the Agreement."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e648",
+                            "bcl:num": "3",
+                            "bcl:text": "The minister charged with the administration of the Act under which a mobility\n          provision is made",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e658",
+                                    "bcl:num": "a",
+                                    "bcl:text": "may request the regulatory authority to amend the mobility provision to make it\n            comply with one or more of this Act, the regulations and the Agreement and, in doing so,\n            may provide directions as to how the mobility provision should read or what it should or\n            should not contain, or"
+                                },
+                                {
+                                    "@id": "d2e667",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may request the regulatory authority to repeal the mobility\n            provision."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e676",
+                            "bcl:num": "4",
+                            "bcl:text": "If the regulatory authority does not comply with a request made under subsection (3)\n          within 60 days after the date of the request, the requesting minister may, by order, do\n          one or more of the following in relation to the occupations to which the mobility\n          provision applies:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e685",
+                                    "bcl:num": "a",
+                                    "bcl:text": "make a mobility provision that complies with this Act, the regulations and the\n            Agreement;"
+                                },
+                                {
+                                    "@id": "d2e694",
+                                    "bcl:num": "b",
+                                    "bcl:text": "amend a mobility provision to make it comply with this Act, the regulations and\n            the Agreement;"
+                                },
+                                {
+                                    "@id": "d2e703",
+                                    "bcl:num": "c",
+                                    "bcl:text": "repeal a mobility provision that does not comply with this Act, the regulations\n            and the Agreement."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e713",
+                            "bcl:num": "5",
+                            "bcl:text": [
+                                "In the event of a conflict between",
+                                "the mobility provision referred to in paragraph (a) prevails to the\n          extent of the conflict."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e722",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a mobility provision made or amended under subsection (2) (a) or (4) (a) or\n            (b), and"
+                                },
+                                {
+                                    "@id": "d2e731",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a bylaw, rule, resolution, measure or other record made under the applicable\n            authorizing enactment,"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e745",
+                    "bcl:marginalnote": "Conflicts",
+                    "bcl:num": "6",
+                    "bcl:text": [
+                        "In the event of a conflict between a provision of this Act and",
+                        "the provision of this Act prevails."
+                    ],
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e756",
+                            "bcl:num": "a",
+                            "bcl:text": "any other enactment, or"
+                        },
+                        {
+                            "@id": "d2e765",
+                            "bcl:num": "b",
+                            "bcl:text": "any other record of, or applicable to, an applicable BC regulator,"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e779",
+                    "bcl:marginalnote": "Application of this Act to nurse practitioners",
+                    "bcl:num": "6.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e787",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "occupation of nurse practitioner",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96183_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Health Professions Act"
+                                },
+                                "#text": "In this section,  means the\n          occupation in British Columbia that constitutes the practice of nursing as a nurse\n          practitioner under the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e802",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96183_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Health Professions\n              Act"
+                                },
+                                "#text": "Section 4 (2)\n            (b) does not apply to a worker who applies for certification in relation to\n          the occupation of nurse practitioner under the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e814",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96183_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Health Professions\n              Act"
+                                },
+                                "#text": "Section\n            6 does not apply in respect of section 20.02 of the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e827",
+                    "bcl:marginalnote": "Agreement does not become law",
+                    "bcl:num": "7",
+                    "bcl:text": "Nothing in this Act renders the Agreement an enactment or otherwise gives to the\n        Agreement the force of law."
+                },
+                {
+                    "@id": "d2e839",
+                    "bcl:marginalnote": "Prohibition on private cause of action",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e847",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), no legal proceeding lies or may be brought or continued against the government or another person to enforce or determine a right or obligation that is claimed or arises solely under",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e927",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the Agreement, or"
+                                },
+                                {
+                                    "@id": "d1e936",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the Agreement on Internal Trade, signed in 1994 by the governments of Canada, the provinces, Yukon and the Northwest Territories, as amended from time to time."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e856",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not apply to a proceeding that is contemplated by",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e954",
+                                    "bcl:num": "a",
+                                    "bcl:text": "Chapter Ten of the Agreement, or"
+                                },
+                                {
+                                    "@id": "d1e963",
+                                    "bcl:num": "b",
+                                    "bcl:text": "Chapter Seventeen of the Agreement on Internal Trade."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e866",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e874",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041\n          of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e886",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may\n          make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e895",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing regulatory authorities for the purposes of one or both of",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e905",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the definition of \"regulatory authority\" in section 1, and"
+                                        },
+                                        {
+                                            "@id": "d2e914",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "section 3 (2)\n                (a);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e923",
+                                    "bcl:num": "b",
+                                    "bcl:text": "prescribing occupations and classes of occupations for the purposes of section 3 (2)\n              (b);"
+                                },
+                                {
+                                    "@id": "d2e932",
+                                    "bcl:num": "c",
+                                    "bcl:text": "respecting the form and content of applications for certification referred to in\n              section 3 (1)\n              (a);"
+                                },
+                                {
+                                    "@id": "d2e941",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting information that must be collected and maintained by each applicable\n            BC regulator respecting applications for certification under this Act;"
+                                },
+                                {
+                                    "@id": "d2e950",
+                                    "bcl:num": "e",
+                                    "bcl:text": "respecting reports that must be given by applicable BC regulators, including\n            regulations respecting the timing, format and content of those reports;"
+                                },
+                                {
+                                    "@id": "d2e960",
+                                    "bcl:num": "f",
+                                    "bcl:text": "respecting the information that an applicable BC regulator must provide to an\n            applicant referred to in section 3 (1) (a) in relation to the application,\n            including regulations respecting the timing within which and the format by which that\n            information must be provided;"
+                                },
+                                {
+                                    "@id": "d2e969",
+                                    "bcl:num": "g",
+                                    "bcl:text": "respecting any rules, orders, forms and directions that may be desirable for\n            carrying out the provisions of this Act or for regulating procedure or establishing\n            practice under this Act;"
+                                },
+                                {
+                                    "@id": "d2e978",
+                                    "bcl:num": "h",
+                                    "bcl:text": "if the parties to the Agreement have agreed to attempt to arrive at common\n            certification requirements for an occupation, exempting that occupation from the\n            application of this Act;"
+                                },
+                                {
+                                    "@id": "d2e987",
+                                    "bcl:num": "i",
+                                    "bcl:text": "regulations considered necessary or advisable for the purpose of more\n            effectively bringing into operation this Act and to avoid or remedy any transitional\n            difficulties encountered in doing so."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e996",
+                            "bcl:num": "3",
+                            "bcl:text": "In making a regulation under this Act, the Lieutenant Governor in Council may make\n          different regulations in respect of different occupations or classes of occupations or in\n          respect of different regulatory authorities or classes of regulatory\n          authorities."
+                        },
+                        {
+                            "@id": "d2e1005",
+                            "bcl:num": "4",
+                            "bcl:text": "Regulations under subsection (2) (i) may, for a period the Lieutenant\n          Governor in Council specifies, suspend the operation of a provision of an enactment if\n          that provision would impede the effective operation of this Act."
+                        },
+                        {
+                            "@id": "d2e1015",
+                            "bcl:num": "5",
+                            "bcl:text": "Unless earlier repealed,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1024",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a regulation under subsection (2) (h) is repealed 2 years after the\n            coming into force of subsection (2) (h), and"
+                                },
+                                {
+                                    "@id": "d2e1033",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a regulation under subsection (2) (i) or (4) is repealed one year after\n            that regulation is enacted."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1280",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "24",
+                    "bcl:text": "This Act comes into force on the date of Royal Assent."
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Consequential Amendments",
+                "bcl:num": "10-23",
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of sections 10 to 23.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "@id": "d1e1198",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": [
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "10"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96002",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Accountants (Certified General) Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "11"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96003",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Accountants (Chartered) Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "12-13"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96015",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Applied Science Technologists and Technicians Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "14"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96116",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Engineers and Geoscientists Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "15"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "in:doc": "Environmental (Species and Public Protection) Statutes Amendment Act,\n                    2008"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "16"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc03019",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Foresters Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "17-18"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96183",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Health Professions Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "19"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc03034",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Industry Training Authority Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "20"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96248",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Land Surveyors Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "21"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96366",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Podiatrists Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "22-23"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E2tlc96488",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Wildlife Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

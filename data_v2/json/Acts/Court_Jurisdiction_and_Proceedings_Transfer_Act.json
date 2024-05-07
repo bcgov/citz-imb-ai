@@ -1,0 +1,923 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_03028_01",
+        "act:title": "Court Jurisdiction and Proceedings Transfer Act",
+        "act:chapter": "28",
+        "act:yearenacted": "2003",
+        "act:assentedto": "May 29, 2003",
+        "act:currency": {
+            "act:tlcDirPath": "781755088/03028/tlc03028_f",
+            "act:tlc": "E3tlc03028"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e18",
+                    "bcl:num": "1",
+                    "bcl:text": "Interpretation",
+                    "bcl:section": {
+                        "@id": "d2e27",
+                        "bcl:marginalnote": "Definitions",
+                        "bcl:num": "1",
+                        "bcl:text": "In this Act:",
+                        "bcl:definition": [
+                            {
+                                "@id": "d2e38",
+                                "bcl:text": {
+                                    "in:term": "person",
+                                    "#text": "includes a state;"
+                                }
+                            },
+                            {
+                                "@id": "d2e47",
+                                "bcl:text": {
+                                    "in:term": "plaintiff",
+                                    "#text": "means a person who commences a proceeding, and includes a plaintiff by way of counterclaim or third party claim;"
+                                }
+                            },
+                            {
+                                "@id": "d2e57",
+                                "bcl:text": {
+                                    "in:term": "procedure",
+                                    "#text": "means a procedural step in a proceeding;"
+                                }
+                            },
+                            {
+                                "@id": "d2e66",
+                                "bcl:text": {
+                                    "in:term": "proceeding",
+                                    "#text": "means an action, suit, cause, matter, petition proceeding or requisition proceeding and includes a procedure and a preliminary motion;"
+                                }
+                            },
+                            {
+                                "@id": "d2e75",
+                                "bcl:text": {
+                                    "in:term": "state",
+                                    "#text": "means"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e84",
+                                        "bcl:num": "a",
+                                        "bcl:text": "Canada or a province or territory of Canada, and"
+                                    },
+                                    {
+                                        "@id": "d2e93",
+                                        "bcl:num": "b",
+                                        "bcl:text": "a foreign country or a subdivision of a foreign country;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d2e102",
+                                "bcl:text": {
+                                    "in:term": "subject matter competence",
+                                    "#text": "means the aspects of a court's jurisdiction that depend on factors other than those pertaining to the court's territorial competence;"
+                                }
+                            },
+                            {
+                                "@id": "d2e112",
+                                "bcl:text": {
+                                    "in:term": "territorial competence",
+                                    "#text": "means the aspects of a court's jurisdiction that depend on a connection between"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d2e121",
+                                        "bcl:num": "a",
+                                        "bcl:text": "the territory or legal system of the state in which the court is established, and"
+                                    },
+                                    {
+                                        "@id": "d2e130",
+                                        "bcl:num": "b",
+                                        "bcl:text": "a party to a proceeding in the court or the facts on which the proceeding is based."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d2e140",
+                    "bcl:num": "2",
+                    "bcl:text": "Territorial Competence of Courts of British Columbia",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e149",
+                            "bcl:marginalnote": "Application of this Part",
+                            "bcl:num": "2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e157",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "court",
+                                        "#text": "In this Part,  means a court of British Columbia."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e169",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The territorial competence of a court is to be determined solely by reference to this Part."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e179",
+                            "bcl:marginalnote": "Proceedings against a person",
+                            "bcl:num": "3",
+                            "bcl:text": "A court has territorial competence in a proceeding that is brought against a person only if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e190",
+                                    "bcl:num": "a",
+                                    "bcl:text": "that person is the plaintiff in another proceeding in the court to which the proceeding in question is a counterclaim,"
+                                },
+                                {
+                                    "@id": "d2e199",
+                                    "bcl:num": "b",
+                                    "bcl:text": "during the course of the proceeding that person submits to the court's jurisdiction,"
+                                },
+                                {
+                                    "@id": "d2e209",
+                                    "bcl:num": "c",
+                                    "bcl:text": "there is an agreement between the plaintiff and that person to the effect that the court has jurisdiction in the proceeding,"
+                                },
+                                {
+                                    "@id": "d2e218",
+                                    "bcl:num": "d",
+                                    "bcl:text": "that person is ordinarily resident in British Columbia at the time of the commencement of the proceeding, or"
+                                },
+                                {
+                                    "@id": "d2e227",
+                                    "bcl:num": "e",
+                                    "bcl:text": "there is a real and substantial connection between British Columbia and the facts on which the proceeding against that person is based."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e238",
+                            "bcl:marginalnote": "Proceedings with no named defendant",
+                            "bcl:num": "4",
+                            "bcl:text": "A court has territorial competence in a proceeding that is not brought against a person or a vessel if there is a real and substantial connection between British Columbia and the facts upon which the proceeding is based."
+                        },
+                        {
+                            "@id": "d2e250",
+                            "bcl:marginalnote": "Proceedings against a vessel",
+                            "bcl:num": "5",
+                            "bcl:text": "A court has territorial competence in a proceeding that is brought against a vessel if the vessel is served or arrested in British Columbia."
+                        },
+                        {
+                            "@id": "d2e262",
+                            "bcl:marginalnote": "Residual discretion",
+                            "bcl:num": "6",
+                            "bcl:text": "A court that under section 3 lacks territorial competence in a proceeding may hear the proceeding despite that section if it considers that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e273",
+                                    "bcl:num": "a",
+                                    "bcl:text": "there is no court outside British Columbia in which the plaintiff can commence the proceeding, or"
+                                },
+                                {
+                                    "@id": "d2e282",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the commencement of the proceeding in a court outside British Columbia cannot reasonably be required."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e292",
+                            "bcl:marginalnote": "Ordinary residence \u2014 corporations",
+                            "bcl:num": "7",
+                            "bcl:text": "A corporation is ordinarily resident in British Columbia, for the purposes of this Part, only if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e303",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the corporation has or is required by law to have a registered office in British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e312",
+                                    "bcl:num": "b",
+                                    "bcl:text": "pursuant to law, it",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e322",
+                                            "bcl:num": "i",
+                                            "bcl:text": "has registered an address in British Columbia at which process may be served generally, or"
+                                        },
+                                        {
+                                            "@id": "d2e331",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "has nominated an agent in British Columbia upon whom process may be served generally,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e340",
+                                    "bcl:num": "c",
+                                    "bcl:text": "it has a place of business in British Columbia, or"
+                                },
+                                {
+                                    "@id": "d2e349",
+                                    "bcl:num": "d",
+                                    "bcl:text": "its central management is exercised in British Columbia."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e359",
+                            "bcl:marginalnote": "Ordinary residence \u2014 partnerships",
+                            "bcl:num": "8",
+                            "bcl:text": "A partnership is ordinarily resident in British Columbia, for the purposes of this Part, only if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e370",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the partnership has, or is required by law to have, a registered office or business address in British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e379",
+                                    "bcl:num": "b",
+                                    "bcl:text": "it has a place of business in British Columbia, or"
+                                },
+                                {
+                                    "@id": "d2e389",
+                                    "bcl:num": "c",
+                                    "bcl:text": "its central management is exercised in British Columbia."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e399",
+                            "bcl:marginalnote": "Ordinary residence \u2014 unincorporated associations",
+                            "bcl:num": "9",
+                            "bcl:text": "An unincorporated association is ordinarily resident in British Columbia, for the purposes of this Part, only if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e410",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an officer of the association is ordinarily resident in British Columbia, or"
+                                },
+                                {
+                                    "@id": "d2e419",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the association has a location in British Columbia for the purpose of conducting its activities."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e430",
+                            "bcl:marginalnote": "Real and substantial connection",
+                            "bcl:num": "10",
+                            "bcl:text": "Without limiting the right of the plaintiff to prove other circumstances that constitute a real and substantial connection between British Columbia and the facts on which a proceeding is based, a real and substantial connection between British Columbia and those facts is presumed to exist if the proceeding",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e441",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is brought to enforce, assert, declare or determine proprietary or possessory rights or a security interest in property in British Columbia that is immovable or movable property,"
+                                },
+                                {
+                                    "@id": "d2e450",
+                                    "bcl:num": "b",
+                                    "bcl:text": "concerns the administration of the estate of a deceased person in relation to",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e460",
+                                            "bcl:num": "i",
+                                            "bcl:text": "immovable property in British Columbia of the deceased person, or"
+                                        },
+                                        {
+                                            "@id": "d2e469",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "movable property anywhere of the deceased person if at the time of death the person was ordinarily resident in British Columbia,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e478",
+                                    "bcl:num": "c",
+                                    "bcl:text": "is brought to interpret, rectify, set aside or enforce any deed, will, contract or other instrument in relation to",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e487",
+                                            "bcl:num": "i",
+                                            "bcl:text": "property in British Columbia that is immovable or movable property, or"
+                                        },
+                                        {
+                                            "@id": "d2e496",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "movable property anywhere of a deceased person who at the time of death was ordinarily resident in British Columbia,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e505",
+                                    "bcl:num": "d",
+                                    "bcl:text": "is brought against a trustee in relation to the carrying out of a trust in any of the following circumstances:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e515",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the trust assets include property in British Columbia that is immovable or movable property and the relief claimed is only as to that property;"
+                                        },
+                                        {
+                                            "@id": "d2e524",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "that trustee is ordinarily resident in British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e533",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the administration of the trust is principally carried on in British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e542",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "by the express terms of a trust document, the trust is governed by the law of British Columbia,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e551",
+                                    "bcl:num": "e",
+                                    "bcl:text": "concerns contractual obligations, and",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e560",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the contractual obligations, to a substantial extent, were to be performed in British Columbia,"
+                                        },
+                                        {
+                                            "@id": "d2e570",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "by its express terms, the contract is governed by the law of British Columbia, or"
+                                        },
+                                        {
+                                            "@id": "d2e579",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the contract",
+                                            "bcl:clause": [
+                                                {
+                                                    "@id": "d2e588",
+                                                    "bcl:num": "A",
+                                                    "bcl:text": "is for the purchase of property, services or both, for use other than in the course of the purchaser's trade or profession, and"
+                                                },
+                                                {
+                                                    "@id": "d2e597",
+                                                    "bcl:num": "B",
+                                                    "bcl:text": "resulted from a solicitation of business in British Columbia by or on behalf of the seller,"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e606",
+                                    "bcl:num": "f",
+                                    "bcl:text": "concerns restitutionary obligations that, to a substantial extent, arose in British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e615",
+                                    "bcl:num": "g",
+                                    "bcl:text": "concerns a tort committed in British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e625",
+                                    "bcl:num": "h",
+                                    "bcl:text": "concerns a business carried on in British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e634",
+                                    "bcl:num": "i",
+                                    "bcl:text": "is a claim for an injunction ordering a party to do or refrain from doing anything",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e643",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in British Columbia, or"
+                                        },
+                                        {
+                                            "@id": "d2e652",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in relation to property in British Columbia that is immovable or movable property,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e661",
+                                    "bcl:num": "j",
+                                    "bcl:text": "is for a determination of the personal status or capacity of a person who is ordinarily resident in British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e670",
+                                    "bcl:num": "k",
+                                    "bcl:text": "is for enforcement of a judgment of a court made in or outside British Columbia or an arbitral award made in or outside British Columbia, or"
+                                },
+                                {
+                                    "@id": "d2e680",
+                                    "bcl:num": "l",
+                                    "bcl:text": "is for the recovery of taxes or other indebtedness and is brought by the government of British Columbia or by a local authority in British Columbia."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e690",
+                            "bcl:marginalnote": "Discretion as to the exercise of territorial competence",
+                            "bcl:num": "11",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e698",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After considering the interests of the parties to a proceeding and the ends of justice, a court may decline to exercise its territorial competence in the proceeding on the ground that a court of another state is a more appropriate forum in which to hear the proceeding."
+                                },
+                                {
+                                    "@id": "d2e707",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A court, in deciding the question of whether it or a court outside British Columbia is the more appropriate forum in which to hear a proceeding, must consider the circumstances relevant to the proceeding, including",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e716",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the comparative convenience and expense for the parties to the proceeding and for their witnesses, in litigating in the court or in any alternative forum,"
+                                        },
+                                        {
+                                            "@id": "d2e726",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the law to be applied to issues in the proceeding,"
+                                        },
+                                        {
+                                            "@id": "d2e735",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the desirability of avoiding multiplicity of legal proceedings,"
+                                        },
+                                        {
+                                            "@id": "d2e744",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the desirability of avoiding conflicting decisions in different courts,"
+                                        },
+                                        {
+                                            "@id": "d2e753",
+                                            "bcl:num": "e",
+                                            "bcl:text": "the enforcement of an eventual judgment, and"
+                                        },
+                                        {
+                                            "@id": "d2e762",
+                                            "bcl:num": "f",
+                                            "bcl:text": "the fair and efficient working of the Canadian legal system as a whole."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e772",
+                            "bcl:marginalnote": "Conflicts or inconsistencies with other Acts",
+                            "bcl:num": "12",
+                            "bcl:text": [
+                                "If there is a conflict or inconsistency between this Part and another Act of British Columbia or of Canada that expressly",
+                                "that other Act prevails."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e783",
+                                    "bcl:num": "a",
+                                    "bcl:text": "confers jurisdiction or territorial competence on a court, or"
+                                },
+                                {
+                                    "@id": "d2e792",
+                                    "bcl:num": "b",
+                                    "bcl:text": "denies jurisdiction or territorial competence to a court,"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e806",
+                    "bcl:num": "3",
+                    "bcl:text": "Transfer of a Proceeding",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e815",
+                            "bcl:marginalnote": "General provisions applicable to transfers",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e823",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Supreme Court, in accordance with this Part, may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e832",
+                                            "bcl:num": "a",
+                                            "bcl:text": "transfer a proceeding to a court outside British Columbia, or"
+                                        },
+                                        {
+                                            "@id": "d2e841",
+                                            "bcl:num": "b",
+                                            "bcl:text": "accept a transfer of a proceeding from a court outside British Columbia."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e851",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A power given under this Part to the Supreme Court to transfer a proceeding to a court outside British Columbia includes the power to transfer part of the proceeding to that court."
+                                },
+                                {
+                                    "@id": "d2e860",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A power given under this Part to the Supreme Court to accept a proceeding from a court outside British Columbia includes the power to accept part of the proceeding from that court."
+                                },
+                                {
+                                    "@id": "d2e869",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If anything relating to a transfer of a proceeding is done or ought to be done in the Supreme Court, or in another court of British Columbia on appeal from the Supreme Court, the transfer is governed by the provisions of this Part."
+                                },
+                                {
+                                    "@id": "d2e878",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If anything relating to a transfer of a proceeding is done or ought to be done in a court outside British Columbia, the Supreme Court, despite any differences between this Part and the rules applicable in the court outside British Columbia, may transfer or accept a transfer of the proceeding if the Supreme Court considers that the differences do not",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e887",
+                                            "bcl:num": "a",
+                                            "bcl:text": "impair the effectiveness of the transfer, or"
+                                        },
+                                        {
+                                            "@id": "d2e896",
+                                            "bcl:num": "b",
+                                            "bcl:text": "inhibit the fair and proper conduct of the proceeding."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e906",
+                            "bcl:marginalnote": "Grounds for an order transferring a proceeding",
+                            "bcl:num": "14",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e914",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Supreme Court by order may request a court outside British Columbia to accept a transfer of a proceeding in which the Supreme Court has both territorial and subject matter competence if Supreme Court is satisfied that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e923",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the receiving court has subject matter competence in the proceeding, and"
+                                        },
+                                        {
+                                            "@id": "d2e932",
+                                            "bcl:num": "b",
+                                            "bcl:text": "under section 11, the receiving court is a more appropriate forum for the proceeding than the Supreme Court."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e942",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Supreme Court by order may request a court outside British Columbia to accept a transfer of a proceeding, in which the Supreme Court lacks territorial or subject matter competence if the Supreme Court is satisfied that the receiving court has both territorial and subject matter competence in the proceeding."
+                                },
+                                {
+                                    "@id": "d2e951",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In deciding whether a court outside British Columbia has territorial or subject matter competence in a proceeding, the Supreme Court must apply the laws of the state in which the court outside British Columbia is established."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e962",
+                            "bcl:marginalnote": "Provisions relating to the transfer order",
+                            "bcl:num": "15",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e970",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In an order requesting a court outside British Columbia to accept a transfer of a proceeding, the Supreme Court must state the reasons for the request."
+                                },
+                                {
+                                    "@id": "d2e979",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The order may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e988",
+                                            "bcl:num": "a",
+                                            "bcl:text": "be made on application of a party to the proceeding,"
+                                        },
+                                        {
+                                            "@id": "d2e998",
+                                            "bcl:num": "b",
+                                            "bcl:text": "impose conditions precedent to the transfer,"
+                                        },
+                                        {
+                                            "@id": "d2e1007",
+                                            "bcl:num": "c",
+                                            "bcl:text": "contain terms concerning the further conduct of the proceeding, and"
+                                        },
+                                        {
+                                            "@id": "d2e1016",
+                                            "bcl:num": "d",
+                                            "bcl:text": "provide for the return of the proceeding to the Supreme Court on the occurrence of specified events."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1025",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On its own motion, or if asked by the receiving court, the Supreme Court, on or after making an order requesting a court outside British Columbia to accept a transfer of a proceeding, may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1034",
+                                            "bcl:num": "a",
+                                            "bcl:text": "send to the receiving court relevant portions of the record to aid that court in deciding whether to accept the transfer or to supplement material previously sent by the Supreme Court to the receiving court in support of the order, or"
+                                        },
+                                        {
+                                            "@id": "d2e1043",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by order, rescind or modify one or more terms of the order requesting acceptance of the transfer."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1053",
+                            "bcl:marginalnote": "Supreme Court's discretion to accept or refuse a transfer",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1061",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After the filing of a request made by a court outside British Columbia to transfer to the Supreme Court a proceeding brought against a person in the transferring court, the Supreme Court by order may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1070",
+                                            "bcl:num": "a",
+                                            "bcl:text": "accept the transfer, subject to subsection (4), if both of the following requirements are fulfilled:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1079",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "either the Supreme Court or the transferring court has territorial competence in the proceeding;"
+                                                },
+                                                {
+                                                    "@id": "d2e1089",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the Supreme Court has subject matter competence in the proceeding, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1098",
+                                            "bcl:num": "b",
+                                            "bcl:text": "refuse to accept the transfer for any reason that the Supreme Court considers just, regardless of the fulfillment of the requirements of paragraph (a)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1107",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Supreme Court must give reasons for an order under subsection (1) (b) refusing to accept the transfer of a proceeding."
+                                },
+                                {
+                                    "@id": "d2e1116",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Any party to the proceeding brought in the transferring court may apply to the Supreme Court for an order accepting or refusing the transfer to the Supreme Court of the proceeding."
+                                },
+                                {
+                                    "@id": "d2e1125",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The Supreme Court may not make an order accepting the transfer of a proceeding if a condition precedent to the transfer imposed by the transferring court has not been fulfilled."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1135",
+                            "bcl:marginalnote": "Effect of transfers to or from Supreme Court",
+                            "bcl:num": "17",
+                            "bcl:text": "A transfer of a proceeding to or from the Supreme Court takes effect for all purposes of the law of British Columbia when an order made by the receiving court accepting the transfer is filed in the transferring court."
+                        },
+                        {
+                            "@id": "d2e1147",
+                            "bcl:marginalnote": "Transfers to courts outside British Columbia",
+                            "bcl:num": "18",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1155",
+                                    "bcl:num": "1",
+                                    "bcl:text": "On a transfer of a proceeding from the Supreme Court taking effect,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1164",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the Supreme Court must send relevant portions of the record, if not sent previously, to the receiving court, and"
+                                        },
+                                        {
+                                            "@id": "d2e1173",
+                                            "bcl:num": "b",
+                                            "bcl:text": "subject to subsections (2) and (3), the proceeding continues in the receiving court."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1183",
+                                    "bcl:num": "2",
+                                    "bcl:text": "After the transfer of a proceeding from the Supreme Court takes effect, the Supreme Court may make an order with respect to a procedure that was pending in the proceeding at the time of the transfer only if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1192",
+                                            "bcl:num": "a",
+                                            "bcl:text": "it is unreasonable or impracticable for a party to apply to the receiving court for the order, and"
+                                        },
+                                        {
+                                            "@id": "d2e1201",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the order is necessary for the fair and proper conduct of the proceeding in the receiving court."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1210",
+                                    "bcl:num": "3",
+                                    "bcl:text": "After the transfer of a proceeding from the Supreme Court takes effect, the Supreme Court may discharge or amend an order made in the proceeding before the transfer took effect only if the receiving court lacks territorial competence to discharge or amend the order."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1220",
+                            "bcl:marginalnote": "Transfers to Supreme Court",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1228",
+                                    "bcl:num": "1",
+                                    "bcl:text": "On a transfer of a proceeding to the Supreme Court taking effect, the proceeding continues in the Supreme Court."
+                                },
+                                {
+                                    "@id": "d2e1237",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A procedure completed in a proceeding in the transferring court before transfer of the proceeding to the Supreme Court has the same effect in the Supreme Court as in the transferring court, unless the Supreme Court otherwise orders."
+                                },
+                                {
+                                    "@id": "d2e1246",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a procedure is pending in a proceeding at the time of the transfer of the proceeding to the Supreme Court takes effect, the procedure must be completed in the Supreme Court in accordance with the rules of the transferring court, measuring applicable time limits as if the procedure had been initiated 10 days after the transfer took effect, unless the Supreme Court otherwise orders."
+                                },
+                                {
+                                    "@id": "d2e1256",
+                                    "bcl:num": "4",
+                                    "bcl:text": "After the transfer of a proceeding to the Supreme Court takes effect, the Supreme Court may discharge or amend an order made in the proceeding by the transferring court."
+                                },
+                                {
+                                    "@id": "d2e1265",
+                                    "bcl:num": "5",
+                                    "bcl:text": "An order of the transferring court that is in force at the time the transfer of a proceeding to the Supreme Court takes effect remains in force after the transfer until discharged or amended by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1274",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the transferring court, if the Supreme Court lacks territorial competence to discharge or amend the order, or"
+                                        },
+                                        {
+                                            "@id": "d2e1283",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the Supreme Court, in any other case."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1293",
+                            "bcl:marginalnote": "Return of a proceeding after transfer",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1301",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After the transfer of a proceeding to the Supreme Court takes effect, the Supreme Court must order the return of the proceeding to the court from which the proceeding was received if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1310",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the terms of the transfer provide for the return,"
+                                        },
+                                        {
+                                            "@id": "d2e1319",
+                                            "bcl:num": "b",
+                                            "bcl:text": "both the Supreme Court and the court from which the proceeding was received lack territorial competence in the proceeding, or"
+                                        },
+                                        {
+                                            "@id": "d2e1329",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the Supreme Court lacks subject matter competence in the proceeding."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1338",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a court to which the Supreme Court has transferred a proceeding orders that the proceeding be returned to the Supreme Court in any of the circumstances referred to in subsection (1) (a), (b) or (c), or in similar circumstances, the Supreme Court must accept the return."
+                                },
+                                {
+                                    "@id": "d2e1347",
+                                    "bcl:num": "3",
+                                    "bcl:text": "When a return order is filed in the Supreme Court, the returned proceeding continues in the Supreme Court."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1358",
+                            "bcl:marginalnote": "Appeals",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1366",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After the transfer of a proceeding to the Supreme Court takes effect, an order of the transferring court, except the order requesting the transfer, may be appealed in British Columbia with leave of the court of appeal of the receiving court as if the order had been made by the Supreme Court."
+                                },
+                                {
+                                    "@id": "d2e1375",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A decision of a court outside British Columbia to accept the transfer of a proceeding from the Supreme Court may not be appealed in British Columbia."
+                                },
+                                {
+                                    "@id": "d2e1384",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If, at the time that the transfer of a proceeding from the Supreme Court takes effect, an appeal is pending in British Columbia from an order of the Supreme Court, the court in which the appeal is pending may conclude the appeal only if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1394",
+                                            "bcl:num": "a",
+                                            "bcl:text": "it is unreasonable or impracticable for the appeal to be recommenced in the state of the receiving court, and"
+                                        },
+                                        {
+                                            "@id": "d2e1403",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a resolution of the appeal is necessary for the fair and proper conduct of the continued proceeding in the receiving court."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1413",
+                            "bcl:marginalnote": "Departure from a term of transfer",
+                            "bcl:num": "22",
+                            "bcl:text": "After the transfer of a proceeding to the Supreme Court takes effect, the Supreme Court may depart from terms specified by the transferring court in the transfer order, if it is just and reasonable to do so."
+                        },
+                        {
+                            "@id": "d2e1425",
+                            "bcl:marginalnote": "Limitations and time periods",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1433",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In a proceeding transferred to the Supreme Court from a court outside British Columbia, and despite any enactment imposing a limitation period, the Supreme Court must not hold a claim barred because of a limitation period if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1442",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the claim would not be barred under the limitation rule that would be applied by the transferring court, and"
+                                        },
+                                        {
+                                            "@id": "d2e1451",
+                                            "bcl:num": "b",
+                                            "bcl:text": "at the time the transfer took effect, the transferring court had both territorial and subject matter competence in the proceeding."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1461",
+                                    "bcl:num": "2",
+                                    "bcl:text": "After a transfer of a proceeding to the Supreme Court takes effect, the Supreme Court must treat a procedure commenced on a certain date in a proceeding in the transferring court as if the procedure had been commenced in the Supreme Court on the same date."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "bcl:section": {
+                "@id": "d2e1471",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "24",
+                "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+            }
+        }
+    }
+}

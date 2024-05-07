@@ -1,0 +1,23 @@
+Energy Efficiency Standards Regulation
+Energy Efficiency Act
+Item
+Column 1
+Description of Adder
+Column 2
+Allowance (kWh/yr)
+1
+First discrete GPU if
+(a) GPU not packaged on same substrate as CPU, and
+(b) computer manufactured between September 1, 2020 and July 1,
+2021
+58.6 × tanh (0.0038 × B − 0.137) + 26.8
+2
+First discrete GPU if
+(a) GPU not packaged on same substrate as CPU, and
+(b) computer manufactured on or after July 2, 2021
+29.4 × tanh (0.008 × B − 0.03) + 11 + (0.011 × B)
+3
+First discrete GPU if
+(a) GPU packaged on same substrate as CPU, and
+(b) computer manufactured on or after September 1, 2021
+29.4 × tanh (0.008 × B − 0.03) + 11 + (0.011 × B)

@@ -1,0 +1,1258 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96058_01",
+        "act:title": "Commercial Transport Act",
+        "act:chapter": "58",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "781755088/96058/tlc96058_f",
+            "act:tlc": "E3tlc96058"
+        },
+        "act:ccollect": "statreg_vsis_solo",
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e24",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "axle",
+                                "#text": "means an axle as defined in the regulations;"
+                            }
+                        },
+                        {
+                            "@id": "d2e44",
+                            "bcl:text": {
+                                "in:term": "axle unit",
+                                "#text": "means an axle unit as defined in the regulations;"
+                            }
+                        },
+                        {
+                            "@id": "d2e54",
+                            "bcl:text": {
+                                "in:term": "combination of vehicles",
+                                "#text": "means every combination of truck, truck tractor, semi-trailer and trailer;"
+                            }
+                        },
+                        {
+                            "@id": "d2e63",
+                            "bcl:text": {
+                                "in:term": "commercial vehicle",
+                                "#text": "includes"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e72",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a motor vehicle having permanently attached to it a truck or delivery body,"
+                                },
+                                {
+                                    "@id": "d2e81",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an ambulance, casket wagon, fire apparatus, hearse, motor bus, tow car, road building machine and tractor,"
+                                },
+                                {
+                                    "@id": "d2e85",
+                                    "bcl:num": "b.1",
+                                    "bcl:text": "a taxi, other than a taxi in a prescribed class of taxi,"
+                                },
+                                {
+                                    "@id": "d2e90",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a combination of vehicles, and"
+                                },
+                                {
+                                    "@id": "d2e99",
+                                    "bcl:num": "d",
+                                    "bcl:text": "other vehicles as specified by regulation of the Lieutenant Governor in Council;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e109",
+                            "bcl:text": {
+                                "in:term": "gross vehicle weight",
+                                "#text": "means the number of kilograms derived by adding the weights on all the axles of a commercial vehicle;"
+                            }
+                        },
+                        {
+                            "@id": "d2e118",
+                            "bcl:text": {
+                                "in:term": "group of axles",
+                                "#text": "means a group of axles as defined in the regulations;"
+                            }
+                        },
+                        {
+                            "@id": "d2e127",
+                            "bcl:text": {
+                                "in:term": "inspector",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96318_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Motor Vehicle Act"
+                                },
+                                "#text": "means a person designated under the \u00a0as a commercial transport inspector;"
+                            }
+                        },
+                        {
+                            "@id": "d2e139",
+                            "bcl:text": {
+                                "in:term": "licensed gross vehicle weight",
+                                "#text": "means the gross vehicle weight for which a commercial vehicle is licensed;"
+                            }
+                        },
+                        {
+                            "@id": "d2e148",
+                            "bcl:text": {
+                                "in:term": "minister",
+                                "#text": "includes any person designated in writing by the minister;"
+                            }
+                        },
+                        {
+                            "@id": "d2e157",
+                            "bcl:text": {
+                                "in:term": "motor vehicle",
+                                "#text": "means a vehicle designed to be self-propelled, but does not include"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e167",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a vehicle operating wholly on fixed rails or tracks,"
+                                },
+                                {
+                                    "@id": "d2e176",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an electric trolley bus, or"
+                                },
+                                {
+                                    "@id": "d2e185",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96318_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Motor Vehicle Act"
+                                        },
+                                        "#text": "a motor assisted cycle within the meaning of the ;"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e197",
+                            "bcl:text": {
+                                "in:term": "motor vehicle liability policy",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96231_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Insurance (Vehicle) Act"
+                                },
+                                "#text": "means a certificate issued under Part 1 of the  and the regulations under that Part;"
+                            }
+                        },
+                        {
+                            "@id": "d2e209",
+                            "bcl:text": {
+                                "in:term": "overload",
+                                "#text": "means the larger of the following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e218",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the number of kilograms derived by subtracting from the gross vehicle weight of a commercial vehicle the licensed gross vehicle weight;"
+                                },
+                                {
+                                    "@id": "d2e228",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the number of kilograms derived by subtracting from the weight on any one axle or combination of axles of a commercial vehicle the weight authorized by regulation to be carried on the axle or combination of axles;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e237",
+                            "bcl:text": {
+                                "in:term": "oversize",
+                                "#text": "means the amount derived by subtracting from the outside width, height or overall length of a commercial vehicle with its load, if any, the permissible outside width, height or overall length prescribed under this Act;"
+                            }
+                        },
+                        {
+                            "@id": "d2e246",
+                            "bcl:text": [
+                                {
+                                    "in:term": "road building machine",
+                                    "#text": "means a vehicle"
+                                },
+                                "and includes a vehicle designated as a road building machine by order of the Lieutenant Governor in Council, but does not include"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e255",
+                                    "bcl:num": "a",
+                                    "bcl:text": "that is designed and used primarily for grading of highways, paving of highways, earth moving and other construction work on highways,"
+                                },
+                                {
+                                    "@id": "d2e264",
+                                    "bcl:num": "b",
+                                    "bcl:text": "that is not designed or used primarily for the transportation otherwise of persons or property, and"
+                                },
+                                {
+                                    "@id": "d2e273",
+                                    "bcl:num": "c",
+                                    "bcl:text": "that is only incidentally operated or moved over a highway,"
+                                },
+                                {
+                                    "@id": "d2e286",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a vehicle originally designed for the transportation of persons, or property to which machinery has been attached, or"
+                                },
+                                {
+                                    "@id": "d2e295",
+                                    "bcl:num": "e",
+                                    "bcl:text": "dump trucks originally designed to comply with the size and weight provisions of the regulations;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e304",
+                            "bcl:text": [
+                                {
+                                    "in:term": "semi-trailer",
+                                    "#text": "includes"
+                                },
+                                {
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96318_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Motor Vehicle Act"
+                                    },
+                                    "#text": "but does not include a vehicle having a gross vehicle weight of less than 1401\u00a0kg that is licensed under the ;"
+                                }
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e313",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a vehicle without motive power designed to be drawn by a motor vehicle or truck tractor and so constructed that an appreciable part of its weight and that of its load rests on and is carried by the motor vehicle or truck tractor, and"
+                                },
+                                {
+                                    "@id": "d2e322",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a pole trailer"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e338",
+                            "bcl:text": {
+                                "in:term": "tow car",
+                                "#text": "means a motor vehicle used exclusively for towing or rendering assistance to other motor vehicles or to vehicles suffering from a defect or disability in their means of locomotion;"
+                            }
+                        },
+                        {
+                            "@id": "d2e347",
+                            "bcl:text": {
+                                "in:term": "trailer",
+                                "#text": "includes a vehicle without motive power designed to be drawn by or used in conjunction with a motor vehicle and constructed so that no appreciable part of its weight rests on or is carried by the motor vehicle, but does not include"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e356",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96318_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Motor Vehicle Act"
+                                        },
+                                        "#text": "a trailer having a gross vehicle weight of less than 1 401 kg that is licensed under the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e368",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a trailer that is",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e377",
+                                            "bcl:num": "i",
+                                            "bcl:text": "designed, constructed and equipped for human habitation, or"
+                                        },
+                                        {
+                                            "@id": "d2e387",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "designed, constructed and equipped for human occupancy for industrial, professional or commercial purposes, or"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e396",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a boat, horse, snowmobile, automobile or motorcycle trailer that is not used for business purposes or financial gain;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e405",
+                            "bcl:text": {
+                                "in:term": "truck tractor",
+                                "#text": "means a motor vehicle designed and used primarily for drawing other vehicles and not constructed to carry a load other than a part of the weight of the vehicle drawn and of the load of the other vehicle."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e415",
+                    "bcl:marginalnote": "Minister's responsibilities",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e423",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister is responsible for",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e432",
+                                    "bcl:num": "a",
+                                    "bcl:text": "registering and licensing commercial vehicles, and"
+                                },
+                                {
+                                    "@id": "d2e441",
+                                    "bcl:num": "b",
+                                    "bcl:text": "accounting for the revenue from registering and licensing commercial vehicles."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e451",
+                            "bcl:num": "2",
+                            "bcl:text": "The minister is to supervise the Insurance Corporation of British Columbia in registering and licensing commercial vehicles, in carrying out other functions under this Act and in accounting for the revenue from registering and licensing commercial vehicles."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e461",
+                    "bcl:marginalnote": "Act not to apply to some road building machines",
+                    "bcl:num": "3",
+                    "bcl:text": "This Act does not apply to",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e472",
+                            "bcl:num": "a",
+                            "bcl:text": "a road building machine while operated within the boundaries of a highway construction project, or"
+                        },
+                        {
+                            "@id": "d2e481",
+                            "bcl:num": "b",
+                            "bcl:text": "a road building machine operated by or on behalf of the minister's ministry or, within its jurisdiction, by or on behalf of a municipality, while engaged in the maintenance or repair of a highway or in snow ploughing on a highway."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e491",
+                    "bcl:marginalnote": {
+                        "in:doc": "Motor Vehicle Act",
+                        "#text": "provisions"
+                    },
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e502",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96318_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Motor Vehicle Act"
+                                },
+                                "#text": "Except as otherwise provided in this Act, the following sections of the  are deemed to be incorporated in this Act as though they were set out here and made applicable to the provisions here: sections\u00a02,\u00a08 to 15, 16\u00a0(1) to (3), 17 to\u00a020, 21\u00a0(3), 28, 28.2, 28.3, 51, 52, 60\u00a0(1) to\u00a0(3), 62\u00a0(2), 64, 66, 69\u00a0to\u00a071, 73, 74, 78, 80 to 82, 82.1, 83, 83.1, 83.2, 86\u00a0to\u00a088, 90, 93, 104.1\u00a0to\u00a0104.95, 105.1\u00a0to\u00a0105.95, 210, 211, 213, 216, 217, 218, 219 to\u00a0223 and\u00a0241 to\u00a0248."
+                            }
+                        },
+                        {
+                            "@id": "d2e514",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of subsection (1), the words \"commercial vehicle\" must be substituted for the words \"motor vehicle\" or \"motor vehicle or trailer\" or \"motor vehicle and trailer\" or \"vehicle\" wherever they occur."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e524",
+                    "bcl:marginalnote": "Motor vehicle regulations",
+                    "bcl:num": "5",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96318_00",
+                            "@xlink:type": "locator",
+                            "in:doc": "Motor Vehicle Act"
+                        },
+                        "#text": "The regulations under the  that are applicable to commercial vehicles apply."
+                    }
+                },
+                {
+                    "@id": "d2e540",
+                    "bcl:marginalnote": "Registration and licensing",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e548",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e557",
+                                    "bcl:text": {
+                                        "in:term": "semi-trailer",
+                                        "#text": "does not include a semi-trailer for which a valid licence has been issued by a jurisdiction other than British Columbia;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e566",
+                                    "bcl:text": {
+                                        "in:term": "trailer",
+                                        "#text": "does not include a trailer for which a valid licence has been issued by a jurisdiction other than British Columbia."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e576",
+                            "bcl:num": "2",
+                            "bcl:text": "Except as otherwise provided in this Act, an owner of a commercial vehicle, trailer or semi-trailer before it is used or operated on any highway must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e585",
+                                    "bcl:num": "a",
+                                    "bcl:text": "register the commercial vehicle, trailer or semi-trailer with the Insurance Corporation of British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e594",
+                                    "bcl:num": "b",
+                                    "bcl:text": "obtain a licence under this section for its operation, and"
+                                },
+                                {
+                                    "@id": "d2e603",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96318_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Motor Vehicle Act"
+                                        },
+                                        "#text": "insure the commercial vehicle, trailer or semi-trailer under a motor vehicle liability policy, or give the corporation proof of financial responsibility, as required under the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e615",
+                            "bcl:num": "3",
+                            "bcl:text": "The owner must apply",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e624",
+                                    "bcl:num": "a",
+                                    "bcl:text": "for registration and a licence in the form required by the Insurance Corporation of British Columbia, and"
+                                },
+                                {
+                                    "@id": "d2e634",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for a motor vehicle liability policy."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e643",
+                            "bcl:num": "4",
+                            "bcl:text": "For the purposes of subsection (3), the form must be signed by the owner and delivered to the corporation, or any government agent, or any person authorized in writing by the corporation for the purposes of this section, and when delivered must be accompanied by",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e652",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the prescribed fees,"
+                                },
+                                {
+                                    "@id": "d2e661",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96231_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Insurance (Vehicle) Act"
+                                        },
+                                        "#text": "the insurance premium for a certificate issued under the , and"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e673",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the amount of tax owing in respect of the commercial vehicle, trailer or semi-trailer under",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e682",
+                                            "bcl:num": "i",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96431_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Social Service Tax Act"
+                                                },
+                                                "#text": "the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e695",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/10005_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Consumption Tax Rebate and Transition Act"
+                                                },
+                                                "#text": "the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e707",
+                                            "bcl:num": "iii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/E-15/index.html",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Excise Tax Act"
+                                                },
+                                                "#text": "sections 212.1, section 218.1 or Division IV.1 of Part IX of the  (Canada), or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e719",
+                                            "bcl:num": "iv",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/12035_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Provincial Sales Tax Act"
+                                                },
+                                                "#text": "the ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e731",
+                            "bcl:num": "5",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96231_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Insurance (Vehicle) Act"
+                                },
+                                "#text": "Subject to subsection (6), on receipt of the application in the form required by the Insurance Corporation of British Columbia, and on being satisfied of the truth of the facts stated in the application, and that the prescribed fees and insurance premiums for a certificate issued under the  and taxes have been paid, the corporation must register the name and address of the owner and the description of the commercial vehicle, trailer or semi-trailer in a file or index kept for that purpose, and must issue to the owner"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e743",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a numbered licence in the form established by the corporation, showing registration of the commercial vehicle, trailer or semi-trailer, and authorizing its use and operation in accordance with the provisions of this Act,"
+                                },
+                                {
+                                    "@id": "d2e752",
+                                    "bcl:num": "b",
+                                    "bcl:text": "as many distinctive number plates as may be necessary, and"
+                                },
+                                {
+                                    "@id": "d2e762",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a certificate of insurance and motor vehicle liability insurance card."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e771",
+                            "bcl:num": "6",
+                            "bcl:text": "If the owner of a commercial vehicle, trailer or semi-trailer is not an individual, no registration or licence may be made or issued in respect of the commercial vehicle, trailer or semi-trailer unless the owner is",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e780",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a corporation incorporated under the laws of British Columbia,"
+                                },
+                                {
+                                    "@id": "d2e789",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02057_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Business Corporations Act"
+                                        },
+                                        "#text": "an extraprovincial company within the meaning of the , or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e801",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an entity prescribed by or comprised in a class prescribed by the Lieutenant Governor in Council."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e810",
+                            "bcl:num": "7",
+                            "bcl:text": [
+                                "If a commercial vehicle, registered and licensed outside British Columbia, is required to operate within British Columbia, the Insurance Corporation of British Columbia or any person authorized by the corporation may, on",
+                                "issue to the applicant a permit, valid for the period stated in the permit, which must not be longer than 30 consecutive days, and a windshield sticker, in a design approved by the corporation."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e820",
+                                    "bcl:num": "a",
+                                    "bcl:text": "receipt of an application in the form required by the corporation,"
+                                },
+                                {
+                                    "@id": "d2e829",
+                                    "bcl:num": "b",
+                                    "bcl:text": "payment of a fee equal to 1/12 of the annual licence fee prescribed under this Act for a commercial vehicle of similar gross vehicle weight, and"
+                                },
+                                {
+                                    "@id": "d2e838",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96318_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Motor Vehicle Act"
+                                        },
+                                        "#text": "giving to the corporation proof of financial responsibility in the manner prescribed under section\u00a0106 of the"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e852",
+                            "bcl:num": "8",
+                            "bcl:text": "On the issue of a permit and windshield sticker, the commercial vehicle for which the permit and sticker are issued is authorized to make one journey into or through British Columbia for the purpose stated in the permit."
+                        },
+                        {
+                            "@id": "d2e861",
+                            "bcl:num": "9",
+                            "bcl:text": "No more than 2 permits may be issued under subsection (7) for a commercial vehicle in a licence year."
+                        },
+                        {
+                            "@id": "d2e871",
+                            "bcl:num": "10",
+                            "bcl:text": "The licensed gross vehicle weight of a commercial vehicle or combination of vehicles is as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e880",
+                                    "bcl:num": "a",
+                                    "bcl:text": "for a tow car, grader, loader, shovel, roller, mixer, crane, a tractor other than a truck tractor or other self-propelled construction machinery, the weight of the vehicle fully equipped;"
+                                },
+                                {
+                                    "@id": "d2e889",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for a passenger commercial vehicle, the combined weight of the vehicle and the weight resulting from the multiplication of the number of seats in the vehicle by 80\u00a0kg;"
+                                },
+                                {
+                                    "@id": "d2e898",
+                                    "bcl:num": "c",
+                                    "bcl:text": "for an ambulance or hearse, the unladen weight of the vehicle plus 250\u00a0kg;"
+                                },
+                                {
+                                    "@id": "d2e907",
+                                    "bcl:num": "d",
+                                    "bcl:text": "for every other commercial vehicle, the unladen weight of the vehicle plus 1/2 of that weight or gross vehicle weight declared by the applicant for the licence, whichever is greater, but not more than the maximum gross vehicle weight permitted under this Act and the regulations under this or any other Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e916",
+                            "bcl:num": "11",
+                            "bcl:text": "A commercial vehicle must be licensed according to its weight as determined under subsection (10)."
+                        },
+                        {
+                            "@id": "d2e926",
+                            "bcl:num": "12",
+                            "bcl:text": "The Insurance Corporation of British Columbia may refuse to issue a licence for the operation of a commercial vehicle, trailer or semi-trailer if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e935",
+                                    "bcl:num": "a",
+                                    "bcl:text": "any fee or part of a fee for a previous licence or permit is unpaid,"
+                                },
+                                {
+                                    "@id": "d2e944",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96231_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Insurance (Vehicle) Act"
+                                        },
+                                        "#text": "any insurance premium under the  is unpaid, or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e956",
+                                    "bcl:num": "c",
+                                    "bcl:text": [
+                                        "any amount owing in respect of the commercial vehicle, trailer or semi-trailer under",
+                                        "is not paid to the corporation."
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e965",
+                                            "bcl:num": "i",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96431_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Social Service Tax Act"
+                                                },
+                                                "#text": "the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e977",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/10005_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Consumption Tax Rebate and Transition Act"
+                                                },
+                                                "#text": "the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e990",
+                                            "bcl:num": "iii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/E-15/index.html",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Excise Tax Act"
+                                                },
+                                                "#text": "section 212.1 or 218.1 or Division IV.1 of Part IX of the  (Canada), or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1002",
+                                            "bcl:num": "iv",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/12035_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Provincial Sales Tax Act"
+                                                },
+                                                "#text": "the"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1016",
+                            "bcl:num": "13",
+                            "bcl:text": "An owner of a commercial vehicle used to tow on a highway a trailer or semi-trailer that is not licensed in British Columbia may, using the form required by the Insurance Corporation of British Columbia, apply to the corporation or any government agent or any person authorized by the corporation to accept the application, and, on payment of the fee prescribed, the corporation must issue to the applicant a numbered trailer floater licence in the form established by the corporation, together with as many distinctive number trailer floater plates as may be necessary."
+                        },
+                        {
+                            "@id": "d2e1025",
+                            "bcl:num": "14",
+                            "bcl:text": "Despite subsection (2), a trailer or semi-trailer may be operated on a highway if a numbered trailer floater plate issued under subsection (13) is displayed in accordance with the regulations."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1035",
+                    "bcl:marginalnote": {
+                        "in:doc": "Motor Fuel Tax Act"
+                    },
+                    "bcl:num": "7",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96317_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Motor Fuel Tax Act"
+                        },
+                        "#text": "A commercial vehicle subject to the provisions of the  must not be registered, licensed or have a permit issued for it under this Act unless the owner possesses and presents evidence that"
+                    },
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1052",
+                            "bcl:num": "a",
+                            "bcl:text": "the owner holds a valid motive fuel user permit, and"
+                        },
+                        {
+                            "@id": "d2e1061",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96317_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Motor Fuel Tax Act"
+                                },
+                                "#text": "an emblem has been issued for the commercial motor vehicle under the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1074",
+                    "bcl:marginalnote": "Overload, crossing and oversize permits",
+                    "bcl:num": "8",
+                    "bcl:text": "The minister, or a person appointed by the minister, may, in accordance with the regulations and on application accompanied by the prescribed fee, issue any of the following:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1085",
+                            "bcl:num": "a",
+                            "bcl:text": "an overload permit for the operation along a highway of a commercial vehicle;"
+                        },
+                        {
+                            "@id": "d2e1094",
+                            "bcl:num": "b",
+                            "bcl:text": "a crossing permit for the operation across a highway only of a commercial vehicle or commercial vehicles;"
+                        },
+                        {
+                            "@id": "d2e1104",
+                            "bcl:num": "c",
+                            "bcl:text": "an oversize permit for the operation along a highway of a commercial vehicle."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1114",
+                    "bcl:marginalnote": "Government, municipal and school vehicles exempt",
+                    "bcl:num": "9",
+                    "bcl:text": "No fees may be charged if a permit is issued for a vehicle owned or leased and operated by",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1125",
+                            "bcl:num": "a",
+                            "bcl:text": "the government of Canada or any province or territory,"
+                        },
+                        {
+                            "@id": "d2e1134",
+                            "bcl:num": "b",
+                            "bcl:text": "the government of the United States of America,"
+                        },
+                        {
+                            "@id": "d2e1144",
+                            "bcl:num": "c",
+                            "bcl:text": "the government of any state or county in the United States of America,"
+                        },
+                        {
+                            "@id": "d2e1153",
+                            "bcl:num": "d",
+                            "bcl:text": "a municipality, or"
+                        },
+                        {
+                            "@id": "d2e1162",
+                            "bcl:num": "e",
+                            "bcl:text": "a school district outside of British Columbia."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1172",
+                    "bcl:marginalnote": "Prorating of fees and reciprocity of agreements with other governments",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1180",
+                            "bcl:num": "1",
+                            "bcl:text": "The Lieutenant Governor in Council may make agreements or authorize agreements to be made between the government and any other government to apportion Provincial registration and licence fees on commercial vehicles in respect of fleets of commercial vehicles engaged in interprovincial or international movements on the basis of distance travelled by the fleets within each licensing jurisdiction party to the agreement or agreements."
+                        },
+                        {
+                            "@id": "d2e1189",
+                            "bcl:num": "2",
+                            "bcl:text": "The Lieutenant Governor in Council may make or authorize to be made a reciprocal arrangement or agreement with any government granting exemption to owners or persons ordinarily resident within the jurisdiction of that government and entitled to the possession of or right to operate commercial vehicles that are properly registered and licensed in that jurisdiction, and on which evidence of registration and licensing is conspicuously displayed, from the payment, wholly or partially, of commercial vehicle registration and licence fees in British Columbia, if similar exemptions, benefits and privileges are granted by that government to the owners or persons resident in British Columbia and entitled to the possession or right to operate commercial vehicles which are properly registered and licensed in British Columbia."
+                        },
+                        {
+                            "@id": "d2e1198",
+                            "bcl:num": "3",
+                            "bcl:text": "Prorating or reciprocal agreements or arrangements made under subsections (1) and (2) may contain provisions denying the exemptions, benefits and privileges granted to any person who contravenes stated conditions or who contravenes rules and regulations for the administration of prorating or reciprocal agreements or arrangements."
+                        },
+                        {
+                            "@id": "d2e1208",
+                            "bcl:num": "4",
+                            "bcl:text": "No prorating or reciprocal agreement or arrangement may be made under this section that provides for any exemption, benefit or privilege with respect to fuel taxes or any other fees or taxes levied or assessed against the use of highways or use or ownership of vehicles, except registration and licence fees."
+                        },
+                        {
+                            "@id": "d2e1217",
+                            "bcl:num": "5",
+                            "bcl:text": "The Insurance Corporation of British Columbia or any person authorized by the corporation may, with respect to a registered owner of a commercial vehicle referred to in this section,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1226",
+                                    "bcl:num": "a",
+                                    "bcl:text": "require any person to produce records and information required to determine that the registered owner has complied in every respect with the terms of an agreement or arrangement, and"
+                                },
+                                {
+                                    "@id": "d2e1235",
+                                    "bcl:num": "b",
+                                    "bcl:text": "during ordinary business hours enter any premises of the registered owner and examine records of the registered owner that may pertain to the commercial vehicle."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1244",
+                            "bcl:num": "6",
+                            "bcl:text": "If it appears from an examination of the records or information obtained under subsection (5) or from any other source that the registered owner has not complied with the terms of an agreement or arrangement, the Insurance Corporation of British Columbia",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1253",
+                                    "bcl:num": "a",
+                                    "bcl:text": "may cancel the licence held by the registered owner, or"
+                                },
+                                {
+                                    "@id": "d2e1263",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may require the registered owner to pay to the government or any other jurisdiction the full fee found to be due and owing and may suspend or cancel the licence of the registered owner if the full fee is not paid by the time set by the corporation."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1272",
+                            "bcl:num": "7",
+                            "bcl:text": "If the Insurance Corporation of British Columbia cancels or suspends a licence under subsection (6), the registered owner must immediately deliver the licence and corresponding number plates to the corporation."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1282",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1290",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1302",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1311",
+                                    "bcl:num": "a",
+                                    "bcl:text": "providing for permissible gross vehicle weights and axle loading; the weight on any tire, axle or wheel; the number of axles or wheels; the method of determining wheelbase; the weight on groups of axles and the weight according to wheelbase, for commercial vehicles as recommended by the minister;"
+                                },
+                                {
+                                    "@id": "d2e1321",
+                                    "bcl:num": "b",
+                                    "bcl:text": "providing for the carrying of licences on commercial vehicles;"
+                                },
+                                {
+                                    "@id": "d2e1330",
+                                    "bcl:num": "c",
+                                    "bcl:text": "prohibiting the operation of any commercial vehicle that, in the opinion of any officer or constable of the Provincial police, or of the police department of any municipality, or the inspectors appointed under this Act, is because of any mechanical, structural or other defect unsafe for use on the highways;"
+                                },
+                                {
+                                    "@id": "d2e1339",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting the issue, and terms and conditions, if any, of a permit for the temporary operation on a highway of a commercial vehicle without the necessity of the commercial vehicle being registered or licensed under this Act;"
+                                },
+                                {
+                                    "@id": "d2e1348",
+                                    "bcl:num": "e",
+                                    "bcl:text": "prescribing fees for anything done or permitted to be done under the regulations;"
+                                },
+                                {
+                                    "@id": "d2e1357",
+                                    "bcl:num": "f",
+                                    "bcl:text": "prescribing the method of determining any fact necessary to be determined for computing the amount of any fee payable under this Act and the person or official by whom the fact must be determined;"
+                                },
+                                {
+                                    "@id": "d2e1366",
+                                    "bcl:num": "g",
+                                    "bcl:text": "prescribing that some other means of identification of commercial vehicles, trailers, and semi-trailers be used in place of or in conjunction with number plates;"
+                                },
+                                {
+                                    "@id": "d2e1376",
+                                    "bcl:num": "h",
+                                    "bcl:text": "providing for and compelling the weighing of commercial vehicles and the gathering of satisfactory evidence of their weight, and providing for the removal from any vehicle of a load or any portion of a load if it is found that the weight exceeds that prescribed in the regulations and for redistribution of the load;"
+                                },
+                                {
+                                    "@id": "d2e1385",
+                                    "bcl:num": "i",
+                                    "bcl:text": "prescribing the records to be kept for the purposes of this Act or the regulations;"
+                                },
+                                {
+                                    "@id": "d2e1394",
+                                    "bcl:num": "j",
+                                    "bcl:text": "respecting the issue and conditions of overload and oversize permits;"
+                                },
+                                {
+                                    "@id": "d2e1399",
+                                    "bcl:num": "j.1",
+                                    "bcl:text": "prescribing one or more classes of taxis for the purposes of paragraph (b.1) of the definition of \"commercial vehicle\" in section 1;"
+                                },
+                                {
+                                    "@id": "d2e1403",
+                                    "bcl:num": "k",
+                                    "bcl:text": "defining any expression used but not defined in this Act;"
+                                },
+                                {
+                                    "@id": "d2e1412",
+                                    "bcl:num": "l",
+                                    "bcl:text": "regarding prorating and reciprocity of registration and licence fees;"
+                                },
+                                {
+                                    "@id": "d2e1421",
+                                    "bcl:num": "m",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04044_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Transportation Act"
+                                        },
+                                        "#text": "prescribing or providing for the prescription by the minister, with the concurrence of the minister responsible for the administration of the , of the permissible width, length, height, projections and overhangs of and from loads and vehicles;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1434",
+                                    "bcl:num": "n",
+                                    "bcl:text": "providing for the issue of permits for the operation of commercial vehicles on specified highways for specified terms and prescribing the conditions;"
+                                },
+                                {
+                                    "@id": "d2e1443",
+                                    "bcl:num": "o",
+                                    "bcl:text": "providing for the issue, amendment and cancellation of permits for the operation on a highway of a commercial vehicle, trailer or semi-trailer that does not comply with a provision of this Act or the regulations;"
+                                },
+                                {
+                                    "@id": "d2e1452",
+                                    "bcl:num": "p",
+                                    "bcl:text": "prescribing standards for signs, equipment and types of vehicles with respect to pilot cars and escort cars used in conjunction with oversize and overloaded commercial vehicles;"
+                                },
+                                {
+                                    "@id": "d2e1461",
+                                    "bcl:num": "q",
+                                    "bcl:text": "prescribing the minimum fines and penalties that may be imposed under section\u00a012\u00a0(2), and the method of computing penalties;"
+                                },
+                                {
+                                    "@id": "d2e1470",
+                                    "bcl:num": "r",
+                                    "bcl:text": "prescribing the number of drive axles required on a commercial vehicle;"
+                                },
+                                {
+                                    "@id": "d2e1479",
+                                    "bcl:num": "s",
+                                    "bcl:text": "prescribing the weight to power ratio for commercial vehicles;"
+                                },
+                                {
+                                    "@id": "d2e1489",
+                                    "bcl:num": "t",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04044_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Transportation Act"
+                                        },
+                                        "#text": "authorizing the minister, with the concurrence of the minister responsible for the administration of the , when it is in the public interest, to enter into agreements exempting, in whole or in part, commercial vehicles from the provisions of this Act or the regulations, or from the fees prescribed for designated highways or under certain prescribed terms and conditions;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1501",
+                                    "bcl:num": "u",
+                                    "bcl:text": "respecting payment of fees and prescribing fees for registration, licences, number plates, decals, permits, approvals, certificates and other documents and things required or authorized under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1510",
+                            "bcl:num": "3",
+                            "bcl:text": "A regulation made under this section may do any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1519",
+                                    "bcl:num": "a",
+                                    "bcl:text": "classify vehicles according to their use, ownership, nature, type, character, size, weight, equipment, accessories or otherwise;"
+                                },
+                                {
+                                    "@id": "d2e1528",
+                                    "bcl:num": "b",
+                                    "bcl:text": "provide differently for different cases or classes of cases, different vehicles, persons or organizations or different classes of vehicles, persons or organizations;"
+                                },
+                                {
+                                    "@id": "d2e1537",
+                                    "bcl:num": "c",
+                                    "bcl:text": "exempt from its application, in whole or in part, vehicles, persons or organizations, or classes of vehicles, persons or organizations;"
+                                },
+                                {
+                                    "@id": "d2e1547",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/98030_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "South Coast British Columbia Transportation Authority Act"
+                                        },
+                                        "#text": "in a regulation made under subsection (2) (a) or (m), reflect, in relation to any part of the major road network, as that term is defined in the , a recommendation made by the South Coast British Columbia Transportation Authority under section 24 (2) (e) of that Act."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1561",
+                    "bcl:marginalnote": "Offences and penalties",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1569",
+                            "bcl:num": "1",
+                            "bcl:text": "Unless the person holds a permit issued or authorization given under this Act, a person must not operate on a highway a commercial vehicle if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1578",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the gross vehicle weight of the commercial vehicle exceeds its licensed gross vehicle weight,"
+                                },
+                                {
+                                    "@id": "d2e1587",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the weight on an axle, group of axles or axle unit exceeds the weight permitted by the regulations,"
+                                },
+                                {
+                                    "@id": "d2e1597",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the dimensions of the commercial vehicle do not conform to the regulations",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1606",
+                                            "bcl:num": "i",
+                                            "bcl:text": "with load included, and"
+                                        },
+                                        {
+                                            "@id": "d2e1615",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "without load, or"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1624",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the distances between axles, a group of axles or axle units do not conform with the regulations."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1633",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "A person who contravenes subsection (1) commits an offence, and is liable, on conviction",
+                                "and every contravention constitutes a separate offence."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1642",
+                                    "bcl:num": "a",
+                                    "bcl:text": "for a contravention of subsection (1) (c) or (d), to a fine of not more than $500, and"
+                                },
+                                {
+                                    "@id": "d2e1652",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for a contravention of subsection (1) (a) or (b), to a fine of at least the amount prescribed by the regulations but not more than $500 and, in addition, to a penalty of at least the amount prescribed by the regulations but not more than $6 for every 45 kg of overload,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1664",
+                            "bcl:num": "3",
+                            "bcl:text": "A person who operates a commercial vehicle on a highway in contravention of the conditions of a permit issued or authorization given under this Act in respect of the vehicle commits an offence."
+                        },
+                        {
+                            "@id": "d2e1673",
+                            "bcl:num": "4",
+                            "bcl:text": "A person contravening any other provision of this Act or the regulations is liable, on conviction, to a fine of not more than $500."
+                        },
+                        {
+                            "@id": "d2e1682",
+                            "bcl:num": "5",
+                            "bcl:text": "A person must not be acquitted of an offence under subsection (1) (a) or (b) on the defence of due diligence in respect of the loading of a commercial vehicle unless that person establishes that on completion of the loading of the commercial vehicle it was weighed on a properly functioning scale and was not overloaded."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1692",
+                    "bcl:marginalnote": "Arrest",
+                    "bcl:num": "13",
+                    "bcl:text": "An officer or constable of the Provincial police or police department of any municipality may",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1703",
+                            "bcl:num": "a",
+                            "bcl:text": "arrest without warrant a person driving a commercial vehicle that does not display a number plate issued by the corporation under this Act and who contravenes this Act, and"
+                        },
+                        {
+                            "@id": "d2e1712",
+                            "bcl:num": "b",
+                            "bcl:text": "detain a person arrested until the person can be brought before a justice to be dealt with according to law."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1722",
+                    "bcl:marginalnote": "Disposal of taxes and fines",
+                    "bcl:num": "14",
+                    "bcl:text": "A tax or fine levied under this Act must be paid into the consolidated revenue fund."
+                }
+            ]
+        }
+    }
+}

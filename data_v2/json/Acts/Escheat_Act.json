@@ -1,0 +1,924 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96120_01",
+        "act:title": "Escheat Act",
+        "act:chapter": "120",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "414786120/96120/tlc96120_f",
+            "act:tlc": "E3tlc96120"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e21",
+                    "bcl:num": "1",
+                    "bcl:text": "Escheats",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e30",
+                            "bcl:marginalnote": "Escheated land may be taken by Attorney General",
+                            "bcl:num": "1",
+                            "bcl:text": "If land in British Columbia escheats to the government because the person last seised or entitled to it dies intestate and without lawful heirs, or forfeits to the government, the Attorney General may take possession of the land in the name of the government."
+                        },
+                        {
+                            "@id": "d2e42",
+                            "bcl:marginalnote": "Delegation by Attorney General",
+                            "bcl:num": "1.1",
+                            "bcl:text": {
+                                "in:term": "Attorney General",
+                                "#text": "In this Act,  in a section includes a person designated by the Attorney General for purposes of the section."
+                            }
+                        },
+                        {
+                            "@id": "d2e57",
+                            "bcl:marginalnote": "Action for possession",
+                            "bcl:num": "2",
+                            "bcl:text": "The Attorney General may sue to recover possession of escheated land."
+                        },
+                        {
+                            "@id": "d2e69",
+                            "bcl:marginalnote": "Escheat of estates",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e77",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a person dies without an heir and intestate in respect of any real estate consisting of any estate or interest, whether legal or equitable, in any incorporeal hereditament, or of any equitable estate or interest in any corporeal hereditament, whether devised or not devised to trustees by the will of that person, the law of escheat applies in the same manner as if that estate or interest were a legal estate in corporeal hereditaments."
+                                },
+                                {
+                                    "@id": "d2e86",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If any beneficial interest in the real estate of any deceased person, whether the estate or interest of the deceased person in it was legal or equitable, is, because of the failure of the objects of the devise or other circumstances happening before or after the death of the deceased person, in whole or in part not effectually disposed of, the deceased person is deemed, for the purposes of this section, to have died intestate in respect of that part of the beneficial interest as is ineffectually disposed of."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e97",
+                            "bcl:marginalnote": "Escheat of land on dissolution of corporation",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e105",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a corporation is dissolved, land in British Columbia owned by or to which the corporation is entitled at the time of its dissolution escheats to the government."
+                                },
+                                {
+                                    "@id": "d2e114",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The law of escheat and the provisions of this Act apply in respect of that land in the same manner as if a natural person had been last seised or entitled to it and had died intestate and without lawful heirs."
+                                },
+                                {
+                                    "@id": "d2e123",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The Attorney General must not, within 2\u00a0years from the date of the dissolution of a corporation, make any grant or other disposition of land of the corporation which escheats to the government."
+                                },
+                                {
+                                    "@id": "d2e133",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If, within 2 years from the date of its dissolution, a corporation is revived under any Act, the revival has effect as if the land of the corporation had not escheated to the government, and, subject to the terms of any court order, the land vests in the corporation."
+                                },
+                                {
+                                    "@id": "d2e142",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If an application is made to the Supreme Court to revive a corporation after the expiry of the 2 year period referred to in subsection (4) or is made in respect of a corporation that has been revived after that period, the Supreme Court may, if notice of the application has been served on the government, order that land of the corporation that had escheated to the government under this section vest in the corporation."
+                                },
+                                {
+                                    "@id": "d2e151",
+                                    "bcl:num": "5.1",
+                                    "bcl:text": "An order may not be made under subsection (5) if the Attorney General has granted or otherwise disposed of the land of the corporation that had escheated to the government."
+                                },
+                                {
+                                    "@id": "d2e160",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Land that is the subject matter of an order made under subsection (5) vests in the corporation at the time, in the manner and subject to the conditions set out in the order."
+                                },
+                                {
+                                    "@id": "d2e169",
+                                    "bcl:num": "7",
+                                    "bcl:text": "The Supreme Court must make it a term of any order made under subsection (5) that the land must not vest in the corporation until the government has been reimbursed for any costs and expenses",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e178",
+                                            "bcl:num": "a",
+                                            "bcl:text": "incurred by the government in relation to the land after it escheated to the government, and"
+                                        },
+                                        {
+                                            "@id": "d2e188",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for which the government makes application for reimbursement at the time of the hearing."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e197",
+                                    "bcl:num": "8",
+                                    "bcl:text": "This section applies to real estate of a corporation consisting of any estate or interest, whether legal or equitable, in any incorporeal hereditament, or of any equitable estate or interest in any corporeal hereditament, in the same manner as if that estate or interest were a legal estate in corporeal hereditaments."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e207",
+                            "bcl:marginalnote": "Disposal of escheated water system property",
+                            "bcl:num": "4.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e215",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this section:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d2e224",
+                                            "bcl:text": {
+                                                "in:term": "parcel",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96250_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Land Title Act"
+                                                },
+                                                "#text": "has the same meaning as in the ;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e236",
+                                            "bcl:text": {
+                                                "in:term": "vested",
+                                                "#text": ", in relation to property that vested in the government, means"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e246",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "land that escheated to the government, and"
+                                                },
+                                                {
+                                                    "@id": "d2e255",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "property, other than land, that vested in the government;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e264",
+                                            "bcl:text": {
+                                                "in:term": "water system property",
+                                                "#text": "means"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e273",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "works that are used or were developed for obtaining, diverting, treating, storing, pumping, conveying, distributing or furnishing water, and"
+                                                },
+                                                {
+                                                    "@id": "d2e282",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a parcel of land to which any works referred to in paragraph (a) are affixed or on which they are located."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e291",
+                                    "bcl:num": "2",
+                                    "bcl:text": "This section applies to water system property that vests in the government on the dissolution of the corporation that owned or was entitled to the water system property at the time of its dissolution."
+                                },
+                                {
+                                    "@id": "d2e301",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Section 4 (3) to (5) does not apply to land that is water system property."
+                                },
+                                {
+                                    "@id": "d2e310",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The Attorney General may dispose of all or part of water system property at any time after the water system property has vested in the government."
+                                },
+                                {
+                                    "@id": "d2e319",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the Attorney General disposes of water system property under subsection (4), the Attorney General may, despite section 4 (3), grant a right of way or easement over land that escheated from the same corporation that, before it dissolved, owned the water system property that vested in the government, for the purpose of providing access to the water system property."
+                                },
+                                {
+                                    "@id": "d2e328",
+                                    "bcl:num": "6",
+                                    "bcl:text": "If an application is made under any Act to the Supreme Court to revive a dissolved corporation, the Supreme Court may, if notice of the application has been served on the government, order that water system property of the corporation that had vested in the government vests in the corporation."
+                                },
+                                {
+                                    "@id": "d2e337",
+                                    "bcl:num": "7",
+                                    "bcl:text": "An order may not be made under subsection (6) in relation to all or part of water system property of the corporation that had vested in the government if the Attorney General has disposed of all or that part of that water system property."
+                                },
+                                {
+                                    "@id": "d2e346",
+                                    "bcl:num": "8",
+                                    "bcl:text": "Water system property that is the subject matter of an order made under subsection (6) vests in the corporation at the time, in the manner and subject to the conditions set out in the order."
+                                },
+                                {
+                                    "@id": "d2e356",
+                                    "bcl:num": "9",
+                                    "bcl:text": "The Supreme Court must make it a term of any order made under subsection (6) that the water system property must not vest in the corporation until the government has been reimbursed for any costs and expenses",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e365",
+                                            "bcl:num": "a",
+                                            "bcl:text": "incurred by the government in relation to the water system property after it vested in the government, and"
+                                        },
+                                        {
+                                            "@id": "d2e374",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for which the government makes application for reimbursement at the time of the hearing."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e384",
+                            "bcl:marginalnote": "Power to restore land to legal or moral claimants",
+                            "bcl:num": "5",
+                            "bcl:text": "The Attorney General may, as to the Attorney General seems proper,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e395",
+                                    "bcl:num": "a",
+                                    "bcl:text": "restore land which has escheated or become forfeited, or any portion of or interest in it, to a person, or"
+                                },
+                                {
+                                    "@id": "d2e404",
+                                    "bcl:num": "b",
+                                    "bcl:text": "transfer it to a person",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e414",
+                                            "bcl:num": "i",
+                                            "bcl:text": "who has a legal or moral claim on the person to whom it had belonged,"
+                                        },
+                                        {
+                                            "@id": "d2e423",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to carry into effect any disposition of it which the owner may have contemplated, or"
+                                        },
+                                        {
+                                            "@id": "d2e432",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "to reward a person who discovers the escheat or forfeiture."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e442",
+                            "bcl:marginalnote": "Grant effective although person in adverse possession",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e450",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A grant under section 5 may be made without actual entry or investigation being first necessary, although the land is not in the actual possession of the government, and even though some person claims title to it adversely to a person to whom the land had belonged."
+                                },
+                                {
+                                    "@id": "d2e459",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If possession of the land is withheld, the person to whom the grant is made is then entitled to sue for the recovery of the land."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e469",
+                            "bcl:marginalnote": "Waiver of government rights",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e477",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a forfeiture takes place of land or any interest in it the Attorney General may waive or release any right that the government may have become entitled to, so as, by the waiver or release, to vest the property, either absolutely or otherwise, in the persons who would have been entitled but for the forfeiture."
+                                },
+                                {
+                                    "@id": "d2e486",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The waiver or release may be either for valuable consideration or otherwise, and on the terms and conditions as to the Attorney General seem proper."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e496",
+                            "bcl:marginalnote": "Personal property",
+                            "bcl:num": "8",
+                            "bcl:text": "The Attorney General may, as to the Attorney General seems proper,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e507",
+                                    "bcl:num": "a",
+                                    "bcl:text": "make any assignment of personal property to which the government is entitled because of",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e516",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the person last entitled to it having died intestate and without leaving any kin or other person entitled to succeed to it,"
+                                        },
+                                        {
+                                            "@id": "d2e526",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the property having become vested in the government as a thing that had no owner, or"
+                                        },
+                                        {
+                                            "@id": "d2e535",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the property having become forfeited to the government, or"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e544",
+                                    "bcl:num": "b",
+                                    "bcl:text": "make an assignment of any portion of the personal property, for the purpose of",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e553",
+                                            "bcl:num": "i",
+                                            "bcl:text": "transferring or restoring it to any person or persons having a legal or moral claim on the person to whom it had belonged,"
+                                        },
+                                        {
+                                            "@id": "d2e562",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "carrying into effect any disposition of it which the person may have contemplated, or"
+                                        },
+                                        {
+                                            "@id": "d2e571",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "rewarding the person making discovery of the right of the government to the property."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e582",
+                            "bcl:marginalnote": "Estate administration \u2014 escheat inquiry",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e590",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/00_09013_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Wills, Estates and Succession Act"
+                                        },
+                                        "#text": "If administration is taken out under the provisions of the , the Attorney General may apply to the Supreme Court for an order for the making of inquiries necessary to determine whether or not the government is entitled to any portion of the estate of the deceased on account of the deceased dying intestate and without heirs or next of kin or otherwise."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e602",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A judgment made on such inquiry is, unless reversed on appeal, final and conclusive."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e612",
+                            "bcl:marginalnote": "Supreme Court order for inquiry",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e620",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a person dies in possession of or entitled to real estate in British Columbia, intestate as to such real estate, without any known heirs, the Attorney General may apply to the Supreme Court for an order for the making of inquiries necessary to determine whether or not the government is entitled to any portion of the real estate of the deceased on account of the person's dying intestate and without heirs."
+                                },
+                                {
+                                    "@id": "d2e629",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A judgment or order given on such inquiry is, unless reversed on appeal, final and conclusive."
+                                },
+                                {
+                                    "@id": "d2e638",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the Attorney General is entitled to apply under subsection (1), the Attorney General may bring an action, either in the name of the Attorney General, on behalf of the government or in the name of the government, to recover possession of the real estate of the deceased."
+                                },
+                                {
+                                    "@id": "d2e648",
+                                    "bcl:num": "4",
+                                    "bcl:text": "In an action under this section the government is entitled to judgment and process to recover possession, unless the person claiming adversely shows that the deceased did not die intestate as to the real estate, or that the deceased left heirs or that some other person is entitled to the real estate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e658",
+                            "bcl:marginalnote": "Sale of escheated land",
+                            "bcl:num": "11",
+                            "bcl:text": "The Attorney General may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e669",
+                                    "bcl:num": "a",
+                                    "bcl:text": "sell any land escheated to the government under this Act, at the price and on the terms as may be determined, and"
+                                },
+                                {
+                                    "@id": "d2e678",
+                                    "bcl:num": "b",
+                                    "bcl:text": "give a preference, in making any such sale, to a person who has a legal or moral claim on the person to whom the land had belonged."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e688",
+                            "bcl:marginalnote": "Powers of Attorney General to dispose of land",
+                            "bcl:num": "12",
+                            "bcl:text": "If any property or any interest, legal or equitable, in it, has escheated or become forfeited to the government, the Attorney General may do one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e699",
+                                    "bcl:num": "a",
+                                    "bcl:text": "appoint a person to take possession of it, or of any part of it, and manage it for the time the Attorney General thinks proper;"
+                                },
+                                {
+                                    "@id": "d2e708",
+                                    "bcl:num": "b",
+                                    "bcl:text": "rent it or any part of it;"
+                                },
+                                {
+                                    "@id": "d2e718",
+                                    "bcl:num": "c",
+                                    "bcl:text": "sell it or any part of it by private sale;"
+                                },
+                                {
+                                    "@id": "d2e727",
+                                    "bcl:num": "d",
+                                    "bcl:text": "advertise it or any part of it for sale by tender;"
+                                },
+                                {
+                                    "@id": "d2e736",
+                                    "bcl:num": "e",
+                                    "bcl:text": "cause it or any part of it to be sold by public auction under the conditions the Attorney General considers proper."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e746",
+                            "bcl:marginalnote": "Money under section 12 free from claims",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e754",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Any money arising from the exercise of the powers conferred by section\u00a012 is freed from any claims on it, whether legal, equitable or moral, and must be paid into the consolidated revenue fund."
+                                },
+                                {
+                                    "@id": "d2e763",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the Attorney General is satisfied that a person had a legal, equitable or moral claim on money paid into the consolidated revenue fund under subsection (1), the Attorney General may authorize the Minister of Finance to pay to that person out of the consolidated revenue fund an amount of money the minister considers appropriate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e773",
+                            "bcl:marginalnote": "Property Crown granted that has escheated",
+                            "bcl:num": "14",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e781",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/00_96292_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Mineral Tenure Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96245_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Land Act"
+                                            }
+                                        ],
+                                        "#text": "This section applies to property that has been Crown granted under the provisions of the , or under any ordinance or Act affecting minerals, precious or base, or under the , or any other statute providing for the granting of land by the government."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e796",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96245_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Act"
+                                        },
+                                        "#text": "The Attorney General may direct the Surveyor General to cancel the survey, field notes and official plan of survey of a property and the property is for all purposes deemed to be Crown land within the meaning of the  if"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e808",
+                                            "bcl:num": "a",
+                                            "bcl:text": "it is property referred to in subsection (1) that has escheated to the government under this Act,"
+                                        },
+                                        {
+                                            "@id": "d2e818",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the property so escheated has not been restored to any legal or moral claimant, sold, leased or released, and"
+                                        },
+                                        {
+                                            "@id": "d2e827",
+                                            "bcl:num": "c",
+                                            "bcl:text": "for any reason it is inconvenient or not advisable to deal with it under section\u00a011 or 12."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e836",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96245_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Land Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/00_96292_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Mineral Tenure Act"
+                                            }
+                                        ],
+                                        "#text": "All the provisions of the  and the  apply to land referred to in subsection (2) and to its sale, lease, staking or other disposition to the same extent as if no grant of the land had been issued."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e851",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The Surveyor General, when so directed, must,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e860",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by notice in the Gazette, cancel the survey, field notes and official plan of survey of the property so escheated, and"
+                                        },
+                                        {
+                                            "@id": "d2e869",
+                                            "bcl:num": "b",
+                                            "bcl:text": "forward a notice of the cancellation to the registrar of the land title district in which the land is located."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e879",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The registrar of land titles must file the notice and, if the title to the land is registered, make a reference to it in the appropriate register against the title to the land to which the notice relates."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e890",
+                    "bcl:num": "2",
+                    "bcl:text": "Operation of Water Systems Property",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e899",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "15",
+                            "bcl:text": "In this Part:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e910",
+                                    "bcl:text": {
+                                        "in:term": "amount owing",
+                                        "#text": ", in relation to an owner, means the total of"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e919",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the amount payable to the government by the owner under section 16 (1), and"
+                                        },
+                                        {
+                                            "@id": "d2e929",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any interest accrued or accruing on the amount payable referred to in paragraph\u00a0(a);"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e938",
+                                    "bcl:text": {
+                                        "in:term": "deferral agreement",
+                                        "#text": "means an agreement entered into under section 18 (1);"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e947",
+                                    "bcl:text": {
+                                        "in:term": "owner",
+                                        "#text": ", in relation to real property, means the registered owner of an estate in fee simple;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e956",
+                                    "bcl:text": {
+                                        "in:term": "serviced property",
+                                        "#text": "means real property to which water is provided by the government from water system property;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e965",
+                                    "bcl:text": {
+                                        "in:term": "water system property",
+                                        "#text": "means water system property, as defined in section 4.1, that has, on the dissolution of a corporation, escheated to or vested in the government."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e975",
+                            "bcl:marginalnote": "Fees and charges",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e983",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If the government provides water for use on serviced property, the Attorney General may, by order, set a fee or charge for providing water, including a fee or charge in relation to any repairs or maintenance made to the water system property by the government, to be paid by the owner of the serviced property."
+                                },
+                                {
+                                    "@id": "d2e992",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An owner who owes an amount under subsection (1) must pay interest on that amount, at the prescribed rate and calculated in the prescribed manner, from the date of the order or a later prescribed date."
+                                },
+                                {
+                                    "@id": "d2e1001",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96138_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Financial Administration Act"
+                                        },
+                                        "#text": "If the government enters into an agreement with a person under which the person operates the water system property on behalf of the government, despite section 14 (1) of the , the agreement may authorize the person to retain a fee for the person's services provided under the agreement from the fee or charge referred to in subsection (1) collected by that person on behalf of the government."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1014",
+                            "bcl:marginalnote": "Authority to cease providing water",
+                            "bcl:num": "17",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1022",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96485_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Water Utility Act"
+                                        },
+                                        "#text": "Despite the , any other enactment or any other legal obligation, the government"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1034",
+                                            "bcl:num": "a",
+                                            "bcl:text": "may cease providing water from water system property, and"
+                                        },
+                                        {
+                                            "@id": "d2e1043",
+                                            "bcl:num": "b",
+                                            "bcl:text": "is not required to repair works that are part of water system property or provide water from that water system property if water was not provided from the water system property on the date that the water system property escheated to or vested in the government."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1053",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The government must give at least 30 days notice to each owner of serviced property before ceasing to provide water under subsection (1) (a)."
+                                },
+                                {
+                                    "@id": "d2e1062",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The notice under subsection (2) may be given",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1071",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by leaving the notice with the owner, or"
+                                        },
+                                        {
+                                            "@id": "d2e1080",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by sending the notice by ordinary mail or registered mail or by delivering the notice to the owner's address as shown on any record in the land title office relating to the ownership of the serviced property."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1089",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A notice given in accordance with subsection (3) (b) is deemed to have been given on the date the notice was sent or delivered."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1099",
+                            "bcl:marginalnote": "Deferred payment",
+                            "bcl:num": "18",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1107",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to this section and the regulations, if the Attorney General considers that requiring an owner to pay an amount owing to the government causes or is likely to cause hardship to the owner, the Attorney General may enter into an agreement with the owner permitting that owner to defer paying all or part of the amount owing to the government during the term of the agreement."
+                                },
+                                {
+                                    "@id": "d2e1116",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to this section and the regulations, the Attorney General may include in a deferral agreement terms and conditions the Attorney General considers appropriate."
+                                },
+                                {
+                                    "@id": "d2e1125",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A deferral agreement terminates on the date the owner transfers the owner's estate in fee simple in the serviced property or on an earlier date established by the agreement."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1135",
+                            "bcl:marginalnote": "Registration of deferral agreement",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1143",
+                                    "bcl:num": "1",
+                                    "bcl:text": "On receiving a deferral agreement from the Attorney General, the registrar of the land title office must register the deferral agreement as a charge, in favour of the government, on the serviced property of the owner who entered into that deferral agreement."
+                                },
+                                {
+                                    "@id": "d2e1152",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A deferral agreement registered under subsection (1) is a registered charge on the serviced property for the amount owing to the government, including any interest that accrues after the agreement is registered."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1163",
+                            "bcl:marginalnote": "Lien against serviced property",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1171",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "If an amount owing by an owner has not been paid, the Attorney General may register a lien against the owner's serviced property by registering a certificate of indebtedness in the prescribed form in the appropriate land title office in the same manner that a charge is registered under the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1183",
+                                    "bcl:num": "2",
+                                    "bcl:text": "On registration of a certificate of indebtedness against an owner's serviced property under subsection (1), a lien is created on the serviced property against which the certificate is registered for the amount owing that remains unpaid and is stated in that certificate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1193",
+                            "bcl:marginalnote": "Filing of certificate",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1201",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If an amount owing by an owner has not been paid, the Attorney General may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1210",
+                                            "bcl:num": "a",
+                                            "bcl:text": "issue a certificate stating",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1219",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the amount owing is due,"
+                                                },
+                                                {
+                                                    "@id": "d2e1229",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the amount owing that remains unpaid, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1238",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the name of the person required to pay it, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1247",
+                                            "bcl:num": "b",
+                                            "bcl:text": "file the certificate with the Supreme Court."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1256",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A certificate filed under subsection (1) (b) is of the same effect, and proceedings may be taken, as if it were a judgment of the Supreme Court for the recovery of a debt in the amount stated against the person named."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1266",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1274",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "For the purposes of this Part, the Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1286",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1295",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing the term or the maximum term of deferral agreements;"
+                                        },
+                                        {
+                                            "@id": "d2e1305",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing the maximum amount owing that may be deferred under a deferral agreement or prescribing a maximum portion that may be deferred in relation to the value of the serviced property;"
+                                        },
+                                        {
+                                            "@id": "d2e1314",
+                                            "bcl:num": "c",
+                                            "bcl:text": "prescribing terms the Attorney General must include in a deferral agreement;"
+                                        },
+                                        {
+                                            "@id": "d2e1323",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing the minimum amount or portion of equity in a serviced property that is held by the owner in order for the owner to be eligible to enter into a deferral agreement;"
+                                        },
+                                        {
+                                            "@id": "d2e1332",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing the manner of calculating an owner's equity in a serviced property."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1341",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In making regulations under this Part, the Lieutenant Governor in Council may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1350",
+                                            "bcl:num": "a",
+                                            "bcl:text": "define classes of persons, matters or things, and"
+                                        },
+                                        {
+                                            "@id": "d2e1360",
+                                            "bcl:num": "b",
+                                            "bcl:text": "make different regulations for different classes of persons, matters or things."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

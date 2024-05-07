@@ -1,0 +1,783 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96382_01",
+        "act:title": "Public Education Labour Relations Act",
+        "act:chapter": "382",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1922970521/96382/tlc96382_f",
+            "act:tlc": "E3tlc96382"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e15",
+                    "bcl:num": "1",
+                    "bcl:text": "Introductory Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e24",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e35",
+                                    "bcl:text": {
+                                        "in:term": "bargaining unit",
+                                        "#text": "means the bargaining unit referred to in section\u00a05;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e44",
+                                    "bcl:text": {
+                                        "in:term": "board of education",
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96412_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "School Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96412_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "School Act"
+                                            }
+                                        ],
+                                        "#text": "means a board as defined in the  and includes a francophone education authority as defined in the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e60",
+                                    "bcl:text": {
+                                        "in:term": "employers' association",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96384_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Sector Employers Act"
+                                        },
+                                        "#text": "means the employers' association established for boards of education under section\u00a06 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e72",
+                                    "bcl:text": {
+                                        "in:term": "francophone teacher",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96412_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "School Act"
+                                        },
+                                        "#text": "has the same meaning as in the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e84",
+                                    "bcl:text": {
+                                        "in:term": "local matters",
+                                        "#text": "means matters that are designated under section\u00a07 as matters to be determined by collective bargaining between teachers' unions and boards of education;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e93",
+                                    "bcl:text": {
+                                        "in:term": "Provincial matters",
+                                        "#text": "means matters that are designated under section\u00a07 as matters to be determined by collective bargaining between the employers' association and the Provincial union;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e102",
+                                    "bcl:text": {
+                                        "in:term": "Provincial union",
+                                        "#text": "means the British Columbia Teachers' Federation, or other union certified for the bargaining unit;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e111",
+                                    "bcl:text": {
+                                        "in:term": "support staff union",
+                                        "#text": "means a trade union representing employees of a board of education other than teachers;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e121",
+                                    "bcl:text": {
+                                        "in:term": "teacher",
+                                        "#text": "means a person included in the bargaining unit;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e130",
+                                    "bcl:text": {
+                                        "in:term": "teachers' union",
+                                        "#text": "means a trade union representing the teachers employed by a board of education."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e140",
+                            "bcl:marginalnote": "Purpose",
+                            "bcl:num": "2",
+                            "bcl:text": "The purpose of this Act is",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e151",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to improve collective bargaining practices and procedures in the public school system,"
+                                },
+                                {
+                                    "@id": "d2e160",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to establish a Provincial two-tiered system of collective bargaining for boards of education and trade unions representing teachers,"
+                                },
+                                {
+                                    "@id": "d2e170",
+                                    "bcl:num": "b.1",
+                                    "bcl:text": "to establish the employers' association as the accredited bargaining agent for the purpose of bargaining collectively with support staff unions, and"
+                                },
+                                {
+                                    "@id": "d2e179",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to promote positive working relationships in the public school system."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e189",
+                            "bcl:marginalnote": {
+                                "in:doc": "Labour Relations Code",
+                                "#text": "Application of"
+                            },
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e199",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96244_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Labour Relations Code"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96244_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Labour Relations Code"
+                                            }
+                                        ],
+                                        "#text": "The  and the regulations made under it apply in respect of the matters to which this Act applies, but if there is a conflict or inconsistency between this Act and the , this Act applies."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e214",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Labour Relations Board has exclusive jurisdiction to decide a question arising under this Act."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e224",
+                    "bcl:num": "2",
+                    "bcl:text": "Bargaining Structure",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e234",
+                            "bcl:marginalnote": "Employer bargaining agent",
+                            "bcl:num": "4",
+                            "bcl:text": "For the purpose of bargaining collectively with a teachers' union or a support staff union, the employers' association",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e245",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is deemed to be the accredited bargaining agent for every board of education in British Columbia, and"
+                                },
+                                {
+                                    "@id": "d2e254",
+                                    "bcl:num": "b",
+                                    "bcl:text": "has exclusive authority to bargain collectively for the boards of education and to bind the boards of education by collective agreement."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e264",
+                            "bcl:marginalnote": "Teacher bargaining unit",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e272",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96412_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "School Act"
+                                        },
+                                        "#text": "For the purpose of teacher collective bargaining, the bargaining unit is deemed to consist of all teachers and all francophone teachers, as defined in the , and includes those employees of a board of education referred to in Schedule 1 or included in the bargaining unit under subsection (2)."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e284",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Labour Relations Board may include additional employees in the bargaining unit or exclude employees from the bargaining unit if it considers that the inclusion or exclusion of the employees would be consistent with the purposes of this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e294",
+                            "bcl:marginalnote": "Employee bargaining agent",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e302",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For the purpose of teacher collective bargaining, the British Columbia Teachers' Federation",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e311",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is deemed to be the certified bargaining agent for the employees in the bargaining unit, and"
+                                        },
+                                        {
+                                            "@id": "d2e320",
+                                            "bcl:num": "b",
+                                            "bcl:text": "has exclusive authority to bargain collectively for the bargaining unit and to bind it by a collective agreement."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e330",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96244_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Labour Relations Code"
+                                        },
+                                        "#text": "Despite subsection (1), sections 18, 19 and 33 of the  with respect to the change of bargaining agents and revocation of bargaining rights apply to union representation of the bargaining unit."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e343",
+                    "bcl:num": "3",
+                    "bcl:text": "Collective Bargaining",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e352",
+                            "bcl:marginalnote": "Content of collective agreement",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e360",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The collective agreement entered into under this Act with respect to teachers must include all Provincial matters and local matters that have been agreed on by the parties."
+                                },
+                                {
+                                    "@id": "d2e369",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsection (3), the employers' association and the Provincial union must designate the Provincial matters and local matters to be determined by collective bargaining."
+                                },
+                                {
+                                    "@id": "d2e378",
+                                    "bcl:num": "3",
+                                    "bcl:text": "All cost provisions, within the meaning set out in subsection (4), are deemed to be Provincial matters."
+                                },
+                                {
+                                    "@id": "d2e388",
+                                    "bcl:num": "4",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "cost provisions",
+                                            "#text": "In subsection (3),  includes all provisions relating to"
+                                        },
+                                        "that affect the cost of the collective agreement."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e400",
+                                            "bcl:num": "a",
+                                            "bcl:text": "salaries and benefits,"
+                                        },
+                                        {
+                                            "@id": "d2e409",
+                                            "bcl:num": "b",
+                                            "bcl:text": "workload, including, without limitation, class size restrictions, and"
+                                        },
+                                        {
+                                            "@id": "d2e418",
+                                            "bcl:num": "c",
+                                            "bcl:text": "time worked and paid leave,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e430",
+                                    "bcl:num": "4.1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96412_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "School Act"
+                                        },
+                                        "#text": "In addition to the matters referred to in subsection (3), matters referred to in section 28 (1) (a) and (b) of the  respecting workload, including, without limitation, class size restrictions, are deemed to be Provincial matters."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e443",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96244_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Labour Relations Code"
+                                        },
+                                        "#text": "If the employers' association and the Provincial union are unable to agree on a designation under subsection (2) in the negotiations for the first Provincial agreement only, on the request of both parties or on the minister's own motion, the minister responsible for the administration of the  may appoint a person to arbitrate a dispute with respect to the designation."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e455",
+                                    "bcl:num": "6",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96244_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Labour Relations Code"
+                                        },
+                                        "#text": "Section 55 of the  does not apply with respect to collective bargaining under this Act."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e468",
+                            "bcl:marginalnote": "Agreements on local matters",
+                            "bcl:num": "8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e476",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The employers' association must establish policies and procedures with respect to delegation of authority to boards of education to enter into local agreements with teachers' unions in respect of any local matters, except as provided in subsection (4)."
+                                },
+                                {
+                                    "@id": "d2e485",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The Provincial union must establish policies and procedures with respect to delegation of authority to teachers' unions to enter into local agreements with boards of education in respect of any of the local matters, except as provided in subsection (4)."
+                                },
+                                {
+                                    "@id": "d2e494",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a board of education and a teachers' union are unable to agree with respect to a local matter delegated to them under subsections (1) and (2), either party may refer the dispute to Provincial bargaining."
+                                },
+                                {
+                                    "@id": "d2e504",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The Provincial union and the employers' association must not delegate authority to declare or authorize a strike or lockout, and no teachers' union or board of education may declare or authorize a strike or lockout."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e515",
+                    "bcl:num": "4",
+                    "bcl:text": "Regulations",
+                    "bcl:section": {
+                        "@id": "d2e524",
+                        "bcl:marginalnote": "Power to make regulations",
+                        "bcl:num": "9",
+                        "bcl:subsection": [
+                            {
+                                "@id": "d2e532",
+                                "bcl:num": "1",
+                                "bcl:text": {
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96238_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Interpretation Act"
+                                    },
+                                    "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                                }
+                            },
+                            {
+                                "@id": "d2e544",
+                                "bcl:num": "2",
+                                "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations to amend Schedule 1 or 2."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d2e554",
+                    "bcl:num": "5",
+                    "bcl:text": "Transitional",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e563",
+                            "bcl:marginalnote": "Transitional \u2014 collective agreements",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e571",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this section:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d2e580",
+                                            "bcl:text": {
+                                                "in:term": "local agreement",
+                                                "#text": "means a collective agreement entered into between a board of education and a teachers' union before the date on which this Act comes into force;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e589",
+                                            "bcl:text": {
+                                                "in:term": "Provincial agreement",
+                                                "#text": "means a collective agreement between the employers' association and the Provincial union covering the employees in the bargaining unit."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e599",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Nothing in this Act requires the expiry or extinguishment of a local agreement before the expiry date set out in the local agreement."
+                                },
+                                {
+                                    "@id": "d2e608",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96244_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Labour Relations Code"
+                                        },
+                                        "#text": "Despite any other provisions of this Act or the , the bargaining unit does not include employees covered by a local agreement until the expiry of that local agreement."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e620",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Subject to subsection (5), if no Provincial agreement is in effect at the expiry of a local agreement, the terms and conditions of employment set out in the local agreement are deemed to remain in effect until the date on which a Provincial agreement is concluded."
+                                },
+                                {
+                                    "@id": "d2e629",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The provisions set out in Schedule\u00a02 are deemed to be included in a local agreement and to replace any provisions of the local agreement that deal with the same or a similar matter."
+                                },
+                                {
+                                    "@id": "d2e638",
+                                    "bcl:num": "6",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96412_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "School Act"
+                                        },
+                                        "#text": "If a Provincial agreement is in effect at the expiry of a local agreement, the terms of the Provincial agreement apply to Provincial matters, and the terms of the expired local agreement are continued with respect to local matters to the extent that they do not conflict with the Provincial agreement, the  or any other enactment."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e650",
+                                    "bcl:num": "7",
+                                    "bcl:text": "Employees whose local agreements have not expired must not participate in a strike vote or a strike."
+                                },
+                                {
+                                    "@id": "d2e660",
+                                    "bcl:num": "8",
+                                    "bcl:text": "Employers whose local agreements have not expired must not participate in a lockout vote or a lockout."
+                                },
+                                {
+                                    "@id": "d2e669",
+                                    "bcl:num": "9",
+                                    "bcl:text": "A local agreement that expires after June\u00a030,\u00a01994 may be terminated on a specific date that is before the expiry date in the local agreement if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e678",
+                                            "bcl:num": "a",
+                                            "bcl:text": "before July\u00a01, 1994, the teachers' union gives written notice to the board of education, the Provincial union and the employers' association that the agreement will expire on June\u00a030,\u00a01994, or"
+                                        },
+                                        {
+                                            "@id": "d2e687",
+                                            "bcl:num": "b",
+                                            "bcl:text": "after June\u00a030, 1994, the teachers' union and the board of education give written notice of a specific date of expiry to the Provincial union and to the employers' association, provided that the notice is received on or before the specified date of expiry."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e696",
+                                    "bcl:num": "10",
+                                    "bcl:text": "If a local agreement is terminated under subsection (9), subsection (4) applies to the terms and conditions in the local agreement as they read on June 30, 1994 or, if another date of expiry is specified, as of the specified date."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e706",
+                            "bcl:marginalnote": "Transitional \u2014 accreditations",
+                            "bcl:num": "11",
+                            "bcl:text": "The accreditation of any employers' organization as bargaining agent for any board of education that is in force on the day on which this Act comes into force is cancelled and any rights or obligations of the employers' organization with respect to the accreditation are transferred to the employers' association."
+                        },
+                        {
+                            "@id": "d2e718",
+                            "bcl:marginalnote": "Transitional \u2014 regulations",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e726",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may make regulations considered necessary or advisable for the purpose of more effectively bringing into operation this Act and to prevent any transitional difficulties encountered in so doing, and without limiting the generality of this, the regulations may, for a period the Lieutenant Governor in Council specifies, suspend the operation of a provision of an enactment if that provision would impede the effective operation of this Act."
+                                },
+                                {
+                                    "@id": "d2e735",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Unless earlier repealed, a regulation under subsection (1) is repealed one year after it is enacted."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "bcl:schedule": [
+                {
+                    "bcl:scheduletitle": "Schedule 1",
+                    "bcl:centertext": {
+                        "in:em": "(Section 5)"
+                    },
+                    "oasis:table": {
+                        "@style": "1",
+                        "oasis:tgroup": {
+                            "@cols": "2",
+                            "oasis:colspec": [
+                                {
+                                    "@colname": "c1",
+                                    "@colnum": "1",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c2",
+                                    "@colnum": "2",
+                                    "@align": "center",
+                                    "@border": "0"
+                                }
+                            ],
+                            "oasis:tbody": {
+                                "oasis:trow": [
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "oasis:line": {
+                                                    "in:em": "Employer"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "oasis:line": {
+                                                    "in:em": "Employees"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@valign": "top",
+                                                "oasis:line": {
+                                                    "in:br": null,
+                                                    "#text": "School\u00a0District\u00a0No.\u00a023\u00a0\u2014Central Okanagan"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "oasis:line": "Speech/language pathologists and physiotherapists employed by The Board of School Trustees of School District No. 23 (Central Okanagan) in the School District."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@valign": "top",
+                                                "oasis:line": {
+                                                    "in:br": null,
+                                                    "#text": "School District No. 13 \u2014Kettle Valley"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "oasis:line": "Persons employed to substitute for teachers."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@valign": "top",
+                                                "oasis:line": {
+                                                    "in:br": null,
+                                                    "#text": "School District No. 69 \u2014Qualicum"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "oasis:line": "Speech pathologists and occupational therapists employed by The Board of School Trustees of School District No. 69 (Qualicum) in the School District."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@valign": "top",
+                                                "oasis:line": {
+                                                    "in:br": null,
+                                                    "#text": "School District No. 43 \u2014Coquitlam"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "oasis:line": "Associated Professionals within School District No. 43 (Coquitlam)."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@valign": "top",
+                                                "oasis:line": {
+                                                    "in:br": null,
+                                                    "#text": "School District No. 34 \u2014Abbotsford"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "oasis:line": "Speech therapists and multicultural itinerant employed by The Board of School Trustees of School District No. 34 (Abbotsford) in the School District."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@valign": "top",
+                                                "oasis:line": {
+                                                    "in:br": null,
+                                                    "#text": "School District No. 64 \u2014Gulf Islands"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "oasis:line": "Speech/language pathologists employed by The Board of School Trustees of School District No. 64 (Gulf Islands) in the School District."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@valign": "top",
+                                                "oasis:line": {
+                                                    "in:br": null,
+                                                    "#text": "School District No. 35 \u2014 Langley"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@valign": "top",
+                                                "oasis:line": "Persons employed to give tuition or instruction in courses in English as a Second Language (E.S.L.) at the Langley Education Centre (Sundel) and the Aldergrove Education Centre."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "bcl:scheduletitle": "Schedule 2",
+                    "bcl:centertext": {
+                        "in:em": "(Section 10 (5))"
+                    },
+                    "bcl:lefttext": [
+                        {
+                            "in:strong": "Conflict"
+                        },
+                        {
+                            "in:strong": "Employer bargaining representative"
+                        },
+                        {
+                            "in:strong": "Union recognition"
+                        },
+                        {
+                            "in:strong": "Leave of absence for Provincial bargaining"
+                        }
+                    ],
+                    "bcl:indent1": [
+                        {
+                            "in:doc": "Public Education Labour Relations Act",
+                            "#text": "1 In the event of any conflict between the  and a provision of this collective agreement, the provisions of that Act prevail."
+                        },
+                        {
+                            "in:doc": [
+                                "Public Sector Employers Act",
+                                "Public Education Labour Relations Act"
+                            ],
+                            "#text": "2 The employers' association established for boards of education under section 6 of the  is the exclusive bargaining representative for the board of education under the ."
+                        },
+                        {
+                            "in:doc": "Public Education Labour Relations Act",
+                            "#text": "3 (1) The board of education recognizes the Provincial union established under the  as the bargaining agent for employees covered by this agreement in accordance with that Act."
+                        },
+                        {
+                            "in:doc": "Public Education Labour Relations Act",
+                            "#text": "(2) Any right provided to the union under the terms of this agreement is also provided to the Provincial union, except as affected by the ."
+                        },
+                        "4 The board of education shall grant a leave of absence without pay to an employee designated by the Provincial union for the purpose of participating in collective bargaining activities on behalf of the Provincial union."
+                    ],
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: section\u00a04 of Schedule 2 of the Public Education Labour Relations Act, re-enacted effective January\u00a031,\u00a01997, B.C. Reg. 26/97; re-enactment not included.]"
+                    }
+                }
+            ]
+        }
+    }
+}

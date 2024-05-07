@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This information is licensed under the Queen's Printer License of British Columbia found: www.bclaws.ca/standards/2014/QP-License_1.0.html. Please review the license terms carefully. --><reg:regulation xmlns:reg="http://www.gov.bc.ca/2013/legislation/regulation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:fun="http://www.bclaws.ca/xslt/functions" xmlns:act="http://www.gov.bc.ca/2013/legislation/act" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xsi:schemaLocation="http://www.gov.bc.ca/2013/legislation/regulation  http://standards.qp.gov.bc.ca/standards/2013/regulation_1.0.xsd" id="61_2013">
+  <reg:amend added="2014-05-02" effective="2014-03-01" regnum="24/2014" bullId="2014bull08"/>
+  <reg:regnum>61/2013</reg:regnum>
+  <reg:oic>British Columbia Securities Commission</reg:oic>
+  <reg:deposited>February 28, 2013</reg:deposited>
+  <reg:effective>March 1, 2013</reg:effective>
+  <reg:acttitle>Securities Act</reg:acttitle>
+  <reg:title>National Instrument 23-103 <in:br/><in:em>Electronic Trading and Direct
+      Electronic<in:br/> Access to Marketplaces</in:em></reg:title>
+  <reg:amsincluded>[includes amendments up to B.C. Reg. 24/2014, March 1, 2014]</reg:amsincluded>
+  <reg:regpitid>61_2013_pit</reg:regpitid>
+  <reg:content>
+    <bcl:part id="d2e28">
+      <bcl:num>1</bcl:num>
+      <bcl:text>Definitions and Interpretation</bcl:text>
+      <bcl:section id="d2e37">
+        <bcl:marginalnote>Definitions</bcl:marginalnote>
+        <bcl:num>1</bcl:num>
+        <bcl:text>In this Instrument,</bcl:text>
+        <bcl:definition id="d2e48">
+          <bcl:text>
+            <in:term>automated order system</in:term> means a system used to automatically
+            generate or electronically transmit orders on a pre-determined basis;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d1e62">
+          <bcl:text>
+            <in:term>DEA client</in:term> means a client that is granted direct electronic
+            access by a participant dealer;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d1e71">
+          <bcl:text>
+            <in:term>DEA client identifier</in:term> means a unique client identifier
+            assigned to a DEA client;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d1e79">
+          <bcl:text>
+            <in:term>direct electronic access</in:term> means the access provided by a
+            person or company to a client, other than a client that is registered as an investment
+            dealer with a securities regulatory authority or, in Québec, is a foreign approved
+            participant as defined in the Rules of the Montréal Exchange Inc., that permits the
+            client to electronically transmit an order relating to a security to a marketplace,
+            using the person or company's marketplace participant identifier,</bcl:text>
+          <bcl:paragraph id="d1e86">
+            <bcl:num>a</bcl:num>
+            <bcl:text>through the person or company's systems for automatic onward transmission to a
+              marketplace; or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d1e95">
+            <bcl:num>b</bcl:num>
+            <bcl:text>directly to a marketplace without being electronically transmitted through the
+              person or company's systems;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d2e57">
+          <bcl:text>
+            <in:term>marketplace and regulatory requirements</in:term> means</bcl:text>
+          <bcl:paragraph id="d2e67">
+            <bcl:num>a</bcl:num>
+            <bcl:text>the rules, policies, requirements or other similar instruments set by a
+              marketplace respecting the method of trading by marketplace participants, including
+              those related to order entry, the use of automated order systems, order types and
+              features and the execution of trades;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e76">
+            <bcl:num>b</bcl:num>
+            <bcl:text>the applicable requirements in securities legislation; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e85">
+            <bcl:num>c</bcl:num>
+            <bcl:text>the applicable requirements set by a recognized exchange, a recognized
+              quotation and trade reporting system or a regulation services provider under section 7.1,
+                7.3 or
+                8.2 of
+              National Instrument 23-101 <in:doc>Trading Rules</in:doc>;</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:definition id="d1e152">
+          <bcl:text>
+            <in:term>marketplace participant identifier</in:term> means the unique
+            identifier assigned to a marketplace participant to access a marketplace;</bcl:text>
+        </bcl:definition>
+        <bcl:definition id="d1e160">
+          <bcl:text>
+            <in:term>participant dealer</in:term> means </bcl:text>
+          <bcl:paragraph id="d1e166">
+            <bcl:num>a</bcl:num>
+            <bcl:text>a marketplace participant that is an investment dealer, or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d1e175">
+            <bcl:num>b</bcl:num>
+            <bcl:text>in Québec, a foreign approved participant as defined in the Rules of the
+              Montréal Exchange Inc., as amended from time to time.</bcl:text>
+          </bcl:paragraph>
+        </bcl:definition>
+        <bcl:hnote>[am. B.C. Reg. 24/2014, Sch. s. 3.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d2e104">
+        <bcl:marginalnote>Interpretation</bcl:marginalnote>
+        <bcl:num>2</bcl:num>
+        <bcl:text>A term that is defined or interpreted in National Instrument 21-101
+            <in:em>Marketplace Operation</in:em>, or National Instrument 31-103 <in:em>Registration
+            Requirements, Exemptions and Ongoing Registrant Obligations</in:em> has, if used in this
+          Instrument, the meaning ascribed to it in National Instrument 21-101 or National
+          Instrument 31-103.</bcl:text>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e122">
+      <bcl:num>2</bcl:num>
+      <bcl:text>Requirements Applicable to Marketplace Participants</bcl:text>
+      <bcl:section id="d2e131">
+        <bcl:marginalnote>Risk management and supervisory controls, policies and
+          procedures</bcl:marginalnote>
+        <bcl:num>3</bcl:num>
+        <bcl:subsection id="d2e139">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace participant must</bcl:text>
+          <bcl:paragraph id="d2e148">
+            <bcl:num>a</bcl:num>
+            <bcl:text>establish, maintain and ensure compliance with risk management and supervisory
+              controls, policies and procedures that are reasonably designed to manage, in
+              accordance with prudent business practices, the financial, regulatory and other risks
+              associated with marketplace access or providing clients with access to a marketplace;
+              and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e157">
+            <bcl:num>b</bcl:num>
+            <bcl:text>record the policies and procedures required under paragraph
+                (a) and maintain a description of the marketplace participant's risk
+              management and supervisory controls in written form.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e167">
+          <bcl:num>2</bcl:num>
+          <bcl:text>The risk management and supervisory controls, policies and procedures required
+            under subsection
+              (1) must be reasonably designed to ensure that all orders are monitored and
+            for greater certainty, include</bcl:text>
+          <bcl:paragraph id="d2e176">
+            <bcl:num>a</bcl:num>
+            <bcl:text>automated pre-trade controls; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e185">
+            <bcl:num>b</bcl:num>
+            <bcl:text>regular post-trade monitoring.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e194">
+          <bcl:num>3</bcl:num>
+          <bcl:text>The risk management and supervisory controls, policies and procedures required
+            in subsection
+              (1) must be reasonably designed to</bcl:text>
+          <bcl:paragraph id="d2e203">
+            <bcl:num>a</bcl:num>
+            <bcl:text>systematically limit the financial exposure of the marketplace participant,
+              including, for greater certainty, preventing</bcl:text>
+            <bcl:subparagraph id="d2e212">
+              <bcl:num>i</bcl:num>
+              <bcl:text>the entry of one or more orders that would result in exceeding
+                pre-determined credit or capital thresholds for the marketplace participant and, if
+                applicable, its client with marketplace access provided by the marketplace
+                participant;</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e222">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>the entry of one or more orders that exceed pre-determined price or size
+                parameters;</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e231">
+            <bcl:num>b</bcl:num>
+            <bcl:text>ensure compliance with marketplace and regulatory requirements, including, for
+              greater certainty,</bcl:text>
+            <bcl:subparagraph id="d2e240">
+              <bcl:num>i</bcl:num>
+              <bcl:text>preventing the entry of orders that do not comply with marketplace and
+                regulatory requirements that must be satisfied on a pre-order entry
+                basis;</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e249">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>limiting the entry of orders to those securities that a marketplace
+                participant or, if applicable, its client with marketplace access provided by the
+                marketplace participant, is authorized to trade;</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e258">
+              <bcl:num>iii</bcl:num>
+              <bcl:text>restricting access to trading on a marketplace to persons authorized by the
+                marketplace participant; and</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e267">
+              <bcl:num>iv</bcl:num>
+              <bcl:text>ensuring that the compliance staff of the marketplace participant receives
+                immediate order and trade information, including, for greater certainty, execution
+                reports, resulting from orders sent by the marketplace participant or, if
+                applicable, its client with marketplace access provided by the marketplace
+                participant;</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e277">
+            <bcl:num>c</bcl:num>
+            <bcl:text>enable the marketplace participant to immediately stop or cancel one or more
+              orders entered by the marketplace participant or, if applicable, its client with
+              marketplace access provided by the marketplace participant;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e286">
+            <bcl:num>d</bcl:num>
+            <bcl:text>enable the marketplace participant to immediately suspend or terminate any
+              access to a marketplace granted to a client with marketplace access provided by the
+              marketplace participant; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e295">
+            <bcl:num>e</bcl:num>
+            <bcl:text>ensure that the entry of orders does not interfere with fair and orderly
+              markets.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e304">
+          <bcl:num>4</bcl:num>
+          <bcl:text>A third party that provides risk management and supervisory controls, policies
+            or procedures to a marketplace participant must be independent from each client with
+            marketplace access provided by the marketplace participant, except if the client is an
+            affiliate of the marketplace participant.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e313">
+          <bcl:num>5</bcl:num>
+          <bcl:text>A marketplace participant must directly and exclusively set and adjust the risk
+            management and supervisory controls, policies and procedures required under this
+            section, including those provided by third parties.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e322">
+          <bcl:num>6</bcl:num>
+          <bcl:text>A marketplace participant must</bcl:text>
+          <bcl:paragraph id="d2e332">
+            <bcl:num>a</bcl:num>
+            <bcl:text>regularly assess and document the adequacy and effectiveness of its risk
+              management and supervisory controls, policies and procedures; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e341">
+            <bcl:num>b</bcl:num>
+            <bcl:text>document any deficiencies in the adequacy or effectiveness of a risk
+              management or supervisory control, policy or procedure and promptly remedy the
+              deficiency.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e350">
+          <bcl:num>7</bcl:num>
+          <bcl:text>If a marketplace participant uses the services of a third party to provide risk
+            management or supervisory controls, policies and procedures, the marketplace participant
+            must</bcl:text>
+          <bcl:paragraph id="d2e359">
+            <bcl:num>a</bcl:num>
+            <bcl:text>regularly assess and document the adequacy and effectiveness of the third
+              party's relevant risk management and supervisory controls, policies and procedures;
+              and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e368">
+            <bcl:num>b</bcl:num>
+            <bcl:text>document any deficiencies in the adequacy or effectiveness of a risk
+              management or supervisory control, policy or procedure and ensure the deficiency is
+              promptly remedied.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+      </bcl:section>
+      <bcl:section id="d2e379">
+        <bcl:marginalnote>Authorization to set or adjust risk management and supervisory controls,
+          policies and procedures</bcl:marginalnote>
+        <bcl:num>4</bcl:num>
+        <bcl:text>Despite subsection 3 (5), a participant dealer may, on a reasonable basis, authorize an
+          investment dealer to perform, on the participant dealer's behalf, the setting or adjusting
+          of a specific risk management or supervisory control, policy or procedure required under
+            subsection 3
+            (1) if</bcl:text>
+        <bcl:paragraph id="d2e390">
+          <bcl:num>a</bcl:num>
+          <bcl:text>the participant dealer has a reasonable basis for determining that the
+            investment dealer, based on the investment dealer's relationship with the ultimate
+            client, has better access to information relating to the ultimate client than the
+            participant dealer such that the investment dealer can more effectively set or adjust
+            the control, policy or procedure;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e399">
+          <bcl:num>b</bcl:num>
+          <bcl:text>a description of the specific risk management or supervisory control, policy or
+            procedure and the conditions under which the investment dealer is authorized to set or
+            adjust the specific risk management or supervisory control, policy or procedure are set
+            out in a written agreement between the participant dealer and the investment
+            dealer;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e409">
+          <bcl:num>c</bcl:num>
+          <bcl:text>before authorizing the investment dealer to set or adjust a specific risk
+            management or supervisory control, policy or procedure, the participant dealer assesses
+            and documents the adequacy and effectiveness of the investment dealer's setting or
+            adjusting of the risk management or supervisory control, policy or procedure;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e418">
+          <bcl:num>d</bcl:num>
+          <bcl:text>the participant dealer</bcl:text>
+          <bcl:subparagraph id="d2e427">
+            <bcl:num>i</bcl:num>
+            <bcl:text>regularly assesses the adequacy and effectiveness of the setting or adjusting
+              of the risk management or supervisory control, policy or procedure by the investment
+              dealer; and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d2e436">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>documents any deficiencies in the adequacy or effectiveness of the setting or
+              adjusting of the risk management or supervisory control, policy or procedure and
+              ensures that the deficiencies are promptly remedied; and</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:paragraph id="d2e445">
+          <bcl:num>e</bcl:num>
+          <bcl:text>the participant dealer provides the investment dealer with the immediate order
+            and trade information of the ultimate client that the participant dealer receives under
+            subparagraph 3 (3) (b) (iv).</bcl:text>
+        </bcl:paragraph>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d1e554">
+      <bcl:num>2.1</bcl:num>
+      <bcl:text>Requirements Applicable to Participant Dealers Providing Direct Electronic
+        Access</bcl:text>
+      <bcl:section id="d1e562">
+        <bcl:marginalnote>Application of this Part</bcl:marginalnote>
+        <bcl:num>4.1</bcl:num>
+        <bcl:text>This Part does not apply to a participant dealer if the participant dealer
+          complies with similar requirements established by</bcl:text>
+        <bcl:paragraph id="d1e573">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a regulation services provider;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e582">
+          <bcl:num>b</bcl:num>
+          <bcl:text>a recognized exchange that directly monitors the conduct of its members and
+            enforces requirements set under subsection 7.1 (1) of NI 23-101; or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e592">
+          <bcl:num>c</bcl:num>
+          <bcl:text>a recognized quotation and trade reporting system that directly monitors the
+            conduct of its users and enforces requirements set under subsection 7.3 (1) of NI
+            23-101.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e605">
+        <bcl:marginalnote>Provision of direct electronic access</bcl:marginalnote>
+        <bcl:num>4.2</bcl:num>
+        <bcl:subsection id="d1e613">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A person or company must not provide direct electronic access unless it is a
+            participant dealer.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d1e622">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A participant dealer must not provide direct electronic access to a client that
+            is acting and registered as a dealer with a securities regulatory authority.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e635">
+        <bcl:marginalnote>Standards for DEA clients</bcl:marginalnote>
+        <bcl:num>4.3</bcl:num>
+        <bcl:subsection id="d1e643">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A participant dealer must not provide direct electronic access to a client
+            unless the participant dealer</bcl:text>
+          <bcl:paragraph id="d1e651">
+            <bcl:num>a</bcl:num>
+            <bcl:text>has established, maintains and applies standards that are reasonably designed
+              to manage, in accordance with prudent business practices, the participant dealer's
+              risks associated with providing direct electronic access; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d1e660">
+            <bcl:num>b</bcl:num>
+            <bcl:text>assesses and documents that the client meets the standards established by the
+              participant dealer under paragraph (a).</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d1e670">
+          <bcl:num>2</bcl:num>
+          <bcl:text>The standards established by the participant dealer under subsection (1) must
+            include the following:</bcl:text>
+          <bcl:paragraph id="d1e678">
+            <bcl:num>a</bcl:num>
+            <bcl:text>a client must not have direct electronic access unless the client has
+              sufficient resources to meet any financial obligations that may result from the use of
+              direct electronic access by that client,</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d1e687">
+            <bcl:num>b</bcl:num>
+            <bcl:text>a client must not have direct electronic access unless the client has
+              reasonable arrangements in place to ensure that all individuals using direct
+              electronic access on behalf of the client have reasonable knowledge of and proficiency
+              in the use of the order entry system that facilitates the direct electronic
+              access,</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d1e696">
+            <bcl:num>c</bcl:num>
+            <bcl:text>a client must not have direct electronic access unless the client has
+              reasonable knowledge of and the ability to comply with all applicable marketplace and
+              regulatory requirements, and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d1e706">
+            <bcl:num>d</bcl:num>
+            <bcl:text>a client must not have direct electronic access unless the client has
+              reasonable arrangements in place to monitor the entry of orders through direct
+              electronic access.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d1e716">
+          <bcl:num>3</bcl:num>
+          <bcl:text>A participant dealer must assess, confirm and document, at least annually, that
+            the DEA client continues to meet the standards established by the participant dealer,
+            including, for greater certainty, those set out in this section.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e731">
+        <bcl:marginalnote>Written agreement</bcl:marginalnote>
+        <bcl:num>4.4</bcl:num>
+        <bcl:text>A participant dealer must not provide direct electronic access to a client unless
+          the client has entered into a written agreement with the participant dealer that provides
+          that,</bcl:text>
+        <bcl:paragraph id="d1e742">
+          <bcl:num>a</bcl:num>
+          <bcl:text>in the client's capacity as a DEA client,</bcl:text>
+          <bcl:subparagraph id="d1e750">
+            <bcl:num>i</bcl:num>
+            <bcl:text>the client's trading activity will comply with marketplace and regulatory
+              requirements;</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e759">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>the client's trading activity will comply with the product limits and credit
+              or other financial limits specified by the participant dealer;</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e768">
+            <bcl:num>iii</bcl:num>
+            <bcl:text>the client will take all reasonable steps to prevent unauthorized access to
+              the technology that facilitates direct electronic access and will not permit any
+              person or company to use the direct electronic access provided by the participant
+              dealer other than those named by the client under the provision of the agreement
+              referred to in subparagraph (vii);</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e778">
+            <bcl:num>iv</bcl:num>
+            <bcl:text>the client will fully cooperate with the participant dealer in connection with
+              any investigation or proceeding by any marketplace or regulation services provider
+              with respect to trading conducted pursuant to the direct electronic access provided,
+              including, upon request by the participant dealer, providing the marketplace or
+              regulation services provider with access to information that is necessary for the
+              purposes of the investigation or proceeding;</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e787">
+            <bcl:num>v</bcl:num>
+            <bcl:text>the client will immediately inform the participant dealer if the client fails
+              or expects not to meet the standards set by the participant dealer;</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e796">
+            <bcl:num>vi</bcl:num>
+            <bcl:text>when trading for the accounts of another person or company, under subsection
+              4.7 (1), the client will ensure that the orders of the other person or company are
+              transmitted through the systems of the client and will be subject to reasonable risk
+              management and supervisory controls, policies and procedures established and
+              maintained by the client; and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e805">
+            <bcl:num>vii</bcl:num>
+            <bcl:text>the client will immediately provide to the participant dealer in
+              writing,</bcl:text>
+            <bcl:clause id="d1e814">
+              <bcl:num>A</bcl:num>
+              <bcl:text>the names of all personnel acting on the client's behalf that the client has
+              authorized to enter an order using direct electronic access; and</bcl:text>
+            </bcl:clause>
+            <bcl:clause id="d1e823">
+              <bcl:num>B</bcl:num>
+              <bcl:text>details of any change to the information in clause (A), and</bcl:text>
+            </bcl:clause>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e833">
+          <bcl:num>b</bcl:num>
+          <bcl:text>the participant dealer has the authority to, without prior notice,</bcl:text>
+          <bcl:subparagraph id="d1e841">
+            <bcl:num>i</bcl:num>
+            <bcl:text>reject any order;</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e850">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>vary or correct any order to comply with a marketplace or regulatory
+              requirement;</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e859">
+            <bcl:num>iii</bcl:num>
+            <bcl:text>cancel any order entered on a marketplace; and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e869">
+            <bcl:num>iv</bcl:num>
+            <bcl:text>discontinue accepting orders from the DEA client.</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e884">
+        <bcl:marginalnote>Training of DEA clients</bcl:marginalnote>
+        <bcl:num>4.5</bcl:num>
+        <bcl:subsection id="d1e892">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A participant dealer must not allow a client to have, or continue to have,
+            direct electronic access unless the participant dealer is satisfied that the client has
+            reasonable knowledge of applicable marketplace and regulatory requirements and the
+            standards established by the participant dealer under section 4.3.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d1e901">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A participant dealer must ensure that a DEA client receives any relevant
+            amendments to applicable marketplace and regulatory requirements or changes or updates
+            to the standards established by the participant dealer under section 4.3.</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e914">
+        <bcl:marginalnote>DEA client identifier</bcl:marginalnote>
+        <bcl:num>4.6</bcl:num>
+        <bcl:subsection id="d1e922">
+          <bcl:num>1</bcl:num>
+          <bcl:text>Upon providing direct electronic access to a DEA client, a participant dealer
+            must ensure the client is assigned a DEA client identifier in the form and manner
+            required by</bcl:text>
+        </bcl:subsection>
+        <bcl:paragraph id="d1e931">
+          <bcl:num>a</bcl:num>
+          <bcl:text>a regulation services provider;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e940">
+          <bcl:num>b</bcl:num>
+          <bcl:text>a recognized exchange that directly monitors the conduct of its members and
+            enforces requirements set under subsection 7.1 (1) of NI 23-101; or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e950">
+          <bcl:num>c</bcl:num>
+          <bcl:text>a recognized quotation and trade reporting system that directly monitors the
+            conduct of its users and enforces requirements set under subsection 7.3 (1) of NI
+            23-101.</bcl:text>
+        </bcl:paragraph>
+        <bcl:subsection id="d1e959">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A participant dealer under subsection (1) must immediately provide the DEA
+            client identifier to each marketplace to which the DEA client has direct electronic
+            access through the participant dealer.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d1e968">
+          <bcl:num>3</bcl:num>
+          <bcl:text>A participant dealer under subsection (1) must immediately provide the DEA
+            client's name and the client's associated DEA client identifier to</bcl:text>
+        </bcl:subsection>
+        <bcl:paragraph id="d1e977">
+          <bcl:num>a</bcl:num>
+          <bcl:text>all regulation services providers monitoring trading on a marketplace to which
+            the DEA client has access through the participant dealer;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e986">
+          <bcl:num>b</bcl:num>
+          <bcl:text>any recognized exchange or recognized quotation and trade reporting system that
+            directly monitors the conduct of its members or users and enforces requirements set
+            under subsection 7.1 (1) or 7.3 (1) of NI 23-101 and to which the DEA client has access
+            through the participant dealer; and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e995">
+          <bcl:num>c</bcl:num>
+          <bcl:text>any exchange or quotation and trade reporting system that is recognized for the
+            purposes of this Instrument and that directly monitors the conduct of its members or
+            users and enforces requirements set under subsection 7.1 (1) or 7.3 (1) of NI 23-101 and
+            to which the DEA client has access through the participant dealer.</bcl:text>
+        </bcl:paragraph>
+        <bcl:subsection id="d1e1005">
+          <bcl:num>4</bcl:num>
+          <bcl:text>A participant dealer must ensure that an order entered by a DEA client using
+            direct electronic access provided by the participant dealer includes the appropriate DEA
+            client identifier.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d1e1014">
+          <bcl:num>5</bcl:num>
+          <bcl:text>If a client ceases to be a DEA client, the participant dealer must promptly
+            inform</bcl:text>
+        </bcl:subsection>
+        <bcl:paragraph id="d1e1023">
+          <bcl:num>a</bcl:num>
+          <bcl:text>all regulation services providers monitoring trading on a marketplace to which
+            the DEA client had access through the participant dealer;</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e1032">
+          <bcl:num>b</bcl:num>
+          <bcl:text>any recognized exchange or recognized quotation and trade reporting system that
+            directly monitors the conduct of its members or users and enforces requirements set
+            under section 7.1 (1) or 7.3 (1) of NI 23-101 and to which the DEA client had access
+            through the participant dealer; and</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e1041">
+          <bcl:num>c</bcl:num>
+          <bcl:text>any exchange or quotation and trade reporting system that is recognized for the
+            purposes of this Instrument and that directly monitors the conduct of its members or
+            users and enforces requirements set under subsection 7.1 (1) or 7.3 (1) of NI 23-101 and
+            to which the DEA client had access through the participant dealer.</bcl:text>
+        </bcl:paragraph>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 4.]</bcl:hnote>
+      </bcl:section>
+      <bcl:section id="d1e1054">
+        <bcl:marginalnote>Trading by DEA clients</bcl:marginalnote>
+        <bcl:num>4.7</bcl:num>
+        <bcl:subsection id="d1e1062">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A participant dealer must not provide direct electronic access to a DEA client
+            that is trading for the account of another person or company unless the DEA client
+            is</bcl:text>
+        </bcl:subsection>
+        <bcl:paragraph id="d1e1071">
+          <bcl:num>a</bcl:num>
+          <bcl:text>registered or exempted from registration as an adviser under securities
+            legislation; or</bcl:text>
+        </bcl:paragraph>
+        <bcl:paragraph id="d1e1080">
+          <bcl:num>b</bcl:num>
+          <bcl:text>a person or company that</bcl:text>
+          <bcl:subparagraph id="d1e1088">
+            <bcl:num>i</bcl:num>
+            <bcl:text>carries on business in a foreign jurisdiction,</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e1097">
+            <bcl:num>ii</bcl:num>
+            <bcl:text>under the laws of the foreign jurisdiction, may trade for the account of
+              another person or company using direct electronic access, and</bcl:text>
+          </bcl:subparagraph>
+          <bcl:subparagraph id="d1e1106">
+            <bcl:num>iii</bcl:num>
+            <bcl:text>is regulated in the foreign jurisdiction by a signatory to the International
+              Organization of Securities Commissions' Multilateral Memorandum of
+              Understanding.</bcl:text>
+          </bcl:subparagraph>
+        </bcl:paragraph>
+        <bcl:subsection id="d1e1117">
+          <bcl:num>2</bcl:num>
+          <bcl:text>If a DEA client referred to in subsection (1) is using direct electronic access
+            to trade for the account of another person or company, the DEA client must ensure that
+            the orders of the other person or company are transmitted through the systems of the DEA
+            client before being entered on a marketplace.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d1e1126">
+          <bcl:num>3</bcl:num>
+          <bcl:text>A participant dealer must ensure that when a DEA client is trading for the
+            account of another person or company using direct electronic access, the orders of the
+            other person or company are subject to reasonable risk management and supervisory
+            controls, policies and procedures established and maintained by the DEA
+            client.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d1e1135">
+          <bcl:num>4</bcl:num>
+          <bcl:text>A DEA client must not provide access to or pass on its direct electronic access
+            to another person or company other than the personnel authorized under subparagraph 4.4
+            (a) (vii).</bcl:text>
+        </bcl:subsection>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 4.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e455">
+      <bcl:num>3</bcl:num>
+      <bcl:text>Requirements Applicable to Use of Automated Order Systems</bcl:text>
+      <bcl:section id="d2e464">
+        <bcl:marginalnote>Use of automated order systems</bcl:marginalnote>
+        <bcl:num>5</bcl:num>
+        <bcl:subsection id="d2e472">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace participant must take all reasonable steps to ensure that its use
+            of an automated order system or the use of an automated order system by any client, does
+            not interfere with fair and orderly markets.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e481">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A client of a marketplace participant must take all reasonable steps to ensure
+            that its use of an automated order system does not interfere with fair and orderly
+            markets.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e490">
+          <bcl:num>3</bcl:num>
+          <bcl:text>For the purpose of the risk management and supervisory controls, policies and
+            procedures required under subsection 3 (1), a marketplace participant
+            must</bcl:text>
+          <bcl:paragraph id="d2e500">
+            <bcl:num>a</bcl:num>
+            <bcl:text>have a level of knowledge and understanding of any automated order system used
+              by the marketplace participant or any client that is sufficient to allow the
+              marketplace participant to identify and manage the risks associated with the use of
+              the automated order system;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e509">
+            <bcl:num>b</bcl:num>
+            <bcl:text>ensure that every automated order system used by the marketplace participant
+              or any client is tested in accordance with prudent business practices initially before
+              use and at least annually thereafter; and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e518">
+            <bcl:num>c</bcl:num>
+            <bcl:text>have controls in place to immediately</bcl:text>
+            <bcl:subparagraph id="d2e527">
+              <bcl:num>i</bcl:num>
+              <bcl:text>disable an automated order system used by the marketplace participant;
+                and</bcl:text>
+            </bcl:subparagraph>
+            <bcl:subparagraph id="d2e536">
+              <bcl:num>ii</bcl:num>
+              <bcl:text>prevent orders generated by an automated order system used by the
+                marketplace participant or any client from reaching a marketplace.</bcl:text>
+            </bcl:subparagraph>
+          </bcl:paragraph>
+        </bcl:subsection>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e546">
+      <bcl:num>4</bcl:num>
+      <bcl:text>Requirements Applicable to Marketplaces</bcl:text>
+      <bcl:section id="d2e555">
+        <bcl:marginalnote>Availability of order and trade information</bcl:marginalnote>
+        <bcl:num>6</bcl:num>
+        <bcl:subsection id="d2e563">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace must provide a marketplace participant with access to its order
+            and trade information, including execution reports, on an immediate basis to enable the
+            marketplace participant to effectively implement the risk management and supervisory
+            controls, policies and procedures required under section 3.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e572">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A marketplace must provide a marketplace participant access to its order and
+            trade information referenced in subsection (1) on reasonable terms.</bcl:text>
+        </bcl:subsection>
+      </bcl:section>
+      <bcl:section id="d2e582">
+        <bcl:marginalnote>Marketplace controls relating to electronic trading</bcl:marginalnote>
+        <bcl:num>7</bcl:num>
+        <bcl:subsection id="d2e590">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace must not provide access to a marketplace participant unless it has
+            the ability and authority to terminate all or a portion of the access provided to the
+            marketplace participant.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e599">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A marketplace must</bcl:text>
+          <bcl:paragraph id="d2e608">
+            <bcl:num>a</bcl:num>
+            <bcl:text>regularly assess and document whether the marketplace requires any risk
+              management and supervisory controls, policies and procedures relating to electronic
+              trading, in addition to those controls that a marketplace participant is required to
+              have under subsection 3 (1), and ensure that such controls, policies and procedures
+              are implemented in a timely manner;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e618">
+            <bcl:num>b</bcl:num>
+            <bcl:text>regularly assess and document the adequacy and effectiveness of any risk
+              management and supervisory controls, policies and procedures implemented under
+                paragraph
+                (a); and</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e627">
+            <bcl:num>c</bcl:num>
+            <bcl:text>document and promptly remedy any deficiencies in the adequacy or effectiveness
+              of the controls, policies and procedures implemented under paragraph
+                (a).</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+      </bcl:section>
+      <bcl:section id="d2e638">
+        <bcl:marginalnote>Marketplace thresholds</bcl:marginalnote>
+        <bcl:num>8</bcl:num>
+        <bcl:subsection id="d2e646">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace must not permit the execution of orders for exchange-traded
+            securities to exceed the price and volume thresholds set by</bcl:text>
+          <bcl:paragraph id="d2e655">
+            <bcl:num>a</bcl:num>
+            <bcl:text>its regulation services provider;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e664">
+            <bcl:num>b</bcl:num>
+            <bcl:text>the marketplace, if it is a recognized exchange that directly monitors the
+              conduct of its members and enforces requirements set under subsection 7.1 (1)
+              of NI 23-101; or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e674">
+            <bcl:num>c</bcl:num>
+            <bcl:text>the marketplace, if it is a recognized quotation and trade reporting system
+              that directly monitors the conduct of its users and enforces the requirements set
+              under subsection 7.3
+                (1) of NI 23-101.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e683">
+          <bcl:num>2</bcl:num>
+          <bcl:text>A recognized exchange, recognized quotation and trade reporting system or
+            regulation services provider setting a price threshold for an exchange-traded security
+            under subsection
+              (1) must coordinate its price threshold with all other exchanges, quotation
+            and trade reporting systems and regulation services providers setting a price threshold
+            under subsection
+              (1) for the exchange-traded security or a security underlying the
+            exchange-traded security.</bcl:text>
+        </bcl:subsection>
+      </bcl:section>
+      <bcl:section id="d2e693">
+        <bcl:marginalnote>Clearly erroneous trades</bcl:marginalnote>
+        <bcl:num>9</bcl:num>
+        <bcl:subsection id="d2e701">
+          <bcl:num>1</bcl:num>
+          <bcl:text>A marketplace must not provide access to a marketplace participant unless it has
+            the ability to cancel, vary or correct a trade executed by the marketplace
+            participant.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e710">
+          <bcl:num>2</bcl:num>
+          <bcl:text>If a marketplace has retained a regulation services provider, the marketplace
+            must not cancel, vary or correct a trade executed on the marketplace unless</bcl:text>
+          <bcl:paragraph id="d2e719">
+            <bcl:num>a</bcl:num>
+            <bcl:text>instructed to do so by its regulation services provider;</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e729">
+            <bcl:num>b</bcl:num>
+            <bcl:text>the cancellation, variation or correction is requested by a party to the
+              trade, consent is provided by both parties to the trade and notification is provided
+              to the marketplace's regulation services provider; or</bcl:text>
+          </bcl:paragraph>
+          <bcl:paragraph id="d2e738">
+            <bcl:num>c</bcl:num>
+            <bcl:text>the cancellation, variation or correction is necessary to correct an error
+              caused by a system or technological malfunction of the marketplace systems or
+              equipment, or caused by an individual acting on behalf of the marketplace, and the
+              consent to cancel, vary or correct has been obtained from the marketplace's regulation
+              services provider.</bcl:text>
+          </bcl:paragraph>
+        </bcl:subsection>
+        <bcl:subsection id="d2e747">
+          <bcl:num>3</bcl:num>
+          <bcl:text>A marketplace must establish, maintain and ensure compliance with reasonable
+            policies and procedures that clearly outline the processes and parameters associated
+            with a cancellation, variation or correction and must make such policies and procedures
+            publicly available.</bcl:text>
+        </bcl:subsection>
+      </bcl:section>
+      <bcl:section id="d1e1476">
+        <bcl:marginalnote>Support use of DEA client identifiers</bcl:marginalnote>
+        <bcl:num>9.1</bcl:num>
+        <bcl:text>A marketplace must not permit a marketplace participant to provide direct
+          electronic access to a person or company unless the marketplace's systems support the use
+          of DEA client identifiers.</bcl:text>
+        <bcl:hnote>[en. B.C. Reg. 24/2014, Sch. s. 5.]</bcl:hnote>
+      </bcl:section>
+    </bcl:part>
+    <bcl:part id="d2e757">
+      <bcl:num>5</bcl:num>
+      <bcl:text>Exemption</bcl:text>
+      <bcl:section id="d2e766">
+        <bcl:marginalnote>Exemption</bcl:marginalnote>
+        <bcl:num>10</bcl:num>
+        <bcl:subsection id="d2e774">
+          <bcl:num>1</bcl:num>
+          <bcl:text>The regulator or the securities regulatory authority may grant an exemption from
+            this Instrument, in whole or in part, subject to such conditions or restrictions as may
+            be imposed in the exemption.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e783">
+          <bcl:num>2</bcl:num>
+          <bcl:text>Despite subsection (1), in Ontario, only the regulator may grant such an
+            exemption.</bcl:text>
+        </bcl:subsection>
+        <bcl:subsection id="d2e792">
+          <bcl:num>3</bcl:num>
+          <bcl:text>Except in Ontario, an exemption referred to in subsection (1) is granted under
+            the statute referred to in Appendix B of National Instrument 14-101
+              <in:em>Definitions</in:em> opposite the name of the local jurisdiction.</bcl:text>
+        </bcl:subsection>
+      </bcl:section>
+    </bcl:part>
+    <reg:provisionsnote>[Provisions relevant to the enactment of this regulation: <bcl:link resource="leg" xlink:href="/legislation/96418_01" xlink:type="locator"><in:doc>Securities
+          Act</in:doc></bcl:link>, R.S.B.C. 1996, c. 418, section 184]</reg:provisionsnote>
+  </reg:content>
+</reg:regulation>

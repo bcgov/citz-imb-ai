@@ -1,0 +1,2222 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_03075_01",
+        "act:title": "Manufactured Home Act",
+        "act:chapter": "75",
+        "act:yearenacted": "2003",
+        "act:assentedto": "November 17, 2003",
+        "act:currency": {
+            "act:tlcDirPath": "1325524918/03075/tlc03075_f",
+            "act:tlc": "E3tlc03075"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e25",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e36",
+                            "bcl:text": {
+                                "in:term": "collector",
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/r15001_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Local Government Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96448_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Taxation (Rural Area)\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/vanch_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Vancouver\n              Charter"
+                                    }
+                                ],
+                                "#text": "includes a person appointed as a collector of taxes\n          under the , the , the  or any other Act that authorizes the assessment and levy\n          of taxes on real property;"
+                            }
+                        },
+                        {
+                            "@id": "d2e54",
+                            "bcl:text": {
+                                "in:term": "court",
+                                "#text": "means the Supreme Court;"
+                            }
+                        },
+                        {
+                            "@id": "d2e64",
+                            "bcl:text": {
+                                "in:term": "financing change statement",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property Security\n          Act"
+                                },
+                                "#text": "means a financing change statement\n          as defined in the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e76",
+                            "bcl:text": {
+                                "in:term": "financing statement",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property Security Act"
+                                },
+                                "#text": "means a financing statement as defined in\n          the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e88",
+                            "bcl:text": {
+                                "in:term": "former Act",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96280REP_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Manufactured Home\n              Act"
+                                },
+                                "#text": "means the , R.S.B.C. 1996, c. 280;"
+                            }
+                        },
+                        {
+                            "@id": "d2e100",
+                            "bcl:text": {
+                                "in:term": "instrument",
+                                "#text": "includes a document in writing by which property in\n          a manufactured home may be transferred or acquired;"
+                            }
+                        },
+                        {
+                            "@id": "d2e109",
+                            "bcl:text": {
+                                "in:term": "lessee-owner",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal\n              Property Security Act"
+                                },
+                                "#text": "means a lessee under an agreement in the form of a\n          lease, that is a security agreement, to which section 2 of the  applies;"
+                            }
+                        },
+                        {
+                            "@id": "d2e121",
+                            "bcl:text": {
+                                "in:term": "lessor-owner",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal\n              Property Security Act"
+                                },
+                                "#text": "means a lessor under an agreement in the form of a\n          lease, that is a security agreement, to which section 2 of the  applies;"
+                            }
+                        },
+                        {
+                            "@id": "d2e134",
+                            "bcl:text": {
+                                "in:term": "manufactured home",
+                                "#text": "means any structure, whether ordinarily\n          equipped with wheels or not, that is designed, constructed or manufactured to provide\n          residential accommodation and to be moved from one place to another by being towed or\n          carried;"
+                            }
+                        },
+                        {
+                            "@id": "d2e143",
+                            "bcl:text": [
+                                {
+                                    "in:term": "owner",
+                                    "#text": "means a person entitled to be registered in the register\n          as the owner of a manufactured home, whether entitled in the person's own right or in a\n          representative capacity or otherwise, and includes"
+                                },
+                                "but does not include a secured party, other than a lessor-owner, under a security\n          agreement providing for a security interest in a manufactured home;"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e152",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a debtor under a security agreement providing for a security interest in a\n            manufactured home, and"
+                                },
+                                {
+                                    "@id": "d2e161",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a lessor-owner and a lessee-owner,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e173",
+                            "bcl:text": {
+                                "in:term": "property",
+                                "#text": "means any right, title or interest of an owner in a\n          manufactured home;"
+                            }
+                        },
+                        {
+                            "@id": "d2e183",
+                            "bcl:text": {
+                                "in:term": "register",
+                                "#text": ", when used as a noun, means the information filed with\n          the registrar under this Act or filed with or registered by the registrar under the former\n          Act, including any corrections and notations made to that information by the registrar\n          under this or the former Act;"
+                            }
+                        },
+                        {
+                            "@id": "d2e192",
+                            "bcl:text": {
+                                "in:term": "registrar",
+                                "#text": "means the registrar appointed under section\n          2;"
+                            }
+                        },
+                        {
+                            "@id": "d2e201",
+                            "bcl:text": {
+                                "in:term": "registration number",
+                                "#text": "means the number assigned to a manufactured\n          home by the registrar at the time of registration;"
+                            }
+                        },
+                        {
+                            "@id": "d2e210",
+                            "bcl:text": {
+                                "in:term": "secured party",
+                                "#text": "means a secured party under a security\n          agreement;"
+                            }
+                        },
+                        {
+                            "@id": "d2e219",
+                            "bcl:text": {
+                                "in:term": "security agreement",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property Security Act"
+                                },
+                                "#text": "means a security agreement to which\n            section\n            2 of the \n          applies;"
+                            }
+                        },
+                        {
+                            "@id": "d2e231",
+                            "bcl:text": {
+                                "in:term": "security interest",
+                                "#text": "means an interest in a manufactured home that\n          secures payment or performance of an obligation;"
+                            }
+                        },
+                        {
+                            "@id": "d2e241",
+                            "bcl:text": {
+                                "in:term": "serial number",
+                                "#text": "means the serial number that the manufacturer\n          permanently marked on or attached to the manufactured home."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e251",
+                    "bcl:marginalnote": "Appointment of registrar and staff",
+                    "bcl:num": "2",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96385_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Public Service\n            Act"
+                        },
+                        "#text": "A registrar, and the officers and employees necessary to enable the registrar to\n        perform the registrar's duties, must be appointed under the ."
+                    }
+                },
+                {
+                    "@id": "d2e266",
+                    "bcl:marginalnote": "Delegation of registrar's functions",
+                    "bcl:num": "3",
+                    "bcl:text": "The registrar may delegate, in writing, a function of the registrar to an employee\n        in the public service."
+                },
+                {
+                    "@id": "d2e278",
+                    "bcl:marginalnote": "Seal",
+                    "bcl:num": "4",
+                    "bcl:text": "The registrar may have a seal of office."
+                },
+                {
+                    "@id": "d2e290",
+                    "bcl:marginalnote": "Procedure for registration and issue of decals",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e298",
+                            "bcl:num": "1",
+                            "bcl:text": "In order to register ownership of a manufactured home, the owner must submit for\n          filing with the registrar a notice of ownership in the form established by the registrar\n          and in the manner set out in the regulations."
+                        },
+                        {
+                            "@id": "d2e307",
+                            "bcl:num": "2",
+                            "bcl:text": "If the notice conforms with subsection (3), the registrar must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e316",
+                                    "bcl:num": "a",
+                                    "bcl:text": "file the notice,"
+                                },
+                                {
+                                    "@id": "d2e326",
+                                    "bcl:num": "b",
+                                    "bcl:text": "register the name of the owner of the manufactured home and the interest claimed\n            by the owner, and"
+                                },
+                                {
+                                    "@id": "d2e335",
+                                    "bcl:num": "c",
+                                    "bcl:text": "assign a registration number to the manufactured home."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e344",
+                            "bcl:num": "3",
+                            "bcl:text": "The notice must set out the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e353",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the name and address of the owner;"
+                                },
+                                {
+                                    "@id": "d2e362",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the case of an application by a lessor-owner or a lessee-owner, the names and\n            addresses of the lessor-owner and the lessee-owner;"
+                                },
+                                {
+                                    "@id": "d2e371",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the year of manufacture, the make or model and the serial number of the\n            manufactured home;"
+                                },
+                                {
+                                    "@id": "d2e381",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the current location of the manufactured home;"
+                                },
+                                {
+                                    "@id": "d2e390",
+                                    "bcl:num": "e",
+                                    "bcl:text": "other information required by the regulations."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e399",
+                            "bcl:num": "4",
+                            "bcl:text": "The notice must be accompanied by any other records required by the\n          regulations."
+                        },
+                        {
+                            "@id": "d2e408",
+                            "bcl:num": "5",
+                            "bcl:text": "On registration of ownership of a manufactured home, the registrar must issue to\n          the owner one or more decals bearing its registration number and the owner of the\n          manufactured home must affix them, in the prescribed location, to the manufactured\n          home."
+                        },
+                        {
+                            "@id": "d2e417",
+                            "bcl:num": "6",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property\n              Security Act"
+                                },
+                                "#text": "Registration of a person as a lessor-owner of a manufactured home does not affect\n          the priority status of the interest of the person under the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e431",
+                    "bcl:marginalnote": "Decals",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e439",
+                            "bcl:num": "1",
+                            "bcl:text": "On application filed by the registered owner, if a decal issued under section 5 is\n          stolen, lost, defaced, mutilated or destroyed, the registrar must issue a new\n          decal."
+                        },
+                        {
+                            "@id": "d2e448",
+                            "bcl:num": "2",
+                            "bcl:text": "An application under subsection (1)",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e457",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must be in the form established by the registrar,"
+                                },
+                                {
+                                    "@id": "d2e467",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must state the circumstances of the theft, loss, defacement, mutilation or\n            destruction of the decal, and"
+                                },
+                                {
+                                    "@id": "d2e476",
+                                    "bcl:num": "c",
+                                    "bcl:text": "must indicate the class of decal requested by the applicant."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e486",
+                    "bcl:marginalnote": "Filing notice of transfer",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e494",
+                            "bcl:num": "1",
+                            "bcl:text": "If property in a manufactured home is transferred, a person may submit for filing\n          a notice of transfer in the form established by the registrar and in accordance with the\n          regulations."
+                        },
+                        {
+                            "@id": "d2e503",
+                            "bcl:num": "2",
+                            "bcl:text": "The regulations may require that notices respecting particular classes of\n          transfers be submitted for filing only through persons specified by regulation or\n          designated as qualified suppliers by the registrar."
+                        },
+                        {
+                            "@id": "d2e512",
+                            "bcl:num": "3",
+                            "bcl:text": "The notice must set out the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e522",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the name and address of the new owner;"
+                                },
+                                {
+                                    "@id": "d2e531",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the name of the current registered owner, or",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e540",
+                                            "bcl:num": "i",
+                                            "bcl:text": "of the lessor-owner in the case of the transfer of the lessor-owner's\n              property, or"
+                                        },
+                                        {
+                                            "@id": "d2e549",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "of the lessee-owner in the case of the transfer of the lessee-owner's\n              property;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e558",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the registration number of the manufactured home;"
+                                },
+                                {
+                                    "@id": "d2e567",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the current location of the manufactured home;"
+                                },
+                                {
+                                    "@id": "d2e577",
+                                    "bcl:num": "e",
+                                    "bcl:text": "other information required by the regulations."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e586",
+                            "bcl:num": "4",
+                            "bcl:text": "The notice must be accompanied by any other records required by the\n          regulations."
+                        },
+                        {
+                            "@id": "d2e595",
+                            "bcl:num": "5",
+                            "bcl:text": "The regulations may require persons specified or designated for the purposes of\n            subsection\n            (2) who file records in the registry to provide copies of the records to\n          other persons or to retain copies of the records for a prescribed period."
+                        },
+                        {
+                            "@id": "d2e604",
+                            "bcl:num": "6",
+                            "bcl:text": "A notice of transfer of a manufactured home must not be submitted for filing\n          unless ownership of the manufactured home is registered under this Act."
+                        },
+                        {
+                            "@id": "d2e613",
+                            "bcl:num": "7",
+                            "bcl:text": "Except as against the person making it, an instrument purporting to transfer\n          property in a manufactured home is not effective to transfer property in the manufactured\n          home unless a notice of transfer in the form established by the registrar is filed with\n          the registrar."
+                        },
+                        {
+                            "@id": "d2e622",
+                            "bcl:num": "8",
+                            "bcl:text": "The giving of a security interest in a manufactured home does not sever a joint\n          tenancy in the manufactured home."
+                        },
+                        {
+                            "@id": "d2e632",
+                            "bcl:num": "9",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96250_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Land Title\n            Act"
+                                },
+                                "#text": "Subsections (7) and (8) are subject to the ."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e645",
+                    "bcl:marginalnote": "Filing of notice, application or other record",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e653",
+                            "bcl:num": "1",
+                            "bcl:text": "A notice, application or other record required or permitted, by this Act, to be\n          filed with the registrar",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e662",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must be submitted to the registrar for filing in the prescribed manner and\n            accompanied by the prescribed fee,"
+                                },
+                                {
+                                    "@id": "d2e671",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must be in a form established by or acceptable to the registrar,"
+                                },
+                                {
+                                    "@id": "d2e681",
+                                    "bcl:num": "c",
+                                    "bcl:text": "must, in the opinion of the registrar, be legible and suitable for photographing\n            or for electronic or digital imaging or storage, and"
+                                },
+                                {
+                                    "@id": "d2e690",
+                                    "bcl:num": "d",
+                                    "bcl:text": "must be in the English language or be filed with an English translation verified\n            in a manner satisfactory to the registrar."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e699",
+                            "bcl:num": "2",
+                            "bcl:text": "A notice, application or other record is filed with the registrar when the\n          registrar",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e708",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is satisfied that the notice, application or other record and information\n            contained in it appear to meet the requirements of this Act and the regulations,\n            and"
+                                },
+                                {
+                                    "@id": "d2e717",
+                                    "bcl:num": "b",
+                                    "bcl:text": "accepts the notice, application or other record and includes in the register the\n            information contained in the record."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e727",
+                    "bcl:marginalnote": "Maintaining register",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e735",
+                            "bcl:num": "1",
+                            "bcl:text": "If a record is filed with the registrar under this Act or is otherwise maintained\n          by the registrar, the registrar may have the record",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e744",
+                                    "bcl:num": "a",
+                                    "bcl:text": "photographed, or"
+                                },
+                                {
+                                    "@id": "d2e753",
+                                    "bcl:num": "b",
+                                    "bcl:text": "stored in electronic or digital form or reproduced in any other prescribed\n            manner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e763",
+                            "bcl:num": "2",
+                            "bcl:text": "A photograph, stored record or reproduction referred to in subsection (1)\n          must be considered for all purposes to be the record photographed, stored or\n          reproduced."
+                        },
+                        {
+                            "@id": "d2e772",
+                            "bcl:num": "3",
+                            "bcl:text": "If the information contained in a record filed with or otherwise maintained by the\n          registrar in paper form under this Act is converted into another form under subsection\u00a0(1),\n          the registrar may destroy the paper form records."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e782",
+                    "bcl:marginalnote": "Refusal to file records",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e790",
+                            "bcl:num": "1",
+                            "bcl:text": "Despite any other provision of this Act, the registrar may refuse to file a\n          notice, application or other record submitted to the registrar for filing if, in the\n          opinion of the registrar,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e799",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the notice, application or other record is not complete due to an omission or\n            misdescription,"
+                                },
+                                {
+                                    "@id": "d2e808",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the notice, application or other record does not comply with the requirements of\n            this Act or the regulations,"
+                                },
+                                {
+                                    "@id": "d2e818",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the notice, application or other record contains any error, alteration or\n            erasure, or"
+                                },
+                                {
+                                    "@id": "d2e827",
+                                    "bcl:num": "d",
+                                    "bcl:text": "another notice, application or record that, under this Act, must be filed in\n            conjunction with the notice, application or other record has not yet been submitted for\n            filing."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e836",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar is not under any duty to determine any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e845",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the authenticity or accuracy of the signature of a person named in a record\n            filed under this Act;"
+                                },
+                                {
+                                    "@id": "d2e854",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the identity of a person named in a record filed under this Act;"
+                                },
+                                {
+                                    "@id": "d2e863",
+                                    "bcl:num": "c",
+                                    "bcl:text": "whether an application or other record filed with the registrar, or the\n            information contained in it, meets the requirements of this Act and the\n            regulations."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e873",
+                    "bcl:marginalnote": "Power of registrar to correct register",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e881",
+                            "bcl:num": "1",
+                            "bcl:text": "On an application or on the initiative of the registrar, the registrar may correct\n          an error or omission in the register if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e890",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the registrar is satisfied that an error or omission exists, and"
+                                },
+                                {
+                                    "@id": "d2e899",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the registrar is satisfied as to the true facts that ought to have been\n            incorporated into the register."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e909",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection\n            (1) applies whether or not the error or omission was made by",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e918",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a person who submitted a record to the registrar for filing, or"
+                                },
+                                {
+                                    "@id": "d2e927",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the registrar."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e936",
+                            "bcl:num": "3",
+                            "bcl:text": "Any correction made by the registrar under this section must be shown on the\n          register as a correction, with the date and time of the correction noted by the\n          registrar."
+                        },
+                        {
+                            "@id": "d2e945",
+                            "bcl:num": "4",
+                            "bcl:text": "The corrected register and every corrected entry have validity and effect from the\n          making of the correction as if the error or omission had not existed."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e956",
+                    "bcl:marginalnote": "Name change of registered owner",
+                    "bcl:num": "12",
+                    "bcl:text": "On application of a registered owner and on the registrar being satisfied that the\n        name of that owner has been changed, the registrar must record in the register the new name\n        of the registered owner."
+                },
+                {
+                    "@id": "d2e968",
+                    "bcl:marginalnote": "Lost or destroyed records",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e976",
+                            "bcl:num": "1",
+                            "bcl:text": "If the registrar is required to produce a record and is unable to do so because it\n          has been lost, mislaid or destroyed, the registrar must give to the court or person making\n          the requisition a record to that effect."
+                        },
+                        {
+                            "@id": "d2e985",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar may produce, instead of the record, whatever evidence relating to\n          the record is available to the registrar."
+                        },
+                        {
+                            "@id": "d2e994",
+                            "bcl:num": "3",
+                            "bcl:text": "Evidence produced under subsection (2) is compliance with the\n          requisition."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1004",
+                    "bcl:marginalnote": "Defects in records",
+                    "bcl:num": "14",
+                    "bcl:text": "A record to which this Act applies is not invalidated or made ineffective merely by\n        a defect, irregularity, omission or error in it or in its execution unless, in the opinion\n        of the court, the defect, irregularity, omission or error has actually misled a person whose\n        interest is affected."
+                },
+                {
+                    "@id": "d2e1016",
+                    "bcl:marginalnote": "Moving a manufactured home",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1024",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to the regulations, a person must not move a manufactured home\n          unless",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1033",
+                                    "bcl:num": "a",
+                                    "bcl:text": "ownership of the manufactured home is registered under this Act,"
+                                },
+                                {
+                                    "@id": "d2e1042",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the registrar has issued a transport permit authorizing the manufactured home to\n            be moved, and"
+                                },
+                                {
+                                    "@id": "d2e1052",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the manufactured home is moved to the location, and in accordance with the terms\n            and conditions, set out in the transport permit."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1061",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "On application, in the form established by the registrar and in the manner set out\n          in the regulations, of",
+                                "the registrar must,",
+                                "issue a transport permit authorizing the manufactured home to be moved to the\n          location, and in accordance with the terms and conditions, set out in the transport\n          permit."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1070",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a registered owner of a manufactured home,"
+                                },
+                                {
+                                    "@id": "d2e1079",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02077_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Manufactured Home Park Tenancy Act"
+                                        },
+                                        "#text": "a landlord, under an order of possession granted under section 48 or\n              49 of the\n               or in the exercise\n            of a right conferred on the landlord under a regulation of that Act respecting disposal\n            of abandoned personal property,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1091",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a secured party, or"
+                                },
+                                {
+                                    "@id": "d2e1100",
+                                    "bcl:num": "d",
+                                    "bcl:text": "any other person under an order of a court,"
+                                },
+                                {
+                                    "@id": "d2e1113",
+                                    "bcl:num": "e",
+                                    "bcl:text": "on being satisfied that a certificate or confirmation in electronic format has\n            been issued under section 25 of this Act, and"
+                                },
+                                {
+                                    "@id": "d2e1122",
+                                    "bcl:num": "f",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96195REP_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Home Purchase Assistance Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96193REP_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Home Mortgage\n                Assistance Program Act"
+                                            }
+                                        ],
+                                        "#text": "if the application is for a transport permit to remove a manufactured home from\n            British Columbia, on being satisfied that no grants or mortgages have been made under\n            the  for the manufactured home,\n            and no agreements have been made under the , under which the government is entitled\n            to repayment,"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1140",
+                            "bcl:num": "3",
+                            "bcl:text": "If an application is made by a landlord under subsection (2) (b), the registrar\n          must not decline to issue a transport permit merely because the taxes on the manufactured\n          home are due, in default, in arrears or delinquent, so long as the registrar is satisfied\n          that the collector having taxing authority over the manufactured home has consented to the\n          issue of the transport permit."
+                        },
+                        {
+                            "@id": "d2e1149",
+                            "bcl:num": "4",
+                            "bcl:text": "A collector must not unreasonably withhold consent under subsection (3)\n          if the collector is satisfied that the manufactured home will not be transported out of\n          the taxing jurisdiction."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1159",
+                    "bcl:marginalnote": "Notice of application for transport permit",
+                    "bcl:num": "16",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1167",
+                            "bcl:num": "1",
+                            "bcl:text": "The registrar must send notice of an application for a transport permit\n          to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1176",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a lessee-owner, when the application is made by a lessor-owner, and"
+                                },
+                                {
+                                    "@id": "d2e1185",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a secured party revealed by a search of the personal property registry using the\n            manufactured home registration number."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1195",
+                            "bcl:num": "2",
+                            "bcl:text": "The notice must specify the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1204",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the name of the applicant;"
+                                },
+                                {
+                                    "@id": "d2e1213",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the location to which the manufactured home is to be transported;"
+                                },
+                                {
+                                    "@id": "d2e1222",
+                                    "bcl:num": "c",
+                                    "bcl:text": "other information required by the registrar."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1232",
+                    "bcl:marginalnote": "Transport permits",
+                    "bcl:num": "17",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1240",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to the regulations and unless otherwise stated in it, a transport permit\n          expires 30 days after the date it was issued."
+                        },
+                        {
+                            "@id": "d2e1249",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar may, subject to the regulations, issue a transport permit subject to\n          any conditions the registrar considers necessary to facilitate the transportation of a\n          manufactured home from one location to another."
+                        },
+                        {
+                            "@id": "d2e1258",
+                            "bcl:num": "3",
+                            "bcl:text": "If a transport permit is issued subject to conditions, a person must not move the\n          manufactured home otherwise than in accordance with the conditions."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1269",
+                    "bcl:marginalnote": "Sale or transport of unregistered manufactured home\n        prohibited",
+                    "bcl:num": "18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1277",
+                            "bcl:num": "1",
+                            "bcl:text": "A person must not import into British Columbia, sell, offer for sale or move a\n          manufactured home unless the ownership of the manufactured home is registered under this\n          Act."
+                        },
+                        {
+                            "@id": "d2e1286",
+                            "bcl:num": "2",
+                            "bcl:text": "This section does not apply to a manufactured home that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1295",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is owned by the government, a Crown corporation or agency or by a municipality\n            and is occupied by or for the purposes of the government, the Crown corporation or\n            agency or the municipality, or"
+                                },
+                                {
+                                    "@id": "d2e1305",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is exempted from this section by regulation or by the registrar."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1315",
+                    "bcl:marginalnote": "Unauthorized change in location of manufactured home",
+                    "bcl:num": "19",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1323",
+                            "bcl:num": "1",
+                            "bcl:text": "If the location of a manufactured home on the register is corrected under\n          section\u00a011\u00a0(1), the registrar may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1332",
+                                    "bcl:num": "a",
+                                    "bcl:text": "send a notice of the change to",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1341",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the collector having taxing authority over the manufactured home at the\n              location on the register before the change, and"
+                                        },
+                                        {
+                                            "@id": "d2e1351",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "a secured party revealed by a search of the personal property registry using\n              the manufactured home registration number, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1360",
+                                    "bcl:num": "b",
+                                    "bcl:text": "send notice to the present registered owner requiring the registered owner\n            to",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1369",
+                                            "bcl:num": "i",
+                                            "bcl:text": "complete any form established by the registrar to process the change in\n              location, or"
+                                        },
+                                        {
+                                            "@id": "d2e1378",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "satisfy the registrar that the change in location was made",
+                                            "bcl:clause": [
+                                                {
+                                                    "@id": "d2e1387",
+                                                    "bcl:num": "A",
+                                                    "bcl:text": "in compliance with this Act and the regulations, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1396",
+                                                    "bcl:num": "B",
+                                                    "bcl:text": "by someone other than the present registered owner."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1406",
+                            "bcl:num": "2",
+                            "bcl:text": "If, within 60 days of the registrar sending notice to the registered owner under\n            subsection (1)\n            (b), the registrar has not received the form, if any, or been satisfied that\n          the change in location was made in compliance with this Act and the regulations or made by\n          someone other than the registered owner, the registrar may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1415",
+                                    "bcl:num": "a",
+                                    "bcl:text": "decline to file a notice of transfer, and"
+                                },
+                                {
+                                    "@id": "d2e1424",
+                                    "bcl:num": "b",
+                                    "bcl:text": "decline to issue a transport permit."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1434",
+                    "bcl:marginalnote": "Search",
+                    "bcl:num": "20",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1442",
+                            "bcl:num": "1",
+                            "bcl:text": "A person may request one or more of the following in the manner set out in the\n          regulations:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1451",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a search according to the name of a person and the issue of a search\n            result;"
+                                },
+                                {
+                                    "@id": "d2e1460",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a search according to the serial number of a manufactured home and the issue of\n            a search result;"
+                                },
+                                {
+                                    "@id": "d2e1470",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a search according to the registration number of a manufactured home and the\n            issue of a search result."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1479",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar may provide a copy or a certified copy of a record that is in paper\n          form or electronic form in the register."
+                        },
+                        {
+                            "@id": "d2e1488",
+                            "bcl:num": "3",
+                            "bcl:text": "Without proof of the signature, seal or official position of the registrar, a\n          certified copy referred to in subsection (2) is admissible in evidence as a true copy\n          of the original record."
+                        },
+                        {
+                            "@id": "d2e1497",
+                            "bcl:num": "4",
+                            "bcl:text": "The signature of the registrar on a certified copy referred to in subsection (3)\n          may be reproduced by any means, whether graphic, electronic, digital, mechanical or\n          otherwise."
+                        },
+                        {
+                            "@id": "d2e1506",
+                            "bcl:num": "5",
+                            "bcl:text": "A record issued or provided under this section is evidence of any of the matters\n          stated in the record that relate to the register."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1516",
+                    "bcl:marginalnote": "Exemption from Act",
+                    "bcl:num": "21",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1524",
+                            "bcl:num": "1",
+                            "bcl:text": "In accordance with the regulations, the registrar may, on application of a person,\n          order that a manufactured home is exempted from this Act, or a provision of it, on terms\n          and conditions the registrar imposes."
+                        },
+                        {
+                            "@id": "d2e1533",
+                            "bcl:num": "2",
+                            "bcl:text": "A person may apply to the registrar in the form established by the registrar for\n          an exemption order or to vary or cancel an order previously made."
+                        },
+                        {
+                            "@id": "d2e1542",
+                            "bcl:num": "3",
+                            "bcl:text": "The regulations may require that applications respecting particular classes of\n          exemptions be submitted for filing only through persons specified by regulation or\n          designated as qualified suppliers by the registrar."
+                        },
+                        {
+                            "@id": "d2e1552",
+                            "bcl:num": "4",
+                            "bcl:text": "The regulations may require persons specified or designated for the purposes of\n            subsection\n            (3) who file records in the registry to provide copies of the records to\n          other persons or to retain copies of the records for a prescribed period."
+                        },
+                        {
+                            "@id": "d2e1561",
+                            "bcl:num": "5",
+                            "bcl:text": "The registrar may, on application of a person, vary or cancel all or part of an\n          order made under subsection (1)."
+                        },
+                        {
+                            "@id": "d2e1570",
+                            "bcl:num": "6",
+                            "bcl:text": "If an order is made under this section, the registrar must record the exemption of\n          the manufactured home, or a variation or cancellation of an order made under this section,\n          by notation in the register."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1580",
+                    "bcl:marginalnote": "Caution",
+                    "bcl:num": "22",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1588",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who has commenced or is a party to a proceeding, and is making a claim to\n          property in a manufactured home, may submit for filing a caution in the form established\n          by the registrar, together with a copy of the writ, notice or pleading in which the person\n          claims the interest."
+                        },
+                        {
+                            "@id": "d2e1597",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar must file the caution or any court order continuing or cancelling\n          the caution."
+                        },
+                        {
+                            "@id": "d2e1606",
+                            "bcl:num": "3",
+                            "bcl:text": "A caution expires 3 months after it is filed unless within that period the court,\n          on application, orders that the caution be",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1616",
+                                    "bcl:num": "a",
+                                    "bcl:text": "cancelled, or"
+                                },
+                                {
+                                    "@id": "d2e1625",
+                                    "bcl:num": "b",
+                                    "bcl:text": "continued until a further order is made or until the end of a period set by the\n            court for determining that person's rights under the caution."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1634",
+                            "bcl:num": "4",
+                            "bcl:text": "A continuation order under subsection (3) (b) must be filed with the registrar\n          before the caution expires."
+                        },
+                        {
+                            "@id": "d2e1643",
+                            "bcl:num": "5",
+                            "bcl:text": "The person who filed or continued the filing of a caution may withdraw it at any\n          time by notice in writing to the registrar."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1653",
+                    "bcl:marginalnote": "Manufactured home on rented pad",
+                    "bcl:num": "23",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1661",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "manufactured home park",
+                                "#text": "In this section,  means land used or\n          occupied by a person for the purpose of providing space for the accommodation of 3 or more\n          manufactured homes and for imposing a charge or rental for the use of that\n          space."
+                            }
+                        },
+                        {
+                            "@id": "d2e1673",
+                            "bcl:num": "2",
+                            "bcl:text": "If a person moves a manufactured home to a manufactured home park, or purchases a\n          manufactured home that has never been occupied and that is located in a manufactured home\n          park, the manufactured home is not part of the land that forms the manufactured home park\n          unless a written agreement that the manufactured home is part of the land",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1682",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is entered into by",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1692",
+                                            "bcl:num": "i",
+                                            "bcl:text": "every registered owner of the manufactured home,"
+                                        },
+                                        {
+                                            "@id": "d2e1701",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96359_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Personal Property Security Act"
+                                                },
+                                                "#text": "every person with a security interest in the manufactured home who has\n              registered a financing statement in the personal property registry under the  using the registration\n              number assigned under this Act or, if the manufactured home is not currently\n              registered under this Act, the serial number of the manufactured home, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1713",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "every person who is registered in the land title office as an owner of the fee\n              simple interest in the land, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1722",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is filed with the registrar."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1733",
+                    "bcl:marginalnote": "Access to register by taxing authority",
+                    "bcl:num": "24",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1741",
+                            "bcl:num": "1",
+                            "bcl:text": "The officers of any taxing authority are entitled, without charge, to search the\n          register in respect of manufactured homes located on land over which it has authority, for\n          the purposes of taxation, assessment and incidental matters."
+                        },
+                        {
+                            "@id": "d2e1750",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of subsection (1), any person approved by the registrar and\n          employed by the taxing authority has access to the register."
+                        },
+                        {
+                            "@id": "d2e1759",
+                            "bcl:num": "3",
+                            "bcl:text": "If the officers of a taxing authority so request, the registrar may provide any\n          information in the register required by them at a charge to be set in each case by the\n          registrar, on the basis of reasonable compensation to the government for the cost of\n          providing the information."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1769",
+                    "bcl:marginalnote": "Taxes",
+                    "bcl:num": "25",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1777",
+                            "bcl:num": "1",
+                            "bcl:text": "Unless the regulations provide otherwise, the registrar must not issue a transport\n          permit under section 15 unless satisfied that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1786",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the collector having taxing authority over the manufactured home has issued a\n            certificate or confirmed in electronic format that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1795",
+                                            "bcl:num": "i",
+                                            "bcl:text": "no taxes on the manufactured home are in arrears or delinquent, and"
+                                        },
+                                        {
+                                            "@id": "d2e1805",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "no taxes for the current year, that were imposed or are deemed to have been\n              imposed, are unpaid, or"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1814",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the requirements of section 26 (1) have been met."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1823",
+                            "bcl:num": "2",
+                            "bcl:text": "On request, a collector must provide the certificate or confirmation in electronic\n          format if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1832",
+                                    "bcl:num": "a",
+                                    "bcl:text": "no taxes on the manufactured home are in arrears or delinquent and no taxes for\n            the current year, that were imposed or are deemed to have been imposed, are unpaid,\n            or"
+                                },
+                                {
+                                    "@id": "d2e1841",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the requirements of section 26 (1) have been met."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1850",
+                            "bcl:num": "3",
+                            "bcl:text": "The certificate or confirmation must be provided free and must contain the date to\n          which the taxes have been paid."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1860",
+                    "bcl:marginalnote": "Payment before certificate",
+                    "bcl:num": "26",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1868",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                {
+                                    "bcl:link": [
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/r15001_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Local Government Act"
+                                        },
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96448_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Taxation\n              (Rural Area) Act"
+                                        },
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/vanch_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Vancouver\n              Charter"
+                                        }
+                                    ],
+                                    "#text": "Despite the , the  or the , if"
+                                },
+                                "the collector must issue a certificate or confirmation if"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1886",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a tax notice in respect of taxes imposed on a manufactured home for the current\n            year has not been mailed to the person liable for them, and"
+                                },
+                                {
+                                    "@id": "d2e1895",
+                                    "bcl:num": "b",
+                                    "bcl:text": [
+                                        "a person, other than a landlord",
+                                        "has requested the collector to issue a certificate or confirmation in electronic\n            format for the purpose of section 25 (1) of this Act,"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1905",
+                                            "bcl:num": "i",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/02077_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Manufactured Home Park Tenancy Act"
+                                                },
+                                                "#text": "under an order of possession granted under section 47 of the , or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1917",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in the exercise of a right conferred on the person under a regulation of that\n              Act respecting disposal of abandoned personal property,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1932",
+                                    "bcl:num": "c",
+                                    "bcl:text": "there are no taxes in arrears or delinquent in respect of the manufactured home,\n            and"
+                                },
+                                {
+                                    "@id": "d2e1941",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the person making the request has paid to the collector a deposit in the\n            prescribed amount."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1951",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                {
+                                    "bcl:link": [
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/r15001_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Local Government Act"
+                                        },
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96448_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Taxation\n              (Rural Area) Act"
+                                        },
+                                        {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/vanch_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Vancouver\n              Charter"
+                                        }
+                                    ],
+                                    "#text": "Despite the , the  and the , if a person, other than a landlord"
+                                },
+                                "has requested the collector to issue a certificate or confirmation in electronic\n          format for the purpose of section 25 (1) of this Act for a manufactured home in\n          respect of which a tax notice or statement has been mailed to the person liable for the\n          taxes, the collector may decline to issue the certificate or confirmation until all taxes\n          due, in arrears or delinquent have been paid."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1969",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02077_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Manufactured Home Park Tenancy Act"
+                                        },
+                                        "#text": "under an order of possession granted under section 47 of the , or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1981",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the exercise of a right conferred on the person under a regulation of that\n            Act respecting disposal of abandoned personal property,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1993",
+                            "bcl:num": "3",
+                            "bcl:text": "Payments accepted under subsection (1) (d) bear interest at the prescribed\n          annual rate and the payments and interest must be applied and credited by the collector\n          against the current year's taxes imposed on the manufactured home in respect of which the\n          payment was made."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2003",
+                    "bcl:marginalnote": "Payment of taxes by others",
+                    "bcl:num": "27",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2011",
+                            "bcl:num": "1",
+                            "bcl:text": "A person not primarily liable for taxes in respect of a manufactured home who is\n          the holder of a security interest in the manufactured home and pays the taxes in order to\n          obtain a transport permit under section 15 is entitled",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2020",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to add the amount paid to the principal money secured by the security interest,\n            or"
+                                },
+                                {
+                                    "@id": "d2e2029",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to deduct the amount from rent, purchase price or other money payable under the\n            instrument in respect of which the person claims registration."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2039",
+                            "bcl:num": "2",
+                            "bcl:text": "An amount paid under subsection (1) bears interest at the prescribed annual\n          rate from the date of payment."
+                        },
+                        {
+                            "@id": "d2e2048",
+                            "bcl:num": "3",
+                            "bcl:text": "The person who has paid the taxes under subsection (1) has, in respect of\n          the amount paid, a lien against the manufactured home."
+                        },
+                        {
+                            "@id": "d2e2057",
+                            "bcl:num": "4",
+                            "bcl:text": "The lien under subsection (3) has priority over any security interest\n          in the manufactured home, except a claim of the government."
+                        },
+                        {
+                            "@id": "d2e2066",
+                            "bcl:num": "5",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal\n              Property Security Act"
+                                },
+                                "#text": "The lien under subsection (3) ceases to exist after the expiry of 15\n          days from the date the taxes were paid unless, before that date, the lien is registered in\n          the personal property registry in the form and manner prescribed under the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e2078",
+                            "bcl:num": "6",
+                            "bcl:text": "The priority provided under subsection (4) does not apply with respect to the\n          interest of a secured party who,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2087",
+                                    "bcl:num": "a",
+                                    "bcl:text": "at the date the taxes were paid, held a perfected security interest in the\n            manufactured home, and"
+                                },
+                                {
+                                    "@id": "d2e2097",
+                                    "bcl:num": "b",
+                                    "bcl:text": "has not been given written notice of the lien before the expiry of 60 days from\n            the date the taxes were paid."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2106",
+                            "bcl:num": "7",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property Security Act"
+                                },
+                                "#text": "The notice under subsection (6) may be given in accordance with section 72 of the\n             or by registered mail\n          addressed to the address of the person to be notified as it appears in the security\n          agreement or in the financing statement that relates to the manufactured home and that is\n          registered in the personal property registry."
+                            }
+                        },
+                        {
+                            "@id": "d2e2118",
+                            "bcl:num": "8",
+                            "bcl:text": "The amount and any interest paid under subsections (1) and (2) is a debt\n          recoverable by action by the person paying the taxes against the person who is primarily\n          liable."
+                        },
+                        {
+                            "@id": "d2e2127",
+                            "bcl:num": "9",
+                            "bcl:text": "A holder of a security interest who pays the amount of the taxes with interest to\n          the date of payment to the person referred to in subsection (1) is subrogated to\n          all of the rights and priorities held by that person."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2137",
+                    "bcl:marginalnote": "Tax lien by the government or a municipality",
+                    "bcl:num": "28",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2145",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/r15001_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Local\n              Government Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96448_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Taxation (Rural Area)\n                Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/vanch_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Vancouver\n              Charter"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96102_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Drainage, Ditch and Dike\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96359_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Personal Property\n              Security Act"
+                                    }
+                                ],
+                                "#text": "If taxes in respect of a manufactured home imposed under the , the , the  or Part 2 of the  have become due, the collector may, whenever the taxes and any\n          related interest or penalties remain unpaid, register a financing statement in the\n          personal property registry established under the  in the form and manner prescribed under that\n          Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e2173",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property Security Act"
+                                },
+                                "#text": "Sections 18, 43 (1) to (3), (6) to (8), (12) and (13), 46 to 48, 51, 52 and 54 of the\n             apply to registrations\n          under subsection\n            (1) of this section."
+                            }
+                        },
+                        {
+                            "@id": "d2e2185",
+                            "bcl:num": "3",
+                            "bcl:text": "On registration of a financing statement under subsection (1), a lien for the\n          unpaid taxes and any related interest and penalty is created on the manufactured home to\n          which the registration relates and the lien continues as long as the registration is\n          effective."
+                        },
+                        {
+                            "@id": "d2e2195",
+                            "bcl:num": "4",
+                            "bcl:text": "The lien under subsection (3) has priority over any security interest,\n          charge or claim, except a claim of the government."
+                        },
+                        {
+                            "@id": "d2e2204",
+                            "bcl:num": "5",
+                            "bcl:text": "A collector who has registered a financing statement under subsection (1) must\n          give a copy of the financing statement to each person registered under section 5 as\n          owner of the manufactured home to which the registration relates."
+                        },
+                        {
+                            "@id": "d2e2213",
+                            "bcl:num": "6",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96359_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Personal Property Security Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96359_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Personal Property Security Act"
+                                    }
+                                ],
+                                "#text": "The copy of the financing statement referred to in subsection (5) and the written\n          notice referred to in section 29 (2) may be given in accordance with section\n          72 of the  or sent by registered mail\n          to the person's address as it appears in the records of the register, in which case\n            section 72\n            (2) of the \n          applies."
+                            }
+                        },
+                        {
+                            "@id": "d2e2228",
+                            "bcl:num": "7",
+                            "bcl:text": "A registration of a financing statement under subsection (1) is effective until\n          discharged",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2237",
+                                    "bcl:num": "a",
+                                    "bcl:text": "by registration of a financing change statement, or"
+                                },
+                                {
+                                    "@id": "d2e2246",
+                                    "bcl:num": "b",
+                                    "bcl:text": "as provided in section 29 (1) or (2)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2256",
+                    "bcl:marginalnote": "Discharge of tax lien",
+                    "bcl:num": "29",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2264",
+                            "bcl:num": "1",
+                            "bcl:text": "When the unpaid taxes, interest and penalties, if any, charged against the\n          manufactured home in respect of which a registration has been made under section 28 (1)\n          have been paid, the collector must discharge the registration."
+                        },
+                        {
+                            "@id": "d2e2273",
+                            "bcl:num": "2",
+                            "bcl:text": "If the collector fails to discharge the registration as required in subsection\n          (1), the person registered under section 5 as owner of the manufactured home to which the\n          registration relates may require the registrar of the personal property registry to give a\n          written notice to the collector stating that the registration will be discharged by the\n          registrar on the expiry of 40 days after the day the registrar gives the notice to the\n          collector, unless in the meantime the collector gives the registrar a court order\n          maintaining the registration."
+                        },
+                        {
+                            "@id": "d2e2282",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "If the collector has been given a notice under subsection (2) and fails\n          to",
+                                "before the expiry of the 40 days referred to in subsection (2), the registrar of\n          the personal property registry may discharge the registration to which the notice\n          relates."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2292",
+                                    "bcl:num": "a",
+                                    "bcl:text": "register a financing change statement discharging the registration,\n            or"
+                                },
+                                {
+                                    "@id": "d2e2301",
+                                    "bcl:num": "b",
+                                    "bcl:text": "obtain a court order maintaining the registration and give the order to the\n            registrar"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2313",
+                            "bcl:num": "4",
+                            "bcl:text": "On application by the collector, the court may order that the registration\n          referred to in subsection (2) be maintained or discharged."
+                        },
+                        {
+                            "@id": "d2e2322",
+                            "bcl:num": "5",
+                            "bcl:text": "On application by a collector, a court may make an order to protect or enforce a\n          lien on a manufactured home, including an order that the manufactured home be delivered to\n          a collector or that the manufactured home be seized by the collector."
+                        },
+                        {
+                            "@id": "d2e2331",
+                            "bcl:num": "6",
+                            "bcl:text": "Even if a manufactured home has been delivered to or seized by a collector under\n            subsection\n            (5), it must not be sold or otherwise disposed of in a manner other than in\n          compliance with the Act under which the taxes were levied."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2342",
+                    "bcl:marginalnote": "Application of other Acts to tax collection in respect of manufactured\n        homes",
+                    "bcl:num": "30",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2350",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96359_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Personal Property\n              Security Act"
+                                },
+                                "#text": "When a collector seizes or otherwise takes possession of a manufactured home,\n          section\u00a017\u00a0(2) and\u00a0(3) (a) and (b) of the  applies."
+                            }
+                        },
+                        {
+                            "@id": "d2e2362",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/r15001_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Local Government\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96448_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Taxation (Rural Area)\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/vanch_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Vancouver\n              Charter"
+                                    }
+                                ],
+                                "#text": "Taxes levied in respect of a manufactured home are recoverable in any manner in\n          which taxes are recoverable under the , the , the  or any other Act."
+                            }
+                        },
+                        {
+                            "@id": "d2e2380",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96281_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Manufactured Home Tax Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96020_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Assessment Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/r15001_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Local Government\n              Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96412_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "School\n            Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96448_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Taxation (Rural Area) Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/vanch_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Vancouver Charter"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96281_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Manufactured Home Tax Act"
+                                    }
+                                ],
+                                "#text": "Subject to the , a\n          manufactured home, whether or not it falls within the definition of an improvement under\n          the , the , the , the , the\n             or any other Act, is an improvement for\n          the purpose of real property assessment and taxation and, except as provided in section 3 of\n          the , the manufactured home must be\n          assessed and taxed in the name of the owner of the land on which the manufactured home is\n          located at the time of assessment."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2412",
+                    "bcl:marginalnote": "Filing of certificate of collector enforceable as a judgment of the Supreme\n        Court",
+                    "bcl:num": "31",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2420",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/r15001_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Local Government Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96448_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Taxation\n              (Rural Area) Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/vanch_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Vancouver\n              Charter"
+                                    }
+                                ],
+                                "#text": "When default is made in the payment of taxes due and payable with respect to a\n          manufactured home under the , the , the  or any other Act, the collector may file a certificate\n          with any district registrar of the Supreme Court."
+                            }
+                        },
+                        {
+                            "@id": "d2e2438",
+                            "bcl:num": "2",
+                            "bcl:text": "A certificate filed under subsection (1) has the same effect and proceedings may\n          be taken on it as if it were a judgment of the court for the recovery of a debt of the\n          amount stated in the certificate against the person named in it."
+                        },
+                        {
+                            "@id": "d2e2447",
+                            "bcl:num": "3",
+                            "bcl:text": "The certificate filed under subsection (1) must contain",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2457",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the registration number of the manufactured home,"
+                                },
+                                {
+                                    "@id": "d2e2466",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the amount of taxes and related interest or penalties owing in respect of the\n            manufactured home, and"
+                                },
+                                {
+                                    "@id": "d2e2475",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the name and address of the taxing authority to which the taxes are\n            owing."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2485",
+                    "bcl:marginalnote": "Compliance with manufactured home standards",
+                    "bcl:num": "32",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2493",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:strong": ".",
+                                "#text": "Unless the manufactured home complies in all respects with the standards\n          prescribed by regulation at the time it was manufactured or is exempted from this section\n          by the regulations or by the registrar, a person must not move, sell, offer for sale or\n          advertise for sale a previously unoccupied manufactured home or a manufactured home that\n          was manufactured after May 15, 1992"
+                            }
+                        },
+                        {
+                            "@id": "d2e2504",
+                            "bcl:num": "2",
+                            "bcl:text": "A regulation made under subsection (1) may incorporate by reference, with\n          changes the Lieutenant Governor in Council considers necessary, all or part of any code or\n          standard respecting manufactured homes."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2514",
+                    "bcl:marginalnote": "Disclosure statement to be provided to prospective\n        purchaser",
+                    "bcl:num": "33",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2522",
+                            "bcl:num": "1",
+                            "bcl:text": "A person must not sell or offer for sale a used or previously occupied\n          manufactured home unless",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2531",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the person discloses in writing to any prospective purchaser whether or not the\n            manufactured home complies with the standards prescribed by regulation, or"
+                                },
+                                {
+                                    "@id": "d2e2540",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the manufactured home is exempted from this section by the regulations or by the\n            registrar."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2550",
+                            "bcl:num": "2",
+                            "bcl:text": "Subsection (1) does not apply if the person discloses in writing to any\n          prospective purchaser that the manufactured home was manufactured on or before May 15,\n          1992."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2560",
+                    "bcl:marginalnote": "Registrar's decisions",
+                    "bcl:num": "34",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2568",
+                            "bcl:num": "1",
+                            "bcl:text": "The registrar must promptly give the applicant a notice of refusal if the\n          registrar refuses",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2577",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to file a record submitted for filing, or"
+                                },
+                                {
+                                    "@id": "d2e2586",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to do any other thing that the registrar is authorized or required to do under\n            this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2596",
+                            "bcl:num": "2",
+                            "bcl:text": "The notice of refusal must briefly state the reasons and the registrar's further\n          requirements."
+                        },
+                        {
+                            "@id": "d2e2605",
+                            "bcl:num": "3",
+                            "bcl:text": "If a subsequent application or other record submitted for filing is affected by\n          the registrar's refusal, the registrar must similarly notify the subsequent\n          applicant."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2615",
+                    "bcl:marginalnote": "Appeals from registrar's decisions",
+                    "bcl:num": "35",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2623",
+                            "bcl:num": "1",
+                            "bcl:text": "A person directly affected by a refusal referred to in section 34 may\n          appeal the refusal to the court."
+                        },
+                        {
+                            "@id": "d2e2632",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar is a party to an appeal under subsection (1)."
+                        },
+                        {
+                            "@id": "d2e2641",
+                            "bcl:num": "3",
+                            "bcl:text": "An appeal under subsection (1) is an appeal on the record."
+                        },
+                        {
+                            "@id": "d2e2651",
+                            "bcl:num": "4",
+                            "bcl:text": "For the purposes of subsection (3), the record consists of the\n          following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2660",
+                                    "bcl:num": "a",
+                                    "bcl:text": "copies or originals of documentary evidence before the registrar;"
+                                },
+                                {
+                                    "@id": "d2e2669",
+                                    "bcl:num": "b",
+                                    "bcl:text": "other things received as evidence by the registrar;"
+                                },
+                                {
+                                    "@id": "d2e2678",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the notice of refusal."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2687",
+                            "bcl:num": "5",
+                            "bcl:text": "An appeal under subsection (1) must be commenced not more than 30 days\n          after the earliest of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2696",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the mailing to the applicant, at the applicant's most recent address known to\n            the registrar, of a notice of the refusal that is being appealed;"
+                                },
+                                {
+                                    "@id": "d2e2706",
+                                    "bcl:num": "b",
+                                    "bcl:text": "actual notice to the applicant of the refusal that is being appealed."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2715",
+                            "bcl:num": "6",
+                            "bcl:text": "At least 10 days before the date set for the hearing of an appeal under subsection\n          (1), the appellant must serve on all interested parties, including the\n          registrar, a notice of the hearing of the appeal together with copies of all material and\n          exhibits that constitute the record."
+                        },
+                        {
+                            "@id": "d2e2724",
+                            "bcl:num": "7",
+                            "bcl:text": "The court may make any order it considers necessary as to notification of other\n          parties to the hearing."
+                        },
+                        {
+                            "@id": "d2e2733",
+                            "bcl:num": "8",
+                            "bcl:text": "On hearing the appeal, the court may make any order that the circumstances may\n          require and the court considers proper."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2744",
+                    "bcl:marginalnote": "Service on the registrar",
+                    "bcl:num": "36",
+                    "bcl:text": "A record may be served on the registrar by leaving it at the registrar's office or\n        by mailing it by registered mail to the registrar's office."
+                },
+                {
+                    "@id": "d2e2756",
+                    "bcl:marginalnote": {
+                        "in:doc": "Offence Act"
+                    },
+                    "bcl:num": "37",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Section\n          5 of the  does not apply to this\n        Act."
+                    }
+                },
+                {
+                    "@id": "d2e2774",
+                    "bcl:marginalnote": "Offences",
+                    "bcl:num": "38",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2782",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to subsection (2), a person who makes or assists in making\n          a statement that is included in a record required or permitted to be made by or for the\n          purposes of this Act or the regulations commits an offence if the statement",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2791",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is, at the time and in light of the circumstances under which it is made, false\n            or misleading in respect of any material fact, or"
+                                },
+                                {
+                                    "@id": "d2e2800",
+                                    "bcl:num": "b",
+                                    "bcl:text": "omits any material fact, the omission of which makes the statement false or\n            misleading."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2810",
+                            "bcl:num": "2",
+                            "bcl:text": "A person is not guilty of an offence under subsection (1) if that\n          person",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2819",
+                                    "bcl:num": "a",
+                                    "bcl:text": "did not know that the statement was false or misleading, and"
+                                },
+                                {
+                                    "@id": "d2e2828",
+                                    "bcl:num": "b",
+                                    "bcl:text": "with the exercise of reasonable diligence, could not have known that the\n            statement was false or misleading."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2837",
+                            "bcl:num": "3",
+                            "bcl:text": "A registered owner who fails to affix, or knowingly fails to keep affixed, in the\n          prescribed manner a decal, issued under section 5 or 6, to the manufactured home in\n          respect of which the decal is issued commits an offence."
+                        },
+                        {
+                            "@id": "d2e2846",
+                            "bcl:num": "4",
+                            "bcl:text": "A person who commits an offence under subsection (1) or (3) is liable\n          to a fine of not more than $2 000."
+                        },
+                        {
+                            "@id": "d2e2855",
+                            "bcl:num": "5",
+                            "bcl:text": "A person who contravenes section 15 (1), 17 (3), 18 (1), 32 (1) or 33 (1) commits\n          an offence and is liable to a fine of not more than $2 000."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2865",
+                    "bcl:marginalnote": "Registrar may temporarily close registry if circumstances\n        require",
+                    "bcl:num": "39",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2873",
+                            "bcl:num": "1",
+                            "bcl:text": "Despite any regulation under this Act, if the registrar considers that it is not\n          practicable to provide one or more of the registrar's services, the registrar may suspend,\n          for a period, any or all of the services provided or functions performed by the registrar,\n          including",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2882",
+                                    "bcl:num": "a",
+                                    "bcl:text": "filing any records, and"
+                                },
+                                {
+                                    "@id": "d2e2891",
+                                    "bcl:num": "b",
+                                    "bcl:text": "allowing searches and issuing search results."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2901",
+                            "bcl:num": "2",
+                            "bcl:text": "A suspension order under subsection (1) may be made before, during or after the\n          period to which the suspension relates."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2911",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "40",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e2919",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the\n            ."
+                            }
+                        },
+                        {
+                            "@id": "d2e2931",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may\n          make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2940",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting the services or functions to be provided by the registrar;"
+                                },
+                                {
+                                    "@id": "d2e2950",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting the form of the register and the manner in which it is\n            kept;"
+                                },
+                                {
+                                    "@id": "d2e2959",
+                                    "bcl:num": "c",
+                                    "bcl:text": "respecting the manner and form in which, and the method by which, records and\n            information may be provided or submitted to, or provided or certified by, the\n            registrar;"
+                                },
+                                {
+                                    "@id": "d2e2968",
+                                    "bcl:num": "d",
+                                    "bcl:text": "respecting the requirements that a person must meet to provide or receive\n            records or information in an electronic or other format for the purposes of this\n            Act;"
+                                },
+                                {
+                                    "@id": "d2e2977",
+                                    "bcl:num": "e",
+                                    "bcl:text": "prescribing records and information that must be provided or submitted to the\n            registrar in, or in conjunction with, any record provided to the registrar or submitted\n            to the registrar for filing;"
+                                },
+                                {
+                                    "@id": "d2e2986",
+                                    "bcl:num": "f",
+                                    "bcl:text": "respecting the form and content of the information to be included in any name or\n            address required under this Act;"
+                                },
+                                {
+                                    "@id": "d2e2995",
+                                    "bcl:num": "g",
+                                    "bcl:text": "respecting any rules, orders, forms and directions that may be desirable for\n            carrying out the provisions of this Act or for regulating procedure or establishing\n            practice under this Act;"
+                                },
+                                {
+                                    "@id": "d2e3005",
+                                    "bcl:num": "h",
+                                    "bcl:text": "respecting any matter the registrar considers necessary for carrying out the\n            purposes of this Act, including matters in respect of which",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3014",
+                                            "bcl:num": "i",
+                                            "bcl:text": "an express provision has not been made, or"
+                                        },
+                                        {
+                                            "@id": "d2e3023",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "only partial or imperfect provision has been made;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3032",
+                                    "bcl:num": "i",
+                                    "bcl:text": "defining any word or expression used but not defined in this Act;"
+                                },
+                                {
+                                    "@id": "d2e3041",
+                                    "bcl:num": "j",
+                                    "bcl:text": "setting fees for the purposes of this Act;"
+                                },
+                                {
+                                    "@id": "d2e3050",
+                                    "bcl:num": "k",
+                                    "bcl:text": "for the purposes of, and under the prescribed conditions for, exempting\n            manufactured homes from the operation of this Act or any provision of this\n            Act,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e3060",
+                                            "bcl:num": "i",
+                                            "bcl:text": "by class, use or intended use, or"
+                                        },
+                                        {
+                                            "@id": "d2e3069",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "in respect of any transaction or class of transactions governed by this\n              Act;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3078",
+                                    "bcl:num": "l",
+                                    "bcl:text": "respecting the exercise of powers by the registrar under section\n            21;"
+                                },
+                                {
+                                    "@id": "d2e3087",
+                                    "bcl:num": "m",
+                                    "bcl:text": "respecting decals and providing for different classes of decals;"
+                                },
+                                {
+                                    "@id": "d2e3096",
+                                    "bcl:num": "n",
+                                    "bcl:text": "requiring persons who file notices, applications and other records to retain\n            copies of those records and related documents and to make them available for examination\n            by any person;"
+                                },
+                                {
+                                    "@id": "d2e3105",
+                                    "bcl:num": "o",
+                                    "bcl:text": "respecting moving a manufactured home and respecting transport\n            permits;"
+                                },
+                                {
+                                    "@id": "d1e3353",
+                                    "bcl:num": "p",
+                                    "bcl:text": "requiring a collector to issue a receipt for the payment of a deposit under section 26 (1) (d)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e3115",
+                            "bcl:num": "3",
+                            "bcl:text": "Under subsection (2), the Lieutenant Governor in Council may prescribe different\n          manners, methods and requirements for different categories of records, information and\n          situations."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e3125",
+                    "bcl:marginalnote": {
+                        "in:em": "Spent"
+                    },
+                    "bcl:num": {
+                        "in:em": "41-50"
+                    },
+                    "bcl:text": {
+                        "in:em": "[Consequential amendments and repeals. Spent. 2003-75-41 to 50.]"
+                    }
+                },
+                {
+                    "@id": "d2e3141",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "51",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in\n        Council."
+                }
+            ]
+        }
+    }
+}

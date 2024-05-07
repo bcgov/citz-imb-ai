@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:act="http://www.gov.bc.ca/2013/legislation/act" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:h="http://www.w3.org/TR/html4/" xmlns:civix="http://www.qp.gov.bc.ca/2013/civix" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" targetNamespace="http://www.gov.bc.ca/2013/legislation/act" elementFormDefault="qualified">
+    <!-- newly adjusted  -->
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/bclegislation.xsd" namespace="http://www.gov.bc.ca/2013/bclegislation"/>
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/2013/inline.xsd" namespace="http://www.qp.gov.bc.ca/2013/inline"/>
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/2013/civix.xsd" namespace="http://www.qp.gov.bc.ca/2013/civix"/>
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/2013/oasis-table.xsd" namespace="http://docs.oasis-open.org/ns/oasis-exchange/table"/>
+    <!--  Change -->
+    <!-- Extension Types -->
+    <xsd:complexType name="string">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>Convenience type for extending the inline String type.</h:p>
+                <h:p>As attributes are added to the inline namespace they will automatically
+					propagate through any element of type bcl:string</h:p>
+                <h:p>If attributes are only relevant to BC legislation then
+					those attributes should be added here</h:p>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="bcl:string"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="inline" mixed="true">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>Convenience type for extending the inline inline type.</h:p>
+                <h:p>As attributes or elements are added to the inline namespace they will automatically
+					propagate through any element of type bcl:string</h:p>
+                <h:p>If attributes or elements are only relevant to BC legislation then
+					those nodes should be added here</h:p>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="in:_inline" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="act">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="conveniencehead" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType mixed="true">
+                        <xsd:choice>
+                            <xsd:element ref="in:strong" minOccurs="0" maxOccurs="unbounded"/>
+                        </xsd:choice>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="prerevisednote" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType mixed="true">
+                        <xsd:choice maxOccurs="unbounded">
+                            <xsd:element ref="in:doc" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="in:em" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="in:br" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="in:a" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="in:abrUnderline" maxOccurs="unbounded" minOccurs="0"/>
+                        </xsd:choice>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="supplement" type="act:string" minOccurs="0" maxOccurs="1"/>
+                <!--<xsd:element name="title" type="act:inline" minOccurs="1" maxOccurs="1"/>-->
+                <xsd:element name="title" minOccurs="1" maxOccurs="1">
+                    <xsd:complexType mixed="true">
+                        <xsd:choice maxOccurs="unbounded">
+                            <xsd:element ref="in:abrUnderline" maxOccurs="unbounded" minOccurs="0"/>
+                        </xsd:choice>
+                        <xsd:attribute name="titleOverride" type="xsd:string" use="optional"/>
+                        <xsd:attribute name="shortTitle" type="xsd:string" use="optional"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="chapter" type="act:string" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="yearenacted">
+                    <xsd:complexType>
+                        <xsd:complexContent>
+                            <xsd:extension base="xsd:anyType">
+                                <xsd:attribute name="prefix" type="xsd:string" use="optional"/>
+                                <xsd:attribute name="revised" use="optional">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string">
+                                            <xsd:enumeration value="RSBC"/>
+                                            <xsd:enumeration value="SBC"/>
+                                            <xsd:enumeration value="RSC"/>
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:attribute>
+                            </xsd:extension>
+                        </xsd:complexContent>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="deposited" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType mixed="true">
+                        <xsd:choice maxOccurs="unbounded">
+                            <xsd:element ref="in:br" minOccurs="0" maxOccurs="unbounded"/>
+                        </xsd:choice>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="placeholderlink" type="act:string" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="statuterevision" type="act:string" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="assentedto" type="act:string" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="repealedtext" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType mixed="true">
+                        <xsd:choice maxOccurs="unbounded">
+                            <xsd:element ref="in:doc" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="in:em" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="in:br" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="in:a" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="bcl:link" minOccurs="0" maxOccurs="unbounded"/>
+                        </xsd:choice>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element ref="bcl:placeholdertext" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="enactedBy" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType mixed="false">
+                        <xsd:attribute name="session" use="required" type="xsd:string"/>
+                        <xsd:attribute name="parliament" use="required" type="xsd:string"/>
+                        <xsd:attribute name="billLink" use="required" type="xsd:string"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="repealedPIT" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType mixed="false">
+                        <xsd:attribute name="PITLink" use="required" type="xsd:string"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="currency" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:choice maxOccurs="unbounded">
+                            <xsd:element name="tlc" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                            <xsd:element name="currencydate" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                            <xsd:element name="tlcDirPath" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                        </xsd:choice>
+                        <xsd:attribute name="noCurrencyDate" use="optional">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="true"/>
+                                    <xsd:enumeration value="false"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:attribute>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="ccollect" type="act:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xsd:element name="content" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="bcl:preamble" minOccurs="0"/>
+                            <xsd:choice maxOccurs="unbounded">
+                                <xsd:element ref="bcl:subheading" minOccurs="0"/>
+                                <xsd:element ref="bcl:part" minOccurs="0"/>
+                                <xsd:element ref="bcl:division" minOccurs="0"/>
+                                <xsd:element ref="bcl:section" minOccurs="0"/>
+                                <xsd:element ref="bcl:conseqhead" minOccurs="0"/>
+                                <xsd:element ref="bcl:transitionalhead" minOccurs="0"/>
+                                <xsd:element ref="bcl:schedule" minOccurs="0" maxOccurs="unbounded"/>
+                                <xsd:element ref="bcl:editorialnote" minOccurs="0"/>
+                            </xsd:choice>
+                        </xsd:sequence>
+                        <xsd:attribute name="id" type="xsd:string" use="optional"/>
+                        <xsd:attribute name="postfix" type="xsd:string" use="optional"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="xsl-fo" use="optional">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="index" use="optional"/>
+            <xsd:attribute name="id" type="xsd:string"/>
+            <xsd:attribute name="isMulti" use="optional">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="true"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="status" use="optional">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Repealed"/>
+                        <xsd:enumeration value="Not in Force"/>
+                        <xsd:enumeration value="Title Change"/>
+                        <xsd:enumeration value="Replaced"/>
+                        <xsd:enumeration value="Expired"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+<!-- QP BOTTOM OF DOC.  PLEASE KEEP AT BOTTOM OF DOCUMENT. DO NOT REMOVE OR MODIFY -->

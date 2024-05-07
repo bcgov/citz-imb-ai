@@ -1,0 +1,293 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96142_01",
+        "act:title": "Fire and Police Services Collective Bargaining Act",
+        "act:chapter": "142",
+        "act:yearenacted": "1996",
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e17",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e28",
+                            "bcl:text": {
+                                "in:term": "arbitration bureau",
+                                "#text": "means the Collective Agreement Arbitration Bureau continued under the Code;"
+                            }
+                        },
+                        {
+                            "@id": "d2e37",
+                            "bcl:text": {
+                                "in:term": "board",
+                                "#text": "has the same meaning as in the Code;"
+                            }
+                        },
+                        {
+                            "@id": "d2e47",
+                            "bcl:text": {
+                                "in:term": "Code",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96244_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Labour Relations Code"
+                                },
+                                "#text": "means the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e59",
+                            "bcl:text": {
+                                "in:term": "employer",
+                                "#text": "means an employer of one or more members of a fire fighters' union or police officers' union;"
+                            }
+                        },
+                        {
+                            "@id": "d2e68",
+                            "bcl:text": {
+                                "in:term": "fire fighters' union",
+                                "#text": "means a trade union certified for a unit in which the majority of employees has as its principal duties the fighting of fires and the carrying out of rescue operations;"
+                            }
+                        },
+                        {
+                            "@id": "d2e77",
+                            "bcl:text": {
+                                "in:term": "parties",
+                                "#text": "means a fire fighters' union or police officers' union and an employer with which it bargains collectively;"
+                            }
+                        },
+                        {
+                            "@id": "d2e86",
+                            "bcl:text": {
+                                "in:term": "police officers' union",
+                                "#text": "means a trade union certified for a unit in which the majority of employees is engaged in police duties."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e96",
+                    "bcl:marginalnote": {
+                        "in:doc": "Labour Relations Code",
+                        "#text": "Application of"
+                    },
+                    "bcl:num": "2",
+                    "bcl:text": "The Code and the regulations under it apply in respect of the matters to which this Act applies, but if there is a conflict or inconsistency between this Act and the Code, this Act applies."
+                },
+                {
+                    "@id": "d2e110",
+                    "bcl:marginalnote": "Settlement of dispute by arbitration",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e118",
+                            "bcl:num": "1",
+                            "bcl:text": "If a fire fighters' union or a police officers' union and an employer have bargained collectively and have failed to conclude a collective agreement or a renewal or revision of a collective agreement, the trade union or the employer may apply to the minister for a direction that the dispute be resolved by arbitration."
+                        },
+                        {
+                            "@id": "d2e127",
+                            "bcl:num": "2",
+                            "bcl:text": "The minister may direct that the dispute be resolved by arbitration if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e136",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a mediation officer has been appointed under section\u00a074 of the Code and has conferred with the parties, and"
+                                },
+                                {
+                                    "@id": "d2e146",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the associate chair of the mediation division of the board has made a report to the minister",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e155",
+                                            "bcl:num": "i",
+                                            "bcl:text": "setting out the matters on which the parties have and have not agreed,"
+                                        },
+                                        {
+                                            "@id": "d2e164",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "stating whether in the opinion of the associate chair the party seeking arbitration has made every reasonable effort to reach a collective agreement, and"
+                                        },
+                                        {
+                                            "@id": "d2e173",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "stating whether in the opinion of the associate chair the dispute or some elements of the dispute should be resolved by applying the dispute resolution method known as final offer selection."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e182",
+                            "bcl:num": "3",
+                            "bcl:text": "The minister may specify terms of reference for an arbitration under this Act."
+                        },
+                        {
+                            "@id": "d2e191",
+                            "bcl:num": "4",
+                            "bcl:text": "If the minister directs that the dispute be resolved by arbitration, a trade union must not declare or authorize a strike and an employer must not declare or cause a lockout, and if a strike or lockout has begun the parties must immediately terminate the strike or lockout."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e201",
+                    "bcl:marginalnote": "Settlement by arbitration",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e209",
+                            "bcl:num": "1",
+                            "bcl:text": "If the minister directs that a dispute be resolved by arbitration, the parties may, by agreement, make arrangements for the appointment of a single arbitrator or the establishment of a 3 person arbitration board."
+                        },
+                        {
+                            "@id": "d2e218",
+                            "bcl:num": "2",
+                            "bcl:text": "If the parties have failed to agree to a single arbitrator or an arbitration board is not fully constituted within 10 days after the minister makes a direction under subsection (1), the director of the arbitration bureau must appoint a single arbitrator to hear the dispute."
+                        },
+                        {
+                            "@id": "d2e227",
+                            "bcl:num": "3",
+                            "bcl:text": "The arbitrator or arbitration board appointed or established under this section must commence the hearing within 28\u00a0days of being appointed or established and must issue a decision within 21\u00a0days of the conclusion of the hearing."
+                        },
+                        {
+                            "@id": "d2e237",
+                            "bcl:num": "4",
+                            "bcl:text": "Sections 92 to 98, 101 and 102 of the Code apply to an arbitration under this Act."
+                        },
+                        {
+                            "@id": "d2e246",
+                            "bcl:num": "5",
+                            "bcl:text": "The arbitrator or arbitration board may encourage settlement of the dispute and, with the agreement of the parties, may use mediation or other procedures to encourage settlement at any time during the arbitral proceedings."
+                        },
+                        {
+                            "@id": "d2e255",
+                            "bcl:num": "6",
+                            "bcl:text": "In rendering a decision under this Act, the arbitrator or arbitration board must have regard to the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e264",
+                                    "bcl:num": "a",
+                                    "bcl:text": "terms and conditions of employment for employees doing similar work;"
+                                },
+                                {
+                                    "@id": "d2e273",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the need to maintain internal consistency and equity amongst employees;"
+                                },
+                                {
+                                    "@id": "d2e282",
+                                    "bcl:num": "c",
+                                    "bcl:text": "terms and conditions of employment for other groups of employees who are employed by the employer;"
+                                },
+                                {
+                                    "@id": "d2e292",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the need to establish terms and conditions of employment that are fair and reasonable in relation to the qualifications required, the work performed, the responsibility assumed and the nature of the services rendered;"
+                                },
+                                {
+                                    "@id": "d2e301",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the interest and welfare of the community served by the employer and the employees as well as any factors affecting the community;"
+                                },
+                                {
+                                    "@id": "d2e310",
+                                    "bcl:num": "f",
+                                    "bcl:text": "any terms of reference specified by the minister under section\u00a03;"
+                                },
+                                {
+                                    "@id": "d2e319",
+                                    "bcl:num": "g",
+                                    "bcl:text": "any other factor that the arbitrator or arbitration board considers relevant."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e328",
+                            "bcl:num": "7",
+                            "bcl:text": "Each party to an arbitration under this Act is responsible for",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e337",
+                                    "bcl:num": "a",
+                                    "bcl:text": "its own fees, expenses and costs,"
+                                },
+                                {
+                                    "@id": "d2e347",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the fees and expenses of a member of an arbitration board that is appointed by or on behalf of that party, and"
+                                },
+                                {
+                                    "@id": "d2e356",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an equal portion of the fees and expenses of the chair of the arbitration board or a single arbitrator."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e366",
+                    "bcl:marginalnote": "Referral of questions to the Labour Relations Board",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e374",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "A question",
+                                "may be referred to the board by a party or another interested person."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e383",
+                                    "bcl:num": "a",
+                                    "bcl:text": "as to whether or not this Act has been complied with, or"
+                                },
+                                {
+                                    "@id": "d2e392",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting the interpretation or application of this Act, or an order made under this Act"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e405",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "The board has jurisdiction to decide a question referred to it under subsection (1) and may, by order, enforce the decision",
+                                "available under the Code for the enforcement of a decision or order of the board."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e414",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the manner, and"
+                                },
+                                {
+                                    "@id": "d2e423",
+                                    "bcl:num": "b",
+                                    "bcl:text": "by applying the remedies"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

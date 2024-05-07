@@ -1,0 +1,408 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_03027_01",
+        "act:title": "Community Services Labour Relations Act",
+        "act:chapter": "27",
+        "act:yearenacted": "2003",
+        "act:assentedto": "May 29, 2003",
+        "act:currency": {
+            "act:tlcDirPath": "781755088/03027/tlc03027_f",
+            "act:tlc": "E3tlc03027"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e18",
+                    "bcl:marginalnote": "Definitions and interpretation",
+                    "bcl:num": "1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e35",
+                                    "bcl:text": {
+                                        "in:term": "agency",
+                                        "#text": "means an organization or a person that enters into a contract with the government to provide community social services, but does not include the authority;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e44",
+                                    "bcl:text": {
+                                        "in:term": "association of unions",
+                                        "#text": "means an association of trade unions established under section\u00a04;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e54",
+                                    "bcl:text": {
+                                        "in:term": "authority",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04060_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Community Living Authority Act"
+                                        },
+                                        "#text": "means Community Living British Columbia established under the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e66",
+                                    "bcl:text": {
+                                        "in:term": "Code",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96244_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Labour Relations Code"
+                                        },
+                                        "#text": "means the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e78",
+                                    "bcl:text": {
+                                        "in:term": "CSSEA",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96384_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Public Sector Employers Act"
+                                        },
+                                        "#text": "means the Community Social Services Employers' Association established under section\u00a06 of the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e90",
+                                    "bcl:text": {
+                                        "in:term": "family home provider",
+                                        "#text": "means a person who,"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e99",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in a residence owned or rented and occupied by a person, is the primary care provider to that person, and"
+                                        },
+                                        {
+                                            "@id": "d2e108",
+                                            "bcl:num": "b",
+                                            "bcl:text": "as a care provider, does not provide care to more than 3 persons at any time."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e118",
+                            "bcl:num": "2",
+                            "bcl:text": "To the extent that this Act does not otherwise define a word or an expression used in this Act, the definitions in the Code apply."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e128",
+                    "bcl:marginalnote": "CSSEA as bargaining agent",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e136",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "CSSEA is deemed to be the accredited bargaining agent for",
+                                "whose employees are represented by a trade union."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e145",
+                                    "bcl:num": "a",
+                                    "bcl:text": "agencies that are members of CSSEA, and"
+                                },
+                                {
+                                    "@id": "d2e154",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the authority"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e167",
+                            "bcl:num": "2",
+                            "bcl:text": "CSSEA has exclusive authority to bargain collectively on behalf of agencies and the authority referred to in subsection (1) and to bind them by a collective agreement."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e177",
+                    "bcl:marginalnote": "Bargaining units of agency employees",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e185",
+                            "bcl:num": "1",
+                            "bcl:text": "For the purpose of collective bargaining between CSSEA and the association of unions representing employees of agencies, a separate bargaining unit is established for each of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e194",
+                                    "bcl:num": "a",
+                                    "bcl:text": "agencies that are members of CSSEA and contract primarily to provide community living services;"
+                                },
+                                {
+                                    "@id": "d2e203",
+                                    "bcl:num": "b",
+                                    "bcl:text": "agencies that are members of CSSEA and contract primarily to provide services to aboriginal persons;"
+                                },
+                                {
+                                    "@id": "d2e213",
+                                    "bcl:num": "c",
+                                    "bcl:text": "agencies that contract primarily to provide services other than those described in paragraphs (a) and (b);"
+                                },
+                                {
+                                    "@id": "d2e222",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the authority."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e231",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purpose of collective bargaining between CSSEA and the association of unions representing employees of agencies, the Lieutenant Governor in Council may establish a separate bargaining unit representing all unionized employees of agencies that are members of CSSEA."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e241",
+                    "bcl:marginalnote": "Association of unions",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e249",
+                            "bcl:num": "1",
+                            "bcl:text": "A trade union certified to represent the employees of an agency included in a bargaining unit established under section\u00a03 must belong to a single association of unions composed of all trade unions representing employees in all bargaining units established under section\u00a03."
+                        },
+                        {
+                            "@id": "d2e258",
+                            "bcl:num": "2",
+                            "bcl:text": "The trade unions affected by subsection (1) must agree, within 30 days of the date on which this section comes into force, to articles of association that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e267",
+                                    "bcl:num": "a",
+                                    "bcl:text": "are consistent with this Act and the Code,"
+                                },
+                                {
+                                    "@id": "d2e277",
+                                    "bcl:num": "b",
+                                    "bcl:text": "provide the association of unions with exclusive jurisdiction to bargain on behalf of the bargaining units for which the association of unions will be certified and to conclude a single collective agreement for each bargaining unit established under section\u00a03,"
+                                },
+                                {
+                                    "@id": "d2e286",
+                                    "bcl:num": "c",
+                                    "bcl:text": "provide the association of unions with the right and obligation to resolve differences among its members with respect to the administration of the collective agreements referred to in paragraph (b) of this subsection, including differences with respect to the right or obligation to a particular trade union within the association of unions,"
+                                },
+                                {
+                                    "@id": "d2e295",
+                                    "bcl:num": "d",
+                                    "bcl:text": "include provisions with respect to ratification and other collective bargaining processes that reflect the relative membership size of trade union representation in the bargaining units within the association of unions, while ensuring that a member or group of members of a constituent trade union is not treated by the association of unions in bad faith or in a manner that is arbitrary or discriminatory,"
+                                },
+                                {
+                                    "@id": "d2e304",
+                                    "bcl:num": "e",
+                                    "bcl:text": "provide for the future addition to the association of unions of any other trade unions that the Labour Relations Board may certify to represent employees of an agency that are within a bargaining unit, and"
+                                },
+                                {
+                                    "@id": "d2e313",
+                                    "bcl:num": "f",
+                                    "bcl:text": "include any other provision that the Labour Relations Board determines may be necessary in order to ensure that the association of unions can function as a bargaining agent and administer a collective agreement on behalf of the employees within its jurisdiction."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e322",
+                            "bcl:num": "3",
+                            "bcl:text": "The articles of association referred to in subsection (2) are subject to approval by the Labour Relations Board."
+                        },
+                        {
+                            "@id": "d2e332",
+                            "bcl:num": "4",
+                            "bcl:text": "If the articles of association referred to in subsection (2) are not agreed to by the trade unions and approved by the Labour Relations Board before the expiry of the time period established under subsection (2), the Labour Relations Board must determine the articles of association within 30 days of the end of that time period."
+                        },
+                        {
+                            "@id": "d2e341",
+                            "bcl:num": "5",
+                            "bcl:text": "Articles of association determined under subsection (4) are deemed to be a decision of the Labour Relations Board."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e351",
+                    "bcl:marginalnote": "Vote for one union",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e359",
+                            "bcl:num": "1",
+                            "bcl:text": [
+                                "Despite section 4, if the minister determines that",
+                                "if there were only one union representing employees in the bargaining units established under section 3, the minister may direct the Labour Relations Board to conduct a vote to determine which union will represent all of the employees in the respective bargaining units."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e368",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the delivery of community social services generally, or the flexibility of delivery, would be improved,"
+                                },
+                                {
+                                    "@id": "d2e377",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the cost effectiveness of service delivery in the community social services sector would be better served, or"
+                                },
+                                {
+                                    "@id": "d2e387",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the public interest would be better served"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e399",
+                            "bcl:num": "2",
+                            "bcl:text": "If the minister issues a directive under subsection (1), the Labour Relations Board must conduct the vote within 45 days of receipt of the directive."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e410",
+                    "bcl:marginalnote": "Volunteers and family home providers",
+                    "bcl:num": "6",
+                    "bcl:text": "A collective agreement must not contain any provision that directly or indirectly",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e421",
+                            "bcl:num": "a",
+                            "bcl:text": "prevents an agency or the authority from using volunteers, if the use of volunteers does not result in the layoff of an employee, or"
+                        },
+                        {
+                            "@id": "d2e430",
+                            "bcl:num": "b",
+                            "bcl:text": "limits the government, an agency or the authority from entering into a contract with a family home provider."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e440",
+                    "bcl:marginalnote": "Labour relations matters",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e448",
+                            "bcl:num": "1",
+                            "bcl:text": "A collective agreement to which the government or the authority is a party does not bind, and section\u00a035 of the Code does not apply to, an agency that contracts with the government or the authority."
+                        },
+                        {
+                            "@id": "d2e457",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "An arbitrator or the Labour Relations Board must not declare a person who",
+                                "to be an employee of the government or of the authority unless the government or the authority intended that person to be fully integrated into the operations of, and working under the direct supervision or control of, the government or the authority."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e466",
+                                    "bcl:num": "a",
+                                    "bcl:text": "provides services under a contract between the government and an agency or between the authority and an agency, or"
+                                },
+                                {
+                                    "@id": "d2e476",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is an employee of an agency"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e488",
+                            "bcl:num": "3",
+                            "bcl:text": "[Repealed 2018-50-2.]"
+                        },
+                        {
+                            "@id": "d2e500",
+                            "bcl:num": "4",
+                            "bcl:text": [
+                                "The minister may withhold or reduce",
+                                "if the operating expenses of an agency or the authority, as the case may be, have been reduced during a strike or lockout as defined in the Code."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e509",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a grant, other than a debt service grant,"
+                                },
+                                {
+                                    "@id": "d2e518",
+                                    "bcl:num": "b",
+                                    "bcl:text": "an amount payable to an agency under a contract with the government or the authority, or"
+                                },
+                                {
+                                    "@id": "d2e528",
+                                    "bcl:num": "c",
+                                    "bcl:text": "an amount payable to the authority under a contract with the government"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e540",
+                            "bcl:num": "5",
+                            "bcl:text": "The minister may direct an audit of an agency or the authority to determine the amount of the reduction in operating expenses as a result of a strike or lockout."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e550",
+                    "bcl:marginalnote": "Application of the Code",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e558",
+                            "bcl:num": "1",
+                            "bcl:text": "The Code and the regulations made under it apply to the government, an agency and the authority, but, if there is a conflict or inconsistency between this Act and those enactments, this Act applies."
+                        },
+                        {
+                            "@id": "d2e567",
+                            "bcl:num": "2",
+                            "bcl:text": "Except as specifically provided in this Act, the Labour Relations Board has exclusive jurisdiction to decide a question arising under this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e577",
+                    "bcl:marginalnote": "Spent",
+                    "bcl:num": {
+                        "in:em": "9"
+                    },
+                    "bcl:text": {
+                        "in:em": "[Consequential amendment. Spent. 2003-27-9.]"
+                    }
+                },
+                {
+                    "@id": "d2e595",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "10",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,182 @@
+National Instrument 54-101
+Communication with Beneficial Owners of
+Securities of a Reporting Issuer
+Securities Act
+HEADER RECORD DESCRIPTION
+TYPE
+LENGTH
+POSITION
+COMMENTS
+RECORD TYPE
+A
+1
+1
+Header record = A
+FINS NUMBER
+A
+4
+2-5
+Prefix T, M, V or C
+ISIN
+A
+12
+6-17
+FILLER
+X
+3
+18-20
+Blank
+SECURITY DESC.
+A
+32
+21-52
+Security Description
+RECORD DATE
+N
+8
+53-60
+Format
+YYYYMMDD
+CREATION DATE
+N
+8
+61-68
+Format
+YYYYMMDD
+FILLER
+X
+250
+69-318
+Blank
+DETAIL RECORD DESCRIPTION
+TYPE
+LENGTH
+POSITION
+COMMENTS
+RECORD TYPE
+A
+1
+1
+Detail Record = B
+FINS NUMBER
+A
+4
+2-5
+Same as in Header record
+ISIN
+A
+12
+6-17
+FILLER
+X
+3
+18-20
+Blank
+FILLER
+X
+20
+21-40
+Blank
+NAME
+A
+32
+41-72
+Holder Name
+ADDRESS
+A
+32 x 6
+73-264
+Occurs 6 times
+FILLER
+X
+32
+265-296
+Blank
+POSTAL CODE
+A
+9
+297-305
+POSTAL REGION
+A
+1
+306
+C=Canada;
+U=USA;
+F=Foreign; (other than USA);
+H=Hand Deliver
+NOTICE AND ACCESS
+A
+1
+307
+Y=Full Package;
+N=Notice Only
+FILLER
+X
+1
+308
+Blank
+EMAIL ADDRESS
+A
+32
+309-340
+LANGUAGE CODE
+A
+1
+341
+E=English;
+F=French
+NUMBER OF SHARES
+N
+9
+342-350
+Shareholder Position
+RECEIVE ALL MATERIAL
+A
+1
+351
+A – ALL Material,
+S – Material for SPECIAL Meetings only,
+D – DECLINE to receive Materials
+AGREE TO ELECTRONIC DELIVERY BY INTERMEDIARY
+A
+1
+352
+Y/N
+TRAILER RECORD DESCRIPTION
+TYPE
+LENGTH
+POSITION
+COMMENTS
+RECORD TYPE
+A
+1
+1
+Trailer record = C
+FINS NUMBER
+A
+4
+2-5
+Same as in Header Record
+ISIN
+A
+12
+6-17
+FILLER
+X
+3
+18-20
+TOTAL SHAREHOLDERS
+N
+7
+21-27
+Number of "B" type records
+TOTAL SHARES
+N
+11
+27-38
+Total Shares on "B" type records
+FILLER
+X
+280
+39-318
+Blank

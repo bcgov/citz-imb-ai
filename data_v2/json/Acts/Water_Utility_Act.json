@@ -1,0 +1,326 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96485_01",
+        "act:title": "Water Utility Act",
+        "act:chapter": "485",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "901199259/96485/tlc96485_f",
+            "act:tlc": "E3tlc96485"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e15",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d2e26",
+                            "bcl:text": {
+                                "in:term": "compensation",
+                                "#text": "means a rate, remuneration, gain or reward of any kind paid, payable, promised, demanded, received or expected, directly or indirectly, and includes a promise or undertaking by a water utility to provide service as consideration for, or as part of, a proposal or contract to dispose of land or any interest in it;"
+                            }
+                        },
+                        {
+                            "@id": "d2e35",
+                            "bcl:text": {
+                                "in:term": "comptroller",
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/14015",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Water Sustainability Act"
+                                },
+                                "#text": "means the person designated as the Comptroller of Water Rights under section 114 (1) of the ;"
+                            }
+                        },
+                        {
+                            "@id": "d2e48",
+                            "bcl:text": {
+                                "in:term": "service",
+                                "#text": "includes"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e57",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the use and accommodation provided, and a product or commodity furnished, by a water utility, and"
+                                },
+                                {
+                                    "@id": "d2e66",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the plant, equipment, apparatus, appliances, property and facilities employed by or in connection with a water utility in providing service or in furnishing a product or commodity for the purposes in which the water utility is engaged and for the use and accommodation of the public;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e75",
+                            "bcl:text": {
+                                "in:term": "tenant",
+                                "#text": "does not include a lessee for a term of more than 5\u00a0years;"
+                            }
+                        },
+                        {
+                            "@id": "d2e84",
+                            "bcl:text": [
+                                {
+                                    "in:term": "water utility",
+                                    "#text": "means"
+                                },
+                                "but does not include"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e93",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a person who owns or operates in British Columbia equipment or facilities for the diverting, developing, pumping, impounding, distributing or furnishing of water, for compensation,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e103",
+                                            "bcl:num": "i",
+                                            "bcl:text": "to or for more than the prescribed number of persons or, if no number is prescribed, 5 or more persons, or"
+                                        },
+                                        {
+                                            "@id": "d2e112",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to a corporation, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e121",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the lessee, trustee, receiver or liquidator of a person referred to in paragraph (a),"
+                                },
+                                {
+                                    "@id": "d2e133",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a municipality in respect of services furnished by the municipality,"
+                                },
+                                {
+                                    "@id": "d2e142",
+                                    "bcl:num": "d",
+                                    "bcl:text": "a person who furnishes services or commodity only to the person, the person's employees or tenants, if the service or commodity is not resold to or used by others,"
+                                },
+                                {
+                                    "@id": "d2e152",
+                                    "bcl:num": "e",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/24022_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Greater Vancouver Water District Act"
+                                        },
+                                        "#text": "the Greater Vancouver Water District under the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e164",
+                                    "bcl:num": "f",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/14015",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Water Sustainability Act"
+                                        },
+                                        "#text": "an improvement district as defined in section 1 (1) of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e186",
+                                    "bcl:num": "f.1",
+                                    "bcl:text": {
+                                        "in:em": "Water Users' Communities Act",
+                                        "#text": "a water users' community as defined in section 1 (1) of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e176",
+                                    "bcl:num": "g",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/r15001_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Local Government Act"
+                                        },
+                                        "#text": "a regional district under the  in respect of the service of the supply of water"
+                                    },
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e188",
+                                            "bcl:num": "i",
+                                            "bcl:text": "in bulk to a municipality or electoral area participating in that service, or"
+                                        },
+                                        {
+                                            "@id": "d2e197",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "to consumers in a municipality participating in that service,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e206",
+                                    "bcl:num": "h",
+                                    "bcl:text": "a person who supplies water by tanker truck,"
+                                },
+                                {
+                                    "@id": "d2e216",
+                                    "bcl:num": "i",
+                                    "bcl:text": "a person who sells bottled water, or"
+                                },
+                                {
+                                    "@id": "d2e225",
+                                    "bcl:num": "j",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/98043_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Strata Property Act"
+                                        },
+                                        "#text": "a strata corporation, if the comptroller is satisfied that the owner developers within the meaning of the  have ceased to own a majority of the strata lots in the strata plan."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e238",
+                    "bcl:marginalnote": "Application of Act",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e246",
+                            "bcl:num": "1",
+                            "bcl:text": "This Act applies only to water utilities that are subject to the legislative authority of British Columbia."
+                        },
+                        {
+                            "@id": "d2e255",
+                            "bcl:num": "2",
+                            "bcl:text": "If a water utility furnishes a class of service in respect of which the water utility is not subject to the legislative authority of British Columbia, nothing in this section operates to make this Act inapplicable to the water utility in respect of another class of service furnished in respect of which the water utility is subject to the legislative authority of British Columbia."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e265",
+                    "bcl:marginalnote": "Jurisdiction of comptroller",
+                    "bcl:num": "3",
+                    "bcl:text": "A water utility is subject to the regulation and control of the comptroller."
+                },
+                {
+                    "@id": "d2e277",
+                    "bcl:marginalnote": {
+                        "in:doc": "Utilities Commission Act",
+                        "#text": "to apply"
+                    },
+                    "bcl:num": "4",
+                    "bcl:text": {
+                        "bcl:link": [
+                            {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/96473_01",
+                                "@xlink:type": "locator",
+                                "in:doc": "Utilities Commission Act"
+                            },
+                            {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/96473_01",
+                                "@xlink:type": "locator",
+                                "in:doc": "Utilities Commission Act"
+                            }
+                        ],
+                        "#text": "The duties, responsibilities and restraints to which a water utility is subject are the same as are imposed on a public utility under the  and the powers and jurisdiction of the comptroller in respect of a water utility are the same as are vested in the British Columbia Utilities Commission under the , in respect of a public utility, and for these purposes"
+                    },
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e297",
+                            "bcl:num": "a",
+                            "bcl:text": "the water utility is deemed to be a public utility, and"
+                        },
+                        {
+                            "@id": "d2e306",
+                            "bcl:num": "b",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96473_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Utilities Commission Act"
+                                },
+                                "#text": "the , other than sections 2.1 (b), (c) and (k) to\u00a0(m), 28, 29, 44.1, 44.2, 45 (2), (3), (5) and (6), 58 (2.1) and (2.2) and 58.1, Part 3.1 and sections 125.1 and 125.2, applies."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e319",
+                    "bcl:marginalnote": "Cancellation of certificate",
+                    "bcl:num": "5",
+                    "bcl:text": "If the comptroller determines that public convenience and necessity do not or will not require the construction or operation of a plant or system by a water utility, the comptroller may cancel the certificate of public convenience and necessity issued to the water utility for that plant or system."
+                },
+                {
+                    "@id": "d2e332",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e340",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e352",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e361",
+                                    "bcl:num": "a",
+                                    "bcl:text": "prescribing a number for the purposes of paragraph (a) of the definition of \"water utility\";"
+                                },
+                                {
+                                    "@id": "d2e371",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for the purpose of recovering the expenses arising out of the administration of this Act, prescribing fees, levies or other charges payable by water utilities and other persons;"
+                                },
+                                {
+                                    "@id": "d2e380",
+                                    "bcl:num": "c",
+                                    "bcl:text": "exempting, or authorizing the comptroller to exempt, a water utility or other person, or a class of either of them, from the payment of a fee, levy or other charge."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e389",
+                            "bcl:num": "3",
+                            "bcl:text": "Fees, levies and charges prescribed under this section may be different for different classes of water utility, different water utilities and different classes of persons."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

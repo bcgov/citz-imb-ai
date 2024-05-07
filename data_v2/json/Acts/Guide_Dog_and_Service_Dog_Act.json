@@ -1,0 +1,1125 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "15017",
+        "act:title": "Guide Dog and Service Dog Act",
+        "act:chapter": "17",
+        "act:yearenacted": "2015",
+        "act:assentedto": "May 14, 2015",
+        "act:currency": {
+            "act:tlcDirPath": "553593740/15017a/15017t",
+            "act:tlc": "E3tlc15017"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d1e23",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d1e40",
+                            "bcl:text": {
+                                "in:term": "accredited or recognized training school",
+                                "#text": "has the prescribed meaning;"
+                            }
+                        },
+                        {
+                            "@id": "d1e34",
+                            "bcl:text": {
+                                "in:term": "blind person",
+                                "#text": "means an individual who"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e41",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is blind or visually impaired, and"
+                                },
+                                {
+                                    "@id": "d1e50",
+                                    "bcl:num": "b",
+                                    "bcl:text": "requires the assistance of a guide dog for daily living;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e60",
+                            "bcl:text": {
+                                "in:term": "certificate",
+                                "#text": "means a certificate issued or renewed under section\n          6;"
+                            }
+                        },
+                        {
+                            "@id": "d1e69",
+                            "bcl:text": {
+                                "in:term": "certified",
+                                "#text": "means certified by the registrar under section 6 or deemed to be certified under section\u00a06.1;"
+                            }
+                        },
+                        {
+                            "@id": "d1e77",
+                            "bcl:text": {
+                                "in:term": "dog trainer",
+                                "#text": "means an individual who"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e84",
+                                    "bcl:num": "a",
+                                    "bcl:text": "trains dogs for the purpose of the dogs becoming guide dogs or service dogs,\n            and"
+                                },
+                                {
+                                    "@id": "d1e93",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is certified as a dog trainer;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e103",
+                            "bcl:text": {
+                                "in:term": "dog-in-training",
+                                "#text": "means a dog that is being trained by a dog trainer to become a guide dog or service dog;"
+                            }
+                        },
+                        {
+                            "@id": "d1e129",
+                            "bcl:text": {
+                                "in:term": "dog-in-training team",
+                                "#text": "means a dog trainer and a dog-in-training\n          that are working together to train the dog-in-training to become a guide dog or service\n          dog;"
+                            }
+                        },
+                        {
+                            "@id": "d1e137",
+                            "bcl:text": {
+                                "in:term": "guide dog",
+                                "#text": "means a dog that"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e144",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is trained as a guide for a blind person, and"
+                                },
+                                {
+                                    "@id": "d1e153",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is certified as a guide dog;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e163",
+                            "bcl:text": {
+                                "in:term": "guide dog team",
+                                "#text": "means a blind person and a guide dog that are\n          certified as a guide dog team;"
+                            }
+                        },
+                        {
+                            "@id": "d1e172",
+                            "bcl:text": {
+                                "in:term": "person with a disability",
+                                "#text": "means an individual who"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e179",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has a disability, other than blindness or visual impairment, and"
+                                },
+                                {
+                                    "@id": "d1e188",
+                                    "bcl:num": "b",
+                                    "bcl:text": "requires, as a result of the disability, the assistance of a service dog for\n            daily living;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e198",
+                            "bcl:text": {
+                                "in:term": "registrar",
+                                "#text": "means an individual appointed under section 9 as the\n          Registrar of Guide Dogs and Service Dogs;"
+                            }
+                        },
+                        {
+                            "@id": "d1e206",
+                            "bcl:text": {
+                                "in:term": "retired guide or service dog team",
+                                "#text": "means an individual and a dog\n          that were previously members of the same guide dog team or service dog team and\n          that"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e213",
+                                    "bcl:num": "a",
+                                    "bcl:text": "are living together, and"
+                                },
+                                {
+                                    "@id": "d1e222",
+                                    "bcl:num": "b",
+                                    "bcl:text": "are certified as a retired guide or service dog team;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e232",
+                            "bcl:text": {
+                                "in:term": "service dog",
+                                "#text": "means a dog that"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e239",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is trained to perform specific tasks to assist a person with a disability,\n            and"
+                                },
+                                {
+                                    "@id": "d1e248",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is certified as a service dog;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e258",
+                            "bcl:text": {
+                                "in:term": "service dog team",
+                                "#text": "means a person with a disability and a service\n          dog that are certified as a service dog team."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e263",
+                    "bcl:marginalnote": {
+                        "in:doc": "Human Rights Code",
+                        "#text": "prevails over this Act"
+                    },
+                    "bcl:num": "1.1",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96210_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Human Rights Code"
+                        },
+                        "#text": "For certainty, nothing in this Act, nor anything done under this Act, abrogates or derogates from the ."
+                    }
+                },
+                {
+                    "@id": "d1e267",
+                    "bcl:marginalnote": "Access to public places",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e275",
+                            "bcl:num": "1",
+                            "bcl:text": "A guide dog team, service dog team or dog-in-training team may, in the same manner\n          as would an individual who is not a member of any of those teams, enter and use any place,\n          accommodation, building or conveyance to which the public is invited or has access,\n          provided that the individual who is a member of the team ensures the dog that is a member\n          of the team",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e283",
+                                    "bcl:num": "a",
+                                    "bcl:text": "does not occupy a seat in a public conveyance or a place where food is served or\n            dispensed to the public, as the case may be, and"
+                                },
+                                {
+                                    "@id": "d1e292",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is held by a leash or harness."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e302",
+                            "bcl:num": "2",
+                            "bcl:text": "A person must not",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e310",
+                                    "bcl:num": "a",
+                                    "bcl:text": "interfere with the exercise of the right of entry and use specified in\n            subsection (1), or"
+                                },
+                                {
+                                    "@id": "d1e319",
+                                    "bcl:num": "b",
+                                    "bcl:text": "charge a fee, in respect of the exercise of the right of entry and use specified\n            in subsection (1), for the dog that is a member of a guide dog team, service dog team or\n            dog-in-training team."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e330",
+                    "bcl:marginalnote": "Tenancy",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e338",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d1e346",
+                                    "bcl:text": {
+                                        "in:term": "manufactured home site",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02077_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Manufactured Home Park Tenancy Act"
+                                        },
+                                        "#text": "has the same meaning as in the\n              ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e358",
+                                    "bcl:text": {
+                                        "in:term": "rental unit",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/02078_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Residential Tenancy Act"
+                                        },
+                                        "#text": "has the same meaning as in the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e371",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "A person must not",
+                                "on the basis that the individual who is a member of the team intends to keep the\n          dog that is a member of the team in the manufactured home site or rental unit."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e379",
+                                    "bcl:num": "a",
+                                    "bcl:text": "deny to a guide dog team, service dog team or retired guide or service dog team\n            a manufactured home site or rental unit advertised or otherwise represented as available\n            for occupancy by a tenant, or"
+                                },
+                                {
+                                    "@id": "d1e388",
+                                    "bcl:num": "b",
+                                    "bcl:text": "impose, on an individual who is a member of any of those teams, a term or\n            condition for the tenancy of a manufactured home site or rental unit if the term or\n            condition discriminates"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e401",
+                            "bcl:num": "3",
+                            "bcl:text": "Subsection (2) (a) does not apply if the advertisement or representation referred\n          to in that subsection specifies that occupancy of the rental unit may entail sharing\n          sleeping, bathroom or cooking facilities in the space with an individual from another\n          family."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e411",
+                    "bcl:marginalnote": "False representation",
+                    "bcl:num": "4",
+                    "bcl:text": "A person must not falsely represent a dog as being a member of a guide dog team,\n        service dog team, retired guide or service dog team or dog-in-training team."
+                },
+                {
+                    "@id": "d1e424",
+                    "bcl:marginalnote": "Applying for certification",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e432",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to this section and the regulations, an individual may apply to the\n          registrar for the issuance or renewal of one or more of the following\n          certificates:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e440",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the case of a blind person, a certificate certifying that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e448",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the dog identified in the certificate is a guide dog, and"
+                                        },
+                                        {
+                                            "@id": "d1e457",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the blind person and the dog are a guide dog team;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e467",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the case of a person with a disability, a certificate certifying\n            that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e475",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the dog identified in the certificate is a service dog, and"
+                                        },
+                                        {
+                                            "@id": "d1e484",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the person with a disability and the dog are a service dog team;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e494",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a certificate certifying that the individual identified in the certificate is a\n            dog trainer;"
+                                },
+                                {
+                                    "@id": "d1e504",
+                                    "bcl:num": "d",
+                                    "bcl:text": "[Repealed 2020-14-71.]"
+                                },
+                                {
+                                    "@id": "d1e513",
+                                    "bcl:num": "e",
+                                    "bcl:text": "a certificate certifying that the individual and the dog identified in the\n            certificate are a retired guide or service dog team."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e523",
+                            "bcl:num": "2",
+                            "bcl:text": "An application under subsection (1) must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e531",
+                                    "bcl:num": "a",
+                                    "bcl:text": "be in the form and manner the registrar requires,"
+                                },
+                                {
+                                    "@id": "d1e540",
+                                    "bcl:num": "b",
+                                    "bcl:text": "include or be accompanied by any information or document the regulations\n            require, and"
+                                },
+                                {
+                                    "@id": "d1e549",
+                                    "bcl:num": "c",
+                                    "bcl:text": "be accompanied by the prescribed fee, if any."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e560",
+                    "bcl:marginalnote": "Certification",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e568",
+                            "bcl:num": "1",
+                            "bcl:text": "The registrar may issue or renew a certificate referred to in section 5 (1), in a\n          form satisfactory to the registrar, if the registrar is satisfied that the individual or\n          the dog, or both, as the case may be, identified in the certificate meet all of the\n          conditions, qualifications and requirements imposed under this Act and the\n          regulations."
+                        },
+                        {
+                            "@id": "d1e577",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e585",
+                                    "bcl:num": "a",
+                                    "bcl:text": "impose on a certificate any terms and conditions that the registrar considers\n            appropriate, and"
+                                },
+                                {
+                                    "@id": "d1e594",
+                                    "bcl:num": "b",
+                                    "bcl:text": "amend or remove a term or condition of a certificate."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e604",
+                            "bcl:num": "3",
+                            "bcl:text": "A certificate expires at the end of the day specified in the\n          certificate."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e662",
+                    "bcl:marginalnote": "Deemed certification",
+                    "bcl:num": "6.1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e670",
+                            "bcl:num": "1",
+                            "bcl:text": "A blind person and a dog are deemed to be certified as a guide dog team if the person holds a valid identification card issued to the team by an accredited or recognized training school."
+                        },
+                        {
+                            "@id": "d1e679",
+                            "bcl:num": "2",
+                            "bcl:text": "A person with a disability and a dog are deemed to be certified as a service dog team if the person holds a valid identification card issued to the team by an accredited or recognized training school."
+                        },
+                        {
+                            "@id": "d1e688",
+                            "bcl:num": "3",
+                            "bcl:text": "Certification of a guide dog team under subsection (1) or a service dog team under subsection (2) ends on the earlier of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e696",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the expiry date specified on the identification card;"
+                                },
+                                {
+                                    "@id": "d1e705",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the date on which an accredited or recognized training school revokes the identification card it issued to the team."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e614",
+                    "bcl:marginalnote": "Cancellation of or refusal to renew certificate",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e622",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to the regulations, the registrar may cancel or refuse to renew a\n          certificate",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e630",
+                                    "bcl:num": "a",
+                                    "bcl:text": "if the registrar is satisfied that the individual to whom the certificate is\n            issued",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e638",
+                                            "bcl:num": "i",
+                                            "bcl:text": "ceases to meet any of the conditions, qualifications or requirements imposed\n              under this Act or the regulations, or"
+                                        },
+                                        {
+                                            "@id": "d1e647",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "fails to comply with any of the terms, conditions or requirements imposed\n              under this Act or the regulations,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e657",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the dog identified in the certificate",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e665",
+                                            "bcl:num": "i",
+                                            "bcl:text": "retires,"
+                                        },
+                                        {
+                                            "@id": "d1e674",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "dies or becomes permanently disabled, or"
+                                        },
+                                        {
+                                            "@id": "d1e683",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "ceases to meet any of the conditions, qualifications or requirements imposed\n              under this Act or the regulations, as the registrar determines, or"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e693",
+                                    "bcl:num": "c",
+                                    "bcl:text": "in other prescribed circumstances."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e703",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar must notify in writing the individual to whom a certificate is\n          issued of the registrar's decision under subsection (1) to cancel or refuse to renew the\n          certificate."
+                        },
+                        {
+                            "@id": "d1e712",
+                            "bcl:num": "3",
+                            "bcl:text": "An individual to whom a certificate is issued must, on the request of the\n          registrar, surrender the certificate to the registrar."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e722",
+                    "bcl:marginalnote": "Offences and penalties",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e730",
+                            "bcl:num": "1",
+                            "bcl:text": "A person who contravenes section 2 (2) (a) or (b), 3 (2) (a) or (b), 4 or 7 (3)\n          commits an offence and is liable on conviction to a fine of not more than\n          $3\u00a0000."
+                        },
+                        {
+                            "@id": "d1e739",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply for the\n          purposes of this Act."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e753",
+                    "bcl:marginalnote": "Registrar",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e761",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96385_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Public Service\n              Act"
+                                },
+                                "#text": "The minister must appoint, under the , an individual as the Registrar of Guide Dogs and Service\n          Dogs."
+                            }
+                        },
+                        {
+                            "@id": "d1e774",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar has the powers and duties conferred or imposed on the registrar\n          under this Act."
+                        },
+                        {
+                            "@id": "d1e783",
+                            "bcl:num": "3",
+                            "bcl:text": "The registrar may delegate, in writing, any power or duty of the registrar under\n          this Act to a person employed in the ministry of the minister."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e793",
+                    "bcl:marginalnote": "Reconsiderations",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e801",
+                            "bcl:num": "1",
+                            "bcl:text": "An individual to whom a certificate is issued may request the registrar to\n          reconsider a decision under section 7 (1) to cancel or refuse to renew the\n          certificate",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e809",
+                                    "bcl:num": "a",
+                                    "bcl:text": "within 30 days after receiving notice of the decision, or"
+                                },
+                                {
+                                    "@id": "d1e818",
+                                    "bcl:num": "b",
+                                    "bcl:text": "within the period of time the registrar specifies, if the registrar is satisfied\n            that special circumstances existed that precluded the filing of a request for\n            reconsideration within the period of time required under paragraph (a) of this\n            subsection."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e828",
+                            "bcl:num": "2",
+                            "bcl:text": "An individual must make the request under subsection (1) in writing and must\n          identify the error the individual believes was made or the other grounds on which a\n          reconsideration is requested."
+                        },
+                        {
+                            "@id": "d1e837",
+                            "bcl:num": "3",
+                            "bcl:text": "On receiving a request from an individual under this section, the registrar\n          must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e845",
+                                    "bcl:num": "a",
+                                    "bcl:text": "confirm, vary or cancel the decision under section 7 (1), and"
+                                },
+                                {
+                                    "@id": "d1e854",
+                                    "bcl:num": "b",
+                                    "bcl:text": "notify the individual in writing of the registrar's decision under paragraph\u00a0(a)\n            of this subsection and of the reasons for the decision."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e865",
+                            "bcl:num": "4",
+                            "bcl:text": "The registrar may conduct a hearing under this section",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e873",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in writing, electronically or orally, or"
+                                },
+                                {
+                                    "@id": "d1e882",
+                                    "bcl:num": "b",
+                                    "bcl:text": "by any combination of written, electronic or oral hearings."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e894",
+                    "bcl:marginalnote": "Regulations",
+                    "bcl:num": "11",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e902",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41\n          of the ."
+                            }
+                        },
+                        {
+                            "@id": "d1e915",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make\n          regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e923",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting certificates, including, without limitation, the types or classes of\n            certificates, and prescribing terms and conditions for certificates;"
+                                },
+                                {
+                                    "@id": "d1e932",
+                                    "bcl:num": "b",
+                                    "bcl:text": "respecting the conditions, qualifications and requirements that must be met or\n            continue to be met by an individual or a dog, or both, as the case may be, for the\n            purposes of the issuance or renewal of each type or class of certificate;"
+                                },
+                                {
+                                    "@id": "d1e941",
+                                    "bcl:num": "c",
+                                    "bcl:text": "for the purposes of section 5 (2) (b), respecting information or documents that\n            must be included in or accompany an application for the issuance or renewal of a\n            certificate;"
+                                },
+                                {
+                                    "@id": "d1e951",
+                                    "bcl:num": "d",
+                                    "bcl:text": "for the purposes of section 5 (2) (c), prescribing fees;"
+                                },
+                                {
+                                    "@id": "d1e960",
+                                    "bcl:num": "e",
+                                    "bcl:text": "for the purposes of section 7 (1), respecting the process the registrar must\n            follow in cancelling or refusing to renew a certificate;"
+                                },
+                                {
+                                    "@id": "d1e969",
+                                    "bcl:num": "f",
+                                    "bcl:text": "for the purposes of section 7 (1) (c), prescribing circumstances in which the\n            registrar may cancel or refuse to renew a certificate;"
+                                },
+                                {
+                                    "@id": "d1e978",
+                                    "bcl:num": "g",
+                                    "bcl:text": "imposing requirements on guide dog teams, service dog teams or dog-in-training\n            teams respecting the carrying, producing or displaying of a certificate or evidence of\n            certification under this Act;"
+                                },
+                                {
+                                    "@id": "d1e981",
+                                    "bcl:num": "h",
+                                    "bcl:text": "defining \"accredited or recognized training school\"."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e988",
+                            "bcl:num": "3",
+                            "bcl:text": "In making a regulation under this Act, the Lieutenant Governor in Council may do\n          one or more of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e996",
+                                    "bcl:num": "a",
+                                    "bcl:text": "delegate a matter to a person;"
+                                },
+                                {
+                                    "@id": "d1e1005",
+                                    "bcl:num": "b",
+                                    "bcl:text": "confer a discretion on a person;"
+                                },
+                                {
+                                    "@id": "d1e1014",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make different regulations for different certificates, places, dogs, persons or\n            organizations, for different types or classes of certificates or for different classes\n            of places, dogs, persons or organizations."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1025",
+                    "bcl:marginalnote": {
+                        "in:doc": "Guide Animal\n        Act",
+                        "#text": "Transition \u2014 guide animals under"
+                    },
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e1035",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96177_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Guide Animal Act"
+                                },
+                                "#text": "The following apply in respect of an animal that was a guide animal under the\n             immediately before the repeal of that\n          Act and a person to whom a certificate was issued under section 7 of that Act for the\n          guide animal:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1047",
+                                    "bcl:num": "a",
+                                    "bcl:text": "in the case of a guide animal for a blind person,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e1055",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the guide animal is deemed to be a guide dog under this Act,"
+                                        },
+                                        {
+                                            "@id": "d1e1064",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96177_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Guide Animal Act"
+                                                },
+                                                "#text": "the guide animal and the person to whom a certificate was issued under section\n              7 of the  are deemed to be a\n              guide dog team under this Act, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1077",
+                                            "bcl:num": "iii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96177_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Guide Animal\n                  Act"
+                                                },
+                                                "#text": "the certificate issued under section 7 of the  is deemed to be a certificate referred to in section 5 (1)\n              (a) of this Act and issued under section 6 (1) of this Act in respect of the guide\n              animal and the person referred to in subparagraph (ii) of this paragraph;"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1091",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the case of a guide animal for a person other than a blind person,",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e1099",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the guide animal is deemed to be a service dog under this Act,"
+                                        },
+                                        {
+                                            "@id": "d1e1108",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96177_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Guide Animal Act"
+                                                },
+                                                "#text": "the guide animal and the person to whom a certificate was issued under section\n              7 of the  are deemed to be a\n              service dog team under this Act, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1121",
+                                            "bcl:num": "iii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96177_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Guide Animal\n                  Act"
+                                                },
+                                                "#text": "the certificate issued under section 7 of the  is deemed to be a certificate referred to in section 5 (1)\n              (b) of this Act and issued under section 6 (1) of this Act in respect of the guide\n              animal and the person referred to in subparagraph (ii) of this paragraph."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1136",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting any other provision of this Act, the registrar may do one or more\n          of the following in respect of a certificate referred to in subsection\u00a0(1)\u00a0(a)\u00a0(iii) or\n          (b) (iii):",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1144",
+                                    "bcl:num": "a",
+                                    "bcl:text": "request the holder of the certificate to surrender the certificate to the\n            registrar;"
+                                },
+                                {
+                                    "@id": "d1e1153",
+                                    "bcl:num": "b",
+                                    "bcl:text": "issue to the holder of the certificate a new certificate in a form satisfactory\n            to the registrar;"
+                                },
+                                {
+                                    "@id": "d1e1162",
+                                    "bcl:num": "c",
+                                    "bcl:text": "impose on the certificate, or on the new certificate referred to in\n            paragraph\u00a0(b) of this subsection, any terms or conditions that the registrar considers\n            appropriate, including, without limitation, an expiry date for the purposes of section 6\n            (3) of this Act."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1336",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "17",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in\n        Council."
+                }
+            ],
+            "bcl:conseqhead": [
+                {
+                    "bcl:text": "Repeal",
+                    "bcl:num": "13",
+                    "bcl:conseqnote": {
+                        "bcl:editorialnote": {
+                            "in:em": "[Note: See Table of Legislative Changes for the status of sections 13 to 16.]"
+                        }
+                    },
+                    "oasis:table": {
+                        "@style": "1",
+                        "@id": "d1e1307",
+                        "oasis:tgroup": {
+                            "@cols": "3",
+                            "oasis:colspec": [
+                                {
+                                    "@colname": "c1",
+                                    "@colnum": "1",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c2",
+                                    "@colnum": "2",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c3",
+                                    "@colnum": "3",
+                                    "@align": "center",
+                                    "@border": "0"
+                                }
+                            ],
+                            "oasis:thead": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:strong": "Section(s)"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": {
+                                                "in:strong": null
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "in:strong": "Affected Act"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "oasis:tbody": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "13"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E3tlc96177",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Guide Animal Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "bcl:text": "Consequential and Related Amendments",
+                    "bcl:num": "14-16",
+                    "oasis:table": {
+                        "@style": "1",
+                        "@id": "d1e1203",
+                        "oasis:tgroup": {
+                            "@cols": "3",
+                            "oasis:colspec": [
+                                {
+                                    "@colname": "c1",
+                                    "@colnum": "1",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c2",
+                                    "@colnum": "2",
+                                    "@align": "center",
+                                    "@border": "0"
+                                },
+                                {
+                                    "@colname": "c3",
+                                    "@colnum": "3",
+                                    "@align": "center",
+                                    "@border": "0"
+                                }
+                            ],
+                            "oasis:thead": {
+                                "oasis:trow": {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:strong": "Section(s)"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": {
+                                                "in:strong": null
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "in:strong": "Affected Act"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "oasis:tbody": {
+                                "oasis:trow": [
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "oasis:line": {
+                                                    "in:em": "14"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/E3tlc02077",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Manufactured Home Park Tenancy Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "oasis:line": {
+                                                    "in:em": "15"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/E3tlc02078",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Residential Tenancy Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "oasis:entry": [
+                                            {
+                                                "@colname": "c1",
+                                                "@align": "right",
+                                                "oasis:line": {
+                                                    "in:em": "16"
+                                                }
+                                            },
+                                            {
+                                                "@colname": "c2",
+                                                "@width": "35",
+                                                "oasis:line": null
+                                            },
+                                            {
+                                                "@colname": "c3",
+                                                "oasis:line": {
+                                                    "bcl:link": {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/E3tlc98043",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Strata Property Act"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

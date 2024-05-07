@@ -1,0 +1,1329 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@id": "19046",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "act:title": "Fuel Price Transparency Act",
+        "act:chapter": "46",
+        "act:yearenacted": "2019",
+        "act:assentedto": "November 28, 2019",
+        "act:currency": {
+            "act:tlcDirPath": "1198514681/1868808288/1785349746",
+            "act:tlc": "E3tlc19046"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d1e27",
+                    "bcl:num": "1",
+                    "bcl:text": "Interpretation",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e3730",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d1e43",
+                                    "bcl:text": {
+                                        "in:term": "administrator",
+                                        "#text": "means the administrator designated under section 3 or, if none is designated, the minister;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e51",
+                                    "bcl:text": {
+                                        "in:term": "fuel data",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e58",
+                                            "bcl:num": "a",
+                                            "bcl:text": "information in relation to a reportable activity, and"
+                                        },
+                                        {
+                                            "@id": "d1e67",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any other information in relation to reportable fuel;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e78",
+                                    "bcl:text": {
+                                        "in:term": "inspector",
+                                        "#text": "means an inspector designated under section 11;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e86",
+                                    "bcl:text": {
+                                        "in:term": "reportable activity",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e93",
+                                            "bcl:num": "a",
+                                            "bcl:text": "processing, refining, storing, transporting, marketing or supplying reportable fuel, and"
+                                        },
+                                        {
+                                            "@id": "d1e102",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a prescribed activity in relation to reportable fuel;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e112",
+                                    "bcl:text": {
+                                        "in:term": "reportable fuel",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e119",
+                                            "bcl:num": "a",
+                                            "bcl:text": "gasoline,"
+                                        },
+                                        {
+                                            "@id": "d1e128",
+                                            "bcl:num": "b",
+                                            "bcl:text": "diesel fuel, and"
+                                        },
+                                        {
+                                            "@id": "d1e137",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a prescribed fuel or other substance;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e147",
+                                    "bcl:text": {
+                                        "in:term": "reporting period",
+                                        "#text": "means a prescribed period of time;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e155",
+                                    "bcl:text": {
+                                        "in:term": "responsible person",
+                                        "#text": "means a person engaged in a reportable activity;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e163",
+                                    "bcl:text": {
+                                        "in:term": "supply",
+                                        "#text": "means to sell or otherwise provide;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e172",
+                                    "bcl:text": {
+                                        "in:term": "utilities commission",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96473_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Utilities Commission Act"
+                                        },
+                                        "#text": "means the British Columbia Utilities Commission continued under the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e185",
+                            "bcl:marginalnote": "Application",
+                            "bcl:num": "2",
+                            "bcl:text": "This Act does not apply in relation to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e196",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a prescribed reportable fuel,"
+                                },
+                                {
+                                    "@id": "d1e205",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a reportable activity in a prescribed circumstance, or"
+                                },
+                                {
+                                    "@id": "d1e215",
+                                    "bcl:num": "c",
+                                    "bcl:text": "a reportable activity in relation to an amount of reportable fuel that is less than the prescribed amount."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e226",
+                    "bcl:num": "2",
+                    "bcl:text": "Administration",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e234",
+                            "bcl:marginalnote": "Administrator",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e242",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Lieutenant Governor in Council may, by regulation,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e250",
+                                            "bcl:num": "a",
+                                            "bcl:text": "designate the utilities commission or a person to administer this Act, and"
+                                        },
+                                        {
+                                            "@id": "d1e259",
+                                            "bcl:num": "b",
+                                            "bcl:text": "restrict or impose conditions on the exercise of powers, or the performance of duties, under this Act by the administrator."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e269",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the administrator is a corporation, the administration of this Act is a purpose of the corporation."
+                                },
+                                {
+                                    "@id": "d1e278",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the administrator is constituted or continued under another Act, subsection (1)\u00a0(b) of this section applies in relation to any powers and duties under that other Act as they relate to the administration of this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e288",
+                            "bcl:marginalnote": "Accountability of administrator",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e296",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The administrator must report to the minister as the minister requires."
+                                },
+                                {
+                                    "@id": "d1e305",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The administrator must administer this Act",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e313",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in accordance with any general or special directions of the minister, and"
+                                        },
+                                        {
+                                            "@id": "d1e322",
+                                            "bcl:num": "b",
+                                            "bcl:text": "subject to paragraph (a), so as to promote",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e330",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the competitiveness of the market for reportable fuels, and"
+                                                },
+                                                {
+                                                    "@id": "d1e339",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "public confidence in the competitiveness of that market."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e352",
+                    "bcl:num": "3",
+                    "bcl:text": "Fuel Price Transparency",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e360",
+                            "bcl:marginalnote": "Periodic submissions",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e368",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If required by the regulations, a person who is a responsible person in all or part of a reporting period must, in accordance with this section, submit the prescribed fuel data for the reporting period to the administrator."
+                                },
+                                {
+                                    "@id": "d1e377",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A submission under subsection (1) must be made",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e385",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by the prescribed date for the reporting period, and"
+                                        },
+                                        {
+                                            "@id": "d1e394",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the manner and form required by the administrator."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e404",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A submission under subsection (1) of a person must be accompanied by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e412",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the prescribed information, if any, about the person, and"
+                                        },
+                                        {
+                                            "@id": "d1e421",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a statement, signed by the person or a director or officer of the person, that the submission is accurate and complete."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e432",
+                            "bcl:marginalnote": "Requested submissions",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e440",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If required by the administrator, a person who is or has been a responsible person must, in accordance with this section, submit to the administrator",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e448",
+                                            "bcl:num": "a",
+                                            "bcl:text": "any fuel data requested by the administrator, and"
+                                        },
+                                        {
+                                            "@id": "d1e457",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[supporting records]",
+                                                "#text": "any records referred to in section 8 (1)  requested by the administrator."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e470",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A submission under subsection (1) must be made",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e478",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by the date specified by the administrator, and"
+                                        },
+                                        {
+                                            "@id": "d1e487",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the manner and form required by the administrator."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e497",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A submission under subsection (1) of a person must be accompanied by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e505",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the prescribed information, if any, about the person, and"
+                                        },
+                                        {
+                                            "@id": "d1e514",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a statement, signed by the person or a director or officer of the person, that the submission is accurate and complete."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e525",
+                            "bcl:marginalnote": "Supplementary submissions",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e533",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who makes a submission under this Part must, in accordance with this section, make a supplementary submission to the administrator within 30 days after the person becomes aware that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e541",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a previous submission of the person under this Part was not accurate or complete, or"
+                                        },
+                                        {
+                                            "@id": "d1e550",
+                                            "bcl:num": "b",
+                                            "bcl:text": "information accompanying a previous submission of the person has changed."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e560",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A submission under subsection (1) must be made in the manner and form required by the administrator."
+                                },
+                                {
+                                    "@id": "d1e569",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A submission under subsection (1) of a person must be accompanied by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e577",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the prescribed information, if any, about the person, and"
+                                        },
+                                        {
+                                            "@id": "d1e586",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a statement, signed by the person or a director or officer of the person, that the submission is accurate and complete."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e598",
+                            "bcl:marginalnote": "Supporting records",
+                            "bcl:num": "8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e606",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who is required to submit fuel data under this Act must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e614",
+                                            "bcl:num": "a",
+                                            "bcl:text": "record and maintain records sufficient to verify the fuel data and retain those records for at least 5 years after the date by which the person is required to submit that fuel data, and"
+                                        },
+                                        {
+                                            "@id": "d1e623",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if required by the regulations, record and maintain the prescribed records and retain those records for the prescribed period of time."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e633",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The recording, maintenance and retention of records under this section must be done in accordance with any requirements established by regulation."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e643",
+                            "bcl:marginalnote": "Publication",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e651",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this section:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d1e659",
+                                            "bcl:text": {
+                                                "in:term": "protected information",
+                                                "#text": "means information that would reveal"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e666",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "trade secrets of a responsible person, or"
+                                                },
+                                                {
+                                                    "@id": "d1e675",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "commercial, financial, labour relations, scientific or technical information of or about a responsible person;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e685",
+                                            "bcl:text": {
+                                                "in:term": "trade secret",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96165_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Freedom of Information and Protection of Privacy Act"
+                                                },
+                                                "#text": "has the same meaning as in the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e698",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The administrator may publish fuel data, or other information or records, acquired under this Act if the administrator is satisfied that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e706",
+                                            "bcl:num": "a",
+                                            "bcl:text": "protected information will not be disclosed, or"
+                                        },
+                                        {
+                                            "@id": "d1e715",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the public interest in the protected information that will be disclosed outweighs any potential harm to responsible persons, having regard, without limitation, to the importance of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e723",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the competitiveness of the market for reportable fuels, and"
+                                                },
+                                                {
+                                                    "@id": "d1e732",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "public confidence in the competitiveness of that market."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e745",
+                    "bcl:num": "4",
+                    "bcl:text": "Compliance and Enforcement",
+                    "bcl:division": [
+                        {
+                            "@id": "d1e753",
+                            "bcl:num": "1",
+                            "bcl:text": "Audits and Inspections",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e761",
+                                    "bcl:marginalnote": "Audits",
+                                    "bcl:num": "10",
+                                    "bcl:text": "If required by the administrator, a person who makes a submission under this Act must have the submission audited",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e772",
+                                            "bcl:num": "a",
+                                            "bcl:text": "within the period of time specified by the administrator, and"
+                                        },
+                                        {
+                                            "@id": "d1e781",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in accordance with the regulations, if applicable, and any directions of the administrator."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e791",
+                                    "bcl:marginalnote": "Inspections",
+                                    "bcl:num": "11",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e799",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "in:term": "private dwelling",
+                                                "#text": "In this section,  means a structure, or a part of a structure, that is occupied as a private residence."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e811",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The administrator may",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e819",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "designate individuals, by name or by title, as inspectors, and"
+                                                },
+                                                {
+                                                    "@id": "d1e828",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "in making a designation under paragraph (a), restrict or impose conditions on the exercise of powers, or the performance of duties, under this section by the individuals designated."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e838",
+                                            "bcl:num": "3",
+                                            "bcl:text": "For the purpose of ensuring compliance with this Act or the regulations, an inspector may do any of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e846",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "at any reasonable time, enter land or premises;"
+                                                },
+                                                {
+                                                    "@id": "d1e855",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "inspect, analyze, measure, sample or test anything;"
+                                                },
+                                                {
+                                                    "@id": "d1e864",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "use or operate anything;"
+                                                },
+                                                {
+                                                    "@id": "d1e874",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "take away samples;"
+                                                },
+                                                {
+                                                    "@id": "d1e883",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": "examine and take away copies of records;"
+                                                },
+                                                {
+                                                    "@id": "d1e892",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": "take photographs or make audio or video records;"
+                                                },
+                                                {
+                                                    "@id": "d1e901",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "require a person to do a thing referred to in subsection\u00a0(7)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e912",
+                                            "bcl:num": "4",
+                                            "bcl:text": "The authority under subsection (3) (a) must not be used to enter a private dwelling except with the consent of the occupant or as authorized by a warrant under subsection\u00a0(5)."
+                                        },
+                                        {
+                                            "@id": "d1e921",
+                                            "bcl:num": "5",
+                                            "bcl:text": "If satisfied by evidence on oath or affirmation that entry into a private dwelling is necessary for the purposes of an inspection under this section, a justice may issue a warrant authorizing an inspector",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e929",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "to enter the private dwelling and conduct the inspection, or"
+                                                },
+                                                {
+                                                    "@id": "d1e938",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "to take other actions as authorized by the warrant."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e948",
+                                            "bcl:num": "6",
+                                            "bcl:text": "An inspector who enters land or premises in accordance with this section",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e956",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "may bring individuals and equipment that may be necessary for the purposes of the inspection, and"
+                                                },
+                                                {
+                                                    "@id": "d1e965",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "on request of a person present on the land or in the premises, must provide evidence to the person of the inspector's authorization to enter the land or premises."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e975",
+                                            "bcl:num": "7",
+                                            "bcl:text": "If required under subsection (3) (g) by an inspector, a person must, without charge or unreasonable delay,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e983",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "produce for examination by the inspector any record relating to a reportable activity, reportable fuel or submission under this Act,"
+                                                },
+                                                {
+                                                    "@id": "d1e992",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "provide the inspector with information relevant to the purposes of the inspection, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1001",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "operate a thing, carry out a procedure or demonstrate a relevant skill, as the inspector directs."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1011",
+                                            "bcl:num": "8",
+                                            "bcl:text": "A person must not obstruct or interfere with an inspector acting under the authority of this section."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1022",
+                            "bcl:num": "2",
+                            "bcl:text": "Administrative Penalties",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e1030",
+                                    "bcl:marginalnote": "Administrative penalties",
+                                    "bcl:num": "12",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1038",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The administrator may, in accordance with subsection (2), impose an administrative penalty on a person if the administrator is satisfied on a balance of probabilities that the person has done any of the following:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1046",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "in:desc": "[periodic submissions]",
+                                                        "#text": "contravened section 5 (1) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1058",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "in:desc": "[requested submissions]",
+                                                        "#text": "contravened section 6 (1) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1070",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": {
+                                                        "in:desc": "[supplementary submissions]",
+                                                        "#text": "contravened section 7 (1) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1083",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": {
+                                                        "in:desc": "[supporting records]",
+                                                        "#text": "contravened section 8 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1095",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": {
+                                                        "in:desc": "[audits]",
+                                                        "#text": "contravened section 10 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1107",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": {
+                                                        "in:desc": "[inspections]",
+                                                        "#text": "contravened section 11 (7) or (8) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1119",
+                                                    "bcl:num": "g",
+                                                    "bcl:text": "provided false or misleading information or records in a submission under this Act or to an inspector conducting an inspection under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e1128",
+                                                    "bcl:num": "h",
+                                                    "bcl:text": "made a false statement under section 5\u00a0(3)\u00a0(b), 6\u00a0(3)\u00a0(b) or 7\u00a0(3)\u00a0(b)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1138",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The administrator may impose an administrative penalty on a person by serving the person with a notice that",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1146",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "identifies the contravention or other action for which the penalty is imposed, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1155",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "requires the person to pay an administrative penalty in the amount specified in the notice."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1165",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A person on whom an administrative penalty is imposed under this section must pay the administrative penalty to the government within the prescribed number of days after being served with the notice under subsection\u00a0(2)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1175",
+                                    "bcl:marginalnote": "Corporate liability",
+                                    "bcl:num": "13",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1183",
+                                            "bcl:num": "1",
+                                            "bcl:text": "If a corporation contravenes a provision referred to in section 12\u00a0(1)\u00a0(a) to\u00a0(f) or does anything described in section 12\u00a0(1)\u00a0(g), an employee, officer, director or agent of the corporation who authorized, permitted or acquiesced in the contravention or action is also liable under section 12 even though the corporation is liable for or pays an administrative penalty."
+                                        },
+                                        {
+                                            "@id": "d1e1192",
+                                            "bcl:num": "2",
+                                            "bcl:text": "If an employee, officer, director or agent of a corporation contravenes the provision referred to in section 12\u00a0(1)\u00a0(f), or does anything described in section 12\u00a0(1)\u00a0(g) or\u00a0(h), while acting on behalf of the corporation, the corporation is also liable under section\u00a012 even though the employee, officer, director or agent is liable for or pays an administrative penalty."
+                                        },
+                                        {
+                                            "@id": "d1e1201",
+                                            "bcl:num": "3",
+                                            "bcl:text": "For the purposes of subsection (2), a corporation has the burden of proving that an employee, officer, director or agent was not acting on behalf of the corporation at the time the employee, officer, director or agent provided the information or made the statement referred to in that subsection."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1211",
+                                    "bcl:marginalnote": "Effect of charging an offence",
+                                    "bcl:num": "14",
+                                    "bcl:text": "A person who has been charged with an offence under this Act may not be subject to an administrative penalty in respect of the circumstances that gave rise to the charge."
+                                },
+                                {
+                                    "@id": "d1e1224",
+                                    "bcl:marginalnote": "Recovery of administrative penalties",
+                                    "bcl:num": "15",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1232",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An administrative penalty under this Act may be recovered as a debt due to the government."
+                                        },
+                                        {
+                                            "@id": "d1e1241",
+                                            "bcl:num": "2",
+                                            "bcl:text": "If a person fails to pay an administrative penalty as required under section 12 (3), the administrator may file a certificate in a court that has jurisdiction and, upon filing, the certificate has the same force and effect, and all proceedings may be taken on it, as if it were a judgment of the court with which it is filed."
+                                        },
+                                        {
+                                            "@id": "d1e1250",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A certificate under subsection (2) must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1258",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "be signed by the administrator, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1267",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "contain the following information:",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e1275",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "the name of the person who is liable for the penalty;"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1284",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "the particulars of the action in relation to which the penalty is imposed;"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1293",
+                                                            "bcl:num": "iii",
+                                                            "bcl:text": "the amount of the penalty."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1306",
+                            "bcl:num": "3",
+                            "bcl:text": "Offences",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e1314",
+                                    "bcl:marginalnote": "Offences and penalties",
+                                    "bcl:num": "16",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1322",
+                                            "bcl:num": "1",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96338_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Offence Act"
+                                                },
+                                                "#text": "Section 5 of the  does not apply to this Act or the regulations."
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1335",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person who contravenes any of the following commits an offence:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1343",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "in:desc": "[periodic submissions]",
+                                                        "#text": "section 5 (1) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1355",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "in:desc": "[requested submissions]",
+                                                        "#text": "section 6 (1) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1367",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": {
+                                                        "in:desc": "[supplementary submissions]",
+                                                        "#text": "section 7 (1) ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1380",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": {
+                                                        "in:desc": "[supporting records]",
+                                                        "#text": "section 8 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1392",
+                                                    "bcl:num": "e",
+                                                    "bcl:text": {
+                                                        "in:desc": "[audits]",
+                                                        "#text": "section 10 ;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1404",
+                                                    "bcl:num": "f",
+                                                    "bcl:text": {
+                                                        "in:desc": "[inspections]",
+                                                        "#text": "section 11 (7) or (8) ."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1417",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A person who commits an offence under subsection (2) is liable on conviction to a fine of not more than $1\u00a0000\u00a0000 or imprisonment for a term of not more than 6 months, or both."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1427",
+                                    "bcl:marginalnote": "Offences and penalties relating to false or\n                        misleading information",
+                                    "bcl:num": "17",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1435",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person who knowingly does any of the following commits an offence and is liable on conviction to a fine of not more than $1\u00a0000\u00a0000 or imprisonment for a term of not more than 6 months, or both:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1443",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "provides false or misleading information or records in a submission under this Act or to an inspector conducting an inspection under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e1452",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "makes a false statement under section 5\u00a0(3)\u00a0(b), 6\u00a0(3)\u00a0(b) or 7\u00a0(3)\u00a0(b)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1462",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person who does any of the following, other than a person described in subsection\u00a0(1), commits an offence and is liable on conviction to a fine of not more than $500\u00a0000 or imprisonment for a term of not more than 6\u00a0months, or both:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1470",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "provides false or misleading information or records in a submission under this Act or to an inspector conducting an inspection under this Act;"
+                                                },
+                                                {
+                                                    "@id": "d1e1479",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "makes a false statement under section 5\u00a0(3)\u00a0(b), 6\u00a0(3)\u00a0(b) or 7\u00a0(3)\u00a0(b)."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1489",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A person does not commit an offence under subsection (2) if, at the time the information or records were provided or the statement was made, the person, with the exercise of reasonable diligence, could not have known that the information or records were false or misleading or that the statement was false, as the case may be."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1499",
+                                    "bcl:marginalnote": "Continuing offences",
+                                    "bcl:num": "18",
+                                    "bcl:text": "If an offence under section 16 (2) continues for more than one day, separate fines, each not exceeding the maximum fine for the offence, may be imposed for each day the offence continues."
+                                },
+                                {
+                                    "@id": "d1e1512",
+                                    "bcl:marginalnote": "Corporate liability",
+                                    "bcl:num": "19",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1520",
+                                            "bcl:num": "1",
+                                            "bcl:text": "If a corporation commits an offence under this Act, an employee, officer, director or agent of the corporation who authorizes, permits or acquiesces in the offence commits the same offence, whether or not the corporation is prosecuted or convicted."
+                                        },
+                                        {
+                                            "@id": "d1e1529",
+                                            "bcl:num": "2",
+                                            "bcl:text": "If an employee, officer, director or agent of a corporation commits an offence under section 16\u00a0(2)\u00a0(f) or 17\u00a0(1) or\u00a0(2) while acting on behalf of the corporation, the corporation commits the same offence, whether or not the employee, officer, director or agent is identified, prosecuted or convicted."
+                                        },
+                                        {
+                                            "@id": "d1e1538",
+                                            "bcl:num": "3",
+                                            "bcl:text": "For the purposes of subsection (2), a corporation has the burden of proving that an employee, officer, director or agent of the corporation was not acting on behalf of the corporation at the time the employee, officer, director or agent committed an offence referred to in that subsection."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1548",
+                                    "bcl:marginalnote": "Effect of imposing administrative penalty",
+                                    "bcl:num": "20",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1556",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A person may be prosecuted under this Act for an offence in relation to which an administrative penalty has been imposed."
+                                        },
+                                        {
+                                            "@id": "d1e1565",
+                                            "bcl:num": "2",
+                                            "bcl:text": "In imposing a sentence for an offence under this Act, the court may consider an administrative penalty imposed in relation to the same matter."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1575",
+                                    "bcl:marginalnote": "Limitation period",
+                                    "bcl:num": "21",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1583",
+                                            "bcl:num": "1",
+                                            "bcl:text": "The time limit for laying an information for an offence under this Act is",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1591",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "3 years after the date that the facts on which the information is based arose, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1600",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "if the administrator completes a certificate described in subsection\u00a0(2), 18\u00a0months after the date that the facts on which the information is based first came to the knowledge of the administrator."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1610",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A document purporting to have been issued by the administrator, certifying the date on which the administrator became aware of the facts on which the information is based, is proof of the certified facts."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1622",
+                    "bcl:num": "5",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e1630",
+                            "bcl:marginalnote": "Service under this Act",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1638",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "document",
+                                        "#text": "In this section,  means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1649",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[requested submissions]",
+                                                "#text": "a request under section 6 (1) , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e1661",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "in:desc": "[administrative penalties]",
+                                                "#text": "a notice under section 12 (2) ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1674",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A document is deemed to have been served on a person if the document is",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1682",
+                                            "bcl:num": "a",
+                                            "bcl:text": "sent by ordinary mail or registered mail to the person's address for service,"
+                                        },
+                                        {
+                                            "@id": "d1e1691",
+                                            "bcl:num": "b",
+                                            "bcl:text": "transmitted by email to the person at the email address provided as part of the person's address for service, or"
+                                        },
+                                        {
+                                            "@id": "d1e1700",
+                                            "bcl:num": "c",
+                                            "bcl:text": "sent, transmitted or delivered by any prescribed method of service."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1710",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If service is by ordinary mail or registered mail, the document is deemed to have been served 14\u00a0days after it is mailed."
+                                },
+                                {
+                                    "@id": "d1e1720",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If service is by email, the document is deemed to have been served 3\u00a0days after it is transmitted."
+                                },
+                                {
+                                    "@id": "d1e1729",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If service is by a prescribed method of service, the document is deemed to have been served the prescribed number of days after it is sent, transmitted or delivered, as the case may be."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1739",
+                            "bcl:marginalnote": "Regulations",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1747",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1760",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1768",
+                                            "bcl:num": "a",
+                                            "bcl:text": "respecting any matter for which regulations are contemplated by this Act;"
+                                        },
+                                        {
+                                            "@id": "d1e1777",
+                                            "bcl:num": "b",
+                                            "bcl:text": "defining a word or expression used but not defined in this Act;"
+                                        },
+                                        {
+                                            "@id": "d1e1786",
+                                            "bcl:num": "c",
+                                            "bcl:text": "without limiting paragraph (b), defining the terms \"gasoline\" and \"diesel fuel\", including, without limitation, by reference to",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1794",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a fuel or other substance, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1803",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the characteristics, origins, uses or marketed uses of a fuel or other substance;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1814",
+                                            "bcl:num": "d",
+                                            "bcl:text": "respecting submissions under Part 3, including, without limitation,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1822",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "requiring submissions under section 5 and prescribing the fuel data for the purpose of that section, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1831",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "respecting the identification in submissions of protected information, within the meaning of section\u00a09\u00a0(1), and harms to responsible persons of publishing that information;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1841",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing information for the purposes of section 5\u00a0(3)\u00a0(a), 6\u00a0(3)\u00a0(a) or 7\u00a0(3)\u00a0(a), including, without limitation, an address or email address for the purposes of section\u00a022\u00a0(2);"
+                                        },
+                                        {
+                                            "@id": "d1e1850",
+                                            "bcl:num": "f",
+                                            "bcl:text": "respecting audits under section 10, including, without limitation,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1858",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "respecting who may conduct audits,"
+                                                },
+                                                {
+                                                    "@id": "d1e1867",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "respecting the conduct of audits, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1876",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "requiring reports or statements in relation to audits and respecting the form and content of those reports and statements;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1886",
+                                            "bcl:num": "g",
+                                            "bcl:text": "respecting administrative penalties under section 12, including, without limitation,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1894",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "prescribing a limitation period for imposing an administrative penalty and evidentiary matters in relation to that period,"
+                                                },
+                                                {
+                                                    "@id": "d1e1903",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prescribing the maximum amount of an administrative penalty that may be imposed generally or for specified contraventions, or a manner of calculating that amount,"
+                                                },
+                                                {
+                                                    "@id": "d1e1912",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "authorizing administrative penalties to be imposed on a daily basis for continuing contraventions,"
+                                                },
+                                                {
+                                                    "@id": "d1e1922",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "prescribing time limits for paying administrative penalties, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1931",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "prescribing the consequences of failing to pay an administrative penalty, which may include, but are not limited to, imposing additional penalties."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1942",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In making a regulation under this Act, the Lieutenant Governor in Council may do any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1950",
+                                            "bcl:num": "a",
+                                            "bcl:text": "make different regulations in relation to different classes of persons, things, circumstances or other matters;"
+                                        },
+                                        {
+                                            "@id": "d1e1959",
+                                            "bcl:num": "b",
+                                            "bcl:text": "establish different classes of fuels, including, without limitation, by reference to their characteristics, origins, uses or marketed uses;"
+                                        },
+                                        {
+                                            "@id": "d1e1968",
+                                            "bcl:num": "c",
+                                            "bcl:text": [
+                                                "adopt by reference, in whole or in part and with any changes considered appropriate, a regulation, code, standard or rule",
+                                                "as the regulation, code, standard or rule stands at a specific date, as it stands at the time of adoption or as amended from time to time."
+                                            ],
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1976",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "enacted as or under a law of another jurisdiction in or outside Canada, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1985",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "set by a provincial, national or international body or any other code, standard or rule-making body"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3738",
+                            "bcl:marginalnote": "Commencement",
+                            "bcl:num": "24",
+                            "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

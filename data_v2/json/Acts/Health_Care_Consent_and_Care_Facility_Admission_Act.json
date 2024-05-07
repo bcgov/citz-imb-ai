@@ -1,0 +1,2627 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsl-fo": "https://styles.qp.gov.bc.ca/bclaws-xsl-fo/act.xsl",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96181_01",
+        "act:title": "Health Care (Consent) and Care Facility (Admission) Act",
+        "act:chapter": "181",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "712470149/96181/tlc96181_f",
+            "act:tlc": "E3tlc96181"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d2e21",
+                    "bcl:num": "1",
+                    "bcl:text": "Introductory Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e30",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e41",
+                                    "bcl:text": {
+                                        "in:term": "adult",
+                                        "#text": "means anyone who has reached 19 years of age;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e50",
+                                    "bcl:text": {
+                                        "in:term": "advance directive",
+                                        "#text": "means a written instruction made by a capable adult that"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e60",
+                                            "bcl:num": "a",
+                                            "bcl:text": "gives or refuses consent to health care for the adult in the event that the adult is not capable of giving the instruction at the time the health care is required, and"
+                                        },
+                                        {
+                                            "@id": "d2e69",
+                                            "bcl:num": "b",
+                                            "bcl:text": "complies with the requirements of Part 2.1;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e78",
+                                    "bcl:text": [
+                                        {
+                                            "in:term": "care facility",
+                                            "#text": "means"
+                                        },
+                                        {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/04060_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Community Living Authority Act"
+                                            },
+                                            "#text": "but does not include a service provider under the  that has not been designated under paragraph (e);"
+                                        }
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e87",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a community care facility that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e101",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/02075_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Community Care and Assisted Living Act"
+                                                        },
+                                                        "#text": "is licensed or designated under the , and"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e114",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "provides residential care to adults,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e99",
+                                            "bcl:num": "b",
+                                            "bcl:text": "[Not in force.]"
+                                        },
+                                        {
+                                            "@id": "d2e111",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96200_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Hospital Act"
+                                                },
+                                                "#text": "a private hospital licensed under Part 2 of the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e124",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96200_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Hospital Act"
+                                                },
+                                                "#text": "an institution designated as a hospital under the  for the treatment of persons referred to in paragraph (b) or (c) of the definition of \"hospital\" in that Act, or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e129",
+                                            "bcl:num": "e",
+                                            "bcl:text": "any other facility, or class of facility, designated by regulation as a care facility,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e133",
+                                    "bcl:text": {
+                                        "in:term": "close friend",
+                                        "#text": ", in respect of an adult who needs health care, means another adult who has a long-term, close personal relationship involving frequent personal contact with the adult, but does not include a person who receives compensation for providing personal care or health care to that adult;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e142",
+                                    "bcl:text": {
+                                        "in:term": "court",
+                                        "#text": "means the Supreme Court of British Columbia;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e160",
+                                    "bcl:text": {
+                                        "in:term": "health care",
+                                        "#text": "means anything that is done for a therapeutic, preventive, palliative, diagnostic, cosmetic or other purpose related to health, and includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e169",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a series or sequence of similar treatments or care administered to an adult over a period of time for a particular health problem,"
+                                        },
+                                        {
+                                            "@id": "d2e179",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a plan for minor health care that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e188",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "is developed by one or more health care providers,"
+                                                },
+                                                {
+                                                    "@id": "d2e197",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "deals with one or more of the health problems that an adult has and may, in addition, deal with one or more of the health problems that an adult is likely to have in the future given the adult's current health condition, and"
+                                                },
+                                                {
+                                                    "@id": "d2e206",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "expires no later than 12 months from the date consent for the plan was given, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e215",
+                                            "bcl:num": "c",
+                                            "bcl:text": "participation in a medical research program approved by an ethics committee designated by regulation;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e224",
+                                    "bcl:text": {
+                                        "in:term": "health care provider",
+                                        "#text": "means a person, or a person in a prescribed class of persons, who, under a prescribed Act, is licensed, certified or registered to provide health care;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e234",
+                                    "bcl:text": {
+                                        "in:term": "major health care",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e243",
+                                            "bcl:num": "a",
+                                            "bcl:text": "major surgery,"
+                                        },
+                                        {
+                                            "@id": "d2e252",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any treatment involving a general anesthetic,"
+                                        },
+                                        {
+                                            "@id": "d2e261",
+                                            "bcl:num": "c",
+                                            "bcl:text": "major diagnostic or investigative procedures, or"
+                                        },
+                                        {
+                                            "@id": "d2e270",
+                                            "bcl:num": "d",
+                                            "bcl:text": "any health care designated by regulation as major health care;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e320",
+                                    "bcl:text": {
+                                        "in:term": "manager",
+                                        "#text": "means an individual who is responsible for either or both of"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e327",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the operation of a care facility, or"
+                                        },
+                                        {
+                                            "@id": "d1e336",
+                                            "bcl:num": "b",
+                                            "bcl:text": "admissions to a care facility;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e279",
+                                    "bcl:text": {
+                                        "in:term": "minor health care",
+                                        "#text": "means any health care that is not major health care, and includes"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e289",
+                                            "bcl:num": "a",
+                                            "bcl:text": "routine tests to determine if health care is necessary, and"
+                                        },
+                                        {
+                                            "@id": "d2e298",
+                                            "bcl:num": "b",
+                                            "bcl:text": "routine dental treatment that prevents or treats a condition or injury caused by disease or trauma, for example,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e307",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "cavity fillings and extractions done with or without a local anesthetic, and"
+                                                },
+                                                {
+                                                    "@id": "d2e316",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "oral hygiene inspections;"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e325",
+                                    "bcl:text": {
+                                        "in:term": "near relative",
+                                        "#text": ", in respect of an adult who needs health care, means an adult child, a parent, a grandparent, an adult sibling, any other adult relation by birth or adoption, or a spouse of any of these;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e405",
+                                    "bcl:text": {
+                                        "in:term": "person in care",
+                                        "#text": "means a person who has been admitted to a care facility;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e334",
+                                    "bcl:text": {
+                                        "in:term": "personal guardian",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96349_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Patients Property Act"
+                                        },
+                                        "#text": "means a committee of a person who is declared under the  to be"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e347",
+                                            "bcl:num": "a",
+                                            "bcl:text": "incapable of managing themselves, or"
+                                        },
+                                        {
+                                            "@id": "d2e356",
+                                            "bcl:num": "b",
+                                            "bcl:text": "incapable of managing themselves and their affairs;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e365",
+                                    "bcl:text": {
+                                        "in:term": "representation agreement",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96405_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Representation Agreement Act"
+                                        },
+                                        "#text": "means an agreement made under the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e377",
+                                    "bcl:text": {
+                                        "in:term": "representative",
+                                        "#text": "means a person authorized by a representation agreement to make or help in making decisions on behalf of another and includes an alternate representative;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e386",
+                                    "bcl:text": {
+                                        "in:term": "spouse",
+                                        "#text": "means a person who"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e395",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "http://laws-lois.justice.gc.ca/eng/acts/d-3.4/",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Divorce Act"
+                                                },
+                                                "#text": "is married to another person, and is not living separate and apart, within the meaning of the  (Canada), from the other person, or"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e408",
+                                            "bcl:num": "b",
+                                            "bcl:text": "is living with another person in a marriage-like relationship."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e418",
+                            "bcl:marginalnote": "Application of this Act",
+                            "bcl:num": "2",
+                            "bcl:text": "This Act does not apply to",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e429",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96288_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Mental Health Act"
+                                        },
+                                        "#text": "the admission of a person to a designated facility under section 22, 28, 29, 30 or\u00a042 of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e441",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96288_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Mental Health Act"
+                                        },
+                                        "#text": "the provision of psychiatric care or treatment to a person detained in or through a designated facility under section 22, 28, 29, 30 or 42 of the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e454",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96288_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Mental Health Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96288_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Mental Health Act"
+                                            }
+                                        ],
+                                        "#text": "the provision of psychiatric care or treatment under the  to a person released on leave or transferred to an approved home under section\u00a037 or\u00a038 of the , or"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e469",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the provision of professional services, care or treatment to a person for the purposes of sterilization for non-therapeutic reasons."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e479",
+                            "bcl:marginalnote": "Presumption of capability",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e487",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Until the contrary is demonstrated, every adult is presumed to be capable of",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e496",
+                                            "bcl:num": "a",
+                                            "bcl:text": "giving, refusing or revoking consent to health care, and"
+                                        },
+                                        {
+                                            "@id": "d2e505",
+                                            "bcl:num": "b",
+                                            "bcl:text": "giving or refusing consent to admission to, or continued residence in, a care facility."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e515",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An adult's way of communicating with others is not, by itself, grounds for deciding that the adult is incapable of understanding anything referred to in subsection (1)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e525",
+                    "bcl:num": "2",
+                    "bcl:text": "Consent to Health Care",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e535",
+                            "bcl:marginalnote": "Consent rights",
+                            "bcl:num": "4",
+                            "bcl:text": "Every adult who is capable of giving or refusing consent to health care has",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e546",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the right to give consent or to refuse consent on any grounds, including moral or religious grounds, even if the refusal will result in death,"
+                                },
+                                {
+                                    "@id": "d2e555",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the right to select a particular form of available health care on any grounds, including moral or religious grounds,"
+                                },
+                                {
+                                    "@id": "d2e565",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the right to revoke consent,"
+                                },
+                                {
+                                    "@id": "d2e574",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the right to expect that a decision to give, refuse or revoke consent will be respected, and"
+                                },
+                                {
+                                    "@id": "d2e583",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the right to be involved to the greatest degree possible in all case planning and decision making."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e593",
+                            "bcl:marginalnote": "General rule \u2014 consent needed",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e601",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A health care provider must not provide any health care to an adult without the adult's consent except under sections\u00a011 to\u00a015."
+                                },
+                                {
+                                    "@id": "d2e610",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A health care provider must not seek a decision about whether to give or refuse substitute consent to health care under section\u00a011, 14 or\u00a015 unless the health care provider has made every reasonable effort to obtain a decision from the adult."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e620",
+                            "bcl:marginalnote": "Elements of consent",
+                            "bcl:num": "6",
+                            "bcl:text": "An adult consents to health care if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e631",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the consent relates to the proposed health care,"
+                                },
+                                {
+                                    "@id": "d2e640",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the consent is given voluntarily,"
+                                },
+                                {
+                                    "@id": "d2e650",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the consent is not obtained by fraud or misrepresentation,"
+                                },
+                                {
+                                    "@id": "d2e659",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the adult is capable of making a decision about whether to give or refuse consent to the proposed health care,"
+                                },
+                                {
+                                    "@id": "d2e668",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the health care provider gives the adult the information a reasonable person would require to understand the proposed health care and to make a decision, including information about",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e677",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the condition for which the health care is proposed,"
+                                        },
+                                        {
+                                            "@id": "d2e686",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the nature of the proposed health care,"
+                                        },
+                                        {
+                                            "@id": "d2e695",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the risks and benefits of the proposed health care that a reasonable person would expect to be told about, and"
+                                        },
+                                        {
+                                            "@id": "d2e705",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "alternative courses of health care, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e714",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the adult has an opportunity to ask questions and receive answers about the proposed health care."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e724",
+                            "bcl:marginalnote": "How incapability is determined",
+                            "bcl:num": "7",
+                            "bcl:text": "When deciding whether an adult is incapable of giving, refusing or revoking consent to health care, a health care provider must base the decision on whether or not the adult demonstrates that the adult understands",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e735",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the information given by the health care provider under section 6 (e), and"
+                                },
+                                {
+                                    "@id": "d2e744",
+                                    "bcl:num": "b",
+                                    "bcl:text": "that the information applies to the situation of the adult for whom the health care is proposed."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e754",
+                            "bcl:marginalnote": "Duty to communicate in appropriate manner",
+                            "bcl:num": "8",
+                            "bcl:text": "When seeking an adult's consent to health care or deciding whether an adult is incapable of giving, refusing or revoking consent, a health care provider",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e765",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must communicate with the adult in a manner appropriate to the adult's skills and abilities, and"
+                                },
+                                {
+                                    "@id": "d2e774",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may allow the adult's spouse, or any near relatives or close friends, who accompany the adult and offer their assistance, to help the adult to understand or to demonstrate an understanding of the matters mentioned in section\u00a07."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e784",
+                            "bcl:marginalnote": "How consent is given and scope of consent",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e792",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Consent to health care may be expressed orally or in writing or may be inferred from conduct."
+                                },
+                                {
+                                    "@id": "d2e801",
+                                    "bcl:num": "1.1",
+                                    "bcl:text": "For the purposes of sections 5 and 6, and despite section 6 (e) and (f), an adult may give or refuse consent to health care in an advance directive, except that an adult may not give consent in an advance directive to any health care for which a person chosen under section 16 could not give substitute consent under section 18 (1)."
+                                },
+                                {
+                                    "@id": "d2e810",
+                                    "bcl:num": "1.2",
+                                    "bcl:text": "If a capable adult gives or refuses consent to health care, the consent or refusal is not affected by any subsequent incapability."
+                                },
+                                {
+                                    "@id": "d2e820",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Consent to health care applies only to the specific health care that an adult has consented to."
+                                },
+                                {
+                                    "@id": "d2e829",
+                                    "bcl:num": "3",
+                                    "bcl:text": "As an exception to subsection (2), a health care provider may provide additional or alternative health care to an adult if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e838",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the health care that was consented to is in progress,"
+                                        },
+                                        {
+                                            "@id": "d2e847",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult is unconscious or semi-conscious, and"
+                                        },
+                                        {
+                                            "@id": "d2e856",
+                                            "bcl:num": "c",
+                                            "bcl:text": "it is medically necessary to provide the additional or alternative health care to deal with conditions not foreseen when consent was given."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e865",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If an adult who consents to health care stipulates that the health care must be provided by a named health care provider, no one else may provide the health care without first obtaining the adult's consent unless",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e875",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the health care is in progress, or"
+                                        },
+                                        {
+                                            "@id": "d2e884",
+                                            "bcl:num": "b",
+                                            "bcl:text": "delay is likely to put the adult's life or health at risk."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e895",
+                            "bcl:marginalnote": "Same rules apply to substitute consent",
+                            "bcl:num": "10",
+                            "bcl:text": "Sections 6, 7, 8 (a) and 9 apply when a decision about whether to give or refuse substitute consent is sought or made under section\u00a011, 14 or\u00a015."
+                        },
+                        {
+                            "@id": "d2e907",
+                            "bcl:marginalnote": "Exception \u2014 if personal guardian or representative consents",
+                            "bcl:num": "11",
+                            "bcl:text": "A health care provider may provide health care to an adult without the adult's consent if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e918",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the health care provider is of the opinion that the adult needs the health care and is incapable of giving or refusing consent, and"
+                                },
+                                {
+                                    "@id": "d2e927",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the adult's personal guardian or representative",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e937",
+                                            "bcl:num": "i",
+                                            "bcl:text": "has authority to consent to the health care,"
+                                        },
+                                        {
+                                            "@id": "d2e946",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "is capable of giving consent, and"
+                                        },
+                                        {
+                                            "@id": "d2e955",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "gives substitute consent."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e965",
+                            "bcl:marginalnote": "Exception \u2014 urgent or emergency health care",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e973",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A health care provider may provide health care to an adult without the adult's consent if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e982",
+                                            "bcl:num": "a",
+                                            "bcl:text": "it is necessary to provide the health care without delay in order to preserve the adult's life, to prevent serious physical or mental harm or to alleviate severe pain,"
+                                        },
+                                        {
+                                            "@id": "d2e991",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult is apparently impaired by drugs or alcohol or is unconscious or semi-conscious for any reason or is, in the health care provider's opinion, otherwise incapable of giving or refusing consent,"
+                                        },
+                                        {
+                                            "@id": "d2e1001",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the adult does not have a personal guardian or representative who is authorized to consent to the health care, is capable of doing so and is available, and"
+                                        },
+                                        {
+                                            "@id": "d2e1010",
+                                            "bcl:num": "d",
+                                            "bcl:text": "where practicable, a second health care provider confirms the first health care provider's opinion about the need for the health care and the incapability."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1019",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For the purpose of this section, a personal guardian or representative is available if it is possible for the health care provider, within a time that is reasonable in the circumstances,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1028",
+                                            "bcl:num": "a",
+                                            "bcl:text": "to determine whether the adult has a personal guardian or representative, and"
+                                        },
+                                        {
+                                            "@id": "d2e1037",
+                                            "bcl:num": "b",
+                                            "bcl:text": "to communicate with the adult's personal guardian or representative."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1046",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a personal guardian or representative becomes available or a person is chosen under section 16 after a health care provider provides health care to an adult under this section, the personal guardian, representative or person chosen under section 16 may refuse consent for continued health care, and, if consent is refused, the health care must be withdrawn."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1056",
+                            "bcl:marginalnote": "No emergency health care contrary to wishes",
+                            "bcl:num": "12.1",
+                            "bcl:text": "A health care provider must not provide health care under section 12 if the health care provider has reasonable grounds to believe that the person, while capable and after attaining 19 years of age, expressed an instruction or wish applicable to the circumstances to refuse consent to the health care."
+                        },
+                        {
+                            "@id": "d2e1068",
+                            "bcl:marginalnote": "Emergency health care despite refusal",
+                            "bcl:num": "12.2",
+                            "bcl:text": "If substitute consent to health care is refused on an incapable person's behalf by their personal guardian or representative, the health care may be provided despite the refusal if, in the opinion of the health care provider proposing the health care,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1079",
+                                    "bcl:num": "a",
+                                    "bcl:text": "section 12 (1) (a) applies, and"
+                                },
+                                {
+                                    "@id": "d2e1088",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the personal guardian or representative did not comply with their duties under this or any other Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1098",
+                            "bcl:marginalnote": "Exception \u2014 informed consent not required for preliminary examination",
+                            "bcl:num": "13",
+                            "bcl:text": "A health care provider may undertake triage or another kind of preliminary examination, treatment or diagnosis of an adult without complying with section\u00a06 if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1109",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the adult indicates that the adult wants to be provided with health care, or"
+                                },
+                                {
+                                    "@id": "d2e1118",
+                                    "bcl:num": "b",
+                                    "bcl:text": "in the absence of any indication by the adult, the adult's spouse, near relative or close friend indicates that the adult's spouse, near relative or close friend wants the adult to be provided with health care."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1129",
+                            "bcl:marginalnote": "Exception \u2014 major health care",
+                            "bcl:num": "14",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1137",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A health care provider may provide major health care to an adult without the adult's consent if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1146",
+                                            "bcl:num": "a",
+                                            "bcl:text": "after consulting, or making a reasonable effort to consult, with any spouse, near relative or close friend of the adult who is reasonably available or with any other person who has relevant information, the health care provider decides that the adult",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1155",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "needs the major health care, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1165",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "is incapable of giving or refusing consent to the major health care,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1174",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult does not have a personal guardian or representative who is authorized to consent to the major health care, is capable of doing so and is available,"
+                                        },
+                                        {
+                                            "@id": "d2e1183",
+                                            "bcl:num": "c",
+                                            "bcl:text": "someone chosen under section 16 has authority to consent to the major health care and gives substitute consent, and"
+                                        },
+                                        {
+                                            "@id": "d2e1192",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the health care provider complies with subsection (4)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1201",
+                                    "bcl:num": "2) and (3",
+                                    "bcl:text": "[Not in force.]"
+                                },
+                                {
+                                    "@id": "d2e1210",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If a person chosen under section 16 gives or refuses substitute consent, the health care provider must inform the adult and any spouse, near relative or close friend of the adult who accompanies the adult of",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1220",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the decision or assessment that the adult is incapable,"
+                                        },
+                                        {
+                                            "@id": "d2e1229",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the name of the person chosen under section 16, and"
+                                        },
+                                        {
+                                            "@id": "d2e1238",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the decision to give or refuse substitute consent."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1247",
+                                    "bcl:num": "5",
+                                    "bcl:text": "[Not in force.]"
+                                },
+                                {
+                                    "@id": "d2e1256",
+                                    "bcl:num": "6",
+                                    "bcl:text": "[Not in force. Repealed 2003-96-33.]"
+                                },
+                                {
+                                    "@id": "d2e1265",
+                                    "bcl:num": "7) and (8",
+                                    "bcl:text": "[Repealed 2003-96-29.]"
+                                },
+                                {
+                                    "@id": "d2e1275",
+                                    "bcl:num": "9) and (10",
+                                    "bcl:text": "[Not in force.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1285",
+                            "bcl:marginalnote": "Exception \u2014 minor health care",
+                            "bcl:num": "15",
+                            "bcl:text": "A health care provider may provide minor health care to an adult without the adult's consent if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1296",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the health care provider is of the opinion that the adult is incapable of giving or refusing consent to the minor health care,"
+                                },
+                                {
+                                    "@id": "d2e1305",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the adult does not have a personal guardian or representative or the adult's personal guardian or representative is incapable of giving or refusing consent, and"
+                                },
+                                {
+                                    "@id": "d2e1315",
+                                    "bcl:num": "c",
+                                    "bcl:text": "someone chosen under section 16 gives substitute consent to the minor health care."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1325",
+                            "bcl:marginalnote": "Temporary substitute decision makers",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1333",
+                                    "bcl:num": "1",
+                                    "bcl:text": "To obtain substitute consent to provide major or minor health care to an adult, a health care provider must choose the first, in listed order, of the following who is available and qualifies under subsection (2):",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1342",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult's spouse;"
+                                        },
+                                        {
+                                            "@id": "d2e1351",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult's child;"
+                                        },
+                                        {
+                                            "@id": "d2e1361",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the adult's parent;"
+                                        },
+                                        {
+                                            "@id": "d2e1370",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the adult's sibling;"
+                                        },
+                                        {
+                                            "@id": "d2e1379",
+                                            "bcl:num": "d.1",
+                                            "bcl:text": "the adult's grandparent;"
+                                        },
+                                        {
+                                            "@id": "d2e1388",
+                                            "bcl:num": "d.2",
+                                            "bcl:text": "the adult's grandchild;"
+                                        },
+                                        {
+                                            "@id": "d2e1397",
+                                            "bcl:num": "e",
+                                            "bcl:text": "anyone else related by birth or adoption to the adult;"
+                                        },
+                                        {
+                                            "@id": "d2e1406",
+                                            "bcl:num": "f",
+                                            "bcl:text": "a close friend of the adult;"
+                                        },
+                                        {
+                                            "@id": "d2e1416",
+                                            "bcl:num": "g",
+                                            "bcl:text": "a person immediately related to the adult by marriage."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1425",
+                                    "bcl:num": "2",
+                                    "bcl:text": "To qualify to give, refuse or revoke substitute consent to health care for an adult, a person must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1434",
+                                            "bcl:num": "a",
+                                            "bcl:text": "be at least 19 years of age,"
+                                        },
+                                        {
+                                            "@id": "d2e1443",
+                                            "bcl:num": "b",
+                                            "bcl:text": "have been in contact with the adult during the preceding 12 months,"
+                                        },
+                                        {
+                                            "@id": "d2e1452",
+                                            "bcl:num": "c",
+                                            "bcl:text": "have no dispute with the adult,"
+                                        },
+                                        {
+                                            "@id": "d2e1461",
+                                            "bcl:num": "d",
+                                            "bcl:text": "be capable of giving, refusing or revoking substitute consent, and"
+                                        },
+                                        {
+                                            "@id": "d2e1471",
+                                            "bcl:num": "e",
+                                            "bcl:text": "be willing to comply with the duties in section 19."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1480",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If no one listed in subsection (1) is available or qualifies under subsection (2) or if there is a dispute about who is to be chosen, the health care provider must choose a person, including a person employed in the office of the Public Guardian and Trustee, authorized by the Public Guardian and Trustee."
+                                },
+                                {
+                                    "@id": "d2e1489",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A health care provider is not required to do more than make the effort that is reasonable in the circumstances to comply with this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1499",
+                            "bcl:marginalnote": "Authority of a temporary substitute decision maker",
+                            "bcl:num": "17",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1507",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to section 9 (2), a person chosen under section 16 has the authority to decide whether to give or refuse substitute consent."
+                                },
+                                {
+                                    "@id": "d2e1516",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The health care provider must, no more than 21 days before that health care begins, confirm in writing that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1525",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult is still incapable, and"
+                                        },
+                                        {
+                                            "@id": "d2e1535",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the person who earlier consented to the health care being provided confirms that the health care should begin."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1544",
+                                    "bcl:num": "2.1",
+                                    "bcl:text": "Despite subsection (2) and whether or not the health care that is the subject of the decision made under subsection (1) has begun, if at any time a health care provider has reasonable grounds to believe that the adult may be capable of giving or refusing consent to health care, the health care provider must again determine whether the adult remains incapable."
+                                },
+                                {
+                                    "@id": "d2e1553",
+                                    "bcl:num": "2.2",
+                                    "bcl:text": "If, at any time after a decision is made under subsection (1), the adult is capable of giving or refusing consent to health care,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1562",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the authority to give or refuse substitute consent to health care for the adult is terminated,"
+                                        },
+                                        {
+                                            "@id": "d2e1571",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the decision made under subsection (1) is rescinded, and"
+                                        },
+                                        {
+                                            "@id": "d2e1580",
+                                            "bcl:num": "c",
+                                            "bcl:text": "before the health care that is the subject of the decision made under subsection\u00a0(1) is begun or continued, the adult must give consent to that health care."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1590",
+                                    "bcl:num": "2.3",
+                                    "bcl:text": "Subsection (2.2) does not invalidate anything that is otherwise validly done before the decision made under subsection (1) is rescinded."
+                                },
+                                {
+                                    "@id": "d2e1599",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "While the authority to give or refuse substitute consent to health care for the adult is valid, a person chosen under section 16 may apply to the court under the  for an order appointing a personal guardian for the adult."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1611",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96006_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Adult Guardianship Act"
+                                        },
+                                        "#text": "If a person chosen under section 16 makes an application under the , the person's authority to give or refuse substitute consent under this Act continues until a final order is made under that Act, unless that authority is otherwise terminated under this Act."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1623",
+                                    "bcl:num": "5",
+                                    "bcl:text": "On being told that a person chosen under section 16 wants to be relieved of the authority to give or refuse substitute consent, the health care provider may choose in accordance with that section another person to assume that authority."
+                                },
+                                {
+                                    "@id": "d2e1632",
+                                    "bcl:num": "6",
+                                    "bcl:text": "A person chosen under section 16 has the right to all information and documents to which the adult is entitled and that are necessary for the person to make an informed decision under subsection (1) of this section."
+                                },
+                                {
+                                    "@id": "d2e1641",
+                                    "bcl:num": "7",
+                                    "bcl:text": "A person who has custody or control of any information or document referred to in subsection (6) must, at the request of a person chosen under section 16, disclose that information to the person chosen under section 16 or produce that document for inspection and copying by that person."
+                                },
+                                {
+                                    "@id": "d2e1651",
+                                    "bcl:num": "8",
+                                    "bcl:text": "Subsections (6) and (7) override",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1660",
+                                            "bcl:num": "a",
+                                            "bcl:text": "any claim of confidentiality or privilege, other than a claim based on solicitor-client privilege, and"
+                                        },
+                                        {
+                                            "@id": "d2e1669",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96124_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Evidence Act"
+                                                },
+                                                "#text": "any restriction in an enactment or the common law about the disclosure or confidentiality of information, other than a restriction in section 51 of the ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1682",
+                            "bcl:marginalnote": "Restrictions on authority of a temporary substitute decision maker",
+                            "bcl:num": "18",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1690",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person chosen under section 16 does not have authority to give or refuse substitute consent to any type of health care prescribed in the regulations."
+                                },
+                                {
+                                    "@id": "d2e1699",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person chosen under section 16 has authority to refuse substitute consent to health care necessary to preserve life, but only if there is substantial agreement among the health care providers caring for the adult that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1708",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the decision to refuse substitute consent is medically appropriate, and"
+                                        },
+                                        {
+                                            "@id": "d2e1718",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the person has made the decision in accordance with section 19 (1) and (2)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1727",
+                                    "bcl:num": "3",
+                                    "bcl:text": "[Not in force.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1737",
+                            "bcl:marginalnote": "Duties of a temporary substitute decision maker",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1745",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person chosen under section 16 to give or refuse substitute consent to health care for an adult must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1754",
+                                            "bcl:num": "a",
+                                            "bcl:text": "before giving or refusing substitute consent, consult, to the greatest extent possible,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e1763",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "with the adult, and"
+                                                },
+                                                {
+                                                    "@id": "d2e1773",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "if the person chosen under section 16 is a person authorized by the Public Guardian and Trustee, with any near relative or close friend of the adult who asks to assist, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1782",
+                                            "bcl:num": "b",
+                                            "bcl:text": "comply with any instructions or wishes the adult expressed while the adult was capable."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1791",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the adult's instructions or wishes are not known, the person chosen under section 16 must decide to give or refuse consent in the adult's best interests."
+                                },
+                                {
+                                    "@id": "d2e1800",
+                                    "bcl:num": "3",
+                                    "bcl:text": "When deciding whether it is in the adult's best interests to give, refuse or revoke substitute consent, the person chosen under section\u00a016 must consider",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1809",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult's current wishes, and known beliefs and values,"
+                                        },
+                                        {
+                                            "@id": "d2e1818",
+                                            "bcl:num": "b",
+                                            "bcl:text": "whether the adult's condition or well-being is likely to be improved by the proposed health care,"
+                                        },
+                                        {
+                                            "@id": "d2e1828",
+                                            "bcl:num": "c",
+                                            "bcl:text": "whether the adult's condition or well-being is likely to improve without the proposed health care,"
+                                        },
+                                        {
+                                            "@id": "d2e1837",
+                                            "bcl:num": "d",
+                                            "bcl:text": "whether the benefit the adult is expected to obtain from the proposed health care is greater than the risk of harm, and"
+                                        },
+                                        {
+                                            "@id": "d2e1846",
+                                            "bcl:num": "e",
+                                            "bcl:text": "whether a less restrictive or less intrusive form of health care would be as beneficial as the proposed health care."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1857",
+                    "bcl:num": "2.1",
+                    "bcl:text": "Advance Directives",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e1866",
+                            "bcl:marginalnote": "Adult may make advance directive unless incapable",
+                            "bcl:num": "19.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1874",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An adult may make an advance directive unless the adult is incapable of understanding the nature and consequences of the proposed advance directive."
+                                },
+                                {
+                                    "@id": "d2e1883",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An adult is incapable of understanding the nature and consequences of the proposed advance directive if the adult cannot understand",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1892",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the scope and effect of the health care instructions set out in the advance directive, and"
+                                        },
+                                        {
+                                            "@id": "d2e1902",
+                                            "bcl:num": "b",
+                                            "bcl:text": "that a person will not be chosen under section 16 to make decisions on behalf of the adult about the health care described in the advance directive except in the circumstances set out in section 19.8."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1912",
+                            "bcl:marginalnote": "Scope of advance directive",
+                            "bcl:num": "19.2",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1920",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (2), an adult may in an advance directive give or refuse consent to any health care described in the advance directive."
+                                },
+                                {
+                                    "@id": "d2e1929",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An instruction in an advance directive to do either or both of the following is not valid and must be severed from the advance directive:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1938",
+                                            "bcl:num": "a",
+                                            "bcl:text": "to do anything that is prohibited by law;"
+                                        },
+                                        {
+                                            "@id": "d2e1948",
+                                            "bcl:num": "b",
+                                            "bcl:text": "to omit to do anything that is required by law."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1958",
+                            "bcl:marginalnote": "If both advance directive and representation agreement",
+                            "bcl:num": "19.3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1966",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsection (2), if an adult makes both an advance directive and a representation agreement, regardless of when, in relation to each other, the advance directive and representation agreement are made,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1975",
+                                            "bcl:num": "a",
+                                            "bcl:text": "section 19.7 of this Act does not apply in respect of any instruction in the advance directive that relates to a matter over which the adult's representative has decision-making authority, and"
+                                        },
+                                        {
+                                            "@id": "d2e1984",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96405_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Representation Agreement Act"
+                                                },
+                                                "#text": "for the purposes of section 16 of the , the instruction referred to in paragraph (a) of this subsection is to be treated as the wishes of the adult, expressed while capable."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1997",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An adult may, in the adult's representation agreement, state that a health care provider may act in accordance with a health care instruction set out in the adult's advance directive without consent of the adult's representative, in which case section 19.7 applies in respect of that instruction."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2007",
+                            "bcl:marginalnote": "Form of advance directive",
+                            "bcl:num": "19.4",
+                            "bcl:text": "An adult who makes an advance directive must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2018",
+                                    "bcl:num": "a",
+                                    "bcl:text": "include or address in the advance directive any prescribed matter, and"
+                                },
+                                {
+                                    "@id": "d2e2027",
+                                    "bcl:num": "b",
+                                    "bcl:text": "indicate in the advance directive that the adult knows that",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e2037",
+                                            "bcl:num": "i",
+                                            "bcl:text": "a health care provider may not provide to the adult any health care for which the adult refuses consent in the advance directive, and"
+                                        },
+                                        {
+                                            "@id": "d2e2046",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "a person may not be chosen to make decisions on behalf of the adult in respect of any health care for which the adult has given or refused consent in the advance directive."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2056",
+                            "bcl:marginalnote": "Execution of advance directive",
+                            "bcl:num": "19.5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2064",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to subsections (2) to (5), an advance directive must be in writing and signed and dated by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2073",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult in the presence of 2 witnesses, and"
+                                        },
+                                        {
+                                            "@id": "d2e2082",
+                                            "bcl:num": "b",
+                                            "bcl:text": "both witnesses in the presence of the adult."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2092",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsection (3), an advance directive may be signed on behalf of an adult if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2101",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult is physically incapable of signing the advance directive,"
+                                        },
+                                        {
+                                            "@id": "d2e2110",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult is present and directs that the advance directive be signed, and"
+                                        },
+                                        {
+                                            "@id": "d2e2119",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the signature of the person signing the advance directive on behalf of the adult is witnessed in accordance with this section, as if that signature were the adult's signature."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2128",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The following persons must not sign an advance directive on behalf of an adult:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2137",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a witness to the signing of the advance directive;"
+                                        },
+                                        {
+                                            "@id": "d2e2147",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a person prohibited from acting as a witness under subsection (5)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2156",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Only one witness is required if the witness is a lawyer or a member in good standing of the Society of Notaries Public of British Columbia."
+                                },
+                                {
+                                    "@id": "d2e2165",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The following persons must not act as a witness to the signing of an advance directive:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2174",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a person who provides personal care, health care or financial services to the adult for compensation, other than a lawyer or a member in good standing of the Society of Notaries Public of British Columbia;"
+                                        },
+                                        {
+                                            "@id": "d2e2183",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a spouse, child, parent, employee or agent of a person described in paragraph (a);"
+                                        },
+                                        {
+                                            "@id": "d2e2192",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a person who is not an adult;"
+                                        },
+                                        {
+                                            "@id": "d2e2202",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a person who does not understand the type of communication used by the adult, unless the person receives interpretive assistance to understand that type of communication."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2213",
+                            "bcl:marginalnote": "Changing or revoking an advance directive",
+                            "bcl:num": "19.6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2221",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An adult who has made an advance directive may change or revoke the advance directive unless the adult is incapable of understanding the nature and consequences of the change or revocation."
+                                },
+                                {
+                                    "@id": "d2e2230",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A change must be in writing and must be signed and witnessed in the same manner as an advance directive under section 19.5."
+                                },
+                                {
+                                    "@id": "d2e2239",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An adult may revoke an advance directive by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2249",
+                                            "bcl:num": "a",
+                                            "bcl:text": "making another document, including a subsequent advance directive, and expressing in it an intention to revoke the advance directive, or"
+                                        },
+                                        {
+                                            "@id": "d2e2258",
+                                            "bcl:num": "b",
+                                            "bcl:text": "destroying the advance directive with the intention of revoking it."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2268",
+                            "bcl:marginalnote": "Providing health care if adult has advance directive",
+                            "bcl:num": "19.7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2276",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Subject to section 19.8, this section applies when",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2285",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the opinion of a health care provider, an adult needs health care,"
+                                        },
+                                        {
+                                            "@id": "d2e2294",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult is incapable of giving or refusing consent to the health care, and"
+                                        },
+                                        {
+                                            "@id": "d2e2304",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the health care provider",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2313",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "does not know of any personal guardian or representative who has authority to make decisions for the adult in respect of the proposed health care, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2322",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "is aware that the adult has an advance directive that is relevant to the proposed health care."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2331",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A health care provider",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2340",
+                                            "bcl:num": "a",
+                                            "bcl:text": "may provide health care to an adult if the adult has given consent to that health care in the adult's advance directive, and"
+                                        },
+                                        {
+                                            "@id": "d2e2349",
+                                            "bcl:num": "b",
+                                            "bcl:text": "must not provide health care to an adult if the adult has refused consent to that health care in the adult's advance directive."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2359",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A health care provider is not required to make more than a reasonable effort in the circumstances to determine whether the adult has an advance directive or a personal guardian or representative."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2369",
+                            "bcl:marginalnote": "When advance directive does not apply",
+                            "bcl:num": "19.8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2377",
+                                    "bcl:num": "1",
+                                    "bcl:text": "This section applies if a health care provider reasonably believes that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2386",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the instructions in an adult's advance directive do not address the health care decision to be made,"
+                                        },
+                                        {
+                                            "@id": "d2e2395",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in relation to a health care decision, the instructions in an adult's advance directive are so unclear that it cannot be determined whether the adult has given or refused consent to the health care,"
+                                        },
+                                        {
+                                            "@id": "d2e2405",
+                                            "bcl:num": "c",
+                                            "bcl:text": "since the advance directive was made and while the adult was capable, the adult's wishes, values or beliefs in relation to a health care decision significantly changed, and the change is not reflected in the advance directive, or"
+                                        },
+                                        {
+                                            "@id": "d2e2414",
+                                            "bcl:num": "d",
+                                            "bcl:text": "since the advance directive was made, there have been significant changes in medical knowledge, practice or technology that might substantially benefit the adult in relation to health care for which the adult has given or refused consent in an advance directive."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2423",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsection (3), in a circumstance described in subsection (1),",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2432",
+                                            "bcl:num": "a",
+                                            "bcl:text": "section 19.7 does not apply,"
+                                        },
+                                        {
+                                            "@id": "d2e2441",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the health care provider must, despite any instruction or wish expressed in the advance directive respecting who may give substitute consent if the circumstances set out in subsection (1) apply, obtain substitute consent in accordance with section 11 or 16, and"
+                                        },
+                                        {
+                                            "@id": "d2e2450",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the person giving substitute consent must act in accordance with section 19 (3)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2460",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subsection (2) does not apply in the circumstance described in subsection (1) (d) if the adult, in the adult's advance directive, expressly states that the instructions given in the advance directive apply regardless of any change in medical knowledge, practice or technology."
+                                },
+                                {
+                                    "@id": "d2e2469",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Nothing in this section affects the operation of sections 12 and 12.1."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2479",
+                            "bcl:marginalnote": "Withdrawal of health care",
+                            "bcl:num": "19.9",
+                            "bcl:text": [
+                                "If a health care provider",
+                                "the health care provider must withdraw the health care, unless section 19.8 applies."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e2490",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is not aware that an adult has an advance directive that refuses consent to specific health care,"
+                                },
+                                {
+                                    "@id": "d2e2499",
+                                    "bcl:num": "b",
+                                    "bcl:text": "provides the health care to the adult, and"
+                                },
+                                {
+                                    "@id": "d2e2509",
+                                    "bcl:num": "c",
+                                    "bcl:text": "subsequently is made aware of an advance directive in which that adult refuses consent to that health care,"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2522",
+                            "bcl:marginalnote": "Advance directive must not be mandatory",
+                            "bcl:num": "19.91",
+                            "bcl:text": "An adult must not be required to have an advance directive as a condition of receiving any good or service."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2534",
+                    "bcl:num": "3",
+                    "bcl:text": "Admission to a Care Facility",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2541",
+                            "bcl:marginalnote": "Admission to care facility",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2825",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An adult or a person acting on the adult's behalf may apply for the adult's admission to a care facility by submitting an application to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2833",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the manager of the care facility, or"
+                                        },
+                                        {
+                                            "@id": "d1e2842",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96180_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Health Authorities Act"
+                                                },
+                                                "#text": "a board designated under the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2852",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person may apply on an adult's behalf only if the person has reason to believe that",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2860",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult requires the type of care available in a care facility, and"
+                                        },
+                                        {
+                                            "@id": "d1e2869",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult is incapable of giving or refusing consent to admission."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2879",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A manager must not admit an adult to a care facility unless",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2887",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult consents to admission under section 21,"
+                                        },
+                                        {
+                                            "@id": "d1e2896",
+                                            "bcl:num": "b",
+                                            "bcl:text": "substitute consent is given under section 22, or"
+                                        },
+                                        {
+                                            "@id": "d1e2905",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the adult is admitted on an emergency basis under section 24."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e2916",
+                            "bcl:marginalnote": "Consent to admission",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2924",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An adult consents to admission to a care facility if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2932",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the consent is given voluntarily,"
+                                        },
+                                        {
+                                            "@id": "d1e2941",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the consent is not obtained by fraud or misrepresentation,"
+                                        },
+                                        {
+                                            "@id": "d1e2950",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the adult is capable of making a decision about whether to give or refuse consent to admission,"
+                                        },
+                                        {
+                                            "@id": "d1e2960",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the adult has the information a reasonable person would require to understand that the adult will be admitted to a care facility and to make a decision, including information about",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e2968",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the care the adult will receive in the care facility,"
+                                                },
+                                                {
+                                                    "@id": "d1e2977",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the services that will be available to the adult, and"
+                                                },
+                                                {
+                                                    "@id": "d1e2986",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the circumstances under which the adult may leave the care facility, and"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e2996",
+                                            "bcl:num": "e",
+                                            "bcl:text": "the adult has an opportunity to ask questions and receive answers about admission."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3006",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Consent may be expressed orally or in writing or may be inferred from conduct."
+                                },
+                                {
+                                    "@id": "d1e3015",
+                                    "bcl:num": "3",
+                                    "bcl:text": "When seeking an adult's consent, the manager",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3023",
+                                            "bcl:num": "a",
+                                            "bcl:text": "must communicate with the adult in a manner appropriate to the adult's skills and abilities, and"
+                                        },
+                                        {
+                                            "@id": "d1e3032",
+                                            "bcl:num": "b",
+                                            "bcl:text": "may allow the adult's spouse, or any relatives or friends, who accompany the adult and offer their assistance, to help the adult to understand or to demonstrate an understanding of the matters mentioned in subsection\u00a0(1)\u00a0(d)."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3043",
+                            "bcl:marginalnote": "Substitute consent",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3051",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A manager may admit an adult to a care facility without the adult's consent if consent is given by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3059",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a personal guardian who has authority to consent to the admission and is capable of giving or refusing consent, or"
+                                        },
+                                        {
+                                            "@id": "d1e3068",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a person listed in subsection (2) of this section, if the manager has made every reasonable effort to obtain consent from the adult but the adult is determined under section 26 to be incapable of giving or refusing consent."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3078",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsection (3), substitute consent to an adult's admission to a care facility may be given or refused by the first, in listed order, of the following who is available and qualifies under subsection\u00a0(4):",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3086",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult's representative, if the representative has authority to consent to the admission;"
+                                        },
+                                        {
+                                            "@id": "d1e3095",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the adult's spouse;"
+                                        },
+                                        {
+                                            "@id": "d1e3104",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the adult's child;"
+                                        },
+                                        {
+                                            "@id": "d1e3114",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the adult's parent;"
+                                        },
+                                        {
+                                            "@id": "d1e3123",
+                                            "bcl:num": "e",
+                                            "bcl:text": "the adult's sibling;"
+                                        },
+                                        {
+                                            "@id": "d1e3132",
+                                            "bcl:num": "f",
+                                            "bcl:text": "the adult's grandparent;"
+                                        },
+                                        {
+                                            "@id": "d1e3141",
+                                            "bcl:num": "g",
+                                            "bcl:text": "the adult's grandchild;"
+                                        },
+                                        {
+                                            "@id": "d1e3150",
+                                            "bcl:num": "h",
+                                            "bcl:text": "anyone else related by birth or adoption to the adult;"
+                                        },
+                                        {
+                                            "@id": "d1e3159",
+                                            "bcl:num": "i",
+                                            "bcl:text": "a close friend of the adult;"
+                                        },
+                                        {
+                                            "@id": "d1e3169",
+                                            "bcl:num": "j",
+                                            "bcl:text": "a person immediately related to the adult by marriage."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3179",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A manager who is a person listed in subsection (2) in respect of an adult is not eligible to give substitute consent to the adult's admission to the manager's own care facility on the adult's behalf."
+                                },
+                                {
+                                    "@id": "d1e3189",
+                                    "bcl:num": "4",
+                                    "bcl:text": "To qualify to give or refuse substitute consent to an adult's admission to a care facility, a person must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3197",
+                                            "bcl:num": "a",
+                                            "bcl:text": "be at least 19 years of age,"
+                                        },
+                                        {
+                                            "@id": "d1e3206",
+                                            "bcl:num": "b",
+                                            "bcl:text": "have been in contact with the adult during the preceding 12 months,"
+                                        },
+                                        {
+                                            "@id": "d1e3215",
+                                            "bcl:num": "c",
+                                            "bcl:text": "have no dispute with the adult,"
+                                        },
+                                        {
+                                            "@id": "d1e3225",
+                                            "bcl:num": "d",
+                                            "bcl:text": "be capable of giving or refusing substitute consent, and"
+                                        },
+                                        {
+                                            "@id": "d1e3234",
+                                            "bcl:num": "e",
+                                            "bcl:text": "be willing to comply with the duties set out in section 23."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3244",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If no one listed in subsection (2) is available or qualifies under subsection (4), or if there is a dispute about who is to be chosen,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3252",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the manager must notify the Public Guardian and Trustee, and"
+                                        },
+                                        {
+                                            "@id": "d1e3261",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the Public Guardian and Trustee must choose a person, including a person employed in the office of the Public Guardian and Trustee, to give or refuse substitute consent."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3271",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Section 21 applies to the giving or refusing of consent by a person authorized to give or refuse substitute consent under this section."
+                                },
+                                {
+                                    "@id": "d1e3280",
+                                    "bcl:num": "7",
+                                    "bcl:text": "A manager is not required to do more than make the effort that is reasonable in the circumstances to comply with this section."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3291",
+                            "bcl:marginalnote": "Rights and duties of person authorized to give substitute consent",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3299",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "substitute",
+                                        "#text": "In this section,  means a person authorized under section 22 to give or refuse consent to an adult's admission to a care facility."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e3311",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Before giving or refusing consent to an adult's admission to a care facility, a substitute must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3319",
+                                            "bcl:num": "a",
+                                            "bcl:text": "consult, or make a reasonable effort to consult, with the adult and with any spouse, friend or relative of the adult who asks to assist, and"
+                                        },
+                                        {
+                                            "@id": "d1e3328",
+                                            "bcl:num": "b",
+                                            "bcl:text": "make a decision in the adult's best interests."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3338",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In determining the adult's best interests, the substitute must consider",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3346",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult's current wishes and any pre-expressed wishes, values and beliefs,"
+                                        },
+                                        {
+                                            "@id": "d1e3355",
+                                            "bcl:num": "b",
+                                            "bcl:text": "whether the adult could benefit from admission to a care facility, and"
+                                        },
+                                        {
+                                            "@id": "d1e3364",
+                                            "bcl:num": "c",
+                                            "bcl:text": "whether a course of action other than admission to a care facility, or a less restrictive type of care facility, is available and appropriate in the circumstances."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3375",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Section 17 (6) to (8) applies to a substitute as if the person were a substitute decision maker under that section."
+                                },
+                                {
+                                    "@id": "d1e3384",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Despite any other provision in this Part, if the manager has reason to believe that a person authorized under section 22 to act as a substitute is acting in a manner that may be abusive or harmful to the adult, the manager must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3392",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96180_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Health Authorities Act"
+                                                },
+                                                "#text": "immediately notify any person designated by name or by class for this purpose by a regional health board designated under the , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d1e3405",
+                                            "bcl:num": "b",
+                                            "bcl:text": "until instructed otherwise by the designated person, take any steps that, in the opinion of the manager, are reasonably necessary to protect the adult, including refusing to discharge a person in care from a care facility."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3416",
+                            "bcl:marginalnote": "Emergency admissions",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3424",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A manager may admit an adult to a care facility without the consent of the adult or a person authorized under section 22 to give or refuse substitute consent if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3432",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the adult is determined under section 26 to be incapable of giving or refusing consent and immediate admission of the adult is necessary to",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e3440",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "preserve the adult's life,"
+                                                },
+                                                {
+                                                    "@id": "d1e3449",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "prevent serious physical or mental harm to the adult, or"
+                                                },
+                                                {
+                                                    "@id": "d1e3458",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "prevent serious physical harm to any person, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e3468",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96006_01",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Adult Guardianship Act"
+                                                },
+                                                "#text": "the adult is the subject of an emergency measure taken under section 59 of the ."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3482",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If an admission is made under subsection (1), the manager must, within 72 hours of the admission, obtain substitute consent in accordance with section 22 for continued admission."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3492",
+                            "bcl:marginalnote": "Continued residence in a care facility",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3500",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A manager must not prevent or obstruct a person in care from leaving a care facility in either of the following circumstances:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3508",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the person in care is capable and expresses a desire to leave the care facility;"
+                                        },
+                                        {
+                                            "@id": "d1e3517",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the person in care is incapable and the person authorized to act as a substitute for the person in care expresses a desire for the person in care to leave the care facility."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3527",
+                                    "bcl:num": "2",
+                                    "bcl:text": "[Not in force.]"
+                                },
+                                {
+                                    "@id": "d1e3536",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the manager has reason to believe that the capability of a person in care is in doubt for the purposes of subsection (1) or (2), the manager must within a reasonable time have the person in care assessed in accordance with section 26."
+                                },
+                                {
+                                    "@id": "d1e3546",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Despite subsection (3), an assessment of the capability of a person in care is not necessary if",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3554",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the person in care has a guardian, or"
+                                        },
+                                        {
+                                            "@id": "d1e3563",
+                                            "bcl:num": "b",
+                                            "bcl:text": "[Not in force.]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3574",
+                            "bcl:marginalnote": "Determining incapability",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3582",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Only a medical practitioner or a prescribed health care provider may determine whether an adult is incapable of giving or refusing consent to admission to, or continued residence in, a care facility."
+                                },
+                                {
+                                    "@id": "d1e3591",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A determination under subsection (1) must be based on",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3599",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an assessment made in accordance with the regulations, and"
+                                        },
+                                        {
+                                            "@id": "d1e3608",
+                                            "bcl:num": "b",
+                                            "bcl:text": "whether or not the adult demonstrates that the adult understands the information given by the manager under section 21\u00a0(1)\u00a0(d)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3618",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Section 21 (3) applies to a medical practitioner or a prescribed health care provider when determining whether an adult is incapable of giving or refusing consent to admission to, or continued residence in, a care facility."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e3628",
+                            "bcl:marginalnote": "Use of restraints",
+                            "bcl:num": "26.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e3636",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "restrain",
+                                        "#text": "In this section,  means to control or restrict the freedom of movement of a person in care"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3647",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by any physical means, or"
+                                        },
+                                        {
+                                            "@id": "d1e3656",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in a prescribed manner or by prescribed means."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3666",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A manager must ensure that a person in care is not restrained",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e3674",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for the purpose of punishment or discipline, or"
+                                        },
+                                        {
+                                            "@id": "d1e3683",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for the convenience of care facility staff."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e3693",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A manager must ensure that a person in care is not restrained except in accordance with the regulations."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2553",
+                    "bcl:num": "4",
+                    "bcl:section": {
+                        "@id": "d2e2559",
+                        "bcl:marginalnote": "Repealed",
+                        "bcl:num": "27-32",
+                        "bcl:text": "[Repealed 2003-96-30.]"
+                    }
+                },
+                {
+                    "@id": "d2e2571",
+                    "bcl:num": "5",
+                    "bcl:text": "General Provisions",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2580",
+                            "bcl:marginalnote": "Protection from liability",
+                            "bcl:num": "33",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2588",
+                                    "bcl:num": "1",
+                                    "bcl:text": "No action may be brought or continued against a person for any act or omission in the performance of a duty or the exercise of a power or function under this Act if the person has acted in good faith and used reasonable care."
+                                },
+                                {
+                                    "@id": "d2e2597",
+                                    "bcl:num": "2",
+                                    "bcl:text": [
+                                        "A person who is a health care provider or manager is entitled to rely on the accuracy of the information given to that person to establish",
+                                        "unless it is not reasonable to rely on that information."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2606",
+                                            "bcl:num": "a",
+                                            "bcl:text": "someone's eligibility to be chosen under section 16 or 22,"
+                                        },
+                                        {
+                                            "@id": "d2e2616",
+                                            "bcl:num": "b",
+                                            "bcl:text": "someone's authority to give, refuse or revoke consent to health care, or"
+                                        },
+                                        {
+                                            "@id": "d2e2625",
+                                            "bcl:num": "c",
+                                            "bcl:text": "someone's authority to give consent under Part 3 on behalf of an adult or person in care,"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2638",
+                            "bcl:marginalnote": "Collection of personal information",
+                            "bcl:num": "33.1",
+                            "bcl:text": "A health care provider is authorized to collect personal information about an adult from any person if this is necessary for the purposes of exercising a power or carrying out a duty or function under this Act."
+                        },
+                        {
+                            "@id": "d2e2651",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "33.2-33.3",
+                            "bcl:text": "[Repealed 2003-96-31.]"
+                        },
+                        {
+                            "@id": "d2e2663",
+                            "bcl:marginalnote": "Court directions and orders",
+                            "bcl:num": "33.4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2671",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The following people may apply to the court for an order under subsection (2):",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2680",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a health care provider responsible for the care of an adult who is incapable of giving or refusing consent to health care;"
+                                        },
+                                        {
+                                            "@id": "d2e2689",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an adult's representative or personal guardian;"
+                                        },
+                                        {
+                                            "@id": "d2e2699",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a person chosen under this Act to give or refuse substitute consent to health care or admission to a care facility on behalf of an adult who is incapable;"
+                                        },
+                                        {
+                                            "@id": "d2e2708",
+                                            "bcl:num": "d",
+                                            "bcl:text": "an adult who is assessed as incapable of giving or refusing consent to health care or admission to a care facility."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2717",
+                                    "bcl:num": "2",
+                                    "bcl:text": "On application by a person described in subsection (1), the court may do one or more of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2726",
+                                            "bcl:num": "a",
+                                            "bcl:text": "order the adult to attend at the time and place the court directs and submit to one or more assessments of incapability;"
+                                        },
+                                        {
+                                            "@id": "d2e2735",
+                                            "bcl:num": "b",
+                                            "bcl:text": "give directions respecting",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2744",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the interpretation of a provision of an advance directive, or any other health care instruction or wish, made or expressed by an adult when capable, or"
+                                                },
+                                                {
+                                                    "@id": "d2e2754",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "who should be chosen to provide substitute consent under this Act for an incapable adult;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2763",
+                                            "bcl:num": "c",
+                                            "bcl:text": [
+                                                "confirm, reverse or vary a decision by",
+                                                "to give or refuse consent to health care or admission to a care facility;"
+                                            ],
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2772",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "an adult's representative or personal guardian, or"
+                                                },
+                                                {
+                                                    "@id": "d2e2781",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a person chosen to provide substitute consent under this Act,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2793",
+                                            "bcl:num": "d",
+                                            "bcl:text": "make any decision that a person chosen to provide substitute consent under this Act could make."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2803",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Any person may apply to the court for an order voiding an advance directive on the basis that fraud, undue pressure or some other form of abuse or neglect was used to induce an adult to make the advance directive, or to change or revoke a previous advance directive."
+                                },
+                                {
+                                    "@id": "d2e2812",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Nothing in this Act",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2821",
+                                            "bcl:num": "a",
+                                            "bcl:text": "limits the inherent jurisdiction of the Supreme Court to act in a parens patriae capacity, or"
+                                        },
+                                        {
+                                            "@id": "d2e2830",
+                                            "bcl:num": "b",
+                                            "bcl:text": "deprives a person of the right to ask the Supreme Court to exercise that jurisdiction."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2840",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "34",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2848",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2860",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2869",
+                                            "bcl:num": "a",
+                                            "bcl:text": "designating any facility or class of facility as a care facility for the purpose of paragraph (e) of the definition of \"care facility\";"
+                                        },
+                                        {
+                                            "@id": "d2e2879",
+                                            "bcl:num": "b",
+                                            "bcl:text": "designating ethics committees for the purpose of paragraph (c) of the definition of \"health care\";"
+                                        },
+                                        {
+                                            "@id": "d2e2888",
+                                            "bcl:num": "c",
+                                            "bcl:text": "prescribing Acts or classes of persons for the purpose of the definition of \"health care provider\";"
+                                        },
+                                        {
+                                            "@id": "d2e2897",
+                                            "bcl:num": "d",
+                                            "bcl:text": "designating any type of health care as major health care for the purpose of paragraph (d) of the definition of \"major health care\";"
+                                        },
+                                        {
+                                            "@id": "d2e2906",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing advocacy organizations for the purposes of section 14 (5);"
+                                        },
+                                        {
+                                            "@id": "d2e2915",
+                                            "bcl:num": "f",
+                                            "bcl:text": "prescribing types of health care for which substitute consent may not be given under section\u00a018;"
+                                        },
+                                        {
+                                            "@id": "d2e2924",
+                                            "bcl:num": "g",
+                                            "bcl:text": "governing assessments under sections 14 (2) and 26, including prescribing health care providers for the purposes of conducting an assessment under section\u00a026;"
+                                        },
+                                        {
+                                            "@id": "d2e2934",
+                                            "bcl:num": "h",
+                                            "bcl:text": "[Repealed 2007-19-10.]"
+                                        },
+                                        {
+                                            "@id": "d2e2943",
+                                            "bcl:num": "i",
+                                            "bcl:text": "for the purposes of section 26.1,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e4129",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "prescribing a manner or means of restraint,"
+                                                },
+                                                {
+                                                    "@id": "d1e4138",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "respecting the conditions under which an adult may be restrained,"
+                                                },
+                                                {
+                                                    "@id": "d1e4147",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "respecting the use and monitoring of restraints, and"
+                                                },
+                                                {
+                                                    "@id": "d1e4157",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "respecting the keeping of records in relation to the use of restraints;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2952",
+                                            "bcl:num": "j",
+                                            "bcl:text": "[Not in force. Repealed 1999-25-18.]"
+                                        },
+                                        {
+                                            "@id": "d2e2961",
+                                            "bcl:num": "k",
+                                            "bcl:text": "prescribing forms for the purposes of this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2970",
+                                            "bcl:num": "k.1) and (l",
+                                            "bcl:text": "[Repealed 2003-96-32.]"
+                                        },
+                                        {
+                                            "@id": "d2e2979",
+                                            "bcl:num": "m",
+                                            "bcl:text": "respecting matters that must be included or addressed in an advance directive."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e4209",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For the purposes of subsection (2) (i), the Lieutenant Governor in Council may adopt a regulation made under any other Act,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e4217",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in whole, in part or with any changes considered appropriate, and"
+                                        },
+                                        {
+                                            "@id": "d1e4226",
+                                            "bcl:num": "b",
+                                            "bcl:text": "as amended from time to time."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2989",
+                            "bcl:marginalnote": "Offence",
+                            "bcl:num": "35",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96338_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Offence Act"
+                                },
+                                "#text": "Section 5 of the  does not apply to this Act or the regulations."
+                            }
+                        },
+                        {
+                            "@id": "d2e3004",
+                            "bcl:marginalnote": "Transitional \u2014 advance directives",
+                            "bcl:num": "35.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e3012",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "The Lieutenant Governor in Council may make regulations setting out criteria by which written instructions made by a capable adult that",
+                                        "may be deemed to be advance directives."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e3021",
+                                            "bcl:num": "a",
+                                            "bcl:text": "give or refuse consent to health care in the event that the adult is not capable of giving the instruction at the time the health care is required, and"
+                                        },
+                                        {
+                                            "@id": "d2e3030",
+                                            "bcl:num": "b",
+                                            "bcl:text": "were made before Part 2.1 comes into force, that date being September 1, 2011,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e3043",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If regulations are made under subsection (1), written instructions that meet the prescribed criteria are deemed to be advance directives."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "bcl:section": {
+                "@id": "d2e3053",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "36",
+                "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+            }
+        }
+    }
+}

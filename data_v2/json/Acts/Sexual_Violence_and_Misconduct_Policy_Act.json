@@ -1,0 +1,626 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@id": "16023_01",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "act:title": "Sexual Violence and Misconduct Policy Act",
+        "act:chapter": "23",
+        "act:yearenacted": "2016",
+        "act:assentedto": "May 19, 2016",
+        "act:currency": {
+            "act:tlcDirPath": "1527898742/809013415/1416191246",
+            "act:tlc": "E4tlc16023"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d1e25",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d1e36",
+                            "bcl:text": {
+                                "in:term": "post-secondary institution",
+                                "#text": "means an institution established or continued under one of the following Acts:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e43",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96052_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "College and Institute Act"
+                                        },
+                                        "#text": "the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e56",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96409_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Royal Roads University Act"
+                                        },
+                                        "#text": "the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e69",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/05017_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Thompson Rivers University Act"
+                                        },
+                                        "#text": "the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e82",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96468_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "University Act"
+                                        },
+                                        "#text": "the ;"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e96",
+                            "bcl:text": {
+                                "in:term": "sexual misconduct",
+                                "#text": "includes the following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e103",
+                                    "bcl:num": "a",
+                                    "bcl:text": "sexual assault;"
+                                },
+                                {
+                                    "@id": "d1e112",
+                                    "bcl:num": "b",
+                                    "bcl:text": "sexual exploitation;"
+                                },
+                                {
+                                    "@id": "d1e121",
+                                    "bcl:num": "c",
+                                    "bcl:text": "sexual harassment;"
+                                },
+                                {
+                                    "@id": "d1e130",
+                                    "bcl:num": "d",
+                                    "bcl:text": "stalking;"
+                                },
+                                {
+                                    "@id": "d1e140",
+                                    "bcl:num": "e",
+                                    "bcl:text": "indecent exposure;"
+                                },
+                                {
+                                    "@id": "d1e149",
+                                    "bcl:num": "f",
+                                    "bcl:text": "voyeurism;"
+                                },
+                                {
+                                    "@id": "d1e158",
+                                    "bcl:num": "g",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/23011",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Intimate Images Protection Act"
+                                        },
+                                        "#text": "the distribution of an intimate image, within the meaning of the , without the consent of the individual depicted in the image;"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e167",
+                                    "bcl:num": "h",
+                                    "bcl:text": "the attempt to commit an act of sexual misconduct;"
+                                },
+                                {
+                                    "@id": "d1e176",
+                                    "bcl:num": "i",
+                                    "bcl:text": "the threat to commit an act of sexual misconduct;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e187",
+                            "bcl:text": {
+                                "in:term": "student",
+                                "#text": ", in relation to a post-secondary institution, means a person who is enrolled at that post-secondary institution."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e196",
+                    "bcl:marginalnote": "Requirement for policy",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e204",
+                            "bcl:num": "1",
+                            "bcl:text": "A post-secondary institution must establish and implement a sexual misconduct policy that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e212",
+                                    "bcl:num": "a",
+                                    "bcl:text": "addresses sexual misconduct, including sexual misconduct prevention and responses to sexual misconduct,"
+                                },
+                                {
+                                    "@id": "d1e221",
+                                    "bcl:num": "b",
+                                    "bcl:text": "sets out procedures for the following:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d1e229",
+                                            "bcl:num": "i",
+                                            "bcl:text": "making a complaint of sexual misconduct involving a student;"
+                                        },
+                                        {
+                                            "@id": "d1e238",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "making a report of sexual misconduct involving a student;"
+                                        },
+                                        {
+                                            "@id": "d1e247",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "responding to a complaint of sexual misconduct involving a student;"
+                                        },
+                                        {
+                                            "@id": "d1e257",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "responding to a report of sexual misconduct involving a student, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e267",
+                                    "bcl:num": "c",
+                                    "bcl:text": "addresses any other matter prescribed by regulation."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e277",
+                            "bcl:num": "2",
+                            "bcl:text": "A post-secondary institution must make the post-secondary institution's sexual misconduct policy publicly available on an internet site maintained by or on behalf of the post-secondary institution."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e287",
+                    "bcl:marginalnote": "Review of policy",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e295",
+                            "bcl:num": "1",
+                            "bcl:text": "A post-secondary institution must review its sexual misconduct policy",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e303",
+                                    "bcl:num": "a",
+                                    "bcl:text": "at least once every 3 years, and"
+                                },
+                                {
+                                    "@id": "d1e312",
+                                    "bcl:num": "b",
+                                    "bcl:text": "when directed to do so by the minister."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e322",
+                            "bcl:num": "2",
+                            "bcl:text": "A post-secondary institution must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e330",
+                                    "bcl:num": "a",
+                                    "bcl:text": "determine whether its sexual misconduct policy requires amendments based on a review under subsection (1), and"
+                                },
+                                {
+                                    "@id": "d1e339",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the post-secondary institution determines amendments are required, make those amendments."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e349",
+                            "bcl:num": "3",
+                            "bcl:text": "For the purposes of subsection (1) (a), the first 3-year period begins on the date that a post-secondary institution establishes its first sexual misconduct policy under section 2."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e359",
+                    "bcl:marginalnote": "Consultation",
+                    "bcl:num": "4",
+                    "bcl:text": "A post-secondary institution must consult with students and with prescribed persons or prescribed classes of persons, if any, when the post-secondary institution",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d1e370",
+                            "bcl:num": "a",
+                            "bcl:text": "establishes its first sexual misconduct policy under section 2, and"
+                        },
+                        {
+                            "@id": "d1e379",
+                            "bcl:num": "b",
+                            "bcl:text": "reviews its sexual misconduct policy under section 3 (1)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e389",
+                    "bcl:marginalnote": "Survey",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e397",
+                            "bcl:num": "1",
+                            "bcl:text": "The minister may direct a post-secondary institution to conduct a survey for the purpose of assessing the effectiveness of its sexual misconduct policy."
+                        },
+                        {
+                            "@id": "d1e406",
+                            "bcl:num": "2",
+                            "bcl:text": "If the minister directs a post-secondary institution to conduct a survey under subsection (1), the minister may specify the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e414",
+                                    "bcl:num": "a",
+                                    "bcl:text": "who the post-secondary institution must include in a survey;"
+                                },
+                                {
+                                    "@id": "d1e423",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the date by which the post-secondary institution must submit the survey results to the minister;"
+                                },
+                                {
+                                    "@id": "d1e432",
+                                    "bcl:num": "c",
+                                    "bcl:text": "questions that the post-secondary institution must include in the survey;"
+                                },
+                                {
+                                    "@id": "d1e442",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the manner in which the post-secondary institution must conduct the survey."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e452",
+                            "bcl:num": "3",
+                            "bcl:text": "If the minister directs a post-secondary institution to conduct a survey under subsection (1), the post-secondary institution must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e460",
+                                    "bcl:num": "a",
+                                    "bcl:text": "conduct the survey,"
+                                },
+                                {
+                                    "@id": "d1e469",
+                                    "bcl:num": "b",
+                                    "bcl:text": "comply with any matters specified by the minister under subsection (2), and"
+                                },
+                                {
+                                    "@id": "d1e478",
+                                    "bcl:num": "c",
+                                    "bcl:text": "submit the survey results to the minister on or before the date specified by the minister, if any, under subsection (2)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e490",
+                    "bcl:marginalnote": "Report to governing body",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e498",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "in:term": "governing body",
+                                "#text": "In this section, , in relation to"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e509",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96052_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "College and Institute Act"
+                                        },
+                                        "#text": "the , means the board of an institution within the meaning of that Act,"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e522",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96409_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Royal Roads University Act"
+                                        },
+                                        "#text": "the , means the board of governors of Royal Roads University,"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e535",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/05017_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Thompson Rivers University Act"
+                                        },
+                                        "#text": "the , means the board of governors of Thompson Rivers University, and"
+                                    }
+                                },
+                                {
+                                    "@id": "d1e549",
+                                    "bcl:num": "d",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96468_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "University Act"
+                                        },
+                                        "#text": "the , means the board of governors of a university within the meaning of that Act."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e563",
+                            "bcl:num": "2",
+                            "bcl:text": "Each year, the president of a post-secondary institution must report to the governing body on the implementation of the post-secondary institution's sexual misconduct policy."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e573",
+                    "bcl:marginalnote": "Regulation-making powers",
+                    "bcl:num": "7",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e581",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96238_01",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Interpretation Act"
+                                },
+                                "#text": "The Lieutenant Governor in Council may make regulations referred to in section 41 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d1e594",
+                            "bcl:num": "2",
+                            "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e602",
+                                    "bcl:num": "a",
+                                    "bcl:text": "respecting any matter for which regulations are contemplated by this Act;"
+                                },
+                                {
+                                    "@id": "d1e611",
+                                    "bcl:num": "b",
+                                    "bcl:text": "for the purposes of section 2 (1) (b), respecting procedures for how a post-secondary institution responds to a complaint of sexual misconduct involving a student or a report of sexual misconduct involving a student;"
+                                },
+                                {
+                                    "@id": "d1e620",
+                                    "bcl:num": "c",
+                                    "bcl:text": "for the purposes of section 4, establishing requirements for a post-secondary institution when consulting on its sexual misconduct policy."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e630",
+                            "bcl:num": "3",
+                            "bcl:text": "In making a regulation under this Act, the Lieutenant Governor in Council may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e638",
+                                    "bcl:num": "a",
+                                    "bcl:text": "make different regulations for different post-secondary institutions, sexual misconduct policies, surveys, persons, matters, circumstances, events or things,"
+                                },
+                                {
+                                    "@id": "d1e647",
+                                    "bcl:num": "b",
+                                    "bcl:text": "establish different classes of post-secondary institutions, sexual misconduct policies, surveys, persons, matters, circumstances, events or things, and"
+                                },
+                                {
+                                    "@id": "d1e656",
+                                    "bcl:num": "c",
+                                    "bcl:text": "make different provisions, including exceptions, for different classes referred to in paragraph (b)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e667",
+                    "bcl:marginalnote": "Transition \u2014 existing policies",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d1e675",
+                            "bcl:num": "1",
+                            "bcl:text": "If, on the date this section comes into force, a post-secondary institution has a policy that complies with section 2 (1), the policy is deemed to be a sexual misconduct policy for the purposes of this Act."
+                        },
+                        {
+                            "@id": "d1e684",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purposes of section 3 (1) (a), the first 3-year period for a policy deemed to be a sexual misconduct policy under subsection (1) of this section begins on the date this section comes into force."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e811",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "11",
+                    "bcl:text": "This Act comes into force on the date that is one year after the date of Royal Assent."
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Consequential Amendments",
+                "bcl:num": "9-10",
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of sections 9 and 10.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "@id": "d1e1203",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": [
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "9"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E3tlc96052",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "College and Institute Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@align": "right",
+                                            "oasis:line": {
+                                                "in:em": "10"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@width": "35",
+                                            "oasis:line": null
+                                        },
+                                        {
+                                            "@colname": "c3",
+                                            "oasis:line": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/E3tlc96468",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "University Act"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

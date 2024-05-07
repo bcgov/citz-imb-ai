@@ -1,0 +1,1999 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96085_01",
+        "act:title": "Criminal Injury Compensation Act",
+        "act:chapter": "85",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "781755088/96085/tlc96085_f",
+            "act:tlc": "E3tlc96085"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d2e21",
+                    "bcl:marginalnote": "Definitions and interpretation",
+                    "bcl:num": "1",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e29",
+                            "bcl:num": "1",
+                            "bcl:text": "In this Act:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d2e38",
+                                    "bcl:text": {
+                                        "in:term": "board",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/19001_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Workers Compensation Act"
+                                        },
+                                        "#text": "means the Workers' Compensation Board established under the\n              ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e50",
+                                    "bcl:text": {
+                                        "in:term": "child",
+                                        "#text": "includes a child to whom the victim stands in the place of a\n            parent;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e60",
+                                    "bcl:text": {
+                                        "in:term": "immediate family member",
+                                        "#text": "means"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e69",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a spouse, child, sibling, step-sibling, half sibling or parent of the victim\n              or a person who, although not a parent or child of the victim, was like a parent or\n              child to the victim and, for this purpose",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e78",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "spouse means the individual recognized under subsection (2) as the spouse\n                of the victim, and"
+                                                },
+                                                {
+                                                    "@id": "d2e87",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "child includes an individual recognized under subsection (2) as the child\n                of the victim and, with reference to the victim as parent, a child born after the\n                death of the victim, or"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e96",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if dependent in whole or in part on the victim for financial support at the\n              time of the victim's death, a grandparent or grandchild of the victim;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e105",
+                                    "bcl:text": {
+                                        "in:term": [
+                                            "injury",
+                                            "injured"
+                                        ],
+                                        "#text": "and  means bodily harm, and includes\n            mental or nervous shock and pregnancy;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e118",
+                                    "bcl:text": {
+                                        "in:term": "invalid",
+                                        "#text": "means physically or mentally incapable of earning;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e127",
+                                    "bcl:text": {
+                                        "in:term": "invalid child",
+                                        "#text": "includes a child who, though not an invalid at the date\n            of death of the victim, becomes an invalid before otherwise ceasing to be entitled to\n            compensation;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e136",
+                                    "bcl:text": {
+                                        "in:term": "qualified practitioner",
+                                        "#text": "means a person authorized under an enactment\n            to practise in British Columbia as a chiropractor, dentist, medical practitioner,\n            naturopathic physician or podiatrist;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e145",
+                                    "bcl:text": {
+                                        "in:term": "specialist",
+                                        "#text": "means a physician listed by the Royal College of\n            Physicians and Surgeons of Canada as having specialist qualifications;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e154",
+                                    "bcl:text": {
+                                        "in:term": "spouse",
+                                        "#text": "means a person who"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e163",
+                                            "bcl:num": "a",
+                                            "bcl:text": "is married to another person, or"
+                                        },
+                                        {
+                                            "@id": "d2e173",
+                                            "bcl:num": "b",
+                                            "bcl:text": "is living with another person in a marriage-like relationship;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e182",
+                                    "bcl:text": {
+                                        "in:term": "victim",
+                                        "#text": "means a person injured or killed in the circumstances set out\n            in section 2\n              (2)."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e191",
+                            "bcl:num": "2",
+                            "bcl:text": "The board may recognize an individual as the spouse or child of the victim for the\n          purposes of this Act if at the time of the victim's death the individual",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e200",
+                                    "bcl:num": "a",
+                                    "bcl:text": "was qualified as a spouse or child of the victim under an enactment of British\n            Columbia or Canada to apply for support, alimony or maintenance from the victim,\n            or"
+                                },
+                                {
+                                    "@id": "d2e209",
+                                    "bcl:num": "b",
+                                    "bcl:text": "was entitled to support, alimony or maintenance from the victim under an order\n            or agreement enforceable under such an enactment."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e219",
+                    "bcl:marginalnote": "Right to compensation",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e227",
+                            "bcl:num": "1",
+                            "bcl:text": "[Repealed 2001-38-32 and B.C. Reg. 160/2002.]"
+                        },
+                        {
+                            "@id": "d2e236",
+                            "bcl:num": "2",
+                            "bcl:text": "For the purpose of this Act, a victim of crime is a person injured or killed in\n          British Columbia by an act or omission of another resulting from any of the\n          following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e245",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the commission of an offence within the description of a criminal offence\n            mentioned in the Schedule, except an offence arising out of the\n            operation of a motor vehicle, but including assault by means of a motor\n            vehicle;"
+                                },
+                                {
+                                    "@id": "d2e255",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the lawful arrest or attempt to arrest an offender or suspected offender, or\n            assisting a peace officer in making or attempting to make an arrest;"
+                                },
+                                {
+                                    "@id": "d2e264",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the lawful prevention or attempt to prevent the commission of a criminal offence\n            or suspected offence, or assisting a peace officer in preventing or attempting to\n            prevent the commission of the offence or suspected offence."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e273",
+                            "bcl:num": "3",
+                            "bcl:text": "On application as prescribed by the board or by the regulations, the\n          board",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e282",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must determine whether the applicant is a victim of crime or the immediate\n            family member of a deceased victim of crime, and"
+                                },
+                                {
+                                    "@id": "d2e291",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may award compensation to the victim or the immediate family members as provided\n            by this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e300",
+                            "bcl:num": "4",
+                            "bcl:text": "Subject to subsections (4.1) and (4.2), compensation may be awarded for any of the\n          following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e310",
+                                    "bcl:num": "a",
+                                    "bcl:text": "expenses actually and reasonably incurred or to be incurred as a result of the\n            victim's injury or death;"
+                                },
+                                {
+                                    "@id": "d2e319",
+                                    "bcl:num": "b",
+                                    "bcl:text": "pecuniary loss or damages incurred by the victim as a result of total or partial\n            disability affecting the victim's capacity for work;"
+                                },
+                                {
+                                    "@id": "d2e328",
+                                    "bcl:num": "c",
+                                    "bcl:text": "pecuniary loss or damages incurred by immediate family members as a result of\n            the victim's death;"
+                                },
+                                {
+                                    "@id": "d2e337",
+                                    "bcl:num": "d",
+                                    "bcl:text": "maintenance of a child born as a result of rape;"
+                                },
+                                {
+                                    "@id": "d2e346",
+                                    "bcl:num": "e",
+                                    "bcl:text": "other pecuniary loss or damages resulting from the victim's injury and any\n            expense that, in the board's opinion, it is reasonable to incur;"
+                                },
+                                {
+                                    "@id": "d2e355",
+                                    "bcl:num": "f",
+                                    "bcl:text": "non-pecuniary loss or damage for pain, suffering, mental or emotional trauma,\n            humiliation or inconvenience."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e365",
+                            "bcl:num": "4.1",
+                            "bcl:text": "Despite any provision of this Act, compensation referred to in subsection (4)\n            (f) may not be awarded under this Act in respect of an application received\n          by the board on or after April 16, 2002."
+                        },
+                        {
+                            "@id": "d2e374",
+                            "bcl:num": "4.2",
+                            "bcl:text": "Subsection (4.1) applies irrespective of the date of death or injury in respect of\n          which an application is made and whether or not the board has extended the period for\n          making an application under section 6."
+                        },
+                        {
+                            "@id": "d2e383",
+                            "bcl:num": "5",
+                            "bcl:text": "If the injury to a person occurred in the circumstances mentioned in subsection (2)\n            (b) or (c) the board may, in addition to the compensation referred to in\n          subsection (4), award compensation to the injured person for any other damage resulting\n          from the injury for which compensation may be recovered at law, other than punitive or\n          exemplary damages."
+                        },
+                        {
+                            "@id": "d2e392",
+                            "bcl:num": "6",
+                            "bcl:text": "The board may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e401",
+                                    "bcl:num": "a",
+                                    "bcl:text": "award compensation to a mother who is herself maintaining a child born to her as\n            a result of an offence in the Schedule, and"
+                                },
+                                {
+                                    "@id": "d2e410",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the mother dies, pay compensation to any person who, in the board's opinion,\n            is maintaining the child."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e420",
+                            "bcl:num": "7",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/19001_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Workers\n              Compensation Act"
+                                },
+                                "#text": "Compensation awarded to an applicant under this Act must be paid out of the\n          consolidated revenue fund in the same manner as money is paid under the , if a worker, employed by the government, is\n          injured or killed in the course of his or her employment."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e433",
+                    "bcl:marginalnote": "Payments",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e441",
+                            "bcl:num": "1",
+                            "bcl:text": "The board may, in its discretion exercised in accordance with this Act, do any of\n          the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e450",
+                                    "bcl:num": "a",
+                                    "bcl:text": "award compensation in the form of a lump sum payment, and may, at any time,\n            divide the lump sum payment into periodic payments and pay them at times and in a manner\n            and form as it considers advisable;"
+                                },
+                                {
+                                    "@id": "d2e459",
+                                    "bcl:num": "b",
+                                    "bcl:text": "award compensation in the form of periodic payments, and",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e469",
+                                            "bcl:num": "i",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96492_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Workers Compensation Act"
+                                                },
+                                                "in:doc": "Workers Compensation Amendment Act,\n              2002;",
+                                                "#text": "if the periodic payments are awarded to a victim who is disabled as a result\n              of an injury, they must, subject to this Act, be of the same amount and for the same\n              duration as payments made to a disabled worker under sections\u00a022, 23, 29 and 30 of the\n              , R.S.B.C. 1996, c. 492, as those sections read\n              before being amended by the"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e483",
+                                            "bcl:num": "ii",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96492_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Workers Compensation Act"
+                                                },
+                                                "in:doc": "Workers\n                Compensation Amendment Act, 2002",
+                                                "#text": "if the periodic payments are awarded to immediate family members, they must,\n              subject to this Act, be of the same amount and for the same duration as payments made\n              to dependants under section\u00a017 of the , R.S.B.C. 1996, c. 492, as it read before any amendments in the  came into force;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e498",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "may commute all or part of the periodic payments to one or more lump sum\n              payments, to be applied as directed by the board;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e507",
+                                    "bcl:num": "c",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96492_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Workers Compensation Act"
+                                        },
+                                        "in:doc": "Workers\n              Compensation Amendment Act, 2002",
+                                        "#text": "if a victim is killed and the funeral, burial and cremation expenses are not\n            provided for under an Act of Canada or British Columbia, pay expenses, not exceeding the\n            amount that would be paid under section\u00a017 of the , R.S.B.C. 1996, c. 492, as it read before any amendments in the  came into force;"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e522",
+                                    "bcl:num": "d",
+                                    "bcl:text": "if compensation is payable for expenses, pay the compensation directly to the\n            person entitled to it."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e531",
+                            "bcl:num": "2",
+                            "bcl:text": "An award of compensation may be made subject to terms and conditions the board\n          considers necessary or advisable with respect to the any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e541",
+                                    "bcl:num": "a",
+                                    "bcl:text": "payment, disposition, allotment or apportionment of the compensation;"
+                                },
+                                {
+                                    "@id": "d2e550",
+                                    "bcl:num": "b",
+                                    "bcl:text": "holding of the compensation or any part of it in trust for the victim or the\n            immediate family members, or any of them, whether as a fund for a class or\n            otherwise;"
+                                },
+                                {
+                                    "@id": "d2e559",
+                                    "bcl:num": "c",
+                                    "bcl:text": "payment of compensation to any person who, in the board's opinion, is best\n            qualified to administer the payment on behalf of a victim or immediate family member who\n            is, in the board's opinion, incapable of managing his or her own affairs."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e569",
+                    "bcl:marginalnote": "Factors to be considered",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e577",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to section 5, in determining whether to award compensation and the amount, the\n          board must have regard to all relevant circumstances, including any behaviour of the\n          victim that may have, directly or indirectly, contributed to his or her injury or\n          death."
+                        },
+                        {
+                            "@id": "d2e586",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "In determining the amount of compensation, if any, to be awarded to an applicant,\n          the board must deduct",
+                                "under an Act of Canada or of British Columbia or of any other province other\n          than benefits under a pension plan or program under such an Act, and, if the claim is\n          for injuries or death caused by a motor vehicle, includes benefits that could have been\n          applied for under a policy of accident insurance, and"
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e595",
+                                    "bcl:num": "a",
+                                    "bcl:text": "any amount recovered from the person whose act or omission resulted in the\n            injury or death, whether as damages or compensation, under an action at law or\n            otherwise, and"
+                                },
+                                {
+                                    "@id": "d2e605",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any benefits received or to be received",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e614",
+                                            "bcl:num": "i",
+                                            "bcl:text": "by the victim for the injury, or"
+                                        },
+                                        {
+                                            "@id": "d2e623",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "by the applicant for the victim's death,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e635",
+                                    "bcl:num": "c",
+                                    "bcl:text": "any payment, allowance or benefit that the victim may receive from his or her\n            employer during the period of his or her disability, including a pension, gratuity or\n            other allowance provided wholly at the expense of the employer."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e645",
+                    "bcl:marginalnote": "Exceptions",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e653",
+                            "bcl:num": "1",
+                            "bcl:text": "The board must not entertain an application under section\u00a02 made for injury or\n          death of a peace officer occurring under circumstances entitling the peace officer or the\n          peace officer's immediate family members to compensation payable out of public money under\n          any other Act of British Columbia or of Canada or payable by an organization that is\n          wholly or partly supported by public funds."
+                        },
+                        {
+                            "@id": "d2e662",
+                            "bcl:num": "2",
+                            "bcl:text": "The board must not entertain an application if a claim is less than $100 nor make\n          an award if the amount payable is less than $100."
+                        },
+                        {
+                            "@id": "d2e671",
+                            "bcl:num": "3",
+                            "bcl:text": "The board must not award compensation",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e681",
+                                    "bcl:num": "a",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "http://laws.justice.gc.ca/eng/acts/G-5/index.html",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Government Employees Compensation\n              Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96492_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Workers Compensation Act"
+                                            }
+                                        ],
+                                        "in:doc": "Workers\n              Compensation Amendment Act, 2002",
+                                        "#text": "except under section 2 (4) (f), to a victim who is injured in\n            circumstances giving recourse to the  (Canada) or the , R.S.B.C. 1996, c. 492, as it read before being amended by the ,"
+                                    }
+                                },
+                                {
+                                    "@id": "d2e699",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to a victim who, through his or her gross fault, contributed to his or her\n            injuries or death, or who was a party to the crime,"
+                                },
+                                {
+                                    "@id": "d2e708",
+                                    "bcl:num": "c",
+                                    "bcl:text": "to an immediate family member who was a party to the offence that caused the\n            victim's death, or"
+                                },
+                                {
+                                    "@id": "d2e717",
+                                    "bcl:num": "d",
+                                    "bcl:text": "to an immediate family member of a victim who was a party to the\n            crime."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e728",
+                    "bcl:marginalnote": "Limitation period",
+                    "bcl:num": "6",
+                    "bcl:text": "An application for compensation must be made within one year after the date of the\n        injury or death but the board, before or after the expiry of the one year period, may extend\n        the time for a further period as it considers warranted."
+                },
+                {
+                    "@id": "d2e740",
+                    "bcl:marginalnote": "Attorney General",
+                    "bcl:num": "7",
+                    "bcl:text": "The Attorney General may appear and be heard at the hearing of any matter by the\n        board under this Act."
+                },
+                {
+                    "@id": "d2e752",
+                    "bcl:marginalnote": "Proof of crime",
+                    "bcl:num": "8",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e760",
+                            "bcl:num": "1",
+                            "bcl:text": "Compensation may be awarded whether or not any person is prosecuted for or\n          convicted of the offence giving rise to the injury or death."
+                        },
+                        {
+                            "@id": "d2e769",
+                            "bcl:num": "2",
+                            "bcl:text": "On its own initiative or on the application of the Attorney General, the board may\n          adjourn its proceedings until the final determination of a prosecution or intended\n          prosecution."
+                        },
+                        {
+                            "@id": "d2e778",
+                            "bcl:num": "3",
+                            "bcl:text": "A person is deemed for the purposes of this Act to have intended an act or\n          omission that caused injury or death for which compensation is payable under this Act even\n          if the person is, for any reason, legally incapable of having a criminal\n          intent."
+                        },
+                        {
+                            "@id": "d2e788",
+                            "bcl:num": "4",
+                            "bcl:text": "If a person is convicted of a criminal offence for an act or omission on which a\n          claim under this Act is based, proof of the conviction is, after the time for an appeal\n          has expired or if an appeal was taken, it was dismissed and no further appeal is\n          available, conclusive evidence that the offence has been committed."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e798",
+                    "bcl:marginalnote": "Interim payment",
+                    "bcl:num": "9",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e806",
+                            "bcl:num": "1",
+                            "bcl:text": "The board may, in its discretion, order interim payments to the applicant\n          if",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e815",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the applicant is in actual financial need, and"
+                                },
+                                {
+                                    "@id": "d2e824",
+                                    "bcl:num": "b",
+                                    "bcl:text": "it appears to the board that it will probably award compensation to the\n            applicant."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e834",
+                            "bcl:num": "2",
+                            "bcl:text": "If compensation is not awarded, the amount paid under this section is not, in the\n          absence of fraud or misrepresentation, recoverable from the applicant."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e844",
+                    "bcl:marginalnote": "Action for damages",
+                    "bcl:num": "10",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e852",
+                            "bcl:num": "1",
+                            "bcl:text": "If the cause of the injury or death of the victim is such that an action lies\n          against some person, the victim or immediate family member may apply for and receive\n          compensation, bring the action or do both."
+                        },
+                        {
+                            "@id": "d2e861",
+                            "bcl:num": "2",
+                            "bcl:text": "If a victim or immediate family member who brings the action referred to in\n            subsection\n            (1) and who, before judgment in or settlement of the action, receives\n          compensation under this Act, he or she must immediately notify the board of the\n          action."
+                        },
+                        {
+                            "@id": "d2e870",
+                            "bcl:num": "3",
+                            "bcl:text": "On applying to the court, the board must be added as a party to the action of\n          which it has been notified under subsection (2)."
+                        },
+                        {
+                            "@id": "d2e880",
+                            "bcl:num": "4",
+                            "bcl:text": "If an action for the injury or death of the victim has not been brought by the\n          victim or immediate family member, the board",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e889",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is subrogated in respect of the right of action of the victim or immediate\n            family member to whom payment is made under this Act, and"
+                                },
+                                {
+                                    "@id": "d2e898",
+                                    "bcl:num": "b",
+                                    "bcl:text": "may maintain the action in the name of that person or in its own\n            name."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e907",
+                            "bcl:num": "4.1",
+                            "bcl:text": "The board may not seek compensation under this section for non-pecuniary loss or\n          damage for pain, suffering, mental or emotional trauma, humiliation or inconvenience, in\n          respect of an application received by the board on or after April 16, 2002."
+                        },
+                        {
+                            "@id": "d2e916",
+                            "bcl:num": "5",
+                            "bcl:text": "If the board brings the action referred to in subsection (4), it must give notice\n          of the action to the victim or immediate family member, as the case may be."
+                        },
+                        {
+                            "@id": "d2e925",
+                            "bcl:num": "6",
+                            "bcl:text": "Neither the making of the application for nor the payment of compensation under\n          this Act restricts or impairs a right of action of the board, victim or immediate family\n          member against any person liable."
+                        },
+                        {
+                            "@id": "d2e935",
+                            "bcl:num": "7",
+                            "bcl:text": "If compensation has been paid or awarded under this Act, the amount recovered from\n          the person against whom the action referred to in subsection (1) lies must be\n          applied",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e944",
+                                    "bcl:num": "a",
+                                    "bcl:text": "first, to payment of costs, if any, including costs of bringing\n            execution,"
+                                },
+                                {
+                                    "@id": "d2e953",
+                                    "bcl:num": "b",
+                                    "bcl:text": "second, to payment to the victim or immediate family member of the amount, if\n            any, by which the amount recovered, less costs under paragraph (a), exceeds the\n            compensation paid or to be paid by the board, and"
+                                },
+                                {
+                                    "@id": "d2e962",
+                                    "bcl:num": "c",
+                                    "bcl:text": "third, to payment to the board for reimbursement of the compensation paid or to\n            be paid by it to the victim or immediate family member."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e971",
+                            "bcl:num": "8",
+                            "bcl:text": [
+                                "If the amount of",
+                                "is less than the amount of compensation paid or awarded by the board, the victim\n          or immediate family member remains entitled to retain or to be paid the amount of\n          compensation awarded by the board."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e980",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a judgment awarded by a court in an action referred to in subsection\n              (1), or"
+                                },
+                                {
+                                    "@id": "d2e990",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a settlement of a claim or an action referred to in subsection\n              (1),"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1002",
+                            "bcl:num": "9",
+                            "bcl:text": "A settlement or release does not bar the rights of the board under subsection (4)\n          unless the board has concurred in it."
+                        },
+                        {
+                            "@id": "d2e1011",
+                            "bcl:num": "10",
+                            "bcl:text": "In an action referred to in subsection (4), an award of damages is to include wages\n          and salary paid by the employer of the victim."
+                        },
+                        {
+                            "@id": "d2e1020",
+                            "bcl:num": "11",
+                            "bcl:text": "Costs may be awarded to and collected by the board in an action referred to in\n          this section, even if a salaried legal officer of the board acts as solicitor or\n          counsel."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1030",
+                    "bcl:marginalnote": "No garnishment of compensation",
+                    "bcl:num": "11",
+                    "bcl:text": "Any compensation awarded or other amount paid or payable by the board under this Act\n        is not subject to garnishment, attachment, seizure or any other legal process and the right\n        to it is not assignable."
+                },
+                {
+                    "@id": "d2e1043",
+                    "bcl:marginalnote": "Existing disability",
+                    "bcl:num": "12",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1051",
+                            "bcl:num": "1",
+                            "bcl:text": "If injury is superimposed on an already existing disability, compensation is to be\n          allowed only for the proportion of disability that exists following the injury as may\n          reasonably be attributed to the injury."
+                        },
+                        {
+                            "@id": "d2e1060",
+                            "bcl:num": "2",
+                            "bcl:text": "The measure of the disability attributable to injury is the amount of the\n          difference between the victim's disability before and disability after the occurrence of\n          the injury."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1070",
+                    "bcl:marginalnote": "Limit on compensation payable",
+                    "bcl:num": "13",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1078",
+                            "bcl:num": "1",
+                            "bcl:text": "The amount awarded by the board to be paid for injury or death of a victim must\n          not,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1087",
+                                    "bcl:num": "a",
+                                    "bcl:text": "for a lump sum payment, exceed $50\u00a0000, and"
+                                },
+                                {
+                                    "@id": "d2e1096",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96492_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Workers Compensation Act"
+                                        },
+                                        "in:doc": "Workers Compensation Amendment Act, 2002.",
+                                        "#text": "for periodic payments, exceed the amount payable to a worker or dependant under\n            sections\u00a017, 22, 23, 29 and 30 of the , R.S.B.C. 1996, c. 492, as those sections read before being amended by the"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1111",
+                            "bcl:num": "2",
+                            "bcl:text": "If both lump sum and periodic payments are awarded, one but not both may exceed\n          50% of the maximum amount that can be awarded under subsection (1) (a) or\n          (b)."
+                        },
+                        {
+                            "@id": "d2e1120",
+                            "bcl:num": "3) and (4",
+                            "bcl:text": "[Repealed 2002-56-46.]"
+                        },
+                        {
+                            "@id": "d2e1129",
+                            "bcl:num": "5",
+                            "bcl:text": "Subsections (1) and (2) do not apply to amounts awarded in respect of a death or\n          injury occurring in the circumstances referred to in section 2 (2) (b) or (c) and the\n          amounts must not be taken into account in determining maximum awards."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1139",
+                    "bcl:marginalnote": "Duration of payments to immediate family members",
+                    "bcl:num": "14",
+                    "bcl:text": "If periodic payments have been awarded under section\u00a03 they are to continue only so\n        long as, in the board's opinion, it might reasonably have been expected had the victim lived\n        he or she would have continued to contribute to the support of his or her immediate family\n        members."
+                },
+                {
+                    "@id": "d2e1151",
+                    "bcl:marginalnote": "Payment to immediate family members",
+                    "bcl:num": "15",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1159",
+                            "bcl:num": "1",
+                            "bcl:text": "If a victim or an immediate family member is confined to a penitentiary or a\n          correctional institution, the board",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1168",
+                                    "bcl:num": "a",
+                                    "bcl:text": "may cancel, withhold or suspend the payment of compensation for a period it\n            considers advisable, and"
+                                },
+                                {
+                                    "@id": "d2e1177",
+                                    "bcl:num": "b",
+                                    "bcl:text": "if the compensation is withheld or suspended, may pay the compensation or any\n            portion to his or her spouse or children, or to a trustee appointed by the\n            board."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1187",
+                            "bcl:num": "2",
+                            "bcl:text": "A trustee must expend any money paid to the trustee under subsection (1)\n          for the benefit of the victim, the spouse or children."
+                        },
+                        {
+                            "@id": "d2e1196",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": [
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02040_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Employment and\n              Assistance Act"
+                                    },
+                                    {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/02041_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Employment and Assistance for Persons with Disabilities\n            Act"
+                                    }
+                                ],
+                                "#text": "If a victim is not supporting his or her spouse and children and they are likely\n          to require income assistance under the  or disability assistance under the , or if an order has been made against the victim by a court of\n          competent jurisdiction for the support or maintenance of the spouse or children, the board\n          may pay all or part of the compensation to or for the benefit of the spouse or\n          children."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1212",
+                    "bcl:marginalnote": "Rehabilitation measures",
+                    "bcl:num": "16",
+                    "bcl:text": "In order to assist a victim to obtain work or to lessen or remove a handicap\n        resulting from the injury, the board may take the measures and make expenditures it\n        considers necessary or expedient."
+                },
+                {
+                    "@id": "d2e1224",
+                    "bcl:marginalnote": "Medical aid",
+                    "bcl:num": "17",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1232",
+                            "bcl:num": "1",
+                            "bcl:text": "In addition to the other compensation provided by this Act, if the board orders\n          periodic payments to be made, the board has authority to furnish or provide for a victim\n          medical, surgical, hospital, nursing, and other care or treatment, transportation,\n          medicines, crutches, and apparatus, including artificial members, as it considers\n          reasonably necessary at the time of the injury."
+                        },
+                        {
+                            "@id": "d2e1241",
+                            "bcl:num": "2",
+                            "bcl:text": "During the disability, to cure the injury or alleviate its effects, the board may\n          adopt rules and regulations for furnishing medical aid to a victim and for payment and the\n          board may make a daily subsistence allowance to an injured victim who under its direction,\n          is undergoing treatment at a place other than the victim's residence that he or she\n          continues to support and maintain."
+                        },
+                        {
+                            "@id": "d2e1250",
+                            "bcl:num": "3",
+                            "bcl:text": "The board may replace and repair",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1260",
+                                    "bcl:num": "a",
+                                    "bcl:text": "artificial appliances, including artificial members, damaged or broken in\n            circumstances set out in section 2 (2), or"
+                                },
+                                {
+                                    "@id": "d2e1269",
+                                    "bcl:num": "b",
+                                    "bcl:text": "clothing, eyeglasses, dentures and hearing aids broken in the same\n            circumstances, if the breakage is accompanied by objective signs of personal injury, or,\n            if there is no injury, if the crime is otherwise corroborated and the board is satisfied\n            that the victim was not at fault."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1278",
+                            "bcl:num": "4",
+                            "bcl:text": "Medical or hospital costs payable under a medical or hospital plan established\n          under any Act of Canada or of British Columbia are not payable under this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1289",
+                    "bcl:marginalnote": "Medical examination and proof of dependency",
+                    "bcl:num": "18",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1297",
+                            "bcl:num": "1",
+                            "bcl:text": "The board may require a victim who is receiving periodic payments of compensation\n          to be medically examined at a place reasonably convenient for the victim."
+                        },
+                        {
+                            "@id": "d2e1306",
+                            "bcl:num": "2",
+                            "bcl:text": "If the victim fails to attend for the examination or obstructs the medical\n          examiner",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1315",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the victim's right to compensation is suspended until the examination has taken\n            place, and"
+                                },
+                                {
+                                    "@id": "d2e1325",
+                                    "bcl:num": "b",
+                                    "bcl:text": "no compensation is payable during the period of suspension."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1334",
+                            "bcl:num": "3",
+                            "bcl:text": "The board may reduce or suspend periodic payments of compensation if the\n          victim",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1343",
+                                    "bcl:num": "a",
+                                    "bcl:text": "persists in unsanitary or injurious practices that tend to imperil or retard his\n            or her recovery, or"
+                                },
+                                {
+                                    "@id": "d2e1352",
+                                    "bcl:num": "b",
+                                    "bcl:text": "refuses to submit to medical or surgical treatment that, in the board's opinion,\n            based on medical or surgical advice, is reasonably essential to promote his or her\n            recovery."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1361",
+                            "bcl:num": "4",
+                            "bcl:text": "The board may",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1370",
+                                    "bcl:num": "a",
+                                    "bcl:text": "require proof of the existence and the physical, mental or financial condition\n            of an immediate family member receiving compensation, and"
+                                },
+                                {
+                                    "@id": "d2e1380",
+                                    "bcl:num": "b",
+                                    "bcl:text": "withhold further payments until receipt of satisfactory proof."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1390",
+                    "bcl:marginalnote": "Reports of physicians",
+                    "bcl:num": "19",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1398",
+                            "bcl:num": "1",
+                            "bcl:text": "If an application for compensation is made to the board, every physician or\n          qualified practitioner attending or consulting about the injury or alleged injury to a\n          victim must",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1407",
+                                    "bcl:num": "a",
+                                    "bcl:text": "furnish reports about the injury in a form as required by the regulations or by\n            the board,"
+                                },
+                                {
+                                    "@id": "d2e1416",
+                                    "bcl:num": "b",
+                                    "bcl:text": "furnish the first report to the board within 3\u00a0days after it is requested by the\n            board,"
+                                },
+                                {
+                                    "@id": "d2e1426",
+                                    "bcl:num": "c",
+                                    "bcl:text": "furnish a final report within 3\u00a0days after the victim is, in the opinion of the\n            physician or qualified practitioner, able to resume work and, if treatment is being\n            continued after resumption of work, furnish further adequate reports, and"
+                                },
+                                {
+                                    "@id": "d2e1435",
+                                    "bcl:num": "d",
+                                    "bcl:text": "if the physician is a specialist whose opinion is requested by the attending\n            physician, the victim, or the board, or if the physician continues to treat the victim\n            after being consulted as a specialist, furnish the first report to the board within 3\n            days after completion of consultation but, if the specialist is regularly treating the\n            victim, the specialist must submit reports as required in paragraphs (a) to (c)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1444",
+                            "bcl:num": "2",
+                            "bcl:text": "Every physician or qualified practitioner who is authorized by this Act to treat\n          an injured victim is subject to similar duties and responsibilities, and any aid furnished\n          by that person is subject to the direction, supervision and control of the\n          board."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1454",
+                    "bcl:marginalnote": "Workers' Compensation Board",
+                    "bcl:num": "20",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1462",
+                            "bcl:num": "1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/19001_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Workers Compensation Act"
+                                },
+                                "#text": "The board is charged with the administration of this Act, and has all the powers\n          that are given to it under the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e1474",
+                            "bcl:num": "2",
+                            "bcl:text": "The board has exclusive jurisdiction to inquire into, hear and determine all those\n          matters and questions of fact and law arising or required to be determined under this Act,\n          and the action or decision of the board is final and conclusive and is not open to\n          question or review in any court."
+                        },
+                        {
+                            "@id": "d2e1483",
+                            "bcl:num": "3",
+                            "bcl:text": "Proceedings by or before the board must not be restrained by injunction,\n          prohibition, or other process or proceeding in any court or be removed by certiorari or\n          otherwise into any court."
+                        },
+                        {
+                            "@id": "d2e1493",
+                            "bcl:num": "4",
+                            "bcl:text": "An action must not be maintained or brought against any governor, officer, appeal\n          commissioner or employee of the board for any act, omission or decision done or made in\n          the genuine belief that it was within the jurisdiction of the board."
+                        },
+                        {
+                            "@id": "d2e1502",
+                            "bcl:num": "5",
+                            "bcl:text": "Without limiting subsections (1) to (4), the board has exclusive jurisdiction to inquire\n          into, hear and determine any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1511",
+                                    "bcl:num": "a",
+                                    "bcl:text": "whether the victim sustained an injury;"
+                                },
+                                {
+                                    "@id": "d2e1520",
+                                    "bcl:num": "b",
+                                    "bcl:text": "whether an injury to or the death of a victim resulted from",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1529",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the commission of an offence,"
+                                        },
+                                        {
+                                            "@id": "d2e1538",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "his or her making or attempting to make an arrest of an offender or suspected\n              offender,"
+                                        },
+                                        {
+                                            "@id": "d2e1548",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "assisting a peace officer in making or attempting to make an\n              arrest,"
+                                        },
+                                        {
+                                            "@id": "d2e1557",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "preventing or attempting to prevent the commission of an offence or suspected\n              offence, or"
+                                        },
+                                        {
+                                            "@id": "d2e1566",
+                                            "bcl:num": "v",
+                                            "bcl:text": "assisting a peace officer in preventing or attempting to prevent the\n              commission of an offence or suspected offence;"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1575",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the existence and degree of disability by reason of an injury;"
+                                },
+                                {
+                                    "@id": "d2e1584",
+                                    "bcl:num": "d",
+                                    "bcl:text": "the permanence of disability by reason of an injury;"
+                                },
+                                {
+                                    "@id": "d2e1593",
+                                    "bcl:num": "e",
+                                    "bcl:text": "the degree of diminution of earning capacity by reason of an injury;"
+                                },
+                                {
+                                    "@id": "d2e1603",
+                                    "bcl:num": "f",
+                                    "bcl:text": "the existence, for this Act, of the relationship of any person to the\n            victim;"
+                                },
+                                {
+                                    "@id": "d2e1612",
+                                    "bcl:num": "g",
+                                    "bcl:text": "the existence of dependency;"
+                                },
+                                {
+                                    "@id": "d2e1621",
+                                    "bcl:num": "h",
+                                    "bcl:text": "whether any person is entitled to compensation under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1630",
+                            "bcl:num": "6",
+                            "bcl:text": "[Repealed 2001-38-32 and B.C. Reg. 160/2002.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1640",
+                    "bcl:marginalnote": "Attendance of witnesses",
+                    "bcl:num": "21",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1648",
+                            "bcl:num": "1",
+                            "bcl:text": "The board has the same powers as the Supreme Court for compelling the attendance\n          of witnesses and of examining them under oath, and compelling the production and\n          inspection of books, papers, documents and things."
+                        },
+                        {
+                            "@id": "d2e1657",
+                            "bcl:num": "2",
+                            "bcl:text": "The board may cause depositions of witnesses residing in or out of British\n          Columbia to be taken before any person appointed by the board in a similar manner to that\n          prescribed by the Rules of the Supreme Court for the taking of similar depositions in that\n          court before a commissioner."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1667",
+                    "bcl:marginalnote": "Officers of board",
+                    "bcl:num": "22",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1675",
+                            "bcl:num": "1",
+                            "bcl:text": "The board may act on the report of any if its officers, and any inquiry or\n          examination that it considers necessary to make may be made by any officer of the board or\n          other person appointed to make the inquiry or examination."
+                        },
+                        {
+                            "@id": "d2e1684",
+                            "bcl:num": "2) to (5",
+                            "bcl:text": "[Repealed 2001-38-32 and B.C. Reg. 160/2002.]"
+                        },
+                        {
+                            "@id": "d2e1693",
+                            "bcl:num": "6",
+                            "bcl:text": "A decision of the appeal division or of a panel of the appeal division is deemed\n          to be a decision of the board."
+                        },
+                        {
+                            "@id": "d2e1703",
+                            "bcl:num": "7",
+                            "bcl:text": "An appeal commissioner or officer of the board, a member of an appeal committee,\n          and every person appointed to make an inquiry or examination under this section has, for\n          the purposes of an inquiry or a review under this section, all the powers conferred upon\n          the board by section\u00a020."
+                        },
+                        {
+                            "@id": "d2e1712",
+                            "bcl:num": "8",
+                            "bcl:text": "An appeal commissioner or officer of the board, a member of an appeal committee\n          and every person appointed to make an inquiry or examination under this section has power\n          and authority",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1721",
+                                    "bcl:num": "a",
+                                    "bcl:text": "to require and take affidavits, affirmations or declarations relating to the\n            examination or inquiry,"
+                                },
+                                {
+                                    "@id": "d2e1730",
+                                    "bcl:num": "b",
+                                    "bcl:text": "to take statutory declarations, and"
+                                },
+                                {
+                                    "@id": "d2e1739",
+                                    "bcl:num": "c",
+                                    "bcl:text": "in all cases to administer oaths, affirmations and declarations and to certify\n            them."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1748",
+                            "bcl:num": "9",
+                            "bcl:text": "A person who obstructs or hinders the making of an examination or inquiry under\n          this section, or refuses to permit it to be made, commits an offence."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1758",
+                    "bcl:marginalnote": "Reconsideration by appeal division",
+                    "bcl:num": "23",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1766",
+                            "bcl:num": "1",
+                            "bcl:text": "Subject to this section, a decision of the appeal division is final and\n          conclusive."
+                        },
+                        {
+                            "@id": "d2e1775",
+                            "bcl:num": "2) and (3",
+                            "bcl:text": "[Repealed 2001-38-32 and B.C. Reg. 160/2002.]"
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1786",
+                    "bcl:marginalnote": "Reports",
+                    "bcl:num": "24",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d2e1794",
+                            "bcl:num": "1",
+                            "bcl:text": "On or before March 25 in each year, the board must make a report to the Lieutenant\n          Governor in Council of its transactions during the last preceding calendar\n          year."
+                        },
+                        {
+                            "@id": "d2e1803",
+                            "bcl:num": "2",
+                            "bcl:text": "The report must contain particulars the Lieutenant Governor in Council may\n          specify."
+                        },
+                        {
+                            "@id": "d2e1812",
+                            "bcl:num": "3",
+                            "bcl:text": "The report must be submitted by the Attorney General to the Legislature or, if it\n          is not in session, within 15\u00a0days after the opening of the next session."
+                        },
+                        {
+                            "@id": "d2e1822",
+                            "bcl:num": "4",
+                            "bcl:text": "The board is to publish and distribute information about the business transacted\n          by the board as it judges useful."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1832",
+                    "bcl:marginalnote": "Agreements with Canada",
+                    "bcl:num": "25",
+                    "bcl:text": "The government, represented by the Attorney General, with the approval of the\n        Lieutenant Governor in Council, may make agreements with Canada for the payment by Canada to\n        the government of part of the expenditures required for this Act."
+                },
+                {
+                    "@id": "d2e1844",
+                    "bcl:marginalnote": "Application of Act",
+                    "bcl:num": "26",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/01038_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Crime Victim Assistance\n            Act"
+                        },
+                        "#text": "This Act applies for compensation claims arising from an injury or death resulting\n        from an act or omission that occurs after July\u00a01,\u00a01972 and for which an application is\n        received by the board before the date section\u00a02 of the  comes into force."
+                    }
+                },
+                {
+                    "@id": "d2e1859",
+                    "bcl:marginalnote": "Power to make regulations",
+                    "bcl:num": "27",
+                    "bcl:text": "The Lieutenant Governor in Council may make regulations as follows:",
+                    "bcl:paragraph": [
+                        {
+                            "@id": "d2e1870",
+                            "bcl:num": "a",
+                            "bcl:text": "prescribing rules for applications to the board and the proceedings of the\n          board;"
+                        },
+                        {
+                            "@id": "d2e1879",
+                            "bcl:num": "b",
+                            "bcl:text": "requiring the payment of fees for any matter in the jurisdiction of the board,\n          including witness fees, and prescribing the amounts;"
+                        },
+                        {
+                            "@id": "d2e1889",
+                            "bcl:num": "c",
+                            "bcl:text": "prescribing forms for this Act and providing for their use;"
+                        },
+                        {
+                            "@id": "d2e1898",
+                            "bcl:num": "d",
+                            "bcl:text": "respecting any matter necessary or advisable to effectively carry out this\n          Act;"
+                        },
+                        {
+                            "@id": "d2e1907",
+                            "bcl:num": "e",
+                            "bcl:text": "adding or subtracting offences in the Schedule;"
+                        },
+                        {
+                            "@id": "d2e1916",
+                            "bcl:num": "f",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/19001_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Workers Compensation\n              Act"
+                                },
+                                "#text": "making any provision of the  applicable, to an extent as may be prescribed, to this\n          Act."
+                            }
+                        }
+                    ]
+                }
+            ],
+            "bcl:schedule": {
+                "@id": "d0e1981",
+                "bcl:scheduletitle": "Schedule",
+                "bcl:centertext": {
+                    "in:em": "(Section 2)"
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "@id": "d0e1992",
+                    "oasis:tgroup": {
+                        "@cols": "2",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:tbody": {
+                            "oasis:trow": [
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": {
+                                                "in:br": null,
+                                                "in:doc": {
+                                                    "in:br": null,
+                                                    "#text": "Criminal Code"
+                                                },
+                                                "#text": "Section of"
+                                            }
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "@valign": "bottom",
+                                            "oasis:line": "Description of Offence"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": {
+                                        "@colname": "c1",
+                                        "@namest": "1",
+                                        "@nameend": "2",
+                                        "@colspan": "2",
+                                        "@valign": "top",
+                                        "oasis:line": {
+                                            "in:hr": null
+                                        }
+                                    }
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "64"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Riots."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "76"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Hijacking of aircraft."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "77"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Endangering safety of aircraft in flight."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "78"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Taking offensive weapons and explosive substances on board a civilian\n                  aircraft."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "80"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Explosives where death or bodily harm results."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "81"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Intentionally causing death or bodily harm by explosive\n                  substance."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "@valign": "top",
+                                            "oasis:line": "85"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Using a firearm while committing or attempting to commit an indictable\n                  offence, or during flight after committing or attempting to commit an indictable\n                  offence."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "86"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Pointing a firearm or careless use of a firearm."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "151"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Sexual interference or sexual touching of a person under\n                  14."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "152"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Invitation to sexual touching."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "153"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Sexual exploitation of a young person."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "155"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Incest."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "180"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Common nuisance causing harm."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "215"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Failure to provide necessaries."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "218"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Abandoning child."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "220"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Causing death by criminal negligence."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "221"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Causing bodily harm by criminal negligence."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "229"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Murder."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "236"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Manslaughter."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "239"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Attempted murder."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "241"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Counselling or aiding suicide."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "244"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Causing bodily harm with intent."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "245"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Administering noxious thing."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "246"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Overcoming resistance to commission of offence."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "247"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Traps likely to cause bodily harm or death."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "248"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Interfering with transportation facilities."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "249\u00a0(1)\u00a0(b)"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Dangerous operation of vessel or towed object."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "249\u00a0(1)\u00a0(c)"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Dangerous operation of aircraft."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "251"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Operating unseaworthy vessel or unsafe aircraft."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "253"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Impaired operation of vessel."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "262"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Impeding attempt to save life."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "263"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Failure to safeguard opening in ice or excavation on land."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "264 (1)"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Criminal harassment (stalking)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "264.1 (1)"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Uttering threats."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "266"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Assault."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "267"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Assault with a weapon or causing bodily harm."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "268"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Aggravated assault."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "269"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Unlawfully causing bodily harm."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "269.1"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Torture."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "270"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Assaulting a peace officer."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "271"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Sexual assault."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "272"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Sexual assault with a weapon, threats to a third party or causing bodily\n                  harm."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "273"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Aggravated sexual assault."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "279 (1)"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Kidnapping."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "279 (2)"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Forcible confinement."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "279.1"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Hostage taking."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "280"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Abduction of person under 16."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "281"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Abduction of person under 14."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "282"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Abduction in contravention of custody order."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "283"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Abduction where no custody order."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "344"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Robbery."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "423"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Intimidation."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "430 (2)"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Mischief causing actual danger to life."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "433"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Arson."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "436"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "Causing fire resulting in loss of life."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "c1",
+                                            "oasis:line": "437"
+                                        },
+                                        {
+                                            "@colname": "c2",
+                                            "oasis:line": "False fire alarm."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

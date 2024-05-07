@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:in="http://www.qp.gov.bc.ca/2013/inline" xmlns:h="http://www.w3.org/TR/html4/" xmlns:civix="http://www.qp.gov.bc.ca/2013/civix" xmlns:bcl="http://www.gov.bc.ca/2013/bclegislation" xmlns:byl="http://www.gov.bc.ca/2015/bylaw" targetNamespace="http://www.gov.bc.ca/2015/bylaw" elementFormDefault="qualified">
+    <!-- test -->
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/bclegislation.xsd" namespace="http://www.gov.bc.ca/2013/bclegislation"/>
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/inline.xsd" namespace="http://www.qp.gov.bc.ca/2013/inline"/>
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/civix.xsd" namespace="http://www.qp.gov.bc.ca/2013/civix"/>
+    <xsd:import schemaLocation="http://standards.qp.gov.bc.ca/standards/oasis-table.xsd" namespace="http://docs.oasis-open.org/ns/oasis-exchange/table"/>
+    <xsd:import schemaLocation="http://www.w3.org/1999/xlink.xsd" namespace="http://www.w3.org/1999/xlink"/>
+    <xsd:annotation>
+        <xsd:documentation>
+            <h:h1>Bylaw Schema</h:h1>
+            <h:p>Schema used to define any nodes that are unique to
+				bylaws.</h:p>
+            <h:p>
+                Nodes in this namespace will be outside of the commonwealth
+				and provincial
+                <em>http://www.gov.bc.ca/2013/bclegislation</em>
+                standard
+				but not be unique to a single jurisdiction.
+            </h:p>
+            <h:p>If nodes are unique to a certain jurisdiction the individual jurisdictions
+				concrete schema should have the nodes added to it.</h:p>
+        </xsd:documentation>
+        <xsd:appinfo>
+            <civix:actions>
+                <civix:action name="addBylawNo">
+                    <civix:insert>
+                        <civix:scope>PreviousValid</civix:scope>
+                        <civix:content>
+                            <byl:bylawno>
+                                <CARET_MARKER/>
+                            </byl:bylawno>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addBylawTitle">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <byl:title>
+                                <CARET_MARKER/>
+                            </byl:title>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addLongTitle">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <byl:longtitle>
+                                A BYLAW TO
+                                <CARET_MARKER/>
+                            </byl:longtitle>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addExplanNote">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <byl:explannote>
+                                <byl:explantext>
+                                    <CARET_MARKER/>
+                                </byl:explantext>
+                            </byl:explannote>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addPreamble">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <byl:preamble>
+                                <byl:preambletext>
+                                    <CARET_MARKER/>
+                                </byl:preambletext>
+                            </byl:preamble>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSection">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:section id="**GENERATE_ID**">
+                                <bcl:marginalnote>
+                                    <CARET_MARKER/>
+                                </bcl:marginalnote>
+                                <bcl:num/>
+                                <bcl:text/>
+                            </bcl:section>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSubsection">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:subsection id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:subsection>
+                        </civix:content>
+                        <civix:wrapper>bcl:section</civix:wrapper>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addParagraph">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:paragraph id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:paragraph>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSubparagraph">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:subparagraph id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:subparagraph>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addClause">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:clause id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:clause>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSubClause">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:subclause id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:subclause>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addDefinitionSection">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:section id="**GENERATE_ID**">
+                                <bcl:marginalnote>Definitions</bcl:marginalnote>
+                                <bcl:num/>
+                                <bcl:text>In this bylaw:</bcl:text>
+                                <bcl:definition id="**GENERATE_ID**">
+                                    <bcl:text>
+                                        <in:term>
+                                            <CARET_MARKER/>
+                                        </in:term>
+                                    </bcl:text>
+                                </bcl:definition>
+                            </bcl:section>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addDefinitionSectionSubsection">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:section id="**GENERATE_ID**">
+                                <bcl:marginalnote>Definitions</bcl:marginalnote>
+                                <bcl:num/>
+                                <bcl:subsection id="**GENERATE_ID**">
+                                    <bcl:num>1</bcl:num>
+                                    <bcl:text>In this bylaw:</bcl:text>
+                                    <bcl:definition id="**GENERATE_ID**">
+                                        <bcl:text>
+                                            <in:term>
+                                                <CARET_MARKER/>
+                                            </in:term>
+                                        </bcl:text>
+                                    </bcl:definition>
+                                </bcl:subsection>
+                            </bcl:section>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSectionSubsection">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:section id="**GENERATE_ID**">
+                                <bcl:marginalnote>
+                                    <CARET_MARKER/>
+                                </bcl:marginalnote>
+                                <bcl:num/>
+                                <bcl:subsection id="**GENERATE_ID**">
+                                    <bcl:num>1</bcl:num>
+                                    <bcl:text/>
+                                </bcl:subsection>
+                            </bcl:section>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addDefinition">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:definition id="**GENERATE_ID**">
+                                <bcl:text>
+                                    <in:term>
+                                        <CARET_MARKER/>
+                                    </in:term>
+                                </bcl:text>
+                            </bcl:definition>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addPart">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:part id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:part>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addDivision">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:division id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:division>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addApproval">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <byl:approvals>
+                                <byl:approval>
+                                    <byl:text>
+                                        <CARET_MARKER/>
+                                    </byl:text>
+                                    <byl:approvaldate>
+                                        <byl:month/>
+                                        <byl:day/>
+                                        <byl:year/>
+                                    </byl:approvaldate>
+                                </byl:approval>
+                                <byl:approval>
+                                    <byl:text/>
+                                    <byl:approvaldate>
+                                        <byl:month/>
+                                        <byl:day/>
+                                        <byl:year/>
+                                    </byl:approvaldate>
+                                </byl:approval>
+                                <byl:approval>
+                                    <byl:text/>
+                                    <byl:approvaldate>
+                                        <byl:month/>
+                                        <byl:day/>
+                                        <byl:year/>
+                                    </byl:approvaldate>
+                                </byl:approval>
+                                <byl:approval>
+                                    <byl:text/>
+                                    <byl:approvaldate>
+                                        <byl:month/>
+                                        <byl:day/>
+                                        <byl:year/>
+                                    </byl:approvaldate>
+                                </byl:approval>
+                            </byl:approvals>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSignature">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <byl:signatureblock>
+                                <byl:signature>
+                                    <byl:name>
+                                        <CARET_MARKER/>
+                                    </byl:name>
+                                    <byl:position/>
+                                </byl:signature>
+                                <byl:signature>
+                                    <byl:name/>
+                                    <byl:position/>
+                                </byl:signature>
+                            </byl:signatureblock>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSchedule">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:schedule>
+                                <bcl:scheduletitle>
+                                    Schedule
+                                    <CARET_MARKER/>
+                                </bcl:scheduletitle>
+                            </bcl:schedule>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addScheduleTitle">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:scheduletitle>
+                                Schedule
+                                <CARET_MARKER/>
+                            </bcl:scheduletitle>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addCenterText">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:centertext>
+                                <CARET_MARKER/>
+                            </bcl:centertext>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addLeftText">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:lefttext>
+                                <CARET_MARKER/>
+                            </bcl:lefttext>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addRightText">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:righttext>
+                                <CARET_MARKER/>
+                            </bcl:righttext>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addSectionNoMargNote">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:section id="**GENERATE_ID**">
+                                <bcl:num/>
+                                <bcl:text>
+                                    <CARET_MARKER/>
+                                </bcl:text>
+                            </bcl:section>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addIndent1">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:indent1>
+                                <CARET_MARKER/>
+                            </bcl:indent1>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addIndent2">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:indent2>
+                                <CARET_MARKER/>
+                            </bcl:indent2>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addIndent3">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:indent3>
+                                <CARET_MARKER/>
+                            </bcl:indent3>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addIndent4">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:indent4>
+                                <CARET_MARKER/>
+                            </bcl:indent4>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addIndent5">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:indent5>
+                                <CARET_MARKER/>
+                            </bcl:indent5>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addForm">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:form>
+                                <bcl:formtitle>
+                                    Form
+                                    <CARET_MARKER/>
+                                </bcl:formtitle>
+                            </bcl:form>
+                        </civix:content>
+                        <civix:wrapper>bcl:schedule</civix:wrapper>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addFormTitle">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:formtitle>
+                                Form
+                                <CARET_MARKER/>
+                            </bcl:formtitle>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addHNote">
+                    <civix:insert>
+                        <civix:scope>Inline</civix:scope>
+                        <civix:content>
+                            <in:hnote>
+                                <CARET_MARKER/>
+                            </in:hnote>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="insertTable">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>${ca.bc.gov.qp.civix.municipal.action.InsertTableOperation}</civix:content>
+                    </civix:insert>
+                </civix:action>
+                <civix:action name="addEdNote">
+                    <civix:insert>
+                        <civix:scope>NextValid</civix:scope>
+                        <civix:content>
+                            <bcl:editorialnote>
+                                <CARET_MARKER/>
+                            </bcl:editorialnote>
+                        </civix:content>
+                    </civix:insert>
+                </civix:action>
+            </civix:actions>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:element name="preambletext" type="bcl:inline">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>allows byltext to move up / down / enter. civix actions on bcl:text will break all other actions</h:p>
+            </xsd:documentation>
+            <xsd:appinfo>
+                <civix:actions>
+                    <civix:action name="enter">
+                        <civix:enter/>
+                    </civix:action>
+                    <civix:action name="moveup">
+                        <civix:moveup>
+                            <civix:stop-element>keep-same</civix:stop-element>
+                        </civix:moveup>
+                    </civix:action>
+                    <civix:action name="movedown">
+                        <civix:movedown>
+                            <civix:stop-element>keep-same</civix:stop-element>
+                        </civix:movedown>
+                    </civix:action>
+                </civix:actions>
+            </xsd:appinfo>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="preamble">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>Preamble element.</h:p>
+            </xsd:documentation>
+            <xsd:appinfo>
+                <civix:actions>
+                    <civix:action name="enter">
+                        <civix:enter>
+                            <civix:content>
+                                <byl:preambletext>
+                                    <CARET_MARKER/>
+                                </byl:preambletext>
+                            </civix:content>
+                        </civix:enter>
+                    </civix:action>
+                </civix:actions>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="marginalnote" type="bcl:inline"/>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element ref="byl:preambletext"/>
+                    <xsd:element ref="bcl:paragraph"/>
+                    <xsd:element ref="bcl:hnote"/>
+                </xsd:choice>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="explannote">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element ref="byl:explantext"/>
+                    <xsd:element ref="bcl:paragraph"/>
+                    <xsd:element ref="bcl:subparagraph"/>
+                </xsd:choice>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="explantext" type="bcl:inline">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>Explan note explains intent of a new bylaw in non-legal terms.</h:p>
+            </xsd:documentation>
+            <xsd:appinfo>
+                <civix:actions>
+                    <civix:action name="enter">
+                        <civix:enter/>
+                    </civix:action>
+                </civix:actions>
+            </xsd:appinfo>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="content">
+        <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="byl:explannote" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="byl:preamble" minOccurs="0"/>
+                <xsd:element ref="bcl:subheading" minOccurs="0"/>
+                <xsd:element ref="bcl:part" minOccurs="0"/>
+                <xsd:element ref="bcl:division" minOccurs="0"/>
+                <xsd:element ref="bcl:section" minOccurs="0"/>
+                <xsd:element ref="byl:approvals" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="byl:signatureblock" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="bcl:schedule" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            <h:p>A schedule describes supplementary details appended to the bylaw.</h:p>
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element ref="bcl:editorialnote" minOccurs="0"/>
+            </xsd:choice>
+            <xsd:attribute name="toc" use="optional">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="false"/>
+                        <xsd:enumeration value="true"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <!-- Extension Types -->
+    <xsd:complexType name="string">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>Convenience type for extending the inline String type.</h:p>
+                <h:p>As attributes are added to the inline namespace they will automatically
+					propagate through any element of type bcl:string</h:p>
+                <h:p>If attributes are only relevant to BC legislation then
+					those attributes should be added here</h:p>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="bcl:string"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="inline" mixed="true">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>Convenience type for extending the inline type.</h:p>
+                <h:p>As attributes or elements are added to the inline namespace will automatically
+					propagate through any element of type byl:string</h:p>
+                <h:p>If attributes or elements are only relevant to Municipal Bylaws then
+					those nodes should be added here</h:p>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="in:_inline" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!--
+	<xsd:annotation>
+		<xsd:documentation>
+			<h:p>This complex type will be used as the default root type for each inheritting bylaw.</h:p>
+			<h:p>What this allows us to do is add civix actions at the bylaw level that will relate to the
+			entire catalogue of municipal bylaws</h:p>
+			<h:p>i.e. you would only need to add insert section here rather than in each subsequent bylaw specific
+					schema in order to get this functionality.</h:p>
+		</xsd:documentation>
+		<xsd:appinfo>
+			<civix:actions>
+				
+			</civix:actions>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="bylaw_type">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="byl:title"></xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+	-->
+    <xsd:element name="longtitle" type="byl:inline"/>
+    <xsd:element name="title" type="byl:inline"/>
+    <xsd:element name="bylawno" type="byl:inline"/>
+    <xsd:element name="amsincluded">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="amendments" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="amendment" type="byl:inline" minOccurs="1" maxOccurs="unbounded"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="lastamendeddate" minOccurs="1" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="month" type="byl:string"/>
+                            <xsd:element name="day" type="byl:string"/>
+                            <xsd:element name="year" type="byl:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="signature">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="bcl:string" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="position" type="bcl:string" minOccurs="1" maxOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="signatureblock">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <civix:actions>
+                    <civix:action name="moveup">
+                        <civix:moveup>
+                            <civix:stop-element>keep-same</civix:stop-element>
+                        </civix:moveup>
+                    </civix:action>
+                    <civix:action name="movedown">
+                        <civix:movedown>
+                            <civix:stop-element>keep-same</civix:stop-element>
+                        </civix:movedown>
+                    </civix:action>
+                </civix:actions>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="byl:signature" minOccurs="1" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="approval">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <civix:actions>
+                    <civix:action name="enter">
+                        <civix:enter/>
+                    </civix:action>
+                    <civix:action name="moveup">
+                        <civix:moveup>
+                            <civix:stop-element>keep-same</civix:stop-element>
+                        </civix:moveup>
+                    </civix:action>
+                    <civix:action name="movedown">
+                        <civix:movedown>
+                            <civix:stop-element>keep-same</civix:stop-element>
+                        </civix:movedown>
+                    </civix:action>
+                </civix:actions>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="text" type="byl:inline"/>
+                <xsd:element name="approvaldate" minOccurs="1" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="month" type="byl:string"/>
+                            <xsd:element name="day" type="byl:string"/>
+                            <xsd:element name="year" type="byl:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="approvals">
+        <xsd:annotation>
+            <xsd:documentation>
+                <h:p>Area for adding the dates that approvals were given to the bylaw at each stage.</h:p>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="byl:approval" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <!-- Cross references (inline type) -->
+    <xsd:element name="crossref" type="byl:crossref_type" substitutionGroup="in:_inline"/>
+    <xsd:complexType name="crossref_type" mixed="false">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" ref="byl:rgroup"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" use="required" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:element name="rgroup">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" ref="byl:ref"/>
+            </xsd:sequence>
+            <xsd:attribute name="capitalize" type="xsd:boolean"/>
+            <xsd:attribute name="rid" use="required" type="xsd:string"/>
+            <xsd:attribute name="prefix" type="xsd:NCName"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ref">
+        <xsd:complexType>
+            <xsd:attribute name="idref" use="required" type="xsd:string"/>
+            <xsd:attribute name="invalid" use="required" type="xsd:boolean"/>
+            <xsd:attribute name="op" type="xsd:string"/>
+            <xsd:attribute name="provision" use="required" type="xsd:NCName"/>
+            <xsd:attribute name="rgroupid" type="xsd:string"/>
+            <xsd:attribute name="value" use="required" type="xsd:NMTOKEN"/>
+            <xsd:attribute ref="xlink:href"/>
+        </xsd:complexType>
+    </xsd:element>
+    <!-- end Cross references -->
+</xsd:schema>
+<!-- QP BOTTOM OF DOC.  PLEASE KEEP AT BOTTOM OF DOCUMENT. DO NOT REMOVE OR MODIFY -->

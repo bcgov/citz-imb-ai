@@ -1,0 +1,1835 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_96313_01",
+        "act:title": "Mortgage Brokers Act",
+        "act:chapter": "313",
+        "act:yearenacted": "1996",
+        "act:currency": {
+            "act:tlcDirPath": "1325524918/96313/tlc96313_f",
+            "act:tlc": "E3tlc96313"
+        },
+        "act:content": {
+            "bcl:section": {
+                "@id": "d2e21",
+                "bcl:marginalnote": "Definitions",
+                "bcl:num": "1",
+                "bcl:text": "In this Act:",
+                "bcl:definition": [
+                    {
+                        "@id": "d1e37",
+                        "bcl:text": {
+                            "in:term": "Authority",
+                            "bcl:link": {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/19014",
+                                "@xlink:type": "locator",
+                                "in:doc": "Financial Services Authority Act"
+                            },
+                            "#text": "means the BC Financial Services Authority established under section 2 of the ;"
+                        }
+                    },
+                    {
+                        "@id": "d2e32",
+                        "bcl:text": {
+                            "in:term": "court",
+                            "#text": "means the Supreme Court;"
+                        }
+                    },
+                    {
+                        "@id": "d2e41",
+                        "bcl:text": [
+                            {
+                                "in:term": "mortgage",
+                                "#text": "includes every instrument by which"
+                            },
+                            "is, in any manner, conveyed, assigned, pledged or charged as security for the payment of money or money's worth to be reconveyed, reassigned or released on satisfaction of the debt, but does not include an agreement for sale of or a right to purchase land or an interest in land;"
+                        ],
+                        "bcl:paragraph": [
+                            {
+                                "@id": "d2e51",
+                                "bcl:num": "a",
+                                "bcl:text": "land in British Columbia, or"
+                            },
+                            {
+                                "@id": "d2e60",
+                                "bcl:num": "b",
+                                "bcl:text": "for the purposes only of paragraphs (c) and (f) of the definition of \"mortgage broker\", sections 14.1 and 17.4 and Division 3 of Part 2, land, whether or not in British Columbia,"
+                            }
+                        ]
+                    },
+                    {
+                        "@id": "d2e72",
+                        "bcl:text": {
+                            "in:term": "mortgage broker",
+                            "#text": "means a person who does any of the following:"
+                        },
+                        "bcl:paragraph": [
+                            {
+                                "@id": "d2e81",
+                                "bcl:num": "a",
+                                "bcl:text": "carries on a business of lending money secured in whole or in part by mortgages, whether the money is the mortgage broker's own or that of another person;"
+                            },
+                            {
+                                "@id": "d2e90",
+                                "bcl:num": "b",
+                                "bcl:text": "holds himself or herself out as, or by an advertisement, notice or sign indicates that he or she is, a mortgage broker;"
+                            },
+                            {
+                                "@id": "d2e100",
+                                "bcl:num": "c",
+                                "bcl:text": "carries on a business of buying and selling mortgages or agreements for sale;"
+                            },
+                            {
+                                "@id": "d2e109",
+                                "bcl:num": "d",
+                                "bcl:text": "in any one year, receives an amount of $1 000 or more in fees or other consideration, excluding legal fees for arranging mortgages for other persons;"
+                            },
+                            {
+                                "@id": "d2e118",
+                                "bcl:num": "e",
+                                "bcl:text": "during any one year, lends money on the security of 10 or more mortgages;"
+                            },
+                            {
+                                "@id": "d2e127",
+                                "bcl:num": "f",
+                                "bcl:text": "carries on a business of collecting money secured by mortgages;"
+                            }
+                        ]
+                    },
+                    {
+                        "@id": "d2e136",
+                        "bcl:text": {
+                            "in:term": "person",
+                            "#text": "includes an individual, corporation, firm, partnership, association, syndicate, any unincorporated organization and an agent of any of them;"
+                        }
+                    },
+                    {
+                        "@id": "d2e145",
+                        "bcl:text": {
+                            "in:term": "registrar",
+                            "#text": "means the Registrar of Mortgage Brokers appointed under section 1.1;"
+                        }
+                    },
+                    {
+                        "@id": "d2e155",
+                        "bcl:text": {
+                            "in:term": "submortgage broker",
+                            "#text": "means any person who, in British Columbia, actively engages in any of the things referred to in the definition of mortgage broker and is employed, either generally or in a particular case, by, or is a director or a partner of, a mortgage broker;"
+                        }
+                    },
+                    {
+                        "@id": "d2e164",
+                        "bcl:text": {
+                            "in:term": "tribunal",
+                            "bcl:link": {
+                                "@resource": "leg",
+                                "@xlink:href": "/legislation/96141_00",
+                                "@xlink:type": "locator",
+                                "in:doc": "Financial Institutions Act"
+                            },
+                            "#text": "means the Financial Services Tribunal under the ."
+                        }
+                    }
+                ]
+            },
+            "bcl:part": [
+                {
+                    "@id": "d2e177",
+                    "bcl:num": "1",
+                    "bcl:text": "Registration",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e213",
+                            "bcl:marginalnote": "Appointment of Registrar of Mortgage Brokers",
+                            "bcl:num": "1.1",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/19014",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Financial Services Authority Act"
+                                },
+                                "#text": "The board of directors of the Authority must appoint a Registrar of Mortgage Brokers in accordance with section 10 of the ."
+                            }
+                        },
+                        {
+                            "@id": "d2e186",
+                            "bcl:marginalnote": "Powers of registrar",
+                            "bcl:num": "2",
+                            "bcl:text": "The registrar has the powers, and must discharge the duties conferred or imposed on the registrar by this Act."
+                        },
+                        {
+                            "@id": "d2e198",
+                            "bcl:marginalnote": "Register",
+                            "bcl:num": "3",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e206",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The registrar must keep a register to be called The Mortgage Brokers Register, in which the registrar must enter",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e215",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the name of every mortgage broker and submortgage broker registered under this Act,"
+                                        },
+                                        {
+                                            "@id": "d2e224",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the name under which the business is carried on, and"
+                                        },
+                                        {
+                                            "@id": "d2e234",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the address, or the addresses if more than one, at or from which the business is carried on."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e243",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An application for registration as a mortgage broker or submortgage broker under this Act must be made to the registrar in a form and containing information the registrar specifies, together with payment of the prescribed fee."
+                                },
+                                {
+                                    "@id": "d2e252",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An applicant must state in the application an address for service in British Columbia."
+                                },
+                                {
+                                    "@id": "d2e261",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Except as otherwise provided in this Act, all notices under this Act are sufficiently served for all purposes if delivered or sent by mail to the latest address for service as stated in the application."
+                                },
+                                {
+                                    "@id": "d2e270",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A mortgage broker or submortgage broker must notify the registrar promptly after a change of that person's business address or address for service."
+                                },
+                                {
+                                    "@id": "d2e279",
+                                    "bcl:num": "6",
+                                    "bcl:text": "A mortgage broker must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e289",
+                                            "bcl:num": "a",
+                                            "bcl:text": "promptly after registration, deliver to the registrar a list of the names and addresses of submortgage brokers employed by the mortgage broker, and"
+                                        },
+                                        {
+                                            "@id": "d2e298",
+                                            "bcl:num": "b",
+                                            "bcl:text": "during the continuance of the mortgage broker's registration promptly notify the registrar of the name and address of each new submortgage broker employed or of each submortgage broker who ceases to be employed."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e307",
+                                    "bcl:num": "7",
+                                    "bcl:text": "If a submortgage broker ceases to be employed, the notice must also state the reason why the submortgage broker ceases to be employed by the mortgage broker."
+                                },
+                                {
+                                    "@id": "d2e316",
+                                    "bcl:num": "8",
+                                    "bcl:text": "The termination of the employment of a submortgage broker with a mortgage broker operates as a suspension of the registration of the submortgage broker until",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e325",
+                                            "bcl:num": "a",
+                                            "bcl:text": "notice in writing has been received by the registrar from another person registered as a mortgage broker of the employment of the submortgage broker by that other person, and"
+                                        },
+                                        {
+                                            "@id": "d2e334",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the employment has been approved in writing by the registrar."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e344",
+                            "bcl:marginalnote": "Granting of registration by registrar",
+                            "bcl:num": "4",
+                            "bcl:text": "The registrar",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e355",
+                                    "bcl:num": "a",
+                                    "bcl:text": "must grant registration or renewal of registration to an applicant if in the opinion of the registrar the applicant is suitable for registration and the proposed registration is not objectionable,"
+                                },
+                                {
+                                    "@id": "d2e364",
+                                    "bcl:num": "b",
+                                    "bcl:text": "must not refuse to grant or refuse to renew registration without giving the applicant an opportunity to be heard, and"
+                                },
+                                {
+                                    "@id": "d2e374",
+                                    "bcl:num": "c",
+                                    "bcl:text": "may, in the registrar's discretion, attach to the registration or renewal of registration terms, conditions or restrictions the registrar considers necessary."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e385",
+                            "bcl:marginalnote": "Power of registrar to investigate",
+                            "bcl:num": "5",
+                            "bcl:text": "The registrar may, and on receipt of a sworn complaint must, investigate any matter or thing arising out of this Act or the regulations."
+                        },
+                        {
+                            "@id": "d2e397",
+                            "bcl:marginalnote": "Procedure and powers of registrar for inquiry",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e405",
+                                    "bcl:num": "1",
+                                    "bcl:text": "[Repealed 1998-7-2.]"
+                                },
+                                {
+                                    "@id": "d2e414",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For sections 5 and 8, the registrar may investigate, inquire into and examine",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e423",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the affairs of the person in respect of whom the investigation is being made and any books, papers, documents, correspondence, communications, negotiations, transactions, investigations, loans, borrowings and payments to, by, on behalf of or in relation to or connected with the person and any property, assets or things owned, acquired or alienated in whole or in part by that person or by any person acting on behalf of or as agent for that person, and"
+                                        },
+                                        {
+                                            "@id": "d2e433",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the assets at any time held, the liabilities, debts, undertakings and obligations at any time existing, the financial or other conditions at any time prevailing in or in relation to or in connection with the person, and the relationship that may at any time exist or have existed between the person and any other person by reason of investments, commissions promised, secured or paid, interests held or acquired, the loaning or borrowing of money, securities or other property, the transfer, negotiation or holding of securities, interlocking directorates, common control, undue influence or control or any other relationship."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e442",
+                                    "bcl:num": "2.1",
+                                    "bcl:text": "The registrar, by order may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e451",
+                                            "bcl:num": "a",
+                                            "bcl:text": "appoint a person to conduct an investigation, examination and inquiry referred to in subsection (2) or to assist the registrar in conducting the investigation, examination and inquiry, and"
+                                        },
+                                        {
+                                            "@id": "d2e460",
+                                            "bcl:num": "b",
+                                            "bcl:text": "specify terms of reference to be followed by the person appointed."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e469",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The registrar under this section has the same power to summon and enforce the attendance of witnesses and compel them to give evidence on oath or otherwise, and to produce records, property, assets or things, as the court has for the trial of civil actions."
+                                },
+                                {
+                                    "@id": "d2e478",
+                                    "bcl:num": "4",
+                                    "bcl:text": "For the purposes of subsection (3), the failure or refusal of a person to attend, to answer questions or to produce the records, property, assets or things in the person's custody or possession makes the person liable to be committed for contempt by the court as if in breach of an order or judgment of the court."
+                                },
+                                {
+                                    "@id": "d2e488",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A bank or an officer or employee of a bank is exempt from the operation of subsections\u00a0(3) and\u00a0(4)."
+                                },
+                                {
+                                    "@id": "d2e497",
+                                    "bcl:num": "6",
+                                    "bcl:text": "A person giving evidence under this Act may be represented by counsel."
+                                },
+                                {
+                                    "@id": "d2e506",
+                                    "bcl:num": "7",
+                                    "bcl:text": "On an inquiry under this Act and on being satisfied that it is necessary and in the public interest, the registrar, or a person appointed under subsection (2.1), may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e515",
+                                            "bcl:num": "a",
+                                            "bcl:text": "enter the business premises of a person registered or required to be registered under this Act as a mortgage broker or submortgage broker during business hours for the purpose of carrying out an inspection, examination or analysis of records, property, assets or things that are used in the business of the mortgage broker or of the mortgage broker by whom the submortgage broker is employed and that may reasonably relate to the subject matter of the inquiry,"
+                                        },
+                                        {
+                                            "@id": "d2e524",
+                                            "bcl:num": "b",
+                                            "bcl:text": "require the production of the records, property, assets or things referred to in paragraph (a) and to inspect, examine or analyze them, and"
+                                        },
+                                        {
+                                            "@id": "d2e533",
+                                            "bcl:num": "c",
+                                            "bcl:text": "on giving a receipt, remove the records, property, assets or things inspected, examined or analyzed under paragraph (a) or (b) for the purpose of further inspection, examination or analysis."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e543",
+                                    "bcl:num": "7.1",
+                                    "bcl:text": [
+                                        "On application by the registrar and on being satisfied by information on oath that there are reasonable and probable grounds to believe that there may be anything that may reasonably relate to the subject matter of an inquiry under this Act",
+                                        "a justice may make an order authorizing the registrar or a person designated by the registrar and named in the order"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e552",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in a business premise, or"
+                                        },
+                                        {
+                                            "@id": "d2e561",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in a building, receptacle or place,"
+                                        },
+                                        {
+                                            "@id": "d2e573",
+                                            "bcl:num": "c",
+                                            "bcl:text": "to enter into that business premise, building, receptacle or place at any reasonable time, for the purpose of carrying out an inspection, examination or analysis of records, property, assets or things that may reasonably relate to the subject matter of the inquiry,"
+                                        },
+                                        {
+                                            "@id": "d2e582",
+                                            "bcl:num": "d",
+                                            "bcl:text": "to require the production of the records, property, assets or things referred to in paragraph (c) and to inspect, examine or analyze them, and"
+                                        },
+                                        {
+                                            "@id": "d2e592",
+                                            "bcl:num": "e",
+                                            "bcl:text": "on giving a receipt, to remove the records, property, assets or things referred to in paragraph (c) for the purpose of further inspection, examination or analysis."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e601",
+                                    "bcl:num": "7.2",
+                                    "bcl:text": "An application for an order under subsection (7.1) must be made in the prescribed manner and, unless a justice otherwise directs, may be",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e610",
+                                            "bcl:num": "a",
+                                            "bcl:text": "made without notice, and"
+                                        },
+                                        {
+                                            "@id": "d2e619",
+                                            "bcl:num": "b",
+                                            "bcl:text": "heard in the absence of the public."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e628",
+                                    "bcl:num": "7.3",
+                                    "bcl:text": "Inspection, examination or analysis under this section must be completed as soon as practicable and the records, property, assets or things must be returned promptly to the person who produced them."
+                                },
+                                {
+                                    "@id": "d2e637",
+                                    "bcl:num": "7.4",
+                                    "bcl:text": [
+                                        "On an inspection, examination or analysis under this section, the registrar, a person appointed under subsection (2.1) or named in an order under subsection (7.1) or a person acting under the direction of any of them may",
+                                        "and does not incur any liability because of doing so."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e647",
+                                            "bcl:num": "a",
+                                            "bcl:text": "mark the records, property, assets or things for identification, or"
+                                        },
+                                        {
+                                            "@id": "d2e656",
+                                            "bcl:num": "b",
+                                            "bcl:text": "use or alter the records, property, assets or things to the extent reasonably necessary to facilitate the inspection, examination or analysis,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e668",
+                                    "bcl:num": "7.5",
+                                    "bcl:text": [
+                                        "A person must not",
+                                        "reasonably required under subsection (7) or (7.1) by the registrar, a person appointed under subsection (2.1) or a person authorized under subsection (7.1)."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e677",
+                                            "bcl:num": "a",
+                                            "bcl:text": "withhold, destroy, conceal or refuse to give any information, or"
+                                        },
+                                        {
+                                            "@id": "d2e686",
+                                            "bcl:num": "b",
+                                            "bcl:text": "withhold, destroy, conceal or refuse to produce any record, property, asset or thing"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e699",
+                                    "bcl:num": "8",
+                                    "bcl:text": "On an inquiry under this Act, the registrar may appoint an accountant or other expert to examine records, property, assets or things of the person whose affairs are being investigated."
+                                },
+                                {
+                                    "@id": "d2e708",
+                                    "bcl:num": "9",
+                                    "bcl:text": "If the inquiry discloses a contravention of this Act or the regulations or orders or directions of the registrar, the registrar may order the costs to be paid by the person."
+                                },
+                                {
+                                    "@id": "d2e717",
+                                    "bcl:num": "10",
+                                    "bcl:text": "The registrar may file a copy of the order made under subsection (9) with the registrar of the court, and the order is then deemed to be a judgment of the court."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e727",
+                            "bcl:marginalnote": "Freezing of trust funds",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e735",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "If",
+                                        "the registrar may, in writing or by telegram"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e744",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the registrar is about to examine, or is examining, or has examined a person under this Act,"
+                                        },
+                                        {
+                                            "@id": "d2e753",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the registrar is about to make or has made a direction, decision, order or ruling suspending or cancelling the registration of any person under this Act, or"
+                                        },
+                                        {
+                                            "@id": "d2e763",
+                                            "bcl:num": "c",
+                                            "bcl:text": "criminal proceedings or proceedings in respect of a contravention of this Act, or the regulations, or the orders or directions of the registrar, are about to be, or have been, instituted,"
+                                        },
+                                        {
+                                            "@id": "d2e775",
+                                            "bcl:num": "d",
+                                            "bcl:text": "direct any person having on deposit or under control or for safekeeping any funds or securities of the person referred to in paragraph (a), (b) or (c) to hold the funds or securities,"
+                                        },
+                                        {
+                                            "@id": "d2e784",
+                                            "bcl:num": "e",
+                                            "bcl:text": "direct the person referred to in paragraph (a), (b) or (c) to refrain from withdrawing any such funds or securities from any other person having any of them on deposit, under control or for safekeeping, and"
+                                        },
+                                        {
+                                            "@id": "d2e793",
+                                            "bcl:num": "f",
+                                            "bcl:text": "direct the person referred to in paragraph (a), (b) or (c) to hold all funds or securities of clients or others in the person's possession or control in trust for any interim receiver, custodian, trustee, receiver, receiver and manager or liquidator lawfully appointed."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e802",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The registrar may, in writing, revoke a direction under subsection (1) or consent to release any particular fund or security from the direction."
+                                },
+                                {
+                                    "@id": "d2e812",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A direction under subsection (1) does not apply to funds or securities in a stock exchange clearing house or to securities in process of transfer by a transfer agent unless the direction expressly states."
+                                },
+                                {
+                                    "@id": "d2e821",
+                                    "bcl:num": "4",
+                                    "bcl:text": "In the case of a bank, loan or trust company a direction under subsection (1) applies only to the offices, branches or agencies of it named in the direction."
+                                },
+                                {
+                                    "@id": "d2e830",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a person in receipt of a direction given under subsection (1) is in doubt respecting the application of the direction to any funds or security or, if a claim is made by a person not named in the direction, the person may apply to the court, which may direct the disposition of the funds or security and may make an order as to costs as seems just."
+                                },
+                                {
+                                    "@id": "d2e839",
+                                    "bcl:num": "6",
+                                    "bcl:text": "In any of the circumstances mentioned in subsection (1) (a), (b) or (c), the registrar may make and file in the office of a land title district a certificate that proceedings have been, or are about to be, taken."
+                                },
+                                {
+                                    "@id": "d2e848",
+                                    "bcl:num": "7",
+                                    "bcl:text": "A certificate under subsection (6), if registered, has the same effect as the registration of a certificate of pending litigation, except that the registrar may, in writing, revoke or modify the certificate."
+                                },
+                                {
+                                    "@id": "d2e857",
+                                    "bcl:num": "8",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96418_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Securities Act"
+                                        },
+                                        "#text": "In any of the circumstances mentioned in subsection (1) (a), (b) or (c), the registrar may apply to the court for the appointment of a receiver, or a receiver and manager, or a trustee of the property of the person, and in such cases section 179.1 of the  applies."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e870",
+                            "bcl:marginalnote": "Registrar's orders \u2014 registration and compliance",
+                            "bcl:num": "8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e878",
+                                    "bcl:num": "1",
+                                    "bcl:text": [
+                                        "After giving a person registered under this Act an opportunity to be heard, the registrar may do one or more of the following:",
+                                        "if, in the opinion of the registrar, any of the following paragraphs apply:"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e887",
+                                            "bcl:num": "a",
+                                            "bcl:text": "suspend the person's registration;"
+                                        },
+                                        {
+                                            "@id": "d2e896",
+                                            "bcl:num": "b",
+                                            "bcl:text": "cancel the person's registration;"
+                                        },
+                                        {
+                                            "@id": "d2e906",
+                                            "bcl:num": "c",
+                                            "bcl:text": "order the person to cease a specified activity;"
+                                        },
+                                        {
+                                            "@id": "d2e915",
+                                            "bcl:num": "d",
+                                            "bcl:text": "order the person to carry out specified actions that the registrar considers necessary to remedy the situation,"
+                                        },
+                                        {
+                                            "@id": "d2e927",
+                                            "bcl:num": "e",
+                                            "bcl:text": "the person would be disentitled to registration if the person were an applicant under section 4;"
+                                        },
+                                        {
+                                            "@id": "d2e936",
+                                            "bcl:num": "f",
+                                            "bcl:text": "the person is in breach of this Act, the regulations or a condition of registration;"
+                                        },
+                                        {
+                                            "@id": "d2e945",
+                                            "bcl:num": "g",
+                                            "bcl:text": "the person is a party to a mortgage transaction that is harsh and unconscionable or otherwise inequitable;"
+                                        },
+                                        {
+                                            "@id": "d2e955",
+                                            "bcl:num": "h",
+                                            "bcl:text": "the person has made a statement in a record filed or provided under this Act that, at the time and in the light of the circumstances under which the statement was made, was false or misleading with respect to a material fact or that omitted to state a material fact, the omission of which made the statement false or misleading;"
+                                        },
+                                        {
+                                            "@id": "d2e964",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the person has conducted or is conducting business in a manner that is otherwise prejudicial to the public interest;"
+                                        },
+                                        {
+                                            "@id": "d2e973",
+                                            "bcl:num": "j",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04002_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Business Practices and Consumer Protection Act"
+                                                },
+                                                "#text": "the person is in breach of a provision of Part 2 or 5 of the  prescribed under section 9.1 (2)."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e985",
+                                    "bcl:num": "1.1",
+                                    "bcl:text": "After giving a person registered under this Act an opportunity to be heard, the registrar may order the person to pay an administrative penalty of not more than $50 000 if, in the opinion of the registrar any of paragraphs (f) to (i) of subsection (1) apply."
+                                },
+                                {
+                                    "@id": "d2e994",
+                                    "bcl:num": "1.2",
+                                    "bcl:text": [
+                                        "After giving a person who was formerly registered under this Act an opportunity to be heard, the registrar may do one or both of the following:",
+                                        "if, in the opinion of the registrar, any of paragraphs (f) to (i) of subsection (1) applied to the person while the person was registered."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1003",
+                                            "bcl:num": "a",
+                                            "bcl:text": "order the person to carry out specified actions that the registrar considers necessary to remedy the situation;"
+                                        },
+                                        {
+                                            "@id": "d2e1013",
+                                            "bcl:num": "b",
+                                            "bcl:text": "order the person to pay an administrative penalty of not more than $50 000,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1025",
+                                    "bcl:num": "1.3",
+                                    "bcl:text": [
+                                        "After giving a person registered under this Act an opportunity to be heard, the registrar may do one or more of the following:",
+                                        "if the person"
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1034",
+                                            "bcl:num": "a",
+                                            "bcl:text": "suspend the person's registration;"
+                                        },
+                                        {
+                                            "@id": "d2e1043",
+                                            "bcl:num": "b",
+                                            "bcl:text": "cancel the person's registration;"
+                                        },
+                                        {
+                                            "@id": "d2e1052",
+                                            "bcl:num": "c",
+                                            "bcl:text": "order the person to cease a specified activity;"
+                                        },
+                                        {
+                                            "@id": "d2e1062",
+                                            "bcl:num": "d",
+                                            "bcl:text": "order the person to carry out specified actions that the registrar considers necessary to remedy the situation,"
+                                        },
+                                        {
+                                            "@id": "d2e1074",
+                                            "bcl:num": "e",
+                                            "bcl:text": "has been convicted of an offence in Canada or another jurisdiction arising from business, a transaction or a course of conduct related to mortgages, mortgage brokerage, real estate, insurance or securities, or"
+                                        },
+                                        {
+                                            "@id": "d2e1083",
+                                            "bcl:num": "f",
+                                            "bcl:text": "has been found by a regulator or court in Canada or another jurisdiction to have contravened the laws of the jurisdiction respecting mortgages, mortgage brokerage, real estate, insurance or securities."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1092",
+                                    "bcl:num": "1.4",
+                                    "bcl:text": [
+                                        "After giving a person an opportunity to be heard, the registrar may do one or more of the following:",
+                                        "if, in the opinion of the registrar, the person was or is carrying on business as a mortgage broker or submortgage broker without being registered as required by this Act."
+                                    ],
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1101",
+                                            "bcl:num": "a",
+                                            "bcl:text": "order the person to cease a specified activity;"
+                                        },
+                                        {
+                                            "@id": "d2e1111",
+                                            "bcl:num": "b",
+                                            "bcl:text": "order the person to carry out specified actions that the registrar considers necessary to remedy the situation;"
+                                        },
+                                        {
+                                            "@id": "d2e1120",
+                                            "bcl:num": "c",
+                                            "bcl:text": "order the person to pay an administrative penalty of not more than $50 000,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1132",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the length of time that would be required to give a person an opportunity to be heard under subsection (1), (1.2), (1.3) or (1.4) would, in the registrar's opinion, be prejudicial to the public interest, the registrar may, without giving the person an opportunity to be heard, suspend a registration under subsection (1) (a) or (1.3) (a) or make an order under subsection (1) (c) or (d), (1.2) (a), (1.3) (c) or (d) or (1.4) (a) or (b)."
+                                },
+                                {
+                                    "@id": "d2e1141",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If under subsection (2) the registrar suspends registration or makes an order without giving a person an opportunity to be heard, the registrar must promptly send written notification of the suspension or order to the person and to the tribunal."
+                                },
+                                {
+                                    "@id": "d2e1150",
+                                    "bcl:num": "4",
+                                    "bcl:text": "[Repealed 2003-51-37.]"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1160",
+                            "bcl:marginalnote": "Administrative penalties \u2014 enforcement",
+                            "bcl:num": "8.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1168",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The registrar may file in a Supreme Court registry an order under section 8 by filing in the registry a copy of the order certified as a true copy by the registrar."
+                                },
+                                {
+                                    "@id": "d2e1177",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An order of the registrar filed under subsection (1) has the same force and effect, and all proceedings may be taken on the order, as if it were an order of the Supreme Court."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1187",
+                            "bcl:marginalnote": "Appeal to tribunal",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1195",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96141_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Financial Institutions Act"
+                                        },
+                                        "#text": "A person affected by a direction, decision or order of the registrar under this Act may appeal it to the tribunal, and, unless otherwise provided for in this Act, sections 242.2 and 242.3 of the  apply."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1207",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": [
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96141_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Financial Institutions Act"
+                                            },
+                                            {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96141_00",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Financial Institutions Act"
+                                            }
+                                        ],
+                                        "#text": "Despite section 242.2 (2) of the , an appeal under subsection\u00a0(1) of this section operates as a stay unless an order is made under section\u00a0242.2\u00a0(10)\u00a0(a) of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1222",
+                                    "bcl:num": "3",
+                                    "bcl:text": "In respect of an appeal taken from a suspension of registration or an order made under section 8 (2), the following provisions do not apply:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1232",
+                                            "bcl:num": "a",
+                                            "bcl:text": "subsection (2) of this section;"
+                                        },
+                                        {
+                                            "@id": "d2e1241",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96141_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Financial Institutions Act"
+                                                },
+                                                "#text": "section 242.2 (10) (a) of the ."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1255",
+                            "bcl:marginalnote": {
+                                "in:doc": "Business Practices and Consumer Protection Act",
+                                "#text": "\u2014 disclosure of the cost of consumer credit"
+                            },
+                            "bcl:num": "9.1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1266",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "director",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04002_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Business Practices and Consumer Protection Act"
+                                        },
+                                        "#text": "In this section,  has the same meaning as in the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1281",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04002_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Business Practices and Consumer Protection Act"
+                                        },
+                                        "#text": "For the purposes of this section, the Lieutenant Governor in Council may prescribe provisions of Part 2, except Division 3, and Part 5 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e1293",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation made under subsection (2) may also",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1303",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04002_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Business Practices and Consumer Protection Act"
+                                                },
+                                                "#text": "identify certain rights and powers, including rights and powers in relation to inspections, inquiries and enforcement, and rights and powers to impose enforcement remedies and penalties, that the registrar or director may exercise under one or more provisions of this Act and Part 10 of the ,"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1315",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04002_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Business Practices and Consumer Protection Act"
+                                                },
+                                                "#text": "prescribe which of the rights and powers under paragraph (a), if any, the registrar or director may exercise in relation to a prescribed provision of Part 2 or 5 of the , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1327",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04002_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Business Practices and Consumer Protection Act"
+                                                },
+                                                "#text": "apply, in whole or in part, one or more provisions of this Act and Part 10 of the  to any exercise by the registrar or director of a right or power that the registrar or director would not, without the regulation referred to in paragraph (b), otherwise be entitled to exercise."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1339",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the Lieutenant Governor in Council makes a regulation under subsection (2),",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1348",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": [
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/04002_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Business Practices and Consumer Protection Act"
+                                                    },
+                                                    {
+                                                        "@resource": "leg",
+                                                        "@xlink:href": "/legislation/04002_00",
+                                                        "@xlink:type": "locator",
+                                                        "in:doc": "Business Practices and Consumer Protection Act"
+                                                    }
+                                                ],
+                                                "#text": "the registrar and director each have and may exercise, in relation to the prescribed provisions of Parts 2 and 5 of the , the rights and powers, if any, prescribed for them under subsection (3) and, without limiting this, the registrar or director, as the case may be, may exercise the rights and powers of the registrar under sections 8 and 8.1 of this Act in relation to any person, registered under this Act, who contravenes a prescribed provision of Part 2 or 5 of the , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1363",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04002_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Business Practices and Consumer Protection Act"
+                                                },
+                                                "#text": "Part 13 of the  applies in respect of the contravention of a prescribed provision of Part 2 or 5 of that Act."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1376",
+                                    "bcl:num": "5",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/04002_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Business Practices and Consumer Protection Act"
+                                        },
+                                        "#text": "Nothing in this section affects the rights and powers that the director may exercise in relation to a provision of Part 2 or 5 of the  that is not prescribed under subsection (2)."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1389",
+                            "bcl:marginalnote": "Certificate of registrar",
+                            "bcl:num": "10",
+                            "bcl:text": "A certificate purporting to be signed by the registrar and certifying as to any matter of record in the office of the registrar or the date on which facts first came to the registrar's knowledge for the purposes of section 22 (7), is admissible in evidence in an action or proceeding in any court, or in a matter before any board, tribunal or other body, as proof of the matter certified in it, without proof of the office or signature of the registrar."
+                        },
+                        {
+                            "@id": "d2e1401",
+                            "bcl:marginalnote": "Nonapplication of Act",
+                            "bcl:num": "11",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1409",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The registration provisions of this Act do not apply to any of the following while acting as mortgage brokers or submortgage brokers under their proper names:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1418",
+                                            "bcl:num": "a",
+                                            "bcl:text": "insurance companies;"
+                                        },
+                                        {
+                                            "@id": "d2e1427",
+                                            "bcl:num": "b",
+                                            "bcl:text": "savings institutions;"
+                                        },
+                                        {
+                                            "@id": "d2e1437",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a member of the Law Society of British Columbia entitled to practise as a solicitor in British Columbia if the loan transaction is made in the course of and as part of the member's practice;"
+                                        },
+                                        {
+                                            "@id": "d2e1446",
+                                            "bcl:num": "d",
+                                            "bcl:text": "any person acting for the government or for an agency of the government;"
+                                        },
+                                        {
+                                            "@id": "d2e1455",
+                                            "bcl:num": "e",
+                                            "bcl:text": "a liquidator, receiver, trustee in bankruptcy or a person acting under the authority of any court or an executor or trustee acting under the terms of a will or marriage settlement."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1464",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The registration provisions of this Act do not apply to any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1473",
+                                            "bcl:num": "a",
+                                            "bcl:text": "an employee, or director, of a person exempted from registration under subsection\u00a0(1)\u00a0(a) or\u00a0(b) or paragraph (b) of this subsection;"
+                                        },
+                                        {
+                                            "@id": "d2e1482",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a person lending money, directly or indirectly, on the security of land to provide housing for the person's employees;"
+                                        },
+                                        {
+                                            "@id": "d2e1492",
+                                            "bcl:num": "c",
+                                            "bcl:text": "any other person or class of persons exempted from registration by the registrar."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1502",
+                            "bcl:marginalnote": "Repealed",
+                            "bcl:num": "12",
+                            "bcl:text": "[Repealed 1998-7-5.]"
+                        },
+                        {
+                            "@id": "d2e1514",
+                            "bcl:marginalnote": "Effect of failure to register",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1522",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A mortgage is not rendered void, voidable or unenforceable, solely because of the failure of any person to register under this Act, or because of any defect or irregularity in an application for registration, or renewal of registration."
+                                },
+                                {
+                                    "@id": "d2e1531",
+                                    "bcl:num": "2",
+                                    "bcl:text": "This section is retroactive to January 1, 1972 to the extent necessary to give it full force and effect as and from that date."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1541",
+                            "bcl:marginalnote": "False statements",
+                            "bcl:num": "14",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e1549",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A mortgage broker or submortgage broker must not make any false, misleading or deceptive statement in any advertisement, circular, pamphlet or other similar material."
+                                },
+                                {
+                                    "@id": "d2e1558",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A mortgage broker must publish the name under which he or she is registered in every advertisement, circular, pamphlet or other similar material used in connection with his or her business."
+                                },
+                                {
+                                    "@id": "d2e1567",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If a mortgage broker or submortgage broker in the opinion of the registrar does any of the things mentioned in subsection (1) or fails to do any of the things mentioned in subsection (2), the registrar may order the person to stop using the advertisement, circular, pamphlet or other similar material."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1578",
+                            "bcl:marginalnote": "Requirements for administration agreements",
+                            "bcl:num": "14.1",
+                            "bcl:text": "A mortgage broker must not administer, or arrange for a person to administer, a mortgage on behalf of one or more persons who have an interest in the mortgage unless the mortgage broker has a written agreement with them that",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d2e1589",
+                                    "bcl:num": "a",
+                                    "bcl:text": "contains the full agreement of the parties respecting",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1598",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the remuneration of the mortgage broker or any other person for all services relating to the administration of the mortgage, and"
+                                        },
+                                        {
+                                            "@id": "d2e1608",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "other expenses and costs that are related to the mortgage,"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1617",
+                                    "bcl:num": "b",
+                                    "bcl:text": "specifies the extent of the responsibilities of the mortgage broker, of any other person receiving remuneration for services relating to administration of the mortgage and of each of the other parties to the agreement for decisions respecting",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d2e1626",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the collection of money under the mortgage,"
+                                        },
+                                        {
+                                            "@id": "d2e1635",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "prepayment of principal under the mortgage,"
+                                        },
+                                        {
+                                            "@id": "d2e1644",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "discharges and partial discharges of the mortgage on satisfaction of indebtedness under it, and"
+                                        },
+                                        {
+                                            "@id": "d2e1653",
+                                            "bcl:num": "iv",
+                                            "bcl:text": "the commencement or continuation of enforcement proceedings in the event of default under the mortgage, and"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1663",
+                                    "bcl:num": "c",
+                                    "bcl:text": "makes provision for any other prescribed matters."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e1673",
+                    "bcl:num": "2",
+                    "bcl:text": "Disclosure",
+                    "bcl:division": [
+                        {
+                            "@id": "d2e1682",
+                            "bcl:num": "1",
+                            "bcl:text": "Application",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1694",
+                                    "bcl:marginalnote": "Repealed",
+                                    "bcl:num": "15",
+                                    "bcl:text": "[Repealed 2004-2-222.]"
+                                },
+                                {
+                                    "@id": "d2e1706",
+                                    "bcl:marginalnote": "Disclosure to borrowers",
+                                    "bcl:num": "15.01",
+                                    "bcl:text": "The Lieutenant Governor in Council may prescribe one or more mortgage transactions or classes of mortgage transactions for the purposes of this section and may, for each prescribed mortgage transaction or each mortgage transaction of a prescribed class of mortgage transactions, prescribe",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1717",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04002_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Business Practices and Consumer Protection Act"
+                                                },
+                                                "#text": "the provisions of Part 5 of the  that apply to that mortgage transaction, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d2e1729",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/04002_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Business Practices and Consumer Protection Act"
+                                                },
+                                                "#text": "the person who, in relation to that mortgage transaction, must comply with, and who is otherwise subject to, the provisions of Part 5 of the  in relation to that mortgage transaction."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1742",
+                                    "bcl:marginalnote": "Not in force",
+                                    "bcl:num": "15.1",
+                                    "bcl:text": "[Not in force.]"
+                                },
+                                {
+                                    "@id": "d2e1755",
+                                    "bcl:marginalnote": "Disclosure statement not provided or defective",
+                                    "bcl:num": "15.2",
+                                    "bcl:text": "Except as otherwise provided in this Part, a mortgage is not rendered void, voidable or unenforceable, because of",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e1766",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a failure to provide a disclosure statement under section\u00a017.3\u00a0or\u00a017.4 or an information statement under section\u00a017.1, or"
+                                        },
+                                        {
+                                            "@id": "d2e1775",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a defect, omission or irregularity in a disclosure statement or information statement."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1785",
+                                    "bcl:marginalnote": "Exclusion agreement of no effect",
+                                    "bcl:num": "15.3",
+                                    "bcl:text": "An agreement excluding or purporting to exclude one or more provisions of this Part has no effect."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1797",
+                            "bcl:num": "2",
+                            "bcl:section": {
+                                "@id": "d2e1803",
+                                "bcl:marginalnote": "Repealed",
+                                "bcl:num": "16-17",
+                                "bcl:text": "[Repealed 2004-2-226.]"
+                            }
+                        },
+                        {
+                            "@id": "d2e1815",
+                            "bcl:num": "3",
+                            "bcl:text": "Disclosure to Investors and Lenders",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1827",
+                                    "bcl:marginalnote": "Prior disclosure",
+                                    "bcl:num": "17.1",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1835",
+                                            "bcl:num": "1",
+                                            "bcl:text": [
+                                                "A mortgage broker who",
+                                                "must provide to the other person a written information statement that meets the requirements of subsection (3)."
+                                            ],
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1844",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "arranges a mortgage in which another person is to be the mortgagee,"
+                                                },
+                                                {
+                                                    "@id": "d2e1853",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "arranges the sale of a mortgagee's interest in a mortgage from one person to another, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1863",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "sells the mortgage broker's own interest as mortgagee under a mortgage to another person,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1875",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A mortgage broker must provide the information statement under subsection (1) to the other person",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1884",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "if the funds are paid into trust, on or before release of the funds from trust at the direction of the other person, or"
+                                                },
+                                                {
+                                                    "@id": "d2e1893",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "if the funds are not paid into trust, on or before the advancement of funds by the other person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1902",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The information statement referred to in subsection (1) must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e1912",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "be in the prescribed form, include the prescribed contents and be accompanied by any documents that are prescribed,"
+                                                },
+                                                {
+                                                    "@id": "d2e1921",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "be dated and signed by the mortgage broker,"
+                                                },
+                                                {
+                                                    "@id": "d2e1930",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "contain disclosure that is true, plain and not misleading of the matters in the prescribed contents referred to in paragraph (a), and"
+                                                },
+                                                {
+                                                    "@id": "d2e1939",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "have printed or stamped in conspicuous type on its first page the following words:",
+                                                    "bcl:subparagraph": {
+                                                        "@id": "d1e1883",
+                                                        "bcl:text": {
+                                                            "in:doc": "Mortgage Brokers Act",
+                                                            "#text": "\"Neither the Registrar of Mortgage Brokers nor any other authority of the government of the Province of British Columbia has in any way approved the merits of the matters dealt with in this information statement. This information statement has not been filed with the Registrar of Mortgage Brokers and the registrar has not determined whether or not it complies with Part\u00a02 of the .\""
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e1954",
+                                            "bcl:num": "4",
+                                            "bcl:text": "Despite any applicable agreement, the person who in a transaction referred to in subsection (1) is the intended mortgagee or purchaser of the mortgage, as the case may be, is not obligated to advance funds under that transaction unless the mortgage broker complies with subsections (1) and (2)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e1965",
+                                    "bcl:marginalnote": "Retention and filing of information statements",
+                                    "bcl:num": "17.2",
+                                    "bcl:text": "A mortgage broker required to provide an information statement under section\u00a017.1 must retain a copy of the information statement for a period of at least 7\u00a0years."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e1977",
+                            "bcl:num": "4",
+                            "bcl:text": "Conflict of Interest",
+                            "bcl:section": [
+                                {
+                                    "@id": "d2e1989",
+                                    "bcl:marginalnote": "Conflict of interest \u2014 disclosure to borrowers for mortgages on land in B.C.",
+                                    "bcl:num": "17.3",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e1997",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Every mortgage broker who acts in a mortgage transaction in which there is an interest as described in subsection (2) (a) must, within the prescribed time, provide to every person who is a borrower under a mortgage in that transaction a written disclosure statement that meets the requirements of subsection (2)."
+                                        },
+                                        {
+                                            "@id": "d2e2006",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The disclosure statement referred to in subsection (1) must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e2015",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "disclose any direct or indirect interest the mortgage broker or any associate or related party of the mortgage broker has or may acquire in the transaction,"
+                                                },
+                                                {
+                                                    "@id": "d2e2025",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "include the prescribed contents and be accompanied by any documents that are prescribed,"
+                                                },
+                                                {
+                                                    "@id": "d2e2034",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "be dated and signed by the mortgage broker, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2043",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "contain disclosure that is true, plain and not misleading of the matters in the prescribed contents referred to in paragraph (b)."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2053",
+                                    "bcl:marginalnote": "Conflict of interest \u2014 disclosure to lenders for mortgages on land in B.C. or elsewhere",
+                                    "bcl:num": "17.4",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d2e2061",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Every mortgage broker who acts in a mortgage transaction in which there is an interest as described in subsection (2) (a) must, within the prescribed time, provide to every person who is a lender under a mortgage in that transaction a written disclosure statement that meets the requirements of subsection (2)."
+                                        },
+                                        {
+                                            "@id": "d2e2070",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The disclosure statement referred to in subsection (1) must",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d2e2079",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "disclose any direct or indirect interest the mortgage broker or any associate or related party of the mortgage broker has or may acquire in the transaction,"
+                                                },
+                                                {
+                                                    "@id": "d2e2089",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "include the prescribed contents and be accompanied by any documents that are prescribed,"
+                                                },
+                                                {
+                                                    "@id": "d2e2098",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "be dated and signed by the mortgage broker, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2107",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "contain disclosure that is true, plain and not misleading of the matters in the prescribed contents referred to in paragraph (b)."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2117",
+                                    "bcl:marginalnote": "Retention and filing of disclosure statements",
+                                    "bcl:num": "17.5",
+                                    "bcl:text": "A mortgage broker required to provide a disclosure statement under section\u00a017.3 or\u00a017.4 must retain a copy of the disclosure statement for a period of at least 7\u00a0years."
+                                },
+                                {
+                                    "@id": "d2e2129",
+                                    "bcl:marginalnote": "Repealed",
+                                    "bcl:num": "18-19",
+                                    "bcl:text": "[Repealed 1998-7-16.]"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d2e2142",
+                    "bcl:num": "3",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d2e2151",
+                            "bcl:marginalnote": "Personal liability protection",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e2402",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "in:term": "protected individual",
+                                        "#text": "In this section,  means an individual who is or was any of the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2413",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the registrar;"
+                                        },
+                                        {
+                                            "@id": "d1e2422",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an individual acting on behalf of or under the direction of the registrar."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2432",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subject to subsection (3), no legal proceeding for damages lies or may be commenced or maintained against a protected individual because of anything done or omitted",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2440",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the exercise or intended exercise of any power under this Act, or"
+                                        },
+                                        {
+                                            "@id": "d1e2449",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the performance or intended performance of any duty under this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2459",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Subsection (2) does not apply to a protected individual in relation to anything done or omitted in bad faith."
+                                },
+                                {
+                                    "@id": "d1e2469",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Subsection (2) does not absolve the Authority from vicarious liability arising out of anything done or omitted by a protected individual for which the Authority would be vicariously liable if this section were not in force."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2163",
+                            "bcl:marginalnote": "Offences",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2171",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Unless exempted under section 11, a person must not do any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2180",
+                                            "bcl:num": "a",
+                                            "bcl:text": "carry on business as a mortgage broker or submortgage broker unless the person is registered under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2189",
+                                            "bcl:num": "b",
+                                            "bcl:text": "carry on business as a mortgage broker otherwise than in the person's registered name or elsewhere than at or from the person's registered address;"
+                                        },
+                                        {
+                                            "@id": "d2e2199",
+                                            "bcl:num": "c",
+                                            "bcl:text": "advertise or in any other way indicate that the person is a mortgage broker or submortgage broker other than under the registered name of the mortgage broker;"
+                                        },
+                                        {
+                                            "@id": "d2e2208",
+                                            "bcl:num": "d",
+                                            "bcl:text": "employ as a submortgage broker any person not registered under this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2217",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A mortgage broker must not make or cause to be made any representation in writing that the mortgage broker is registered under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2227",
+                            "bcl:marginalnote": "Penalties",
+                            "bcl:num": "22",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2235",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person commits an offence who",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2244",
+                                            "bcl:num": "a",
+                                            "bcl:text": "contravenes section 6 (7.5), 14 (1) or (2), 17.1 (1) or (2), 17.3\u00a0(1), 17.4\u00a0(1) or\u00a021\u00a0(1)\u00a0(a) or\u00a0(d),"
+                                        },
+                                        {
+                                            "@id": "d2e2253",
+                                            "bcl:num": "b",
+                                            "bcl:text": "contravenes section 17.2, 17.5 or 21\u00a0(1)\u00a0(b) or\u00a0(c) or\u00a0(2),"
+                                        },
+                                        {
+                                            "@id": "d2e2263",
+                                            "bcl:num": "c",
+                                            "bcl:text": "contravenes a direction of the registrar under section 7 (1) or an order of the registrar under section 14 (3), or"
+                                        },
+                                        {
+                                            "@id": "d2e2272",
+                                            "bcl:num": "d",
+                                            "bcl:text": "makes a statement in a record filed or provided under this Act that, at the time and in the light of the circumstances under which the statement is made, is false or misleading with respect to a material fact or that omits to state a material fact, the omission of which makes the statement false or misleading."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2281",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person who commits an offence under subsection (1) (a), (c) or (d) is liable",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2290",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the case of a corporation, on a first conviction to a fine of not more than $100\u00a0000 and on each subsequent conviction to a fine of not more than $200\u00a0000, and"
+                                        },
+                                        {
+                                            "@id": "d2e2299",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the case of an individual",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2308",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "on a first conviction, to a fine of not more than $100\u00a0000 or to imprisonment for not more than 2\u00a0years or to both, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2318",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "on each subsequent conviction, to a fine of not more than $200 000 or to imprisonment for not more than 2\u00a0years or to both."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2327",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person who commits an offence under subsection (1) (b) is liable",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2336",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the case of a corporation, to a fine of not more than $5 000, and"
+                                        },
+                                        {
+                                            "@id": "d2e2345",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the case of an individual, to a fine of not more than $2 000."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2354",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If a corporation commits an offence under this Act, an officer or director of the corporation who authorizes, permits or acquiesces in the offence commits the same offence whether or not the corporation is convicted of the offence."
+                                },
+                                {
+                                    "@id": "d2e2363",
+                                    "bcl:num": "5",
+                                    "bcl:text": "In addition to the penalties provided in this section, the registrar may take any other action or proceeding against the person or corporation provided by law."
+                                },
+                                {
+                                    "@id": "d2e2373",
+                                    "bcl:num": "6",
+                                    "bcl:text": "In proceedings for an offence under this Act, it is a defence if the person charged proves that the commission of the offence was due to a mistake of fact, or to an accident, and that the person took all reasonable precautions and exercised all due diligence to avoid the commission of the offence by himself, herself or itself or any person under his, her or its control."
+                                },
+                                {
+                                    "@id": "d2e2382",
+                                    "bcl:num": "7",
+                                    "bcl:text": "A proceeding under this Act may not be commenced more than 2\u00a0years after the facts on which the proceeding is based first came to the knowledge of the registrar."
+                                },
+                                {
+                                    "@id": "d2e2391",
+                                    "bcl:num": "8",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "Section 5 of the  does not apply to this Act or to the regulations."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2404",
+                            "bcl:marginalnote": "Power to make regulations",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d2e2412",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\u00a041 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d2e2424",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2433",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for each category of registration, respecting applications for registration and renewal of registration;"
+                                        },
+                                        {
+                                            "@id": "d2e2443",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing fees for registration or renewal of registration as a mortgage broker that may differ",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2452",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "for different categories of registration, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2461",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "according to the number of addresses at or from which the business of the mortgage broker is carried on;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2470",
+                                            "bcl:num": "b.1",
+                                            "bcl:text": "prescribing fees for registration or renewal of registration as a submortgage broker that may differ for different categories of registration;"
+                                        },
+                                        {
+                                            "@id": "d2e2479",
+                                            "bcl:num": "b.2",
+                                            "bcl:text": "prescribing fees for amendment, on application by a mortgage broker or submortgage broker, of the register kept under section 3;"
+                                        },
+                                        {
+                                            "@id": "d2e2488",
+                                            "bcl:num": "b.3",
+                                            "bcl:text": "prescribing fees for reinstatement under section 3 (8) of the registration of a submortgage broker;"
+                                        },
+                                        {
+                                            "@id": "d2e2498",
+                                            "bcl:num": "b.4",
+                                            "bcl:text": "prescribing fees respecting the late filing of renewals of registration and of financial information required under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2507",
+                                            "bcl:num": "c",
+                                            "bcl:text": "respecting registration and renewal of registration under this Act including, but not limited to, prescribing",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d2e2516",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "categories for persons for purposes of registration and otherwise,"
+                                                },
+                                                {
+                                                    "@id": "d2e2525",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the duration of registration in each category and determining different periods of duration of registration for different categories of registrants,"
+                                                },
+                                                {
+                                                    "@id": "d2e2534",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the manner of allocating persons to categories, and permitting the registrar to make the allocations,"
+                                                },
+                                                {
+                                                    "@id": "d2e2543",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "requirements for, and limitations and conditions of, registration, renewal of registration and continuing registration of mortgage brokers, that may differ according to the categories of registration, including but not limited to requirements and conditions respecting bonding of registrants, errors and omissions insurance to be maintained by registrants, the establishment and maintenance of trust accounts and capital and liquidity requirements, and"
+                                                },
+                                                {
+                                                    "@id": "d2e2553",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": "standards of conduct to be met by registrants or registrants in categories of registrants and practices to be carried out by registrants or registrants in categories of registrants;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d2e2562",
+                                            "bcl:num": "d",
+                                            "bcl:text": "[Repealed 1998-7-18.]"
+                                        },
+                                        {
+                                            "@id": "d2e2571",
+                                            "bcl:num": "e",
+                                            "bcl:text": "prescribing the amount of brokerage or other fees;"
+                                        },
+                                        {
+                                            "@id": "d2e2580",
+                                            "bcl:num": "f",
+                                            "bcl:text": "defining words or expressions not defined in this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2589",
+                                            "bcl:num": "g",
+                                            "bcl:text": "respecting any matter necessary or advisable to carry out the intent and purpose of this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2598",
+                                            "bcl:num": "h",
+                                            "bcl:text": "prescribing the form and content of disclosure statements under sections 17.3 and 17.4 and information statements under section\u00a017.1;"
+                                        },
+                                        {
+                                            "@id": "d2e2608",
+                                            "bcl:num": "h.1",
+                                            "bcl:text": "prescribing the time within which disclosure statements under sections\u00a017.3\u00a0and\u00a017.4 must be provided;"
+                                        },
+                                        {
+                                            "@id": "d2e2617",
+                                            "bcl:num": "h.2",
+                                            "bcl:text": "exempting prescribed classes of mortgages from the application of section\u00a014.1 or one or more provisions of Part\u00a02;"
+                                        },
+                                        {
+                                            "@id": "d2e2626",
+                                            "bcl:num": "i",
+                                            "bcl:text": "exempting persons and classes of persons from all or any of this Act or the regulations with respect to specified transactions or classes of transactions;"
+                                        },
+                                        {
+                                            "@id": "d2e2635",
+                                            "bcl:num": "j",
+                                            "bcl:text": "prescribing the practice and procedure of a hearing under section 8 and of inquiries, investigations and examinations under this Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d2e2644",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The registrar may make regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d2e2653",
+                                            "bcl:num": "a",
+                                            "bcl:text": "prescribing and requiring the forms for registration under this Act;"
+                                        },
+                                        {
+                                            "@id": "d2e2663",
+                                            "bcl:num": "b",
+                                            "bcl:text": "prescribing the forms to be used in carrying on the business of a mortgage broker or by persons dealing with mortgage brokers;"
+                                        },
+                                        {
+                                            "@id": "d2e2672",
+                                            "bcl:num": "c",
+                                            "bcl:text": "designating the persons required to use the forms prescribed;"
+                                        },
+                                        {
+                                            "@id": "d2e2681",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing the limitations and conditions under which the prescribed forms are to be used."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d2e2691",
+                            "bcl:marginalnote": "Power of registrar to permit variations from prescribed forms",
+                            "bcl:num": "24",
+                            "bcl:text": "The registrar may permit variations from forms prescribed under this Act if, in the registrar's opinion, to do so would not be contrary to the public interest."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

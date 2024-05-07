@@ -1,0 +1,1365 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_14002_01",
+        "act:title": "Missing Persons Act",
+        "act:chapter": "2",
+        "act:yearenacted": "2014",
+        "act:assentedto": "March 24, 2014",
+        "act:currency": {
+            "act:tlcDirPath": "1325524918/14002/tlc14002",
+            "act:tlc": "E3tlc14002"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d1e23",
+                    "bcl:num": "1",
+                    "bcl:text": "Definitions",
+                    "bcl:section": {
+                        "@id": "d1e31",
+                        "bcl:marginalnote": "Definitions",
+                        "bcl:num": "1",
+                        "bcl:text": "In this Act:",
+                        "bcl:definition": [
+                            {
+                                "@id": "d1e42",
+                                "bcl:text": {
+                                    "in:term": "access",
+                                    "#text": "means"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e49",
+                                        "bcl:num": "a",
+                                        "bcl:text": "permitting a member of a police force to examine a record, or"
+                                    },
+                                    {
+                                        "@id": "d1e58",
+                                        "bcl:num": "b",
+                                        "bcl:text": "providing a member of a police force with a copy of a record if requested by\n              the member;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e68",
+                                "bcl:text": {
+                                    "in:term": "emergency demand for records",
+                                    "#text": "means a demand referred to in\n            section 13 of this Act;"
+                                }
+                            },
+                            {
+                                "@id": "d1e77",
+                                "bcl:text": {
+                                    "in:term": "justice",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96379_01",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Provincial Court Act"
+                                    },
+                                    "#text": "means a judge or a judicial justice as defined in the\n              ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e89",
+                                "bcl:text": {
+                                    "in:term": "missing person",
+                                    "#text": "means an individual whose whereabouts are\n            unknown despite reasonable efforts to locate the individual and"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e96",
+                                        "bcl:num": "a",
+                                        "bcl:text": "who has not been in contact with those persons who would likely be in contact\n              with the individual, or"
+                                    },
+                                    {
+                                        "@id": "d1e105",
+                                        "bcl:num": "b",
+                                        "bcl:text": "whose safety and welfare are feared for given",
+                                        "bcl:subparagraph": [
+                                            {
+                                                "@id": "d1e113",
+                                                "bcl:num": "i",
+                                                "bcl:text": "the individual's age,"
+                                            },
+                                            {
+                                                "@id": "d1e122",
+                                                "bcl:num": "ii",
+                                                "bcl:text": "the individual's physical or mental capabilities, or"
+                                            },
+                                            {
+                                                "@id": "d1e131",
+                                                "bcl:num": "iii",
+                                                "bcl:text": "the circumstances surrounding the individual's absence;"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e142",
+                                "bcl:text": {
+                                    "in:term": "missing person investigation",
+                                    "#text": "means an investigation by a\n            police force into the whereabouts of a missing person;"
+                                }
+                            },
+                            {
+                                "@id": "d1e150",
+                                "bcl:text": {
+                                    "in:term": "person",
+                                    "#text": "includes a corporation, partnership, party, public\n            body or unincorporated association, and the personal or other legal representatives of a\n            person to whom the context can apply according to law;"
+                                }
+                            },
+                            {
+                                "@id": "d1e158",
+                                "bcl:text": {
+                                    "in:term": "person at risk",
+                                    "#text": "means an individual assessed, in accordance\n            with the regulations, to be at risk;"
+                                }
+                            },
+                            {
+                                "@id": "d1e166",
+                                "bcl:text": {
+                                    "in:term": "police force",
+                                    "#text": "means"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e173",
+                                        "bcl:num": "a",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96367_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Police\n                Act"
+                                            },
+                                            "#text": "the provincial police force as defined in the ,"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d1e186",
+                                        "bcl:num": "b",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96367_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Police\n                Act"
+                                            },
+                                            "#text": "a municipal police department as defined in the , or"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d1e199",
+                                        "bcl:num": "c",
+                                        "bcl:text": "any prescribed entity;"
+                                    }
+                                ]
+                            },
+                            {
+                                "@id": "d1e210",
+                                "bcl:text": {
+                                    "in:term": "public body",
+                                    "bcl:link": {
+                                        "@resource": "leg",
+                                        "@xlink:href": "/legislation/96165_00",
+                                        "@xlink:type": "locator",
+                                        "in:doc": "Freedom\n                of Information and Protection of Privacy Act"
+                                    },
+                                    "#text": "means a public body as defined in the ;"
+                                }
+                            },
+                            {
+                                "@id": "d1e222",
+                                "bcl:text": {
+                                    "in:term": "vulnerable person",
+                                    "#text": "means an individual"
+                                },
+                                "bcl:paragraph": [
+                                    {
+                                        "@id": "d1e229",
+                                        "bcl:num": "a",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96349_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Patients Property\n                  Act"
+                                            },
+                                            "#text": "for whom a committee has been appointed under the ,"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d1e242",
+                                        "bcl:num": "b",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96405_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Representation\n                  Agreement Act"
+                                            },
+                                            "#text": "for whom a representation agreement under the  is in effect, or"
+                                        }
+                                    },
+                                    {
+                                        "@id": "d1e255",
+                                        "bcl:num": "c",
+                                        "bcl:text": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/96006_01",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Adult Guardianship Act"
+                                            },
+                                            "#text": "who is the subject of a support and assistance plan under section 53 or 56 of\n              the ."
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "d1e271",
+                    "bcl:num": "2",
+                    "bcl:text": {
+                        "in:br": null,
+                        "#text": "Orders for Records, Search Orders and Emergency Demands for Records"
+                    },
+                    "bcl:division": [
+                        {
+                            "@id": "d1e281",
+                            "bcl:num": "1",
+                            "bcl:text": "General",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e289",
+                                    "bcl:marginalnote": {
+                                        "in:br": null,
+                                        "#text": "When application for order and emergency demand for records may\n            be made"
+                                    },
+                                    "bcl:num": "2",
+                                    "bcl:text": "If a police force is conducting a missing person investigation, a member of the\n            police force may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e302",
+                                            "bcl:num": "a",
+                                            "bcl:text": "apply to a justice for an order under this Part, or"
+                                        },
+                                        {
+                                            "@id": "d1e311",
+                                            "bcl:num": "b",
+                                            "bcl:text": "make an emergency demand for records."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e321",
+                                    "bcl:marginalnote": "How to make application for order",
+                                    "bcl:num": "3",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e329",
+                                            "bcl:num": "1",
+                                            "bcl:text": "An application for an order under this Part",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e337",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "may be made without notice, other than an application for an order under\n                section\u00a016, and"
+                                                },
+                                                {
+                                                    "@id": "d1e346",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "must be made",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e354",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "on information under oath, and"
+                                                        },
+                                                        {
+                                                            "@id": "d1e363",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "in the prescribed form and manner, if applicable."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e374",
+                                            "bcl:num": "2",
+                                            "bcl:text": "An application for an order under section 16 must be made on notice to the\n              person served with the emergency demand for records."
+                                        },
+                                        {
+                                            "@id": "d1e383",
+                                            "bcl:num": "3",
+                                            "bcl:text": "An order under this Part must be served in accordance with the\n              regulations."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e393",
+                                    "bcl:marginalnote": "How to make emergency demand for records",
+                                    "bcl:num": "4",
+                                    "bcl:text": "An emergency demand for records must be",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e404",
+                                            "bcl:num": "a",
+                                            "bcl:text": "made in the prescribed form, and"
+                                        },
+                                        {
+                                            "@id": "d1e413",
+                                            "bcl:num": "b",
+                                            "bcl:text": "served in accordance with the regulations."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e424",
+                                    "bcl:marginalnote": "Privileged information",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Nothing in this Act compels the disclosure of any information or records that\n            are subject to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e435",
+                                            "bcl:num": "a",
+                                            "bcl:text": "solicitor-client privilege, or"
+                                        },
+                                        {
+                                            "@id": "d1e444",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any prescribed privilege."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e455",
+                            "bcl:num": "2",
+                            "bcl:text": {
+                                "in:br": null,
+                                "#text": "Missing Person Record Access Orders and Third Party Record Access\n          Orders"
+                            },
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e465",
+                                    "bcl:marginalnote": "Missing person record access order",
+                                    "bcl:num": "6",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e473",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A member of a police force may apply for an order requiring a person to give\n              access to a record set out in section 9 in respect of a missing person if the member\n              has reasonable grounds to believe that the record",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e481",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "may assist the police force in locating the missing person, and"
+                                                },
+                                                {
+                                                    "@id": "d1e490",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "is in the possession or under the control of the person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e500",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A justice may make an order under this section if the justice is satisfied\n              that there are reasonable grounds to believe that the record",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e508",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "may assist the police force in locating the missing person, and"
+                                                },
+                                                {
+                                                    "@id": "d1e517",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "is in the possession or under the control of the person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e527",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A justice may impose any of the following that the justice considers\n              appropriate:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e535",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "restrictions or limits on access to a record specified in an order under\n                this section;"
+                                                },
+                                                {
+                                                    "@id": "d1e544",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "terms and conditions on an order under this section."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e555",
+                                    "bcl:marginalnote": "Third party record access order \u2014 minor or vulnerable\n            person",
+                                    "bcl:num": "7",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e563",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Subject to subsection (2), if a missing person is a minor or a vulnerable\n              person, a member of a police force may apply for an order requiring a person to give\n              access to a record set out in section 9 in respect of a third party if the member has\n              reasonable grounds to believe that",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e571",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the missing person",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e579",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "may be in the company of the third party, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e588",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "was last seen in the company of the third party,"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e598",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the record may assist the police force in locating the missing person,\n                and"
+                                                },
+                                                {
+                                                    "@id": "d1e607",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the record is in the possession or under the control of the\n                person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e617",
+                                            "bcl:num": "2",
+                                            "bcl:text": "Before applying for an order requiring a person to give access to a record in\n              respect of a third party referred to in subsection (1) (a) (ii), a member of a police\n              force must make reasonable efforts to obtain the consent of the third\n              party."
+                                        },
+                                        {
+                                            "@id": "d1e626",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A justice may make an order under this section if the justice is satisfied\n              that",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e634",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the member made reasonable efforts to obtain the third party's consent, if\n                applicable,"
+                                                },
+                                                {
+                                                    "@id": "d1e643",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "there are reasonable grounds to believe that the missing person",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e651",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "may be in the company of the third party, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e660",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "was last seen in the company of the third party,"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e670",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "there are reasonable grounds to believe that the record may assist the\n                police force in locating the missing person, and"
+                                                },
+                                                {
+                                                    "@id": "d1e680",
+                                                    "bcl:num": "d",
+                                                    "bcl:text": "there are reasonable grounds to believe that the record is in the possession\n                or under the control of the person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e691",
+                                            "bcl:num": "4",
+                                            "bcl:text": "A justice may impose any of the following that the justice considers\n              appropriate:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e699",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "restrictions or limits on access to a record specified in an order under\n                this section;"
+                                                },
+                                                {
+                                                    "@id": "d1e708",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "terms and conditions on an order under this section."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e719",
+                                    "bcl:marginalnote": {
+                                        "in:br": null,
+                                        "#text": "Obligation to comply with missing person record access order and\n            third party record access order"
+                                    },
+                                    "bcl:num": "8",
+                                    "bcl:text": "A person against whom an order is made under section 6 or 7 must, within the\n            time specified in the order,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e732",
+                                            "bcl:num": "a",
+                                            "bcl:text": "give access to the records specified in the order, and"
+                                        },
+                                        {
+                                            "@id": "d1e741",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the person is unable to locate a record specified in the order, provide\n              members of the police force with a description of the efforts made by the person to\n              locate that record."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e752",
+                                    "bcl:marginalnote": {
+                                        "in:br": null,
+                                        "#text": "Records subject to missing person record access order and third\n            party record access order"
+                                    },
+                                    "bcl:num": "9",
+                                    "bcl:text": "The following records in respect of a missing person or a third party, as\n            applicable, may be specified in an order under section 6 or 7:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e765",
+                                            "bcl:num": "a",
+                                            "bcl:text": "records containing contact information;"
+                                        },
+                                        {
+                                            "@id": "d1e774",
+                                            "bcl:num": "b",
+                                            "bcl:text": "records containing identification information, including a physical\n              description and any distinguishing marks;"
+                                        },
+                                        {
+                                            "@id": "d1e784",
+                                            "bcl:num": "c",
+                                            "bcl:text": "telephone and other electronic communication records including, without\n              limitation,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e792",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "records related to signals from a wireless device that may indicate the\n                location of the wireless device,"
+                                                },
+                                                {
+                                                    "@id": "d1e801",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "cellular telephone records, and"
+                                                },
+                                                {
+                                                    "@id": "d1e810",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "text messaging records;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e820",
+                                            "bcl:num": "d",
+                                            "bcl:text": "internet browsing history records;"
+                                        },
+                                        {
+                                            "@id": "d1e829",
+                                            "bcl:num": "e",
+                                            "bcl:text": "global positioning system tracking records;"
+                                        },
+                                        {
+                                            "@id": "d1e838",
+                                            "bcl:num": "f",
+                                            "bcl:text": "photographs;"
+                                        },
+                                        {
+                                            "@id": "d1e847",
+                                            "bcl:num": "g",
+                                            "bcl:text": "video records, including closed-circuit television footage;"
+                                        },
+                                        {
+                                            "@id": "d1e856",
+                                            "bcl:num": "h",
+                                            "bcl:text": "records from a school, university or other educational institution;"
+                                        },
+                                        {
+                                            "@id": "d1e866",
+                                            "bcl:num": "i",
+                                            "bcl:text": "records containing travel information;"
+                                        },
+                                        {
+                                            "@id": "d1e875",
+                                            "bcl:num": "j",
+                                            "bcl:text": "records containing accommodation information;"
+                                        },
+                                        {
+                                            "@id": "d1e884",
+                                            "bcl:num": "k",
+                                            "bcl:text": "records containing employment information;"
+                                        },
+                                        {
+                                            "@id": "d1e893",
+                                            "bcl:num": "l",
+                                            "bcl:text": "records containing health information;"
+                                        },
+                                        {
+                                            "@id": "d1e902",
+                                            "bcl:num": "m",
+                                            "bcl:text": "records containing financial information;"
+                                        },
+                                        {
+                                            "@id": "d1e911",
+                                            "bcl:num": "n",
+                                            "bcl:text": "any other records that the justice considers appropriate;"
+                                        },
+                                        {
+                                            "@id": "d1e921",
+                                            "bcl:num": "o",
+                                            "bcl:text": "any prescribed records."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e931",
+                                    "bcl:marginalnote": "Third party record access order \u2014 person at risk",
+                                    "bcl:num": "10",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e939",
+                                            "bcl:num": "1",
+                                            "bcl:text": "If a missing person is a person at risk, a member of a police force may apply\n              for and a justice may make an order under section 7."
+                                        },
+                                        {
+                                            "@id": "d1e948",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A person against whom an order is made under subsection (1) must, within the\n              time specified in the order,",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e956",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "give access to the records specified in the order, and"
+                                                },
+                                                {
+                                                    "@id": "d1e965",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "if the person is unable to locate a record specified in the order, provide\n                members of the police force with a description of the efforts made by the person to\n                locate that record."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e975",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The records set out in section 9 in respect of a third party may be specified\n              in an order under subsection (1)."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e986",
+                            "bcl:num": "3",
+                            "bcl:text": "Search Orders",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e994",
+                                    "bcl:marginalnote": "Search order \u2014 minor or vulnerable person",
+                                    "bcl:num": "11",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1002",
+                                            "bcl:num": "1",
+                                            "bcl:text": "If a missing person is a minor or a vulnerable person, a member of a police\n              force may apply for an order authorizing members of the police force to enter, by\n              force if necessary, a private dwelling or other premises or land and search for the\n              missing person if the member has reasonable grounds to believe that the missing person\n              may be located there."
+                                        },
+                                        {
+                                            "@id": "d1e1011",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A justice may make an order under this section authorizing members of a police\n              force to enter, by force if necessary, a private dwelling or other premises or land\n              and search for a missing person if the justice is satisfied that there are reasonable\n              grounds to believe that the missing person may be located there."
+                                        },
+                                        {
+                                            "@id": "d1e1020",
+                                            "bcl:num": "3",
+                                            "bcl:text": "A justice may impose any terms and conditions on an order under this section\n              that the justice considers appropriate."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1030",
+                                    "bcl:marginalnote": "Search order \u2014 person at risk",
+                                    "bcl:num": "12",
+                                    "bcl:text": "If a missing person is a person at risk, a member of a police force may apply\n            for and a justice may make an order under section 11."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1044",
+                            "bcl:num": "4",
+                            "bcl:text": "Emergency Demands for Records",
+                            "bcl:section": [
+                                {
+                                    "@id": "d1e1052",
+                                    "bcl:marginalnote": "Emergency demand for records",
+                                    "bcl:num": "13",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1060",
+                                            "bcl:num": "1",
+                                            "bcl:text": "A member of a police force may make an emergency demand for records requiring\n              a person to give access to a record set out in section 15 if the member has reasonable\n              grounds to believe that",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1068",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the time required for applying for an order under section 6 may result\n                in",
+                                                    "bcl:subparagraph": [
+                                                        {
+                                                            "@id": "d1e1076",
+                                                            "bcl:num": "i",
+                                                            "bcl:text": "serious bodily harm to or the death of a missing person, or"
+                                                        },
+                                                        {
+                                                            "@id": "d1e1085",
+                                                            "bcl:num": "ii",
+                                                            "bcl:text": "destruction of the record,"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "@id": "d1e1095",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the record may assist the police force in locating the missing person,\n                and"
+                                                },
+                                                {
+                                                    "@id": "d1e1104",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "the record is in the possession or under the control of the\n                person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1114",
+                                            "bcl:num": "2",
+                                            "bcl:text": "If a member of a police force serves a demand under this section on a person,\n              the member must, as soon as practicable, file a written report in the prescribed form\n              and manner with the officer in charge that sets out the circumstances in which the\n              demand was made."
+                                        },
+                                        {
+                                            "@id": "d1e1123",
+                                            "bcl:num": "3",
+                                            "bcl:text": {
+                                                "in:term": "officer in charge",
+                                                "#text": "In this section,  means as\n              follows:"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1134",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96367_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Police Act"
+                                                        },
+                                                        "#text": "in relation to the provincial police force referred to in paragraph (a) of\n                the definition of \"police force\" in section 1 of this Act, the commissioner as\n                defined in the  or an individual\n                designated by the commissioner;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1147",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96367_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Police Act"
+                                                        },
+                                                        "#text": "in relation to a municipal police department referred to in paragraph (b) of\n                the definition of \"police force\" in section 1 of this Act, the chief constable as\n                defined in the  or an individual\n                designated by the chief constable;"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d1e1160",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "in relation to a prescribed entity referred to in paragraph (c) of the\n                definition of \"police force\" in section 1 of this Act, a prescribed senior official\n                or an individual designated by the senior official."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1171",
+                                    "bcl:marginalnote": "Obligation to comply with emergency demand for\n            records",
+                                    "bcl:num": "14",
+                                    "bcl:text": "A person who is served with an emergency demand for records must, within the\n            time specified in the demand,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1182",
+                                            "bcl:num": "a",
+                                            "bcl:text": "give access to the records specified in the demand, and"
+                                        },
+                                        {
+                                            "@id": "d1e1191",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the person is unable to locate a record specified in the demand, provide\n              members of the police force with a description of the efforts made by the person to\n              locate that record."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1201",
+                                    "bcl:marginalnote": "Records subject to emergency demand for records",
+                                    "bcl:num": "15",
+                                    "bcl:text": "The following records in respect of a missing person may be specified in an\n            emergency demand for records:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1212",
+                                            "bcl:num": "a",
+                                            "bcl:text": "records set out in section 9 (a) to (j);"
+                                        },
+                                        {
+                                            "@id": "d1e1221",
+                                            "bcl:num": "b",
+                                            "bcl:text": "records containing employment information to the extent that the records may\n              indicate when the missing person was last seen or heard from and when, where and how\n              the missing person is paid;"
+                                        },
+                                        {
+                                            "@id": "d1e1231",
+                                            "bcl:num": "c",
+                                            "bcl:text": "records containing health information to the extent that the records may\n              indicate that the missing person was recently admitted to a hospital, and if\n              applicable, which hospital and the date and time of, and the reason for,\n              admission;"
+                                        },
+                                        {
+                                            "@id": "d1e1240",
+                                            "bcl:num": "d",
+                                            "bcl:text": "records containing financial information to the extent that the records may\n              indicate that",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1248",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "a credit card of the missing person was recently used and, if applicable,\n                when, where and for what purpose the credit card was used, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1257",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a bank account of the missing person was recently used and, if applicable,\n                when, where and for what purpose the bank account was used;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1267",
+                                            "bcl:num": "e",
+                                            "bcl:text": "any prescribed records."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1278",
+                                    "bcl:marginalnote": "Failure to comply with emergency demand for records",
+                                    "bcl:num": "16",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1286",
+                                            "bcl:num": "1",
+                                            "bcl:text": "If a person who is served with an emergency demand for records fails to comply\n              with the demand, a member of the police force may apply for an order requiring the\n              person to comply with that demand."
+                                        },
+                                        {
+                                            "@id": "d1e1295",
+                                            "bcl:num": "2",
+                                            "bcl:text": "A justice may make an order under this section if the justice is satisfied\n              that there are reasonable grounds to believe that the record specified in the\n              demand",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1303",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "may assist the police force in locating the missing person, and"
+                                                },
+                                                {
+                                                    "@id": "d1e1312",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "is in the possession or under the control of the person."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1322",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The justice may impose any of the following that the justice considers\n              appropriate:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1330",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "restrictions or limits on access to a record specified in the\n                demand;"
+                                                },
+                                                {
+                                                    "@id": "d1e1339",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "terms and conditions on an order under this section."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1350",
+                                    "bcl:marginalnote": "Obligation to comply with failure to comply order",
+                                    "bcl:num": "17",
+                                    "bcl:text": "A person against whom an order is made under section 16 must, within the time\n            specified in the order,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1361",
+                                            "bcl:num": "a",
+                                            "bcl:text": "give access to the records specified in the emergency demand for records,\n              and"
+                                        },
+                                        {
+                                            "@id": "d1e1370",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the person is unable to locate a record specified in the demand, provide\n              members of the police force with a description of the efforts made by the person to\n              locate that record."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1380",
+                                    "bcl:marginalnote": "Annual report respecting emergency demands for\n            records",
+                                    "bcl:num": "18",
+                                    "bcl:subsection": [
+                                        {
+                                            "@id": "d1e1388",
+                                            "bcl:num": "1",
+                                            "bcl:text": "Each year, a police force must prepare an annual report respecting emergency\n              demands for records made by the police force in the immediately preceding calendar\n              year."
+                                        },
+                                        {
+                                            "@id": "d1e1397",
+                                            "bcl:num": "2",
+                                            "bcl:text": "The annual report must include the following information:",
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d1e1405",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "the number of missing person investigations in which a demand was\n                made;"
+                                                },
+                                                {
+                                                    "@id": "d1e1414",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "the total number of persons who were served with a demand;"
+                                                },
+                                                {
+                                                    "@id": "d1e1423",
+                                                    "bcl:num": "c",
+                                                    "bcl:text": "any prescribed information."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1433",
+                                            "bcl:num": "3",
+                                            "bcl:text": "The police force must provide the annual report to the minister or a person\n              designated by the minister in the form and within the time specified by the\n              minister."
+                                        },
+                                        {
+                                            "@id": "d1e1443",
+                                            "bcl:num": "4",
+                                            "bcl:text": "The minister or the person designated by the minister must make the annual\n              report public."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1455",
+                    "bcl:num": "3",
+                    "bcl:text": "Use and Disclosure of Information",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e1463",
+                            "bcl:marginalnote": "Other rights unaffected",
+                            "bcl:num": "19",
+                            "bcl:text": "This Act does not restrict any authority established at common law or under any\n          federal or other provincial enactment that a police force has to obtain, collect, compile,\n          use, disclose or dispose of any information or records."
+                        },
+                        {
+                            "@id": "d1e1475",
+                            "bcl:marginalnote": "Use of information limited",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1483",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A police force may use information in a record accessed under this Act only for\n            the purpose of locating a missing person or a use consistent with that\n            purpose."
+                                },
+                                {
+                                    "@id": "d1e1492",
+                                    "bcl:num": "2",
+                                    "bcl:text": "For certainty, this section does not prevent information in a record accessed\n            under this Act from being used for the purpose of a related criminal\n            investigation."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1502",
+                            "bcl:marginalnote": "Disclosure of information limited",
+                            "bcl:num": "21",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1510",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96165_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Freedom of Information\n                and Protection of Privacy Act"
+                                        },
+                                        "#text": "This section applies despite the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1523",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A police force may disclose information in a record accessed under this Act only\n            as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1531",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for the purpose of locating a missing person or a use consistent with that\n              purpose;"
+                                        },
+                                        {
+                                            "@id": "d1e1540",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if the individual the information is about has consented, in the prescribed\n              manner, to the disclosure;"
+                                        },
+                                        {
+                                            "@id": "d1e1549",
+                                            "bcl:num": "c",
+                                            "bcl:text": "in accordance with any federal or provincial enactment that requires the\n              disclosure;"
+                                        },
+                                        {
+                                            "@id": "d1e1559",
+                                            "bcl:num": "d",
+                                            "bcl:text": "to comply with a subpoena, a warrant or an order issued or made by a court,\n              person or body in Canada with jurisdiction to compel the production of information and\n              records;"
+                                        },
+                                        {
+                                            "@id": "d1e1568",
+                                            "bcl:num": "e",
+                                            "bcl:text": "to the extent necessary to further a missing person investigation,\n              to",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d1e1576",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "another law enforcement agency in Canada, or"
+                                                },
+                                                {
+                                                    "@id": "d1e1585",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "a law enforcement agency in a foreign country under an arrangement, a\n                written agreement, a treaty or federal or provincial legislative\n                authority;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d1e1595",
+                                            "bcl:num": "f",
+                                            "bcl:text": "to the legal counsel for the police force, for the purpose of preparing or\n              obtaining legal advice for the police force or for use in civil proceedings involving\n              the police force;"
+                                        },
+                                        {
+                                            "@id": "d1e1604",
+                                            "bcl:num": "g",
+                                            "bcl:text": "in accordance with subsections (3) to (7)."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1614",
+                                    "bcl:num": "3",
+                                    "bcl:text": "For the purposes of a missing person investigation, a police force may make\n            public the following information:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1622",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the name of the missing person;"
+                                        },
+                                        {
+                                            "@id": "d1e1631",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the age of the missing person;"
+                                        },
+                                        {
+                                            "@id": "d1e1640",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a physical description of the missing person;"
+                                        },
+                                        {
+                                            "@id": "d1e1650",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a photograph of the missing person;"
+                                        },
+                                        {
+                                            "@id": "d1e1659",
+                                            "bcl:num": "e",
+                                            "bcl:text": "information about any medical conditions of the missing person that may pose a\n              serious or immediate threat to the health of the missing person;"
+                                        },
+                                        {
+                                            "@id": "d1e1668",
+                                            "bcl:num": "f",
+                                            "bcl:text": "pertinent vehicle information;"
+                                        },
+                                        {
+                                            "@id": "d1e1677",
+                                            "bcl:num": "g",
+                                            "bcl:text": "the location where the missing person was last seen;"
+                                        },
+                                        {
+                                            "@id": "d1e1686",
+                                            "bcl:num": "h",
+                                            "bcl:text": "the circumstances surrounding the absence of the missing person;"
+                                        },
+                                        {
+                                            "@id": "d1e1695",
+                                            "bcl:num": "i",
+                                            "bcl:text": "the name of the individual with whom the missing person was last\n              seen;"
+                                        },
+                                        {
+                                            "@id": "d1e1705",
+                                            "bcl:num": "j",
+                                            "bcl:text": "any other information that the police force considers appropriate;"
+                                        },
+                                        {
+                                            "@id": "d1e1714",
+                                            "bcl:num": "k",
+                                            "bcl:text": "any prescribed information."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1725",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A police force may publicly announce that a missing person has been\n            located."
+                                },
+                                {
+                                    "@id": "d1e1734",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Subject to the regulations, if a missing person who is a minor is located, a\n            police force may, without the consent of the minor, disclose information in a record\n            accessed under this Act in respect of the minor to a parent or guardian of the minor if,\n            in the opinion of the police force, the disclosure will protect the safety of the\n            minor."
+                                },
+                                {
+                                    "@id": "d1e1743",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Subject to the regulations, if a missing person who is a vulnerable person is\n            located, a police force may, without the consent of the vulnerable person, disclose\n            information in a record accessed under this Act in respect of the vulnerable person to a\n            prescribed person if, in the opinion of the police force, the disclosure will protect\n            the safety of the vulnerable person."
+                                },
+                                {
+                                    "@id": "d1e1752",
+                                    "bcl:num": "7",
+                                    "bcl:text": "A police force may, to the extent necessary to coordinate missing person\n            investigations and other activities respecting missing persons, disclose information in\n            a record accessed under this Act to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1760",
+                                            "bcl:num": "a",
+                                            "bcl:text": "another law enforcement agency or government department or agency in Canada,\n              or"
+                                        },
+                                        {
+                                            "@id": "d1e1769",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a law enforcement agency or government department or agency in a foreign\n              country under an arrangement, a written agreement, a treaty or federal or provincial\n              legislative authority."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1779",
+                                    "bcl:num": "8",
+                                    "bcl:text": "For certainty, this section does not prevent information in a record accessed\n            under this Act from being disclosed for the purpose of a related criminal\n            investigation."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1790",
+                            "bcl:marginalnote": "Definition of consistent purpose",
+                            "bcl:num": "22",
+                            "bcl:text": "For the purposes of sections 20 (1) and 21 (2) (a), a use of information is\n          consistent with the purpose for which the information in a record was accessed if the\n          use",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d1e1801",
+                                    "bcl:num": "a",
+                                    "bcl:text": "has a reasonable and direct connection to that purpose, and"
+                                },
+                                {
+                                    "@id": "d1e1810",
+                                    "bcl:num": "b",
+                                    "bcl:text": "is necessary for performing the statutory duties of, or for operating a program\n            or activity of, the police force."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d1e1821",
+                    "bcl:num": "4",
+                    "bcl:text": "General",
+                    "bcl:section": [
+                        {
+                            "@id": "d1e1829",
+                            "bcl:marginalnote": "Liability",
+                            "bcl:num": "23",
+                            "bcl:text": "No action or proceeding may be brought against a member of a police force or any\n          other person in respect of anything done or omitted to be done in good faith under this\n          Act."
+                        },
+                        {
+                            "@id": "d1e1841",
+                            "bcl:marginalnote": "Offences and penalties",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1849",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A person who fails, without reasonable excuse, to comply with section 8 or 17\n            commits an offence."
+                                },
+                                {
+                                    "@id": "d1e1858",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person who fails, without reasonable excuse, to comply with section 14 commits\n            an offence, if the emergency demand for records was reasonable in the\n            circumstances."
+                                },
+                                {
+                                    "@id": "d1e1867",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person who fails, without reasonable excuse, to comply with section 20 or 21\n            commits an offence."
+                                },
+                                {
+                                    "@id": "d1e1877",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A person convicted of an offence under subsection (1), (2) or (3) is\n            liable,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1885",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the case of an individual, to a fine of not more than $10 000,\n              and"
+                                        },
+                                        {
+                                            "@id": "d1e1894",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the case of a corporation, to a fine of not more than $25 000."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e1904",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If an offence under subsection (1) continues for more than one day, separate\n            fines, each not exceeding the maximum fine for that offence, may be imposed for each day\n            the offence continues."
+                                },
+                                {
+                                    "@id": "d1e1913",
+                                    "bcl:num": "6",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96338_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Offence Act"
+                                        },
+                                        "#text": "Section 5 of the  does not apply to this\n            Act or the regulations."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d1e1927",
+                            "bcl:marginalnote": "Regulations",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d1e1935",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96238_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Interpretation Act"
+                                        },
+                                        "#text": "The Lieutenant Governor in Council may make regulations referred to in section\n            41 of the ."
+                                    }
+                                },
+                                {
+                                    "@id": "d1e1948",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Without limiting subsection (1), the Lieutenant Governor in Council may make\n            regulations as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e1956",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for the purposes of the definition of \"person at risk\", establishing\n              assessment procedures and requirements, including, without limitation, prescribing who\n              may conduct the assessment;"
+                                        },
+                                        {
+                                            "@id": "d1e1965",
+                                            "bcl:num": "b",
+                                            "bcl:text": "respecting the information required to be included in an application for an\n              order under Part 2 and establishing other requirements for the application;"
+                                        },
+                                        {
+                                            "@id": "d1e1974",
+                                            "bcl:num": "c",
+                                            "bcl:text": "respecting the information required to be included in an emergency demand for\n              records and establishing other requirements for the demand;"
+                                        },
+                                        {
+                                            "@id": "d1e1984",
+                                            "bcl:num": "d",
+                                            "bcl:text": "prescribing considerations for a member of a police force when deciding\n              whether to disclose information under section 21 (5) or (6);"
+                                        },
+                                        {
+                                            "@id": "d1e1993",
+                                            "bcl:num": "e",
+                                            "bcl:text": "respecting the use, retention and disposal of information and records for the\n              purposes of this Act;"
+                                        },
+                                        {
+                                            "@id": "d1e2002",
+                                            "bcl:num": "f",
+                                            "bcl:text": "defining terms used but not defined in this Act;"
+                                        },
+                                        {
+                                            "@id": "d1e2011",
+                                            "bcl:num": "g",
+                                            "bcl:text": "prescribing the form and content of an order;"
+                                        },
+                                        {
+                                            "@id": "d1e2020",
+                                            "bcl:num": "h",
+                                            "bcl:text": "respecting any other matter for which regulations are contemplated by this\n              Act."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d1e2030",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A regulation that may be made by the Lieutenant Governor in Council under any\n            provision of this Act may",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d1e2038",
+                                            "bcl:num": "a",
+                                            "bcl:text": "establish different classes of persons and privilege, and"
+                                        },
+                                        {
+                                            "@id": "d1e2047",
+                                            "bcl:num": "b",
+                                            "bcl:text": "make different provisions for different classes of persons and\n              privilege."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "bcl:section": {
+                "@id": "d1e2062",
+                "bcl:marginalnote": "Commencement",
+                "bcl:num": "26",
+                "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in\n        Council."
+            }
+        }
+    }
+}

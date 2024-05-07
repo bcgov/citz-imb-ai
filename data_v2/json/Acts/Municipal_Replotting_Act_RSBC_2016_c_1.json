@@ -1,0 +1,2338 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "r16001",
+        "act:title": {
+            "@titleOverride": "Municipal Replotting Act [RSBC 2016] c. 1",
+            "#text": "Municipal Replotting Act"
+        },
+        "act:chapter": "1",
+        "act:yearenacted": {
+            "@revised": "RSBC",
+            "#text": "2016"
+        },
+        "act:repealedtext": {
+            "in:br": null,
+            "#text": "Deposited with Clerk of the Legislative Assembly on May 19, 2016"
+        },
+        "act:currency": {
+            "act:tlcDirPath": "1325524918/1339301193/519328065",
+            "act:tlc": "E3tlc16001r"
+        },
+        "act:content": {
+            "bcl:part": [
+                {
+                    "@id": "d0e15",
+                    "bcl:num": "1",
+                    "bcl:text": "Interpretation and Application",
+                    "bcl:section": [
+                        {
+                            "@id": "d0e23",
+                            "bcl:marginalnote": "Definitions",
+                            "bcl:num": "1",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e31",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In this Act:",
+                                    "bcl:definition": [
+                                        {
+                                            "@id": "d0e39",
+                                            "bcl:text": {
+                                                "in:term": "commissioner",
+                                                "#text": "means a commissioner appointed under section 24 or 25;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e47",
+                                            "bcl:text": {
+                                                "in:term": "common mass",
+                                                "#text": "means the common mass of real property referred to in section 4 (1);"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e55",
+                                            "bcl:text": {
+                                                "in:term": "former parcel",
+                                                "#text": "means a parcel that is located in a replotting district and exists before the completion of a replotting scheme, and includes the following portions of land located in the replotting district:"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d0e62",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "land that, before the completion of the replotting scheme, was a portion of a highway, park or public square;"
+                                                },
+                                                {
+                                                    "@id": "d0e71",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "land indicated as a highway, park or public square on a plan of subdivision deposited in the land title office before the completion of the replotting scheme;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e81",
+                                            "bcl:text": {
+                                                "in:term": "new parcel",
+                                                "#text": "means a parcel created or intended to be created by a replotting scheme, and includes the following:"
+                                            },
+                                            "bcl:paragraph": [
+                                                {
+                                                    "@id": "d0e88",
+                                                    "bcl:num": "a",
+                                                    "bcl:text": "land created or intended to be created by the replotting scheme as a portion of a highway, park or public square;"
+                                                },
+                                                {
+                                                    "@id": "d0e97",
+                                                    "bcl:num": "b",
+                                                    "bcl:text": "a portion of land indicated as a highway, park or public square on a plan of subdivision deposited in the land title office under this Act;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e107",
+                                            "bcl:text": {
+                                                "in:term": "owner",
+                                                "#text": "means a purchaser of real property under an unregistered agreement for sale and purchase, a registered owner of an estate in fee simple, a registered owner of a charge or a tax sale purchaser during the redemption period, and includes the Provincial government, a Provincial government corporation and the municipality;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e115",
+                                            "bcl:text": {
+                                                "in:term": "parcel",
+                                                "#text": "means any lot, block or other area in which land is held or into which land is subdivided;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e123",
+                                            "bcl:text": {
+                                                "in:term": "replotting district",
+                                                "#text": "means a replotting district designated by a council under section 3 (a)."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e132",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/03026_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Community Charter"
+                                        },
+                                        "#text": "Unless a term is otherwise defined in this Act or a contrary intention appears in this Act, the definitions in the  apply to this Act."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e142",
+                            "bcl:marginalnote": "Application to Crown land",
+                            "bcl:num": "2",
+                            "bcl:text": "In addition to other land to which this Act applies, this Act applies to Crown land in a replotting district held by purchasers from the Provincial government and, in that case, both the Provincial government and the purchasers are owners for the purposes of this Act."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e155",
+                    "bcl:num": "2",
+                    "bcl:text": "Preparation and Initiation of Replotting Scheme",
+                    "bcl:section": [
+                        {
+                            "@id": "d0e163",
+                            "bcl:marginalnote": "Preliminary designation of replotting district",
+                            "bcl:num": "3",
+                            "bcl:text": "A council may, by bylaw adopted by an affirmative vote of at least 2/3 of all its members,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e174",
+                                    "bcl:num": "a",
+                                    "bcl:text": "designate a part of the municipality as a replotting district, and"
+                                },
+                                {
+                                    "@id": "d0e183",
+                                    "bcl:num": "b",
+                                    "bcl:text": "authorize the preparation of a replotting scheme for the replotting district, including authorizing the preparation of incidental preliminary surveys."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e193",
+                            "bcl:marginalnote": "General principles of replotting scheme",
+                            "bcl:num": "4",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e201",
+                                    "bcl:num": "1",
+                                    "bcl:text": "For the purpose of a replotting scheme, all real property in the replotting district at the initiation of the scheme forms one common mass of real property."
+                                },
+                                {
+                                    "@id": "d0e210",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The real property necessary for highways, parks or public squares is to be taken from the common mass to form new parcels for those purposes, and these new parcels stand in the place of and compensate the Provincial government, the municipality and the public for the surrender of all former highways, parks or public squares."
+                                },
+                                {
+                                    "@id": "d0e219",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The remainder of the common mass must be divided into new parcels for allotment to the owners in a fair and equitable manner so that, as far as possible, the value of new parcels allotted to them is equal to the value of their former parcels."
+                                },
+                                {
+                                    "@id": "d0e228",
+                                    "bcl:num": "4",
+                                    "bcl:text": "An allotment, decision, award, consent or other proceeding under this Act that affects real property is binding on and inures to the benefit of the person who owns the real property."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e238",
+                            "bcl:marginalnote": "Allotment of parcels",
+                            "bcl:num": "5",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e246",
+                                    "bcl:num": "1",
+                                    "bcl:text": "In a replotting scheme,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e254",
+                                            "bcl:num": "a",
+                                            "bcl:text": "effort must be made to allot to owners new parcels in approximately the same location as their former parcels, and"
+                                        },
+                                        {
+                                            "@id": "d0e263",
+                                            "bcl:num": "b",
+                                            "bcl:text": "former parcels with buildings, other structures, erections or utilities on them, subject to the necessary adjustment of boundaries, must be returned to their former owners wherever practicable."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e273",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The allotment of new parcels in exchange for former parcels must be carried out as far as practicable with the consent of the respective owners."
+                                },
+                                {
+                                    "@id": "d0e282",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If an owner does not consent,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e290",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the owner may be allotted a new parcel or parcels of value equal as nearly as possible to the value of the owner's former parcel or parcels, or"
+                                        },
+                                        {
+                                            "@id": "d0e299",
+                                            "bcl:num": "b",
+                                            "bcl:text": "monetary compensation may be paid to the owner instead of an allotment of real property."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e309",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Unavoidable differences of value between former parcels and new parcels may be equalized by",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e317",
+                                            "bcl:num": "a",
+                                            "bcl:text": "paying monetary compensation to the owner, or"
+                                        },
+                                        {
+                                            "@id": "d0e326",
+                                            "bcl:num": "b",
+                                            "bcl:text": "with the owner's consent or agreement, allotting to the owner a new parcel of greater value than the owner's former parcel for a cash payment or on terms."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e336",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If a new parcel is allotted under subsection (4) (b) on terms, the municipality may take a mortgage, with interest at an agreed rate, from the owner for payment of the difference in value."
+                                },
+                                {
+                                    "@id": "d0e345",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Any real property not allotted as provided in subsections (1) to (5) may be allotted to any owner at an agreed price, the amount of which must be paid to the municipality."
+                                },
+                                {
+                                    "@id": "d0e354",
+                                    "bcl:num": "7",
+                                    "bcl:text": "Any real property remaining unallotted must be allotted to the municipality and is surplus real property."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e364",
+                            "bcl:marginalnote": "Municipality may acquire charges",
+                            "bcl:num": "6",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e372",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The municipality may, subject to paying compensation, acquire a charge against a former parcel and hold it as a charge against a new parcel allotted to the owner of the former parcel."
+                                },
+                                {
+                                    "@id": "d0e381",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The municipality may, in respect of the charge against the new parcel, take all necessary proceedings",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e389",
+                                            "bcl:num": "a",
+                                            "bcl:text": "for the collection of the amount due under the charge, or"
+                                        },
+                                        {
+                                            "@id": "d0e398",
+                                            "bcl:num": "b",
+                                            "bcl:text": "for the sale, transfer or realization of the security created by the charge."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e409",
+                            "bcl:marginalnote": "Information included in replotting scheme",
+                            "bcl:num": "7",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e417",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A replotting scheme must indicate the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e425",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the proposed relocation and exchange of former parcels for new parcels in which the Provincial government or the municipality has no estate or interest;"
+                                        },
+                                        {
+                                            "@id": "d0e434",
+                                            "bcl:num": "b",
+                                            "bcl:text": "whether compensation is to be proposed to the respective owners and, if compensation is proposed, its amount;"
+                                        },
+                                        {
+                                            "@id": "d0e443",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the value of any surplus real property;"
+                                        },
+                                        {
+                                            "@id": "d0e452",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the new location of a building, other structure, erection or utility that is to be moved."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e462",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A replotting scheme may establish an apportionment of the net cost of the scheme between the municipality and the owners, with consideration being given to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e470",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the saving that the scheme may effect in the expenditure of the municipality for highways and municipal utilities, and"
+                                        },
+                                        {
+                                            "@id": "d0e479",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the increased taxation that may be derived by the municipality from the increased value of the real property in the replotting district."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e490",
+                            "bcl:marginalnote": "Notice requirements for initiation of replotting scheme",
+                            "bcl:num": "8",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e498",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Before initiating a replotting scheme, the council must",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e506",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "in:desc": "[requirements for public notice]",
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/03026_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Community Charter"
+                                                },
+                                                "#text": "publish notice of the scheme in accordance with section 94  of the , and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e515",
+                                            "bcl:num": "b",
+                                            "bcl:text": "send by registered mail to, or serve on, each owner of a former parcel in the replotting district the materials described in subsection (2) of this section."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e525",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The materials to be provided to each owner under subsection (1) (b) are as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e533",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a plan showing the real property in the replotting district as presently subdivided and a plan showing that property replotted under the proposed replotting scheme, with both plans setting out",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e541",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the dimensions of the boundaries of each former and new parcel shown, and"
+                                                },
+                                                {
+                                                    "@id": "d0e550",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the scale of the plan, which must be the same for both plans and which must not be smaller than 1 to 1 000;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e560",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a statement of",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e568",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the estimated total cost of the scheme,"
+                                                },
+                                                {
+                                                    "@id": "d0e577",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the cost to be borne by the municipality,"
+                                                },
+                                                {
+                                                    "@id": "d0e586",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the total cost to be borne by all the owners, and"
+                                                },
+                                                {
+                                                    "@id": "d0e595",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": "the portion of the cost for each new parcel;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e605",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a statement showing",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e613",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the number of instalments by which the owner's share of the cost may be paid,"
+                                                },
+                                                {
+                                                    "@id": "d0e622",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "at what interval after completion of the scheme the first instalment will be due, and"
+                                                },
+                                                {
+                                                    "@id": "d0e631",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "at what intervals any remaining instalments will be due;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e641",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the proposed allotment of new parcels for former parcels;"
+                                        },
+                                        {
+                                            "@id": "d0e650",
+                                            "bcl:num": "e",
+                                            "bcl:text": "a form of consent that complies with section 9 (1)."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e661",
+                            "bcl:marginalnote": "Owner's consent",
+                            "bcl:num": "9",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e669",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An owner's consent to the proposed replotting scheme as it affects the owner's real property must be in a form that is prepared by the municipality and that includes the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e677",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the details of any compensation proposed to be paid by the municipality for the real property as a result of the scheme;"
+                                        },
+                                        {
+                                            "@id": "d0e686",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the details of any amounts requested to be paid to the municipality for the real property as a result of the scheme;"
+                                        },
+                                        {
+                                            "@id": "d0e695",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a space for the owner to set out",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e703",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the true or market value of the owner's real property affected by the scheme, and"
+                                                },
+                                                {
+                                                    "@id": "d0e712",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the amount or proportion the owner considers to be the value of the owner's interest."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e723",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If the owner signs a consent and returns it to the municipality, the owner must complete the information referred to in subsection (1) (c)."
+                                },
+                                {
+                                    "@id": "d0e732",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An owner who mails or delivers a consent to the municipality is bound by it, and no claims against the municipality may be allowed on matters specifically agreed to in the consent."
+                                },
+                                {
+                                    "@id": "d0e741",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The designated municipal officer must accept an owner's consent in writing any time before the commissioner gives the commissioner's decisions under section 30 (3)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e751",
+                            "bcl:marginalnote": "Alterations to replotting scheme may require new consents",
+                            "bcl:num": "10",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e759",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Alterations may be made in the replotting scheme before its completion under section 19 (3)."
+                                },
+                                {
+                                    "@id": "d0e768",
+                                    "bcl:num": "2",
+                                    "bcl:text": "If alterations affect the owners who have consented, the consent of all the affected owners must be obtained again."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e778",
+                            "bcl:marginalnote": "Council authorizing initiation of replotting scheme",
+                            "bcl:num": "11",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e786",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The council may, by resolution, authorize the initiation of the replotting scheme if consent to the scheme is given by the owners of former parcels in the replotting district in respect of which the assessed value of their land is at least 70% of the total assessed value of all the land in the replotting district according to the last revised assessment roll."
+                                },
+                                {
+                                    "@id": "d0e795",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A consent referred to in subsection (1) must be in writing in the form referred to in section 9 (1)."
+                                },
+                                {
+                                    "@id": "d0e804",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The calculation of the 70% of the total assessed value referred to in subsection (1) must be determined as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e812",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the value of improvements is not to be included in the calculation;"
+                                        },
+                                        {
+                                            "@id": "d0e821",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the value of an owner's interest in a former parcel is the assessed value of the parcel if",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e829",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the parcel is owned in fee simple, free of charges,"
+                                                },
+                                                {
+                                                    "@id": "d0e838",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the parcel is owned by a purchaser from the Provincial government or from a Provincial government corporation and the purchaser has completed the payments but the Crown grant, order in council or conveyance has not been delivered to or registered by the purchaser, or"
+                                                },
+                                                {
+                                                    "@id": "d0e847",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "the parcel has been purchased at a tax sale and the period for redemption has not expired;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e857",
+                                            "bcl:num": "c",
+                                            "bcl:text": "in the cases of former parcels held subject to one or more charges, the following rules apply:",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e865",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the value of the charges and of the estate in fee simple must be determined by multiplying the assessed value of the land by the true or market value of the particular interest in the parcel and dividing the resulting product by the true or market value of the parcel;"
+                                                },
+                                                {
+                                                    "@id": "d0e874",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "if the true or market value of an interest in real property cannot be determined from the information supplied by owners of a parcel in their consent under section 9 (1) (c), the designated municipal officer must assess and determine the values for the purposes of subparagraph (i) of this paragraph from whatever records or information are available to that municipal officer;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e884",
+                                            "bcl:num": "d",
+                                            "bcl:text": "if a former parcel is held by a tenant for life,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e892",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the true or market value of the life estate is its present worth as determined by using the Statistics Canada tables of British Columbia life expectancy in effect when the valuation is made, and"
+                                                },
+                                                {
+                                                    "@id": "d0e901",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the true or market value of the estate in remainder in fee simple is the resulting balance, after subtracting the true or market value of the life estate from the true or market value of the parcel;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e911",
+                                            "bcl:num": "e",
+                                            "bcl:text": "in the cases of multiple ownership of estates in fee simple and charges,",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e919",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "each tenant in common is considered to consent to the proportion of the whole estate in fee simple or charge held by the tenant's proportion in the tenancy, and"
+                                                },
+                                                {
+                                                    "@id": "d0e928",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "each joint tenant is considered to consent to an equal share with each of the tenant's co-joint tenants in the whole estate in fee simple or charge."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e940",
+                            "bcl:marginalnote": "Initiation of replotting scheme by registration of resolution",
+                            "bcl:num": "12",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e948",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A copy of the resolution referred to in section 11 (1), certified by the corporate officer, together with the plans referred to in section 8 (2) (a), must be filed in the land title office."
+                                },
+                                {
+                                    "@id": "d0e957",
+                                    "bcl:num": "2",
+                                    "bcl:text": "When the resolution is filed, the registrar of land titles must cause a note of it to be made in every record of title in fee simple to a former parcel located in the replotting district."
+                                },
+                                {
+                                    "@id": "d0e966",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The note under subsection (2) must refer to the filing number and series, and the series may be the same as the series that includes caveats."
+                                },
+                                {
+                                    "@id": "d0e975",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The replotting scheme is initiated when the note under subsection (2) is made."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e985",
+                            "bcl:marginalnote": "Effect of initiation",
+                            "bcl:num": "13",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e993",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A note under section 12 (2) is notice to all persons having any right, title, interest, charge, claim or demand in, to or on the affected former parcels, and to all persons subsequently dealing with them, that a replotting scheme has been initiated, and those persons are bound by all proceedings under this Act taken before and after that notice."
+                                },
+                                {
+                                    "@id": "d0e1002",
+                                    "bcl:num": "2",
+                                    "bcl:text": "A person who has a right, title, interest, charge, claim or demand in, to or on real property in the replotting district that is not duly registered before the initiation of the replotting scheme is not entitled to notice of proceedings under this Act, unless the person is a purchaser",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1010",
+                                            "bcl:num": "a",
+                                            "bcl:text": "from the Provincial government,"
+                                        },
+                                        {
+                                            "@id": "d0e1019",
+                                            "bcl:num": "b",
+                                            "bcl:text": "from the municipality, or"
+                                        },
+                                        {
+                                            "@id": "d0e1028",
+                                            "bcl:num": "c",
+                                            "bcl:text": "at a tax sale."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e1038",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person dealing with an affected former parcel after the replotting scheme is initiated is not entitled to notice unless the person",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1046",
+                                            "bcl:num": "a",
+                                            "bcl:text": "gives the designated municipal officer written notice of the person's purchase or claim and evidence of its registration, and"
+                                        },
+                                        {
+                                            "@id": "d0e1055",
+                                            "bcl:num": "b",
+                                            "bcl:text": "provides that municipal officer with an address to which notices may be mailed."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1066",
+                            "bcl:marginalnote": "Resolution to complete or discontinue replotting scheme",
+                            "bcl:num": "14",
+                            "bcl:text": "Within 4 months after the initiation of a replotting scheme, the council must, by resolution, either",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e1077",
+                                    "bcl:num": "a",
+                                    "bcl:text": "authorize the completion of the scheme and put it into effect, or"
+                                },
+                                {
+                                    "@id": "d0e1086",
+                                    "bcl:num": "b",
+                                    "bcl:text": "discontinue the scheme."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1096",
+                            "bcl:marginalnote": "Discontinuance of replotting scheme",
+                            "bcl:num": "15",
+                            "bcl:text": "If a council resolves to discontinue a replotting scheme,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e1107",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the corporate officer must file in the land title office a copy of the resolution to discontinue, certified under that officer's signature, and"
+                                },
+                                {
+                                    "@id": "d0e1116",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the registrar of land titles must then cancel the note made under section 12 (2)."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e1127",
+                    "bcl:num": "3",
+                    "bcl:text": "Implementation and Completion of Replotting Scheme",
+                    "bcl:section": [
+                        {
+                            "@id": "d0e1135",
+                            "bcl:marginalnote": "Registration of title to common mass",
+                            "bcl:num": "16",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1143",
+                                    "bcl:num": "1",
+                                    "bcl:text": "If a council resolves to authorize the completion of a replotting scheme under section 14 (a), the municipality must apply to the registrar of land titles to have title to the common mass registered in fee simple in trust for the owners of the new parcels."
+                                },
+                                {
+                                    "@id": "d0e1152",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "The application under subsection (1) must be in the form approved under the  and be accompanied by the following:"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1160",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96250_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Land Title Act"
+                                                },
+                                                "in:desc": "[execution of plan by owner]",
+                                                "#text": "a reference plan defining the common mass, signed by the corporate officer, that complies with the requirements of the  for reference plans, other than the requirements of section 103  of that Act;"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e1169",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a certificate that meets the requirements of subsection (3);"
+                                        },
+                                        {
+                                            "@id": "d0e1178",
+                                            "bcl:num": "c",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96250_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Land Title Act"
+                                                },
+                                                "in:doc": "Municipal Replotting Act",
+                                                "#text": "a subdivision plan defining the new parcels that complies with the requirements of the  and bears the title \"prepared under the \";"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e1187",
+                                            "bcl:num": "d",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/96250_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Land Title Act"
+                                                },
+                                                "#text": "an application in the form approved under the  to deposit the subdivision plan."
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e1197",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The certificate must be signed by the corporate officer and set out the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1205",
+                                            "bcl:num": "a",
+                                            "bcl:text": "in the 1st column, the description of each new parcel compiled in numerical or alphabetical order;"
+                                        },
+                                        {
+                                            "@id": "d0e1214",
+                                            "bcl:num": "b",
+                                            "bcl:text": "in the 2nd column, opposite the description of the relevant new parcel, the description of the former parcel or parcels in respect of which the allotment of the new parcel has been made;"
+                                        },
+                                        {
+                                            "@id": "d0e1223",
+                                            "bcl:num": "c",
+                                            "bcl:text": "in the 3rd column, opposite the description of the relevant new parcel, the name and address of the owner in fee simple to whom each new parcel has been allotted;"
+                                        },
+                                        {
+                                            "@id": "d0e1232",
+                                            "bcl:num": "d",
+                                            "bcl:text": "in the 4th column, opposite the description of the relevant new parcel, the names and addresses of owners of all charges registered against the former parcel or parcels in respect of which the allotment of the new parcel has been made and the nature and serial registration numbers of the charges;"
+                                        },
+                                        {
+                                            "@id": "d0e1241",
+                                            "bcl:num": "e",
+                                            "bcl:text": "in the 5th column, opposite the description of the relevant new parcel, the names and addresses of any",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e1249",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/97045_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Builders Lien Act"
+                                                        },
+                                                        "#text": "claimant of a lien filed under the ,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d0e1258",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96250_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Land Title Act"
+                                                        },
+                                                        "#text": "person who has registered a certificate of pending litigation under the ,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d0e1267",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96250_00",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Land Title Act"
+                                                        },
+                                                        "#text": "caveator under the ,"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d0e1276",
+                                                    "bcl:num": "iv",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/96359_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Personal Property Security Act"
+                                                        },
+                                                        "#text": "person taking a security interest in fixtures under the , or"
+                                                    }
+                                                },
+                                                {
+                                                    "@id": "d0e1285",
+                                                    "bcl:num": "v",
+                                                    "bcl:text": {
+                                                        "bcl:link": {
+                                                            "@resource": "leg",
+                                                            "@xlink:href": "/legislation/00_96246_01",
+                                                            "@xlink:type": "locator",
+                                                            "in:doc": "Land (Spouse Protection) Act"
+                                                        },
+                                                        "#text": "spouse claiming the benefits of the ;"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e1295",
+                                            "bcl:num": "f",
+                                            "bcl:text": "in the 5th column, opposite the description of the relevant new parcel, the description of any former parcel or parcels in respect of which no allotment of a new parcel or parcels has been made."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1306",
+                            "bcl:marginalnote": "Examination by registrar and deposit of reference plan",
+                            "bcl:num": "17",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96250_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Land Title Act"
+                                },
+                                "#text": "The registrar of land titles must examine the application forms, reference plan, subdivision plan and certificate and, if satisfied that they are in order and in compliance with this Act and the , must deposit the reference plan and assign to it a serial deposit number."
+                            }
+                        },
+                        {
+                            "@id": "d0e1318",
+                            "bcl:marginalnote": "Effect of deposit of reference plan",
+                            "bcl:num": "18",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1326",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The deposit of a reference plan",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1334",
+                                            "bcl:num": "a",
+                                            "bcl:text": "vests in the municipality, in trust, the title of the common mass, in fee simple, free from all charges registered against former parcels, and"
+                                        },
+                                        {
+                                            "@id": "d0e1343",
+                                            "bcl:num": "b",
+                                            "bcl:text": "extinguishes all highways, parks or public squares within the common mass."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e1353",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Subsection (1) binds the Provincial government."
+                                },
+                                {
+                                    "@id": "d0e1362",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "On finding a good safe holding and marketable title in fee simple to the common mass, the registrar of land titles must register the title claimed by the municipality, and, after registration, the  applies."
+                                    }
+                                },
+                                {
+                                    "@id": "d0e1371",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The municipality need not produce any former absolute, interim or duplicate indefeasible title to any former parcel and, on the issue of the indefeasible title to the municipality in trust, all of those certificates are deemed to be cancelled."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1381",
+                            "bcl:marginalnote": "Completion of replotting scheme",
+                            "bcl:num": "19",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1389",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After the registration of title to the common mass under section 18 (3), the registrar of land titles must deposit the subdivision plan, assign to it a serial deposit number and issue any new indefeasible titles for the new parcels that are necessary."
+                                },
+                                {
+                                    "@id": "d0e1398",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The indefeasible titles under subsection (1) must be noted or endorsed, as the case may require, with all claims, demands or notices as set out in the 5th column of the certificate referred to in section 16 (2) (b)."
+                                },
+                                {
+                                    "@id": "d0e1407",
+                                    "bcl:num": "3",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "The replotting scheme is completed when the requirements of subsection (2) are met and, after completion, the  applies."
+                                    }
+                                },
+                                {
+                                    "@id": "d0e1416",
+                                    "bcl:num": "4",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "In addition to the application of the , the deposit of the subdivision plan vests title to the respective new parcels in the persons named in the 3rd and 4th columns of the certificate referred to in section 16 (2) (b) according to the estate, title or interest disclosed by the certificate, but subject to all claims, demands or notices set out in the 5th column of the certificate."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1426",
+                            "bcl:marginalnote": "Registration for owners of new parcels",
+                            "bcl:num": "20",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1434",
+                                    "bcl:num": "1",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "As soon as practicable after the completion of the replotting scheme, the municipality must apply under the  for registration on behalf of the persons who own the new parcels."
+                                    }
+                                },
+                                {
+                                    "@id": "d0e1443",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The registrar of land titles, in the registrar's discretion, may summarily reject or may refuse to register any application on behalf of an owner unless there is produced to the registrar any duplicate indefeasible title, or interim or absolute certificate of title, to a former parcel that had not been produced before registration of the common mass under section 18 (3)."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1453",
+                            "bcl:marginalnote": "Effect of completion of replotting scheme: ownership and charges",
+                            "bcl:num": "21",
+                            "bcl:text": "On completion of the replotting scheme,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e1464",
+                                    "bcl:num": "a",
+                                    "bcl:text": "except as otherwise dealt with under this Act, all rights, obligations and incidents of ownership of the owner of a former parcel or of an interest in it, and all public and private legal relationships with a former parcel, are deemed to be transferred to and exist in the new parcel allotted to the owner of the former parcel to the same extent and in the same manner as with the former parcel,"
+                                },
+                                {
+                                    "@id": "d0e1473",
+                                    "bcl:num": "b",
+                                    "bcl:text": "all conveyances, agreements, mortgages and other instruments, including grants of probate or grants of administration, in respect of parcels of real property described in them by a description appropriate to a former parcel and in respect of which registration of title had not been applied for before the completion of the scheme must be construed as if the estate or interest passing, created or vested by them was in the new parcel, and"
+                                },
+                                {
+                                    "@id": "d0e1482",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the new parcels and their respective owners are subject to and liable for all municipal charges, rates, taxes and assessments levied against their former respective parcels, and are subject to all proceedings taken and to be taken for the collection of municipal charges, rates, taxes and assessments in any manner provided for by law."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e1493",
+                    "bcl:num": "4",
+                    "bcl:text": "Complaints Regarding Compensation",
+                    "bcl:section": [
+                        {
+                            "@id": "d0e1501",
+                            "bcl:marginalnote": "Allotments binding, although owners may complain regarding compensation",
+                            "bcl:num": "22",
+                            "bcl:text": "On completion of the replotting scheme, the allotments of real property under it are absolutely binding to all intents and purposes on all the owners in the replotting district, subject to the right of those owners who did not consent to the scheme to complain about the adequacy of compensation proposed or the failure to propose compensation."
+                        },
+                        {
+                            "@id": "d0e1513",
+                            "bcl:marginalnote": "Compensation for loss, damage and costs",
+                            "bcl:num": "23",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1521",
+                                    "bcl:num": "1",
+                                    "bcl:text": "An owner who did not consent and who gives notice of complaint as provided in section 26 (2) (f) has the right to monetary compensation for the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1529",
+                                            "bcl:num": "a",
+                                            "bcl:text": "any loss of value of the former parcel insofar as adequate compensation is not provided by the new parcel allotted;"
+                                        },
+                                        {
+                                            "@id": "d0e1538",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any loss of or damage to buildings or other improvements on the former parcel;"
+                                        },
+                                        {
+                                            "@id": "d0e1547",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the cost of moving buildings or other improvements on the former parcel;"
+                                        },
+                                        {
+                                            "@id": "d0e1556",
+                                            "bcl:num": "d",
+                                            "bcl:text": "any loss of income caused by the replotting scheme from",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e1564",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the use of buildings, or"
+                                                },
+                                                {
+                                                    "@id": "d0e1573",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the special condition or use of the former parcel."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e1584",
+                                    "bcl:num": "2",
+                                    "bcl:text": "In determining the amount of compensation,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1592",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a former parcel must be valued at its market value at the time of the initiation of the replotting scheme, but an increase in its value caused by the anticipation or initiation of the scheme must not be taken into consideration, and"
+                                        },
+                                        {
+                                            "@id": "d0e1601",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a new parcel must be valued at its market value on completion of the replotting scheme."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e1611",
+                                    "bcl:num": "3",
+                                    "bcl:text": "A person is not entitled to compensation for any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1619",
+                                            "bcl:num": "a",
+                                            "bcl:text": "costs, expenses, loss, damage or inconvenience",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e1627",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "incurred or sustained in investigating the replotting scheme proceeding,"
+                                                },
+                                                {
+                                                    "@id": "d0e1636",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "incurred or sustained in presenting a complaint or making an appeal, or"
+                                                },
+                                                {
+                                                    "@id": "d0e1645",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "caused by the initiation of, delay in or discontinuance of the replotting scheme;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e1655",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an actual or anticipated loss or inconvenience of access to new parcels or of use of a municipal or public utility or service if the loss or inconvenience is due to the new highways not being open for traffic;"
+                                        },
+                                        {
+                                            "@id": "d0e1664",
+                                            "bcl:num": "c",
+                                            "bcl:text": "an actual or anticipated loss, damage or inconvenience suffered in common with all or the majority of other owners;"
+                                        },
+                                        {
+                                            "@id": "d0e1673",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a building or other structure constructed, erected, placed or altered after the initiation of the replotting scheme or an actual or anticipated loss, damage or expense incidental to the construction, erection, placement, alteration or removal of the building or other structure;"
+                                        },
+                                        {
+                                            "@id": "d0e1682",
+                                            "bcl:num": "e",
+                                            "bcl:text": "an improvement made to land after the initiation of the replotting scheme or an actual or anticipated loss, damage or expense incidental to the improvement;"
+                                        },
+                                        {
+                                            "@id": "d0e1691",
+                                            "bcl:num": "f",
+                                            "bcl:text": "a reduction in or loss of value due to reduction in area within the limits of a right to take land for highway purposes contained in the Crown grant of or statute applying to the land."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1702",
+                            "bcl:marginalnote": "Appointment of commissioner",
+                            "bcl:num": "24",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1710",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Within one month after completion of a replotting scheme, the council must apply to the Supreme Court for the appointment of a commissioner for the purposes of this Part and the court must appoint a commissioner."
+                                },
+                                {
+                                    "@id": "d0e1719",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An application under subsection (1) may be made without notice to any other person."
+                                },
+                                {
+                                    "@id": "d0e1728",
+                                    "bcl:num": "3",
+                                    "bcl:text": "If the council does not apply under subsection (1), any owner who did not consent to the replotting scheme may apply on notice to the council."
+                                },
+                                {
+                                    "@id": "d0e1737",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The following persons may not be appointed or act as a commissioner:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1745",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a member of the council;"
+                                        },
+                                        {
+                                            "@id": "d0e1754",
+                                            "bcl:num": "b",
+                                            "bcl:text": "an owner within the replotting district;"
+                                        },
+                                        {
+                                            "@id": "d0e1763",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the spouse of an owner within the replotting district."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e1773",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Before performing the duties of office, a commissioner must take and sign the following oath before the corporate officer:",
+                                    "oasis:table": {
+                                        "@style": "3",
+                                        "@id": "d0e1781",
+                                        "oasis:tgroup": {
+                                            "@cols": "3",
+                                            "oasis:colspec": [
+                                                {
+                                                    "@colname": "c1",
+                                                    "@colnum": "1"
+                                                },
+                                                {
+                                                    "@colname": "c2",
+                                                    "@colnum": "2"
+                                                },
+                                                {
+                                                    "@colname": "c3",
+                                                    "@colnum": "3"
+                                                }
+                                            ],
+                                            "oasis:tbody": {
+                                                "oasis:trow": [
+                                                    {
+                                                        "oasis:entry": [
+                                                            {
+                                                                "@colname": "c1",
+                                                                "@width": "102",
+                                                                "oasis:line": null
+                                                            },
+                                                            {
+                                                                "@colname": "c2",
+                                                                "@colspan": "2",
+                                                                "oasis:line": "I, ............................................., do solemnly swear that"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "oasis:entry": [
+                                                            {
+                                                                "@colname": "c1",
+                                                                "@width": "102",
+                                                                "oasis:line": null
+                                                            },
+                                                            {
+                                                                "@colname": "c2",
+                                                                "@width": "24",
+                                                                "oasis:line": null
+                                                            },
+                                                            {
+                                                                "@colname": "c3",
+                                                                "oasis:line": {
+                                                                    "in:doc": "Municipal Replotting Act",
+                                                                    "#text": "(a) I will truly and faithfully, and without fear, favour or partiality, execute the powers and trusts of a commissioner under the , according to the best of my knowledge and judgment, and"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "oasis:entry": [
+                                                            {
+                                                                "@colname": "c1",
+                                                                "@width": "102",
+                                                                "oasis:line": null
+                                                            },
+                                                            {
+                                                                "@colname": "c2",
+                                                                "@width": "24",
+                                                                "oasis:line": null
+                                                            },
+                                                            {
+                                                                "@colname": "c3",
+                                                                "oasis:line": "(b) I am not disqualified from acting as a commissioner under that Act."
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "@id": "d0e1824",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The municipality must pay the commissioner remuneration at a rate agreed between the commissioner and the council, and, in the event of a failure to agree, a reasonable remuneration set by the Supreme Court on summary application by the municipality or the commissioner."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1834",
+                            "bcl:marginalnote": "Replacement of commissioner",
+                            "bcl:num": "25",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1842",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The Supreme Court must, on the application of the municipality, appoint another person as commissioner if any of the following occur:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1850",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the commissioner dies, resigns, refuses to act or is absent;"
+                                        },
+                                        {
+                                            "@id": "d0e1859",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the commissioner is incapable of acting because of sickness, disability or misconduct."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e1869",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An application under subsection (1) may be made without notice to any other person."
+                                },
+                                {
+                                    "@id": "d0e1878",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Proceedings presided over and decisions made by the commissioner before any of the circumstances referred to in subsection (1) have occurred are not affected, but are valid and have effect and must be and continue to be acted on,",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1886",
+                                            "bcl:num": "a",
+                                            "bcl:text": "even though the circumstance has occurred and another commissioner has been appointed, and"
+                                        },
+                                        {
+                                            "@id": "d0e1895",
+                                            "bcl:num": "b",
+                                            "bcl:text": "without any necessity for restarting the proceedings or reconsidering any matter or thing that has arisen or been considered or decided before the circumstance occurred."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e1906",
+                            "bcl:marginalnote": "Notice to owners who did not consent",
+                            "bcl:num": "26",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e1914",
+                                    "bcl:num": "1",
+                                    "bcl:text": "After a commissioner is appointed under section 24, the designated municipal officer must, in accordance with this section, give a notice to each of the owners who did not consent and whose name appears on either of the lists referred to in section 40."
+                                },
+                                {
+                                    "@id": "d0e1923",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The notice under subsection (1) must be in writing and must include the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e1931",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a statement that a replotting scheme has been put into effect;"
+                                        },
+                                        {
+                                            "@id": "d0e1940",
+                                            "bcl:num": "b",
+                                            "bcl:text": "a description of the owner's former parcel;"
+                                        },
+                                        {
+                                            "@id": "d0e1949",
+                                            "bcl:num": "c",
+                                            "bcl:text": "a statement",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e1957",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "of the allotment of a new parcel made,"
+                                                },
+                                                {
+                                                    "@id": "d0e1966",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "of the compensation proposed to the owner, and"
+                                                },
+                                                {
+                                                    "@id": "d0e1975",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "that, if a former parcel is improved, the owner's buildings may be affected;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e1985",
+                                            "bcl:num": "d",
+                                            "bcl:text": "a statement that the replotting scheme and the allotments under it are absolutely binding on the owner to all intents and purposes, except for the owner's right to complain against",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e1993",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "the adequacy of compensation proposed, or"
+                                                },
+                                                {
+                                                    "@id": "d0e2002",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "the failure to propose compensation;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e2012",
+                                            "bcl:num": "e",
+                                            "bcl:text": "the time and place established by the commissioner for hearing complaints;"
+                                        },
+                                        {
+                                            "@id": "d0e2021",
+                                            "bcl:num": "f",
+                                            "bcl:text": "a statement that, if the owner intends to complain, the owner must give written notice with the grounds of the complaint to the designated municipal officer 10 days before the hearing."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2031",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The notice under subsection (1) may be given by any of the following:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2039",
+                                            "bcl:num": "a",
+                                            "bcl:text": "by personal service on the owner;"
+                                        },
+                                        {
+                                            "@id": "d0e2048",
+                                            "bcl:num": "b",
+                                            "bcl:text": "by registered mail addressed to the owner at the owner's address",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e2056",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "as shown on a list provided under section 40,"
+                                                },
+                                                {
+                                                    "@id": "d0e2065",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "as shown on any record in the land title office relating to the owner's ownership of or interest in the former parcel, or"
+                                                },
+                                                {
+                                                    "@id": "d0e2074",
+                                                    "bcl:num": "iii",
+                                                    "bcl:text": "as last known to the assessor for the municipality;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e2084",
+                                            "bcl:num": "c",
+                                            "bcl:text": "on application to the Supreme Court, by substituted service in accordance with the order of the court."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2094",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The designated municipal officer may, in the municipal officer's discretion, send with any one or more of the notices",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2102",
+                                            "bcl:num": "a",
+                                            "bcl:text": "a copy of the plan of replotting, or"
+                                        },
+                                        {
+                                            "@id": "d0e2111",
+                                            "bcl:num": "b",
+                                            "bcl:text": "any portion of the plan on the same or a different scale."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2121",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The designated municipal officer must keep a record of the notices given under this section by showing the following, opposite the names of the owners of the former parcels in the replotting district:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2129",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the names of the owners to whom notices were sent;"
+                                        },
+                                        {
+                                            "@id": "d0e2138",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the former parcels concerned;"
+                                        },
+                                        {
+                                            "@id": "d0e2147",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the date and method of giving each notice."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2158",
+                            "bcl:marginalnote": "Time and place to hear complaints",
+                            "bcl:num": "27",
+                            "bcl:text": "The commissioner must establish a time and place for the hearing of complaints as follows:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e2169",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the time must be on a day that is not less than 40 days and not more than 90 days after the designated municipal officer has given the notices referred to in section 26;"
+                                },
+                                {
+                                    "@id": "d0e2178",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the place must be at the municipal hall or another suitable place in the municipality."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2188",
+                            "bcl:marginalnote": "Hearing by commissioner",
+                            "bcl:num": "28",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2196",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The commissioner must sit at the time and place established under section 27."
+                                },
+                                {
+                                    "@id": "d0e2205",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The commissioner must inquire into and pass on the sufficiency of all notices required to be given under section 26 and, in the commissioner's sole discretion, may direct further notices be given under that section."
+                                },
+                                {
+                                    "@id": "d0e2214",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The commissioner must hear complaints of owners who have given written notice of their intent to complain."
+                                },
+                                {
+                                    "@id": "d0e2223",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If the commissioner thinks it fit in the interest of justice, the commissioner may hear a complaint made to the commissioner at any time before the conclusion of the hearing."
+                                },
+                                {
+                                    "@id": "d0e2232",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The municipality may complain to the commissioner on its own behalf or on behalf of any other person."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2242",
+                            "bcl:marginalnote": "Process matters at hearing",
+                            "bcl:num": "29",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2250",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The proceedings before the commissioner must be public."
+                                },
+                                {
+                                    "@id": "d0e2259",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The following rules apply respecting evidence that may be accepted by the commissioner:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2267",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the commissioner may",
+                                            "bcl:subparagraph": [
+                                                {
+                                                    "@id": "d0e2275",
+                                                    "bcl:num": "i",
+                                                    "bcl:text": "receive any evidence that the commissioner thinks proper to admit and may take a view, and"
+                                                },
+                                                {
+                                                    "@id": "d0e2284",
+                                                    "bcl:num": "ii",
+                                                    "bcl:text": "examine on oath any person interested and the witnesses that appear before the commissioner;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e2294",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the commissioner may act on, accept or adopt the evidence the commissioner considers sufficient, whether on oath or not and whether written or oral;"
+                                        },
+                                        {
+                                            "@id": "d0e2303",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the commissioner has the right to insist on evidence being given or submitted orally under oath or by affidavit, but need not require any evidence to be so given or submitted;"
+                                        },
+                                        {
+                                            "@id": "d0e2312",
+                                            "bcl:num": "d",
+                                            "bcl:text": "the strict rules of evidence do not apply."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2322",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The commissioner may, at the request of any complaining owner or on the commissioner's own initiative, summon in writing any person to attend at the hearing, give evidence and produce any documentary evidence."
+                                },
+                                {
+                                    "@id": "d0e2331",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The commissioner may order reasonable fees and expenses to be paid to a witness summoned on the commissioner's own initiative and those fees and expenses must be paid by the municipality."
+                                },
+                                {
+                                    "@id": "d0e2340",
+                                    "bcl:num": "5",
+                                    "bcl:text": "A person who fails to respond to a summons under subsection (3) commits an offence and is liable on conviction to a penalty not greater than $100 and costs."
+                                },
+                                {
+                                    "@id": "d0e2349",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The commissioner or, in the absence of the commissioner, the corporate officer may adjourn the hearing from time to time and from place to place, whether or not any person interested is present at the time of the adjournment."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2359",
+                            "bcl:marginalnote": "Commissioner's powers and report",
+                            "bcl:num": "30",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2367",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The powers of the commissioner are confined to",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2375",
+                                            "bcl:num": "a",
+                                            "bcl:text": "passing on the sufficiency of all notices required to be given under section 26, and"
+                                        },
+                                        {
+                                            "@id": "d0e2384",
+                                            "bcl:num": "b",
+                                            "bcl:text": "hearing and deciding complaints under sections 22 and 23."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2394",
+                                    "bcl:num": "2",
+                                    "bcl:text": "The commissioner must keep a record of each complaint made to the commissioner and of the commissioner's decision on it."
+                                },
+                                {
+                                    "@id": "d0e2403",
+                                    "bcl:num": "3",
+                                    "bcl:text": "On the conclusion of the hearing, the commissioner must announce a date on which the commissioner's decisions will be given."
+                                },
+                                {
+                                    "@id": "d0e2412",
+                                    "bcl:num": "4",
+                                    "bcl:text": "Promptly after giving a decision, the commissioner must report to the council the complaint made to the commissioner and the decision in respect of the complaint."
+                                },
+                                {
+                                    "@id": "d0e2421",
+                                    "bcl:num": "5",
+                                    "bcl:text": "The report under subsection (4) must be open for examination by any complainant or a complainant's lawyer or agent."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2431",
+                            "bcl:marginalnote": "Appeal to Supreme Court",
+                            "bcl:num": "31",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2439",
+                                    "bcl:num": "1",
+                                    "bcl:text": "A decision of a commissioner may be appealed to the Supreme Court."
+                                },
+                                {
+                                    "@id": "d0e2448",
+                                    "bcl:num": "2",
+                                    "bcl:text": "An appeal under subsection (1) is an appeal by way of rehearing."
+                                },
+                                {
+                                    "@id": "d0e2457",
+                                    "bcl:num": "3",
+                                    "bcl:text": "An owner who appeals must, within 10 days after the decision, serve on the municipality a written notice of intention to appeal, setting out the grounds of appeal."
+                                },
+                                {
+                                    "@id": "d0e2466",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The municipality may appeal a decision of a commissioner, in which case it must, within 10 days after the decision, give the affected owner a written notice of intention to appeal, setting out the grounds of appeal."
+                                },
+                                {
+                                    "@id": "d0e2475",
+                                    "bcl:num": "5",
+                                    "bcl:text": "An appeal must be made on petition and 5 days' notice of the time for hearing the appeal must be given to the municipality or, if the municipality is appealing, to the owner."
+                                },
+                                {
+                                    "@id": "d0e2484",
+                                    "bcl:num": "6",
+                                    "bcl:text": "The municipality may give notice under subsection (4) or (5) in any manner provided in section 26 (3)."
+                                },
+                                {
+                                    "@id": "d0e2493",
+                                    "bcl:num": "7",
+                                    "bcl:text": "The powers of the Supreme Court on appeal are confined to hearing and deciding appeals from the decision of the commissioner on complaints under section 23."
+                                },
+                                {
+                                    "@id": "d0e2502",
+                                    "bcl:num": "8",
+                                    "bcl:text": "In term or during vacation, the court must hear the appeal in a summary manner and on the rules of evidence that govern a commissioner."
+                                },
+                                {
+                                    "@id": "d0e2511",
+                                    "bcl:num": "9",
+                                    "bcl:text": "The court may adjourn the hearing from time to time and defer judgment at pleasure, but judgment must be given within 6 weeks after the 10-day time limit set by subsection (3) or (4) for giving notice of appeal."
+                                },
+                                {
+                                    "@id": "d0e2520",
+                                    "bcl:num": "10",
+                                    "bcl:text": "If judgment is not given by the court within the period under subsection (9), the commissioner's decision stands."
+                                },
+                                {
+                                    "@id": "d0e2529",
+                                    "bcl:num": "11",
+                                    "bcl:text": "Persons making or opposing an appeal must pay their own costs and expenses and no party and party costs may be awarded by the court."
+                                },
+                                {
+                                    "@id": "d0e2538",
+                                    "bcl:num": "12",
+                                    "bcl:text": "A decision of the Supreme Court under this section may be appealed to the Court of Appeal with leave of a justice of the Court of Appeal."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2548",
+                            "bcl:marginalnote": "Payment of compensation",
+                            "bcl:num": "32",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2556",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The municipality must pay",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2564",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the amounts of compensation proposed by the replotting scheme within 3 months after its completion, or"
+                                        },
+                                        {
+                                            "@id": "d0e2573",
+                                            "bcl:num": "b",
+                                            "bcl:text": "if a complaint has been made, the compensation awarded by the commissioner, or the Supreme Court on appeal, within 3 months after the date of the award."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2583",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Either of the periods referred to in subsection (1) may be extended by the Supreme Court on application by the municipality without notice to any other person."
+                                },
+                                {
+                                    "@id": "d0e2592",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The compensation stands in the place of the land for which it was proposed or awarded, and is subject to any limitations and charges to which the land was subject."
+                                },
+                                {
+                                    "@id": "d0e2601",
+                                    "bcl:num": "4",
+                                    "bcl:text": "The municipality may, in any case it considers expedient, without leave or order, pay into the Supreme Court the amount of any compensation proposed or awarded."
+                                },
+                                {
+                                    "@id": "d0e2610",
+                                    "bcl:num": "5",
+                                    "bcl:text": "Payment into court under subsection (4) must be accompanied by a certificate of the corporate officer giving particulars of the person to whom and the land for which the compensation was proposed or awarded, and the district registrar of the Supreme Court must give that corporate officer a receipt, attached to or endorsed on a copy of the corporate officer's certificate."
+                                },
+                                {
+                                    "@id": "d0e2619",
+                                    "bcl:num": "6",
+                                    "bcl:text": "Compensation paid into court under subsection (4) must be paid out of court to the person entitled to it on the order of the court."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e2630",
+                    "bcl:num": "5",
+                    "bcl:text": "General Matters",
+                    "bcl:section": [
+                        {
+                            "@id": "d0e2638",
+                            "bcl:marginalnote": "Removal of buildings and other structures",
+                            "bcl:num": "33",
+                            "bcl:text": "The municipality may, by its employees, workers or contractors, do any of the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e2649",
+                                    "bcl:num": "a",
+                                    "bcl:text": "move any building, other structure, erection or utility required to be moved under a replotting scheme;"
+                                },
+                                {
+                                    "@id": "d0e2658",
+                                    "bcl:num": "b",
+                                    "bcl:text": "do any work or thing on private property in satisfaction of awards of compensation."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2668",
+                            "bcl:marginalnote": "Accounts and apportionment",
+                            "bcl:num": "34",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2676",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The municipality must keep a proper account of all money paid by it in connection with a replotting scheme."
+                                },
+                                {
+                                    "@id": "d0e2685",
+                                    "bcl:num": "2",
+                                    "bcl:text": "After the completion of a replotting scheme and the payment of all compensation and incidental expenses, the municipality must prepare a statement showing the net cost."
+                                },
+                                {
+                                    "@id": "d0e2694",
+                                    "bcl:num": "3",
+                                    "bcl:text": "The statement must debit the municipality with the value of all surplus land allotted to it and any money receivable under section 5 or otherwise on account of the replotting scheme."
+                                },
+                                {
+                                    "@id": "d0e2703",
+                                    "bcl:num": "4",
+                                    "bcl:text": "If applicable, the net cost shown on the statement must be apportioned between the municipality and the other owners in the manner set out in the replotting scheme."
+                                },
+                                {
+                                    "@id": "d0e2712",
+                                    "bcl:num": "5",
+                                    "bcl:text": "If the replotting scheme does not establish an apportionment, the net cost shown on the statement must be apportioned as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2720",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the municipality's portion of the net cost is calculated in accordance with the following formula:",
+                                            "oasis:table": [
+                                                {
+                                                    "@style": "1",
+                                                    "@id": "d0e2728",
+                                                    "oasis:tgroup": {
+                                                        "@cols": "3",
+                                                        "oasis:colspec": [
+                                                            {
+                                                                "@colname": "c1",
+                                                                "@colnum": "1"
+                                                            },
+                                                            {
+                                                                "@colname": "c2",
+                                                                "@colnum": "2"
+                                                            },
+                                                            {
+                                                                "@colname": "c3",
+                                                                "@colnum": "3"
+                                                            }
+                                                        ],
+                                                        "oasis:tbody": {
+                                                            "oasis:trow": [
+                                                                {
+                                                                    "oasis:entry": [
+                                                                        {
+                                                                            "@colname": "c1",
+                                                                            "@align": "center",
+                                                                            "@rowspan": "3",
+                                                                            "oasis:line": "municipality's portion ="
+                                                                        },
+                                                                        {
+                                                                            "@colname": "c2",
+                                                                            "@align": "center",
+                                                                            "oasis:line": "special area"
+                                                                        },
+                                                                        {
+                                                                            "@colname": "c3",
+                                                                            "@align": "center",
+                                                                            "@rowspan": "3",
+                                                                            "oasis:line": "\u00d7 total net cost"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "oasis:entry": {
+                                                                        "@colname": "c2",
+                                                                        "@align": "center",
+                                                                        "oasis:line": {
+                                                                            "in:hr": null
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "oasis:entry": {
+                                                                        "@colname": "c2",
+                                                                        "@align": "center",
+                                                                        "oasis:line": "area of the replotting district"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "@style": "1",
+                                                    "@id": "d0e2772",
+                                                    "oasis:tgroup": {
+                                                        "@cols": "3",
+                                                        "oasis:colspec": [
+                                                            {
+                                                                "@colname": "c1",
+                                                                "@colnum": "1"
+                                                            },
+                                                            {
+                                                                "@colname": "c2",
+                                                                "@colnum": "2"
+                                                            },
+                                                            {
+                                                                "@colname": "c3",
+                                                                "@colnum": "3"
+                                                            }
+                                                        ],
+                                                        "oasis:tbody": {
+                                                            "oasis:trow": [
+                                                                {
+                                                                    "oasis:entry": {
+                                                                        "@colname": "c1",
+                                                                        "@colspan": "3",
+                                                                        "oasis:line": "where"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "oasis:entry": [
+                                                                        {
+                                                                            "@colname": "c1",
+                                                                            "@valign": "top",
+                                                                            "oasis:line": "special area"
+                                                                        },
+                                                                        {
+                                                                            "@colname": "c2",
+                                                                            "@valign": "top",
+                                                                            "@align": "center",
+                                                                            "oasis:line": "="
+                                                                        },
+                                                                        {
+                                                                            "@colname": "c3",
+                                                                            "@valign": "top",
+                                                                            "oasis:line": "the sum of the areas of the highways, public grounds and unsold land of the municipality at the completion of the replotting scheme;"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@id": "d0e2810",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the remainder is the owners' portion of the cost."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2821",
+                            "bcl:marginalnote": "Paying net cost",
+                            "bcl:num": "35",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2829",
+                                    "bcl:num": "1",
+                                    "bcl:text": "The net cost of the replotting scheme may be raised as follows:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2837",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the municipality's portion of the cost may be raised by a special rate levied and collected on and from all the taxable land or land and improvements in the municipality;"
+                                        },
+                                        {
+                                            "@id": "d0e2846",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the owner's portion of the cost may be raised by a special rate levied and collected on and from the taxable land in the replotting district, according to the respective values of that land as shown in the first revised assessment roll of the municipality containing the new parcels."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2856",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/03026_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Community Charter"
+                                        },
+                                        "#text": "As an alternative to subsection (1), the net cost of the replotting scheme may be paid by borrowing the required amount on debentures issued under the same provisions as if the scheme had been carried out as a local area service under the , with"
+                                    },
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2864",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the municipality's portion of the cost being raised by a special rate levied and collected annually on and from all the taxable land or land and improvements in the municipality, and"
+                                        },
+                                        {
+                                            "@id": "d0e2873",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the owners' portion of the cost being raised by a special rate levied and collected annually on and from the taxable land in the replotting district according to the respective values of that land as shown in the revised assessment rolls for the years during which the special rates are levied."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e2883",
+                                    "bcl:num": "3",
+                                    "bcl:text": "Debentures under subsection (2) must be repayable within 10 years after the date of issue."
+                                },
+                                {
+                                    "@id": "d0e2892",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A special rate levied under subsection (1) or (2) must be due and payable to the municipality at the same time as other annual municipal rates and taxes, and",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e2900",
+                                            "bcl:num": "a",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/03026_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Community Charter"
+                                                },
+                                                "in:desc": "[Local Service Taxes]",
+                                                "#text": "Part 7 of the , except Division 5 , applies to subsections (1) (a) and (2) (a) of this section, and"
+                                            }
+                                        },
+                                        {
+                                            "@id": "d0e2909",
+                                            "bcl:num": "b",
+                                            "bcl:text": {
+                                                "bcl:link": {
+                                                    "@resource": "leg",
+                                                    "@xlink:href": "/legislation/03026_00",
+                                                    "@xlink:type": "locator",
+                                                    "in:doc": "Community Charter"
+                                                },
+                                                "#text": "Division 5 of Part 7 of the  applies to subsections (1) (b) and (2) (b) of this section."
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2920",
+                            "bcl:marginalnote": "Former highways to be maintained",
+                            "bcl:num": "36",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e2928",
+                                    "bcl:num": "1",
+                                    "bcl:text": "To the extent that new highways under a replotting scheme are not constructed and open for traffic during the 6 months after the completion of the scheme, the former highways and all public utilities and other works on them may be maintained if those highways, utilities and other works do not interfere with or disturb the reasonable and necessary use and occupation of new parcels."
+                                },
+                                {
+                                    "@id": "d0e2937",
+                                    "bcl:num": "2",
+                                    "bcl:text": "No person has a right to compensation or a right of action for damages against the municipality or against any other person for maintaining, under subsection (1), the former highways and all public utilities and other works on them."
+                                },
+                                {
+                                    "@id": "d0e2946",
+                                    "bcl:num": "3",
+                                    "bcl:text": "During the period referred to in subsection (1), the municipality or its licensees may remove the public utilities and works."
+                                },
+                                {
+                                    "@id": "d0e2955",
+                                    "bcl:num": "4",
+                                    "bcl:text": "A person who unreasonably obstructs the use of a former highway during the period referred to in subsection (1) commits an offence and is liable on conviction to a penalty not greater than $100."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2965",
+                            "bcl:marginalnote": "Limitation of claims",
+                            "bcl:num": "37",
+                            "bcl:text": "Other than the right of complaint and appeal provided in this Act, no person is entitled to make or proceed with any demand, claim or action against the municipality, any of its officers, employees or workers, or against the commissioner or the Provincial government, for the following:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e2976",
+                                    "bcl:num": "a",
+                                    "bcl:text": "any loss or damage sustained or threatened by reason of a replotting scheme;"
+                                },
+                                {
+                                    "@id": "d0e2985",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any matter caused by any proceedings taken or thing done under this Act."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e2995",
+                            "bcl:marginalnote": "Disposal of municipal parcels",
+                            "bcl:num": "38",
+                            "bcl:text": "The municipality may dispose of a new parcel allotted to it in the manner provided for disposing of land acquired by it at a tax sale."
+                        },
+                        {
+                            "@id": "d0e3007",
+                            "bcl:marginalnote": "Taxation during proceedings",
+                            "bcl:num": "39",
+                            "bcl:text": "Nothing in this Act affects the power of the municipality to assess and to levy rates and taxes on the former parcels during the replotting scheme and before its completion."
+                        },
+                        {
+                            "@id": "d0e3019",
+                            "bcl:marginalnote": "List of owners must be provided to municipality",
+                            "bcl:num": "40",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e3027",
+                                    "bcl:num": "1",
+                                    "bcl:text": "At the municipality's request and on payment of reasonable fees specified by the registrar of land titles for the work involved, the registrar must provide any required information to be obtained from the records and a list of the names and addresses of the registered owners of all former parcels in the replotting district at the time of the initiation of the replotting scheme."
+                                },
+                                {
+                                    "@id": "d0e3036",
+                                    "bcl:num": "2",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96245_01",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Act"
+                                        },
+                                        "#text": "On similar request, the ministry of the minister responsible for the administration of the  must provide a list of the names and addresses of the purchasers of Crown land in the replotting district under agreement for sale."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e3046",
+                            "bcl:marginalnote": "Land title fees",
+                            "bcl:num": "41",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96250_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Land Title Act"
+                                },
+                                "#text": "The fees payable to the registrar of land titles in respect of the matters under this Act are to be governed by the ."
+                            }
+                        },
+                        {
+                            "@id": "d0e3058",
+                            "bcl:marginalnote": "Disputes or questions may be referred to Supreme Court",
+                            "bcl:num": "42",
+                            "bcl:subsection": [
+                                {
+                                    "@id": "d0e3065",
+                                    "bcl:num": "1",
+                                    "bcl:text": "Disputes or questions on the following may be referred to the Supreme Court for decision:",
+                                    "bcl:paragraph": [
+                                        {
+                                            "@id": "d0e3073",
+                                            "bcl:num": "a",
+                                            "bcl:text": "the construction of any provision of this Act;"
+                                        },
+                                        {
+                                            "@id": "d0e3082",
+                                            "bcl:num": "b",
+                                            "bcl:text": "the sufficiency and validity of proceedings taken under this Act;"
+                                        },
+                                        {
+                                            "@id": "d0e3091",
+                                            "bcl:num": "c",
+                                            "bcl:text": "the manner in which a proceeding is to be taken."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e3101",
+                                    "bcl:num": "2",
+                                    "bcl:text": "Section 31 applies to a reference under subsection (1)."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Revision Schedule \u2014 Consequential Amendment",
+                "bcl:num": null,
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of this Revision Schedule.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "@id": "d1e54",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": {
+                                            "in:strong": null
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:em": "1"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": null
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/E3tlc96125",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Expropriation Act"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

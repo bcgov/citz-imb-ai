@@ -1,0 +1,2837 @@
+{
+    "act:act": {
+        "@xmlns:act": "http://www.gov.bc.ca/2013/legislation/act",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:bcl": "http://www.gov.bc.ca/2013/bclegislation",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:in": "http://www.qp.gov.bc.ca/2013/inline",
+        "@xmlns:fun": "http://www.bclaws.ca/xslt/functions",
+        "@xmlns:oasis": "http://docs.oasis-open.org/ns/oasis-exchange/table",
+        "@xmlns:reg": "http://www.gov.bc.ca/2013/legislation/regulation",
+        "@xsi:schemaLocation": "http://www.gov.bc.ca/2013/legislation/act http://standards.qp.gov.bc.ca/standards/2013/act_1.0.xsd",
+        "@id": "00_14027_01",
+        "act:title": "Canadian Pacific Railway (Stone and Timber) Settlement Act",
+        "act:chapter": "27",
+        "act:yearenacted": "2014",
+        "act:assentedto": "November 27, 2014",
+        "act:currency": {
+            "act:tlcDirPath": "781755088/14027/1402701",
+            "act:tlc": "E3tlc14027"
+        },
+        "act:content": {
+            "bcl:section": [
+                {
+                    "@id": "d0e22",
+                    "bcl:marginalnote": "Definitions",
+                    "bcl:num": "1",
+                    "bcl:text": "In this Act:",
+                    "bcl:definition": [
+                        {
+                            "@id": "d0e33",
+                            "bcl:text": {
+                                "in:term": "CPR",
+                                "#text": "means the Canadian Pacific Railway Company;"
+                            }
+                        },
+                        {
+                            "@id": "d0e41",
+                            "bcl:text": {
+                                "in:term": "current action",
+                                "#text": "means Action No. S134003 in the Vancouver Registry of the Supreme Court;"
+                            }
+                        },
+                        {
+                            "@id": "d0e49",
+                            "bcl:text": {
+                                "in:term": "historic grant of railway land",
+                                "#text": "means a grant or disposition of railway land by a historic railway company;"
+                            }
+                        },
+                        {
+                            "@id": "d0e57",
+                            "bcl:text": {
+                                "in:term": "historic railway company",
+                                "#text": "means any of the following:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e64",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the British Columbia Southern Railway Company;"
+                                },
+                                {
+                                    "@id": "d0e73",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the Columbia and Kootenay Railway and Navigation Company;"
+                                },
+                                {
+                                    "@id": "d0e82",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the Columbia and Western Railway Company;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e92",
+                            "bcl:text": {
+                                "in:term": "interest",
+                                "#text": "includes a claim, estate, right or title;"
+                            }
+                        },
+                        {
+                            "@id": "d0e100",
+                            "bcl:text": {
+                                "in:term": "railway land",
+                                "#text": "means any land"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e107",
+                                    "bcl:num": "a",
+                                    "bcl:text": "that was granted by the government to a historic railway company, and"
+                                },
+                                {
+                                    "@id": "d0e116",
+                                    "bcl:num": "b",
+                                    "bcl:text": "that was, at the time of the grant referred to in paragraph (a), located in a district lot set out in Column 1 of the Schedule in the land district, or the division of the land district, set out opposite in Column 2;"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e126",
+                            "bcl:text": {
+                                "in:term": "settlement agreement",
+                                "#text": "means the settlement agreement between CPR and the government in relation to the current action;"
+                            }
+                        },
+                        {
+                            "@id": "d0e134",
+                            "bcl:text": {
+                                "in:term": "stone reservation",
+                                "#text": "means a term or condition included in a historic grant of railway land that reserved or purported to reserve one or both of the following to the historic railway company:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e141",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an interest in stone, including, without limitation, valuable or marketable stone, in, on or under the railway land;"
+                                },
+                                {
+                                    "@id": "d0e150",
+                                    "bcl:num": "b",
+                                    "bcl:text": "interests incidental to the interest referred to in paragraph (a), including, without limitation, interests respecting the following:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e158",
+                                            "bcl:num": "i",
+                                            "bcl:text": "ingress to and egress from the railway land;"
+                                        },
+                                        {
+                                            "@id": "d0e167",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "the right, upon payment of compensation, to extract and carry away stone from the railway land;"
+                                        },
+                                        {
+                                            "@id": "d0e176",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "the right to take and use the railway land to carry on operations incidental to the right referred to in subparagraph (ii) of this paragraph;"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e187",
+                            "bcl:text": {
+                                "in:term": "stone reservation interest",
+                                "#text": "means an interest resulting from a stone reservation;"
+                            }
+                        },
+                        {
+                            "@id": "d0e195",
+                            "bcl:text": {
+                                "in:term": "timber reservation",
+                                "#text": "means a term or condition included in a historic grant of railway land that reserved or purported to reserve one or both of the following to the historic railway company:"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e202",
+                                    "bcl:num": "a",
+                                    "bcl:text": "an interest in wood, timber or trees on the railway land;"
+                                },
+                                {
+                                    "@id": "d0e211",
+                                    "bcl:num": "b",
+                                    "bcl:text": "interests incidental to the interest referred to in paragraph (a), including, without limitation, interests respecting the following:",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e219",
+                                            "bcl:num": "i",
+                                            "bcl:text": "ingress to and egress from the railway land;"
+                                        },
+                                        {
+                                            "@id": "d0e228",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "covenants of the grantee limiting the cutting of wood, timber or trees on the railway land;"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e239",
+                            "bcl:text": {
+                                "in:term": "timber reservation interest",
+                                "#text": "means an interest resulting from a timber reservation."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e248",
+                    "bcl:marginalnote": "Extinguishment of stone reservation interests",
+                    "bcl:num": "2",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e256",
+                            "bcl:num": "1",
+                            "bcl:text": "All stone reservation interests held by CPR are extinguished."
+                        },
+                        {
+                            "@id": "d0e265",
+                            "bcl:num": "2",
+                            "bcl:text": "A historic grant of railway land that includes a stone reservation in respect of which the stone reservation interest is extinguished under subsection (1) must be read as if the stone reservation had not been included in the historic grant of railway land."
+                        },
+                        {
+                            "@id": "d0e274",
+                            "bcl:num": "3",
+                            "bcl:text": "For certainty and without limiting subsection (2), that subsection applies for the purpose of determining the extent of an interest, if any, that a person holds in railway land after the extinguishment of a stone reservation interest under subsection (1)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e284",
+                    "bcl:marginalnote": "Extinguishment of timber reservation interests",
+                    "bcl:num": "3",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e292",
+                            "bcl:num": "1",
+                            "bcl:text": "All timber reservation interests held by CPR are extinguished."
+                        },
+                        {
+                            "@id": "d0e301",
+                            "bcl:num": "2",
+                            "bcl:text": "A historic grant of railway land that includes a timber reservation in respect of which the timber reservation interest is extinguished under subsection (1) must be read as if the timber reservation had not been included in the historic grant of railway land."
+                        },
+                        {
+                            "@id": "d0e310",
+                            "bcl:num": "3",
+                            "bcl:text": "For certainty and without limiting subsection (2), that subsection applies for the purpose of determining the extent of an interest, if any, that a person holds in railway land after the extinguishment of a timber reservation interest under subsection (1)."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e320",
+                    "bcl:marginalnote": "Land title records",
+                    "bcl:num": "4",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e328",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d0e336",
+                                    "bcl:text": {
+                                        "in:term": "owner",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "has the same meaning as in the ;"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e344",
+                                    "bcl:text": {
+                                        "in:term": "registrar",
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "has the same meaning as in the ."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e353",
+                            "bcl:num": "2",
+                            "bcl:text": [
+                                "Despite any enactment, if a stone reservation interest or timber reservation interest",
+                                "the registrar, on application by a person who is an owner in respect of the railway land, may cancel the registration of the stone reservation interest or timber reservation interest."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e361",
+                                    "bcl:num": "a",
+                                    "bcl:text": "is extinguished under section 2 (1) or 3 (1), as applicable, and"
+                                },
+                                {
+                                    "@id": "d0e370",
+                                    "bcl:num": "b",
+                                    "bcl:text": {
+                                        "bcl:link": {
+                                            "@resource": "leg",
+                                            "@xlink:href": "/legislation/96250_00",
+                                            "@xlink:type": "locator",
+                                            "in:doc": "Land Title Act"
+                                        },
+                                        "#text": "remains registered under the  in favour of a historic railway company or CPR, or any other person, against a title to railway land,"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e383",
+                            "bcl:num": "3",
+                            "bcl:text": {
+                                "bcl:link": {
+                                    "@resource": "leg",
+                                    "@xlink:href": "/legislation/96250_00",
+                                    "@xlink:type": "locator",
+                                    "in:doc": "Land Title Act"
+                                },
+                                "#text": "For certainty, the following take effect without any registration or cancellation of registration under the :"
+                            },
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e391",
+                                    "bcl:num": "a",
+                                    "bcl:text": "the extinguishment of a stone reservation interest or timber reservation interest under section 2 (1) or 3 (1), as applicable;"
+                                },
+                                {
+                                    "@id": "d0e400",
+                                    "bcl:num": "b",
+                                    "bcl:text": "any change to the extent of an interest in railway land resulting from an extinguishment referred to in paragraph (a) of this subsection."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e411",
+                    "bcl:marginalnote": "Settlement and extinguishment of claims",
+                    "bcl:num": "5",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e419",
+                            "bcl:num": "1",
+                            "bcl:text": "The payment of compensation by the government to CPR under the settlement agreement constitutes full and final settlement of all claims by CPR against any person, whether or not the person is named or described in the current action, in relation to any of the following matters:",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e427",
+                                    "bcl:num": "a",
+                                    "bcl:text": "a matter that is raised or referred to in the current action;"
+                                },
+                                {
+                                    "@id": "d0e436",
+                                    "bcl:num": "b",
+                                    "bcl:text": "a matter that could have been raised or referred to in the current action;"
+                                },
+                                {
+                                    "@id": "d0e445",
+                                    "bcl:num": "c",
+                                    "bcl:text": "the enactment of this Act including, without limitation, the extinguishment of",
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e453",
+                                            "bcl:num": "i",
+                                            "bcl:text": "stone reservation interests under section 2 (1),"
+                                        },
+                                        {
+                                            "@id": "d0e462",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "timber reservation interests under section 3 (1), and"
+                                        },
+                                        {
+                                            "@id": "d0e471",
+                                            "bcl:num": "iii",
+                                            "bcl:text": "claims by CPR under subsection (2) of this section."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e482",
+                            "bcl:num": "2",
+                            "bcl:text": "All claims by CPR against any person in relation to any matter referred to in subsection (1) are extinguished."
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e492",
+                    "bcl:marginalnote": "Validation",
+                    "bcl:num": "6",
+                    "bcl:subsection": [
+                        {
+                            "@id": "d0e500",
+                            "bcl:num": "1",
+                            "bcl:text": "In this section:",
+                            "bcl:definition": [
+                                {
+                                    "@id": "d0e508",
+                                    "bcl:text": {
+                                        "in:term": "effective date",
+                                        "#text": "means the date this section comes into force;"
+                                    }
+                                },
+                                {
+                                    "@id": "d0e516",
+                                    "bcl:text": {
+                                        "in:term": "resource instrument",
+                                        "#text": "means a title, grant, transfer, easement, disposition, lease, licence, permit, agreement or other instrument created or issued by, or entered into with, the government."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e525",
+                            "bcl:num": "2",
+                            "bcl:text": "Despite any enactment,",
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e533",
+                                    "bcl:num": "a",
+                                    "bcl:text": [
+                                        "every resource instrument that",
+                                        "is confirmed and validated, effective on the date the resource instrument was created, issued or entered into, and"
+                                    ],
+                                    "bcl:subparagraph": [
+                                        {
+                                            "@id": "d0e541",
+                                            "bcl:num": "i",
+                                            "bcl:text": "was created, issued or entered into before the effective date, and"
+                                        },
+                                        {
+                                            "@id": "d0e550",
+                                            "bcl:num": "ii",
+                                            "bcl:text": "would have been valid had stone reservations and timber reservations not been included in any historic grant of railway land"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "d0e563",
+                                    "bcl:num": "b",
+                                    "bcl:text": "the government is conclusively deemed, at the time a resource instrument referred to in paragraph (a) was created, issued or entered into, to have had the authority to create, issue or enter into the resource instrument."
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "d0e573",
+                            "bcl:num": "3",
+                            "bcl:text": [
+                                "Despite any enactment, all things done, before the effective date, under a resource instrument or an enactment that would have been validly done",
+                                "are conclusively deemed to have been validly done."
+                            ],
+                            "bcl:paragraph": [
+                                {
+                                    "@id": "d0e581",
+                                    "bcl:num": "a",
+                                    "bcl:text": "had this section been in force on the day they were done, and"
+                                },
+                                {
+                                    "@id": "d0e590",
+                                    "bcl:num": "b",
+                                    "bcl:text": "had stone reservations and timber reservations not been included in any historic grant of railway land"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "d0e604",
+                    "bcl:marginalnote": "Certain actions and proceedings prohibited",
+                    "bcl:num": "7",
+                    "bcl:text": "A person has no right of action and must not commence or maintain an action or other proceeding against the government for compensation or damages in relation to the enactment of this Act."
+                },
+                {
+                    "@id": "d0e616",
+                    "bcl:marginalnote": "Enforcement of settlement agreement",
+                    "bcl:num": "8",
+                    "bcl:text": "For certainty, sections 5 (2) and 7 do not apply to a claim, action or proceeding by CPR or the government to enforce or determine a right or obligation under the settlement agreement."
+                },
+                {
+                    "@id": "d0e628",
+                    "bcl:marginalnote": {
+                        "in:doc": "Offence Act"
+                    },
+                    "bcl:num": "9",
+                    "bcl:text": {
+                        "bcl:link": {
+                            "@resource": "leg",
+                            "@xlink:href": "/legislation/96338_01",
+                            "@xlink:type": "locator",
+                            "in:doc": "Offence Act"
+                        },
+                        "#text": "Section 5 of the  does not apply to this Act."
+                    }
+                },
+                {
+                    "@id": "d0e641",
+                    "bcl:marginalnote": "Retroactive effect",
+                    "bcl:num": "10",
+                    "bcl:text": "This Act is retroactive to the extent necessary to give full force and effect to its provisions and must not be construed as lacking retroactive effect in relation to any matter because it makes no specific reference to that matter."
+                },
+                {
+                    "@id": "d0e653",
+                    "bcl:marginalnote": "Repealed",
+                    "bcl:num": "11",
+                    "bcl:text": "[Repealed 2014-27-11.]"
+                },
+                {
+                    "@id": "d0e796",
+                    "bcl:marginalnote": "Commencement",
+                    "bcl:num": "13",
+                    "bcl:text": "This Act comes into force by regulation of the Lieutenant Governor in Council."
+                }
+            ],
+            "bcl:conseqhead": {
+                "bcl:text": "Consequential Amendment",
+                "bcl:num": "12",
+                "bcl:conseqnote": {
+                    "bcl:editorialnote": {
+                        "in:em": "[Note: See Table of Legislative Changes for the status of section 12.]"
+                    }
+                },
+                "oasis:table": {
+                    "@style": "1",
+                    "@id": "d0e733",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "c1",
+                                "@colnum": "1",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c2",
+                                "@colnum": "2",
+                                "@align": "center",
+                                "@border": "0"
+                            },
+                            {
+                                "@colname": "c3",
+                                "@colnum": "3",
+                                "@align": "center",
+                                "@border": "0"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "c1",
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:strong": "Section(s)"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "c2",
+                                        "@width": "35",
+                                        "oasis:line": null
+                                    },
+                                    {
+                                        "@colname": "c3",
+                                        "oasis:line": {
+                                            "in:strong": "Affected Act"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@align": "right",
+                                        "oasis:line": {
+                                            "in:em": "12"
+                                        }
+                                    },
+                                    {
+                                        "oasis:line": null
+                                    },
+                                    {
+                                        "oasis:line": {
+                                            "bcl:link": {
+                                                "@resource": "leg",
+                                                "@xlink:href": "/legislation/E3tlc96125",
+                                                "@xlink:type": "locator",
+                                                "in:doc": "Expropriation Act"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "bcl:schedule": {
+                "@id": "d0e808",
+                "bcl:scheduletitle": "Schedule",
+                "bcl:centertext": {
+                    "in:em": "(Section 1)"
+                },
+                "oasis:table": {
+                    "@style": "2",
+                    "@id": "d0e817",
+                    "oasis:tgroup": {
+                        "@cols": "3",
+                        "oasis:colspec": [
+                            {
+                                "@colname": "1"
+                            },
+                            {
+                                "@colname": "2"
+                            },
+                            {
+                                "@colname": "3"
+                            }
+                        ],
+                        "oasis:thead": {
+                            "oasis:trow": {
+                                "oasis:entry": [
+                                    {
+                                        "@colname": "1",
+                                        "@align": "center",
+                                        "oasis:line": {
+                                            "in:strong": "Item"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "2",
+                                        "@align": "center",
+                                        "oasis:line": {
+                                            "in:strong": "Column 1",
+                                            "in:br": null,
+                                            "#text": "District Lot"
+                                        }
+                                    },
+                                    {
+                                        "@colname": "3",
+                                        "@align": "center",
+                                        "oasis:line": {
+                                            "in:strong": "Column 2",
+                                            "in:br": null,
+                                            "#text": "Land District"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "oasis:tbody": {
+                            "oasis:trow": [
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "1"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "301A"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "2"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "302A"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "3"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "303"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "4"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "304"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "5"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "306"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "6"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "309"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "7"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "310"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "8"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "311"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "9"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "312"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "10"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "313"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "11"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "314"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "12"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "315"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "13"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "316"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "14"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "317"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "15"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "318"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "16"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "319"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "17"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "320"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "18"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "321"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "19"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "322"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "20"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "323"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "21"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "324"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "22"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "325"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "23"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "326"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "24"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "327"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "25"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "328"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "26"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "329"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "27"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "330"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "28"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "331"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "29"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "332"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "30"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "334"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "31"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "335"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "32"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "336"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "33"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "338"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "34"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "339"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "35"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "340"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "36"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "341"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "37"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "342"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "38"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "343"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "39"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "344"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "40"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "345"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "41"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "346"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "42"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "347"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "43"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "348"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "44"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "349"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "45"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "350"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "46"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "351"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "47"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "352"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "48"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "353"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "49"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "354"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "50"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "355"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "51"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "356"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "52"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "357"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "53"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "358"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "54"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "359"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "55"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "360"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "56"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "361"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "57"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "362"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "58"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "363"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "59"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "365"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "60"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "366"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "61"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "367"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "62"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "373"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "63"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "375"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "64"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "376"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "65"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "377"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "66"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "378"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "67"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "379"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "68"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "380"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "69"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "381"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "70"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "382"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "71"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "383"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "72"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "384"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "73"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "397"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "74"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "398"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "75"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "400"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "76"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "421"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "77"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "422"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "78"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "423"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "79"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "424"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "80"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "425"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "81"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "426"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "82"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4588"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "83"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4589"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "84"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4590"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "85"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4591"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "86"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4592"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "87"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4595"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "88"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4596"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "89"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4597"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "90"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4598"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "91"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "4599"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "92"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "5816"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "93"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "5817"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "94"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "7159"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "95"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "7160"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "96"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "7161"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Kootenay"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "97"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2698"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "98"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2699"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "99"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2700"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "100"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2701"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "101"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2702"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "102"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2703"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "103"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2704"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "104"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2705"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "105"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2706"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "106"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2707"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "107"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2708"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "108"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2709"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "109"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2710"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Osoyoos Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "110"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "2711"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Similkameen Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "111"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "3635"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Similkameen Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "112"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "3636"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Similkameen Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "113"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "3637"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Similkameen Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "114"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "3638"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Similkameen Division of Yale"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "oasis:entry": [
+                                        {
+                                            "@colname": "1",
+                                            "@align": "center",
+                                            "oasis:line": "115"
+                                        },
+                                        {
+                                            "@colname": "2",
+                                            "@align": "center",
+                                            "oasis:line": "3639"
+                                        },
+                                        {
+                                            "@colname": "3",
+                                            "@align": "center",
+                                            "oasis:line": "Similkameen Division of Yale"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
