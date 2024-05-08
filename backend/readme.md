@@ -13,7 +13,7 @@ The best way to run the notebooks is to use the docker container. Run the compos
  The notebooks are organized in a way that you can start from the basics and move to more advanced topics. The notebooks are organized in the following way:
 
 
-| chapter | Section | Desecration | Notebook Link |
+| chapter | Section | Description | Notebook Link |
 | --- | --- | --- | --- |
 | 1 | Getting Started | This is an example of how to get started with sematic search and RAG using just the act titles | [Example 1](https://github.com/bcgov/citz-imb-ai/tree/main/backend/init.ipynb)
 | 2 | Trulens | This is an example of how to use trulens to track the full RAG pipeline | [Example 2]((https://github.com/bcgov/citz-imb-ai/tree/main/backend/trulens.ipynb))
