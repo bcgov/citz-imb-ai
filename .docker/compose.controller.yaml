@@ -27,8 +27,8 @@ services:
   ########################## AI Interface #########################################
   ai_interface:
     build:
-      context: ../backend
-      dockerfile: ../backend/Dockerfile
+      context: ../examples
+      dockerfile: ../examples/Dockerfile
     platform: linux/amd64
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
@@ -128,8 +128,8 @@ services:
     container_name: feedback_frontend
     image: nginx:1.25.5
     build:
-      context: ../frontend
-      dockerfile: ../frontend/Dockerfile
+      context: ../feedback/frontend
+      dockerfile: Dockerfile
     ports:
       - "9000:9000"
     networks:
@@ -140,9 +140,9 @@ services:
 
   feedback_backend:
     container_name: feedback_backend
-    image: python:3.9
+    image: python:3.11
     build:
-      context: ../backend/fastapi
+      context: ../feedback/backend-fastapi
       dockerfile: Dockerfile
     environment:
       - TRULENS_USER=${TRULENS_USER:-postgres}
@@ -150,6 +150,7 @@ services:
       - TRULENS_DB=${TRULENS_DB:-trulens}
       - TRULENS_PORT=${TRULENS_PORT:-5432}
       - TRULENS_HOST=trulens
+      - DISABLE_NEST_ASYNCIO=True
     ports:
       - "10000:10000"
     networks:

@@ -19,7 +19,7 @@ import json
 app = FastAPI()
 kg = None
 tru = None
-APP_ID = 'TopK_Feedback_System_v1'
+APP_ID = 'TopK_Feedback_System_v2'
 #rag = RAG_from_scratch()
 
 templates = Jinja2Templates(directory="templates")
