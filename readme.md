@@ -9,5 +9,43 @@
 
 Note :: Add future dependences in requirement.txt so that we can keep track of the them and avoid code breakage
 
-For all the example notebooks click here: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/backend)
+For all the example notebooks click here: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/examples)
 
+## Documentation
+To navigate all the work done in the project, please refer to the table below:
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="8" align="center">Overview</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="3" align="center"><a href="">Architecture</a></td>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback">Feedback Infrastructure</a></td>
+            <td colspan="2"><a href="">Data Cleaning</a></td>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/hardware">Hardware</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><a href="">Embeddings
+            <td colspan="3" align="center"><a href="">LLM's</a></td>
+            <td colspan="3" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
+        </tr>
+        <tr>
+            <th colspan="8"> Feedback infrastructure </th>
+        <tr>
+        <tr>
+            <td colspan="8" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback"> Embedding Adaptors</a>
+        </tr>
+        <tr>
+            <th colspan="8"> Hardware </th>
+        <tr>
+        <tr>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback"> Intel 3rd Gen Xeon CPU</a>
+            </td>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback"> Intel 4th Gen Xeon CPU</a>
+            </td>
+        </tr>
+    </tbody>
+</table>    
