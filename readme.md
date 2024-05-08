@@ -22,10 +22,15 @@ To navigate all the work done in the project, please refer to the table below:
     </thead>
     <tbody>
         <tr>
-            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
+            <td colspan="3" align="center"><a href="">Architecture</a></td>
             <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback">Feedback Infrastructure</a></td>
             <td colspan="2"><a href="">Data Cleaning</a></td>
-            <td colspan="2"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/hardware">Hardware</a></td>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/hardware">Hardware</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><a href="">Embeddings
+            <td colspan="3" align="center"><a href="">LLM's</a></td>
+            <td colspan="3" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
         </tr>
         <tr>
             <th colspan="8"> Feedback infrastructure </th>
