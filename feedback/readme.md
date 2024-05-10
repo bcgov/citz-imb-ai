@@ -4,6 +4,7 @@ This folder contains the infrastructure to improve the A.I by using human feedba
 
 ## Embedding Adaptors
 ![Embedding Adaptors Concept](../assets/embedding_adaptors_1.png)
+
 Source: [Efficient Domain Adaptation of Sentence Embeddings Using Adapters](https://www.catalyzex.com/paper/arxiv:2307.03104)
 
 One of the methods to improve the A.I espeically in a R.A.G application is to use embedding adaptors. Embedding adaptors is a custom neural network that works alogin side the existing model to improve the embedding search. 
@@ -25,14 +26,15 @@ Once the feedback is collected, we can use the feedback to train the embedding a
 1. Deploy the trulens database
 2. Deploy the frontend application
 3. Deploy the backend application
-4. Run the ai_interface docker container and lauch the jupyter notebook
-5. Run the embedding [adaptors notebook](https://github.com/bcgov/citz-imb-ai/blob/main/examples/embedding_adaptors.ipynb)
-6. Train the embedding adaptors
+4. Deploy NEO4J database
+5. Run the ai_interface docker container and lauch the jupyter notebook
+6. Run the embedding [adaptors notebook](https://github.com/bcgov/citz-imb-ai/blob/main/examples/embedding_adaptors.ipynb)
+7. Train the embedding adaptors
 
 Once the embedding adaptors are trained, you can use the adaptors to improve the search results.
 
 ### How to use the embedding adaptors
-1. After the training is complete an adaptor matrix wilol be created.
+1. After the training is complete an adaptor matrix will be created.
 2. During the search retrieval, the query embeddings is matrix multiplied (matmul) with the adaptor matrix to get the new query embeddings. 
 3. The new query embeddings is then used to search the database.
 

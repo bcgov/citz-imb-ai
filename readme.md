@@ -25,7 +25,7 @@ To navigate all the work done in the project, please refer to the table below:
             <td colspan="3" align="center"><a href="">Architecture</a></td>
             <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback">Feedback Infrastructure</a></td>
             <td colspan="2"><a href="">Data Cleaning</a></td>
-            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/hardware">Hardware</a></td>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/Hardware">Hardware</a></td>
         </tr>
         <tr>
             <td colspan="2" align="center"><a href="">Embeddings
@@ -42,9 +42,9 @@ To navigate all the work done in the project, please refer to the table below:
             <th colspan="8"> Hardware </th>
         <tr>
         <tr>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback"> Intel 3rd Gen Xeon CPU</a>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/Hardware"> Intel 3rd Gen Xeon CPU</a>
             </td>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/feedback"> Intel 4th Gen Xeon CPU</a>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/Hardware"> Intel 4th Gen Xeon CPU</a>
             </td>
         </tr>
     </tbody>
