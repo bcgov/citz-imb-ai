@@ -7,6 +7,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src=" https://cdn.jsdelivr.net/npm/keycloak-js@24.0.4/dist/keycloak.min.js "></script>
     <style>
       .top-right {
       position: absolute;
@@ -81,8 +82,37 @@
       </button>
     </div>
 
+      <script>
+    if (localStorage.getItem("token") === null) {
+      window.location.href = "http://localhost:9000/index2.html";
+    } else {
+      console.log("User is authenticated");
+      fetch("http://localhost:10000/login/", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log("User is authenticated");
+        } else {
+          console.log("User is not authenticated");
+          window.location.href = "http://localhost:9000/index2.html";
+        }
+      })
+      .catch((error) => {
+        console.error("Authentication failed");
+        window.location.href = "http://localhost:9000/index2.html";
+      });
+  }
+  </script>
+
     <script>
       let recording_id = null;
+
+      /* authenticate user */
+       
 
       // Function to submit a single question
       async function submitQuestion() {
@@ -94,6 +124,7 @@
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": `Bearer ${localStorage.getItem("token")}`,
           },
           body: `prompt=${encodeURIComponent(prompt)}`,
         });
@@ -152,7 +183,9 @@
 
         const response = await fetch("http://localhost:10000/feedback/", {
           method: "POST",
-          headers: {},
+          headers: {
+            "Authorization": `Bearer ${localStorage.getItem("token")}`,
+          },
           body: form,
         });
 
@@ -181,7 +214,9 @@
         form.append("bulk", true);
         const response = await fetch("http://localhost:10000/feedback/", {
           method: "POST",
-          headers: {},
+          headers: {
+            "Authorization": `Bearer ${localStorage.getItem("token")}`,
+          },
           body: form,
         });
         if (response.status == 200 || response.status == 201) {

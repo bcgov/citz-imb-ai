@@ -11,7 +11,6 @@
       url: "https://dev.loginproxy.gov.bc.ca/auth",
       "ssl-required": "external",
       clientId: "a-i-pathfinding-project-5449",
-      redirect_uri: "http://localhost:9000/feedback.html",
       "enable-pkce": true,
     });
 
@@ -32,17 +31,8 @@
           // User info
           var userInfo = keycloak.tokenParsed;
           console.log(userInfo);
-          fetch("http://localhost:10000//secure_endpoint", {
-            method: "GET",
-            headers: {
-              Authorization: "Bearer " + token,
-              userInfo: JSON.stringify(userInfo),
-            },
-          })
-            .then((response) => response.json())
-            .then((data) => console.log(data))
-            .catch((error) => console.error("Error:", error));
-          window.location.href = "http://localhost:9000/feedback.html";
+          localStorage.setItem("token", token);
+          window.location.href = "/feedback.html";
         } else {
           console.log("User is not authenticated");
         }

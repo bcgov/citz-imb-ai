@@ -2,13 +2,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.middleware.authentication import AuthenticationMiddleware
 from app.middleware.logging import LoggingMiddleware
-from app.controllers import feedback, rag
+from app.controllers import feedback, rag, login
 import warnings
 warnings.filterwarnings("ignore")
 
 app = FastAPI()
 
 # Include API routers
+app.include_router(login.router)
 app.include_router(feedback.router)
 app.include_router(rag.router)
 

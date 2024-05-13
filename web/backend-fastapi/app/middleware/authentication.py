@@ -1,6 +1,8 @@
 from fastapi import Request, HTTPException
 from starlette.middleware.base import BaseHTTPMiddleware
 import requests
+from requests.exceptions import RequestException
+from fastapi.responses import JSONResponse
 
 class AuthenticationMiddleware(BaseHTTPMiddleware):
     def __init__(self, *args, **kwargs):
@@ -31,5 +33,18 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
             else:
                 # Authentication failed, raise HTTPException
                 raise HTTPException(status_code=401, detail="Unauthorized")
+        except RequestException as e:
+            # Handle request-related exceptions
+            raise HTTPException(status_code=503, detail="Service Unavailable")
+        except HTTPException as e:
+            # Handle specific HTTPException gracefully
+            if e.status_code == 401:
+                return JSONResponse(status_code=401, content={"detail": "Authentication required"})
+            else:
+                # Re-raise HTTPException with the same status code and detail
+                raise e
         except Exception as e:
-            raise HTTPException(status_code=401, detail="Unauthorized")
+            # Catch any other unexpected exceptions and return a generic error
+            #return await call_next(request)
+            return JSONResponse(status_code=401, content={"detail": f"error: {e}"})
+            #raise HTTPException(status_code=500, detail="Internal Server Error")
