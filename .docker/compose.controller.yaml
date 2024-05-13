@@ -122,27 +122,27 @@ services:
 
   ########################## End of gradio ##############################################
 
-  ######################## FEEDBACK FRONTEND ############################################
+  ######################## web FRONTEND ############################################
 
-  feedback_frontend:
-    container_name: feedback_frontend
+  web_frontend:
+    container_name: web_frontend
     image: nginx:1.25.5
     build:
-      context: ../feedback/frontend
+      context: ../web/frontend
       dockerfile: Dockerfile
     ports:
       - "9000:9000"
     networks:
       - zuba
-  ######################## End of FEEDBACK FRONTEND #####################################
+  ######################## End of web FRONTEND #####################################
 
-  ########################## FEEDBACK BACKEND ############################################
+  ########################## web BACKEND ############################################
 
-  feedback_backend:
-    container_name: feedback_backend
+  web_backend:
+    container_name: web_backend
     image: python:3.11
     build:
-      context: ../feedback/backend-fastapi
+      context: ../web/backend-fastapi
       dockerfile: Dockerfile
     environment:
       - TRULENS_USER=${TRULENS_USER:-postgres}

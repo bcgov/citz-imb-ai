@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src=" https://cdn.jsdelivr.net/npm/keycloak-js@24.0.4/dist/keycloak.min.js "></script>
+  </head>
+
+  <script>
+    var keycloak = new Keycloak({
+      realm: "standard",
+      url: "https://dev.loginproxy.gov.bc.ca/auth",
+      "ssl-required": "external",
+      clientId: "a-i-pathfinding-project-5449",
+      redirect_uri: "http://localhost:9000/feedback.html",
+      "enable-pkce": true,
+    });
+
+    keycloak
+      .init({
+        onLoad: "login-required",
+        promiseType: "native",
+        clientId: "a-i-pathfinding-project-5449",
+        pkceMethod: "S256",
+      })
+      .then(function (authenticated) {
+        if (authenticated) {
+          console.log("User is authenticated");
+          // Access token
+          console.log(Object.keys(keycloak));
+          var token = keycloak.token;
+          console.log(token);
+          // User info
+          var userInfo = keycloak.tokenParsed;
+          console.log(userInfo);
+          fetch("http://localhost:10000//secure_endpoint", {
+            method: "GET",
+            headers: {
+              Authorization: "Bearer " + token,
+              userInfo: JSON.stringify(userInfo),
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.error("Error:", error));
+          window.location.href = "http://localhost:9000/feedback.html";
+        } else {
+          console.log("User is not authenticated");
+        }
+      })
+      .catch(function () {
+        console.error("Authentication failed");
+      });
+  </script>
+</html>
