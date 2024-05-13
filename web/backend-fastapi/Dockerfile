@@ -13,9 +13,9 @@ RUN pip install notebook
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # 
-COPY ./ /code/app
+COPY ./ /code/
 
 # 
 #CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "10000"]
 #ENTRYPOINT ["jupyter", "notebook","--allow-root","--ip=0.0.0.0","--port=10000","--no-browser"]
-CMD ["python", "app/main.py"]
+CMD ["python", "main.py"]

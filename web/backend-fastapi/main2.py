@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Form, Request
+from fastapi import FastAPI, Form, Request, Depends
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,6 +14,10 @@ warnings.filterwarnings("ignore")
 import psycopg2
 import os
 import json
+
+from fastapi import FastAPI, Depends, HTTPException
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from keycloak import KeycloakOpenID
 #from ragfromscratch import RAG_from_scratch
 
 app = FastAPI()
@@ -203,6 +207,31 @@ def connect_trulens():
     TRULENS_CONNECTION_STRING = f'postgresql+psycopg2://{TRULENS_USER}:{TRULENS_PASSWORD}@{TRULENS_HOST}:{TRULENS_PORT}/{TRULENS_DB}'
     tru = Tru(database_url=TRULENS_CONNECTION_STRING)
     return tru
+
+
+app = FastAPI()
+security = HTTPBearer()
+
+# Initialize Keycloak instance
+keycloak_openid = KeycloakOpenID(server_url="https://dev.loginproxy.gov.bc.ca/auth/",
+                                 realm_name="standard",
+                                 client_id="a-i-pathfinding-project-5449",
+                                 )
+
+# Custom dependency to verify token
+async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    try:
+        token = credentials.credentials
+        print(token)
+        user_info = keycloak_openid.decode_token(token, verify=True)
+        return user_info
+    except Exception as e:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
+@app.get("/secure_endpoint")
+async def secure_endpoint(current_user: dict = Depends(get_current_user)):
+    return {"message": "You are authenticated!"}
+
 
 app.add_middleware(
     CORSMiddleware,
