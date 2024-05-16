@@ -12,6 +12,9 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         try:
             # Extract bearer token from the request headers
+            url_path = str(request.url).split('/')[-1]
+            if (url_path == "docs"  or url_path == "openapi.json"):
+                return await call_next(request)
             authorization_header = request.headers.get('Authorization')
             if not authorization_header or not authorization_header.startswith('Bearer '):
                 raise HTTPException(status_code=401, detail="Unauthorized")
