@@ -1,0 +1,148 @@
+version: "3.8"
+
+# Services
+services:
+  ##############################################################################
+  #                                   Frontend                                 #
+  ##############################################################################
+  frontend:
+    container_name: frontend-${APP_NAME}
+    tty: true
+    restart: always
+    image: frontend-${APP_NAME}
+    build:
+      context: ./src/frontend
+      dockerfile: .docker/Dockerfile.dev
+      args:
+        - NODE_IMAGE=${NODE_IMAGE}
+        - FRONTEND_PORT=${FRONTEND_PORT}
+    depends_on:
+      - backend
+    volumes:
+      # Binds the application folder from the host inside the container for fast changes
+      - ./src/frontend:/usr/src/app/frontend
+      # Ignores the node_modules of the host and uses it's own instead
+      - /usr/src/app/frontend/node_modules
+    networks:
+      - fullstack-template
+    environment:
+      - FRONTEND_PORT=${FRONTEND_PORT}
+
+  ##############################################################################
+  #                                   Backend                                  #
+  ##############################################################################
+  backend:
+    container_name: backend-${APP_NAME}
+    tty: true
+    restart: always
+    image: backend-${APP_NAME}
+    build:
+      context: ./src/backend
+      dockerfile: .docker/Dockerfile.dev
+      args:
+        - NODE_IMAGE=${NODE_IMAGE}
+        - BACKEND_PORT=${BACKEND_PORT}
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      # Binds the application folder from the host inside the container enabling hot reloading
+      - ./src/backend:/usr/src/app/backend
+      # Ignores the node_modules of the host and uses it's own instead
+      - /usr/src/app/backend/node_modules
+    networks:
+      - fullstack-template
+    environment:
+      - BACKEND_PORT=${BACKEND_PORT}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_PORT=${DATABASE_PORT}
+
+  ##############################################################################
+  #                                    pgAdmin                                 #
+  ##############################################################################
+  pgadmin:
+    container_name: pgadmin-${APP_NAME}
+    image: ${PGADMIN_IMAGE} # This will depend on setup and the images available
+    restart: always
+    environment: # Adapt these to match pgAdmin's setup
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD}
+    ports:
+      - ${PGADMIN_PORT}:80 # do not change this port
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./src/db/pgadmin/servers.json:/pgadmin4/servers.json
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - fullstack-template
+
+  ##############################################################################
+  #                                   Database                                 #
+  ##############################################################################
+  db:
+    container_name: db-${APP_NAME}
+    tty: true
+    restart: always
+    image: db-${APP_NAME}
+    build:
+      context: ./src/db
+      dockerfile: .docker/Dockerfile.dev
+      args:
+        - DATABASE_IMAGE=${DATABASE_IMAGE}
+        - DATABASE_PORT=${DATABASE_PORT}
+    environment: # Adapt these to match the database type you're using
+      - POSTGRES_DB=${DATABASE_NAME}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Adjust the volume name if using a different database
+      - ./src/db/schema:/docker-entrypoint-initdb.d # any .sql files in this folder will be executed on startup
+    networks:
+      - fullstack-template
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER}"] # Adjust the healthcheck for different databases
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  ##############################################################################
+  #                                    Caddy                                   #
+  ##############################################################################
+  caddy:
+    container_name: caddy-${APP_NAME}
+    image: ${CADDY_IMAGE} # This will depend on setup and the images available
+    restart: always
+    ports:
+      - ${CADDY_PORT}:${CADDY_PORT} # do not change this port
+    depends_on:
+      - frontend
+    volumes:
+      - ./src/frontend/.caddy/dev.Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - fullstack-template
+    environment:
+      - CADDY_DEV_URL=${CADDY_DEV_URL}
+      - CADDY_DEV_BACKEND_URL=${CADDY_DEV_BACKEND_URL}
+      - CADDY_DEV_FRONTEND_URL=${CADDY_DEV_FRONTEND_URL}
+
+  ##############################################################################
+  #                                    Extra                                   #
+  ##############################################################################
+
+# Volumes
+volumes:
+  postgres_data: # Adjust the volume name if using a different database
+  pgadmin_data: # Adjust the volume name if using a different database
+  caddy_data:
+  caddy_config:
+
+# Networks
+networks:
+  fullstack-template: # Adjust the network name for project
+    driver: "bridge"
