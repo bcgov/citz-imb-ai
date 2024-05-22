@@ -12,19 +12,24 @@ const Sidebar = () => {
 
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
-      <div className="sidebar-header" title="Menu">
-        <img
-          src={assets.menu_icon}
-          className="menu-icon"
-          alt="menu icon"
-          onClick={toggleSidebar}
-        />
+      <div className="sidebar-header" title="Menu" onClick={toggleSidebar}>
+        <img src={assets.menu_icon} className="menu-icon" alt="menu icon" />
       </div>
 
       <div className="new-chat" title="New Chat">
         <img src={assets.plus_icon} alt="new chat" />
         {!isCollapsed ? <p>New Chat</p> : null}
       </div>
+
+      {!isCollapsed ? (
+        <div className="recent">
+          <p className="recent-title">Recent</p>
+          <div className="recent-entry">
+            <img src={assets.message_icon} alt="" />
+            <p>Chat 1</p>
+          </div>
+        </div>
+      ) : null}
 
       <div className="bottom" title="Logout">
         <img src={assets.user_icon} alt="user" />
