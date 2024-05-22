@@ -8,13 +8,14 @@ router = APIRouter()
 
 kg = None
 tru = None
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 @router.post("/submit/")
 async def submit_question(prompt: str = Form(...)):
     # Add appropriate imports
 
     # Global variables initialization
-    global kg, tru, APP_ID
+    global kg, tru, APP_ID, embeddings
     rag = topK.get_top_k()
     if kg is None:
         kg = neo4j.neo4j()
@@ -22,10 +23,10 @@ async def submit_question(prompt: str = Form(...)):
         tru = trulens.connect_trulens()
     tru_rag = trulens.tru_rag(rag)
     print(tru_rag)
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     with tru_rag as recording:
         responses = rag.query(prompt, embeddings, kg)
     record = recording.get()
+    print(responses)
     # Process question prompt
     return {"responses": responses, "recording": record.record_id}
 
