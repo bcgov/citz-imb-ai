@@ -1,0 +1,30 @@
+.sidebar {
+  width: 280px;
+  background-color: var(--sidebar-background-color);
+  padding: 23px;
+  transition: width 0.4s ease;
+  height: 100vh;
+  color: var(--sidebar-text-color);
+
+  &.collapsed {
+    width: 70px;
+  }
+
+  .sidebar-header {
+    cursor: pointer;
+    display: flex;
+  }
+
+  .menu-icon {
+    width: 24px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+}

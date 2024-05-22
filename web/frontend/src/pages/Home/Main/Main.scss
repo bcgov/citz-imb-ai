@@ -1,0 +1,16 @@
+.main-page {
+  display: flex;
+  height: 100vh;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+
+  .sidebar.collapsed & {
+    margin-left: 80px;
+  }
+}
