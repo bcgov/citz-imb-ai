@@ -43,7 +43,7 @@
 
   .new-chat {
     margin-top: 60px;
-    background-color: var(--sidebar-hover-color);
+    background-color: var(--sidebar-new-chat-background-color);
     width: 100%;
   }
 
@@ -100,6 +100,7 @@
 
   &.expanded .new-chat p,
   &.expanded .bottom p,
+  &.expanded .recent-title p,
   &.expanded .recent-entry p {
     max-width: 100%;
     animation: textExpand 1s steps(20, end) both;

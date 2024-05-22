@@ -28,6 +28,14 @@ const Sidebar = () => {
             <img src={assets.message_icon} alt="" />
             <p>Chat 1</p>
           </div>
+          <div className="recent-entry">
+            <img src={assets.message_icon} alt="" />
+            <p>Chat 2</p>
+          </div>
+          <div className="recent-entry">
+            <img src={assets.message_icon} alt="" />
+            <p>Chat 3</p>
+          </div>
         </div>
       ) : null}
 
