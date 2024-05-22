@@ -129,7 +129,7 @@ services:
     image: nginx:1.25.5
     build:
       context: ../web/frontend
-      dockerfile: Dockerfile
+      dockerfile: .docker/Dockerfile
     ports:
       - "9000:9000"
     networks:
