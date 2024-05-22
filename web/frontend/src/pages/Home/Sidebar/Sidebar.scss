@@ -14,16 +14,12 @@
   width: 300px;
   background-color: var(--sidebar-background-color);
   padding: 10px;
-  transition: width 0.4s ease;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100vh;
   color: var(--sidebar-text-color);
 
   &.collapsed {
     width: 75px;
-  }
-
-  .menu-icon {
-    margin-top: 25px;
   }
 
   .sidebar-header,
@@ -33,25 +29,34 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    border-radius: 50px;
+    padding: 15px;
+    transition: background-color 0.4s ease;
+
+    &:hover {
+      background-color: var(--sidebar-hover-color);
+    }
+
+    &:active {
+      background-color: var(--sidebar-hover-color-active);
+    }
   }
 
   .sidebar-header,
   .bottom {
-    margin-left: 15px;
+    margin-top: 20px;
   }
 
   .new-chat {
     margin-top: 70px;
-    border-radius: 50px;
     background-color: var(--sidebar-hover-color);
-    padding: 15px;
-    transition: max-width 0.8s ease;
     width: 100%;
   }
 
   .bottom {
     margin-top: auto;
     margin-bottom: 30px;
+    width: 100%;
   }
 
   img {
@@ -63,12 +68,12 @@
     overflow: hidden;
     white-space: nowrap;
     max-width: 0;
-    transition: max-width 0.4s ease;
+    transition: max-width 1s ease;
   }
 
   &.expanded p {
     max-width: 100%;
-    animation: textExpand 0.4s steps(10, end) forwards;
+    animation: textExpand 1s steps(20, end) forwards;
   }
 
   &.collapsed p {
