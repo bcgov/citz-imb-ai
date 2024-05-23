@@ -117,7 +117,7 @@
     height: auto;
     color: var(--main-text-color);
     resize: none;
-    max-height: 300px;
+    max-height: var(--search-box-height);
     overflow-y: auto;
     scrollbar-color: var(--main-scrollbar-color) transparent;
     font-family: var(--site-font-family);
@@ -155,8 +155,8 @@
 
 .result {
   padding: 0 5%;
-  max-height: 70vh;
-  overflow-y: scroll;
+  max-height: calc(100vh - var(--search-box-height));
+  overflow-y: auto;
   scrollbar-color: var(--main-scrollbar-color) transparent;
 
   .result-title {
