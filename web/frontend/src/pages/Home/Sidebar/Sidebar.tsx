@@ -1,13 +1,26 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { assets } from '@/assets/icons/assets';
+import { Context } from '@/context/Context';
 
 import './Sidebar.scss';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
+  const { onSent, prevPrompts, setRecentPrompt, newChat } = useContext(Context);
+
+  const loadPrompt = async (prompt) => {
+    await onSent(prompt);
+    setRecentPrompt(prompt);
+  };
+
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
+  };
+
+  const logout = () => {
+    // TODO: implement logout
+    console.log('logout');
   };
 
   return (
@@ -16,7 +29,7 @@ const Sidebar = () => {
         <img src={assets.menu_icon} className="menu-icon" alt="menu icon" />
       </div>
 
-      <div className="new-chat" title="New Chat">
+      <div onClick={() => newChat()} className="new-chat" title="New Chat">
         <img src={assets.plus_icon} alt="new chat" />
         {!isCollapsed ? <p>New Chat</p> : null}
       </div>
@@ -24,22 +37,22 @@ const Sidebar = () => {
       {!isCollapsed ? (
         <div className="recent">
           <p className="recent-title">Recent</p>
-          <div className="recent-entry">
-            <img src={assets.message_icon} alt="" />
-            <p>Chat 1</p>
-          </div>
-          <div className="recent-entry">
-            <img src={assets.message_icon} alt="" />
-            <p>Chat 2</p>
-          </div>
-          <div className="recent-entry">
-            <img src={assets.message_icon} alt="" />
-            <p>Chat 3</p>
-          </div>
+          {prevPrompts.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => loadPrompt(item)}
+              className="recent-entry"
+            >
+              <img src={assets.message_icon} alt="" />
+              <p>
+                {item.slice(0, 18)} {'...'}
+              </p>
+            </div>
+          ))}
         </div>
       ) : null}
 
-      <div className="bottom" title="Logout">
+      <div onClick={logout} className="bottom" title="Logout">
         <img src={assets.user_icon} alt="user" />
         {!isCollapsed ? <p>Logout</p> : null}
       </div>
