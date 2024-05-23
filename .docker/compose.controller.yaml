@@ -1,4 +1,7 @@
 services:
+    #############################################
+    #                Examples/Research          #
+    #############################################
   ########################## Postgres #########################################
   postgres:
     container_name: postgres
@@ -56,7 +59,27 @@ services:
 
   ########################## AI Interface #########################################
 
+    ########################## gradio #########################################
+  gradio:
+    container_name: gradio
+    restart: unless-stopped
+    build:
+      context: ../gradio
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    platform: linux/amd64
+    networks:
+      - zuba
+
+  ########################## End of gradio ##############################################
+
   ##################### AI Performance Tracking ####################################
+
+  #############################################
+  #                Production                 #
+  #############################################
+
   trulens:
     container_name: trulens
     image: postgres:16.2
@@ -107,29 +130,14 @@ services:
       - zuba
   ######################## End NEO4J ############################################
 
-  ########################## gradio #########################################
-  gradio:
-    container_name: gradio
-    restart: unless-stopped
-    build:
-      context: ../gradio
-      dockerfile: Dockerfile
-    ports:
-      - "8080:8080"
-    platform: linux/amd64
-    networks:
-      - zuba
-
-  ########################## End of gradio ##############################################
-
   ######################## web FRONTEND ############################################
 
   web_frontend:
     container_name: web_frontend
-    image: nginx:1.25.5
     build:
       context: ../web/frontend
-      dockerfile: .docker/Dockerfile
+      dockerfile: Dockerfile
+      target: prod
     ports:
       - "9000:9000"
     networks:
@@ -140,7 +148,6 @@ services:
 
   web_backend:
     container_name: web_backend
-    image: python:3.11
     build:
       context: ../web/backend-fastapi
       dockerfile: Dockerfile
