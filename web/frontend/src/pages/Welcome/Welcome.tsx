@@ -5,7 +5,6 @@ const Welcome = () => {
   const navigate = useNavigate();
 
   const KeycloackLogin = () => {
-    console.log('login');
     navigate('/home');
   };
 

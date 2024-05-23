@@ -7,10 +7,251 @@
 
 .content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 0 20px;
   transition: margin-left 0.3s ease;
+  animation: fadeIn 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
-  .sidebar.collapsed & {
-    margin-left: 80px;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.greet {
+  font-size: 60px;
+  color: var(--main-secondary-text-color);
+  font-weight: 600;
+  padding: 20px;
+  margin: 50px 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  animation: fadeIn 0.5s ease-in-out;
+
+  span {
+    background: -webkit-linear-gradient(
+      16deg,
+      var(--main-gradient-start),
+      var(--main-gradient-end)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+  }
+
+  p {
+    margin: 0;
+    white-space: nowrap;
+    animation: textExpand 3s steps(20, end) both;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.card {
+  height: 200px;
+  padding: 15px;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  animation: fadeIn 0.5s ease-in-out;
+
+  &:hover {
+    background-color: var(--main-hover-color);
+  }
+
+  &:active {
+    background-color: var(--main-hover-color-active);
+  }
+
+  p {
+    color: var(--main-text-color);
+    font-size: 17px;
+    white-space: nowrap;
+    animation: textExpand 0.5s steps(20, end) both;
+  }
+
+  img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: var(--main-hover-color);
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.main-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  margin: auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: var(--input-background-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+
+  textarea {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin: 15px;
+    padding: 0;
+    font-size: 18px;
+    height: auto;
+    color: var(--input-text-color);
+    resize: none;
+    max-height: var(--search-box-height);
+    overflow-y: auto;
+    scrollbar-color: var(--main-scrollbar-color) transparent;
+    font-family: var(--site-font-family);
+    line-height: 1.5;
+    box-sizing: border-box;
+
+    ::placeholder {
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 15px;
+    transition: background-color 0.1s;
+    animation: fadeIn 0.5s ease-in-out;
+
+    &:hover {
+      background-color: var(--sidebar-hover-color);
+    }
+
+    &:active {
+      background-color: var(--sidebar-hover-color-active);
+    }
+  }
+}
+
+.bottom-info {
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.result {
+  padding: 0 5%;
+  max-height: calc(100vh - var(--search-box-height));
+  overflow-y: auto;
+  scrollbar-color: var(--main-scrollbar-color) transparent;
+  animation: fadeIn 1.1s ease-in-out;
+
+  .result-title {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--main-result-text-color);
+    font-size: 18px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  img {
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  .result-data {
+    display: flex;
+    align-items: start;
+    min-height: 50px;
+    gap: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--main-result-text-color);
+      margin: 0;
+    }
+  }
+}
+
+.loader {
+  width: 100%;
+  gap: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+
+  .animated-bg {
+    border-radius: 50px;
+    border: none;
+    animation: loader 3s infinite linear;
+    background: linear-gradient(
+      to right,
+      var(--bc-blue),
+      var(--bc-yellow),
+      var(--bc-blue)
+    );
+    background-size: 800px 50px;
+    height: 12px;
+  }
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textExpand {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 100%;
   }
 }
