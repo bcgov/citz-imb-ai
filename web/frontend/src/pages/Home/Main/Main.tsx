@@ -58,10 +58,10 @@ const Main = () => {
   };
 
   const cardContents = [
-    'Suggestion 1',
-    'Suggestion 2',
-    'Suggestion 3',
-    'Suggestion 4',
+    `How much notice do I need to give to end my rental lease in BC?`,
+    `Do I need to wear a seatbelt in BC?`,
+    `How many breaks do I get during a workday in BC?`,
+    `What are the rules for distracted driving in BC?`,
   ];
 
   return (
