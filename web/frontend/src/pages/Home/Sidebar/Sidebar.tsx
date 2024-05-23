@@ -1,10 +1,10 @@
-import React, { useState, useContext, Key } from 'react';
+import { useState, useContext, Key } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import './Sidebar.scss';
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const navigate = useNavigate();
   const context = useContext(Context);

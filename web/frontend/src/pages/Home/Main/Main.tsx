@@ -1,10 +1,16 @@
-import { useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 
 const Main = () => {
+  const context = useContext(Context);
+
+  if (!context) {
+    throw new Error('Main must be used within a ContextProvider');
+  }
+
   const {
     onSent,
     recentPrompt,
@@ -13,12 +19,12 @@ const Main = () => {
     resultData,
     setInput,
     input,
-  } = useContext(Context);
+  } = context;
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const adjustTextareaHeight = () => {
-    const textarea = textareaRef.current as HTMLTextAreaElement | null;
+    const textarea = textareaRef.current;
     if (textarea) {
       textarea.style.height = 'auto';
       textarea.style.height = `${textarea.scrollHeight}px`;
@@ -132,7 +138,7 @@ const Main = () => {
                     onClick={handleSend}
                     src={assets.send_icon}
                     width={30}
-                    alt=""
+                    alt="send icon"
                   />
                 ) : null}
               </div>
