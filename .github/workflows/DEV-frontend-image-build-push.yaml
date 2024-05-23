@@ -10,7 +10,7 @@ on:
     branches:
     - main
     paths:
-      - web/frontend
+      - web/frontend/**
 
 jobs:
   # Job to build, tag, and push the APP image
