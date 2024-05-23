@@ -19,7 +19,6 @@ const Sidebar = () => {
   };
 
   const logout = () => {
-    // TODO: implement logout
     console.log('logout');
   };
 
