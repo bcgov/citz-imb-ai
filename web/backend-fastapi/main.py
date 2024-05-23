@@ -14,8 +14,8 @@ app.include_router(feedback.router)
 app.include_router(rag.router)
 
 # Register middleware
-app.add_middleware(LoggingMiddleware)
-app.add_middleware(AuthenticationMiddleware)
+#app.add_middleware(LoggingMiddleware)
+#app.add_middleware(AuthenticationMiddleware)
 
 origins = [
     "http://localhost.tiangolo.com",
