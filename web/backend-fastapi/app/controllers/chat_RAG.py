@@ -24,13 +24,14 @@ async def chat(prompt: str = Form(...)):
     with tru_rag as recording:
         responses = rag.query(prompt, embeddings, kg)
     record = recording.get()
-    import requests
-url = 'https://LLMSErver.a0a6fc-prod.nimbus.cloud.gov.bc.ca/v1/chat/completions'
-headers = {'Content-Type': 'application/json'}
-data = '{"model": "Intel/neural-chat-7b-v3-1", "messages": [ \
-          {"role": "system", "content": "You are a helpful assistant."}, \
-          {"role": "user", "content": "{prompt}"}], \
-           "stream":"True"}'
-response = requests.post(url, headers=headers, data=data)
-print(response.json())
+    return {"responses": responses, "recording": record.record_id}
+
+# url = 'https://LLMSErver.a0a6fc-prod.nimbus.cloud.gov.bc.ca/v1/chat/completions'
+# headers = {'Content-Type': 'application/json'}
+# data = '{"model": "Intel/neural-chat-7b-v3-1", "messages": [ \
+#           {"role": "system", "content": "You are a helpful assistant."}, \
+#           {"role": "user", "content": "{prompt}"}], \
+#            "stream":"True"}'
+# response = requests.post(url, headers=headers, data=data)
+# print(response.json())
     
