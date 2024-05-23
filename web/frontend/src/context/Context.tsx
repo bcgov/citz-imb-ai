@@ -1,23 +1,41 @@
-import { createContext, useState } from 'react';
+import React, { createContext, useState, ReactNode } from 'react';
 import runChat from '@/config/config';
 
-export const Context = createContext();
+interface ContextProps {
+  prevPrompts: string[];
+  setPrevPrompts: React.Dispatch<React.SetStateAction<string[]>>;
+  onSent: (prompt?: string) => Promise<void>;
+  setRecentPrompt: React.Dispatch<React.SetStateAction<string>>;
+  recentPrompt: string;
+  showResult: boolean;
+  loading: boolean;
+  resultData: string;
+  input: string;
+  setInput: React.Dispatch<React.SetStateAction<string>>;
+  newChat: () => void;
+}
 
-const ContextProvider = (props) => {
-  const [prevPrompts, setPrevPrompts] = useState([]);
-  const [input, setInput] = useState('');
-  const [recentPrompt, setRecentPrompt] = useState('');
-  const [showResult, setShowResult] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [resultData, setResultData] = useState('');
+export const Context = createContext<ContextProps | undefined>(undefined);
 
-  function delayPara(index, nextWord) {
+interface ContextProviderProps {
+  children: ReactNode;
+}
+
+const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
+  const [prevPrompts, setPrevPrompts] = useState<string[]>([]);
+  const [input, setInput] = useState<string>('');
+  const [recentPrompt, setRecentPrompt] = useState<string>('');
+  const [showResult, setShowResult] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [resultData, setResultData] = useState<string>('');
+
+  function delayPara(index: number, nextWord: string) {
     setTimeout(function () {
       setResultData((prev) => prev + nextWord);
     }, 75 * index);
   }
 
-  const onSent = async (prompt) => {
+  const onSent = async (prompt?: string) => {
     setResultData('');
     setLoading(true);
     setShowResult(true);
@@ -54,7 +72,7 @@ const ContextProvider = (props) => {
     setShowResult(false);
   };
 
-  const contextValue = {
+  const contextValue: ContextProps = {
     prevPrompts,
     setPrevPrompts,
     onSent,
@@ -68,9 +86,7 @@ const ContextProvider = (props) => {
     newChat,
   };
 
-  return (
-    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
-  );
+  return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };
 
 export default ContextProvider;
