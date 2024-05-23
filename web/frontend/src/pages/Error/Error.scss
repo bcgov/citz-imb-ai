@@ -16,6 +16,7 @@
     justify-content: center;
     gap: 16px;
     text-align: center;
+    animation: slideIn 1s ease-in-out;
 
     h1 {
       font-size: 7rem;
@@ -24,6 +25,7 @@
       letter-spacing: -0.1rem;
       margin: 0;
       transition: 0.4s;
+      animation: slideIn 1.2s ease-in-out;
 
       span {
         background: linear-gradient(
@@ -41,6 +43,7 @@
       margin: 20px;
       font-size: 1.375rem;
       font-weight: 400;
+      animation: slideIn 1.4s ease-in-out;
     }
   }
 
@@ -54,6 +57,7 @@
     border: 1px solid transparent;
     cursor: pointer;
     transition: 0.2s;
+    animation: fadeIn 1.6s ease-in-out;
 
     &:hover {
       filter: brightness(var(--button-hover-brightness));
@@ -76,5 +80,25 @@
         font-size: 1rem;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
