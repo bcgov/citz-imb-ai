@@ -115,7 +115,7 @@
     padding: 0;
     font-size: 18px;
     height: auto;
-    color: var(--main-text-color);
+    color: var(--input-text-color);
     resize: none;
     max-height: var(--search-box-height);
     overflow-y: auto;
@@ -125,7 +125,6 @@
     box-sizing: border-box;
 
     ::placeholder {
-      color: var(--main-text-color);
       text-align: center;
     }
   }

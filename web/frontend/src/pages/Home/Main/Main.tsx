@@ -27,12 +27,20 @@ const Main = () => {
 
   useEffect(() => {
     adjustTextareaHeight();
-  }, []);
+  }, [input]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      onSent();
+      handleSend();
+    }
+  };
+
+  const handleSend = async () => {
+    await onSent();
+    setInput('');
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
     }
   };
 
@@ -110,7 +118,7 @@ const Main = () => {
               <div>
                 {input ? (
                   <img
-                    onClick={() => onSent()}
+                    onClick={handleSend}
                     src={assets.send_icon}
                     width={30}
                     alt=""
