@@ -5,7 +5,7 @@ import { assets } from '@/assets/icons/assets';
 
 const Main = () => {
   const showResult = true;
-  const loading = !true;
+  const loading = true;
   const resultData = `Contrary`;
   const recentPrompt = 'hello';
   const input = true;
