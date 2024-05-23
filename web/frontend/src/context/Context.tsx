@@ -13,6 +13,7 @@ interface ContextProps {
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
   newChat: () => void;
+  resetContext: () => void;
 }
 
 export const Context = createContext<ContextProps | undefined>(undefined);
@@ -72,6 +73,15 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setShowResult(false);
   };
 
+  const resetContext = () => {
+    setPrevPrompts([]);
+    setInput('');
+    setRecentPrompt('');
+    setShowResult(false);
+    setLoading(false);
+    setResultData('');
+  };
+
   const contextValue: ContextProps = {
     prevPrompts,
     setPrevPrompts,
@@ -84,6 +94,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     input,
     setInput,
     newChat,
+    resetContext,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
