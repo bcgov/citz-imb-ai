@@ -1,5 +1,5 @@
 # GitHub Actions workflow for building and tagging the APP image on PR
-name: DEV App Build on PR
+name: DEV Frontend Build and Push on PR
 
 on:
   pull_request:
@@ -9,6 +9,8 @@ on:
     - ready_for_review
     branches:
     - main
+    paths:
+      - web/frontend
 
 jobs:
   # Job to build, tag, and push the APP image
@@ -38,15 +40,15 @@ jobs:
     # Build the APP image
     - name: Build APP Image
       run: |
-        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ${{ vars.APP_NAME }}
+        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build web_frontend
 
     # Tag the APP image
     - name: Tag APP Image
       run: |
-        docker tag docker_${{ vars.APP_NAME }} ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/zuba-app:${{github.event.pull_request.number}}
+        docker tag docker_web_frontend ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/ai-frontend:${{github.event.pull_request.number}}
 
     # Push the APP image
     - name: Push APP Image
       run: |
-        docker push ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/zuba-app:${{ github.event.pull_request.number }}
+        docker push ${{ secrets.ARTIFACTORY_IMAGE_REPOSITORY }}/ai-frontend:${{ github.event.pull_request.number }}
 
