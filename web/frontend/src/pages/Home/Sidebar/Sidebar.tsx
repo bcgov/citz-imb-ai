@@ -13,7 +13,8 @@ const Sidebar = () => {
     throw new Error('Sidebar must be used within a ContextProvider');
   }
 
-  const { onSent, prevPrompts, setRecentPrompt, newChat } = context;
+  const { onSent, prevPrompts, setRecentPrompt, newChat, resetContext } =
+    context;
 
   const loadPrompt = async (prompt: string) => {
     await onSent(prompt);
@@ -25,6 +26,7 @@ const Sidebar = () => {
   };
 
   const logout = () => {
+    resetContext();
     navigate('/');
   };
 
