@@ -51,7 +51,8 @@
 
   p {
     margin: 0;
-    animation: textExpand 0.5s steps(20, end) both;
+    white-space: nowrap;
+    animation: textExpand 3s steps(20, end) both;
   }
 }
 
@@ -84,6 +85,7 @@
   p {
     color: var(--main-text-color);
     font-size: 17px;
+    white-space: nowrap;
     animation: textExpand 0.5s steps(20, end) both;
   }
 
