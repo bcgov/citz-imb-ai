@@ -4,6 +4,8 @@ on:
   push:
     branches:
     - main
+    paths:
+      - web/backend-fastapi
 
 jobs:
   update-gitops-image-tag:
@@ -48,7 +50,7 @@ jobs:
         git clone git@github.com:bcgov-c/tenant-gitops-b875cc.git
         cd tenant-gitops-b875cc
 
-        FILE_PATH="citz-imb-ai/values.yaml"
+        FILE_PATH="citz-imb-ai/values.dev.yaml"
         NEW_TAG="${{ steps.get-pr-number.outputs.result }}"
 
         yq e ".backend.image.tag = \"$NEW_TAG\"" -i "$FILE_PATH"
