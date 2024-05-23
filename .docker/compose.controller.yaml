@@ -143,8 +143,20 @@ services:
     networks:
       - zuba
   ######################## End of web FRONTEND #####################################
+  ##################### WEB FRONTEND FEEDBACK ANALYTICS ############################
 
-  ########################## web BACKEND ############################################
+  web_frontend_feedback_analytics:
+    container_name: feedback_analytics
+    build:
+      context: ../web/frontend-feedback-analytics
+      dockerfile: Dockerfile
+    ports:
+      - "11000:11000"
+    networks:
+      - zuba
+  ##################### WEB FRONTEND FEEDBACK ANALYTICS ############################
+
+  ########################## WEB BACKEND ############################################
 
   web_backend:
     container_name: web_backend
