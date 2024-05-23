@@ -1,15 +1,21 @@
-import { useState, useContext } from 'react';
+import React, { useState, useContext, Key } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
-
 import './Sidebar.scss';
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const navigate = useNavigate();
+  const context = useContext(Context);
 
-  const { onSent, prevPrompts, setRecentPrompt, newChat } = useContext(Context);
+  if (!context) {
+    throw new Error('Sidebar must be used within a ContextProvider');
+  }
 
-  const loadPrompt = async (prompt) => {
+  const { onSent, prevPrompts, setRecentPrompt, newChat } = context;
+
+  const loadPrompt = async (prompt: string) => {
     await onSent(prompt);
     setRecentPrompt(prompt);
   };
@@ -19,7 +25,7 @@ const Sidebar = () => {
   };
 
   const logout = () => {
-    console.log('logout');
+    navigate('/');
   };
 
   return (
@@ -37,7 +43,7 @@ const Sidebar = () => {
         <div className="recent">
           <p className="recent-title">Recent</p>
           <div className="recent-entries">
-            {prevPrompts.map((item, index) => (
+            {prevPrompts.map((item: string, index: Key) => (
               <div
                 key={index}
                 onClick={() => loadPrompt(item)}
