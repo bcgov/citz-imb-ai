@@ -178,7 +178,7 @@
 
 .result .result-data {
   display: flex;
-  align-items: center;
+  align-items: start;
   min-height: 50px;
   gap: 20px;
 }
@@ -187,6 +187,7 @@
   font-size: 18px;
   line-height: 1.8;
   color: var(--main-result-text-color);
+  margin: 0;
 }
 
 .loader {

@@ -1,19 +1,21 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useContext } from 'react';
 import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import { assets } from '@/assets/icons/assets';
+import { Context } from '@/context/Context';
 
 const Main = () => {
-  const showResult = true;
-  const loading = true;
-  const resultData = `Contrary`;
-  const recentPrompt = 'hello';
-  const input = true;
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const {
+    onSent,
+    recentPrompt,
+    showResult,
+    loading,
+    resultData,
+    setInput,
+    input,
+  } = useContext(Context);
 
-  const onSent = () => {
-    console.log('sent');
-  };
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const adjustTextareaHeight = () => {
     const textarea = textareaRef.current as HTMLTextAreaElement | null;
@@ -93,6 +95,8 @@ const Main = () => {
           <div className="main-bottom">
             <div className="search-box">
               <textarea
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
                 className="textarea"
                 autoComplete="on"
                 spellCheck={true}
