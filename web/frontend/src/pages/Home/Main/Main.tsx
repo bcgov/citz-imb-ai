@@ -44,6 +44,20 @@ const Main = () => {
     }
   };
 
+  const handleCardClick = async (text: string) => {
+    setInput(text);
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  };
+
+  const cardContents = [
+    'Suggestion 1',
+    'Suggestion 2',
+    'Suggestion 3',
+    'Suggestion 4',
+  ];
+
   return (
     <div className="main-page">
       <Sidebar />
@@ -84,18 +98,15 @@ const Main = () => {
                 <p>How can I help you today?</p>
               </div>
               <div className="cards">
-                <div className="card">
-                  <p>Suggestion 1</p>
-                </div>
-                <div className="card">
-                  <p>Suggestion 2</p>
-                </div>
-                <div className="card">
-                  <p>Suggestion 3</p>
-                </div>
-                <div className="card">
-                  <p>Suggestion 4</p>
-                </div>
+                {cardContents.map((content, index) => (
+                  <div
+                    className="card"
+                    key={index}
+                    onClick={() => handleCardClick(content)}
+                  >
+                    <p>{content}</p>
+                  </div>
+                ))}
               </div>
             </>
           )}
