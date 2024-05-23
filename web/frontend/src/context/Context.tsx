@@ -70,6 +70,9 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const newChat = async () => {
     setLoading(false);
     setShowResult(false);
+    setRecentPrompt('');
+    setPrevPrompts([]);
+    setResultData('');
   };
 
   const contextValue: ContextProps = {
