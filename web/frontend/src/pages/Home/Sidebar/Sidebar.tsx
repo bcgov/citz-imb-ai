@@ -37,18 +37,20 @@ const Sidebar = () => {
       {!isCollapsed ? (
         <div className="recent">
           <p className="recent-title">Recent</p>
-          {prevPrompts.map((item, index) => (
-            <div
-              key={index}
-              onClick={() => loadPrompt(item)}
-              className="recent-entry"
-            >
-              <img src={assets.message_icon} alt="" />
-              <p>
-                {item.slice(0, 18)} {'...'}
-              </p>
-            </div>
-          ))}
+          <div className="recent-entries">
+            {prevPrompts.map((item, index) => (
+              <div
+                key={index}
+                onClick={() => loadPrompt(item)}
+                className="recent-entry"
+              >
+                <img src={assets.message_icon} alt="" />
+                <p>
+                  {item.slice(0, 18)} {'...'}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       ) : null}
 

@@ -12,11 +12,11 @@
   flex-direction: column;
   align-items: start;
   width: 320px;
-  background-color: var(--sidebar-background-color);
-  padding: 10px;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100vh;
+  padding: 10px;
+  background-color: var(--sidebar-background-color);
   color: var(--sidebar-text-color);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.collapsed {
     width: 75px;
@@ -31,6 +31,7 @@
     cursor: pointer;
     border-radius: 50px;
     padding: 15px;
+    transition: background-color 0.3s;
 
     &:hover {
       background-color: var(--sidebar-hover-color);
@@ -43,8 +44,8 @@
 
   .new-chat {
     margin-top: 60px;
-    background-color: var(--sidebar-new-chat-background-color);
     width: 100%;
+    background-color: var(--sidebar-new-chat-background-color);
   }
 
   .recent {
@@ -52,20 +53,33 @@
     flex-direction: column;
     width: 100%;
     margin-top: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
 
     .recent-title {
       font-weight: bold;
       padding: 15px;
+      flex-shrink: 0;
+    }
+
+    .recent-entries {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      overflow-y: auto;
+      padding-right: 10px;
+      scrollbar-color: var(--main-scrollbar-color) transparent;
     }
 
     .recent-entry {
       display: flex;
-      flex-direction: row;
       align-items: center;
       gap: 10px;
       cursor: pointer;
       border-radius: 50px;
       padding: 10px 20px;
+      transition: background-color 0.3s;
 
       &:hover {
         background-color: var(--sidebar-hover-color);
@@ -74,11 +88,11 @@
       &:active {
         background-color: var(--sidebar-hover-color-active);
       }
-    }
 
-    img {
-      width: 20px;
-      margin-left: 5px;
+      img {
+        width: 20px;
+        margin-left: 5px;
+      }
     }
   }
 
@@ -98,11 +112,13 @@
     white-space: nowrap;
   }
 
-  &.expanded .new-chat p,
-  &.expanded .bottom p,
-  &.expanded .recent-title p,
-  &.expanded .recent-entry p {
-    max-width: 100%;
-    animation: textExpand 1s steps(20, end) both;
+  &.expanded {
+    .new-chat p,
+    .bottom p,
+    .recent-title p,
+    .recent-entry p {
+      max-width: 100%;
+      animation: textExpand 1s steps(20, end) both;
+    }
   }
 }
