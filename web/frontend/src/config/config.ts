@@ -1,16 +1,18 @@
 const runChat = async (_prompt: string): Promise<string> => {
   // Mock delay of 2 seconds
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+    const response = await fetch("http://localhost:10000/submit/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Authorization": `Bearer ${localStorage.getItem("token")}`,
+    },
+    body: `prompt=${encodeURIComponent(_prompt)}`,
+  });
 
-  // Return lorem ipsum text
-  const response = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    Lorem ipsum dolor sit Lorem amet, ipsum consectetur dolor Lorem adipiscing sit ipsum elit. amet, Lorem dolor Sed consectetur ipsum sit do adipiscing Lorem dolor amet, eiusmod elit. ipsum sit consectetur tempor Sed dolor amet, adipiscing incididunt Lorem do sit consectetur elit. ut ipsum eiusmod amet, adipiscing Sed labore dolor tempor Lorem consectetur elit. do et sit incididunt ipsum adipiscing Sed eiusmod dolore amet, Lorem ut dolor elit. do tempor magna consectetur ipsum labore sit Sed eiusmod incididunt aliqua. adipiscing dolor et amet, do tempor ut Lorem elit. sit dolore consectetur eiusmod incididunt labore ipsum Sed amet, magna adipiscing tempor ut et dolor Lorem do consectetur aliqua. elit. incididunt labore dolore sit Lorem ipsum eiusmod adipiscing Sed ut et magna Lorem amet, ipsum dolor tempor elit. do labore dolore aliqua. ipsum consectetur dolor sit incididunt Sed eiusmod et magna dolor adipiscing sit amet, ut do Lorem tempor dolore aliqua. sit elit. amet, consectetur labore eiusmod ipsum incididunt magna amet, Sed consectetur adipiscing et tempor dolor ut aliqua. Lorem consectetur do adipiscing elit. dolore incididunt sit labore ipsum adipiscing eiusmod elit. Sed magna ut amet, et Lorem dolor elit. tempor Sed do aliqua. labore consectetur dolore ipsum sit Sed incididunt do eiusmod et adipiscing magna Lorem dolor amet, do ut eiusmod tempor dolore elit. aliqua. ipsum sit consectetur eiusmod labore tempor incididunt magna Sed dolor amet, adipiscing tempor et incididunt ut Lorem aliqua. do sit consectetur elit. incididunt dolore ut labore ipsum eiusmod amet, adipiscing Sed ut magna labore et dolor tempor Lorem consectetur elit. do labore aliqua. et dolore sit incididunt ipsum adipiscing Sed eiusmod et dolore magna amet, Lorem ut dolor elit. do tempor dolore magna aliqua. consectetur ipsum labore sit Sed eiusmod incididunt magna aliqua. adipiscing dolor et amet, do tempor ut aliqua. Lorem elit. sit dolore consectetur eiusmod incididunt labore ipsum Sed amet, magna adipiscing tempor ut et dolor Lorem do consectetur aliqua. elit. incididunt labore dolore sit ipsum eiusmod adipiscing Sed ut et magna Lorem amet, dolor tempor elit. do labore dolore aliqua. ipsum consectetur sit incididunt Sed eiusmod et magna dolor adipiscing amet, ut do tempor dolore aliqua. sit elit. consectetur labore eiusmod incididunt magna amet, Sed adipiscing et tempor ut aliqua. consectetur do elit. dolore incididunt labore adipiscing eiusmod Sed magna ut et elit. tempor do aliqua. labore dolore Sed incididunt eiusmod et magna do ut tempor dolore aliqua. eiusmod labore incididunt magna tempor et ut aliqua. incididunt dolore labore ut magna et labore aliqua. dolore et magna dolore aliqua. magna aliqua.
-    `;
-
-  return response;
+      const data = await response.json();
+      const responses = data.responses.map((res: any) => res.text); 
+      return responses.join("\n");
+  //return response;
 };
-
+ 
 export default runChat;
