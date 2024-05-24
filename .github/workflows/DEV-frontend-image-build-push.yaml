@@ -45,10 +45,10 @@ jobs:
     # Tag the APP image
     - name: Tag APP Image
       run: |
-        docker tag docker_web_frontend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend:${{github.event.pull_request.number}}
+        docker tag docker_web_frontend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend-imagestream:${{github.event.pull_request.number}}
 
     # Push the APP image
     - name: Push APP Image
       run: |
-        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend:${{ github.event.pull_request.number }}
+        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend-imagestream:${{ github.event.pull_request.number }}
 
