@@ -1,11 +1,11 @@
-name: Update Image Tag in GitOps Repo
+name: Update Frontend Image Tag in GitOps Repo
 
 on:
   push:
     branches:
     - main
     paths:
-      - web/backend-fastapi
+      - web/frontend/**
 
 jobs:
   update-gitops-image-tag:
@@ -53,12 +53,12 @@ jobs:
         FILE_PATH="citz-imb-ai/values.dev.yaml"
         NEW_TAG="${{ steps.get-pr-number.outputs.result }}"
 
-        yq e ".backend.image.tag = \"$NEW_TAG\"" -i "$FILE_PATH"
+        yq e ".frontend.image.tag = \"$NEW_TAG\"" -i "$FILE_PATH"
 
         git config user.email "brandon.bouchard@gov.bc.ca"
         git config user.name "Bottle7"
 
         git add "$FILE_PATH"
-        git commit -m "Update backend image tag to $NEW_TAG"
+        git commit -m "Update frontend image tag to $NEW_TAG"
         git push
 
