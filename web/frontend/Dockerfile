@@ -7,7 +7,7 @@ FROM node:18.17.1-bullseye-slim as base
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy files
+# Copy source and config files
 COPY ./src ./src
 COPY package.json .
 COPY tsconfig.json .
