@@ -1,8 +1,8 @@
 FROM python:3.11-slim
 
-# Change working directory
 WORKDIR /backend
 
+# Copy requirements definition to container
 COPY ./requirements.txt /backend/requirements.txt
 
 RUN pip install --upgrade pip
