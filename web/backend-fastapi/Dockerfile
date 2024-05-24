@@ -1,5 +1,6 @@
 FROM python:3.11-slim
 
+# Change working directory
 WORKDIR /backend
 
 COPY ./requirements.txt /backend/requirements.txt
