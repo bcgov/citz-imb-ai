@@ -1,8 +1,8 @@
 services:
-    #############################################
-    #                Examples/Research          #
-    #############################################
-  ########################## Postgres #########################################
+  #############################################
+  #                Examples/Research          #
+  #############################################
+  ########################## PGVector Experiment #########################################
   postgres:
     container_name: postgres
     image: pgvector/pgvector:0.6.1-pg16
@@ -19,7 +19,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1",
+          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1"
         ]
       interval: 5s
       timeout: 3s
@@ -27,8 +27,8 @@ services:
       - zuba
   ########################### End Postgres ####################################
 
-  ########################## AI Interface #########################################
-  ai_interface:
+  #########################  Jupyter Notebook #################################
+  jupyter_notebook:
     build:
       context: ../examples
       dockerfile: ../examples/Dockerfile
@@ -56,8 +56,7 @@ services:
       - postgres
     networks:
       - zuba
-
-  ########################## AI Interface #########################################
+    ########################## AI Interface #########################################
 
     ########################## gradio #########################################
   gradio:
@@ -96,7 +95,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1",
+          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1"
         ]
       interval: 5s
       timeout: 3s
@@ -123,7 +122,10 @@ services:
       - "${NEO4J_PORT:-7687}:7687"
     healthcheck:
       test:
-        ["CMD-SHELL", "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"]
+        [
+          "CMD-SHELL",
+          "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"
+        ]
       interval: 5s
       timeout: 3s
     networks:
@@ -170,6 +172,7 @@ services:
       - TRULENS_PORT=${TRULENS_PORT:-5432}
       - TRULENS_HOST=trulens
       - DISABLE_NEST_ASYNCIO=True
+
     ports:
       - "10000:10000"
     networks:
@@ -189,4 +192,4 @@ volumes:
   neo4j:
   neo4j-backup:
 
-  ########################### End Volumes Definition ##########################
+    ########################### End Volumes Definition ##########################

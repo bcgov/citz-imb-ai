@@ -25,7 +25,7 @@ class RAG_from_scratch:
         """
         return retrieval(query)    
 
-    @instrument
+    @instrument 
     def query(self, query: str) -> str:
         context_str = self.retrieve(query)
         return context_str
