@@ -177,6 +177,27 @@ services:
     networks:
       - zuba
 
+  ######################## pgAdmin    ############################################
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin@pgadmin.com
+      - PGADMIN_DEFAULT_PASSWORD=pgadmin4
+    ports:
+      - 9099:80
+    depends_on:
+      - postgres
+      - trulens
+      - neo4j
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - zuba
+  ######################## End of pgAdmin          #####################################
+
 ########################### Networks Definition ################################
 networks:
   zuba:
@@ -190,5 +211,6 @@ volumes:
   trulensdata:
   neo4j:
   neo4j-backup:
+  pgadmin_data:
 
     ########################### End Volumes Definition ##########################
