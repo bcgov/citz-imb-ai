@@ -40,6 +40,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setResultData('');
     setLoading(true);
     setShowResult(true);
+    setInput('');
     let response;
     if (prompt !== undefined) {
       response = await runChat(prompt);
@@ -65,12 +66,12 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       delayPara(i, nextWord + ' ');
     }
     setLoading(false);
-    setInput('');
   };
 
   const newChat = async () => {
     setLoading(false);
     setShowResult(false);
+    setInput('');
   };
 
   const resetContext = () => {
