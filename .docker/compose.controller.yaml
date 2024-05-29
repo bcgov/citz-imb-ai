@@ -168,11 +168,10 @@ services:
     environment:
       - TRULENS_USER=${TRULENS_USER:-postgres}
       - TRULENS_PASSWORD=${TRULENS_PASSWORD:-root}
-      - TRULENS_DB=${TRULENS_DB:-trulens}
+      - TRULENS_DB=${TRULENS_DB:-postgres}
       - TRULENS_PORT=${TRULENS_PORT:-5432}
       - TRULENS_HOST=trulens
       - DISABLE_NEST_ASYNCIO=True
-
     ports:
       - "10000:10000"
     networks:
