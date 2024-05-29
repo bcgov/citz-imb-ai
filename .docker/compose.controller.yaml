@@ -19,7 +19,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1"
+          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1",
         ]
       interval: 5s
       timeout: 3s
@@ -95,7 +95,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1"
+          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1",
         ]
       interval: 5s
       timeout: 3s
@@ -122,10 +122,7 @@ services:
       - "${NEO4J_PORT:-7687}:7687"
     healthcheck:
       test:
-        [
-          "CMD-SHELL",
-          "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"
-        ]
+        ["CMD-SHELL", "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"]
       interval: 5s
       timeout: 3s
     networks:
@@ -141,7 +138,7 @@ services:
       dockerfile: Dockerfile
       target: prod
     ports:
-      - "9000:9000"
+      - "8080:8080"
     networks:
       - zuba
   ######################## End of web FRONTEND #####################################
