@@ -84,7 +84,7 @@
 
       <script>
     if (localStorage.getItem("token") === null) {
-      window.location.href = "http://localhost:9000/index2.html";
+      window.location.href = "http://localhost:11000/index2.html";
     } else {
       console.log("User is authenticated");
       fetch("http://localhost:10000/login/", {
@@ -98,12 +98,12 @@
           console.log("User is authenticated");
         } else {
           console.log("User is not authenticated");
-          window.location.href = "http://localhost:9000/index2.html";
+          window.location.href = "http://localhost:11000/index2.html";
         }
       })
       .catch((error) => {
         console.error("Authentication failed");
-        window.location.href = "http://localhost:9000/index2.html";
+        window.location.href = "http://localhost:11000/index2.html";
       });
   }
   </script>

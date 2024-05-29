@@ -1,29 +1,28 @@
 from fastapi import APIRouter, Form
 from app.dependencies import get_user_info
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from app.models import neo4j, trulens, topK
-import json
+from app.models import neo4j, trulens, rag
 
 router = APIRouter()
 kg = None
 tru = None
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-@router.get("chat")
+@router.post("/chat/")
 async def chat(prompt: str = Form(...)):
     # Global variables initialization
-    global kg, tru, APP_ID
-    rag = topK.get_top_k()
+    global kg, tru, APP_ID, session, bedrock_runtime
+    rag_fn = rag.get_full_rag()
     if kg is None:
         kg = neo4j.neo4j()
     if tru is None:
         tru = trulens.connect_trulens()
-    tru_rag = trulens.tru_rag(rag)
+    tru_rag = trulens.tru_rag(rag_fn)
     print(tru_rag)
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     with tru_rag as recording:
-        responses = rag.query(prompt, embeddings, kg)
-    record = recording.get()
+        responses = rag_fn.query(prompt, embeddings, kg)
+    record = recording.get() 
     return {"responses": responses, "recording": record.record_id}
 
 # url = 'https://LLMSErver.a0a6fc-prod.nimbus.cloud.gov.bc.ca/v1/chat/completions'

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Form
 from app.dependencies import get_user_info
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from app.models import neo4j, trulens, topK
+from app.models import neo4j, trulens, rag
 import json
 
 router = APIRouter()
@@ -16,15 +16,15 @@ async def submit_question(prompt: str = Form(...)):
 
     # Global variables initialization
     global kg, tru, APP_ID, embeddings
-    rag = topK.get_top_k()
+    rag_fn = rag.get_top_k()
     if kg is None:
         kg = neo4j.neo4j()
     if tru is None:
         tru = trulens.connect_trulens()
-    tru_rag = trulens.tru_rag(rag)
+    tru_rag = trulens.tru_rag(rag_fn)
     print(tru_rag)
     with tru_rag as recording:
-        responses = rag.query(prompt, embeddings, kg)
+        responses = rag_fn.query(prompt, embeddings, kg)
     record = recording.get()
     print(responses)
     # Process question prompt
