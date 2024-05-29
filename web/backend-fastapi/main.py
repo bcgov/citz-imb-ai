@@ -15,7 +15,7 @@ app.include_router(chat_RAG.router)
 
 # Register middleware
 #app.add_middleware(LoggingMiddleware)
-#app.add_middleware(AuthenticationMiddleware)
+app.add_middleware(AuthenticationMiddleware)
 
 origins = [
     "http://localhost.tiangolo.com",
