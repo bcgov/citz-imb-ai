@@ -60,7 +60,7 @@
     animation: fadeIn 1.6s ease-in-out;
 
     &:hover {
-      filter: brightness(var(--button-hover-brightness));
+      background-color: var(--button-bg-color-hover);
       transition: 0.1s;
     }
 
