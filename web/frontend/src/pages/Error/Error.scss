@@ -48,7 +48,7 @@
   }
 
   .back-button {
-    background-color: var(--button-bg-color);
+    background-color: var(--button-bg-color-red);
     color: var(--text-color);
     padding: 16px 30px;
     border-radius: 50px;
@@ -60,7 +60,7 @@
     animation: fadeIn 1.6s ease-in-out;
 
     &:hover {
-      filter: brightness(var(--button-hover-brightness));
+      background-color: var(--button-bg-color-red-hover);
       transition: 0.1s;
     }
 

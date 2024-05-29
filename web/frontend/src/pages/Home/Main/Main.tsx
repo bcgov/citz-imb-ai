@@ -1,11 +1,15 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
 import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
+import ModalDialog from '@/components/Modal/ModalDialog';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
   const context = useContext(Context);
+  const navigate = useNavigate();
+  const [isModalVisible, setIsModalVisible] = useState(true);
 
   if (!context) {
     throw new Error('Main must be used within a ContextProvider');
@@ -61,8 +65,16 @@ const Main = () => {
     `How much notice do I need to give to end my rental lease in BC?`,
     `Do I need to wear a seatbelt in BC?`,
     `How many breaks do I get during a workday in BC?`,
-    `What are the rules for distracted driving in BC?`,
+    `How do I dispute a traffic ticket in BC?`,
   ];
+
+  const handleModalYes = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleModalNo = () => {
+    navigate('/error');
+  };
 
   return (
     <div className="main-page">
@@ -150,6 +162,29 @@ const Main = () => {
           </div>
         </div>
       </div>
+      {isModalVisible && (
+        <ModalDialog
+          title="Notice"
+          description={
+            <>
+              <p>
+                This application is in beta mode, and answers may be inaccurate.
+                Please double-check the validity of the information.
+              </p>
+              <p>By agreeing to use BC AI, you accept our terms of service.</p>
+              <p>Do you agree to proceed?</p>
+            </>
+          }
+          option1={{
+            text: 'Yes, I Agree',
+            onClick: handleModalYes,
+          }}
+          option2={{
+            text: 'No, Take Me Back',
+            onClick: handleModalNo,
+          }}
+        />
+      )}
     </div>
   );
 };

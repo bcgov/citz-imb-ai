@@ -2,10 +2,12 @@ import { useState, useContext, Key } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
+import ModalDialog from '@/components/Modal/ModalDialog';
 import './Sidebar.scss';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const navigate = useNavigate();
   const context = useContext(Context);
 
@@ -25,9 +27,17 @@ const Sidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const logout = () => {
+  const handleLogout = () => {
     resetContext();
     navigate('/');
+  };
+
+  const openModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -61,10 +71,31 @@ const Sidebar = () => {
         </div>
       ) : null}
 
-      <div onClick={logout} className="bottom" title="Logout">
+      <div onClick={openModal} className="bottom" title="Logout">
         <img src={assets.user_icon} alt="user" />
         {!isCollapsed ? <p>Logout</p> : null}
       </div>
+
+      {isModalVisible && (
+        <ModalDialog
+          title="Logout"
+          description={
+            <>
+              <p>Do you really want to log out?</p>
+              <br />
+              <p>This will clear your chat history.</p>
+            </>
+          }
+          option1={{
+            text: 'Yes, Logout',
+            onClick: handleLogout,
+          }}
+          option2={{
+            text: 'No, Take Me Back',
+            onClick: closeModal,
+          }}
+        />
+      )}
     </div>
   );
 };
