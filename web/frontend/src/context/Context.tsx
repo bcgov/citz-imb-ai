@@ -33,7 +33,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   function delayPara(index: number, nextWord: string) {
     setTimeout(function () {
       setResultData((prev) => prev + nextWord);
-    }, 75 * index);
+    }, 15 * index);
   }
 
   const onSent = async (prompt?: string) => {
