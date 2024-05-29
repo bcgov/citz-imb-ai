@@ -28,5 +28,5 @@ const runChat = async (_prompt: string): Promise<string> => {
       prettier += '\n\n' + topk_str;
       return prettier;
 };
- 
+
 export default runChat;
