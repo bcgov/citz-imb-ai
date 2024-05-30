@@ -21,7 +21,7 @@ const runChat = async (_prompt: string): Promise<string> => {
       for (let i = 0; i < topk.length; i++) {
         topk_str += '<p><small>' 
         Object.keys(topk[i]).forEach(function(key) {
-          if (key === 'url' && topk[i][key] !== '') {
+          if (key === 'url' && topk[i][key] !== '' && topk[i][key] !== null) {
             topk_str += key + ': ' + '<a target="_blank" href="' + topk[i][key] + '"><img src="' + topk[i][key] + '" width="100" height="100"></a><br>';
           } else {
             topk_str += key + ': ' + topk[i][key] + '<br>';
