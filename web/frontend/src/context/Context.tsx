@@ -30,11 +30,11 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [resultData, setResultData] = useState<string>('');
 
-  function delayPara(index: number, nextWord: string) {
-    setTimeout(function () {
+  const delayPara = (index: number, nextWord: string) => {
+    setTimeout(() => {
       setResultData((prev) => prev + nextWord);
     }, 15 * index);
-  }
+  };
 
   const onSent = async (prompt?: string) => {
     setResultData('');
