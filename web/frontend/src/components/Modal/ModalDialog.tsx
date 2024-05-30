@@ -14,18 +14,26 @@ interface ModalDialogProps {
   };
 }
 
-const ModalDialog: React.FC<ModalDialogProps> = ({ title, description, option1, option2 }) => {
+const ModalDialog: React.FC<ModalDialogProps> = ({
+  title,
+  description,
+  option1,
+  option2,
+}) => {
   return (
     <div className="modal-overlay">
       <div className="modal-dialog">
         <div className="modal-header">
-          <p className="modal-title">{title}</p>
+          <span className="modal-title">{title}</span>
         </div>
         <div className="modal-body">
-          <p className="modal-description">{description}</p>
+          <span className="modal-description">{description}</span>
         </div>
         <div className="modal-footer">
-          <button className="modal-button blue-button" onClick={option1.onClick}>
+          <button
+            className="modal-button blue-button"
+            onClick={option1.onClick}
+          >
             {option1.text}
           </button>
           <button className="modal-button red-button" onClick={option2.onClick}>
