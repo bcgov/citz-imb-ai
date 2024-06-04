@@ -1,157 +1,242 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script src=" https://cdn.jsdelivr.net/npm/keycloak-js@24.0.4/dist/keycloak.min.js "></script>
-    <style>
-      .top-right {
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src=" https://cdn.jsdelivr.net/npm/keycloak-js@24.0.4/dist/keycloak.min.js "></script>
+  <style>
+    .top-right {
       position: absolute;
       top: 10px;
       right: 10px;
     }
-    </style>
-    <title>Feedback System</title>
-  </head>
-  <body>
-    <div class="m-5">
-      <div class="d-flex top-right">
-        <a href="view.html" class="btn btn-primary">View Feedback</a>
-      </div>
-      <h1>Feedback System</h1>
-        <small class="text-muted">
-          This is a feedback system for the legal information retrieval system. Enter a query in the input box below and submit it. The system will return a list of responses. For each response, you can provide feedback by selecting either "Thumbs Up" or "Thumbs Down". You can also provide feedback for multiple responses and submit them all at once using the "Submit Bulk Feedback" button. If you want to clear the responses, you can use the "Clear Responses" button.
-        </small>
-      <div class="form-group mt-2 mb-1">
-        <label for="exampleInputEmail1">Enter a query</label>
-        <input
-          type="input"
-          class="form-control"
-          id="prompt"
-          aria-describedby="emailHelp"
-          placeholder="Enter a query"
-        />
-        <div class="mt-1 mb-1">
-          <button onclick="submitQuestion()" class="mt-1 btn btn-dark">Submit</button>
-        </div>
-        <small id="promptHelp" class="form-text text-muted"
-          >Try to enter as many similar prompts. For e.g.</small
-        >
-        <small id="promptHelpEx" class="form-text text-muted"
-          >
-          <ul>
-            <!-- List of example prompts -->
-            <li>What regulations govern living in a condominium or apartment complex?</li>
-            <li>As a homeowner in a homeowners association (HOA), what rules am I subject to?</li>
-            <li>What are the legal requirements for residents in a cooperative housing society?</li>
-            <li>Are there specific laws that apply to residents in a gated community?</li>
-            <li>What legislation oversees property owners in a planned unit development (PUD)?</li>
-            <li>As a tenant in a rental property, what laws protect my rights?</li>
-            <li>What are the legal obligations of property owners in a homeowners association (HOA)?</li>
-            <li>What laws govern the management and operations of a residential strata corporation?</li>
-            <li>Are there specific regulations for strata managers in my jurisdiction?</li>
-            <li>What are the rights and responsibilities of owners in a strata-titled property?</li>
-            <li>How are disputes between strata owners typically resolved under the law?</li>
-            <li>What are the legal requirements for holding annual general meetings in a strata complex?</li>
-            <li>Are there laws governing the maintenance and repair of common areas in a strata property?</li>
-            <li>What is the role of the strata council in enforcing strata bylaws?</li>
-            <li>What legislation governs the collection of strata fees and special levies?</li>
-            <li>Are there regulations regarding the insurance requirements for strata properties?</li>
-            <li>What laws protect strata owners from unfair practices by the strata corporation?</li>
-            <li>Are there legal guidelines for the creation and amendment of strata bylaws?</li>
-            <li>What are the legal implications of non-compliance with strata bylaws?</li>
-            <li>How does the strata property act or equivalent legislation apply to mixed-use strata developments?</li>
-        </ul>
-            <!-- Add more example prompts if needed -->
-          </ul>
-        </small>
-      </div>
+  </style>
+  <title>Feedback System</title>
+</head>
 
-      <div id="responses"></div>
-      <!-- Button for bulk feedback submission -->
-      <button id="SubmitBulk" class="mt-2 btn btn-dark d-none" onclick="submitBulkFeedback()">
-        Submit Bulk Feedback
-      </button>
-      <!-- Button to clear responses -->
-      <button id="clearResponses" class="mt-2 btn btn-danger d-none" onclick="clearResponses()">
-        Clear Responses
-      </button>
+<body>
+  <div class="m-5">
+    <div class="d-flex top-right">
+      <a href="view.html" class="btn btn-primary">View Feedback</a>
+    </div>
+    <h1>Feedback System</h1>
+    <small class="text-muted">
+      This is a feedback system for the legal information retrieval system. Enter a query in the input box below and
+      submit it. The system will return a list of responses. For each response, you can provide feedback by selecting
+      either "Thumbs Up" or "Thumbs Down". You can also provide feedback for multiple responses and submit them all at
+      once using the "Submit Bulk Feedback" button. If you want to clear the responses, you can use the "Clear
+      Responses" button.
+    </small>
+    <div class="form-group mt-2 mb-1">
+      <label for="exampleInputEmail1">Enter a query</label>
+      <input type="input" class="form-control" id="prompt" aria-describedby="emailHelp" placeholder="Enter a query" />
+      <div class="mt-1 mb-1">
+        <button onclick="submitQuestion()" class="mt-1 btn btn-dark">Submit</button>
+      </div>
+      <small id="promptHelp" class="form-text text-muted">Try to enter as many similar prompts. For e.g.</small>
+      <small id="promptHelpEx" class="form-text text-muted">
+        <ul>
+          <!-- List of example prompts -->
+          <li>What regulations govern living in a condominium or apartment complex?</li>
+          <li>As a homeowner in a homeowners association (HOA), what rules am I subject to?</li>
+          <li>What are the legal requirements for residents in a cooperative housing society?</li>
+          <li>Are there specific laws that apply to residents in a gated community?</li>
+          <li>What legislation oversees property owners in a planned unit development (PUD)?</li>
+          <li>As a tenant in a rental property, what laws protect my rights?</li>
+          <li>What are the legal obligations of property owners in a homeowners association (HOA)?</li>
+          <li>What laws govern the management and operations of a residential strata corporation?</li>
+          <li>Are there specific regulations for strata managers in my jurisdiction?</li>
+          <li>What are the rights and responsibilities of owners in a strata-titled property?</li>
+          <li>How are disputes between strata owners typically resolved under the law?</li>
+          <li>What are the legal requirements for holding annual general meetings in a strata complex?</li>
+          <li>Are there laws governing the maintenance and repair of common areas in a strata property?</li>
+          <li>What is the role of the strata council in enforcing strata bylaws?</li>
+          <li>What legislation governs the collection of strata fees and special levies?</li>
+          <li>Are there regulations regarding the insurance requirements for strata properties?</li>
+          <li>What laws protect strata owners from unfair practices by the strata corporation?</li>
+          <li>Are there legal guidelines for the creation and amendment of strata bylaws?</li>
+          <li>What are the legal implications of non-compliance with strata bylaws?</li>
+          <li>How does the strata property act or equivalent legislation apply to mixed-use strata developments?</li>
+        </ul>
+        <!-- Add more example prompts if needed -->
+        </ul>
+      </small>
     </div>
 
-      <script>
-    if (localStorage.getItem("token") === null) {
-      window.location.href = "http://localhost:11000/index2.html";
-    } else {
-      console.log("User is authenticated");
-      fetch("http://localhost:10000/login/", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          console.log("User is authenticated");
-        } else {
-          console.log("User is not authenticated");
-          window.location.href = "http://localhost:11000/index2.html";
-        }
-      })
-      .catch((error) => {
-        console.error("Authentication failed");
-        window.location.href = "http://localhost:11000/index2.html";
-      });
-  }
+    <div id="responses"></div>
+    <!-- Button for bulk feedback submission -->
+    <button id="SubmitBulk" class="mt-2 btn btn-dark d-none" onclick="submitBulkFeedback()">
+      Submit Bulk Feedback
+    </button>
+    <!-- Button to clear responses -->
+    <button id="clearResponses" class="mt-2 btn btn-danger d-none" onclick="clearResponses()">
+      Clear Responses
+    </button>
+  </div>
+  <script>
+    function redirect_login() {
+      console.log('redirecting to login page');
+      /* clear all lcoal storage and cahce */
+      localStorage.removeItem('keycloak-token');
+      localStorage.removeItem('keycloak-refresh-token');
+      /* delete all keyclaock cookies */
+      var cookies = document.cookie.split("; ");  
+      console.log(cookies);
+      window.location.href = 'login.html';
+    }
+
   </script>
 
-    <script>
-      let recording_id = null;
+  <script>
+    var keycloak = new Keycloak({
+      realm: "standard",
+      url: "https://dev.loginproxy.gov.bc.ca/auth",
+      "ssl-required": "external",
+      clientId: "a-i-pathfinding-project-5449",
+      "enable-pkce": true,
+    });
 
-      /* authenticate user */
-       
+    // Load tokens from local storage
+    var token = localStorage.getItem('keycloak-token');
+    var refreshToken = localStorage.getItem('keycloak-refresh-token');
 
-      // Function to submit a single question
-      async function submitQuestion() {
-        event.preventDefault();
-        event.stopPropagation();
-        const prompt = document.getElementById("prompt").value;
+    // Check if tokens are present
+    if (token && refreshToken) {
+      keycloak.token = token;
+      keycloak.refreshToken = refreshToken;
 
-        const response = await fetch("http://localhost:10000/submit/", {
-          method: "POST",
+      async function refreshToken() {
+        const refresh_token = localStorage.getItem('keycloak-refresh-token');
+        const formData = new URLSearchParams();
+        formData.append('refresh_token', refresh_token);
+
+        await fetch('http://localhost:10000/refreshtoken', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Authorization": `Bearer ${localStorage.getItem("token")}`,
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + localStorage.getItem('keycloak-token')
           },
-          body: `prompt=${encodeURIComponent(prompt)}`,
-        });
+          body: formData
+        })
+          .then(response => {
+            if (response.ok) {
+              console.log('Token refreshed');
+              return response.json();
+            } else {
+              console.error('Failed to refresh token');
+              redirect_login();
+            }
+          })
+          .then(data => {
+            if (data) {
+              localStorage.setItem('keycloak-token', data.access_token);
+              localStorage.setItem('keycloak-refresh-token', data.refresh_token);
+            }
+          })
+          .catch(error => {
+            console.error('Error refreshing token:', error);
+          });
+      } 
 
-        const data = await response.json();
-        const responses = data.responses;
-        console.log(responses);
-        recording_id = data.recording;
-
-        const responsesDiv = document.getElementById("responses");
-        responsesDiv.innerHTML = "";
-
-        if (responses.length > 1) {
-          document.getElementById("SubmitBulk").classList.remove("d-none");
-          document.getElementById("clearResponses").classList.remove("d-none");
+      // Validate the token with the backend
+      validateTokenWithBackend(token).then(isValid => {
+        if (isValid) {
+          console.log('Authenticated on dashboard');
+          // Periodically refresh the token
+          setInterval(function () {
+            // Refresh token from the backend
+            refreshToken();
+          }, 240000); // Refresh token every  4 minute
+        } else {
+          /* retry validation */
+          console.warn('Token is not valid, redirecting to login');
+          redirect_login();
         }
+      }).catch(function () {
+        console.error('Failed to validate token');
+        redirect_login();
+      });
+    } else {
+      console.warn('No tokens found, redirecting to login');
+      window.location.href = 'login.html';
+      //redirect_login();
+    }
 
-        responses.forEach((response, index) => {
-          const responseDiv = document.createElement("div");
-          responseDiv.innerHTML = `
+    // Function to validate token with backend
+    function validateTokenWithBackend(token) {
+      return fetch('http://localhost:10000/login', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        }
+      })
+        .then(response => {
+          if (response.ok) {
+            console.log('Token validated');
+            console.log(response.json());
+            return { valid: true };
+          } else {
+            console.warn('Failed to validate token');
+            return { valid: false };
+          }
+        })
+        .then(data => {
+          return data.valid; // Assuming the backend returns { valid: true/false }
+        })
+        .catch(error => {
+          console.error('Error validating token:', error);
+          return false;
+        });
+    }
+
+
+  </script>
+
+  <script>
+    let recording_id = null;
+
+    /* authenticate user */
+
+
+    // Function to submit a single question
+    async function submitQuestion() {
+      event.preventDefault();
+      event.stopPropagation();
+      const prompt = document.getElementById("prompt").value;
+
+      const response = await fetch("http://localhost:10000/submit/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": `Bearer ${localStorage.getItem("keycloak-token")}`,
+        },
+        body: `prompt=${encodeURIComponent(prompt)}`,
+      });
+
+      const data = await response.json();
+      const responses = data.responses;
+      console.log(responses);
+      recording_id = data.recording;
+
+      const responsesDiv = document.getElementById("responses");
+      responsesDiv.innerHTML = "";
+
+      if (responses.length > 1) {
+        document.getElementById("SubmitBulk").classList.remove("d-none");
+        document.getElementById("clearResponses").classList.remove("d-none");
+      }
+
+      responses.forEach((response, index) => {
+        const responseDiv = document.createElement("div");
+        responseDiv.innerHTML = `
                 <div class="card" style="margin:15px 15px;" id="card-${index}">
                     <div class="card-body">
                         <p><b>Response ${index + 1}</b><p>
                         <b>Act Name:</b> <h5>${response["node.ActId"]}</h5>
-                        <b>Section Name:</b> <h5>${
-                          response["node.sectionName"]
-                        }</h5>
+                        <b>Section Name:</b> <h5>${response["node.sectionName"]
+          }</h5>
                         <b>Section ID:</b><h5>${response["node.sectionId"]}</h5>
                         <b>Regulation ID:</b><h5>${response["Regulations"]}</h5>
                         <b>url:</b><h5>${response["node.url"]}</h5>
@@ -162,87 +247,86 @@
                     </div>
                 </div>    
             `;
-          responsesDiv.appendChild(responseDiv);
-        });
+        responsesDiv.appendChild(responseDiv);
+      });
+    }
+
+    // Function to submit feedback for a single response
+    async function submitFeedback(index) {
+      const feedback = document.querySelector(
+        `input[name="feedback${index}"]:checked`
+      ).value;
+      if (!recording_id) {
+        alert("Please submit a question first");
+        return;
       }
 
-      // Function to submit feedback for a single response
-      async function submitFeedback(index) {
-        const feedback = document.querySelector(
-          `input[name="feedback${index}"]:checked`
-        ).value;
-        if (!recording_id) {
-          alert("Please submit a question first");
+      form = new FormData();
+      form.append("feedback", feedback);
+      form.append("index", index);
+      form.append("recording_id", recording_id);
+
+      const response = await fetch("http://localhost:10000/feedback/", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${localStorage.getItem("keycloak-token")}`,
+        },
+        body: form,
+      });
+
+      const data = await response.json();
+      console.log(data);
+    }
+
+    // Function to submit bulk feedback
+    async function submitBulkFeedback() {
+      const responses = document.getElementById("responses").children;
+      feedback_value = [];
+      for (let i = 0; i < responses.length; i++) {
+        feedback = document.querySelector(
+          `input[name="feedback${i}"]:checked`
+        );
+        if (!feedback) {
+          alert("Please provide feedback for all responses. Response " + (i + 1) + " is missing feedback.");
           return;
         }
-
-        form = new FormData();
-        form.append("feedback", feedback);
-        form.append("index", index);
-        form.append("recording_id", recording_id);
-
-        const response = await fetch("http://localhost:10000/feedback/", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${localStorage.getItem("token")}`,
-          },
-          body: form,
-        });
-
+        feedback_value.push(feedback.value);
+      }
+      form = new FormData();
+      form.append("feedback", feedback_value);
+      form.append("index", null); // null for bulk feedback
+      form.append("recording_id", recording_id);
+      form.append("bulk", true);
+      const response = await fetch("http://localhost:10000/feedback/", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${localStorage.getItem("keycloak-token")}`,
+        },
+        body: form,
+      });
+      if (response.status == 200 || response.status == 201) {
         const data = await response.json();
         console.log(data);
-      }
-
-      // Function to submit bulk feedback
-      async function submitBulkFeedback() {
-        const responses = document.getElementById("responses").children;
-        feedback_value = [];
-        for (let i = 0; i < responses.length; i++) {
-          feedback = document.querySelector(
-            `input[name="feedback${i}"]:checked`
-          );
-          if (!feedback) {
-            alert("Please provide feedback for all responses. Response " + (i + 1) + " is missing feedback.");
-            return;
-          }
-          feedback_value.push(feedback.value);
+        if (data.status === true) {
+          alert("Feedback submitted successfully");
+          clearResponses();
+          document.getElementById('prompt').value = '';
+          return;
         }
-        form = new FormData();
-        form.append("feedback", feedback_value);
-        form.append("index", null); // null for bulk feedback
-        form.append("recording_id", recording_id);
-        form.append("bulk", true);
-        const response = await fetch("http://localhost:10000/feedback/", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${localStorage.getItem("token")}`,
-          },
-          body: form,
-        });
-        if (response.status == 200 || response.status == 201) {
-          const data = await response.json();
-          console.log(data);
-          if (data.status === true) {  
-            alert("Feedback submitted successfully");
-            clearResponses();
-            document.getElementById('prompt').value = '';
-            return;
-          }
-        }
-        alert("Error submitting feedback");
       }
+      alert("Error submitting feedback");
+    }
 
-      // Function to clear responses
-      function clearResponses() {
-        document.getElementById('responses').innerHTML = '';
-        document.getElementById('SubmitBulk').classList.add('d-none');
-        document.getElementById('clearResponses').classList.add('d-none');
-      }
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    // Function to clear responses
+    function clearResponses() {
+      document.getElementById('responses').innerHTML = '';
+      document.getElementById('SubmitBulk').classList.add('d-none');
+      document.getElementById('clearResponses').classList.add('d-none');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
