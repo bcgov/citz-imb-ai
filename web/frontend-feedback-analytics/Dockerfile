@@ -12,7 +12,7 @@ COPY . /app/
 RUN npm install && npm run build
 
 # Copy additional HTML files to the build output directory
-COPY index2.html /app/dist/index2.html
+COPY login.html /app/dist/login.html
 COPY index3.html /app/dist/index3.html
 COPY feedback.html /app/dist/feedback.html
 

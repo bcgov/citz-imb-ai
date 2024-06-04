@@ -14,6 +14,26 @@
       "enable-pkce": true,
     });
 
+    /* refresh token function */
+    function refreshToken() {
+      keycloak
+        .updateToken(70)
+        .success(function (refreshed) {
+          if (refreshed) {
+            console.debug("Token refreshed" + refreshed);
+          } else {
+            console.warn(
+              "Token not refreshed, valid for " +
+                keycloak.tokenParsed.exp +
+                " seconds"
+            );
+          }
+        })
+        .error(function () {
+          console.error("Failed to refresh token");
+        });
+    }
+
     keycloak
       .init({
         onLoad: "login-required",
@@ -27,12 +47,19 @@
           // Access token
           console.log(Object.keys(keycloak));
           var token = keycloak.token;
-          
+
           console.log(token);
           // User info
           var userInfo = keycloak.tokenParsed;
           console.log(userInfo);
-          localStorage.setItem("token", token);
+          keycloak.loadUserProfile().then(function (profile) {
+            console.log(profile);
+          });
+          console.log("refresh token");
+          console.log(keycloak.refreshToken);
+
+          localStorage.setItem("keycloak-token", keycloak.token);
+          localStorage.setItem("keycloak-refresh-token", keycloak.refreshToken);
           window.location.href = "/feedback.html";
         } else {
           console.log("User is not authenticated");
