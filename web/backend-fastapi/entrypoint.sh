@@ -3,9 +3,11 @@
 # Load environment variables
 echo "Loading environment variables..."
 
-export AWS_ACCESS_KEY_ID="A"
-
-
+export AWS_ACCESS_KEY_ID="--"
+export AWS_SECRET_ACCESS_KEY="--"
+export AWS_SESSION_TOKEN="--"
+export AWS_DEFAULT_REGION=ca-central-1
+export AWS_REGION=ca-central-1
 
 # Check if the environment variables are loaded correctly
 if [ -z "$AWS_ACCESS_KEY_ID" ]; then

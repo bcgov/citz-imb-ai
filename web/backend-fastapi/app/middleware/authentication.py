@@ -1,37 +1,62 @@
-from fastapi import Request, HTTPException
+import json
 from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+from starlette.responses import JSONResponse
+from starlette.exceptions import HTTPException
 import requests
 from requests.exceptions import RequestException
-from fastapi.responses import JSONResponse
+import os
+
 
 class AuthenticationMiddleware(BaseHTTPMiddleware):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.keycloak_endpoint_url = "https://dev.loginproxy.gov.bc.ca/auth/realms/standard/protocol/openid-connect/userinfo"
-    
+        self.load_roles()
+
+    def load_roles(self):
+        # Get the directory of the current file
+        current_dir = os.path.dirname(__file__)
+        # Construct the path to the roles.json file
+        roles_file_path = os.path.join(current_dir, "..", "roles.json")
+        # Load the roles from the JSON file
+        with open(roles_file_path) as f:
+            self.allowed_roles = json.load(f).get("roles", [])
+
     async def dispatch(self, request: Request, call_next):
         try:
             # Extract bearer token from the request headers
-            url_path = str(request.url).split('/')[-1]
-            if (url_path == "docs"  or url_path == "openapi.json"):
+            url_path = str(request.url).split("/")[-1]
+            if url_path in ("docs", "openapi.json"):
                 return await call_next(request)
-            authorization_header = request.headers.get('Authorization')
-            if not authorization_header or not authorization_header.startswith('Bearer '):
+            authorization_header = request.headers.get("Authorization")
+            if not authorization_header or not authorization_header.startswith(
+                "Bearer "
+            ):
                 raise HTTPException(status_code=401, detail="Unauthorized")
-            token = authorization_header.split(' ')[1]
-            
+            token = authorization_header.split(" ")[1]
+
             # Set up the headers with the bearer token
             headers = {
                 "Authorization": f"Bearer {token}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             }
-            
+
             # Make a GET request to the Keycloak endpoint
             response = requests.get(self.keycloak_endpoint_url, headers=headers)
-            
+
             # Check the response
             if response.status_code == 200:
-                # Authentication successful, proceed to the next middleware or endpoint handler
+                user_info = response.json()
+                user_roles = user_info.get("client_roles", [])
+
+                if not any(role in self.allowed_roles for role in user_roles):
+                    raise HTTPException(
+                        status_code=403,
+                        detail="Forbidden: You do not have the required roles",
+                    )
+
+                # Authentication and role validation successful, proceed to the next middleware or endpoint handler
                 return await call_next(request)
             else:
                 # Authentication failed, raise HTTPException
@@ -42,12 +67,17 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
         except HTTPException as e:
             # Handle specific HTTPException gracefully
             if e.status_code == 401:
-                return JSONResponse(status_code=401, content={"detail": "Authentication required"})
+                return JSONResponse(
+                    status_code=401, content={"detail": "Authentication required"}
+                )
+            elif e.status_code == 403:
+                return JSONResponse(
+                    status_code=403,
+                    content={"detail": "Forbidden: You do not have the required roles"},
+                )
             else:
                 # Re-raise HTTPException with the same status code and detail
                 raise e
         except Exception as e:
             # Catch any other unexpected exceptions and return a generic error
-            #return await call_next(request)
             return JSONResponse(status_code=401, content={"detail": f"error: {e}"})
-            #raise HTTPException(status_code=500, detail="Internal Server Error")
