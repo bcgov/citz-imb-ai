@@ -1,5 +1,5 @@
 # GitHub Actions workflow for building and tagging the APP image on PR
-name: DEV Frontend Build and Push on PR
+name: Backend Build and Push on PR
 
 on:
   pull_request:
@@ -10,11 +10,11 @@ on:
     branches:
     - main
     paths:
-      - web/frontend/**
+      - web/backend-fastapi/**
 
 jobs:
   # Job to build, tag, and push the APP image
-  app-build-tag-push:
+  build-tag-push:
     environment: dev
     runs-on: ubuntu-latest
     steps:
@@ -37,18 +37,18 @@ jobs:
       run : |
         docker login ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_TOOLS_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
 
-    # Build the APP image
-    - name: Build APP Image
+    # Build the image
+    - name: Build Image
       run: |
-        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build web_frontend
+        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build web_backend
 
-    # Tag the APP image
-    - name: Tag APP Image
+    # Tag the image
+    - name: Tag Image
       run: |
-        docker tag docker_web_frontend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend-imagestream:${{github.event.pull_request.number}}
+        docker tag docker_web_backend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-fastapi-imagestream:${{github.event.pull_request.number}}
 
-    # Push the APP image
-    - name: Push APP Image
+    # Push the image
+    - name: Push Image
       run: |
-        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend-imagestream:${{ github.event.pull_request.number }}
+        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-fastapi-imagestream:${{ github.event.pull_request.number }}
 
