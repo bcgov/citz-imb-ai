@@ -1,3 +1,5 @@
+version: '3.7'
+
 services:
   #############################################
   #                Examples/Research          #
@@ -8,19 +10,15 @@ services:
     image: pgvector/pgvector:0.6.1-pg16
     restart: unless-stopped
     environment:
-      - POSTGRES_USER=${POSTGRES_USER:-postgres}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-root}
-      - POSTGRES_DB=${POSTGRES_DB:-ai_db}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-root}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_db}
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     healthcheck:
-      test:
-        [
-          "CMD-SHELL",
-          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1",
-        ]
+      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1"]
       interval: 5s
       timeout: 3s
     networks:
@@ -34,21 +32,21 @@ services:
       dockerfile: ../examples/Dockerfile
     platform: linux/amd64
     environment:
-      - POSTGRES_USER=${POSTGRES_USER:-postgres}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-root}
-      - POSTGRES_DB=${POSTGRES_DB:-ai_db}
-      - POSTGRES_HOST=postgres
-      - POSTGRES_PORT=${POSTGRES_PORT:-5432}
-      - TRULENS_USER=${TRULENS_USER:-postgres}
-      - TRULENS_PASSWORD=${TRULENS_PASSWORD:-root}
-      - TRULENS_DB=${TRULENS_DB:-trulens}
-      - TRULENS_PORT=${TRULENS_PORT:-5432}
-      - TRULENS_HOST=trulens
-      - NEO4J_USER=${NEO4J_USER:-neo4j}
-      - NEO4J_PASSWORD=${NEO4J_PASSWORD:-12345678}
-      - NEO4J_DB=${NEO4J_DB:-bclaws}
-      - NEO4J_PORT=${NEO4J_PORT:-7687}
-      - NEO4J_HOST=neo4j
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-root}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_db}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      TRULENS_USER: ${TRULENS_USER:-postgres}
+      TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
+      TRULENS_DB: ${TRULENS_DB:-trulens}
+      TRULENS_PORT: ${TRULENS_PORT:-5432}
+      TRULENS_HOST: trulens
+      NEO4J_USER: ${NEO4J_USER:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
+      NEO4J_DB: ${NEO4J_DB:-bclaws}
+      NEO4J_PORT: ${NEO4J_PORT:-7687}
+      NEO4J_HOST: neo4j
     ports:
       - "8888:8888"
       - "8501:8501"
@@ -56,9 +54,9 @@ services:
       - postgres
     networks:
       - zuba
-    ########################## AI Interface #########################################
+  ########################## End Jupyter Notebook ####################################
 
-    ########################## gradio #########################################
+  ########################## gradio #########################################
   gradio:
     container_name: gradio
     restart: unless-stopped
@@ -70,33 +68,90 @@ services:
     platform: linux/amd64
     networks:
       - zuba
+  ########################## End gradio ####################################
 
-  ########################## End of gradio ##############################################
+  ############################ AIRFLOW #########################################
+  airflow_postgres:
+    container_name: airflow_postgres
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5434:5432"
+    volumes:
+      - airflow_pgdata:/var/lib/postgresql/data
+    networks:
+      - zuba
 
-  ##################### AI Performance Tracking ####################################
+  airflow_init:
+    container_name: airflow_init
+    image: apache/airflow:2.3.3
+    depends_on:
+      - airflow_postgres
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_postgres/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    entrypoint: |
+      /bin/bash -c "airflow db init && \
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
+    networks:
+      - zuba
 
-  #############################################
-  #                Production                 #
-  #############################################
+  airflow_webserver:
+    container_name: airflow_webserver
+    image: apache/airflow:2.3.3
+    depends_on:
+      - airflow_postgres
+      - airflow_init
+    ports:
+      - "13000:8080"
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_postgres/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    volumes:
+      - ../mlops/orchestration/airflow/dags:/opt/airflow/dags
+      - ../mlops/orchestration/airflow/logs:/opt/airflow/logs
+      - ../mlops/orchestration/airflow/plugins:/opt/airflow/plugins
+    command: "webserver"
+    networks:
+      - zuba
 
+  airflow_scheduler:
+    container_name: airflow_scheduler
+    image: apache/airflow:2.3.3
+    depends_on:
+      - airflow_postgres
+      - airflow_init
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_postgres/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    volumes:
+      - ../mlops/orchestration/airflow/dags:/opt/airflow/dags
+      - ../mlops/orchestration/airflow/logs:/opt/airflow/logs
+      - ../mlops/orchestration/airflow/plugins:/opt/airflow/plugins
+    command: "scheduler"
+    networks:
+      - zuba
+  
+  ############################ End of AIRFLOW ##################################
+
+  ##################### AI Performance Tracking ################################
   trulens:
     container_name: trulens
     image: postgres:16.2
     restart: unless-stopped
     environment:
-      - POSTGRES_USER=${TRULENS_USER:-postgres}
-      - POSTGRES_PASSWORD=${TRULENS_PASSWORD:-root}
-      - POSTGRES_DB=${TRULENS_DB:-trulens}
+      POSTGRES_USER: ${TRULENS_USER:-postgres}
+      POSTGRES_PASSWORD: ${TRULENS_PASSWORD:-root}
+      POSTGRES_DB: ${TRULENS_DB:-trulens}
     volumes:
       - trulensdata:/var/lib/postgresql/data
     ports:
       - "${POSTGRES_PORT:-5433}:5432"
     healthcheck:
-      test:
-        [
-          "CMD-SHELL",
-          "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1",
-        ]
+      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER} || exit 1"]
       interval: 5s
       timeout: 3s
     networks:
@@ -109,20 +164,19 @@ services:
     image: neo4j:5.18.1
     restart: unless-stopped
     environment:
-      - USERNAME=${NEO4J_USERNAME:-neo4j}
-      - PASSWORD=${NEO4J_PASSWORD:-12345678}
-      - DB=${NEO4J_DB:-bclaws}
-      - NEO4J_AUTH=none
-      - NEO4JLABS_PLUGINS=["apoc"]
+      NEO4J_USERNAME: ${NEO4J_USERNAME:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
+      NEO4J_DB: ${NEO4J_DB:-bclaws}
+      NEO4J_AUTH: none
+      NEO4JLABS_PLUGINS: '["apoc"]'
     volumes:
       - neo4j:/var/lib/neo4j/data
       - neo4j-backup:/var/lib/neo4j/backups
     ports:
-      - "${NEO4J_PORT:-7474}:7474"
-      - "${NEO4J_PORT:-7687}:7687"
+      - "${NEO4J_HTTP_PORT:-7474}:7474"
+      - "${NEO4J_BOLT_PORT:-7687}:7687"
     healthcheck:
-      test:
-        ["CMD-SHELL", "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"]
+      test: ["CMD-SHELL", "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"]
       interval: 5s
       timeout: 3s
     networks:
@@ -130,7 +184,6 @@ services:
   ######################## End NEO4J ############################################
 
   ######################## web FRONTEND ############################################
-
   web_frontend:
     container_name: web_frontend
     build:
@@ -142,8 +195,8 @@ services:
     networks:
       - zuba
   ######################## End of web FRONTEND #####################################
-  ##################### WEB FRONTEND FEEDBACK ANALYTICS ############################
 
+  ##################### WEB FRONTEND FEEDBACK ANALYTICS ############################
   web_frontend_feedback_analytics:
     container_name: feedback_analytics
     build:
@@ -153,38 +206,36 @@ services:
       - "11000:11000"
     networks:
       - zuba
-  ##################### WEB FRONTEND FEEDBACK ANALYTICS ############################
+  ##################### End WEB FRONTEND FEEDBACK ANALYTICS ############################
 
   ########################## WEB BACKEND ############################################
-
   web_backend:
     container_name: web_backend
     build:
       context: ../web/backend-fastapi
       dockerfile: Dockerfile
     environment:
-      - TRULENS_USER=${TRULENS_USER:-postgres}
-      - TRULENS_PASSWORD=${TRULENS_PASSWORD:-root}
-      - TRULENS_DB=${TRULENS_DB:-postgres}
-      - TRULENS_PORT=${TRULENS_PORT:-5432}
-      - TRULENS_HOST=trulens
-      - DISABLE_NEST_ASYNCIO=True
+      TRULENS_USER: ${TRULENS_USER:-postgres}
+      TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
+      TRULENS_DB: ${TRULENS_DB:-postgres}
+      TRULENS_PORT: ${TRULENS_PORT:-5432}
+      TRULENS_HOST: trulens
     ports:
       - "10000:10000"
     networks:
       - zuba
+  ######################## End WEB BACKEND ############################################
 
-  ######################## pgAdmin    ############################################
-
+  ######################## pgAdmin ############################################
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4:latest
     restart: always
     environment:
-      - PGADMIN_DEFAULT_EMAIL=pgadmin@pgadmin.com
-      - PGADMIN_DEFAULT_PASSWORD=pgadmin4
+      PGADMIN_DEFAULT_EMAIL: pgadmin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: pgadmin4
     ports:
-      - 9099:80
+      - "9099:80"
     depends_on:
       - postgres
       - trulens
@@ -193,7 +244,7 @@ services:
       - pgadmin_data:/var/lib/pgadmin
     networks:
       - zuba
-  ######################## End of pgAdmin          #####################################
+  ######################## End of pgAdmin #####################################
 
 ########################### Networks Definition ################################
 networks:
@@ -209,5 +260,6 @@ volumes:
   neo4j:
   neo4j-backup:
   pgadmin_data:
-
-    ########################### End Volumes Definition ##########################
+  airflow_pgdata:
+  airflow_logs:
+########################### End Volumes Definition ##########################
