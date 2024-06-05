@@ -5,8 +5,8 @@ FROM node:22.0.0-alpine as build_stage
 # Set the working directory inside the container to /app
 WORKDIR /app
 
-# Copy all files from the current directory on the host to /app in the container
-COPY . /app/
+# Copy all files from the current directory to /app in the container
+COPY . /app
 
 # Install the project dependencies and build the project
 RUN npm install && npm run build
