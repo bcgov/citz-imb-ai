@@ -132,7 +132,7 @@ services:
   ######################## web FRONTEND ############################################
 
   web_frontend:
-    container_name: web_frontend
+    container_name: citz-imb-ai-frontend-svc
     build:
       context: ../web/frontend
       dockerfile: Dockerfile
@@ -158,7 +158,7 @@ services:
   ########################## WEB BACKEND ############################################
 
   web_backend:
-    container_name: web_backend
+    container_name: citz-imb-ai-backend-svc
     build:
       context: ../web/backend-fastapi
       dockerfile: Dockerfile
