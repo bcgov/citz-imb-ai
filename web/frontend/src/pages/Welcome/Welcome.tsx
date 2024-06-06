@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom';
 import './Welcome.scss';
+import { useContext } from 'react';
+import { Context } from '@/context/Context';
 
 const Welcome = () => {
-  const navigate = useNavigate();
-
-  const KeycloackLogin = () => {
-    navigate('/home');
+  const context = useContext(Context);
+  const handleLogin = () => {
+    context?.KeycloakLogin();
   };
 
   return (
@@ -15,7 +15,7 @@ const Welcome = () => {
           Chat with <span>BC AI</span>
         </h1>
         <h3>Experience BC's AI model in your browser.</h3>
-        <button className="start-button" onClick={KeycloackLogin}>
+        <button className="start-button" onClick={handleLogin}>
           Login
         </button>
       </div>
