@@ -1,5 +1,6 @@
-import React, { createContext, useState, ReactNode } from 'react';
+import React, { createContext, useState, ReactNode, useEffect } from 'react';
 import runChat from '@/config/config';
+import Keycloak from 'keycloak-js';
 
 interface ContextProps {
   prevPrompts: string[];
@@ -14,6 +15,9 @@ interface ContextProps {
   setInput: React.Dispatch<React.SetStateAction<string>>;
   newChat: () => void;
   resetContext: () => void;
+  isAuthenticated: boolean;
+  KeycloakLogin: () => void;
+  KeycloakLogout: () => void;
 }
 
 export const Context = createContext<ContextProps | undefined>(undefined);
@@ -22,6 +26,19 @@ interface ContextProviderProps {
   children: ReactNode;
 }
 
+// Keycloak configuration
+const keycloakConfig = {
+  realm: 'standard',
+  url: 'https://dev.loginproxy.gov.bc.ca/auth',
+  'ssl-required': 'external',
+  clientId: 'a-i-pathfinding-project-5449',
+  'enable-pkce': true,
+};
+
+const keycloak = new Keycloak(keycloakConfig);
+
+let isKeycloakInitialized = false;
+
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [prevPrompts, setPrevPrompts] = useState<string[]>([]);
   const [input, setInput] = useState<string>('');
@@ -29,6 +46,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [showResult, setShowResult] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [resultData, setResultData] = useState<string>('');
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
   const delayPara = (index: number, nextWord: string) => {
     setTimeout(() => {
@@ -83,6 +101,57 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setResultData('');
   };
 
+  useEffect(() => {
+    const initKeycloak = async () => {
+      if (!isKeycloakInitialized) {
+        const authenticated = await keycloak.init({
+          onLoad: 'check-sso',
+          pkceMethod: 'S256',
+        });
+        setIsAuthenticated(authenticated);
+        isKeycloakInitialized = true;
+        if (authenticated) {
+          localStorage.setItem('keycloak-token', keycloak.token ?? '');
+          localStorage.setItem(
+            'keycloak-refresh-token',
+            keycloak.refreshToken ?? '',
+          );
+        }
+      }
+    };
+
+    initKeycloak();
+  }, []);
+
+  const KeycloakLogin = async () => {
+    if (!isKeycloakInitialized) {
+      const authenticated = await keycloak.init({
+        pkceMethod: 'S256',
+        onLoad: 'check-sso',
+      });
+      setIsAuthenticated(authenticated);
+      isKeycloakInitialized = true;
+      if (authenticated) {
+        await keycloak.loadUserProfile();
+        localStorage.setItem('keycloak-token', keycloak.token ?? '');
+        localStorage.setItem(
+          'keycloak-refresh-token',
+          keycloak.refreshToken ?? '',
+        );
+      }
+    } else {
+      await keycloak.login({
+        redirectUri: window.location.origin,
+      });
+    }
+  };
+
+  const KeycloakLogout = async () => {
+    keycloak.logout();
+    localStorage.clear();
+    isKeycloakInitialized = false;
+  };
+
   const contextValue: ContextProps = {
     prevPrompts,
     setPrevPrompts,
@@ -96,6 +165,9 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setInput,
     newChat,
     resetContext,
+    isAuthenticated,
+    KeycloakLogin,
+    KeycloakLogout,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

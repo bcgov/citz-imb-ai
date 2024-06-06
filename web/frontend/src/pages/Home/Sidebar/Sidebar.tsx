@@ -1,5 +1,4 @@
 import { useState, useContext, Key } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import ModalDialog from '@/components/Modal/ModalDialog';
@@ -8,14 +7,13 @@ import './Sidebar.scss';
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const navigate = useNavigate();
   const context = useContext(Context);
 
   if (!context) {
     throw new Error('Sidebar must be used within a ContextProvider');
   }
 
-  const { onSent, prevPrompts, setRecentPrompt, newChat, resetContext } =
+  const { onSent, prevPrompts, setRecentPrompt, newChat, resetContext, KeycloakLogout } =
     context;
 
   const loadPrompt = async (prompt: string) => {
@@ -29,7 +27,7 @@ const Sidebar = () => {
 
   const handleLogout = () => {
     resetContext();
-    navigate('/');
+    KeycloakLogout();
   };
 
   const openModal = () => {
