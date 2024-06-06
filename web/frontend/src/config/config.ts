@@ -1,6 +1,6 @@
 const runChat = async (_prompt: string): Promise<string> => {
   // Mock delay of 2 seconds
-    const response = await fetch("http://localhost:10000/chat/", {
+    const response = await fetch("/api/chat/", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",

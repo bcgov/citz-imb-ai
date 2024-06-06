@@ -6,7 +6,7 @@ from app.controllers import feedback, chat_RAG, login
 import warnings
 warnings.filterwarnings("ignore")
 
-app = FastAPI()
+app = FastAPI(root_path="/api")
 
 # Include API routers
 app.include_router(login.router)
