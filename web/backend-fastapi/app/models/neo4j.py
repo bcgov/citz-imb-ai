@@ -15,7 +15,7 @@ def neo4j_vector_search(question, embeddings, kg):
     return similar
 
 def neo4j():
-    NEO4J_URI = 'bolt://neo4j:7687'
+    NEO4J_URI = 'bolt://citz-imb-ai-neo4j-svc:7687'
     kg = Neo4jGraph(
         url=NEO4J_URI, username='neo4j', password='neo4j', database='neo4j')
     return kg
