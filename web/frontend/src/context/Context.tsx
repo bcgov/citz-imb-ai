@@ -75,7 +75,6 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         newArray += '<b>' + responseArray[i] + '</b>';
       }
     }
-    console.log(newArray);
     responseArray = newArray.split('*').join('</br>').split(' ');
     for (let i = 0; i < responseArray.length; i++) {
       const nextWord = responseArray[i];
@@ -99,6 +98,10 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setResultData('');
   };
 
+  const refreshToken = () => {
+    keycloak.updateToken(70);
+  };
+
   useEffect(() => {
     const initKeycloak = async () => {
       if (!keycloak.authenticated) {
@@ -113,6 +116,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
             'keycloak-refresh-token',
             keycloak.refreshToken ?? '',
           );
+          setInterval(refreshToken, 60000);
         }
       }
     };
