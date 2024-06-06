@@ -101,17 +101,19 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const initKeycloak = async () => {
-      const authenticated = await keycloak.init({
-        onLoad: 'check-sso',
-        pkceMethod: 'S256',
-      });
-      setIsAuthenticated(authenticated);
-      if (authenticated) {
-        localStorage.setItem('keycloak-token', keycloak.token ?? '');
-        localStorage.setItem(
-          'keycloak-refresh-token',
-          keycloak.refreshToken ?? '',
-        );
+      if (!keycloak.authenticated) {
+        const authenticated = await keycloak.init({
+          onLoad: 'check-sso',
+          pkceMethod: 'S256',
+        });
+        setIsAuthenticated(authenticated);
+        if (authenticated) {
+          localStorage.setItem('keycloak-token', keycloak.token ?? '');
+          localStorage.setItem(
+            'keycloak-refresh-token',
+            keycloak.refreshToken ?? '',
+          );
+        }
       }
     };
 
