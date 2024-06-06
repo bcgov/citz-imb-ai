@@ -143,6 +143,7 @@ const Main = () => {
                 onKeyDown={handleKeyDown}
                 ref={textareaRef}
                 rows={1}
+                id='prompt-input'
               />
               <div>
                 {input ? (

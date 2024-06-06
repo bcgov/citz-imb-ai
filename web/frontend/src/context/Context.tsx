@@ -37,8 +37,6 @@ const keycloakConfig = {
 
 const keycloak = new Keycloak(keycloakConfig);
 
-let isKeycloakInitialized = false;
-
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [prevPrompts, setPrevPrompts] = useState<string[]>([]);
   const [input, setInput] = useState<string>('');
@@ -103,20 +101,17 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const initKeycloak = async () => {
-      if (!isKeycloakInitialized) {
-        const authenticated = await keycloak.init({
-          onLoad: 'check-sso',
-          pkceMethod: 'S256',
-        });
-        setIsAuthenticated(authenticated);
-        isKeycloakInitialized = true;
-        if (authenticated) {
-          localStorage.setItem('keycloak-token', keycloak.token ?? '');
-          localStorage.setItem(
-            'keycloak-refresh-token',
-            keycloak.refreshToken ?? '',
-          );
-        }
+      const authenticated = await keycloak.init({
+        onLoad: 'check-sso',
+        pkceMethod: 'S256',
+      });
+      setIsAuthenticated(authenticated);
+      if (authenticated) {
+        localStorage.setItem('keycloak-token', keycloak.token ?? '');
+        localStorage.setItem(
+          'keycloak-refresh-token',
+          keycloak.refreshToken ?? '',
+        );
       }
     };
 
@@ -124,32 +119,14 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   }, []);
 
   const KeycloakLogin = async () => {
-    if (!isKeycloakInitialized) {
-      const authenticated = await keycloak.init({
-        pkceMethod: 'S256',
-        onLoad: 'check-sso',
-      });
-      setIsAuthenticated(authenticated);
-      isKeycloakInitialized = true;
-      if (authenticated) {
-        await keycloak.loadUserProfile();
-        localStorage.setItem('keycloak-token', keycloak.token ?? '');
-        localStorage.setItem(
-          'keycloak-refresh-token',
-          keycloak.refreshToken ?? '',
-        );
-      }
-    } else {
-      await keycloak.login({
-        redirectUri: window.location.origin,
-      });
-    }
+    await keycloak.login({
+      redirectUri: window.location.origin,
+    });
   };
 
-  const KeycloakLogout = async () => {
+  const KeycloakLogout = () => {
     keycloak.logout();
     localStorage.clear();
-    isKeycloakInitialized = false;
   };
 
   const contextValue: ContextProps = {
