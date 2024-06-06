@@ -160,28 +160,28 @@ services:
 
   ######################## NEO4J ###############################################
   neo4j:
-    container_name: citz-imb-ai-neo4j-svc
-    image: neo4j:5.18.1
-    restart: unless-stopped
-    environment:
-      - USERNAME=${NEO4J_USERNAME:-neo4j}
-      - PASSWORD=${NEO4J_PASSWORD:-12345678}
-      - DB=${NEO4J_DB:-bclaws}
-      - NEO4J_AUTH=none
-      - NEO4JLABS_PLUGINS=["apoc"]
-    volumes:
-      - neo4j:/var/lib/neo4j/data
-      - neo4j-backup:/var/lib/neo4j/backups
-    ports:
-      - "${NEO4J_PORT:-7474}:7474"
-      - "${NEO4J_PORT:-7687}:7687"
-    healthcheck:
-      test:
-        ["CMD-SHELL", "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"]
-      interval: 5s
-      timeout: 3s
-    networks:
-      - zuba
+      container_name: citz-imb-ai-neo4j-svc
+      image: neo4j:5.18.1
+      restart: unless-stopped
+      environment:
+        - USERNAME=${NEO4J_USERNAME:-neo4j}
+        - PASSWORD=${NEO4J_PASSWORD:-12345678}
+        - DB=${NEO4J_DB:-bclaws}
+        - NEO4J_AUTH=none
+        - NEO4JLABS_PLUGINS=["apoc"]
+      volumes:
+        - neo4j:/var/lib/neo4j/data
+        - neo4j-backup:/var/lib/neo4j/backups
+      ports:
+        - "${NEO4J_PORT:-7474}:7474"
+        - "${NEO4J_PORT:-7687}:7687"
+      healthcheck:
+        test:
+          ["CMD-SHELL", "pg_isready -d $${NEO4J_DB} -U $${NEO4J_USER} || exit 1"]
+        interval: 5s
+        timeout: 3s
+      networks:
+        - zuba
   ######################## End NEO4J ############################################
 
   ######################## web FRONTEND ############################################
@@ -221,6 +221,10 @@ services:
       TRULENS_DB: ${TRULENS_DB:-postgres}
       TRULENS_PORT: ${TRULENS_PORT:-5432}
       TRULENS_HOST: trulens
+      NEO4J_USERNAME: ${NEO4J_USERNAME:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
+      NEO4J_DB: ${NEO4J_DB:-neo4j}
+      NEO4J_PORT: ${NEO4J_PORT:-7687}
     ports:
       - "10000:10000"
     networks:
