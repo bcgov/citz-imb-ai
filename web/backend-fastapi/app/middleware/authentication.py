@@ -80,4 +80,4 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
                 raise e
         except Exception as e:
             # Catch any other unexpected exceptions and return a generic error
-            return JSONResponse(status_code=401, content={"detail": f"error: {e}"})
+            return JSONResponse(status_code=500, content={"detail": f"error: {e}"})
