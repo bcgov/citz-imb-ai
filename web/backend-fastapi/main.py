@@ -5,6 +5,8 @@ from app.middleware.logging import LoggingMiddleware
 from app.controllers import feedback, chat_RAG, login
 import warnings
 import os
+from dotenv import load_dotenv
+
 warnings.filterwarnings("ignore")
 
 app = FastAPI(root_path="/api")
@@ -18,6 +20,7 @@ app.include_router(chat_RAG.router)
 #app.add_middleware(LoggingMiddleware)
 app.add_middleware(AuthenticationMiddleware)
 
+load_dotenv("/vault/secrets/zuba-secret-dev") # need to find soltion to load test and prod files in respective envs.
 
 print("Printing env variables")
 print(os.getenv("NEO4J_USERNAME"))
