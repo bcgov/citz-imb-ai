@@ -1,5 +1,5 @@
 import React, { createContext, useState, ReactNode, useEffect } from 'react';
-import runChat from '@/config/config';
+import runChat from '@/api/chat';
 import Keycloak from 'keycloak-js';
 
 interface ContextProps {
