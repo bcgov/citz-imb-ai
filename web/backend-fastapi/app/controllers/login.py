@@ -3,12 +3,21 @@ from app.models import neo4j, trulens, rag
 from fastapi.responses import JSONResponse
 import requests
 import json
+import os
 
 router = APIRouter()
 
 @router.get("/")
 async def read_main():
     return {"msg": "Hello World"}
+
+@router.get("/debug")
+async def debug():
+    print("Printing env variables")
+    print(os.getenv("NEO4J_USERNAME"))
+    print(os.getenv("AWS_SECRET_ACCESS_KEY"))
+    print(os.getenv("AWS_ACCESS_KEY_ID"))
+    print(os.environ)
 
 @router.get("/login/")
 async def login():

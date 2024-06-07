@@ -4,6 +4,7 @@ from app.middleware.authentication import AuthenticationMiddleware
 from app.middleware.logging import LoggingMiddleware
 from app.controllers import feedback, chat_RAG, login
 import warnings
+import os
 warnings.filterwarnings("ignore")
 
 app = FastAPI(root_path="/api")
@@ -16,6 +17,13 @@ app.include_router(chat_RAG.router)
 # Register middleware
 #app.add_middleware(LoggingMiddleware)
 app.add_middleware(AuthenticationMiddleware)
+
+
+print("Printing env variables")
+print(os.getenv("NEO4J_USERNAME"))
+print(os.getenv("AWS_SECRET_ACCESS_KEY"))
+print(os.getenv("AWS_ACCESS_KEY_ID"))
+print(os.environ)
 
 origins = [
     "http://localhost.tiangolo.com",
