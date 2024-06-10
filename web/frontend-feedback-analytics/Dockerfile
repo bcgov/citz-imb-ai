@@ -5,20 +5,19 @@ FROM node:22.0.0-alpine as build_stage
 # Set the working directory inside the container to /app
 WORKDIR /app
 
+# Copy additional HTML files to the build output directory
+COPY *.css /app/dist/
+COPY *.js /app/dist/
+COPY *.scss /app/dist/
 # Copy all files from the current directory to /app in the container
 COPY . /app
 
 # Install the project dependencies and build the project
 RUN npm install && npm run build
 
-# Copy additional HTML files to the build output directory
-COPY login.html /app/dist/login.html
-COPY index3.html /app/dist/index3.html
-COPY feedback.html /app/dist/feedback.html
-COPY *.html /app/dist/
-COPY *.css /app/dist/
-COPY *.js /app/dist/
-COPY *.scss /app/dist/
+COPY feedback.html /app/dist/
+COPY login.html /app/dist/
+COPY trulens.html /app/dist/
 
 # Nginx Build Stage
 # Use the official Nginx image based on Alpine Linux for the final stage
