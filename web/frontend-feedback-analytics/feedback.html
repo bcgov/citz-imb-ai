@@ -20,7 +20,10 @@
     <div class="d-flex top-right">
       <a href="view.html" class="btn btn-primary">View Feedback</a>
     </div>
-    <h1>Feedback System</h1>
+    <div class="d-flex top-right">
+      <a href="/trulens.html" class="btn btn-primary">Trulens Dashboard</a>
+    </div>
+      <h1>Feedback System</h1>
     <small class="text-muted">
       This is a feedback system for the legal information retrieval system. Enter a query in the input box below and
       submit it. The system will return a list of responses. For each response, you can provide feedback by selecting
@@ -324,6 +327,21 @@
       document.getElementById('clearResponses').classList.add('d-none');
     }
   </script>
+
+  <script>
+    async function trulens_dashboard() {
+      await fetch('/trulensdashboard', {
+        method: 'GET',
+        headers: {
+          'Authorization': 'Bearer ' + localStorage.getItem('keycloak-token')
+        }
+      })
+    }
+
+  </script>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>

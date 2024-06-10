@@ -3,9 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.middleware.authentication import AuthenticationMiddleware
 from app.middleware.logging import LoggingMiddleware
 from app.controllers import feedback, chat_RAG, login
+from app.models import neo4j, trulens, rag
 import warnings
 import os
 from dotenv import load_dotenv
+import threading
 
 warnings.filterwarnings("ignore")
 
@@ -22,11 +24,17 @@ app.add_middleware(AuthenticationMiddleware)
 
 load_dotenv("/vault/secrets/zuba-secret-dev") # need to find soltion to load test and prod files in respective envs.
 
-print("Printing env variables")
-print(os.getenv("NEO4J_USERNAME"))
-print(os.getenv("AWS_SECRET_ACCESS_KEY"))
-print(os.getenv("AWS_ACCESS_KEY_ID"))
-print(os.environ)
+# Function to run the trulens dashboard in a separate thread
+def run_trulens_dashboard():
+    # Ensure you have set up the connection with trulens before running the dashboard
+    tru = trulens.connect_trulens()
+    tru.run_dashboard(port=14000)
+
+@app.on_event("startup")
+def startup_event():
+    thread = threading.Thread(target=run_trulens_dashboard)
+    thread.daemon = True
+    thread.start()
 
 origins = [
     "http://localhost.tiangolo.com",

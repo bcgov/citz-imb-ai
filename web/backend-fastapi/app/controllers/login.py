@@ -11,18 +11,14 @@ router = APIRouter()
 async def read_main():
     return {"msg": "Hello World"}
 
-@router.get("/debug")
-async def debug():
-    print("Printing env variables")
-    print(os.getenv("NEO4J_USERNAME"))
-    print(os.getenv("AWS_SECRET_ACCESS_KEY"))
-    print(os.getenv("AWS_ACCESS_KEY_ID"))
-    print(os.environ)
-
-@router.get("/login/")
+@router.get("/login")
 async def login():
-    #return JSONResponse(content={"valid": True})
-    return {"valid": "True"}
+    return JSONResponse(content={"valid": True})
+
+@router.get("/validate")
+async def validate():
+    return JSONResponse(content={"status": "ok"})
+
 
 @router.post("/refreshtoken/")
 async def refresh_token(refresh_token: str = Form(...)):
