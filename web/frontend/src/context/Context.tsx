@@ -19,7 +19,7 @@ interface ContextProps {
   isAuthenticated: boolean;
   KeycloakLogin: () => void;
   KeycloakLogout: () => void;
-  sendUserFeedback: (feedbackType: 'upvote' | 'downvote') => void;
+  sendUserFeedback: (feedbackType: 'up_vote' | 'down_vote' | 'no_vote') => void;
 }
 
 export const Context = createContext<ContextProps | undefined>(undefined);
@@ -48,7 +48,9 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [resultData, setResultData] = useState<string>('');
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  const sendUserFeedback = async (feedbackType: 'upvote' | 'downvote') => {
+  const sendUserFeedback = async (
+    feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
+  ) => {
     try {
       const message = await sendFeedback(feedbackType);
       console.log(message);

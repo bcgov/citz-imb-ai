@@ -8,25 +8,30 @@ const FeedbackBar = () => {
   const { sendUserFeedback } = context || {};
   const [activeButton, setActiveButton] = useState<string | null>(null);
 
-  const handleVote = (type: string) => {
-    setActiveButton(type);
-    sendUserFeedback?.(type as 'upvote' | 'downvote');
+  const handleVote = (type: 'up_vote' | 'down_vote') => {
+    if (activeButton === type) {
+      setActiveButton(null);
+      sendUserFeedback?.('no_vote');
+    } else {
+      setActiveButton(type);
+      sendUserFeedback?.(type);
+    }
   };
 
   return (
     <div className="feedback-bar">
       <div className="feedback-buttons">
         <button
-          className={`thumb-button ${activeButton === 'upvote' ? 'active' : ''}`}
+          className={`thumb-button ${activeButton === 'up_vote' ? 'active' : ''}`}
           title="Good Response"
-          onClick={() => handleVote('upvote')}
+          onClick={() => handleVote('up_vote')}
         >
           <img src={assets.thumbs_up} alt="Good Response" />
         </button>
         <button
-          className={`thumb-button ${activeButton === 'downvote' ? 'active' : ''}`}
+          className={`thumb-button ${activeButton === 'down_vote' ? 'active' : ''}`}
           title="Bad Response"
-          onClick={() => handleVote('downvote')}
+          onClick={() => handleVote('down_vote')}
         >
           <img src={assets.thumbs_down} alt="Bad Response" />
         </button>
