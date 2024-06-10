@@ -7,7 +7,6 @@ import requests
 from requests.exceptions import RequestException
 import os
 
-
 class AuthenticationMiddleware(BaseHTTPMiddleware):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -29,11 +28,11 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
             url_path = str(request.url).split("/")[-1]
             if url_path in ("docs", "openapi.json"):
                 return await call_next(request)
+            
             authorization_header = request.headers.get("Authorization")
-            if not authorization_header or not authorization_header.startswith(
-                "Bearer "
-            ):
-                raise HTTPException(status_code=401, detail="Unauthorized")
+            if not authorization_header or not authorization_header.startswith("Bearer "):
+                return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
+            
             token = authorization_header.split(" ")[1]
 
             # Set up the headers with the bearer token
@@ -51,33 +50,25 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
                 user_roles = user_info.get("client_roles", [])
 
                 if not any(role in self.allowed_roles for role in user_roles):
-                    raise HTTPException(
+                    return JSONResponse(
                         status_code=403,
-                        detail="Forbidden: You do not have the required roles",
+                        content={"detail": "Forbidden: You do not have the required roles"},
                     )
 
                 # Authentication and role validation successful, proceed to the next middleware or endpoint handler
                 return await call_next(request)
             else:
                 # Authentication failed, raise HTTPException
-                raise HTTPException(status_code=401, detail="Unauthorized")
-        except RequestException as e:
+                return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
+        
+        except RequestException:
             # Handle request-related exceptions
-            raise HTTPException(status_code=503, detail="Service Unavailable")
+            return JSONResponse(status_code=503, content={"detail": "Service Unavailable"})
+        
         except HTTPException as e:
             # Handle specific HTTPException gracefully
-            if e.status_code == 401:
-                return JSONResponse(
-                    status_code=401, content={"detail": "Authentication required"}
-                )
-            elif e.status_code == 403:
-                return JSONResponse(
-                    status_code=403,
-                    content={"detail": "Forbidden: You do not have the required roles"},
-                )
-            else:
-                # Re-raise HTTPException with the same status code and detail
-                raise e
+            return JSONResponse(status_code=e.status_code, content={"detail": e.detail})
+        
         except Exception as e:
             # Catch any other unexpected exceptions and return a generic error
             return JSONResponse(status_code=500, content={"detail": f"error: {e}"})
