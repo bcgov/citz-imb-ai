@@ -1,19 +1,14 @@
 import './style.scss'
-import javascriptLogo from './javascript.svg'
+import bclogo from './BC_logo.jpg'
 import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
+    <a href="" target="_blank">
+      <img src="${bclogo}" class="logo vanilla" alt="B.C logo" />
     </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+    <h1>A.I Dashboard</h1>
+    <button class="button" onclick="window.location.href = '/login.html'">Login</button>
   </div>
 `
 
