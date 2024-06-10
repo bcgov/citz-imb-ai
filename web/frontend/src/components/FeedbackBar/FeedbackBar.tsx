@@ -5,11 +5,11 @@ const FeedbackBar = () => {
   return (
     <div className="feedback-bar">
       <div className="feedback-buttons">
-        <button className="thumb-button" title="Thumbs Up">
-          <img src={assets.thumbs_up} alt="Thumbs Up" />
+        <button className="thumb-button" title="Good Response">
+          <img src={assets.thumbs_up} alt="Good Response" />
         </button>
-        <button className="thumb-button" title="Thumbs Down">
-          <img src={assets.thumbs_down} alt="Thumbs Down" />
+        <button className="thumb-button" title="Bad Response">
+          <img src={assets.thumbs_down} alt="Bad Response" />
         </button>
       </div>
     </div>

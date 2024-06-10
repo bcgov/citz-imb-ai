@@ -148,12 +148,11 @@ const Main = () => {
                 rows={1}
                 id="prompt-input"
               />
-              <div>
+              <div className="send-button" title="Send">
                 {input ? (
                   <img
                     onClick={handleSend}
                     src={assets.send_icon}
-                    width={30}
                     alt="send icon"
                   />
                 ) : null}
