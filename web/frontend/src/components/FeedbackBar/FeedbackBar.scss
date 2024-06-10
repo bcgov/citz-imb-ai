@@ -1,0 +1,33 @@
+.feedback-bar {
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  margin-left: 60px;
+
+  .feedback-buttons {
+    display: flex;
+    gap: 20px;
+
+    .thumb-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 50px;
+      padding: 10px;
+      transition: background-color 0.2s;
+      animation: fadeIn 3s ease-in-out;
+
+      &:hover {
+        background-color: var(--sidebar-hover-color);
+      }
+
+      &:active {
+        background-color: var(--sidebar-hover-color-active);
+      }
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState, useContext } from 'react';
 import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import ModalDialog from '@/components/Modal/ModalDialog';
+import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 
@@ -107,6 +108,7 @@ const Main = () => {
                   ></p>
                 )}
               </div>
+              <FeedbackBar />
             </div>
           ) : (
             <>
