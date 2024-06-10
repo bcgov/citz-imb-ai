@@ -24,6 +24,11 @@ app.add_middleware(AuthenticationMiddleware)
 
 load_dotenv("/vault/secrets/zuba-secret-dev") # need to find soltion to load test and prod files in respective envs.
 
+print("printing keys")
+print(os.getenv("AWS_ACCESS_KEY_ID"))
+print(os.getenv("AWS_SECRET_ACCESS_KEY"))
+print(os.environ)
+
 # Function to run the trulens dashboard in a separate thread
 def run_trulens_dashboard():
     # Ensure you have set up the connection with trulens before running the dashboard
