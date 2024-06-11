@@ -38,3 +38,7 @@ async def refresh_token(refresh_token: str = Form(...)):
         raise HTTPException(status_code=response.status_code, detail="Token refresh failed")
     return response.json()
 
+@router.get("/health")
+def health_check():
+    return {"status": "healthy"}
+
