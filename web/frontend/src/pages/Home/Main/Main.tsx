@@ -3,6 +3,7 @@ import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
+import ScrollButton from '@/components/ScrollButton/ScrollButton';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 
@@ -87,28 +88,31 @@ const Main = () => {
         </div>
         <div className="main-container">
           {showResult ? (
-            <div className="result">
-              <div className="result-title">
-                <img src={assets.user_icon} alt="" />
-                <p>{recentPrompt}</p>
+            <div>
+              <div className="result">
+                <div className="result-title">
+                  <img src={assets.user_icon} alt="" />
+                  <p>{recentPrompt}</p>
+                </div>
+                <div className="result-data">
+                  <img src={assets.bc_icon} alt="" />
+                  {loading ? (
+                    <div className="loader">
+                      <hr className="animated-bg" />
+                      <hr className="animated-bg" />
+                      <hr className="animated-bg" />
+                    </div>
+                  ) : (
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: resultData,
+                      }}
+                    ></p>
+                  )}
+                </div>
+                <FeedbackBar />
               </div>
-              <div className="result-data">
-                <img src={assets.bc_icon} alt="" />
-                {loading ? (
-                  <div className="loader">
-                    <hr className="animated-bg" />
-                    <hr className="animated-bg" />
-                    <hr className="animated-bg" />
-                  </div>
-                ) : (
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: resultData,
-                    }}
-                  ></p>
-                )}
-              </div>
-              <FeedbackBar />
+              <ScrollButton />
             </div>
           ) : (
             <>
