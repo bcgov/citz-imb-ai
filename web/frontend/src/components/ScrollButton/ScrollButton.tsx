@@ -2,26 +2,43 @@ import { useState, useEffect } from 'react';
 import './ScrollButton.scss';
 import { assets } from '@/assets/icons/assets';
 
-const ScrollButton = () => {
+interface ScrollButtonProps {
+  scrollableElementId: string;
+}
+
+const ScrollButton: React.FC<ScrollButtonProps> = ({ scrollableElementId }) => {
   const [atBottom, setAtBottom] = useState(false);
 
   const handleScroll = () => {
-    const isBottom =
-      window.innerHeight + window.scrollY >= document.body.offsetHeight;
-    setAtBottom(isBottom);
+    const element = document.getElementById(scrollableElementId);
+    if (element) {
+      const isBottom =
+        element.scrollHeight - element.scrollTop - element.clientHeight < 1;
+      setAtBottom(isBottom);
+    }
   };
 
   const scrollTo = () => {
-    window.scrollTo({
-      top: atBottom ? 0 : document.body.scrollHeight,
-      behavior: 'smooth',
-    });
+    const element = document.getElementById(scrollableElementId);
+    if (element) {
+      element.scrollTo({
+        top: atBottom ? 0 : element.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const element = document.getElementById(scrollableElementId);
+    if (element) {
+      element.addEventListener('scroll', handleScroll);
+    }
+    return () => {
+      if (element) {
+        element.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [scrollableElementId]);
 
   return (
     <div className="scroll-button-container">

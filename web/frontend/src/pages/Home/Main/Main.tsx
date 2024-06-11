@@ -89,7 +89,7 @@ const Main = () => {
         <div className="main-container">
           {showResult ? (
             <div>
-              <div className="result">
+              <div className="result" id="scrollable-section">
                 <div className="result-title">
                   <img src={assets.user_icon} alt="" />
                   <p>{recentPrompt}</p>
@@ -112,7 +112,7 @@ const Main = () => {
                 </div>
                 <FeedbackBar />
               </div>
-              <ScrollButton />
+              <ScrollButton scrollableElementId="scrollable-section" />
             </div>
           ) : (
             <>
