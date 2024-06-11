@@ -26,6 +26,7 @@ const Main = () => {
     input,
     resetContext,
     KeycloakLogout,
+    generationComplete,
   } = context;
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -138,7 +139,10 @@ const Main = () => {
                 </div>
                 <FeedbackBar />
               </div>
-              <ScrollButton scrollableElementId="scrollable-section" />
+              <ScrollButton
+                scrollableElementId="scrollable-section"
+                generationComplete={generationComplete}
+              />
             </div>
           ) : (
             <>

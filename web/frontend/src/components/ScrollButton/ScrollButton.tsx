@@ -4,9 +4,13 @@ import { assets } from '@/assets/icons/assets';
 
 interface ScrollButtonProps {
   scrollableElementId: string;
+  generationComplete: boolean;
 }
 
-const ScrollButton: React.FC<ScrollButtonProps> = ({ scrollableElementId }) => {
+const ScrollButton: React.FC<ScrollButtonProps> = ({
+  scrollableElementId,
+  generationComplete,
+}) => {
   const [atBottom, setAtBottom] = useState(false);
 
   const handleScroll = () => {
@@ -23,7 +27,7 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({ scrollableElementId }) => {
     if (element) {
       element.scrollTo({
         top: atBottom ? 0 : element.scrollHeight,
-        behavior: 'smooth',
+        behavior: generationComplete ? 'smooth' : 'auto',
       });
     }
   };
