@@ -6,6 +6,8 @@ import send_icon from './send_icon.svg';
 import bc_icon from './bc_icon.svg';
 import thumbs_up from './thumbs_up.svg';
 import thumbs_down from './thumbs_down.svg';
+import up_arrow from './up_arrow.svg';
+import down_arrow from './down_arrow.svg';
 
 export const assets = {
   menu_icon,
@@ -16,4 +18,6 @@ export const assets = {
   bc_icon,
   thumbs_up,
   thumbs_down,
+  up_arrow,
+  down_arrow,
 };
