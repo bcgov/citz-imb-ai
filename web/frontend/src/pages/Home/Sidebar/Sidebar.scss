@@ -118,6 +118,27 @@
   }
 }
 
+.sidebar.collapsed .sidebar-header,
+.sidebar.collapsed .new-chat,
+.sidebar.collapsed .bottom {
+  position: relative;
+
+  &:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+    background-color: var(--main-hover-color);
+    color: var(--main-result-text-color);
+    padding: 15px;
+    border-radius: 50px;
+    white-space: nowrap;
+    z-index: 1;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
 @keyframes textExpand {
   0% {
     max-width: 0;

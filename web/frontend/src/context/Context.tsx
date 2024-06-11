@@ -1,5 +1,6 @@
 import React, { createContext, useState, ReactNode, useEffect } from 'react';
-import runChat from '@/config/config';
+import runChat from '@/api/chat';
+import sendFeedback from '@/api/feedback';
 import Keycloak from 'keycloak-js';
 
 interface ContextProps {
@@ -18,6 +19,7 @@ interface ContextProps {
   isAuthenticated: boolean;
   KeycloakLogin: () => void;
   KeycloakLogout: () => void;
+  sendUserFeedback: (feedbackType: 'up_vote' | 'down_vote' | 'no_vote') => void;
 }
 
 export const Context = createContext<ContextProps | undefined>(undefined);
@@ -45,6 +47,17 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [resultData, setResultData] = useState<string>('');
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+  const sendUserFeedback = async (
+    feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
+  ) => {
+    try {
+      const message = await sendFeedback(feedbackType);
+      console.log(message);
+    } catch (error) {
+      console.error('Error sending feedback:', error);
+    }
+  };
 
   const delayPara = (index: number, nextWord: string) => {
     setTimeout(() => {
@@ -111,8 +124,6 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         });
         setIsAuthenticated(authenticated);
         if (authenticated) {
-          console.log("token", keycloak.token);
-          console.log("refresh token", keycloak.refreshToken);
           localStorage.setItem('keycloak-token', keycloak.token ?? '');
           localStorage.setItem(
             'keycloak-refresh-token',
@@ -153,6 +164,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     isAuthenticated,
     KeycloakLogin,
     KeycloakLogout,
+    sendUserFeedback,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

@@ -2,13 +2,12 @@ import React, { useEffect, useRef, useState, useContext } from 'react';
 import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import ModalDialog from '@/components/Modal/ModalDialog';
+import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
-import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
   const context = useContext(Context);
-  const navigate = useNavigate();
   const [isModalVisible, setIsModalVisible] = useState(true);
 
   if (!context) {
@@ -23,6 +22,8 @@ const Main = () => {
     resultData,
     setInput,
     input,
+    resetContext,
+    KeycloakLogout,
   } = context;
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -73,7 +74,8 @@ const Main = () => {
   };
 
   const handleModalNo = () => {
-    navigate('/error');
+    resetContext();
+    KeycloakLogout();
   };
 
   return (
@@ -106,6 +108,7 @@ const Main = () => {
                   ></p>
                 )}
               </div>
+              <FeedbackBar />
             </div>
           ) : (
             <>
@@ -143,16 +146,17 @@ const Main = () => {
                 onKeyDown={handleKeyDown}
                 ref={textareaRef}
                 rows={1}
-                id='prompt-input'
+                id="prompt-input"
               />
               <div>
                 {input ? (
-                  <img
-                    onClick={handleSend}
-                    src={assets.send_icon}
-                    width={30}
-                    alt="send icon"
-                  />
+                  <div className="send-button" title="Send">
+                    <img
+                      onClick={handleSend}
+                      src={assets.send_icon}
+                      alt="send icon"
+                    />
+                  </div>
                 ) : null}
               </div>
             </div>

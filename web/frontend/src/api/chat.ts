@@ -1,5 +1,4 @@
 const runChat = async (_prompt: string): Promise<string> => {
-  // Mock delay of 2 seconds
   const response = await fetch('/api/chat/', {
     method: 'POST',
     headers: {
@@ -10,9 +9,6 @@ const runChat = async (_prompt: string): Promise<string> => {
   });
 
   const data = await response.json();
-  //const responses = data.responses.map((res: any) => res.text);
-  console.log(data);
-  console.log(data.responses);
   const responses = JSON.parse(data.responses);
   let prettier = responses['llm'];
   /* format the top k */
