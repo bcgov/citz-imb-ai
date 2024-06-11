@@ -10,6 +10,7 @@ import { Context } from '@/context/Context';
 const Main = () => {
   const context = useContext(Context);
   const [isModalVisible, setIsModalVisible] = useState(true);
+  const [userScrolled, setUserScrolled] = useState(false);
 
   if (!context) {
     throw new Error('Main must be used within a ContextProvider');
@@ -28,6 +29,7 @@ const Main = () => {
   } = context;
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const scrollableSectionRef = useRef<HTMLDivElement>(null);
 
   const adjustTextareaHeight = () => {
     const textarea = textareaRef.current;
@@ -40,6 +42,25 @@ const Main = () => {
   useEffect(() => {
     adjustTextareaHeight();
   }, [input]);
+
+  useEffect(() => {
+    const element = scrollableSectionRef.current;
+    if (element && !userScrolled) {
+      element.scrollTo({
+        top: element.scrollHeight,
+        behavior: 'auto',
+      });
+    }
+  }, [resultData, userScrolled]);
+
+  const handleScroll = () => {
+    const element = scrollableSectionRef.current;
+    if (element) {
+      const isNearBottom =
+        element.scrollHeight - element.scrollTop - element.clientHeight < 50;
+      setUserScrolled(!isNearBottom);
+    }
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -89,7 +110,12 @@ const Main = () => {
         <div className="main-container">
           {showResult ? (
             <div>
-              <div className="result" id="scrollable-section">
+              <div
+                className="result"
+                id="scrollable-section"
+                ref={scrollableSectionRef}
+                onScroll={handleScroll}
+              >
                 <div className="result-title">
                   <img src={assets.user_icon} alt="" />
                   <p>{recentPrompt}</p>
