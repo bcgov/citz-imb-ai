@@ -7,7 +7,6 @@ from app.models import neo4j, trulens, rag
 import warnings
 import os
 from dotenv import load_dotenv
-import threading
 
 warnings.filterwarnings("ignore")
 
@@ -28,18 +27,6 @@ print("printing keys")
 print(os.getenv("AWS_ACCESS_KEY_ID"))
 print(os.getenv("AWS_SECRET_ACCESS_KEY"))
 print(os.environ)
-
-# Function to run the trulens dashboard in a separate thread
-def run_trulens_dashboard():
-    # Ensure you have set up the connection with trulens before running the dashboard
-    tru = trulens.connect_trulens()
-    tru.run_dashboard(port=14000)
-
-@app.on_event("startup")
-def startup_event():
-    thread = threading.Thread(target=run_trulens_dashboard)
-    thread.daemon = True
-    thread.start()
 
 origins = [
     "http://localhost.tiangolo.com",
