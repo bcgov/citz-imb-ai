@@ -26,7 +26,7 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
         try:
             # Extract bearer token from the request headers
             url_path = str(request.url).split("/")[-1]
-            if url_path in ("docs", "openapi.json"):
+            if url_path in ("docs", "openapi.json", "health"):
                 return await call_next(request)
             
             authorization_header = request.headers.get("Authorization")
