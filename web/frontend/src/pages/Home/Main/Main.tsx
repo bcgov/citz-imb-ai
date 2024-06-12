@@ -3,12 +3,14 @@ import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
+import ScrollButton from '@/components/ScrollButton/ScrollButton';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 
 const Main = () => {
   const context = useContext(Context);
   const [isModalVisible, setIsModalVisible] = useState(true);
+  const [userScrolled, setUserScrolled] = useState(false);
 
   if (!context) {
     throw new Error('Main must be used within a ContextProvider');
@@ -24,9 +26,11 @@ const Main = () => {
     input,
     resetContext,
     KeycloakLogout,
+    generationComplete,
   } = context;
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const scrollableSectionRef = useRef<HTMLDivElement>(null);
 
   const adjustTextareaHeight = () => {
     const textarea = textareaRef.current;
@@ -39,6 +43,25 @@ const Main = () => {
   useEffect(() => {
     adjustTextareaHeight();
   }, [input]);
+
+  useEffect(() => {
+    const element = scrollableSectionRef.current;
+    if (element && !userScrolled) {
+      element.scrollTo({
+        top: element.scrollHeight,
+        behavior: 'auto',
+      });
+    }
+  }, [resultData, userScrolled]);
+
+  const handleScroll = () => {
+    const element = scrollableSectionRef.current;
+    if (element) {
+      const isNearBottom =
+        element.scrollHeight - element.scrollTop - element.clientHeight < 50;
+      setUserScrolled(!isNearBottom);
+    }
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -87,28 +110,39 @@ const Main = () => {
         </div>
         <div className="main-container">
           {showResult ? (
-            <div className="result">
-              <div className="result-title">
-                <img src={assets.user_icon} alt="" />
-                <p>{recentPrompt}</p>
+            <div>
+              <div
+                className="result"
+                id="scrollable-section"
+                ref={scrollableSectionRef}
+                onScroll={handleScroll}
+              >
+                <div className="result-title">
+                  <img src={assets.user_icon} alt="" />
+                  <p>{recentPrompt}</p>
+                </div>
+                <div className="result-data">
+                  <img src={assets.bc_icon} alt="" />
+                  {loading ? (
+                    <div className="loader">
+                      <hr className="animated-bg" />
+                      <hr className="animated-bg" />
+                      <hr className="animated-bg" />
+                    </div>
+                  ) : (
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: resultData,
+                      }}
+                    ></p>
+                  )}
+                </div>
+                <FeedbackBar />
               </div>
-              <div className="result-data">
-                <img src={assets.bc_icon} alt="" />
-                {loading ? (
-                  <div className="loader">
-                    <hr className="animated-bg" />
-                    <hr className="animated-bg" />
-                    <hr className="animated-bg" />
-                  </div>
-                ) : (
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: resultData,
-                    }}
-                  ></p>
-                )}
-              </div>
-              <FeedbackBar />
+              <ScrollButton
+                scrollableElementId="scrollable-section"
+                generationComplete={generationComplete}
+              />
             </div>
           ) : (
             <>

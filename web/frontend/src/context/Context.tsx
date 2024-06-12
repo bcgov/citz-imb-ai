@@ -20,6 +20,7 @@ interface ContextProps {
   KeycloakLogin: () => void;
   KeycloakLogout: () => void;
   sendUserFeedback: (feedbackType: 'up_vote' | 'down_vote' | 'no_vote') => void;
+  generationComplete: boolean;
 }
 
 export const Context = createContext<ContextProps | undefined>(undefined);
@@ -47,6 +48,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [resultData, setResultData] = useState<string>('');
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [generationComplete, setGenerationComplete] = useState<boolean>(false);
 
   const sendUserFeedback = async (
     feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
@@ -59,9 +61,12 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     }
   };
 
-  const delayPara = (index: number, nextWord: string) => {
+  const delayPara = (index: number, nextWord: string, totalWords: number) => {
     setTimeout(() => {
       setResultData((prev) => prev + nextWord);
+      if (index === totalWords - 1) {
+        setGenerationComplete(true);
+      }
     }, 15 * index);
   };
 
@@ -70,6 +75,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setLoading(true);
     setShowResult(true);
     setInput('');
+    setGenerationComplete(false);
     let response;
     if (prompt !== undefined) {
       response = await runChat(prompt);
@@ -91,7 +97,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     responseArray = newArray.split('*').join('</br>').split(' ');
     for (let i = 0; i < responseArray.length; i++) {
       const nextWord = responseArray[i];
-      delayPara(i, nextWord + ' ');
+      delayPara(i, nextWord + ' ', responseArray.length);
     }
     setLoading(false);
   };
@@ -109,6 +115,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setShowResult(false);
     setLoading(false);
     setResultData('');
+    setGenerationComplete(false);
   };
 
   const refreshToken = () => {
@@ -165,6 +172,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     KeycloakLogin,
     KeycloakLogout,
     sendUserFeedback,
+    generationComplete,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
