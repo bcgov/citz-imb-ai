@@ -1,9 +1,21 @@
+import sys
+
+class MockNestAsyncio:
+    def apply(self):
+        pass
+
+sys.modules['nest_asyncio'] = MockNestAsyncio()
+
+import asyncio
+import uvloop
+# Ensure uvloop is being used
+asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.middleware.authentication import AuthenticationMiddleware
 from app.middleware.logging import LoggingMiddleware
 from app.controllers import feedback, chat_RAG, login
-from app.models import neo4j, trulens, rag
 import warnings
 import os
 from dotenv import load_dotenv
