@@ -12,6 +12,9 @@ COPY ./requirements.txt /backend/requirements.txt
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /backend/requirements.txt
 
+# Install gunicorn
+RUN pip install gunicorn
+
 COPY ./ /backend/
 
 # Copy the entrypoint script into the container
@@ -27,4 +30,10 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 # 
-CMD ["python", "main.py"]
+#CMD ["python", "main.py"]
+
+# Use Uvicorn to run the FastAPI app with multiple workers
+#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000", "--workers", "8"]
+
+# Use gunicorn to run the FastAPI app with uvicorn workers
+CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:10000", "main:app"]
