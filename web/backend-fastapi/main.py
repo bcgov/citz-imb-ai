@@ -40,6 +40,7 @@ print(os.getenv("AWS_ACCESS_KEY_ID"))
 print(os.getenv("AWS_SECRET_ACCESS_KEY"))
 print(os.environ)
 
+
 origins = [
     "http://localhost.tiangolo.com",
     "https://localhost.tiangolo.com",

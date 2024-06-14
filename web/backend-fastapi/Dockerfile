@@ -2,6 +2,8 @@ FROM python:3.11-slim
 
 # Update the package list and install dos2unix
 RUN apt-get update && apt-get install -y dos2unix
+RUN apt-get install -y procps
+RUN apt-get install -y vim
 
 WORKDIR /backend
 
@@ -14,6 +16,7 @@ RUN pip install --no-cache-dir --upgrade -r /backend/requirements.txt
 
 # Install gunicorn
 RUN pip install gunicorn
+RUN pip install onnx onnxruntime psutil optimum
 
 COPY ./ /backend/
 
@@ -25,6 +28,9 @@ RUN dos2unix /usr/local/bin/entrypoint.sh
 
 # Make sure the script is executable
 RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Make directory ONNX
+#RUN mkdir -p /backend/onnx/all-MiniLM-L6-v2_onnx
 
 # Set the entrypoint
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

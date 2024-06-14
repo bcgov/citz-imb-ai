@@ -4,6 +4,7 @@ import os
 def neo4j_vector_search(question, embeddings, kg):
     """Search for similar nodes using the Neo4j vector index"""
     query_embedding = embeddings.embed_query(question)
+    print("Query embedding: ", query_embedding)
     vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score
         RETURN score, node.ActId,  node.RegId as Regulations, node.sectionId, node.sectionName, node.url,  node.text AS text

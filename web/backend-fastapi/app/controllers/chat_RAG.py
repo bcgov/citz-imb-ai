@@ -1,12 +1,13 @@
 from fastapi import APIRouter, Form
 from app.dependencies import get_user_info
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from app.models import neo4j, trulens, rag
+from app.models import neo4j, trulens, rag, run_onnx
 
 router = APIRouter()
 kg = None
 tru = None
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+#embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings = run_onnx
 
 @router.post("/chat/")
 async def chat(prompt: str = Form(...)):
@@ -14,12 +15,12 @@ async def chat(prompt: str = Form(...)):
     global kg, tru, APP_ID, session, bedrock_runtime
     rag_fn = rag.get_full_rag()
     if kg is None:
+        print("KG is none")
         kg = neo4j.neo4j()
     if tru is None:
+        print("Tru is none")
         tru = trulens.connect_trulens()
     tru_rag = trulens.tru_rag(rag_fn)
-    print(tru_rag)
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     with tru_rag as recording:
         responses = rag_fn.query(prompt, embeddings, kg)
     record = recording.get() 

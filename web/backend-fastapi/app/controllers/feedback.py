@@ -1,14 +1,15 @@
 from fastapi import APIRouter, Form
 from app.dependencies import get_user_info
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from app.models import neo4j, trulens, rag
+from app.models import neo4j, trulens, rag, run_onnx
 import json
 
 router = APIRouter()
 
 kg = None
 tru = None
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+#embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings = run_onnx
 
 @router.post("/submit/")
 async def submit_question(prompt: str = Form(...)):
@@ -22,11 +23,9 @@ async def submit_question(prompt: str = Form(...)):
     if tru is None:
         tru = trulens.connect_trulens()
     tru_rag = trulens.tru_rag(rag_fn)
-    print(tru_rag)
     with tru_rag as recording:
         responses = rag_fn.query(prompt, embeddings, kg)
     record = recording.get()
-    print(responses)
     # Process question prompt
     return {"responses": responses, "recording": record.record_id}
 
@@ -77,14 +76,10 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
         feedback = feedback.split(",")
         for feedback_value in feedback:
             multi_result["bulk"].append(trulens.get_feedback_value(feedback_value))
-        print(multi_result)
         multi_result = json.dumps(multi_result)
     else:
-        print(f"Feedback for Response {index}: is {feedback}")
         feedbackvalue = trulens.get_feedback_value(feedback)
         multi_result = json.dumps({index: [feedbackvalue]})
-
-    print(multi_result)
 
     tru_feedback = tru.add_feedback(
         name="Human Feedack",
@@ -93,8 +88,6 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
         result=0,
         multi_result=multi_result,
     )
-    print(record_id)
-    print(tru_feedback)
     rows = trulens.fetch_human_feedback(record_id)
     if rows:
         return rows
