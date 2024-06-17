@@ -17,6 +17,12 @@ if (MPI_FOUND)
     set(CMAKE_C_COMPILER ${MPI_C_COMPILER})
 endif()
 
+# Find libxml2 package
+find_package(LibXml2 REQUIRED)
+if (LIBXML2_FOUND)
+    include_directories(${LIBXML2_INCLUDE_DIR})
+endif()
+
 # Include directories
 include_directories(include)
 

@@ -21,7 +21,7 @@ typedef struct {
 } directory_info_t;
 
 off_t get_file_size(const char *filename);
-double read_file_to_memory(const char *filepath);
+double read_file_to_memory(const char *filepath, file_info_t *files);
 double traverse_directory(const char *dirpath, file_info_t *files);
 void get_directory_info(const char *dirpath, directory_info_t *dir_info);
 void load_file_to_memory(char *directory_path, file_info_t *files);

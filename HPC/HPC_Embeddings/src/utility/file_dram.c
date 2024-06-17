@@ -125,7 +125,7 @@ void load_file_to_memory(char *directory_path, file_info_t *files) {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
 
-    double total_time = traverse_directory(directory_path);
+    double total_time = traverse_directory(directory_path, files);
 
     clock_gettime(CLOCK_MONOTONIC, &end);
 
@@ -133,4 +133,24 @@ void load_file_to_memory(char *directory_path, file_info_t *files) {
     
     printf("Total time to load all files: %.6f seconds\n", total_time);
     printf("Total execution time: %.6f seconds\n", elapsed);
+}
+
+void init_dram_data(char *directory_path, directory_info_t *dir_info, file_info_t *files) {
+    printf("Initializing file_dram\n");
+    get_directory_info(directory_path, &dir_info);
+    printf("Number of files: %zu\n", dir_info.num_files);
+    printf("Total size: %zu\n", dir_info.total_size);
+
+    /* allocate memory */
+    file_info_t *files = (file_info_t *)malloc(dir_info.num_files * sizeof(file_info_t));
+    dir_info.files = files;
+    load_file_to_memory(directory_path, files);
+}
+
+void free_dram_data(directory_info_t *dir_info, file_info_t *files) {
+    for (size_t i = 0; i < dir_info->num_files; i++) {
+        if (files[i].buffer)
+            free(files[i].buffer);
+    }
+    free(files);
 }
