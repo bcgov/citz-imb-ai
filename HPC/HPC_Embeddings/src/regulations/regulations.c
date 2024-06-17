@@ -10,12 +10,15 @@
 
 
 void process_regulations(char *directory_path) {
-    printf("Processing regulations from %s\n", input_file);
-    if (!input_file) {
+    printf("Processing regulations from %s\n", directory_path);
+    if (!directory_path) {
         printf("No input file provided\n");
         return;
     }
 
+    get_directory_info(directory_path, &dir_info);
+    printf("Number of files: %zu\n", dir_info.num_files);
+    
     load_file_to_memory(directory_path);
 
 

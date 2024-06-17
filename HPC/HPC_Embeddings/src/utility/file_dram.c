@@ -92,6 +92,34 @@ double traverse_directory(const char *dirpath) {
     return total_time;
 }
 
+// Get total files and total size of files in a directory
+void get_directory_info(const char *dirpath, directory_info_t *dir_info) {
+    struct dirent *entry;
+    DIR *dp = opendir(dirpath);
+    directory_info_t dir_info = {0};
+
+    if (dp == NULL) {
+        perror("opendir");
+        return dir_info;
+    }
+
+    while ((entry = readdir(dp))) {
+        if (entry->d_type == DT_REG) {
+            char filepath[1024];
+            snprintf(filepath, sizeof(filepath), "%s/%s", dirpath, entry->d_name);
+            off_t filesize = get_file_size(filepath);
+            if (filesize != -1) {
+                dir_info->total_size += filesize;
+                dir_info->num_files++;
+            }
+        }
+    }
+
+    closedir(dp);
+    return dir_info;
+}
+
+
 void load_file_to_memory(char *directory_path) {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
