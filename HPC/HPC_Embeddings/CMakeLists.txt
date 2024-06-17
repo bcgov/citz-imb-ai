@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.10)
 project(HPC_Embeddings C)  # Ensure the project name is valid for CMake
 
 # Set the compiler to icx if available, otherwise fall back to gcc
-find_program(ICX_EXECUTABLE NAMES icx)
-if(ICX_EXECUTABLE)
-    set(CMAKE_C_COMPILER ${ICX_EXECUTABLE})
+find_program(MPICC_EXECUTABLE NAMES mpicc)
+if(MPICC_EXECUTABLE)
+    set(CMAKE_C_COMPILER ${MPICC_EXECUTABLE})
 else()
     set(CMAKE_C_COMPILER gcc)
 endif()
