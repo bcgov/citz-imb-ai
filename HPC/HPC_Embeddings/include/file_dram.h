@@ -14,7 +14,7 @@ typedef struct {
 } file_info_t;
 
 typedef struct {
-    file_info *files;
+    file_info_t *files;
     size_t num_files;
     size_t total_size;
 } directory_info_t;

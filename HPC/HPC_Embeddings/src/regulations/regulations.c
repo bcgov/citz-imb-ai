@@ -16,6 +16,7 @@ void process_regulations(char *directory_path) {
         return;
     }
 
+    directory_info_t dir_info;
     get_directory_info(directory_path, &dir_info);
     printf("Number of files: %zu\n", dir_info.num_files);
     

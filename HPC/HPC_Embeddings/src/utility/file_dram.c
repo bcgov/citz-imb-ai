@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <time.h>
+#include "../include/file_dram.h"
 
 // Function to get the size of a file
 off_t get_file_size(const char *filename) {
