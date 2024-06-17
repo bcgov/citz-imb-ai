@@ -1,4 +1,4 @@
-# Hardware
+# High Performance Computing (HPC) and Hardware Details
 ----------
 
 This folder has all the hardware details for the CITZ IMB AI project. When dealing with A.I., making it work better, faster, and cheaper is important. Making the algorithms work as best as they can on the hardware is crucial for this project. This folder has info about different ways the hardware can help with deep learning and teaches us more about how the hardware works.
