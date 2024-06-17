@@ -19,9 +19,13 @@ void process_regulations(char *directory_path) {
     directory_info_t dir_info;
     get_directory_info(directory_path, &dir_info);
     printf("Number of files: %zu\n", dir_info.num_files);
+    printf("Total size: %zu\n", dir_info.total_size);
+    /* allocate memory */
+    file_info_t *files = (file_info_t *)malloc(dir_info.num_files * sizeof(file_info_t));
+    dir_info.files = files;
     
     load_file_to_memory(directory_path);
 
-
+    free(files);
     return EXIT_SUCCESS;
 }

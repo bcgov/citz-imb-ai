@@ -19,7 +19,7 @@ off_t get_file_size(const char *filename) {
 }
 
 // Function to read a file into memory and return the time taken
-double read_file_to_memory(const char *filepath) {
+double read_file_to_memory(const char *filepath, file_info_t *files) {
     int fd = open(filepath, O_RDONLY);
     if (fd == -1) {
         perror("open");
@@ -34,6 +34,7 @@ double read_file_to_memory(const char *filepath) {
     }
 
     char *buffer = malloc(filesize);
+    files->buffer = buffer;
     if (!buffer) {
         perror("malloc");
         close(fd);
@@ -53,7 +54,6 @@ double read_file_to_memory(const char *filepath) {
 
     clock_gettime(CLOCK_MONOTONIC, &end);
 
-    free(buffer);
     close(fd);
 
     double elapsed = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
@@ -61,7 +61,7 @@ double read_file_to_memory(const char *filepath) {
 }
 
 // Recursive function to traverse directory and read files
-double traverse_directory(const char *dirpath) {
+double traverse_directory(const char *dirpath, file_info_t *files) {
     struct dirent *entry;
     DIR *dp = opendir(dirpath);
     double total_time = 0;
@@ -70,7 +70,7 @@ double traverse_directory(const char *dirpath) {
         perror("opendir");
         return 0;
     }
-
+    int i = 0;
     while ((entry = readdir(dp))) {
         if (entry->d_type == DT_DIR) {
             if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
@@ -81,11 +81,12 @@ double traverse_directory(const char *dirpath) {
         } else {
             char filepath[1024];
             snprintf(filepath, sizeof(filepath), "%s/%s", dirpath, entry->d_name);
-            double time_taken = read_file_to_memory(filepath);
+            double time_taken = read_file_to_memory(filepath, &files[i]);
             if (time_taken != -1) {
                 //printf("Loaded %s in %.6f seconds\n", filepath, time_taken);
                 total_time += time_taken;
             }
+            i++;
         }
     }
 
@@ -97,7 +98,6 @@ double traverse_directory(const char *dirpath) {
 void get_directory_info(const char *dirpath, directory_info_t *dir_info) {
     struct dirent *entry;
     DIR *dp = opendir(dirpath);
-    directory_info_t dir_info = {0};
 
     if (dp == NULL) {
         perror("opendir");
@@ -121,7 +121,7 @@ void get_directory_info(const char *dirpath, directory_info_t *dir_info) {
 }
 
 
-void load_file_to_memory(char *directory_path) {
+void load_file_to_memory(char *directory_path, file_info_t *files) {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
 
