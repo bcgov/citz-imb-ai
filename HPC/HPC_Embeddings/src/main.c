@@ -5,7 +5,8 @@
 #include <time.h>
 #include <omp.h>
 #include <mpi.h>
-
+#include "../include/acts.h"
+#include "../include/regulations.h"
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
