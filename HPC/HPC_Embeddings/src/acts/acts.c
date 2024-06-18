@@ -19,7 +19,14 @@ void process_acts(char *directory_path) {
     directory_info_t dir_info;
     file_info_t *files;
     init_dram_data(directory_path, &dir_info);
-    parse_xml(dir_info.files[0].buffer, "act");
+    #pragma omp parallel for dynamic schedule(guided)
+    for (size_t i = 0; i < dir_info.num_files; i++) {
+        //parse_xml(dir_info.files[i].buffer, "act");
+        extractData(dir_info.files[i].buffer);
+        xmlCleanupParser();
+        break;
+    }
+
     // free all the memory
     free_dram_data(&dir_info);
 }
