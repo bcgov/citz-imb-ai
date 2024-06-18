@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
@@ -26,7 +27,24 @@ void parse_xml(const char *filename, const char *tag) {
     xmlCleanupParser();
 }
 
-void printTitle(xmlDocPtr doc, xmlNodePtr node) {
+// Function to find a node by its name and namespace
+xmlNodePtr findNodeByNamespace(xmlNodePtr root, const char *namespace, const char *name) {
+    xmlNodePtr curNode = NULL;
+    for (curNode = root; curNode; curNode = curNode->next) {
+        if (curNode->type == XML_ELEMENT_NODE && 
+            !xmlStrcmp(curNode->name, (const xmlChar *)name) && 
+            !xmlStrcmp(curNode->ns->prefix, (const xmlChar *)namespace)) {
+            return curNode;
+        }
+        xmlNodePtr foundNode = findNodeByNamespace(curNode->children, namespace, name);
+        if (foundNode) {
+            return foundNode;
+        }
+    }
+    return NULL;
+}
+
+void printTitle(xmlNodePtr node) {
     xmlChar *title = xmlNodeGetContent(node);
     if (title) {
         printf("%s\n", title);
@@ -44,7 +62,7 @@ char *getNodeContent(xmlNodePtr node) {
     return NULL;
 }
 
-void processSection(xmlDocPtr doc, xmlNodePtr section, const char *title) {
+void processSection(xmlNodePtr section, const char *title) {
     xmlNodePtr curNode = NULL;
     xmlChar *sectionHeading = NULL;
     xmlChar *sectionNumber = NULL;
@@ -85,22 +103,22 @@ void processSection(xmlDocPtr doc, xmlNodePtr section, const char *title) {
     }
 }
 
-void extractData(const char *filename) {
+void extractDataFromMemory(const char *buffer, int size) {
     xmlDocPtr doc;
     xmlNodePtr rootElement, curNode;
 
-    doc = xmlReadFile(filename, NULL, 0);
+    doc = xmlReadMemory(buffer, size, NULL, NULL, 0);
     if (doc == NULL) {
-        printf("Failed to parse %s\n", filename);
+        printf("Failed to parse the XML content from memory\n");
         return;
     }
 
     rootElement = xmlDocGetRootElement(doc);
 
     // Get the ACT's title
-    xmlNodePtr titleNode = xmlFindNodeByPath(rootElement, (xmlChar *)"act:title");
+    xmlNodePtr titleNode = findNodeByNamespace(rootElement, "act", "title");
     if (titleNode) {
-        printTitle(doc, titleNode);
+        printTitle(titleNode);
     } else {
         xmlFreeDoc(doc);
         return;
@@ -109,7 +127,7 @@ void extractData(const char *filename) {
     // Get all sections
     for (curNode = rootElement->children; curNode; curNode = curNode->next) {
         if (curNode->type == XML_ELEMENT_NODE && !xmlStrcmp(curNode->name, (const xmlChar *)"section")) {
-            processSection(doc, curNode, (const char *)titleNode->name);
+            processSection(curNode, (const char *)titleNode->name);
         }
     }
 

@@ -22,11 +22,11 @@ void process_acts(char *directory_path) {
     #pragma omp parallel for dynamic schedule(guided)
     for (size_t i = 0; i < dir_info.num_files; i++) {
         //parse_xml(dir_info.files[i].buffer, "act");
-        extractData(dir_info.files[i].buffer);
-        xmlCleanupParser();
-        break;
+        //extractData(dir_info.files[i].buffer);
+	extractDataFromMemory(dir_info.files[i].buffer, dir_info.files[i].filesize);
     }
 
+    xmlCleanupParser();
     // free all the memory
     free_dram_data(&dir_info);
 }

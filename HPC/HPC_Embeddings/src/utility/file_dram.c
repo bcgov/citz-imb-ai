@@ -33,7 +33,7 @@ double read_file_to_memory(const char *filepath, file_info_t *file) {
         return -1;
     }
 
-    char *buffer = malloc(filesize);
+    char *buffer = malloc(filesize + 1); // Allocate extra byte for null terminator
     file->buffer = buffer;
     if (!buffer) {
         perror("malloc");
@@ -52,13 +52,17 @@ double read_file_to_memory(const char *filepath, file_info_t *file) {
         return -1;
     }
 
+    buffer[filesize] = '\0'; // Null-terminate the buffer
+
     clock_gettime(CLOCK_MONOTONIC, &end);
 
     close(fd);
 
     double elapsed = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
+    file->filesize = filesize;
     return elapsed;
 }
+
 
 // Recursive function to traverse directory and read files
 double traverse_directory(const char *dirpath, file_info_t *files, size_t *file_index) {
