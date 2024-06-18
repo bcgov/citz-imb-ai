@@ -103,6 +103,18 @@ void processSection(xmlNodePtr section, const char *title) {
     }
 }
 
+// Recursive function to find and process all section nodes
+void processAllSections(xmlNodePtr node, const char *title) {
+    for (xmlNodePtr curNode = node; curNode; curNode = curNode->next) {
+        if (curNode->type == XML_ELEMENT_NODE) {
+            if (!xmlStrcmp(curNode->name, (const xmlChar *)"section")) {
+                processSection(curNode, title);
+            }
+            processAllSections(curNode->children, title);
+        }
+    }
+}
+
 void extractDataFromMemory(const char *buffer, int size) {
     xmlDocPtr doc;
     xmlNodePtr rootElement, curNode;
@@ -124,12 +136,8 @@ void extractDataFromMemory(const char *buffer, int size) {
         return;
     }
 
-    // Get all sections
-    for (curNode = rootElement->children; curNode; curNode = curNode->next) {
-        if (curNode->type == XML_ELEMENT_NODE && !xmlStrcmp(curNode->name, (const xmlChar *)"section")) {
-            processSection(curNode, (const char *)titleNode->name);
-        }
-    }
+    // Process all sections
+    processAllSections(rootElement, (const char *)titleNode->name);
 
     xmlFreeDoc(doc);
 }
