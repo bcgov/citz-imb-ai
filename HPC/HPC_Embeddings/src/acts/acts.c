@@ -8,21 +8,18 @@
 #include "../include/acts.h"
 #include "../include/file_dram.h"
 
-
 void process_acts(char *directory_path) {
     printf("Processing acts from %s\n", directory_path);
     if (!directory_path) {
         printf("No input file provided\n");
         return;
     }
+
     directory_info_t dir_info;
     file_info_t *files;
-    init_dram_data(directory_path, &dir_info, files);
-
-    // parse xml files
+    init_dram_data(directory_path, &dir_info);
 
     // free all the memory
-    free_dram_data(dir_info, files);
-
-    return EXIT_SUCCESS;
+    free_dram_data(&dir_info);
 }
+

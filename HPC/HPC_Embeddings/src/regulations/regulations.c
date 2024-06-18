@@ -18,10 +18,9 @@ void process_regulations(char *directory_path) {
 
     directory_info_t dir_info;
     file_info_t *files;
-    init_dram_data(directory_path, &dir_info, files);
+    init_dram_data(directory_path, &dir_info);
 
     // free all the memory
-    free_dram_data(dir_info, files);
+    free_dram_data(&dir_info);
 
-    return EXIT_SUCCESS;
 }

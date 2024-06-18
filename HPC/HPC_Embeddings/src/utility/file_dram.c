@@ -19,7 +19,7 @@ off_t get_file_size(const char *filename) {
 }
 
 // Function to read a file into memory and return the time taken
-double read_file_to_memory(const char *filepath, file_info_t *files) {
+double read_file_to_memory(const char *filepath, file_info_t *file) {
     int fd = open(filepath, O_RDONLY);
     if (fd == -1) {
         perror("open");
@@ -34,7 +34,7 @@ double read_file_to_memory(const char *filepath, file_info_t *files) {
     }
 
     char *buffer = malloc(filesize);
-    files->buffer = buffer;
+    file->buffer = buffer;
     if (!buffer) {
         perror("malloc");
         close(fd);
@@ -61,7 +61,7 @@ double read_file_to_memory(const char *filepath, file_info_t *files) {
 }
 
 // Recursive function to traverse directory and read files
-double traverse_directory(const char *dirpath, file_info_t *files) {
+double traverse_directory(const char *dirpath, file_info_t *files, size_t *file_index) {
     struct dirent *entry;
     DIR *dp = opendir(dirpath);
     double total_time = 0;
@@ -70,23 +70,23 @@ double traverse_directory(const char *dirpath, file_info_t *files) {
         perror("opendir");
         return 0;
     }
-    int i = 0;
+
     while ((entry = readdir(dp))) {
         if (entry->d_type == DT_DIR) {
             if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
                 char path[1024];
-                //snprintf(path, sizeof(path), "%s/%s", dirpath, entry->d_name);
-                total_time += traverse_directory(path);
+                snprintf(path, sizeof(path), "%s/%s", dirpath, entry->d_name);
+                total_time += traverse_directory(path, files, file_index);
             }
         } else {
             char filepath[1024];
             snprintf(filepath, sizeof(filepath), "%s/%s", dirpath, entry->d_name);
-            double time_taken = read_file_to_memory(filepath, &files[i]);
+            double time_taken = read_file_to_memory(filepath, &files[*file_index]);
             if (time_taken != -1) {
-                //printf("Loaded %s in %.6f seconds\n", filepath, time_taken);
+                printf("Loaded %s in %.6f seconds\n", filepath, time_taken);
                 total_time += time_taken;
+                (*file_index)++;
             }
-            i++;
         }
     }
 
@@ -101,7 +101,7 @@ void get_directory_info(const char *dirpath, directory_info_t *dir_info) {
 
     if (dp == NULL) {
         perror("opendir");
-        return dir_info;
+        return;
     }
 
     while ((entry = readdir(dp))) {
@@ -117,40 +117,44 @@ void get_directory_info(const char *dirpath, directory_info_t *dir_info) {
     }
 
     closedir(dp);
-    return dir_info;
 }
-
 
 void load_file_to_memory(char *directory_path, file_info_t *files) {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
 
-    double total_time = traverse_directory(directory_path, files);
+    size_t file_index = 0;
+    double total_time = traverse_directory(directory_path, files, &file_index);
 
     clock_gettime(CLOCK_MONOTONIC, &end);
 
     double elapsed = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
-    
+
     printf("Total time to load all files: %.6f seconds\n", total_time);
     printf("Total execution time: %.6f seconds\n", elapsed);
 }
 
-void init_dram_data(char *directory_path, directory_info_t *dir_info, file_info_t *files) {
+void init_dram_data(char *directory_path, directory_info_t *dir_info) {
     printf("Initializing file_dram\n");
-    get_directory_info(directory_path, &dir_info);
-    printf("Number of files: %zu\n", dir_info.num_files);
-    printf("Total size: %zu\n", dir_info.total_size);
+    get_directory_info(directory_path, dir_info);
+    printf("Number of files: %zu\n", dir_info->num_files);
+    printf("Total size: %zu\n", dir_info->total_size);
 
     /* allocate memory */
-    file_info_t *files = (file_info_t *)malloc(dir_info.num_files * sizeof(file_info_t));
-    dir_info.files = files;
-    load_file_to_memory(directory_path, files);
+    dir_info->files = (file_info_t *)malloc(dir_info->num_files * sizeof(file_info_t));
+    if (!dir_info->files) {
+        perror("malloc");
+        return;
+    }
+
+    load_file_to_memory(directory_path, dir_info->files);
 }
 
-void free_dram_data(directory_info_t *dir_info, file_info_t *files) {
+void free_dram_data(directory_info_t *dir_info) {
+    printf("Freeing dram data %zu\n", dir_info->num_files);
     for (size_t i = 0; i < dir_info->num_files; i++) {
-        if (files[i].buffer)
-            free(files[i].buffer);
+        if (dir_info->files[i].buffer)
+            free(dir_info->files[i].buffer);
     }
-    free(files);
+    free(dir_info->files);
 }
