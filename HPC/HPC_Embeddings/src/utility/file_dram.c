@@ -104,6 +104,7 @@ void get_directory_info(const char *dirpath, directory_info_t *dir_info) {
         return;
     }
 
+    dir_info->total_size = 0;
     while ((entry = readdir(dp))) {
         if (entry->d_type == DT_REG) {
             char filepath[1024];
