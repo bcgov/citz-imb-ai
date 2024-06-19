@@ -83,9 +83,7 @@ void processSection(xmlNodePtr section, const char *title) {
 
     // Process subsections or definitions
     for (curNode = section->children; curNode; curNode = curNode->next) {
-        if (curNode->type == XML_ELEMENT_NODE && 
-           (!xmlStrcmp(curNode->name, (const xmlChar *)"subsection") ||
-            !xmlStrcmp(curNode->name, (const xmlChar *)"definition"))) {
+        if (curNode->type == XML_ELEMENT_NODE) {
             char *itemText = getNodeContent(curNode);
             if (itemText) {
                 printf("Item text: %s\n", itemText);

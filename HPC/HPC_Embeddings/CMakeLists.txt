@@ -48,6 +48,12 @@ add_executable(HPCChain ${SOURCES})
 # Link MPI and libxml2 libraries
 target_link_libraries(HPCChain MPI::MPI_C ${LIBXML2_LIBRARIES})
 
+# Add AddressSanitizer flags for GCC, Clang, and ICX
+if(CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID STREQUAL "IntelLLVM")
+    target_compile_options(HPCChain PRIVATE -fsanitize=address -g)
+    target_link_options(HPCChain PRIVATE -fsanitize=address)
+endif()
+
 # Print final status
 message(STATUS "Configuration done. Ready to build.")
 

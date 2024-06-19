@@ -17,12 +17,13 @@ void process_acts(char *directory_path) {
     }
 
     directory_info_t dir_info;
-    file_info_t *files;
     init_dram_data(directory_path, &dir_info);
+    printf("dir info is and num files are %zu \n", dir_info.num_files);
     #pragma omp parallel for dynamic schedule(guided)
     for (size_t i = 0; i < dir_info.num_files; i++) {
         //parse_xml(dir_info.files[i].buffer, "act");
         //extractData(dir_info.files[i].buffer);
+	printf("processing file %zu \n", i);
 	extractDataFromMemory(dir_info.files[i].buffer, dir_info.files[i].filesize);
     }
 
