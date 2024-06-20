@@ -1,7 +1,3 @@
-#include <immintrin.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "../include/text_splitter.h"
 
 RecursiveCharacterTextSplitter_t *init_text_splitter_params(const char **separators, size_t separator_count, size_t chunk_size, size_t chunk_overlap)

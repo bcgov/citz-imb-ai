@@ -35,10 +35,10 @@ void process_acts(char *directory_path) {
                 SplitChunk_t *results = malloc(sizeof(SplitChunk_t));
                 SplitChunk_t *chunks = recursive_character_split(sections[j].content, 0, strlen(sections[j].content), NULL, results);
                 if (chunks) {
-                    for (int k = 0; k < chunks->num_count; k++) {
+                    for (int k = 0; k < chunks->count; k++) {
                         printf("Chunk %d: %s\n", k, chunks->chunks[k]);
                     }
-                    free_split_chunks(chunks);
+                    free_split_result(chunks);
                 }
 			}
 		}

@@ -1,7 +1,12 @@
 #ifndef TEXT_SPLITTER_H
 #define TEXT_SPLITTER_H
 
+#include <immintrin.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include <stddef.h>
+#include <stdbool.h>
 
 typedef struct {
     char **chunks;
@@ -17,7 +22,7 @@ typedef struct {
 } RecursiveCharacterTextSplitter_t;
 
 SplitChunk_t *recursive_character_split(const char *text, int start, int end, const RecursiveCharacterTextSplitter_t *splitter, SplitChunk_t *results)
-void free_split_result(SplitResult result);
+void free_split_result(SplitResult_t result);
 RecursiveCharacterTextSplitter_t *init_text_splitter_params(const char **separators, size_t separator_count, size_t chunk_size, size_t chunk_overlap);
 void* aligned_alloc(size_t size, size_t alignment);
 void* numa_aligned_alloc(size_t size, size_t alignment, int node);
