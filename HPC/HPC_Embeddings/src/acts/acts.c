@@ -1,13 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include <time.h>
-#include <omp.h>
-#include <mpi.h>
 #include "../include/acts.h"
-#include "../include/file_dram.h"
-#include "../include/xml_parser.h"
 
 void process_acts(char *directory_path) {
     printf("Processing acts from %s\n", directory_path);
@@ -39,6 +30,14 @@ void process_acts(char *directory_path) {
 			if (sections[j].title) {
 				printf("Title is %s \n", sections[j].title);
 				printf("data is %s \n", sections[j].content);
+                // process recursive text splitting per section
+                SplitChunk_t *chunks = recursive_character_split(sections[j].content, 0, strlen(sections[j].content), NULL);
+                if (chunks) {
+                    for (int k = 0; k < chunks->num_count; k++) {
+                        printf("Chunk %d: %s\n", k, chunks->chunks[k]);
+                    }
+                    free_split_chunks(chunks);
+                }
 			}
 		}
 		free_sections(sections, num_sections);
