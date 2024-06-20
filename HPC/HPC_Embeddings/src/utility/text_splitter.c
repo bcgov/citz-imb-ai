@@ -18,7 +18,7 @@ RecursiveCharacterTextSplitter_t *init_text_splitter_params(const char **separat
 #define SIMD_WIDTH 64 // 512-bit AVX-512 registers (64 bytes)
 #define PREFETCH_DISTANCE 2 * SIMD_WIDTH
 
-SplitChunk_t *recursive_character_split(const char *text, int start, int end, const RecursiveCharacterTextSplitter_t *splitter)
+SplitChunk_t *recursive_character_split(const char *text, int start, int end, const RecursiveCharacterTextSplitter_t *splitter, SplitChunk_t *results)
 {
     if (start >= end)
     {
@@ -31,8 +31,9 @@ SplitChunk_t *recursive_character_split(const char *text, int start, int end, co
         splitter = init_text_splitter_params((const char *[]){" ", "\n", "\t"}, 3, 1024, 128);
     }
 
-    // Initialize results Array
-    char **results = NULL;
+    char results->chunks = NULL;
+    int resultCount = 0;
+
 
     // Loop through the text using AVX-512 for faster processing using SIMD
     int i = start;
@@ -70,11 +71,11 @@ SplitChunk_t *recursive_character_split(const char *text, int start, int end, co
                             char *substring = strdup(&text[start], chunkEnd - start);
 
                             // Append the substring to the results array
-                            results = append_to_results(results, substring, &resultCount);
+                            results = append_to_results(results, substring);
 
                             // Recursively split the remaining text after the delimiter
-                            char **remainingResults = recursive_character_split(text, chunkEnd, end, splitter);
-                            results = append_to_results(results, remainingResults, &resultCount);
+                            char **remainingResults = recursive_character_split(text, chunkEnd, end, splitter, results);
+                            results = append_to_results(results, remainingResults);
                             return results;
                         }
                     }
@@ -98,11 +99,11 @@ SplitChunk_t *recursive_character_split(const char *text, int start, int end, co
                 char *substring = strdup(&text[start], chunkEnd - start);
 
                 // Append to results
-                results = append_to_results(results, substring, &resultCount);
+                results = append_to_results(results, substring);
 
                 // Recursively split the remaining text after the delimiter
-                char **remainingResults = recursive_character_split(text, chunkEnd, end, splitter);
-                results = append_to_results(results, remainingResults, &resultCount);
+                char **remainingResults = recursive_character_split(text, chunkEnd, end, splitter, results);
+                results = append_to_results(results, remainingResults);
                 return results;
             }
         }
@@ -140,10 +141,9 @@ bool match_delimiter(const char *text, int position, const char *delimiter)
 }
 
 // Helper function to append a substring to results array
-char **append_to_results(char **results, char *substring, int *resultCount)
+void append_to_results(SplitChunk_t results, char *substring)
 {
-    results = realloc(results, (*resultCount + 1) * sizeof(char *));
-    results[*resultCount] = substring;
-    (*resultCount)++;
-    return results;
+    results->chunks = realloc(results, (*resultCount + 1) * sizeof(char *));
+    results->chunks[*resultCount] = substring;
+    results->count++;
 }
