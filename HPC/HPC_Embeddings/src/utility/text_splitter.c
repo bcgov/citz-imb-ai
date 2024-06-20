@@ -18,7 +18,7 @@ RecursiveCharacterTextSplitter_t *init_text_splitter_params(const char **separat
 #define SIMD_WIDTH 64 // 512-bit AVX-512 registers (64 bytes)
 #define PREFETCH_DISTANCE 2 * SIMD_WIDTH
 
-SplitChunk_t *recursive_character_split(const char *text, int start, int end, const RecursiveCharacterTextSplitter *splitter)
+SplitChunk_t *recursive_character_split(const char *text, int start, int end, const RecursiveCharacterTextSplitter_t *splitter)
 {
     if (start >= end)
     {

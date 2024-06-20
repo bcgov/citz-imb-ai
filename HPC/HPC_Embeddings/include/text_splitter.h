@@ -16,7 +16,7 @@ typedef struct {
     size_t delimeter_count;
 } RecursiveCharacterTextSplitter_t;
 
-SplitChunk_t recursive_character_split(const char *text, const RecursiveCharacterTextSplitter *splitter);
+SplitChunk_t recursive_character_split(const char *text, const RecursiveCharacterTextSplitter_t *splitter);
 void free_split_result(SplitResult result);
 RecursiveCharacterTextSplitter_t *init_text_splitter_params(const char **separators, size_t separator_count, size_t chunk_size, size_t chunk_overlap);
 void* aligned_alloc(size_t size, size_t alignment);
