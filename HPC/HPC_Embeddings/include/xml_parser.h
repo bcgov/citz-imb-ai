@@ -3,6 +3,13 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+// Structure to hold the section data
+typedef struct {
+    char *title;
+    char *content;
+} Section;
+
+// Function declarations
 void parse_xml(const char *filename, const char *tag);
-void extractData(const char *filename);
-void extractDataFromMemory(const char *buffer, int size);
+Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections);
+void free_sections(Section *sections, int num_sections);

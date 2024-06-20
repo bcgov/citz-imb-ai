@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
+#include "../include/xml_parser.h"
 
 // Function to parse XML and print values of a specific tag
 void parse_xml(const char *filename, const char *tag) {
@@ -62,10 +64,12 @@ char *getNodeContent(xmlNodePtr node) {
     return NULL;
 }
 
-void processSection(xmlNodePtr section, const char *title) {
+Section processSection(xmlNodePtr section) {
     xmlNodePtr curNode = NULL;
     xmlChar *sectionHeading = NULL;
     xmlChar *sectionNumber = NULL;
+    char *sectionContent = NULL;
+    size_t sectionContentLen = 0;
 
     for (curNode = section->children; curNode; curNode = curNode->next) {
         if (curNode->type == XML_ELEMENT_NODE) {
@@ -73,6 +77,31 @@ void processSection(xmlNodePtr section, const char *title) {
                 sectionHeading = xmlNodeGetContent(curNode);
             } else if (!xmlStrcmp(curNode->name, (const xmlChar *)"num")) {
                 sectionNumber = xmlNodeGetContent(curNode);
+            } else {
+                char *itemText = getNodeContent(curNode);
+                if (itemText) {
+                    size_t itemTextLen = strlen(itemText);
+                    size_t newLen = sectionContentLen + itemTextLen + 1;
+
+                    // Reallocate buffer for section content
+                    char *newSectionContent = realloc(sectionContent, newLen);
+                    if (!newSectionContent) {
+                        free(itemText);
+                        free(sectionContent);
+                        if (sectionHeading) xmlFree(sectionHeading);
+                        if (sectionNumber) xmlFree(sectionNumber);
+                        return (Section){NULL, NULL}; // Allocation failed
+                    }
+
+                    sectionContent = newSectionContent;
+                    if (sectionContentLen == 0) {
+                        sectionContent[0] = '\0'; // Initialize the buffer with an empty string
+                    }
+                    strcat(sectionContent, itemText);
+                    sectionContentLen += itemTextLen;
+
+                    free(itemText);
+                }
             }
         }
     }
@@ -81,17 +110,9 @@ void processSection(xmlNodePtr section, const char *title) {
         printf("Section number is: %s\n", sectionNumber);
     }
 
-    // Process subsections or definitions
-    for (curNode = section->children; curNode; curNode = curNode->next) {
-        if (curNode->type == XML_ELEMENT_NODE) {
-            char *itemText = getNodeContent(curNode);
-            if (itemText) {
-                printf("Item text: %s\n", itemText);
-                // Create chunks and embeddings here
-                free(itemText);
-            }
-        }
-    }
+    Section newSection;
+    newSection.title = sectionNumber ? strdup((char *)sectionNumber) : NULL;
+    newSection.content = sectionContent;
 
     if (sectionHeading) {
         xmlFree(sectionHeading);
@@ -99,43 +120,74 @@ void processSection(xmlNodePtr section, const char *title) {
     if (sectionNumber) {
         xmlFree(sectionNumber);
     }
+
+    return newSection;
 }
 
-// Recursive function to find and process all section nodes
-void processAllSections(xmlNodePtr node, const char *title) {
+void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, int *max_sections) {
     for (xmlNodePtr curNode = node; curNode; curNode = curNode->next) {
         if (curNode->type == XML_ELEMENT_NODE) {
             if (!xmlStrcmp(curNode->name, (const xmlChar *)"section")) {
-                processSection(curNode, title);
+                if (*num_sections >= *max_sections) {
+                    *max_sections *= 2;
+                    Section *newSections = realloc(*sections, sizeof(Section) * (*max_sections));
+                    if (!newSections) {
+                        fprintf(stderr, "Realloc failed\n");
+                        free_sections(*sections, *num_sections);
+                        exit(1); // Handle the error as needed
+                    }
+                    *sections = newSections;
+                }
+                Section newSection = processSection(curNode);
+                (*sections)[*num_sections] = newSection;
+                (*num_sections)++;
             }
-            processAllSections(curNode->children, title);
+            processAllSections(curNode->children, sections, num_sections, max_sections);
         }
     }
 }
 
-void extractDataFromMemory(const char *buffer, int size) {
+Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections) {
     xmlDocPtr doc;
-    xmlNodePtr rootElement, curNode;
+    xmlNodePtr rootElement;
 
     doc = xmlReadMemory(buffer, size, NULL, NULL, 0);
     if (doc == NULL) {
         printf("Failed to parse the XML content from memory\n");
-        return;
+        return NULL;
     }
 
     rootElement = xmlDocGetRootElement(doc);
 
     // Get the ACT's title
     xmlNodePtr titleNode = findNodeByNamespace(rootElement, "act", "title");
-    if (titleNode) {
-        printTitle(titleNode);
-    } else {
+    if (!titleNode) {
         xmlFreeDoc(doc);
-        return;
+        return NULL;
+    }
+
+    // Initialize sections array
+    *num_sections = 0;
+    int max_sections = 100; // Initial allocation for 100 sections
+    Section *sections = malloc(sizeof(Section) * max_sections);
+    if (!sections) {
+        fprintf(stderr, "Malloc failed\n");
+        xmlFreeDoc(doc);
+        return NULL;
     }
 
     // Process all sections
-    processAllSections(rootElement, (const char *)titleNode->name);
+    processAllSections(rootElement, &sections, num_sections, &max_sections);
 
     xmlFreeDoc(doc);
+    return sections;
 }
+
+void free_sections(Section *sections, int num_sections) {
+    for (int i = 0; i < num_sections; i++) {
+        free(sections[i].title);
+        free(sections[i].content);
+    }
+    free(sections);
+}
+

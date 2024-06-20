@@ -17,14 +17,33 @@ void process_acts(char *directory_path) {
     }
 
     directory_info_t dir_info;
+
     init_dram_data(directory_path, &dir_info);
     printf("dir info is and num files are %zu \n", dir_info.num_files);
+
+
     #pragma omp parallel for dynamic schedule(guided)
+    
     for (size_t i = 0; i < dir_info.num_files; i++) {
-        //parse_xml(dir_info.files[i].buffer, "act");
-        //extractData(dir_info.files[i].buffer);
+
 	printf("processing file %zu \n", i);
-	extractDataFromMemory(dir_info.files[i].buffer, dir_info.files[i].filesize);
+
+	int num_sections;
+	Section *sections =  extract_sections_from_memory(dir_info.files[i].buffer, dir_info.files[i].filesize , &num_sections);
+
+
+	printf("num of sections is:::  %d \n", num_sections);
+	if (sections) {
+		for (int j=0; j < num_sections; j++) {
+			///recur
+			if (sections[j].title) {
+				printf("Title is %s \n", sections[j].title);
+				printf("data is %s \n", sections[j].content);
+			}
+		}
+		free_sections(sections, num_sections);
+	}
+
     }
 
     xmlCleanupParser();

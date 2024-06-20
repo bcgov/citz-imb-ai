@@ -25,7 +25,7 @@ void process_regulations(char *directory_path) {
     for (size_t i = 0; i < dir_info.num_files; i++) {
         //parse_xml(dir_info.files[i].buffer, "act");
         //extractData(dir_info.files[i].buffer);
-        extractDataFromMemory(dir_info.files[i].buffer, dir_info.files[i].filesize);
+        //extractDataFromMemory(dir_info.files[i].buffer, dir_info.files[i].filesize);
     }
 
     xmlCleanupParser();
