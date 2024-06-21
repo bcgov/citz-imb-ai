@@ -20,7 +20,7 @@ void parse_xml(const char *filename, const char *tag) {
         if (currentNode->type == XML_ELEMENT_NODE && xmlStrcmp(currentNode->name, (const xmlChar *)tag) == 0) {
             printf("Tag found: %s\n", tag);
             xmlChar *content = xmlNodeGetContent(currentNode);
-            printf("Content: %s\n", content);
+            //printf("Content: %s\n", content);
             xmlFree(content);
         }
     }

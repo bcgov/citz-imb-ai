@@ -49,6 +49,14 @@ double read_file_to_memory(const char *filepath, file_info_t *file) {
         return -1;
     }
     file->buffer = buffer; // Assign the buffer to file_info_t structure
+    // Assuming file->filename is declared as char*
+	file->filename = malloc(strlen(filepath) + 1);
+	if (file->filename != NULL) {
+	    strcpy(file->filename, filepath);
+	} else {
+	    // Handle allocation failure
+	}
+
 
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
@@ -196,6 +204,11 @@ void free_dram_data(directory_info_t *dir_info) {
             free(dir_info->files[i].buffer);
             dir_info->files[i].buffer = NULL;
         }
+        if (dir_info->files[i].filename) {
+            free(dir_info->files[i].filename);
+            dir_info->files[i].filename = NULL;
+        }
+
     }
     free(dir_info->files);
 }
