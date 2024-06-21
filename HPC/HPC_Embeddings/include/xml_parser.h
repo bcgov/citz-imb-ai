@@ -5,8 +5,15 @@
 
 // Structure to hold the section data
 typedef struct {
-    char *title;
+    char *act_title;
     char *content;
+    char *url;
+    char *section_name;
+    char *section_id;
+    char *reg_title;
+    char *section_type;
+    char *section_number;
+    char *title;
 } Section;
 
 // Function declarations

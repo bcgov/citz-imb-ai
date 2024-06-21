@@ -64,7 +64,7 @@ char *getNodeContent(xmlNodePtr node) {
     return NULL;
 }
 
-Section processSection(xmlNodePtr section) {
+Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regTitleNode) {
     xmlNodePtr curNode = NULL;
     xmlChar *sectionHeading = NULL;
     xmlChar *sectionNumber = NULL;
@@ -111,8 +111,18 @@ Section processSection(xmlNodePtr section) {
     }
 
     Section newSection;
-    newSection.title = sectionNumber ? strdup((char *)sectionNumber) : NULL;
+    newSection.number = sectionNumber ? strdup((char *)sectionNumber) : NULL;
     newSection.content = sectionContent;
+    newSection.title = sectionHeading ? strdup((char *)sectionHeading) : NULL;
+    newSection.act_title = getNodeContent(titleNode);
+    newSection.reg_title = getNodeContent(regTitleNode);
+    printf("Act title: %s\n", newSection.act_title);
+    printf("Regulation title: %s\n", newSection.reg_title);
+    printf("Section title: %s\n", newSection.title);
+    printf("Section content: %s\n", newSection.content);
+    printf("Section number: %s\n", newSection.number);
+    printf("\n");
+    printf("-----------------------------------\n")
 
     if (sectionHeading) {
         xmlFree(sectionHeading);
@@ -124,7 +134,7 @@ Section processSection(xmlNodePtr section) {
     return newSection;
 }
 
-void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, int *max_sections) {
+void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, int *max_sections, xmlNodePtr titleNode, xmlNodePtr regTitleNode) {
     for (xmlNodePtr curNode = node; curNode; curNode = curNode->next) {
         if (curNode->type == XML_ELEMENT_NODE) {
             if (!xmlStrcmp(curNode->name, (const xmlChar *)"section")) {
@@ -138,11 +148,11 @@ void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, 
                     }
                     *sections = newSections;
                 }
-                Section newSection = processSection(curNode);
+                Section newSection = processSection(curNode, titleNode, regTitleNode);
                 (*sections)[*num_sections] = newSection;
                 (*num_sections)++;
             }
-            processAllSections(curNode->children, sections, num_sections, max_sections);
+            processAllSections(curNode->children, sections, num_sections, max_sections, titleNode, regTitleNode);
         }
     }
 }
@@ -166,6 +176,19 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
         return NULL;
     }
 
+    //get the title of the regulation
+    xmlNodePtr regTitleNode = findNodeByNamespace(rootElement, "reg", "title");
+    if (!regTitleNode) {
+        xmlFreeDoc(doc);
+        return NULL;
+    } else {
+        xmlNodePtr titleNode = findNodeByNamespace(regTitleNode, "reg", "acttitle");
+        if (!titleNode) {
+            xmlFreeDoc(doc);
+            return NULL;
+        }
+    }
+
     // Initialize sections array
     *num_sections = 0;
     int max_sections = 100; // Initial allocation for 100 sections
@@ -177,7 +200,7 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     }
 
     // Process all sections
-    processAllSections(rootElement, &sections, num_sections, &max_sections);
+    processAllSections(rootElement, &sections, num_sections, &max_sections, titleNode, regTitleNode);
 
     xmlFreeDoc(doc);
     return sections;
