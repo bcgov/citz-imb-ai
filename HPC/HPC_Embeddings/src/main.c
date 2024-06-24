@@ -36,13 +36,18 @@ int main(int argc, char *argv[]) {
     {
         printf("Rank %d, Thread %d, running on CPU %d\n", rank, omp_get_thread_num(), sched_getcpu());
     }
+	
+    int print_output = 0;
+    if (argc > 3) {
+	print_output = 1;
+    }
 
     if (rank == 0) {
         printf("Hello from rank %d of %d\n", rank, size);
-        process_acts(argv[1]);
+        process_acts(argv[1], print_output);
     } else {
         printf("Hello from rank %d of %d\n", rank, size);
-        process_regulations(argv[2]);
+        process_regulations(argv[2], print_output);
     }
 
     printf("Hello from rank %d of %d\n", rank, size);

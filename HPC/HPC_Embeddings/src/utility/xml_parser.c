@@ -3,6 +3,8 @@
 #include <string.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
+#include <ctype.h>
+#include <immintrin.h>
 #include "../include/xml_parser.h"
 
 // Function to parse XML and print values of a specific tag
@@ -29,12 +31,136 @@ void parse_xml(const char *filename, const char *tag) {
     xmlCleanupParser();
 }
 
+// Function to trim and normalize whitespace using AVX-512
+char *trim_and_normalize_whitespace(const char *text) {
+   if (!text) {
+	return NULL;
+    }
+    size_t len = strlen(text);
+    char *normalized_text = malloc(len + 1);
+    char *dest = normalized_text;
+    int in_whitespace = 0;
+
+    // AVX-512 setup
+    const __m512i space_mask = _mm512_set1_epi8(' ');
+    const __m512i newline_mask = _mm512_set1_epi8('\n');
+    const __m512i tab_mask = _mm512_set1_epi8('\t');
+    const __m512i cr_mask = _mm512_set1_epi8('\r');
+    const __m512i zero_mask = _mm512_setzero_si512();
+
+    while (len >= 64) {
+        // Load 64 bytes into AVX-512 register
+        __m512i chunk = _mm512_loadu_si512(text);
+
+        // Compare with whitespace characters
+        __mmask64 whitespace_mask = _mm512_cmpeq_epi8_mask(chunk, space_mask) |
+                                    _mm512_cmpeq_epi8_mask(chunk, newline_mask) |
+                                    _mm512_cmpeq_epi8_mask(chunk, tab_mask) |
+                                    _mm512_cmpeq_epi8_mask(chunk, cr_mask);
+
+        // Process each character in the chunk
+        for (int i = 0; i < 64; ++i) {
+            if (whitespace_mask & (1ULL << i)) {
+                if (!in_whitespace) {
+                    *dest++ = ' ';
+                    in_whitespace = 1;
+                }
+            } else {
+                *dest++ = text[i];
+                in_whitespace = 0;
+            }
+        }
+
+        text += 64;
+        len -= 64;
+    }
+
+    // Process remaining characters
+    while (*text) {
+        if (isspace((unsigned char)*text)) {
+            if (!in_whitespace) {
+                *dest++ = ' ';
+                in_whitespace = 1;
+            }
+        } else {
+            *dest++ = *text;
+            in_whitespace = 0;
+        }
+        text++;
+    }
+    *dest = '\0';
+
+    // Trim leading and trailing spaces
+    char *start = normalized_text;
+    while (isspace((unsigned char)*start)) start++;
+    char *end = normalized_text + strlen(normalized_text) - 1;
+    while (end > start && isspace((unsigned char)*end)) end--;
+    *(end + 1) = '\0';
+
+    char *final_text = strdup(start);
+    free(normalized_text);
+    return final_text;
+}
+
+
+void print_readable(const char *text) {
+    while (*text) {
+        switch (*text) {
+            case '\n':
+                printf("\\n");
+                break;
+            case '\t':
+                printf("\\t");
+                break;
+            case '\r':
+                printf("\\r");
+                break;
+            case '\b':
+                printf("\\b");
+                break;
+            case '\f':
+                printf("\\f");
+                break;
+            case '\v':
+                printf("\\v");
+                break;
+            case '\\':
+                printf("\\\\");
+                break;
+            case '\"':
+                printf("\\\"");
+                break;
+            case '\'':
+                printf("\\\'");
+                break;
+            case ' ':
+                if (*(text + 1) == ' ') {
+                    printf("\\s\\s");
+                    text++;  // Skip the next space since it's part of the double space
+                } else {
+                    printf(" ");
+                }
+                break;
+            default:
+                if (isprint((unsigned char)*text)) {
+                    printf("%c", *text);
+                } else {
+                    printf("\\x%02X", (unsigned char)*text);
+                }
+                break;
+        }
+        text++;
+    }
+    printf("\n");
+}
+
 // Function to find a node by its name and namespace
 xmlNodePtr findNodeByNamespace(xmlNodePtr root, const char *namespace, const char *name) {
     xmlNodePtr curNode = NULL;
     for (curNode = root; curNode; curNode = curNode->next) {
-        if (curNode->type == XML_ELEMENT_NODE && 
-            !xmlStrcmp(curNode->name, (const xmlChar *)name) && 
+        if (curNode->type == XML_ELEMENT_NODE &&
+            !xmlStrcmp(curNode->name, (const xmlChar *)name) &&
+            curNode->ns != NULL &&  // Check if ns is not NULL
             !xmlStrcmp(curNode->ns->prefix, (const xmlChar *)namespace)) {
             return curNode;
         }
@@ -45,6 +171,7 @@ xmlNodePtr findNodeByNamespace(xmlNodePtr root, const char *namespace, const cha
     }
     return NULL;
 }
+
 
 void printTitle(xmlNodePtr node) {
     xmlChar *title = xmlNodeGetContent(node);
@@ -64,7 +191,7 @@ char *getNodeContent(xmlNodePtr node) {
     return NULL;
 }
 
-Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regTitleNode) {
+Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regTitleNode, int print_outputs) {
     xmlNodePtr curNode = NULL;
     xmlChar *sectionHeading = NULL;
     xmlChar *sectionNumber = NULL;
@@ -90,7 +217,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
                         free(sectionContent);
                         if (sectionHeading) xmlFree(sectionHeading);
                         if (sectionNumber) xmlFree(sectionNumber);
-                        return (Section){NULL, NULL}; // Allocation failed
+                        return (Section){NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL}; // Allocation failed
                     }
 
                     sectionContent = newSectionContent;
@@ -112,17 +239,23 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
 
     Section newSection;
     newSection.number = sectionNumber ? strdup((char *)sectionNumber) : NULL;
-    newSection.content = sectionContent;
+    newSection.content = trim_and_normalize_whitespace(sectionContent);
+    free(sectionContent);
     newSection.title = sectionHeading ? strdup((char *)sectionHeading) : NULL;
     newSection.act_title = getNodeContent(titleNode);
     newSection.reg_title = getNodeContent(regTitleNode);
-    printf("Act title: %s\n", newSection.act_title);
-    printf("Regulation title: %s\n", newSection.reg_title);
-    printf("Section title: %s\n", newSection.title);
-    printf("Section content: %s\n", newSection.content);
-    printf("Section number: %s\n", newSection.number);
-    printf("\n");
-    printf("-----------------------------------\n")
+    if (print_outputs) {
+	    printf("-----------------------------------\n");
+	    printf("-----------------------------------\n");
+	    printf("Act title: %s\n", newSection.act_title);
+	    printf("Regulation title: %s\n", newSection.reg_title);
+	    printf("Section title: %s\n", newSection.title);
+	    printf("Section content: %s\n", newSection.content);
+	    //print_readable(newSection.content);
+	    printf("Section number: %s\n", newSection.number);
+	    printf("\n");
+	    printf("-----------------------------------\n");
+    }	
 
     if (sectionHeading) {
         xmlFree(sectionHeading);
@@ -134,7 +267,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     return newSection;
 }
 
-void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, int *max_sections, xmlNodePtr titleNode, xmlNodePtr regTitleNode) {
+void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, int *max_sections, xmlNodePtr titleNode, xmlNodePtr regTitleNode, int print_outputs) {
     for (xmlNodePtr curNode = node; curNode; curNode = curNode->next) {
         if (curNode->type == XML_ELEMENT_NODE) {
             if (!xmlStrcmp(curNode->name, (const xmlChar *)"section")) {
@@ -148,16 +281,16 @@ void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, 
                     }
                     *sections = newSections;
                 }
-                Section newSection = processSection(curNode, titleNode, regTitleNode);
+                Section newSection = processSection(curNode, titleNode, regTitleNode, print_outputs);
                 (*sections)[*num_sections] = newSection;
                 (*num_sections)++;
             }
-            processAllSections(curNode->children, sections, num_sections, max_sections, titleNode, regTitleNode);
+            processAllSections(curNode->children, sections, num_sections, max_sections, titleNode, regTitleNode, print_outputs);
         }
     }
 }
 
-Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections) {
+Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections, int print_outputs) {
     xmlDocPtr doc;
     xmlNodePtr rootElement;
 
@@ -167,27 +300,39 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
         return NULL;
     }
 
-    rootElement = xmlDocGetRootElement(doc);
+	xmlNodePtr titleNode = NULL;
 
-    // Get the ACT's title
-    xmlNodePtr titleNode = findNodeByNamespace(rootElement, "act", "title");
-    if (!titleNode) {
-        xmlFreeDoc(doc);
-        return NULL;
-    }
+	// Get the root element of the document
+	rootElement = xmlDocGetRootElement(doc);
+	if (!rootElement) {
+		return NULL;
+	}
 
-    //get the title of the regulation
-    xmlNodePtr regTitleNode = findNodeByNamespace(rootElement, "reg", "title");
-    if (!regTitleNode) {
-        xmlFreeDoc(doc);
-        return NULL;
-    } else {
-        xmlNodePtr titleNode = findNodeByNamespace(regTitleNode, "reg", "acttitle");
-        if (!titleNode) {
-            xmlFreeDoc(doc);
-            return NULL;
-        }
-    }
+	// Try to get the title of the regulation
+	xmlNodePtr regTitleNode = findNodeByNamespace(rootElement, "reg", "title");
+	if (regTitleNode) {
+	        char * reg_title = getNodeContent(regTitleNode);
+		printf("reg title Node %s \n", reg_title);
+		free(reg_title);
+	} else {
+		printf("Not a regulation it is an act \n");
+	}
+
+	if (regTitleNode) {
+	    // Try to get the act title within the regulation title
+	    titleNode = findNodeByNamespace(rootElement, "reg", "acttitle");
+	} else {
+	    // If regulation title is not found, try to get the act's title
+	    titleNode = findNodeByNamespace(rootElement, "act", "title");
+	}
+
+	// If neither title is found, free the document and return NULL
+	if (!titleNode) {
+            printf("No title found ");
+	    xmlFreeDoc(doc);
+	    return NULL;
+	}
+
 
     // Initialize sections array
     *num_sections = 0;
@@ -200,7 +345,7 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     }
 
     // Process all sections
-    processAllSections(rootElement, &sections, num_sections, &max_sections, titleNode, regTitleNode);
+    processAllSections(rootElement, &sections, num_sections, &max_sections, titleNode, regTitleNode, print_outputs);
 
     xmlFreeDoc(doc);
     return sections;
@@ -210,6 +355,9 @@ void free_sections(Section *sections, int num_sections) {
     for (int i = 0; i < num_sections; i++) {
         free(sections[i].title);
         free(sections[i].content);
+	free(sections[i].number);
+	free(sections[i].act_title);
+        free(sections[i].reg_title);
     }
     free(sections);
 }

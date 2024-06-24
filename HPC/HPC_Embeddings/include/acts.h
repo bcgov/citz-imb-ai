@@ -10,4 +10,4 @@
 #include "text_splitter.h"
 #include "memory.h"
 
-void process_acts(char *input_file);
+void process_acts(char *directory_path, int print_ooutputs);
