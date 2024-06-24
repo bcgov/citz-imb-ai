@@ -22,29 +22,29 @@ To navigate all the work done in the project, please refer to the table below:
     </thead>
     <tbody>
         <tr>
-            <td colspan="3" align="center"><a href="">Architecture</a></td>
-            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web">Feedback Infrastructure</a></td>
-            <td colspan="2"><a href="">Data Cleaning</a></td>
-            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/Hardware">Hardware</a></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center"><a href="">Embeddings
-            <td colspan="3" align="center"><a href="">LLM's</a></td>
-            <td colspan="3" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture">Architecture</a></td>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
         </tr>
         <tr>
             <th colspan="8"> Feedback infrastructure </th>
         <tr>
         <tr>
-            <td colspan="8" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web"> Embedding Adaptors</a>
+            <td colspan="8" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web/frontend-feedback-analytics"> Embedding Adaptors</a>
+        </tr>
+        <tr>
+            <th colspan="8"> MLOps </th>
+        </tr>   
+        <tr>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/mlops"> MLOps</a></td>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/mlops/orchestration/airflow"> Airflow Scripts</a></td>
         </tr>
         <tr>
             <th colspan="8"> Hardware </th>
         <tr>
         <tr>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/Hardware"> Intel 3rd Gen Xeon CPU</a>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/intelHW"> Intel 3rd Gen Xeon CPU</a>
             </td>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/Hardware"> Intel 4th Gen Xeon CPU</a>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings"> HPC  -Embeddings Generation</a>
             </td>
         </tr>
     </tbody>
