@@ -8,7 +8,7 @@ const sendFeedback = async (
       'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
     },
-    body: `feedback=${encodeURIComponent(feedbackType)}&recording=${encodeURIComponent(recordingHash)}`,
+    body: `feedback=${encodeURIComponent(feedbackType)}&recording_id=${encodeURIComponent(recordingHash)}`,
   });
   if (!response.ok) {
     throw new Error('Failed to send feedback');
