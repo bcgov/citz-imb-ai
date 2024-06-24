@@ -21,6 +21,7 @@ interface ContextProps {
   KeycloakLogout: () => void;
   sendUserFeedback: (feedbackType: 'up_vote' | 'down_vote' | 'no_vote') => void;
   generationComplete: boolean;
+  recordingHash: string;
 }
 
 export const Context = createContext<ContextProps | undefined>(undefined);
@@ -49,12 +50,13 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [resultData, setResultData] = useState<string>('');
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [generationComplete, setGenerationComplete] = useState<boolean>(false);
+  const [recordingHash, setRecordingHash] = useState<string>('');
 
   const sendUserFeedback = async (
     feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
   ) => {
     try {
-      const message = await sendFeedback(feedbackType);
+      const message = await sendFeedback(feedbackType, recordingHash);
       console.log(message);
     } catch (error) {
       console.error('Error sending feedback:', error);
@@ -85,7 +87,11 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       setRecentPrompt(input);
       response = await runChat(input);
     }
-    let responseArray = response.split('**');
+
+    // Save the recording hash
+    setRecordingHash(response.recordingHash);
+
+    let responseArray = response.response.split('**');
     let newArray = '';
     for (let i = 0; i < responseArray.length; i++) {
       if (i === 0 || i % 2 !== 1) {
@@ -173,6 +179,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     KeycloakLogout,
     sendUserFeedback,
     generationComplete,
+    recordingHash,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
