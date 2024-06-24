@@ -30,6 +30,17 @@ def tru_connect():
     )
     return conn
 
+def fetch_rag_feedback(record_id):
+    conn = tru_connect()
+    cur = conn.cursor()  # creating a cursor
+    cur.execute("""
+        SELECT R.input, F.result, F.result, R.app_id result FROM public.records R 
+        LEFT JOIN feedbacks F ON F.record_id = R.record_id WHERE
+        R.record_id= %s
+    """, (record_id,))
+    rows = cur.fetchall()
+    return rows
+
 def fetch_human_feedback(record_id):
     conn = tru_connect()
     cur = conn.cursor()  # creating a cursor
@@ -64,6 +75,23 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
         app_id=APP_ID,
         result=0,
         multi_result=multi_result,
+    )
+    rows = fetch_human_feedback(record_id)
+    if rows:
+        return rows
+    else:
+        return None
+    
+def process_rag_feedback(feedback, record_id=None, tru=None):
+    if feedback == "up_vote":
+        feedback = 1
+    else:
+        feedback = -1
+    tru_feedback = tru.add_feedback(
+        name="Human Feedack",
+        record_id=record_id,
+        app_id=APP_ID,
+        result=feedback,
     )
     rows = fetch_human_feedback(record_id)
     if rows:

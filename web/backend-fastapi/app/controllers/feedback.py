@@ -51,6 +51,25 @@ async def feedback(
         return {"status": True, "rows": rows}
     else:
         return {"status": False}
+    
+@router.post("/feedbackrag")
+async def feedbackrag(
+    feedback: str = Form(...),
+    recording_id: str = Form(...),
+):
+    # Add appropriate imports
+
+    # Global variables initialization
+    global tru, APP_ID
+    if tru is None:
+        tru = trulens.connect_trulens()
+
+    # Process feedback
+    rows = trulens.process_rag_feedback(feedback, recording_id, tru)
+    if rows:
+        return {"status": True, "rows": rows}
+    else:
+        return {"status": False}
 
 
 @router.get("/fetch_feedback/")

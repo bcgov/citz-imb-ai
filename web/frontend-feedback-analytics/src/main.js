@@ -1,6 +1,6 @@
 import './style.scss'
-import bclogo from './BC_logo.jpg'
-import { setupCounter } from './counter.js'
+import bclogo from '../assets/BC_logo.jpg'
+import { setupCounter } from '../counter.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
