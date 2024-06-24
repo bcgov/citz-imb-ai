@@ -1,4 +1,6 @@
-const runChat = async (_prompt: string): Promise<string> => {
+const runChat = async (
+  _prompt: string,
+): Promise<{ response: string; recordingHash: string }> => {
   const response = await fetch('/api/chat/', {
     method: 'POST',
     headers: {
@@ -7,7 +9,6 @@ const runChat = async (_prompt: string): Promise<string> => {
     },
     body: `prompt=${encodeURIComponent(_prompt)}`,
   });
-
   const data = await response.json();
   const responses = JSON.parse(data.responses);
   let prettier = responses['llm'];
@@ -33,7 +34,10 @@ const runChat = async (_prompt: string): Promise<string> => {
     topk_str += '</small></p><br><hr><br>';
   }
   prettier += '\n\n' + topk_str;
-  return prettier;
+  return {
+    response: prettier,
+    recordingHash: data.recording,
+  };
 };
 
 export default runChat;
