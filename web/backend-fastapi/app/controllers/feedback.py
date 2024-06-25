@@ -52,7 +52,7 @@ async def feedback(
     else:
         return {"status": False}
     
-@router.post("/feedbackrag")
+@router.post("/feedbackrag/")
 async def feedbackrag(
     feedback: str = Form(...),
     recording_id: str = Form(...),
