@@ -248,7 +248,6 @@ services:
       build:
         context: ../web/trulens-dashboard
         dockerfile: Dockerfile
-      entrypoint: ["python", "main.py"]
       environment:
         TRULENS_USER: ${TRULENS_USER:-postgres}
         TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
