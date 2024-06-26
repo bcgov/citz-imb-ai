@@ -55,12 +55,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const sendUserFeedback = async (
     feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
   ) => {
-    try {
-      const message = await sendFeedback(feedbackType, recordingHash);
-      console.log(message);
-    } catch (error) {
-      console.error('Error sending feedback:', error);
-    }
+    await sendFeedback(feedbackType, recordingHash);
   };
 
   const delayPara = (index: number, nextWord: string, totalWords: number) => {
@@ -125,7 +120,15 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   };
 
   const refreshToken = () => {
-    keycloak.updateToken(70);
+    keycloak.updateToken(70).then((refreshed) => {
+      if (refreshed) {
+        localStorage.setItem('keycloak-token', keycloak.token ?? '');
+        localStorage.setItem(
+          'keycloak-refresh-token',
+          keycloak.refreshToken ?? '',
+        );
+      }
+    });
   };
 
   useEffect(() => {
@@ -142,7 +145,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
             'keycloak-refresh-token',
             keycloak.refreshToken ?? '',
           );
-          setInterval(refreshToken, 60000);
+          setInterval(refreshToken, 4 * 60 * 1000);
         }
       }
     };
