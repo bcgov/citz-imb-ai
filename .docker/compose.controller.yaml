@@ -137,6 +137,11 @@ services:
     networks:
       - zuba
 
+  ocp_airflow_scheduler:
+    build:
+      context: ../mlops/orchestration/airflow
+      dockerfile: Dockerfile.scheduler
+
   ############################ End of AIRFLOW ##################################
 
   ##################### AI Performance Tracking ################################
