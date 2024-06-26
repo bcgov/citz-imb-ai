@@ -9,6 +9,7 @@ document.querySelector('#app').innerHTML = `
     </a>
     <h1>A.I Dashboard</h1>
     <button class="button" onclick="window.location.href = '/login.html'">Login</button>
+    <button class="button small" onclick="window.location.href = '/feedback.html'">Feedback</button>
   </div>
 `
 
