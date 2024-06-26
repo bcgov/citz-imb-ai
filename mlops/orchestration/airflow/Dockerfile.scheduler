@@ -3,8 +3,6 @@ FROM apache/airflow:2.3.3
 ENV HOME=/home/airflow
 ENV AIRFLOW_HOME=/home/airflow
 
-RUN chown -R airflow:airflow /home/airflow /opt/airflow
-
 USER airflow
 
 ENTRYPOINT ["tini", "--", "entrypoint.sh"]
