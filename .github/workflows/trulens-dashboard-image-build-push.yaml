@@ -1,0 +1,54 @@
+# GitHub Actions workflow for building and tagging the trulens dashboard image on PR
+name: Trulens Dashboard Build and Push on PR
+
+on:
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - ready_for_review
+    branches:
+    - main
+    paths:
+      - web/trulens-dashboard/**
+
+jobs:
+  # Job to build, tag, and push the image
+  build-tag-push:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    # Login to the Openshift Cluster
+    - name: Login to Openshift
+      uses: redhat-actions/oc-login@v1
+      with:
+        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        openshift_token: ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+        namespace: ${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}
+
+    # Login to BC Gov Artifactory Docker Image Repository
+    - name: Login to Artifactory
+      run : |
+        docker login ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_TOOLS_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+
+    # Build the image
+    - name: Build Image
+      run: |
+        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build trulens_dashboard
+
+    # Tag the image
+    - name: Tag Image
+      run: |
+        docker tag docker_trulens_dashboard ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/trulens-dashboard-imagestream:${{github.event.pull_request.number}}
+
+    # Push the image
+    - name: Push Image
+      run: |
+        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/trulens-dashboard-imagestream:${{ github.event.pull_request.number }}
+
