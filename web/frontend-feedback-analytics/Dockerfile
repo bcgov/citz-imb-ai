@@ -15,9 +15,12 @@ COPY . /app
 # Install the project dependencies and build the project
 RUN npm install && npm run build
 
-COPY feedback.html /app/dist/
+#COPY feedback.html /app/dist/
+COPY feedback1.html /app/dist/
 COPY login.html /app/dist/
-COPY trulens.html /app/dist/
+#COPY trulens.html /app/dist/
+#COPY src /app/dist/src/
+
 
 # Nginx Build Stage
 # Use the official Nginx image based on Alpine Linux for the final stage
