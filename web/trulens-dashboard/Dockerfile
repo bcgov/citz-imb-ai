@@ -1,7 +1,7 @@
 # Use the official Python image from the Docker Hub
 FROM python:3.11-slim
 
-# Set the working directory in the container
+# Set the work directory in the container
 WORKDIR /app
 
 # Copy the requirements file into the container
