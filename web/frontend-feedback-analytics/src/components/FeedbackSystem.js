@@ -15,7 +15,6 @@ export function createFeedbackSystem() {
       Responses" button.
     </small>
     <div class="form-group mt-2 mb-1">
-      <label for="prompt">Enter a query</label>
       <input type="input" class="form-control" id="prompt" placeholder="Enter a query" />
       <div class="mt-1 mb-1">
         <button id="submit-question" class="mt-1 btn btn-dark">Submit</button>
