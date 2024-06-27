@@ -38,4 +38,4 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 #CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000", "--workers", "8"]
 
 # Use gunicorn to run the FastAPI app with uvicorn workers
-CMD ["gunicorn","-w", "4", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:10000", "main:app"]
+CMD ["gunicorn","-w", "4", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:10000", "--timeout", "120", "main:app"]
