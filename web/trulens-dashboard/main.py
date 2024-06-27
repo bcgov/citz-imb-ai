@@ -24,7 +24,7 @@ def connect_to_database(connection_string, retries=5, delay=5):
             tru = Tru(connection_string)
             logging.debug("Successfully connected to the database.")
             return tru
-        except OperationalError as e:
+        except Exception as e:
             logging.warning(f"Attempt {attempt + 1}: Database connection failed. Retrying in {delay} seconds...")
             time.sleep(delay)
     logging.error("Failed to connect to the database after multiple attempts.")
