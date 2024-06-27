@@ -195,8 +195,8 @@ const Main = () => {
               </div>
             </div>
             <p className="bottom-info">
-              BC AI may display inaccurate info, please double-check its
-              responses.
+              BC AI may display inaccurate info and responses may take up to 2
+              minutes. Please double-check its responses.
             </p>
           </div>
         </div>
@@ -210,6 +210,7 @@ const Main = () => {
                 This application is in beta mode, and answers may be inaccurate.
                 Please double-check the validity of the information.
               </p>
+              <p>Answers may take up to 2 minutes to generate.</p>
               <p>By agreeing to use BC AI, you accept our terms of service.</p>
               <p>Do you agree to proceed?</p>
             </>
