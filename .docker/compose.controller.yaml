@@ -245,6 +245,7 @@ services:
 
   ########################## trulens ############################
   trulens_dashboard:
+      container_name: citz-imb-ai-trulens-dashboard-svc
       build:
         context: ../web/trulens-dashboard
         dockerfile: Dockerfile
