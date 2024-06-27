@@ -11,17 +11,18 @@ embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 @router.post("/chat/")
 async def chat(prompt: str = Form(...)):
     # Global variables initialization
-    global kg, tru, APP_ID, session, bedrock_runtime
+    global kg, tru, embeddings, APP_ID, session, bedrock_runtime
     rag_fn = rag.get_full_rag()
     if kg is None:
         kg = neo4j.neo4j()
     if tru is None:
         tru = trulens.connect_trulens()
     tru_rag = trulens.tru_rag(rag_fn)
-    print(tru_rag)
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    if embeddings is None:
+        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     with tru_rag as recording:
         responses = rag_fn.query(prompt, embeddings, kg)
+    print("Getting recording id")
     record = recording.get() 
     return {"responses": responses, "recording": record.record_id}
 

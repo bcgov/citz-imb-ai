@@ -2,6 +2,8 @@ FROM python:3.11-slim
 
 # Update the package list and install dos2unix
 RUN apt-get update && apt-get install -y dos2unix
+RUN apt-get install -y procps
+RUN apt-get install -y vim
 
 WORKDIR /backend
 
