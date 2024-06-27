@@ -1,4 +1,5 @@
 import psycopg2
+from psycopg2 import OperationalError
 import os
 from trulens_eval import Tru
 from dotenv import load_dotenv
