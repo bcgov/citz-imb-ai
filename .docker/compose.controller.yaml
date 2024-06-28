@@ -142,6 +142,11 @@ services:
       context: ../mlops/orchestration/airflow
       dockerfile: Dockerfile.scheduler
 
+  ocp_airflow_webserver:
+    build:
+      context: ../mlops/orchestration/airflow
+      dockerfile: Dockerfile.webserver
+
   ############################ End of AIRFLOW ##################################
 
   ##################### AI Performance Tracking ################################
