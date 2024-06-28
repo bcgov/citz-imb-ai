@@ -37,10 +37,10 @@ jobs:
     # Tag the image
     - name: Tag Image
       run: |
-        docker tag docker_ocp_airflow_scheduler ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/airflow-scheduler-imagestream:latest
+        docker tag docker_ocp_airflow_scheduler ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/airflow-scheduler-is:latest
 
     # Push the image
     - name: Push Image
       run: |
-        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/airflow-scheduler-imagestream:latest
+        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/airflow-scheduler-is:latest
 
