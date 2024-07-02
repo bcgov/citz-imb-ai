@@ -22,7 +22,6 @@ async def chat(prompt: str = Form(...)):
         embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     with tru_rag as recording:
         responses = rag_fn.query(prompt, embeddings, kg)
-    print("Getting recording id")
     record = recording.get() 
     return {"responses": responses, "recording": record.record_id}
 

@@ -54,12 +54,10 @@ class get_full_rag:
 
     @instrument
     def get_response(self, query: str) -> str:
-        print("Bedrock processing")
         bedrock_response = bedrock.get_response(query)
         return bedrock_response
     
     def formatoutput(self, topk, lm_output):
-        print("formatoutput processing")
         prettier = {}
         prettier['llm'] = lm_output
         prettier['topk'] = []

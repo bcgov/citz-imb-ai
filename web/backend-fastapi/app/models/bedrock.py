@@ -3,15 +3,10 @@ import json
 import os
 from dotenv import load_dotenv
 
-load_dotenv("/vault/secrets/zuba-secret-dev") 
+load_dotenv("/vault/secrets/zuba-secret-dev")
 
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-
-print("printing keys")
-print(os.getenv("AWS_ACCESS_KEY_ID"))
-print(os.getenv("AWS_SECRET_ACCESS_KEY"))
-print(os.environ)
 
 session = boto3.Session(
     aws_access_key_id=AWS_ACCESS_KEY_ID,
@@ -48,7 +43,7 @@ def get_lama3_kwargs(prompt):
                 "prompt": prompt,
                 "temperature": 0.5,
                 "top_p": 0.9,
-                "max_gen_len":1024,
+                "max_gen_len": 1024,
             }
         ),
     }
