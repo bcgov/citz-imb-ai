@@ -92,14 +92,12 @@ async def fetch_all_feedback():
 def process_feedback(index, feedback, record_id=None, bulk=False):
     if bulk:
         multi_result = {"bulk": []}
-        print(f"Feedback for Response: is {feedback} in bulk")
         feedback = feedback.split(",")
         for feedback_value in feedback:
             multi_result["bulk"].append(trulens.get_feedback_value(feedback_value))
         print(multi_result)
         multi_result = json.dumps(multi_result)
     else:
-        print(f"Feedback for Response {index}: is {feedback}")
         feedbackvalue = trulens.get_feedback_value(feedback)
         multi_result = json.dumps({index: [feedbackvalue]})
 
@@ -112,8 +110,6 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
         result=0,
         multi_result=multi_result,
     )
-    print(record_id)
-    print(tru_feedback)
     rows = trulens.fetch_human_feedback(record_id)
     if rows:
         return rows

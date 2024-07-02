@@ -1,13 +1,16 @@
 import sys
 
+
 class MockNestAsyncio:
     def apply(self):
         pass
 
-sys.modules['nest_asyncio'] = MockNestAsyncio()
+
+sys.modules["nest_asyncio"] = MockNestAsyncio()
 
 import asyncio
 import uvloop
+
 # Ensure uvloop is being used
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
@@ -30,22 +33,19 @@ app.include_router(feedback.router)
 app.include_router(chat_RAG.router)
 
 # Register middleware
-#app.add_middleware(LoggingMiddleware)
+# app.add_middleware(LoggingMiddleware)
 app.add_middleware(AuthenticationMiddleware)
 
-load_dotenv("/vault/secrets/zuba-secret-dev") # need to find soltion to load test and prod files in respective envs.
-
-print("printing keys")
-print(os.getenv("AWS_ACCESS_KEY_ID"))
-print(os.getenv("AWS_SECRET_ACCESS_KEY"))
-print(os.environ)
+load_dotenv(
+    "/vault/secrets/zuba-secret-dev"
+)  # need to find soltion to load test and prod files in respective envs.
 
 origins = [
     "http://localhost.tiangolo.com",
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8080",
-    "*"
+    "*",
 ]
 
 app.add_middleware(
@@ -58,4 +58,11 @@ app.add_middleware(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=10000)
+
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=10000,
+        timeout_keep_alive=120,  # 2 minutes timeout for keep-alive connections
+        timeout_graceful_shutdown=120,  # 2 minutes timeout for graceful shutdown
+    )
