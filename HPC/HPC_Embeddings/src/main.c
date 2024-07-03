@@ -42,15 +42,15 @@ int main(int argc, char *argv[]) {
 	print_output = 1;
     }
 
+    printf("Hello from rank %d of %d\n", rank, size);
+    
     if (rank == 0) {
-        printf("Hello from rank %d of %d\n", rank, size);
         process_acts(argv[1], print_output);
     } else {
-        printf("Hello from rank %d of %d\n", rank, size);
         process_regulations(argv[2], print_output);
     }
 
-    printf("Hello from rank %d of %d\n", rank, size);
+    printf("Completed work from rank %d of %d.\n", rank, size);
 
 
 

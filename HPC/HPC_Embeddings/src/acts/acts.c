@@ -15,17 +15,16 @@ void process_acts(char *directory_path, int print_outputs) {
 
     #pragma omp parallel for schedule(dynamic, 1)
     for (size_t i = 0; i < dir_info.num_files; i++) {
-    //for (size_t i = 0; i < 10; i++) {
-       printf("Thread %d, running on CPU %d\n", omp_get_thread_num(), sched_getcpu());
-        printf("Processing file %zu\n", i);
+//       printf("Thread %d, running on CPU %d\n", omp_get_thread_num(), sched_getcpu());
+//        printf("Processing file %zu\n", i);
 
         int num_sections;
         Section *sections = extract_sections_from_memory(dir_info.files[i].buffer, dir_info.files[i].filesize, &num_sections, print_outputs);
 
-        printf("Number of sections: %d\n", num_sections);
+        printf("File name or act: %s\n", dir_info.files[i].filename); 
+//        printf("Number of sections: %d\n\n", num_sections);
         if (sections) {
-	   printf("--------------- processing SEctions --------------- \n ");
-            printf("File name or act: %s\n", dir_info.files[i].filename); 
+//	   printf("--------------- processing SEctions --------------- \n ");
             for (int j = 0; j < num_sections; j++) {
                 if (sections[j].title) {
                     // Process recursive text splitting per section
@@ -35,8 +34,8 @@ void process_acts(char *directory_path, int print_outputs) {
                 }
             }
             free_sections(sections, num_sections);
-	    printf("--------------- End of processing sections --------------------- \n ");
-	    printf("------------------------------------------------------------------ \n");	
+//	    printf("--------------- End of processing sections --------------------- \n ");
+//	    printf("------------------------------------------------------------------ \n\n");	
         }
     }
     xmlCleanupParser();
