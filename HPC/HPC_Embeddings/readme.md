@@ -14,6 +14,144 @@ This architecture efficiently handles large volumes of data by leveraging the po
 
 Overall, this architecture is designed to handle complex, compute-intensive tasks effectively, making it suitable for applications requiring high-performance data processing and indexing.
 
+# Getting Started
+To get started with this HPC system architecture, follow these steps:
+[NOTE] - This will ONLY run in openshift clusters with Intel Xeon processors.
+- Login into your openshift A.I operator and open a terminal window.
+- If you have not already, clone this repostory and navigate to the HPC folder.
+- You will need intelOneAPI installed on your system to run the code.
+   - This will install MPI, openMP, the intel compiler and other libraries needed to run the code. 
+- You will also need numa libraries installed on your system.
+- In the intelOneAPI folder you will find setvar.sh file. Run this file to set the environment variables.
+- Once the variables are set, create a directory called build in this folder:
+```
+mkdir build
+cd build
+cmake ..
+make
+
+# without debug output
+mpirun -genv I_MPI_DEBUG=5  --bind-to socket:2 -np 2 ./HPCChain ../.././../../../XML_Acts/ ../../../../../XML_Regulations/
+
+# with debug output
+mpirun -genv I_MPI_DEBUG=5  --bind-to socket:2 -np 2 ./HPCChain ../.././../../../XML_Acts/ ../../../../../XML_Regulations/ 1
+
+```
+
+where the first argument is the path to the ACT files and the second argument is the path to the REG files.
+
+You can also view the script.sh file to see how to run the code. It assumes you have installed the intelOneAPI and the numa libraries in a custom directory called Programs.
+
+#### How to organize the system in the openshift cluster
+- Create a folder called Software and Programs in your home directory. You can be in the home directory by just typying cd.
+```
+cd 
+mkdir Software
+mkdir Programs
+```
+These custom directories are used to download the source code (Software directory) and install (Programs directory) all the dependencies such as the intelOneAPI and the numa libraries.
+
+You will not have root priviligies which is needed when installing software in the default directories and using the package manager. But you can install the software in your home directory and set the environment variables to point to the custom directories.
+
+when compiling from source follow the instruction of the software you are installing. If they use autoconf, you may need to use the libtoolize command to generate the configure file.
+then run the configure file with the prefix option to install the software in the Programs directory.
+
+```
+libtoolize
+./configure --prefix=/home/yourusername/Programs
+make
+make install
+```
+If libtoolize is not installed, you can install it from source since you will not have sudo priviliges to use the package manager.
+
+After installing all the software needed, you can set the environment variables in the .bashrc file in your home directory. 
+
+Please look at the .bashrc file in this repository to see how to set the environment variables. You can use this as a template and modify it to suit your needs.
+
+#### Some of the software that we needed to install from source to get the code to run:
+```
+-rwxr-xr-x.  1 1017910000 root 2.7G Mar 22 17:44 l_BaseKit_p_2024.1.0.596_offline.sh
+-rw-r--r--.  1 1017910000 root  16M Apr 26 16:57 valgrind-3.23.0.tar.bz2
+drwxr-xr-x.  5 1017910000 root 4.0K May 24 00:15 libtool-2.4
+drwxr-xr-x. 12 1017910000 root 4.0K May 24 16:19 hwloc
+drwxr-xr-x.  3 1017910000 root 4.0K May 24 18:37 aws
+-rw-r--r--.  1 1017910000 root  58M May 28 16:00 awscliv2.zip
+drwxr-xr-x. 12 1017910000 root  12K May 30 15:39 numactl
+drwxr-xr-x. 13 1017910000 root 4.0K May 30 18:18 oneCCL
+drwxr-xr-x. 24 1017910000 root 8.0K Jun 18 13:19 valgrind-3.23.0
+```
+##### Details of the Software and Tools
+
+- **`l_BaseKit_p_2024.1.0.596_offline.sh` - intelOneAPI**
+  - Intel suite of tools for HPC and AI.
+
+- **`valgrind-3.23.0.tar.bz2` - Valgrind**
+  - A tool to check for memory leaks.
+
+- **`libtool-2.4` - Libtool**
+  - Needed to install Valgrind and other software. Installs the `libtoolize` command.
+
+- **`hwloc` - Hwloc**
+  - To see the hardware topology of the system.
+
+- **`numactl` - Numactl**
+  - To set the NUMA policy.
+
+- **`oneCCL` - OneCCL**
+  - Optimized for Intel processors to run MPI and other HPC applications using the Common Collective Library.
+
+
+After installing the sofware your, Programs directory should look like this:
+```
+(app-root) (app-root) ls -alrth
+total 56K
+drwxr-xr-x.  2 1017910000 root 4.0K May 24 16:17 sbin
+drwxr-xr-x.  9 1017910000 root 4.0K May 24 16:17 share
+drwxr-xr-x.  3 1017910000 root 4.0K May 30 18:20 opt
+drwxr-xr-x.  2 1017910000 root 4.0K May 30 18:20 modulefiles
+drwxr-xr-x.  7 1017910000 root 4.0K May 30 18:20 examples
+drwxr-xr-x.  3 1017910000 root 4.0K Jun  4 15:16 intel
+drwxr-xr-x.  5 1017910000 root 4.0K Jun 18 13:20 lib
+drwxr-xr-x.  3 1017910000 root 4.0K Jun 18 13:20 libexec
+drwxr-xr-x.  2 1017910000 root 4.0K Jun 18 13:20 bin
+drwxr-xr-x.  6 1017910000 root 4.0K Jun 20 16:15 include
+```
+
+##### Explanation of Each Folder
+
+- **sbin**
+  - Contains essential system binaries and administrative tools, typically used by the system administrator.
+  
+- **share**
+  - Holds architecture-independent data files, such as documentation, configuration files, and shared resources.
+  
+- **modulefiles**
+  - Contains module files used by the environment module system, allowing users to dynamically modify their environment by loading specific software modules.
+  
+- **opt**
+  - Typically used for optional or third-party software packages. This directory might hold additional tools or libraries not part of the core system.
+  
+- **intel**
+  The `intel` folder contains the Intel OneAPI tools suite, which includes a variety of tools for HPC, AI, compilers, profilers, and other utilities designed to facilitate work within the Intel ecosystem. It installs numerous tools and software necessary for compiling our HPC code.
+
+  
+- **lib**
+  - Contains essential shared libraries and dynamic libraries needed by the installed software.
+  
+- **libexec**
+  - Contains executable programs intended to be executed by other programs rather than directly by users, such as daemon processes.
+  
+- **bin**
+  - Holds essential command binaries and executable files accessible by users.
+  
+- **include**
+  - Contains header files for C/C++ and other programming languages, needed for developing and compiling software.
+
+
+
+
+## Architecture Overview
+
 ![../../assets/system_architecture.jpg](../../assets/system_architecture.jpg)
 
 # HPC System Architecture Overview

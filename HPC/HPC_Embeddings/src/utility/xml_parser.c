@@ -233,7 +233,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
         }
     }
 
-    if (sectionNumber) {
+    if (sectionNumber && print_outputs) {
         printf("Section number is: %s\n", sectionNumber);
     }
 
