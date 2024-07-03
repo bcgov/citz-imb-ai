@@ -23,7 +23,10 @@ To navigate all the work done in the project, please refer to the table below:
     <tbody>
         <tr>
             <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture">Architecture</a></td>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
+            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture/preprocessing">Preprocessing Workflow</a></td>
+</tr>
+        <tr>
+            <td colspan="8" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
         </tr>
         <tr>
             <th colspan="8"> Feedback infrastructure </th>
