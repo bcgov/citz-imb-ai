@@ -1,0 +1,24 @@
+PATH=/opt/app-root/src/Programs/:/opt/app-root/src/Programs/bin:/opt/app-root/src/Programs/lib:/opt/app-root/src/Programs/v2/2.15.58/bin:/opt/app-root/src/Programs/intel/oneapi/mpi/latest/:/opt/app-root/src/Programs/intel/oneapi/mpi/latest/bin/:/opt/app-root/src/Programs/intel/oneapi/vtune/latest/bin64:/opt/app-root/src/Programs/intel/oneapi/compiler/latest/bin/:$PATH
+
+export LD_LIBRARY_PATH=/opt/app-root/src/Programs/lib:/opt/app-root/src/Programs/intel/oneapi/mpi/latest/lib:$LD_LIBRARY_PATH
+export MPI_HOME=/opt/app-root/src/Programs/intel/oneapi/mpi/latest/
+
+export I_MPI_ROOT=/opt/app-root/src/Programs/intel/oneapi/mpi/latest/
+export I_LIBFABRIC_ROOT=$I_MPI_ROOT/libfabric
+export I_MPI_CC=icx
+export MPICH_CC=icx
+
+export C_INCLUDE_PATH=/opt/app-root/src/Programs/include:C_INCLOUDE_PATH
+
+# Add the MPI binaries to your PATH
+export PATH=$I_MPI_ROOT/bin:$PATH
+
+# Ensure the library paths are set correctly
+export LD_LIBRARY_PATH=$I_MPI_ROOT/lib/release:$I_MPI_ROOT/lib:$I_LIBFABRIC_ROOT/lib:/opt/app-root/src/Programs/lib:$LD_LIBRARY_PATH
+
+# Set stack size to unlimited
+ulimit -s unlimited
+
+# Verify the stack size (optional)
+ulimit -a
+source ~/.aliases
