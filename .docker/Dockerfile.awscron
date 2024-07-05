@@ -6,5 +6,3 @@ RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/op
     tar xvzf openshift-client-linux.tar.gz -C /usr/local/bin && \
     rm openshift-client-linux.tar.gz && \
     chmod +x /usr/local/bin/oc
-
-RUN oc version --client
