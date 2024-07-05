@@ -27,9 +27,9 @@ const Sidebar = () => {
     setRecentPrompt(prompt);
   };
 
-  const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
-  };
+  // const toggleSidebar = () => {
+  //   setIsCollapsed(!isCollapsed);
+  // };
 
   const handleLogout = () => {
     resetContext();
