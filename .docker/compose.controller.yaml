@@ -100,7 +100,7 @@ services:
       airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
     networks:
       - zuba
-
+    
   airflow_webserver:
     build:
       context: ../mlops/orchestration/airflow
