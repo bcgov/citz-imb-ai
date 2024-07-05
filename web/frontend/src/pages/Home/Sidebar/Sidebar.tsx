@@ -5,7 +5,7 @@ import ModalDialog from '@/components/Modal/ModalDialog';
 import './Sidebar.scss';
 
 const Sidebar = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const context = useContext(Context);
 
@@ -46,9 +46,9 @@ const Sidebar = () => {
 
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
-      <div className="sidebar-header" title="Menu" onClick={toggleSidebar}>
+      {/* <div className="sidebar-header" title="Menu" onClick={toggleSidebar}>
         <img src={assets.menu_icon} className="menu-icon" alt="menu icon" />
-      </div>
+      </div> */}
 
       <div onClick={() => newChat()} className="new-chat" title="New Chat">
         <img src={assets.plus_icon} alt="new chat" />
