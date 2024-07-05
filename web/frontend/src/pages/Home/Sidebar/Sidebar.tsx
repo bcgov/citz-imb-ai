@@ -5,7 +5,7 @@ import ModalDialog from '@/components/Modal/ModalDialog';
 import './Sidebar.scss';
 
 const Sidebar = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed] = useState(true);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const context = useContext(Context);
 
