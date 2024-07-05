@@ -1,6 +1,6 @@
 FROM amazon/aws-cli:latest
 
-RUN yum update -y && yum install -y tar gzip
+RUN yum update -y && yum install -y tar gzip jq
 
 RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz && \
     tar xvzf openshift-client-linux.tar.gz -C /usr/local/bin && \
