@@ -287,6 +287,15 @@ services:
       - zuba
   ######################## End of pgAdmin #####################################
 
+  ######################## AWS CREDS CRON #####################################
+
+  aws_creds_cron:
+    build:
+      context: .
+      dockerfile: Dockerfile.awscron
+
+  ######################## END OF AWS CREDS CRON #####################################
+
 ########################### Networks Definition ################################
 networks:
   zuba:
