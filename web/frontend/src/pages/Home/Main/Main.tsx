@@ -27,6 +27,8 @@ const Main = () => {
     resetContext,
     KeycloakLogout,
     generationComplete,
+    errorState,
+    resetError,
   } = context;
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -99,6 +101,14 @@ const Main = () => {
   const handleModalNo = () => {
     resetContext();
     KeycloakLogout();
+  };
+
+  const handleErrorModalRefresh = () => {
+    window.location.reload();
+  };
+
+  const handleErrorModalCancel = () => {
+    resetError();
   };
 
   return (
@@ -222,6 +232,28 @@ const Main = () => {
           option2={{
             text: 'No, Take Me Back',
             onClick: handleModalNo,
+          }}
+        />
+      )}
+      {errorState.hasError && (
+        <ModalDialog
+          title="Error Occurred"
+          description={
+            <>
+              <p>An error occurred while processing your request.</p>
+              <p>Please refresh the page and try again.</p>
+              <p>
+                Status: <b>{errorState.errorMessage}</b>
+              </p>
+            </>
+          }
+          option1={{
+            text: 'Refresh Page',
+            onClick: handleErrorModalRefresh,
+          }}
+          option2={{
+            text: 'Cancel',
+            onClick: handleErrorModalCancel,
           }}
         />
       )}

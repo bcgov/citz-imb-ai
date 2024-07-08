@@ -22,6 +22,11 @@ interface ContextProps {
   sendUserFeedback: (feedbackType: 'up_vote' | 'down_vote' | 'no_vote') => void;
   generationComplete: boolean;
   recordingHash: string;
+  errorState: {
+    hasError: boolean;
+    errorMessage: string;
+  };
+  resetError: () => void;
 }
 
 export const Context = createContext<ContextProps | undefined>(undefined);
@@ -51,6 +56,20 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [generationComplete, setGenerationComplete] = useState<boolean>(false);
   const [recordingHash, setRecordingHash] = useState<string>('');
+  const [errorState, setErrorState] = useState<{
+    hasError: boolean;
+    errorMessage: string;
+  }>({
+    hasError: false,
+    errorMessage: '',
+  });
+
+  const resetError = () => {
+    setErrorState({
+      hasError: false,
+      errorMessage: '',
+    });
+  };
 
   const sendUserFeedback = async (
     feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
@@ -68,39 +87,47 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   };
 
   const onSent = async (prompt?: string) => {
-    setResultData('');
-    setLoading(true);
-    setShowResult(true);
-    setInput('');
-    setGenerationComplete(false);
-    let response;
-    if (prompt !== undefined) {
-      response = await runChat(prompt);
-      setRecentPrompt(prompt);
-    } else {
-      setPrevPrompts((prev) => [...prev, input]);
-      setRecentPrompt(input);
-      response = await runChat(input);
-    }
-
-    // Save the recording hash
-    setRecordingHash(response.recordingHash);
-
-    let responseArray = response.response.split('**');
-    let newArray = '';
-    for (let i = 0; i < responseArray.length; i++) {
-      if (i === 0 || i % 2 !== 1) {
-        newArray += responseArray[i];
+    try {
+      setResultData('');
+      setLoading(true);
+      setShowResult(true);
+      setInput('');
+      setGenerationComplete(false);
+      let response;
+      if (prompt !== undefined) {
+        response = await runChat(prompt);
+        setRecentPrompt(prompt);
       } else {
-        newArray += '<b>' + responseArray[i] + '</b>';
+        setPrevPrompts((prev) => [...prev, input]);
+        setRecentPrompt(input);
+        response = await runChat(input);
       }
+
+      // Save the recording hash
+      setRecordingHash(response.recordingHash);
+
+      let responseArray = response.response.split('**');
+      let newArray = '';
+      for (let i = 0; i < responseArray.length; i++) {
+        if (i === 0 || i % 2 !== 1) {
+          newArray += responseArray[i];
+        } else {
+          newArray += '<b>' + responseArray[i] + '</b>';
+        }
+      }
+      responseArray = newArray.split('*').join('</br>').split(' ');
+      for (let i = 0; i < responseArray.length; i++) {
+        const nextWord = responseArray[i];
+        delayPara(i, nextWord + ' ', responseArray.length);
+      }
+    } catch (error) {
+      setErrorState({
+        hasError: true,
+        errorMessage: (error as Error).message || 'An unknown error occurred',
+      });
+    } finally {
+      setLoading(false);
     }
-    responseArray = newArray.split('*').join('</br>').split(' ');
-    for (let i = 0; i < responseArray.length; i++) {
-      const nextWord = responseArray[i];
-      delayPara(i, nextWord + ' ', responseArray.length);
-    }
-    setLoading(false);
   };
 
   const newChat = async () => {
@@ -183,6 +210,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     sendUserFeedback,
     generationComplete,
     recordingHash,
+    errorState,
+    resetError,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
