@@ -10,7 +10,8 @@
 #include "../include/file_dram.h"
 #include "../include/acts.h"
 
-void process_data(directory_info_t directory_path, int print_outputs, char *type) {
+void process_data(char *directory_path, int print_outputs, char *type)
+{
     printf("Processing %s from %s\n", type, directory_path);
     if (!directory_path)
     {
