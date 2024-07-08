@@ -50,6 +50,3 @@ void process_data(directory_info_t directory_path, int print_outputs, char *type
     // Free all the memory
     free_dram_data(&dir_info);
 }
-
-
-}
