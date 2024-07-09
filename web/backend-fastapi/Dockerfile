@@ -10,7 +10,7 @@ WORKDIR /backend
 # Copy requirements definition to container
 COPY ./requirements.txt /backend/requirements.txt
 
-# Install dependencies
+# Install pip dependencies
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /backend/requirements.txt
 
@@ -31,7 +31,6 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Set the entrypoint
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-# 
 #CMD ["python", "main.py"]
 
 # Use Uvicorn to run the FastAPI app with multiple workers
