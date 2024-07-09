@@ -1,11 +1,18 @@
-FROM ubuntu:22.04
+# Stage 1: Download and extract OpenShift CLI
+FROM alpine:latest as oc-downloader
+ARG OC_VERSION=4.12.0
+RUN apk add --no-cache curl tar
+RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-linux.tar.gz && \
+    tar xzf openshift-client-linux.tar.gz && \
+    chmod +x oc
+
+# Stage 2: Final image
+FROM amazonlinux:2
 
 # Install necessary packages
-RUN apt-get update && apt-get install -y \
-    curl \
-    unzip \
-    python3-pip \
-    && rm -rf /var/lib/apt/lists/*
+RUN yum update -y && \
+    yum install -y unzip glibc && \
+    yum clean all
 
 # Install AWS CLI
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -13,11 +20,18 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf aws awscliv2.zip
 
-# Install OpenShift CLI (oc)
-RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz && \
-    tar xvzf openshift-client-linux.tar.gz -C /usr/local/bin && \
-    rm openshift-client-linux.tar.gz && \
-    chmod +x /usr/local/bin/oc
+# Copy OpenShift CLI from the downloader stage
+COPY --from=oc-downloader /oc /usr/local/bin/
+
+# Verify installations and print verbose information
+RUN set -x && \
+    aws --version && \
+    oc version --client || true && \
+    ldd $(which oc) && \
+    ldd --version && \
+    echo "GLIBC version:" && \
+    ls -l /lib64/libc.so.6 && \
+    strings /lib64/libc.so.6 | grep GLIBC_
 
 # Set the entrypoint to bash
 ENTRYPOINT ["/bin/bash"]
