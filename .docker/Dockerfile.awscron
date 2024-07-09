@@ -1,5 +1,9 @@
 FROM ubuntu:22.04
 
+# Set environment variables
+ENV OC_VERSION="4.13.0"
+ENV OC_DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-linux.tar.gz"
+
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
     curl \
@@ -14,10 +18,8 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     rm -rf aws awscliv2.zip
 
 # Install OpenShift CLI (oc)
-RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz && \
-    tar xvzf openshift-client-linux.tar.gz -C /usr/local/bin && \
-    rm openshift-client-linux.tar.gz && \
-    chmod +x /usr/local/bin/oc
+RUN curl -L ${OC_DOWNLOAD_URL} | tar -xz -C /usr/local/bin oc kubectl && \
+    chmod +x /usr/local/bin/oc /usr/local/bin/kubectl
 
 # Set the entrypoint to bash
 ENTRYPOINT ["/bin/bash"]
