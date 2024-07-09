@@ -1,15 +1,8 @@
-FROM ubuntu:22.04
+FROM amazonlinux:2
 
-# Set environment variables
-ENV OC_VERSION="4.13.0"
-ENV OC_DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-linux.tar.gz"
-
-# Install necessary packages
-RUN apt-get update && apt-get install -y \
-    curl \
-    unzip \
-    python3-pip \
-    && rm -rf /var/lib/apt/lists/*
+# Install development tools and dependencies
+RUN yum update -y && yum groupinstall -y "Development Tools" && \
+    yum install -y golang git unzip
 
 # Install AWS CLI
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -17,9 +10,18 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf aws awscliv2.zip
 
-# Install OpenShift CLI (oc)
-RUN curl -L ${OC_DOWNLOAD_URL} | tar -xz -C /usr/local/bin oc kubectl && \
-    chmod +x /usr/local/bin/oc /usr/local/bin/kubectl
+# Clone OpenShift CLI repository
+RUN git clone https://github.com/openshift/oc.git /oc-source
+
+# Build OpenShift CLI
+WORKDIR /oc-source
+RUN make
+
+# Move the binary to a directory in PATH
+RUN mv /oc-source/oc /usr/local/bin/
+
+# Clean up
+RUN rm -rf /oc-source
 
 # Set the entrypoint to bash
 ENTRYPOINT ["/bin/bash"]
