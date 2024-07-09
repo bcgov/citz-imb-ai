@@ -1,8 +1,18 @@
+# Stage 1: Download and extract OpenShift CLI
+FROM alpine:latest as oc-downloader
+ARG OC_VERSION=4.12.0
+RUN apk add --no-cache curl tar
+RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-linux.tar.gz && \
+    tar xzf openshift-client-linux.tar.gz && \
+    chmod +x oc
+
+# Stage 2: Final image
 FROM amazonlinux:2
 
-# Install development tools and dependencies
-RUN yum update -y && yum groupinstall -y "Development Tools" && \
-    yum install -y golang git unzip
+# Install necessary packages
+RUN yum update -y && \
+    yum install -y unzip glibc && \
+    yum clean all
 
 # Install AWS CLI
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -10,18 +20,18 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf aws awscliv2.zip
 
-# Clone OpenShift CLI repository
-RUN git clone https://github.com/openshift/oc.git /oc-source
+# Copy OpenShift CLI from the downloader stage
+COPY --from=oc-downloader /oc /usr/local/bin/
 
-# Build OpenShift CLI
-WORKDIR /oc-source
-RUN make
-
-# Move the binary to a directory in PATH
-RUN mv /oc-source/oc /usr/local/bin/
-
-# Clean up
-RUN rm -rf /oc-source
+# Verify installations and print verbose information
+RUN set -x && \
+    aws --version && \
+    oc version --client || true && \
+    ldd $(which oc) && \
+    ldd --version && \
+    echo "GLIBC version:" && \
+    ls -l /lib64/libc.so.6 && \
+    strings /lib64/libc.so.6 | grep GLIBC_
 
 # Set the entrypoint to bash
 ENTRYPOINT ["/bin/bash"]
