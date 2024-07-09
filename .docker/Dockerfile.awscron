@@ -1,8 +1,24 @@
-FROM amazon/aws-cli:latest
+FROM ubuntu:22.04
 
-RUN yum update -y && yum install -y tar gzip jq
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    curl \
+    unzip \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
 
+# Install AWS CLI
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    ./aws/install && \
+    rm -rf aws awscliv2.zip
+
+# Install OpenShift CLI (oc)
 RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz && \
     tar xvzf openshift-client-linux.tar.gz -C /usr/local/bin && \
     rm openshift-client-linux.tar.gz && \
     chmod +x /usr/local/bin/oc
+
+# Set the entrypoint to bash
+ENTRYPOINT ["/bin/bash"]
+
