@@ -12,7 +12,7 @@ COPY *.scss /app/dist/
 # Copy all files from the current directory to /app in the container
 COPY . /app
 
-# Install the project dependencies and build the project
+# Install the dependencies and build the project
 RUN npm install && npm run build
 
 #COPY feedback.html /app/dist/
