@@ -2,7 +2,7 @@ FROM amazonlinux:2
 
 # Install necessary packages
 RUN yum update -y && \
-    yum install -y unzip curl tar gzip
+    yum install -y unzip curl tar gzip jq
 
 # Install AWS CLI
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -10,10 +10,13 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf aws awscliv2.zip
 
-# Install OpenShift CLI
-RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux.tar.gz && \
-    tar xvzf openshift-client-linux.tar.gz -C /usr/local/bin && \
-    rm openshift-client-linux.tar.gz
+# Install an older version of OpenShift CLI compatible with Amazon Linux 2
+RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.6.0/openshift-client-linux-4.6.0.tar.gz && \
+    tar xvzf openshift-client-linux-4.6.0.tar.gz -C /usr/local/bin && \
+    rm openshift-client-linux-4.6.0.tar.gz
+
+# Set AWS default region to avoid endpoint connection issues
+ENV AWS_DEFAULT_REGION=ca-central-1
 
 # Set the entrypoint to bash
 ENTRYPOINT ["/bin/bash"]
