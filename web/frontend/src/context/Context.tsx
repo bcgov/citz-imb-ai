@@ -104,12 +104,16 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       setInput('');
       setGenerationComplete(false);
       let response;
-      response = await runChat(prompt);
-      setRecentPrompt(prompt);
-      setMessages((prev) => [...prev, { type: 'user', content: prompt }]);
-
-      // Save messages to sessionStorage
-      sessionStorage.setItem('messages', JSON.stringify([...messages, { type: 'user', content: prompt }]));
+      if (prompt !== undefined) {
+        response = await runChat(prompt);
+        setRecentPrompt(prompt);
+        setMessages((prev) => [...prev, { type: 'user', content: prompt }]);
+      } else {
+        setPrevPrompts((prev) => [...prev, input]);
+        setRecentPrompt(input);
+        response = await runChat(input);
+        setMessages((prev) => [...prev, { type: 'user', content: input }]);
+      }
 
       setRecordingHash(response.recordingHash);
 
