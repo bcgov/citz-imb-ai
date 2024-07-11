@@ -19,21 +19,38 @@ bucket_name = "IMBAIPilot"
 def download_data(bucket, path, bucket_name):
     prefix = bucket
     client = boto3.client("s3", **linode_obj_config)
-    response = client.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
     BASE_PATH = path
-    if not os.path.exists(BASE_PATH):
-        os.makedirs(BASE_PATH, mode=0o777)
-    for obj in response['Contents']:
-        newpath = os.path.join(BASE_PATH, obj['Key'].split('/')[-1])
-        if newpath != path:
-            print(f"Downloading {obj['Key']} to {newpath}")
-            client.download_file(bucket_name, obj['Key'], newpath)
+    if not os.path.exists(BASE_PATH): os.makedirs(BASE_PATH, mode=0o777)
+    
+    continuation_token = None
+
+    while True:
+        if continuation_token:
+            response = client.list_objects_v2(Bucket=bucket_name, Prefix=prefix, ContinuationToken=continuation_token)
+        else:
+            response = client.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
+        
+        if 'Contents' in response:
+            for obj in response['Contents']:
+                newpath = os.path.join(BASE_PATH, obj['Key'].split('/')[-1])
+                if newpath != path:
+                    print(newpath)
+                    client.download_file(bucket_name, obj['Key'], newpath)
+
+        # Check if more pages are available
+        if response.get('IsTruncated'):  # If the response is truncated, there are more pages to retrieve
+            continuation_token = response.get('NextContinuationToken')
+        else:
+            break
 
 def download_bclaws_acts():
-    download_data("bclaws/data/xml/Cleaned/Acts", "HTML_Acts/", bucket_name)
+    download_data("bclaws/data/xml/Cleaned/Acts", "XML_Acts/", bucket_name)
 
 def download_bclaws_regulations():
-    download_data("bclaws/data/xml/Cleaned/Regulations", "HTML_Regulations/", bucket_name)
+    download_data("bclaws/data/xml/Cleaned/Regulations", "XML_Regulations/", bucket_name)
+
+def download_bclaws_glossary():
+    download_data("bclaws/glossary", "JSON_glossary/", bucket_name)
 
 default_args = {
     'owner': 'airflow',
@@ -61,5 +78,10 @@ with DAG(
         task_id='download_bclaws_regulations',
         python_callable=download_bclaws_regulations,
     )
+    
+    task_download_glossary = PythonOperator(
+        task_id='download_bclaws_glossary',
+        python_callable=download_bclaws_glossary,
+    )
 
-    task_download_acts >> task_download_regulations
+    task_download_acts >> task_download_regulations >> task_download_glossary
