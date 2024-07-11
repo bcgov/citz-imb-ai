@@ -8,6 +8,7 @@ import {
 import Welcome from '@/pages/Welcome/Welcome';
 import Main from '@/pages/Home/Main/Main';
 import Error from '@/pages/Error/Error';
+import Safety from '@/pages/Safety/Safety';
 import { Context } from '@/context/Context';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/" element={isAuthenticated ? <Main /> : <Welcome />} />
         <Route path="/error" element={<Error />} />
         <Route path="*" element={<Navigate to="/error" />} />
+        <Route path="/safety" element={<Safety />} />
       </Routes>
     </Router>
   );

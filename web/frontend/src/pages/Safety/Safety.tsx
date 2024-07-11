@@ -1,0 +1,110 @@
+import { Link } from 'react-router-dom';
+import './Safety.scss';
+
+const SafetyPage = () => {
+  return (
+    <div className="safety-page">
+      <div className="safety-content">
+        <Link to="/" className="safety-back-button">
+          Back to Home
+        </Link>
+        <div className="safety-main-container">
+          <div className="safety-greet">
+            <p>
+              <span>Our Commitment to Safe and Ethical AI</span>
+            </p>
+          </div>
+          <div className="safety-intro-alert">
+            <h2>
+              At BC Gov, we prioritize trust, safety, and effectiveness in our
+              AI solutions.
+            </h2>
+            <p>
+              Here's how we ensure our AI systems are designed and deployed
+              responsibly:
+            </p>
+          </div>
+          <div className="safety-cards">
+            <div className="safety-card">
+              <h3>Human-in-the-Loop (HITL)</h3>
+              <p>
+                We involve human reviewers in critical decision-making processes
+                to ensure accuracy and accountability.
+              </p>
+            </div>
+            <div className="safety-card">
+              <h3>Ethical AI Practices</h3>
+              <p>
+                Transparency, fairness, and accountability are at the core of
+                our AI practices.
+              </p>
+            </div>
+            <div className="safety-card">
+              <h3>Security and Privacy</h3>
+              <p>
+                Protecting sensitive data and ensuring user privacy is
+                paramount.
+              </p>
+            </div>
+            <div className="safety-card">
+              <h3>Performance Monitoring</h3>
+              <p>
+                Our AI infrastructure is continuously monitored using OpenShift
+                to ensure high performance and reliability.
+              </p>
+            </div>
+            <div className="safety-card">
+              <h3>Continuous Improvement</h3>
+              <p>
+                We have established a robust feedback loop to gather user
+                insights and continuously refine our AI models.
+              </p>
+            </div>
+            <div className="safety-card">
+              <h3>Bias Detection and Mitigation</h3>
+              <p>
+                We are committed to ensuring our AI systems are fair and
+                unbiased.
+              </p>
+            </div>
+          </div>
+          <h2>Our Guardrails and Safety Measures</h2>
+          <div className="safety-cards">
+            <div className="safety-card">
+              <h3>Transparency Reports</h3>
+            </div>
+            <div className="safety-card">
+              <h3>Ethical Audits</h3>
+            </div>
+            <div className="safety-card">
+              <h3>Security Measures</h3>
+            </div>
+            <div className="safety-card">
+              <h3>Human Oversight</h3>
+            </div>
+            <div className="safety-card">
+              <h3>User Feedback Integration</h3>
+            </div>
+            <div className="safety-card">
+              <h3>Regular Risk Assessments</h3>
+            </div>
+          </div>
+          <h2>Ensuring Safe AI</h2>
+          <p>
+            We are dedicated to deploying AI responsibly. Our comprehensive
+            guardrails and ethical practices ensure our AI systems are safe,
+            trustworthy, and effective. We are committed to continuous
+            improvement and transparency, making sure our AI solutions benefit
+            everyone.
+          </p>
+          <p>
+            By demonstrating our commitment to safe AI practices, we aim to
+            build trust and confidence in our AI solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SafetyPage;

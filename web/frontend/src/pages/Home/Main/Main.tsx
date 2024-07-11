@@ -6,6 +6,7 @@ import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import ScrollButton from '@/components/ScrollButton/ScrollButton';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   const context = useContext(Context);
@@ -215,15 +216,26 @@ const Main = () => {
         <ModalDialog
           title="Notice"
           description={
-            <>
-              <p>
-                This application is in beta mode, and answers may be inaccurate.
-                Please double-check the validity of the information.
+            <div className="modal-content">
+              <p>Before proceeding, please note the following:</p>
+              <ul>
+                <li>
+                  This application is in beta mode. Answers may be inaccurate or
+                  incomplete. Always verify information independently.
+                </li>
+                <li>Response generation may take up to 2 minutes.</li>
+                <li>By using BC AI, you agree to our terms of service.</li>
+                <li>
+                  We are committed to AI safety. Learn more about our{' '}
+                  <Link to="/safety" className="safety-link">
+                    AI safety practices.
+                  </Link>
+                </li>
+              </ul>
+              <p className="agreement-text">
+                Do you understand and agree to proceed?
               </p>
-              <p>Answers may take up to 2 minutes to generate.</p>
-              <p>By agreeing to use BC AI, you accept our terms of service.</p>
-              <p>Do you agree to proceed?</p>
-            </>
+            </div>
           }
           option1={{
             text: 'Yes, I Agree',

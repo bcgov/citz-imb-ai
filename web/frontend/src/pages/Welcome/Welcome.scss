@@ -81,6 +81,29 @@
       }
     }
   }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    font-size: 1rem;
+    animation: fadeIn 1.6s ease-in-out;
+
+    p {
+      max-width: 600px;
+      text-align: center;
+    }
+    .safety-link {
+      color: var(--gradient-start);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 @keyframes fadeIn {
