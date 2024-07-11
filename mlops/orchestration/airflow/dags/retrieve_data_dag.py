@@ -14,6 +14,10 @@ linode_obj_config = {
     "aws_secret_access_key": S3_SECRET_ACCESS_KEY,
     "endpoint_url": S3_ENDPOINT_URL,
 }
+print(S3_ACCESS_KEY)
+print(S3_SECRET_ACCESS_KEY)
+print(S3_ENDPOINT_URL)
+
 bucket_name = "IMBAIPilot"
 
 def download_data(bucket, path, bucket_name):
@@ -21,13 +25,14 @@ def download_data(bucket, path, bucket_name):
     client = boto3.client("s3", **linode_obj_config)
     BASE_PATH = path
     if not os.path.exists(BASE_PATH): os.makedirs(BASE_PATH, mode=0o777)
-    
+    print(client) 
     continuation_token = None
 
     while True:
         if continuation_token:
             response = client.list_objects_v2(Bucket=bucket_name, Prefix=prefix, ContinuationToken=continuation_token)
         else:
+            print(bucket_name)
             response = client.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
         
         if 'Contents' in response:
