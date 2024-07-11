@@ -1,0 +1,50 @@
+name: Push DAGs to OCP Volume
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '/mlops/orchestration/airflow/dags/**'  # Only trigger when DAG files change
+
+jobs:
+  push-dags:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install OpenShift CLI
+        uses: redhat-actions/oc-installer@v1
+        with:
+          oc_version: '4.9'
+
+  build-tag-push:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    # Login to the Openshift Cluster
+    - name: Login to Openshift
+      uses: redhat-actions/oc-login@v1
+      with:
+        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        openshift_token: ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+        namespace: ${{ secrets.OPENSHIFT_DEV_NAMESPACE }}
+
+    # Push DAGs to OCP Airflow volume
+    - name: Push DAGs to OCP Volume
+      run: |
+        # Assuming your DAGs are in a 'dags' directory
+        oc rsync ./mlops/orchestration/airflow/dags/ airflow-web-deployment:/opt/airflow/dags -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }}
+
+    - name: Verify DAGs transfer
+      run: |
+        oc exec airflow-web-deployment -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE -- ls -l /opt/airflow/dags
+
