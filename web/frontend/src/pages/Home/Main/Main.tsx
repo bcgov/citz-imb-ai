@@ -12,6 +12,8 @@ const Main = () => {
   const context = useContext(Context);
   const [isModalVisible, setIsModalVisible] = useState(true);
   const [userScrolled, setUserScrolled] = useState(false);
+  const [pendingMessage, setPendingMessage] = useState<string | null>(null);
+  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
   if (!context) {
     throw new Error('Main must be used within a ContextProvider');
@@ -19,10 +21,8 @@ const Main = () => {
 
   const {
     onSent,
-    recentPrompt,
     showResult,
-    loading,
-    resultData,
+    messages,
     setInput,
     input,
     resetContext,
@@ -52,10 +52,10 @@ const Main = () => {
     if (element && !userScrolled) {
       element.scrollTo({
         top: element.scrollHeight,
-        behavior: 'auto',
+        behavior: 'smooth',
       });
     }
-  }, [resultData, userScrolled]);
+  }, [messages, userScrolled, pendingMessage, isWaitingForResponse]);
 
   const handleScroll = () => {
     const element = scrollableSectionRef.current;
@@ -74,10 +74,16 @@ const Main = () => {
   };
 
   const handleSend = async () => {
-    await onSent();
-    setInput('');
-    if (textareaRef.current) {
-      textareaRef.current.style.height = 'auto';
+    if (input.trim() && !isWaitingForResponse) {
+      setPendingMessage(input);
+      setInput('');
+      setIsWaitingForResponse(true);
+      if (textareaRef.current) {
+        textareaRef.current.style.height = 'auto';
+      }
+      await onSent();
+      setPendingMessage(null);
+      setIsWaitingForResponse(false);
     }
   };
 
@@ -112,6 +118,37 @@ const Main = () => {
     resetError();
   };
 
+  const renderMessages = () => {
+    const allMessages = [
+      ...messages,
+      ...(pendingMessage ? [{ type: 'user', content: pendingMessage }] : []),
+    ];
+
+    return allMessages.map((message, index) => (
+      <div key={index} className={`message ${message.type}`}>
+        <div className="message-title">
+          <img
+            src={message.type === 'user' ? assets.user_icon : assets.bc_icon}
+            alt=""
+          />
+          <p>{message.type === 'user' ? message.content : ''}</p>
+        </div>
+        {message.type === 'ai' && (
+          <div className="message-data">
+            <p
+              dangerouslySetInnerHTML={{
+                __html: message.content,
+              }}
+            ></p>
+          </div>
+        )}
+        {message.type === 'ai' && index === allMessages.length - 1 && !isWaitingForResponse && (
+          <FeedbackBar />
+        )}
+      </div>
+    ));
+  };
+
   return (
     <div className="main-page">
       <Sidebar />
@@ -128,27 +165,21 @@ const Main = () => {
                 ref={scrollableSectionRef}
                 onScroll={handleScroll}
               >
-                <div className="result-title">
-                  <img src={assets.user_icon} alt="" />
-                  <p>{recentPrompt}</p>
-                </div>
-                <div className="result-data">
-                  <img src={assets.bc_icon} alt="" />
-                  {loading ? (
-                    <div className="loader">
-                      <hr className="animated-bg" />
-                      <hr className="animated-bg" />
-                      <hr className="animated-bg" />
+                {renderMessages()}
+                {isWaitingForResponse && (
+                  <div className="message ai">
+                    <div className="message-title">
+                      <img src={assets.bc_icon} alt="" />
                     </div>
-                  ) : (
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: resultData,
-                      }}
-                    ></p>
-                  )}
-                </div>
-                <FeedbackBar />
+                    <div className="message-data">
+                      <div className="loader">
+                        <hr className="animated-bg" />
+                        <hr className="animated-bg" />
+                        <hr className="animated-bg" />
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
               <ScrollButton
                 scrollableElementId="scrollable-section"
@@ -192,9 +223,10 @@ const Main = () => {
                 ref={textareaRef}
                 rows={1}
                 id="prompt-input"
+                disabled={isWaitingForResponse}
               />
               <div>
-                {input ? (
+                {input && !isWaitingForResponse ? (
                   <div className="send-button" title="Send">
                     <img
                       onClick={handleSend}
