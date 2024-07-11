@@ -1,6 +1,7 @@
 import './Welcome.scss';
 import { useContext } from 'react';
 import { Context } from '@/context/Context';
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   const context = useContext(Context);
@@ -18,6 +19,14 @@ const Welcome = () => {
         <button className="start-button" onClick={handleLogin}>
           Login
         </button>
+      </div>
+      <div className="bottom">
+        <p>
+          Learn more about our{' '}
+          <Link to="/safety" className="safety-link">
+            commitment to AI safety.
+          </Link>
+        </p>
       </div>
     </div>
   );
