@@ -27,13 +27,19 @@ jobs:
         openshift_token: ${{ secrets.OPENSHIFT_SA_DEV_TOKEN }}
         namespace: ${{ secrets.OPENSHIFT_DEV_NAMESPACE }}
 
+    # Get Generated Pod Name
+    - name: Get Pod Name
+      run: |
+        POD_NAME=$(oc get pods -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} -l role=airflow-webserver --no-headers -o custom-columns=":metadata.name")
+        echo "POD_NAME=$POD_NAME" >> $GITHUB_ENV
+
     # Push DAGs to OCP Airflow volume
     - name: Push DAGs to OCP Volume
       run: |
         # Assuming your DAGs are in a 'dags' directory
-        oc rsync ./mlops/orchestration/airflow/dags/ airflow-web-deployment:/opt/airflow/dags -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }}
+        oc rsync ./mlops/orchestration/airflow/dags/ ${{ env.POD_NAME }}:/opt/airflow/dags -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }}
 
     - name: Verify DAGs transfer
       run: |
-        oc exec airflow-web-deployment -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} -- ls -l /opt/airflow/dags
+        oc exec ${{ env.POD_NAME }} -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} -- ls -l /opt/airflow/dags
 
