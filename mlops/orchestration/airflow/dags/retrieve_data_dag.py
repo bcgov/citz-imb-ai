@@ -3,7 +3,9 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.utils.dates import days_ago
 import boto3
 import os
+from dotenv import load_dotenv
 
+load_dotenv("/vault/secrets/zuba-secret-dev")
 # Set environment variables
 S3_ACCESS_KEY = os.getenv('S3_ACCESS_KEY')
 S3_SECRET_ACCESS_KEY = os.getenv('S3_SECRET_ACCESS_KEY')
