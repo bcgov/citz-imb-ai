@@ -52,7 +52,7 @@ const Main = () => {
     if (element && !userScrolled) {
       element.scrollTo({
         top: element.scrollHeight,
-        behavior: 'smooth',
+        behavior: 'auto',
       });
     }
   }, [messages, userScrolled, pendingMessage, isWaitingForResponse]);
