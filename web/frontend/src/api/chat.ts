@@ -1,14 +1,23 @@
+interface ChatHistory {
+  prompt: string;
+  response: string;
+}
+
 const runChat = async (
   _prompt: string,
+  chatHistory: ChatHistory[]
 ): Promise<{ response: string; recordingHash: string }> => {
   try {
     const response = await fetch('/api/chat/', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
       },
-      body: `prompt=${encodeURIComponent(_prompt)}`,
+      body: JSON.stringify({
+        prompt: _prompt,
+        chatHistory: chatHistory
+      }),
     });
 
     if (!response.ok) {

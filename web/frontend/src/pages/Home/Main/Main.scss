@@ -196,33 +196,53 @@
   overflow-y: auto;
   scrollbar-color: var(--main-scrollbar-color) transparent;
   animation: fadeIn 1.1s ease-in-out;
+}
 
-  .result-title {
-    margin: 40px 0;
+.message {
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+
+  .message-title {
     display: flex;
     align-items: center;
     gap: 20px;
     color: var(--main-result-text-color);
     font-size: 18px;
-    animation: fadeIn 0.5s ease-in-out;
-  }
+    margin-bottom: 10px;
 
   img {
     width: 40px;
+    }
   }
 
-  .result-data {
+  .message-data {
     display: flex;
     align-items: start;
     min-height: 50px;
     gap: 20px;
-    animation: fadeIn 0.5s ease-in-out;
 
     p {
       font-size: 18px;
       line-height: 1.8;
       color: var(--main-result-text-color);
       margin: 0;
+    }
+  }
+
+  &.user {
+
+    .message-data {
+      background-color: var(--user-message-background-color);
+      border-radius: 20px 20px 0 20px;
+      padding: 15px;
+    }
+  }
+
+  &.ai {
+    .message-data {
+      background-color: var(--ai-message-background-color);
+      border-radius: 20px 20px 20px 0;
+      padding: 15px;
     }
   }
 }

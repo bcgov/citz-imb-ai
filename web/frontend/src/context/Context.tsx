@@ -3,6 +3,16 @@ import runChat from '@/api/chat';
 import sendFeedback from '@/api/feedback';
 import Keycloak from 'keycloak-js';
 
+interface Message {
+  type: 'user' | 'ai';
+  content: string;
+}
+
+interface ChatHistory {
+  prompt: string;
+  response: string;
+}
+
 interface ContextProps {
   prevPrompts: string[];
   setPrevPrompts: React.Dispatch<React.SetStateAction<string[]>>;
@@ -11,7 +21,7 @@ interface ContextProps {
   recentPrompt: string;
   showResult: boolean;
   loading: boolean;
-  resultData: string;
+  messages: Message[];
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
   newChat: () => void;
@@ -35,7 +45,6 @@ interface ContextProviderProps {
   children: ReactNode;
 }
 
-// Keycloak configuration
 const keycloakConfig = {
   realm: 'standard',
   url: 'https://dev.loginproxy.gov.bc.ca/auth',
@@ -52,7 +61,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [recentPrompt, setRecentPrompt] = useState<string>('');
   const [showResult, setShowResult] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-  const [resultData, setResultData] = useState<string>('');
+  const [messages, setMessages] = useState<Message[]>([]);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [generationComplete, setGenerationComplete] = useState<boolean>(false);
   const [recordingHash, setRecordingHash] = useState<string>('');
@@ -79,32 +88,52 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
 
   const delayPara = (index: number, nextWord: string, totalWords: number) => {
     setTimeout(() => {
-      setResultData((prev) => prev + nextWord);
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        const lastMessage = newMessages[newMessages.length - 1];
+        if (lastMessage && lastMessage.type === 'ai') {
+          lastMessage.content += nextWord;
+        }
+        return newMessages;
+      });
       if (index === totalWords - 1) {
         setGenerationComplete(true);
       }
     }, 15 * index);
   };
 
+  const updateSessionStorage = (prompt: string, response: string) => {
+    const chatHistory: ChatHistory[] = JSON.parse(sessionStorage.getItem('chatHistory') || '[]');
+    chatHistory.push({ prompt, response });
+    if (chatHistory.length > 4) {
+      chatHistory.shift();
+    }
+    sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+  };
+
   const onSent = async (prompt?: string) => {
     try {
-      setResultData('');
       setLoading(true);
       setShowResult(true);
       setInput('');
       setGenerationComplete(false);
       let response;
+      let currentPrompt = prompt !== undefined ? prompt : input;
+      
+      const chatHistory: ChatHistory[] = JSON.parse(sessionStorage.getItem('chatHistory') || '[]');
+      
+      response = await runChat(currentPrompt, chatHistory);
+
+      setRecordingHash(response.recordingHash);
+
       if (prompt !== undefined) {
-        response = await runChat(prompt);
         setRecentPrompt(prompt);
+        setMessages((prev) => [...prev, { type: 'user', content: prompt }]);
       } else {
         setPrevPrompts((prev) => [...prev, input]);
         setRecentPrompt(input);
-        response = await runChat(input);
+        setMessages((prev) => [...prev, { type: 'user', content: input }]);
       }
-
-      // Save the recording hash
-      setRecordingHash(response.recordingHash);
 
       let responseArray = response.response.split('**');
       let newArray = '';
@@ -116,6 +145,11 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         }
       }
       responseArray = newArray.split('*').join('</br>').split(' ');
+      
+      setMessages((prev) => [...prev, { type: 'ai', content: '' }]);
+      
+      updateSessionStorage(currentPrompt, response.response);
+
       for (let i = 0; i < responseArray.length; i++) {
         const nextWord = responseArray[i];
         delayPara(i, nextWord + ' ', responseArray.length);
@@ -134,6 +168,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setLoading(false);
     setShowResult(false);
     setInput('');
+    setMessages([]);
+    sessionStorage.removeItem('chatHistory');
   };
 
   const resetContext = () => {
@@ -142,8 +178,9 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setRecentPrompt('');
     setShowResult(false);
     setLoading(false);
-    setResultData('');
+    setMessages([]);
     setGenerationComplete(false);
+    sessionStorage.removeItem('chatHistory');
   };
 
   const refreshToken = () => {
@@ -178,6 +215,17 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     };
 
     initKeycloak();
+
+    // Clear session storage on page refresh
+    window.addEventListener('beforeunload', () => {
+      sessionStorage.removeItem('chatHistory');
+    });
+
+    return () => {
+      window.removeEventListener('beforeunload', () => {
+        sessionStorage.removeItem('chatHistory');
+      });
+    };
   }, []);
 
   const KeycloakLogin = async () => {
@@ -199,7 +247,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     recentPrompt,
     showResult,
     loading,
-    resultData,
+    messages,
     input,
     setInput,
     newChat,
