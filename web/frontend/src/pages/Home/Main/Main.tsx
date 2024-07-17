@@ -236,8 +236,11 @@ const Main = () => {
               </div>
             </div>
             <p className="bottom-info">
-              BC AI may display inaccurate info and responses may take up to 2
-              minutes. Please double-check its responses.
+              BC AI may provide inaccurate info. Responses can take up to 2
+              minutes. Please verify all outputs. Learn about our{' '}
+              <Link to="/safety" className="safety-link">
+                AI safety measures.
+              </Link>
             </p>
           </div>
         </div>

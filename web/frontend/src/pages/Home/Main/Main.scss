@@ -188,6 +188,15 @@
   text-align: center;
   font-weight: 300;
   animation: fadeIn 1s ease-in-out;
+
+  .safety-link {
+    color: var(--gradient-start);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .result {
