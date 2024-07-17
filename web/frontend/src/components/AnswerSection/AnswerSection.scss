@@ -25,10 +25,37 @@
       margin-bottom: 10px;
       font-size: 18px;
       color: var(--main-text-color);
+      display: flex;
+      align-items: center;
+
+      .chevron-icon {
+        margin-left: 8px;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+
+        &.rotated {
+          transform: rotate(180deg);
+        }
+      }
     }
 
     &.fade-in {
       opacity: 1;
+    }
+
+    .topk-container {
+      overflow: hidden;
+      transition:
+        max-height 0.5s ease,
+        opacity 0.5s ease;
+      max-height: 1000px;
+      opacity: 1;
+
+      &.hide {
+        max-height: 0;
+        opacity: 0;
+      }
     }
   }
 

@@ -33,6 +33,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 }) => {
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
   const [isAnswerComplete, setIsAnswerComplete] = useState(false);
+  const [showSources, setShowSources] = useState(true);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -98,8 +99,18 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
       </div>
       {message.topk && message.topk.length > 0 && (
         <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
-          <h3>Sources</h3>
-          <div className="topk-container">
+          <h3
+            onClick={() => setShowSources(!showSources)}
+            style={{ cursor: 'pointer' }}
+          >
+            Sources
+            <img
+              src={assets.down_arrow}
+              alt={showSources ? 'Hide sources' : 'Show sources'}
+              className={`chevron-icon ${showSources ? '' : 'rotated'}`}
+            />
+          </h3>
+          <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
             <div className="topk-cards">
               {message.topk.map((item, index) => (
                 <div
