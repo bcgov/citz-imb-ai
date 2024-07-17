@@ -170,8 +170,6 @@ const Main = () => {
                   <div className="message ai">
                     <div className="message-title">
                       <img src={assets.bc_icon} alt="" />
-                    </div>
-                    <div className="message-data">
                       <div className="loader">
                         <hr className="animated-bg" />
                         <hr className="animated-bg" />
