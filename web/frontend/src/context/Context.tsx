@@ -6,6 +6,22 @@ import Keycloak from 'keycloak-js';
 interface Message {
   type: 'user' | 'ai';
   content: string;
+  topk?: TopKItem[];
+}
+
+interface TopKItem {
+  ActId: string;
+  Regulations: string | null;
+  score: number;
+  sectionId: string;
+  sectionName: string;
+  text: string;
+  url: string | null;
+}
+
+interface ApiResponse {
+  llm: string;
+  topk: TopKItem[];
 }
 
 interface ChatHistory {
@@ -103,7 +119,9 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   };
 
   const updateSessionStorage = (prompt: string, response: string) => {
-    const chatHistory: ChatHistory[] = JSON.parse(sessionStorage.getItem('chatHistory') || '[]');
+    const chatHistory: ChatHistory[] = JSON.parse(
+      sessionStorage.getItem('chatHistory') || '[]',
+    );
     chatHistory.push({ prompt, response });
     if (chatHistory.length > 4) {
       chatHistory.shift();
@@ -117,11 +135,13 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       setShowResult(true);
       setInput('');
       setGenerationComplete(false);
-      let response;
+      let response: { response: ApiResponse; recordingHash: string };
       let currentPrompt = prompt !== undefined ? prompt : input;
-      
-      const chatHistory: ChatHistory[] = JSON.parse(sessionStorage.getItem('chatHistory') || '[]');
-      
+
+      const chatHistory: ChatHistory[] = JSON.parse(
+        sessionStorage.getItem('chatHistory') || '[]',
+      );
+
       response = await runChat(currentPrompt, chatHistory);
 
       setRecordingHash(response.recordingHash);
@@ -135,7 +155,10 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         setMessages((prev) => [...prev, { type: 'user', content: input }]);
       }
 
-      let responseArray = response.response.split('**');
+      const llmResponse = response.response.llm;
+      const topkData = response.response.topk;
+
+      let responseArray = llmResponse.split('**');
       let newArray = '';
       for (let i = 0; i < responseArray.length; i++) {
         if (i === 0 || i % 2 !== 1) {
@@ -145,19 +168,23 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         }
       }
       responseArray = newArray.split('*').join('</br>').split(' ');
-      
-      setMessages((prev) => [...prev, { type: 'ai', content: '' }]);
-      
-      updateSessionStorage(currentPrompt, response.response);
+
+      setMessages((prev) => [
+        ...prev,
+        { type: 'ai', content: '', topk: topkData },
+      ]);
+
+      updateSessionStorage(currentPrompt, JSON.stringify(response.response));
 
       for (let i = 0; i < responseArray.length; i++) {
         const nextWord = responseArray[i];
         delayPara(i, nextWord + ' ', responseArray.length);
       }
     } catch (error) {
+      console.error('Error in onSent:', error);
       setErrorState({
         hasError: true,
-        errorMessage: (error as Error).message || 'An unknown error occurred',
+        errorMessage: error instanceof Error ? error.message : 'Unknown error',
       });
     } finally {
       setLoading(false);
