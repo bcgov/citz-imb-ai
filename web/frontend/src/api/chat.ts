@@ -3,10 +3,25 @@ interface ChatHistory {
   response: string;
 }
 
+interface TopKItem {
+  ActId: string;
+  Regulations: string | null;
+  score: number;
+  sectionId: string;
+  sectionName: string;
+  text: string;
+  url: string | null;
+}
+
+interface ApiResponse {
+  llm: string;
+  topk: TopKItem[];
+}
+
 const runChat = async (
   _prompt: string,
-  chatHistory: ChatHistory[]
-): Promise<{ response: string; recordingHash: string }> => {
+  chatHistory: ChatHistory[],
+): Promise<{ response: ApiResponse; recordingHash: string }> => {
   try {
     const response = await fetch('/api/chat/', {
       method: 'POST',
@@ -16,7 +31,7 @@ const runChat = async (
       },
       body: JSON.stringify({
         prompt: _prompt,
-        chatHistory: chatHistory
+        chatHistory: chatHistory,
       }),
     });
 
@@ -25,32 +40,10 @@ const runChat = async (
     }
 
     const data = await response.json();
-    const responses = JSON.parse(data.responses);
-    let prettier = responses['llm'];
-    /* format the top k */
-    let topk = responses['topk'];
-    let topk_str = '<br><br><p><u><small>Footnotes:</small></u></p>';
-    for (let i = 0; i < topk.length; i++) {
-      topk_str += '<p><small>';
-      Object.keys(topk[i]).forEach(function (key) {
-        if (key === 'url' && topk[i][key] !== '' && topk[i][key] !== null) {
-          topk_str +=
-            key +
-            ': ' +
-            '<a target="_blank" href="' +
-            topk[i][key] +
-            '"><img src="' +
-            topk[i][key] +
-            '" width="100" height="100"></a><br>';
-        } else {
-          topk_str += key + ': ' + topk[i][key] + '<br>';
-        }
-      });
-      topk_str += '</small></p><br><hr><br>';
-    }
-    prettier += '\n\n' + topk_str;
+    const responses: ApiResponse = JSON.parse(data.responses);
+
     return {
-      response: prettier,
+      response: responses,
       recordingHash: data.recording,
     };
   } catch (error) {
