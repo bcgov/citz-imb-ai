@@ -71,7 +71,7 @@ add_subdirectory(src/regulations)
 add_subdirectory(src/utility)
 
 # Collect all source files from subdirectories
-set(SOURCES ${ACTS_SOURCES} ${REGULATIONS_SOURCES} ${UTILITY_SOURCES})
+set(SOURCES ${ACTS_SOURCES} ${REGULATIONS_SOURCES} ${UTILITY_SOURCES} ${DATA_STRUCTURE_SOURCES})
 
 # Add the main source file
 list(APPEND SOURCES src/main.c)
