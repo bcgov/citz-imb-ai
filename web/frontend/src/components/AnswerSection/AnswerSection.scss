@@ -1,24 +1,18 @@
 .answer-section {
   .message-title {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    align-items: self-start;
+    gap: 20px;
 
     img {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
+      width: 40px;
+      margin-top: 10px;
     }
   }
 
-  .message-content {
-    margin-left: 34px;
-    margin-bottom: 20px;
-  }
-
   .sources-section {
-    margin-left: 34px;
-
+    margin-left: 60px;
+    margin-bottom: 50px;
     h3 {
       margin-bottom: 10px;
       font-size: 18px;
@@ -55,7 +49,7 @@
     position: relative;
     flex: 0 0 auto;
     width: 200px;
-    height: 140px; // Increased height
+    height: 140px;
     margin-right: 15px;
     padding: 15px;
     background-color: var(--card-background-color);
@@ -64,7 +58,7 @@
     transition:
       transform 0.2s,
       background-color 0.2s;
-    overflow: hidden; // Ensure content doesn't overflow
+    overflow: hidden;
 
     &:hover {
       transform: translateY(-5px);

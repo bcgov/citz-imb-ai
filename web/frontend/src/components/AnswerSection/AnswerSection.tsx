@@ -82,9 +82,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   return (
     <div className="answer-section">
       <div className="message-title">
-        <img src={assets.bc_icon} alt="" />
-      </div>
-      <div className="message-content">
+        <img src={assets.bc_icon} alt="BC AI" />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
       {message.topk && message.topk.length > 0 && (
