@@ -54,6 +54,14 @@ if(OpenMP_FOUND)
     endif()
 endif()
 
+# Find Kafka package
+find_library(KAFKA_LIBRARIES rdkafka REQUIRED)
+if (KAFKA_LIBRARIES)
+    message(STATUS "Kafka library found: ${KAFKA_LIBRARIES}")
+else()
+    message(FATAL_ERROR "Kafka library not found")
+endif()
+
 # Include directories
 include_directories(include)
 

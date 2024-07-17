@@ -9,6 +9,7 @@ typedef struct {
     char *content;
     char *url;
     char *section_name;
+    char *section_url;
     char *section_id;
     char *reg_title;
     char *section_type;

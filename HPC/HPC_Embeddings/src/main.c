@@ -10,9 +10,10 @@
 #include "../include/memory.h"
 #include <sched.h>
 
-
-int main(int argc, char *argv[]) {
-    if (argc <= 2) {
+int main(int argc, char *argv[])
+{
+    if (argc <= 2)
+    {
         printf("Usage: %s <input_file>\n", argv[0]);
         return 1;
     }
@@ -32,27 +33,29 @@ int main(int argc, char *argv[]) {
     // Set OpenMP to use all available threads on the current node
     omp_set_num_threads(omp_get_max_threads());
 
-    #pragma omp parallel
+#pragma omp parallel
     {
         printf("Rank %d, Thread %d, running on CPU %d\n", rank, omp_get_thread_num(), sched_getcpu());
     }
-	
+
     int print_output = 0;
-    if (argc > 3) {
-	print_output = 1;
+    if (argc > 3)
+    {
+        print_output = 1;
     }
 
     printf("Hello from rank %d of %d\n", rank, size);
-    
-    if (rank == 0) {
+
+    if (rank == 0)
+    {
         process_acts(argv[1], print_output);
-    } else {
+    }
+    else
+    {
         process_regulations(argv[2], print_output);
     }
 
     printf("Completed work from rank %d of %d.\n", rank, size);
-
-
 
     MPI_Finalize();
     return 0;
