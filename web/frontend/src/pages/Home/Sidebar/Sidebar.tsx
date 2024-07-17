@@ -87,7 +87,7 @@ const Sidebar = () => {
             <>
               <p>Do you really want to log out?</p>
               <br />
-              <p>This will clear your chat history.</p>
+              <strong>This will clear your chat history.</strong>
             </>
           }
           option1={{

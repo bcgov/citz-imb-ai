@@ -4,14 +4,15 @@ import './ModalDialog.scss';
 interface ModalDialogProps {
   title: string;
   description: React.ReactNode;
-  option1: {
+  option1?: {
     text: string;
     onClick: () => void;
   };
-  option2: {
+  option2?: {
     text: string;
     onClick: () => void;
   };
+  closeOnOutsideClick?: boolean;
 }
 
 const ModalDialog: React.FC<ModalDialogProps> = ({
@@ -19,26 +20,40 @@ const ModalDialog: React.FC<ModalDialogProps> = ({
   description,
   option1,
   option2,
+  closeOnOutsideClick = false,
 }) => {
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (closeOnOutsideClick && e.target === e.currentTarget) {
+      option1?.onClick();
+    }
+  };
+
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-dialog">
         <div className="modal-header">
           <span className="modal-title">{title}</span>
         </div>
         <div className="modal-body">
-          <span className="modal-description">{description}</span>
+          <div className="modal-description">{description}</div>
         </div>
         <div className="modal-footer">
-          <button
-            className="modal-button blue-button"
-            onClick={option1.onClick}
-          >
-            {option1.text}
-          </button>
-          <button className="modal-button red-button" onClick={option2.onClick}>
-            {option2.text}
-          </button>
+          {option1 && (
+            <button
+              className="modal-button blue-button"
+              onClick={option1.onClick}
+            >
+              {option1.text}
+            </button>
+          )}
+          {option2 && (
+            <button
+              className="modal-button red-button"
+              onClick={option2.onClick}
+            >
+              {option2.text}
+            </button>
+          )}
         </div>
       </div>
     </div>

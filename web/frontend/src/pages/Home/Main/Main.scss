@@ -21,17 +21,17 @@
 }
 
 .main-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   animation: fadeIn 0.5s ease-in-out;
 }
 
 .greet {
-  font-size: 60px;
+  font-size: 64px;
   color: var(--main-secondary-text-color);
   font-weight: 600;
   padding: 20px;
-  margin: 50px 0;
+  margin: 60px 0;
   line-height: 1.1;
   letter-spacing: -1px;
   animation: fadeIn 0.5s ease-in-out;
@@ -58,15 +58,15 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
   padding: 20px;
   animation: fadeIn 0.5s ease-in-out;
 }
 
 .card {
   height: 200px;
-  padding: 15px;
+  padding: 5px 20px;
   background-color: var(--card-background-color);
   border-radius: 10px;
   position: relative;
@@ -102,7 +102,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 0 20px;
   margin: auto;
   animation: fadeIn 0.5s ease-in-out;
@@ -188,6 +188,15 @@
   text-align: center;
   font-weight: 300;
   animation: fadeIn 1s ease-in-out;
+
+  .safety-link {
+    color: var(--gradient-start);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .result {
@@ -204,14 +213,19 @@
 
   .message-title {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     color: var(--main-result-text-color);
     font-size: 18px;
-    margin-bottom: 10px;
 
-  img {
-    width: 40px;
+    img {
+      width: 40px;
+      margin-top: 10px;
+    }
+
+    p {
+      word-wrap: break-word;
+      overflow: auto;
     }
   }
 
@@ -230,7 +244,6 @@
   }
 
   &.user {
-
     .message-data {
       background-color: var(--user-message-background-color);
       border-radius: 20px 20px 0 20px;
