@@ -69,7 +69,8 @@ char *trim_and_normalize_whitespace(const char *text)
     char *dest = normalized_text;
     int in_whitespace = 0;
 
-    // AVX-512 setup
+    // AVX-512 setup 
+    // This will only work with ACSI II character
     const __m512i space_mask = _mm512_set1_epi8(' ');
     const __m512i newline_mask = _mm512_set1_epi8('\n');
     const __m512i tab_mask = _mm512_set1_epi8('\t');

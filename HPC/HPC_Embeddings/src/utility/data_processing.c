@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <time.h>
-#include "../include/file_dram.h"
 #include "../include/acts.h"
 
 void process_data(char *directory_path, int print_outputs, char *type)
