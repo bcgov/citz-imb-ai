@@ -204,14 +204,19 @@
 
   .message-title {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     color: var(--main-result-text-color);
     font-size: 18px;
-    margin-bottom: 10px;
 
-  img {
-    width: 40px;
+    img {
+      width: 40px;
+      margin-top: 10px;
+    }
+
+    p {
+      word-wrap: break-word;
+      overflow: auto;
     }
   }
 
@@ -230,7 +235,6 @@
   }
 
   &.user {
-
     .message-data {
       background-color: var(--user-message-background-color);
       border-radius: 20px 20px 0 20px;

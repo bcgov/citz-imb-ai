@@ -4,9 +4,15 @@ import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import ScrollButton from '@/components/ScrollButton/ScrollButton';
+import AnswerSection from '@/components/AnswerSection/AnswerSection';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import { Link } from 'react-router-dom';
+
+type Message = {
+  type: 'user' | 'ai';
+  content: string;
+};
 
 const Main = () => {
   const context = useContext(Context);
@@ -119,31 +125,26 @@ const Main = () => {
   };
 
   const renderMessages = () => {
-    const allMessages = [
+    const allMessages: Message[] = [
       ...messages,
-      ...(pendingMessage ? [{ type: 'user', content: pendingMessage }] : []),
+      ...(pendingMessage
+        ? [{ type: 'user' as const, content: pendingMessage }]
+        : []),
     ];
 
     return allMessages.map((message, index) => (
       <div key={index} className={`message ${message.type}`}>
-        <div className="message-title">
-          <img
-            src={message.type === 'user' ? assets.user_icon : assets.bc_icon}
-            alt=""
-          />
-          <p>{message.type === 'user' ? message.content : ''}</p>
-        </div>
-        {message.type === 'ai' && (
-          <div className="message-data">
-            <p
-              dangerouslySetInnerHTML={{
-                __html: message.content,
-              }}
-            ></p>
+        {message.type === 'user' ? (
+          <div className="message-title">
+            <img src={assets.user_icon} alt="" />
+            <p>{message.content}</p>
           </div>
-        )}
-        {message.type === 'ai' && index === allMessages.length - 1 && !isWaitingForResponse && (
-          <FeedbackBar />
+        ) : (
+          <AnswerSection
+            message={message}
+            isLastMessage={index === allMessages.length - 1}
+            isWaitingForResponse={isWaitingForResponse}
+          />
         )}
       </div>
     ));
