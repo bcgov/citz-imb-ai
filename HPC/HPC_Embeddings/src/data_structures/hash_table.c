@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
-#include "datastructures/hash_table.h"
+#include "data_structures/hash_table.h"
 
 uint32_t MurmurHash3(const char* key, uint32_t len, uint32_t seed) {
     const uint32_t c1 = 0xcc9e2d51;

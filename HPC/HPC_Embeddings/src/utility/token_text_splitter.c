@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
-#include "datastructures/hash_table.h"
+#include "data_structures/hash_table.h"
 
 // Function to check if a substring exists in the hash table
 int check_substring(HashTable *table, const char *substring) {
