@@ -48,7 +48,7 @@ class get_full_rag:
             - If the answer is not found in the context or chat history, state that you don't know.
             - Do not attempt to fabricate an answer.
 
-            Previous conversation:
+            Chat history:
             {chat_history_str}
 
             Context: 
