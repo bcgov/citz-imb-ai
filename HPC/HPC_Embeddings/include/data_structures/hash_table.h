@@ -9,3 +9,9 @@ typedef struct Entry {
 typedef struct HashTable {
     Entry **entries;
 } HashTable;
+
+
+void insert(HashTable *table, const char *key, const char *value);
+char* search(HashTable *table, const char *key);
+void delete(HashTable *table, const char *key);
+
