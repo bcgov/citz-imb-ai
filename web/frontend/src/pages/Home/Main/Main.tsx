@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState, useContext } from 'react';
 import './Main.scss';
 import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import ModalDialog from '@/components/Modal/ModalDialog';
-import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import ScrollButton from '@/components/ScrollButton/ScrollButton';
 import AnswerSection from '@/components/AnswerSection/AnswerSection';
 import { assets } from '@/assets/icons/assets';
@@ -143,7 +142,7 @@ const Main = () => {
           <AnswerSection
             message={message}
             isLastMessage={index === allMessages.length - 1}
-            isWaitingForResponse={isWaitingForResponse}
+            generationComplete={generationComplete}
           />
         )}
       </div>
