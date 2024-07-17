@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './AnswerSection.scss';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
@@ -23,15 +23,26 @@ interface Message {
 interface AnswerSectionProps {
   message: Message;
   isLastMessage: boolean;
-  isWaitingForResponse: boolean;
+  generationComplete: boolean;
 }
 
 const AnswerSection: React.FC<AnswerSectionProps> = ({
   message,
   isLastMessage,
-  isWaitingForResponse,
+  generationComplete,
 }) => {
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
+  const [isAnswerComplete, setIsAnswerComplete] = useState(false);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (generationComplete) {
+      timer = setTimeout(() => {
+        setIsAnswerComplete(true);
+      }, 500);
+    }
+    return () => clearTimeout(timer);
+  }, [generationComplete]);
 
   const handleCardClick = (item: TopKItem) => {
     setSelectedItem(item);
@@ -86,7 +97,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
       {message.topk && message.topk.length > 0 && (
-        <div className="sources-section">
+        <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
           <h3>Sources</h3>
           <div className="topk-container">
             <div className="topk-cards">
@@ -107,7 +118,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
           </div>
         </div>
       )}
-      {isLastMessage && !isWaitingForResponse && <FeedbackBar />}
+      {isLastMessage && generationComplete && <FeedbackBar />}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}
