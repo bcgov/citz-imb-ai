@@ -9,14 +9,28 @@
 #include "../include/regulations.h"
 #include "../include/memory.h"
 #include <sched.h>
+#include "data_structures/hash_table.h"
+
 
 int main(int argc, char *argv[])
 {
-    if (argc <= 2)
+    if (argc <= 3)
     {
         printf("Usage: %s <input_file>\n", argv[0]);
         return 1;
     }
+
+    // Load the file
+    char *file_path = argv[1];
+    FILE *file = fopen(file_path, "r");
+    if (!file)
+    {
+        perror("Could not open file");
+        return 1;
+    }
+
+    //process the file and load in hash table
+    HashTable *table = load_tokens_and_store(file_path);
 
     int rank, size;
     MPI_Init(&argc, &argv);
@@ -48,15 +62,17 @@ int main(int argc, char *argv[])
 
     if (rank == 0)
     {
-        process_acts(argv[1], print_output);
+        process_acts(argv[2], print_output);
     }
     else
     {
-        process_regulations(argv[2], print_output);
+        process_regulations(argv[3], print_output);
     }
 
     printf("Completed work from rank %d of %d.\n", rank, size);
 
     MPI_Finalize();
+    // Free the hash table
+    free_table(table);
     return 0;
 }

@@ -1,7 +1,9 @@
 #include "../include/acts.h"
 #include <sched.h>
+#include "data_structures/hash_table.h"
+#include "token_text_splitter.h"
 
-void process_acts(char *directory_path, int print_outputs)
+void process_acts(char *directory_path, int print_outputs, HashTable *table, const char *text)
 {
     printf("Processing acts from %s\n", directory_path);
     if (!directory_path)
@@ -31,6 +33,7 @@ void process_acts(char *directory_path, int print_outputs)
                     // Process recursive text splitting per section
                     if (sections[j].content)
                     {
+                        token_text_splitter(table, text);
                         // replace with tokentextsplitter
                     }
                 }
