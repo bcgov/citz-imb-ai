@@ -2,7 +2,7 @@
 # Use the official Node.js image based on Alpine Linux for the build stage
 FROM node:22.0.0-alpine as build_stage
 
-# Set the working directory inside the container to /app
+# Set the work directory inside the container to /app
 WORKDIR /app
 
 # Copy additional HTML files to the build output directory
