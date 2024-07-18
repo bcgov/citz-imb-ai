@@ -9,5 +9,6 @@
 #include "xml_parser.h"
 #include "text_splitter.h"
 #include "memory.h"
+#include "data_structures/hash_table.h"
 
-void process_acts(char *directory_path, int print_ooutputs);
+void process_acts(char *directory_path, int print_outputs, HashTable *table);

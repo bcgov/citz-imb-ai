@@ -54,11 +54,10 @@ uint32_t MurmurHash3(const char* key, uint32_t len, uint32_t seed) {
     return hash;
 }
 
-
-
-
+// Function to create a hash table with a specified size
 HashTable* create_table(size_t size) {
     HashTable *table = malloc(sizeof(HashTable));
+    table->size = size;
     table->entries = malloc(sizeof(Entry*) * size);
     for (size_t i = 0; i < size; i++) {
         table->entries[i] = NULL;
@@ -80,8 +79,8 @@ void free_entry(Entry *entry) {
     free(entry);
 }
 
-void free_table(HashTable *table, size_t size) {
-    for (size_t i = 0; i < size; i++) {
+void free_table(HashTable *table) {
+    for (size_t i = 0; i < table->size; i++) {
         Entry *entry = table->entries[i];
         while (entry != NULL) {
             Entry *temp = entry;
@@ -98,7 +97,7 @@ uint32_t hash_function(const char *key) {
 }
 
 void insert(HashTable *table, const char *key, const char *value) {
-    uint32_t slot = hash_function(key) % TABLE_SIZE;
+    uint32_t slot = hash_function(key) % table->size;
     Entry *entry = table->entries[slot];
     if (entry == NULL) {
         table->entries[slot] = create_entry(key, value);
@@ -118,7 +117,7 @@ void insert(HashTable *table, const char *key, const char *value) {
 }
 
 char* search(HashTable *table, const char *key) {
-    uint32_t slot = hash_function(key) % TABLE_SIZE;
+    uint32_t slot = hash_function(key) % table->size;
     Entry *entry = table->entries[slot];
     while (entry != NULL) {
         if (strcmp(entry->key, key) == 0) {
@@ -130,7 +129,7 @@ char* search(HashTable *table, const char *key) {
 }
 
 void delete(HashTable *table, const char *key) {
-    uint32_t slot = hash_function(key) % TABLE_SIZE;
+    uint32_t slot = hash_function(key) % table->size;
     Entry *entry = table->entries[slot];
     Entry *prev = NULL;
     while (entry != NULL) {

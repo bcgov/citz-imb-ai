@@ -10,7 +10,7 @@
 #include "../include/memory.h"
 #include <sched.h>
 #include "data_structures/hash_table.h"
-
+#include "load_tokens.h"
 
 int main(int argc, char *argv[])
 {
@@ -20,17 +20,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Load the file
-    char *file_path = argv[1];
-    FILE *file = fopen(file_path, "r");
-    if (!file)
-    {
-        perror("Could not open file");
-        return 1;
-    }
-
-    //process the file and load in hash table
-    HashTable *table = load_tokens_and_store(file_path);
 
     int rank, size;
     MPI_Init(&argc, &argv);
@@ -47,6 +36,27 @@ int main(int argc, char *argv[])
     // Set OpenMP to use all available threads on the current node
     omp_set_num_threads(omp_get_max_threads());
 
+    // Load the file
+    char *file_path = argv[1];
+    printf("the file path is %s \n", file_path);	
+    FILE *file = fopen(file_path, "r");
+    if (!file)
+    {
+        perror("Could not open file");
+        return 1;
+    } else {
+	printf("file is opened properly");
+    }
+	
+
+    //process the file and load in hash table
+    HashTable *table = load_tokens_and_store(file_path);
+    if (!table) {
+	printf("Hash table is not able to initialzie");
+ 	fclose(file);
+	return 0;
+    }
+
 #pragma omp parallel
     {
         printf("Rank %d, Thread %d, running on CPU %d\n", rank, omp_get_thread_num(), sched_getcpu());
@@ -62,11 +72,11 @@ int main(int argc, char *argv[])
 
     if (rank == 0)
     {
-        process_acts(argv[2], print_output);
+        process_acts(argv[2], print_output, table);
     }
     else
     {
-        process_regulations(argv[3], print_output);
+        process_regulations(argv[3], print_output, table);
     }
 
     printf("Completed work from rank %d of %d.\n", rank, size);
@@ -74,5 +84,6 @@ int main(int argc, char *argv[])
     MPI_Finalize();
     // Free the hash table
     free_table(table);
+    fclose(file);
     return 0;
 }
