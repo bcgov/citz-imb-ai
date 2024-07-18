@@ -4,7 +4,7 @@
 ## Stage 1: Build the project
 FROM node:18.17.1-bullseye-slim as base
 
-# Set the working directory to /app
+# Set the work directory to /app
 WORKDIR /app
 
 # Copy source files
