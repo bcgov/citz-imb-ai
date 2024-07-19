@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
+#include <immintrin.h>
 #include "data_structures/hash_table.h"
 
 uint32_t MurmurHash3(const char* key, uint32_t len, uint32_t seed) {
@@ -116,11 +117,62 @@ void insert(HashTable *table, const char *key, const char *value) {
     }
 }
 
-char* search(HashTable *table, const char *key) {
+char* search22(HashTable *table, const char *key) {
     uint32_t slot = hash_function(key) % table->size;
     Entry *entry = table->entries[slot];
     while (entry != NULL) {
         if (strcmp(entry->key, key) == 0) {
+            return entry->value;
+        }
+        entry = entry->next;
+    }
+    return NULL;
+}
+
+
+// SIMD-optimized string comparison using AVX-512
+static inline int simd_strcmp(const char *s1, const char *s2) {
+    size_t len1 = strlen(s1);
+    size_t len2 = strlen(s2);
+
+    // Fallback to regular strcmp for short strings
+    if (len1 < 64 || len2 < 64) {
+        return strcmp(s1, s2);
+    }
+
+    while (1) {
+        __m512i chunk1 = _mm512_loadu_si512((const __m512i *)s1);
+        __m512i chunk2 = _mm512_loadu_si512((const __m512i *)s2);
+
+        __mmask64 cmp_mask = _mm512_cmpeq_epi8_mask(chunk1, chunk2);
+        
+        if (cmp_mask != 0xFFFFFFFFFFFFFFFF) { // Not all bytes are equal
+            int first_diff = __builtin_ctzll(~cmp_mask);
+            return (unsigned char)s1[first_diff] - (unsigned char)s2[first_diff];
+        }
+
+        // Check if we hit a null character in s1 or s2
+        __mmask64 null_mask1 = _mm512_test_epi8_mask(chunk1, _mm512_set1_epi8('\0'));
+        __mmask64 null_mask2 = _mm512_test_epi8_mask(chunk2, _mm512_set1_epi8('\0'));
+        if (null_mask1 || null_mask2) {
+            // If both strings are equal up to their lengths, we consider them equal
+            if (len1 == len2) {
+                return 0;
+            } else {
+                return (len1 < len2) ? -1 : 1;
+            }
+        }
+
+        s1 += 64;
+        s2 += 64;
+    }
+}
+
+char* search(HashTable *table, const char *key) {
+    uint32_t slot = hash_function(key) % table->size;
+    Entry *entry = table->entries[slot];
+    while (entry != NULL) {
+        if (simd_strcmp(entry->key, key) == 0) {
             return entry->value;
         }
         entry = entry->next;

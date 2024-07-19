@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
+//    omp_set_stacksize(512 * 1024 * 1024); // 512 MB
 
     // Assume 2 sockets: rank 0 uses socket 0, rank 1 uses socket 1
     int socket = rank % 2;
