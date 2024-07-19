@@ -1,6 +1,8 @@
 #include "../include/acts.h"
+#include "../include/token_text_splitter.h"
+#include "../include/memory_pool.h"
 
-void process_regulations(char *directory_path, int print_outputs)
+void process_regulations(char *directory_path, int print_outputs, HashTable *table)
 {
     printf("Processing regulations from %s\n", directory_path);
     if (!directory_path)
@@ -14,7 +16,8 @@ void process_regulations(char *directory_path, int print_outputs)
     init_dram_data(directory_path, &dir_info);
     printf("Directory info initialized. Number of files: %zu\n", dir_info.num_files);
 
-#pragma omp parallel for schedule(dynamic, 1)
+    MemoryPool *pool = create_pool(POOL_SIZE);
+//#pragma omp parallel for schedule(dynamic, 1)
     for (size_t i = 0; i < dir_info.num_files; i++)
     {
         printf("File name or act: %s\n", dir_info.files[i].filename);
@@ -26,19 +29,16 @@ void process_regulations(char *directory_path, int print_outputs)
         {
             for (int j = 0; j < num_sections; j++)
             {
-                if (sections[j].title)
+                if (sections[j].title && sections[j].content)
                 {
-                    // Process recursive text splitting per section
-                    if (sections[j].content)
-                    {
-                        // replace with tokentextsplitter
-                    }
+                        token_text_splitter(table, sections[j].content, pool);
+			// replace with tokentextsplitter
                 }
             }
             free_sections(sections, num_sections);
         }
     }
-
+    destroy_pool(pool);
     xmlCleanupParser();
     // Free all the memory
     free_dram_data(&dir_info);

@@ -69,9 +69,10 @@ include_directories(include)
 add_subdirectory(src/acts)
 add_subdirectory(src/regulations)
 add_subdirectory(src/utility)
+add_subdirectory(src/data_structures)
 
 # Collect all source files from subdirectories
-set(SOURCES ${ACTS_SOURCES} ${REGULATIONS_SOURCES} ${UTILITY_SOURCES})
+set(SOURCES ${ACTS_SOURCES} ${REGULATIONS_SOURCES} ${UTILITY_SOURCES} ${DATA_STRUCTURE_SOURCES})
 
 # Add the main source file
 list(APPEND SOURCES src/main.c)
