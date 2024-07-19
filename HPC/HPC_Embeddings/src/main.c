@@ -73,11 +73,11 @@ int main(int argc, char *argv[])
 
     if (rank == 0)
     {
-        process_acts(argv[2], print_output, table);
+        process_acts_reg(argv[2], print_output, table, 0);
     }
     else
     {
-        process_regulations(argv[3], print_output, table);
+        process_acts_reg(argv[3], print_output, table, 1);
     }
 
     printf("Completed work from rank %d of %d.\n", rank, size);
