@@ -66,8 +66,7 @@ endif()
 include_directories(include)
 
 # Add source directories
-add_subdirectory(src/acts)
-add_subdirectory(src/regulations)
+add_subdirectory(src/process_acts_reg)
 add_subdirectory(src/utility)
 add_subdirectory(src/data_structures)
 

@@ -123,17 +123,25 @@ services:
   airflow_scheduler:
     container_name: airflow_scheduler
     image: apache/airflow:2.3.3
+    build:
+      context: ../mlops/orchestration/airflow
+      dockerfile: Dockerfile.local
     depends_on:
       - airflow_postgres
       - airflow_init
     environment:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_postgres/airflow
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      NEO4J_USERNAME: ${NEO4J_USERNAME:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
+      NEO4J_DB: ${NEO4J_DB:-neo4j}
+      NEO4J_PORT: ${NEO4J_PORT:-7687}
+      NEO4J_HOST: neo4j
     volumes:
       - ../mlops/orchestration/airflow/dags:/opt/airflow/dags
       - ../mlops/orchestration/airflow/logs:/opt/airflow/logs
       - ../mlops/orchestration/airflow/plugins:/opt/airflow/plugins
-    command: "scheduler"
+    #command: "scheduler"
     networks:
       - zuba
 
@@ -146,6 +154,7 @@ services:
     build:
       context: ../mlops/orchestration/airflow
       dockerfile: Dockerfile.webserver
+  
 
   ############################ End of AIRFLOW ##################################
 
@@ -177,14 +186,15 @@ services:
   ######################## NEO4J ###############################################
   neo4j:
     container_name: citz-imb-ai-neo4j-svc
-    image: neo4j:5.18.1
+    image: neo4j:latest
     restart: unless-stopped
     environment:
       - USERNAME=${NEO4J_USERNAME:-neo4j}
       - PASSWORD=${NEO4J_PASSWORD:-12345678}
       - DB=${NEO4J_DB:-bclaws}
       - NEO4J_AUTH=none
-      - NEO4JLABS_PLUGINS=["apoc"]
+      - NEO4JLABS_PLUGINS=["apoc", "graph-data-science"]
+      - NEO4J_PLUGINS=["apoc", "graph-data-science"]
     volumes:
       - neo4j:/var/lib/neo4j/data
       - neo4j-backup:/var/lib/neo4j/backups

@@ -11,4 +11,4 @@
 #include "memory.h"
 #include "data_structures/hash_table.h"
 
-void process_acts(char *directory_path, int print_outputs, HashTable *table);
+void process_acts_regs(char *directory_path, int print_outputs, HashTable *table, bool act_reg);

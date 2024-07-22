@@ -1,3 +1,4 @@
+
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.utils.dates import days_ago
@@ -60,6 +61,9 @@ def download_bclaws_regulations():
 def download_bclaws_glossary():
     download_data("bclaws/glossary", "JSON_glossary/", bucket_name)
 
+def download_ticket_graphicdata():
+    download_data("bclaws/data_v2/OCR/", "JSON_graphicdata/", bucket_name)
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -92,4 +96,9 @@ with DAG(
         python_callable=download_bclaws_glossary,
     )
 
-    task_download_acts >> task_download_regulations >> task_download_glossary
+    task_download_graphicdata = PythonOperator(
+        task_id='download_ticket_graphicdata',
+        python_callable=download_ticket_graphicdata,
+    )
+
+    task_download_acts >> task_download_regulations >> task_download_glossary >> task_download_graphicdata
