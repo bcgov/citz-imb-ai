@@ -89,7 +89,7 @@ services:
 
   airflow_init:
     container_name: airflow_init
-    image: apache/airflow:2.9.2
+    image: apache/airflow:2.9.3
     depends_on:
       - airflow_postgres
     environment:
