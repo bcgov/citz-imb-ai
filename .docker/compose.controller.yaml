@@ -89,7 +89,7 @@ services:
 
   airflow_init:
     container_name: airflow_init
-    image: apache/airflow:2.3.3
+    image: apache/airflow:2.9.3
     depends_on:
       - airflow_postgres
     environment:
@@ -100,32 +100,34 @@ services:
       airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
     networks:
       - zuba
-
+    
   airflow_webserver:
+    build:
+      context: ../mlops/orchestration/airflow
+      dockerfile: .docker/local/Dockerfile.webserver
     container_name: airflow_webserver
-    image: apache/airflow:2.3.3
     depends_on:
       - airflow_postgres
       - airflow_init
-    ports:
-      - "13000:8080"
     environment:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_postgres/airflow
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    ports:
+      - "13000:8080"
     volumes:
       - ../mlops/orchestration/airflow/dags:/opt/airflow/dags
       - ../mlops/orchestration/airflow/logs:/opt/airflow/logs
       - ../mlops/orchestration/airflow/plugins:/opt/airflow/plugins
-    command: "webserver"
+      - ../mlops/orchestration/airflow/scripts:/opt/airflow/scripts
+      - ../mlops/orchestration/airflow/data:/opt/airflow/data
     networks:
       - zuba
 
   airflow_scheduler:
-    container_name: airflow_scheduler
-    image: apache/airflow:2.3.3
     build:
       context: ../mlops/orchestration/airflow
-      dockerfile: Dockerfile.local
+      dockerfile: .docker/local/Dockerfile.scheduler
+    container_name: airflow_scheduler
     depends_on:
       - airflow_postgres
       - airflow_init
@@ -141,18 +143,19 @@ services:
       - ../mlops/orchestration/airflow/dags:/opt/airflow/dags
       - ../mlops/orchestration/airflow/logs:/opt/airflow/logs
       - ../mlops/orchestration/airflow/plugins:/opt/airflow/plugins
-    #command: "scheduler"
+      - ../mlops/orchestration/airflow/scripts:/opt/airflow/scripts
+      - ../mlops/orchestration/airflow/data:/opt/airflow/data
     networks:
       - zuba
 
   ocp_airflow_scheduler:
     build:
-      context: ../mlops/orchestration/airflow
+      context: ../mlops/orchestration/airflow/.docker/ocp
       dockerfile: Dockerfile.scheduler
 
   ocp_airflow_webserver:
     build:
-      context: ../mlops/orchestration/airflow
+      context: ../mlops/orchestration/airflow/.docker/ocp
       dockerfile: Dockerfile.webserver
   
 
@@ -260,20 +263,20 @@ services:
 
   ########################## trulens ############################
   trulens_dashboard:
-      container_name: citz-imb-ai-trulens-dashboard-svc
-      build:
-        context: ../web/trulens-dashboard
-        dockerfile: Dockerfile
-      environment:
-        TRULENS_USER: ${TRULENS_USER:-postgres}
-        TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
-        TRULENS_DB: ${TRULENS_DB:-postgres}
-        TRULENS_PORT: ${TRULENS_PORT:-5432}
-        TRULENS_HOST: trulens
-      ports:
-        - "14000:14000"
-      networks:
-        - zuba
+    container_name: citz-imb-ai-trulens-dashboard-svc
+    build:
+      context: ../web/trulens-dashboard
+      dockerfile: Dockerfile
+    environment:
+      TRULENS_USER: ${TRULENS_USER:-postgres}
+      TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
+      TRULENS_DB: ${TRULENS_DB:-postgres}
+      TRULENS_PORT: ${TRULENS_PORT:-5432}
+      TRULENS_HOST: trulens
+    ports:
+      - "14000:14000"
+    networks:
+      - zuba
 
   ######################## End of trulens #####################################
 
