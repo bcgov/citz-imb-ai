@@ -5,8 +5,7 @@
 #include <time.h>
 #include <omp.h>
 #include <mpi.h>
-#include "../include/acts.h"
-#include "../include/regulations.h"
+#include "../include/acts_reg.h"
 #include "../include/memory.h"
 #include <sched.h>
 #include "data_structures/hash_table.h"
@@ -65,7 +64,7 @@ int main(int argc, char *argv[])
 
     int print_output = 0;
     if (argc > 3)
-    {
+    {    
         print_output = 1;
     }
 

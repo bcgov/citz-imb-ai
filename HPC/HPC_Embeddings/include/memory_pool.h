@@ -7,7 +7,7 @@
 #include <pthread.h>
 #include <omp.h>
 
-#define POOL_SIZE 1024 * 1024 * 1024 // 1 MB memory pool
+#define POOL_SIZE 1024 * 1024 * 1024 // 1 GB memory pool
 
 typedef struct MemoryPool {
     char *pool;
