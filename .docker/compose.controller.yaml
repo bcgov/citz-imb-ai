@@ -100,7 +100,7 @@ services:
       airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
     networks:
       - zuba
-    
+
   airflow_webserver:
     build:
       context: ../mlops/orchestration/airflow
@@ -150,14 +150,13 @@ services:
 
   ocp_airflow_scheduler:
     build:
-      context: ../mlops/orchestration/airflow/.docker/ocp
-      dockerfile: Dockerfile.scheduler
+      context: ../mlops/orchestration/airflow
+      dockerfile: .docker/ocp/Dockerfile.scheduler
 
   ocp_airflow_webserver:
     build:
-      context: ../mlops/orchestration/airflow/.docker/ocp
-      dockerfile: Dockerfile.webserver
-  
+      context: ../mlops/orchestration/airflow
+      dockerfile: .docker/ocp/Dockerfile.webserver
 
   ############################ End of AIRFLOW ##################################
 
