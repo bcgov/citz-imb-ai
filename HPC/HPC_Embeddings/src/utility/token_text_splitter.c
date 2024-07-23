@@ -22,29 +22,56 @@ void to_lowercase(char *str) {
     }
 }
 
+/**
+ * Converts all uppercase characters in the input string to lowercase using AVX-512 instructions.
+ * The function processes the input string in chunks of 64 bytes for efficient SIMD operations.
+ *
+ * @param str The input string to be converted to lowercase.
+ * @return The input string with all uppercase characters converted to lowercase.
+ */
 char *to_lowercase_avx512(char *str) {
-    size_t len = strlen(str);
-    size_t i = 0;
-    __m512i mask_uppercase = _mm512_set1_epi8(0x20); // Mask to convert uppercase to lowercase
+    size_t len = strlen(str); // Get the length of the input string
+    size_t i = 0; // Initialize index to traverse the string
+
+    // Create a 512-bit mask with each byte set to 0x20 (32 in decimal)
+    // This is used to convert uppercase letters to lowercase by adding 32 to their ASCII values
+    __m512i mask_uppercase = _mm512_set1_epi8(0x20);
+
+    // Create 512-bit vectors with each byte set to 'A' (65) and 'Z' (90) respectively
+    // These are used to identify uppercase letters within the range 'A' to 'Z'
     __m512i lower_limit = _mm512_set1_epi8('A');
     __m512i upper_limit = _mm512_set1_epi8('Z');
 
+    // Process the string in chunks of 64 bytes
     while (i + 64 <= len) {
+        // Load 64 bytes of the string into an AVX-512 register
         __m512i chunk = _mm512_loadu_si512((__m512i *)(str + i));
+
+        // Create a mask where each bit is set if the corresponding byte is less than or equal to 'Z'
         __mmask64 mask = _mm512_cmplt_epu8_mask(chunk, upper_limit);
+
+        // Update the mask to only include bytes that are greater than or equal to 'A'
         mask &= _mm512_cmpge_epu8_mask(chunk, lower_limit);
+
+        // Conditionally add 32 to bytes that are uppercase letters to convert them to lowercase
         __m512i result = _mm512_mask_add_epi8(chunk, mask, chunk, mask_uppercase);
+
+        // Store the result back into the string
         _mm512_storeu_si512((__m512i *)(str + i), result);
+
+        // Move to the next 64-byte chunk
         i += 64;
     }
 
-    // Handle remaining characters
+    // Handle any remaining characters that were not processed in the 64-byte chunks
     for (; i < len; i++) {
+        // Convert individual uppercase characters to lowercase
         if (str[i] >= 'A' && str[i] <= 'Z') {
             str[i] = str[i] + 32;
         }
     }
 
+    // Return the modified string
     return str;
 }
 
