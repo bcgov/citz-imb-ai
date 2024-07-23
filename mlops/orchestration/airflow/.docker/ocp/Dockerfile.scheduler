@@ -3,20 +3,16 @@ FROM apache/airflow:2.9.3
 ENV HOME=/home/airflow
 ENV AIRFLOW_HOME=/home/airflow
 
-
-USER root
 # Install any scheduler-specific system dependencies if needed
 # RUN apt-get update && apt-get install -y <scheduler-specific-packages>
 
 USER airflow
 
 # Copy requirements.txt
-COPY --chown=airflow:root requirements.txt /opt/airflow/requirements.txt
+COPY ../requirements.txt /opt/airflow/requirements.txt
 
 # Install Python packages from requirements.txt
-RUN pip install --upgrade pip
-
-RUN pip install --no-cache-dir -r /opt/airflow/requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r /opt/airflow/requirements.txt
 
 # Set the working directory
 WORKDIR /opt/airflow

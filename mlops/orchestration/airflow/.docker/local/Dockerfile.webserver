@@ -1,13 +1,12 @@
 FROM apache/airflow:2.9.3
 
-USER root
 # Install any webserver-specific system dependencies if needed
 # RUN apt-get update && apt-get install -y <webserver-specific-packages>
 
 USER airflow
 
 # Copy requirements.txt
-COPY --chown=airflow:root requirements.txt /opt/airflow/requirements.txt
+COPY ../requirements.txt /opt/airflow/requirements.txt
 
 # Install Python packages from requirements.txt
 RUN pip install --no-cache-dir -r /opt/airflow/requirements.txt
