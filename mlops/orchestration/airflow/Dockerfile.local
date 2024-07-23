@@ -11,7 +11,7 @@ RUN pip install --upgrade pip
 RUN pip install apache-airflow && pip install psycopg2-binary
 #RUN pip install dotenv
 # Copy requirements definition to container
-COPY ./requirements.txt /dags/requirements.txt
+COPY ./dags/requirements.txt /dags/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /dags/requirements.txt
 
 CMD ["airflow", "scheduler"]
