@@ -6,7 +6,7 @@ FROM apache/airflow:2.9.3
 USER airflow
 
 # Copy requirements.txt
-COPY ../requirements.txt /opt/airflow/requirements.txt
+COPY requirements.txt /opt/airflow/requirements.txt
 
 # Install Python packages from requirements.txt
 RUN pip install --no-cache-dir -r /opt/airflow/requirements.txt
