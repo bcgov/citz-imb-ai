@@ -141,12 +141,16 @@ static inline int simd_strcmp(const char *s1, const char *s2) {
     }
 
     while (1) {
+	 // Load 64 bytes from each string into AVX-512 registers
         __m512i chunk1 = _mm512_loadu_si512((const __m512i *)s1);
         __m512i chunk2 = _mm512_loadu_si512((const __m512i *)s2);
 
+	// Compare the chunks byte by byte
         __mmask64 cmp_mask = _mm512_cmpeq_epi8_mask(chunk1, chunk2);
-        
+
+	// Check if all bytes are equal
         if (cmp_mask != 0xFFFFFFFFFFFFFFFF) { // Not all bytes are equal
+	    // Find the first differing byte
             int first_diff = __builtin_ctzll(~cmp_mask);
             return (unsigned char)s1[first_diff] - (unsigned char)s2[first_diff];
         }
@@ -154,6 +158,7 @@ static inline int simd_strcmp(const char *s1, const char *s2) {
         // Check if we hit a null character in s1 or s2
         __mmask64 null_mask1 = _mm512_test_epi8_mask(chunk1, _mm512_set1_epi8('\0'));
         __mmask64 null_mask2 = _mm512_test_epi8_mask(chunk2, _mm512_set1_epi8('\0'));
+	// If both strings are equal up to their lengths, we consider them equal
         if (null_mask1 || null_mask2) {
             // If both strings are equal up to their lengths, we consider them equal
             if (len1 == len2) {
@@ -162,7 +167,7 @@ static inline int simd_strcmp(const char *s1, const char *s2) {
                 return (len1 < len2) ? -1 : 1;
             }
         }
-
+	// Advance the pointers by 64 bytes for the next iteration
         s1 += 64;
         s2 += 64;
     }

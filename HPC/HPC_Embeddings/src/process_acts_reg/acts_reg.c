@@ -1,4 +1,4 @@
-#include "../include/acts.h"
+#include "../include/acts_reg.h"
 #include <sched.h>
 #include "token_text_splitter.h"
 #include "memory_pool.h"
