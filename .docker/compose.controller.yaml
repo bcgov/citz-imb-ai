@@ -100,7 +100,7 @@ services:
       airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
     networks:
       - zuba
-    
+
   airflow_webserver:
     build:
       context: ../mlops/orchestration/airflow
@@ -157,7 +157,6 @@ services:
     build:
       context: ../mlops/orchestration/airflow/.docker/ocp
       dockerfile: Dockerfile.webserver
-  
 
   ############################ End of AIRFLOW ##################################
 
@@ -263,20 +262,20 @@ services:
 
   ########################## trulens ############################
   trulens_dashboard:
-      container_name: citz-imb-ai-trulens-dashboard-svc
-      build:
-        context: ../web/trulens-dashboard
-        dockerfile: Dockerfile
-      environment:
-        TRULENS_USER: ${TRULENS_USER:-postgres}
-        TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
-        TRULENS_DB: ${TRULENS_DB:-postgres}
-        TRULENS_PORT: ${TRULENS_PORT:-5432}
-        TRULENS_HOST: trulens
-      ports:
-        - "14000:14000"
-      networks:
-        - zuba
+    container_name: citz-imb-ai-trulens-dashboard-svc
+    build:
+      context: ../web/trulens-dashboard
+      dockerfile: Dockerfile
+    environment:
+      TRULENS_USER: ${TRULENS_USER:-postgres}
+      TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
+      TRULENS_DB: ${TRULENS_DB:-postgres}
+      TRULENS_PORT: ${TRULENS_PORT:-5432}
+      TRULENS_HOST: trulens
+    ports:
+      - "14000:14000"
+    networks:
+      - zuba
 
   ######################## End of trulens #####################################
 
