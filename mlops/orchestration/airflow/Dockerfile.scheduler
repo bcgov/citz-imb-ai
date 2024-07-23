@@ -9,9 +9,20 @@ USER airflow
 RUN pip install --upgrade pip
 
 RUN pip install apache-airflow && pip install psycopg2-binary
+RUN pip install pydantic llama-index llama-index-core neo4j jinja2==3.0.3
+RUN pip install python-multipart langchain==0.1.14 langchain_community==0.0.31
+RUN pip install sentence-transformers
+RUN pip install python-multipart \
+python-keycloak \
+pytest \
+httpx \ 
+boto3 
+
+#langchain
+#langchain_community
 
 # Copy requirements definition to container
-COPY ./requirements.txt /opt/airflow/dags/requirements.txt
-RUN pip install --no-cache-dir --upgrade -r /opt/airflow/dags/requirements.txt
+#COPY ./requirements.txt /opt/airflow/dags/requirements.txt
+#RUN pip install --no-cache-dir --upgrade -r /opt/airflow/dags/requirements.txt
 
 CMD ["airflow", "scheduler"]
