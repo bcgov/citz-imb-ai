@@ -17,12 +17,13 @@ dag = DAG(
     default_args=default_args,
     description='A simple DAG to install requirements from requirements.txt',
     schedule_interval='@once',
+    tags=['requirements'],
 )
 
 # Define the task to install requirements
 install_requirements = BashOperator(
     task_id='install_requirements',
-    bash_command='pip install -r requirements.txt',
+    bash_command='pip install -r /opt/airflow/dags/requirements.txt',
     dag=dag,
 )
 
