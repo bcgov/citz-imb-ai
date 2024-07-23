@@ -283,6 +283,7 @@ with DAG(
     schedule_interval="@weekly",
     start_date=days_ago(1),
     catchup=False,
+    tags=["bclaws", "graphicdata", "indexing"],
 ) as dag:
 
     task_index_ticket_graphicdata = PythonOperator(

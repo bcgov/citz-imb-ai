@@ -79,6 +79,7 @@ with DAG(
     schedule_interval='@daily',
     start_date=days_ago(1),
     catchup=False,
+    tags=['bclaws', 's3'],
 ) as dag:
 
     task_download_acts = PythonOperator(
