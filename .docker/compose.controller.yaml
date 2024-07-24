@@ -104,7 +104,7 @@ services:
   airflow_webserver:
     build:
       context: ../mlops/orchestration/airflow
-      dockerfile: .docker/local/Dockerfile.webserver
+      dockerfile: .docker/local/Dockerfile.local
     container_name: airflow_webserver
     depends_on:
       - airflow_postgres
@@ -122,11 +122,12 @@ services:
       - ../mlops/orchestration/airflow/data:/opt/airflow/data
     networks:
       - zuba
+    command: ["airflow", "webserver"]
 
   airflow_scheduler:
     build:
       context: ../mlops/orchestration/airflow
-      dockerfile: .docker/local/Dockerfile.scheduler
+      dockerfile: .docker/local/Dockerfile.local
     container_name: airflow_scheduler
     depends_on:
       - airflow_postgres
@@ -147,16 +148,19 @@ services:
       - ../mlops/orchestration/airflow/data:/opt/airflow/data
     networks:
       - zuba
+    command: ["airflow", "scheduler"]
 
   ocp_airflow_scheduler:
     build:
       context: ../mlops/orchestration/airflow
-      dockerfile: .docker/ocp/Dockerfile.scheduler
+      dockerfile: .docker/ocp/Dockerfile.ocp
+    command: ["airflow", "scheduler"]
 
   ocp_airflow_webserver:
     build:
       context: ../mlops/orchestration/airflow
-      dockerfile: .docker/ocp/Dockerfile.webserver
+      dockerfile: .docker/ocp/Dockerfile.ocp
+    command: ["airflow", "webserver"]
 
   ############################ End of AIRFLOW ##################################
 

@@ -1,10 +1,7 @@
 FROM apache/airflow:2.9.3
 
-ENV HOME=/home/airflow
-ENV AIRFLOW_HOME=/home/airflow
-
-# Install any scheduler-specific system dependencies if needed
-# RUN apt-get update && apt-get install -y <scheduler-specific-packages>
+# Install any system dependencies if needed
+# RUN apt-get update && apt-get install -y <common-packages>
 
 USER airflow
 
@@ -17,5 +14,4 @@ RUN pip install --upgrade pip && pip install --no-cache-dir -r /opt/airflow/requ
 # Set the working directory
 WORKDIR /opt/airflow
 
-# Command to run the scheduler
-CMD ["airflow", "scheduler"]
+# The CMD will be specified in the docker-compose.yml file
