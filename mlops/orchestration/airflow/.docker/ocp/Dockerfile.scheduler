@@ -24,3 +24,4 @@ RUN echo "Python path:" && python -c "import sys; print(sys.path)"
 WORKDIR /opt/airflow
 
 # The CMD will be specified in the docker-compose.yml file
+CMD ["airflow", "scheduler"]
