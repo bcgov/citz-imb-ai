@@ -105,6 +105,7 @@ services:
     build:
       context: ../mlops/orchestration/airflow
       dockerfile: .docker/local/Dockerfile.webserver
+    command: ["airflow", "webserver"]  
     container_name: airflow_webserver
     depends_on:
       - airflow_postgres
