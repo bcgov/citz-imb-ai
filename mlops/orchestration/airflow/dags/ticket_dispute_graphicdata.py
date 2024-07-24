@@ -12,6 +12,7 @@ from langchain_community.document_loaders import DirectoryLoader
 from llama_index.core import SimpleDirectoryReader, StorageContext
 warnings.filterwarnings("ignore")
 from langchain_community.embeddings import HuggingFaceEmbeddings
+from airflow.sensors.external_task_sensor import ExternalTaskSensor
 import json
 
 load_dotenv("/vault/secrets/zuba-secret-dev")
@@ -33,9 +34,11 @@ def neo4j():
 kg = neo4j()
     
 file_metadata = lambda x: {"filename": x}
-graphic_documents = SimpleDirectoryReader(
-    "./JSON_graphicdata/", file_metadata=file_metadata
-).load_data()
+def graphic_documents():
+    graphic_documents = SimpleDirectoryReader(
+        "./JSON_graphicdata/", file_metadata=file_metadata
+    ).load_data()
+    return graphic_documents
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size = 1000,
@@ -173,7 +176,7 @@ def index_ticket_graphicdata():
         separators=["\n\n", "\n", ". ", " ", ""],
     )
     kg = neo4j()
-    for index, graphic_document in enumerate(graphic_documents):
+    for index, graphic_document in enumerate(graphic_documents()):
         # print(json.loads(graphic_document.get_text()))
         json_obj = json.loads(graphic_document.get_text())
         url = json_obj["Url"]
@@ -263,7 +266,7 @@ def connect_form_parentNode():
 
 
 def create_relationships():
-    for index, graphic_document in enumerate(graphic_documents):
+    for index, graphic_document in enumerate(graphic_documents()):
         json_obj = json.loads(graphic_document.get_text())
         create_parent_form_node(json_obj)
         connect_form_parentNode()
@@ -285,6 +288,15 @@ with DAG(
     catchup=False,
     tags=["bclaws", "graphicdata", "indexing"],
 ) as dag:
+    
+    wait_for_download = ExternalTaskSensor(
+        task_id='wait_for_download_ticket_graphic_data',
+        external_dag_id='task_download_graphicdata',  # DAG id to wait for
+        external_task_id=None,  # Wait for the entire DAG to complete
+        timeout=600,  # Timeout in seconds
+        poke_interval=60,  # Check interval in seconds
+        mode='poke',  # or 'reschedule'
+    )
 
     task_index_ticket_graphicdata = PythonOperator(
         task_id="index_ticket_graphicdata",
@@ -296,4 +308,4 @@ with DAG(
         python_callable=create_relationships,
     )
 
-    task_index_ticket_graphicdata >> task_index_ticket_parent_relationship
+    wait_for_download >> task_index_ticket_graphicdata >> task_index_ticket_parent_relationship
