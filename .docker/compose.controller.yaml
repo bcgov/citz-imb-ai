@@ -147,6 +147,7 @@ services:
       - ../mlops/orchestration/airflow/data:/opt/airflow/data
     networks:
       - zuba
+    command: ["airflow", "scheduler"]
 
   ocp_airflow_scheduler:
     build:

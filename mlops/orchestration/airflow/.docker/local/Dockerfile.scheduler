@@ -1,0 +1,20 @@
+FROM apache/airflow:2.9.3
+
+# Install any system dependencies if needed
+# RUN apt-get update && apt-get install -y <common-packages>
+
+USER airflow
+
+# Copy requirements.txt
+COPY requirements.txt /opt/airflow/requirements.txt
+
+# Install Python packages from requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r /opt/airflow/requirements.txt
+
+# Set the working directory
+WORKDIR /opt/airflow
+
+# The CMD will be specified in the docker-compose.yml file
+
+# Command to run the webserver
+CMD ["airflow", "scheduler"]
