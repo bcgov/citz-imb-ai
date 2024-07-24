@@ -8,6 +8,8 @@ import aiofiles
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.bclaws.gov.bc.ca/civix/content/complete/statreg/"
+BASE_PATH = "/opt/airflow/"
+XML_DIR = "data/xml"
 
 default_args = {
     'owner': 'airflow',
@@ -79,12 +81,16 @@ async def process_directory(url, session, depth=0):
 
         sanitized_title = ''.join(c if c.isalnum() or c.isspace() else '_' for c in document_title).replace(' ', '_')
         filename = os.path.join(
-            "/opt/airflow/data/xml",
+            BASE_PATH,
+            XML_DIR,
             f"{sanitized_title}.{'multi.xml' if document_ext == 'htm' else 'xml'}"
         )
         await download_xml(download_url, filename, session)
 
 async def main():
+    # Create the directory if it doesn't exist
+    os.makedirs(os.path.join(BASE_PATH, XML_DIR), exist_ok=True)
+    
     async with aiohttp.ClientSession() as session:
         await process_directory(BASE_URL, session)
     print("Download completed.")
