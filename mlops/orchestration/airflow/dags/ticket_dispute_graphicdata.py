@@ -17,7 +17,6 @@ import json
 
 load_dotenv("/vault/secrets/zuba-secret-dev")
 
-
 def neo4j():
     NEO4J_URI = "bolt://citz-imb-ai-neo4j-svc:7687"
     NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
@@ -291,8 +290,8 @@ with DAG(
     
     wait_for_download = ExternalTaskSensor(
         task_id='wait_for_download_ticket_graphic_data',
-        external_dag_id='task_download_graphicdata',  # DAG id to wait for
-        external_task_id=None,  # Wait for the entire DAG to complete
+        external_dag_id='retrieve_data_from_s3_dag',  # DAG id to wait for
+        external_task_id='download_ticket_graphicdata',  # Wait for the entire DAG to complete
         timeout=600,  # Timeout in seconds
         poke_interval=60,  # Check interval in seconds
         mode='poke',  # or 'reschedule'
