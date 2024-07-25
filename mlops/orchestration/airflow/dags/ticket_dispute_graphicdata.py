@@ -17,6 +17,10 @@ import json
 
 load_dotenv("/vault/secrets/zuba-secret-dev")
 
+S3_ENDPOINT_URL='https://citz-cirmo-dpia.objectstore.gov.bc.ca'
+S3_ACCESS_KEY='AKIA888F53C76A903E19'
+S3_SECRET_ACCESS_KEY='q6MKKuzNU2eLejnQGCAO0AHCrvBEower9N6mB4vR'
+
 
 def neo4j():
     NEO4J_URI = "bolt://citz-imb-ai-neo4j-svc:7687"
@@ -291,8 +295,8 @@ with DAG(
     
     wait_for_download = ExternalTaskSensor(
         task_id='wait_for_download_ticket_graphic_data',
-        external_dag_id='task_download_graphicdata',  # DAG id to wait for
-        external_task_id=None,  # Wait for the entire DAG to complete
+        external_dag_id='retrieve_data_from_s3_dag',  # DAG id to wait for
+        external_task_id='download_ticket_graphicdata',  # Wait for the entire DAG to complete
         timeout=600,  # Timeout in seconds
         poke_interval=60,  # Check interval in seconds
         mode='poke',  # or 'reschedule'
