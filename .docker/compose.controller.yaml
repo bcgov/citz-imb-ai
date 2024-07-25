@@ -122,7 +122,7 @@ services:
       - ../mlops/orchestration/airflow/data:/opt/airflow/data
     networks:
       - zuba
-    command: ["airflow", "webserver"]  
+    command: ["airflow", "webserver"]
 
   airflow_scheduler:
     build:
@@ -154,13 +154,13 @@ services:
     build:
       context: ../mlops/orchestration/airflow
       dockerfile: .docker/ocp/Dockerfile.scheduler
-    command: ["airflow", "scheduler"] 
+    command: ["airflow", "scheduler"]
 
   ocp_airflow_webserver:
     build:
       context: ../mlops/orchestration/airflow
       dockerfile: .docker/ocp/Dockerfile.webserver
-    command: ["airflow", "webserver"] 
+    command: ["airflow", "webserver"]
 
   ############################ End of AIRFLOW ##################################
 
