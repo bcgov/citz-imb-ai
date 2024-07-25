@@ -288,15 +288,6 @@ with DAG(
     tags=["bclaws", "graphicdata", "indexing"],
 ) as dag:
     
-    wait_for_download = ExternalTaskSensor(
-        task_id='wait_for_download_ticket_graphic_data',
-        external_dag_id='retrieve_data_from_s3_dag',  # DAG id to wait for
-        external_task_id='download_ticket_graphicdata',  # Wait for the entire DAG to complete
-        timeout=600,  # Timeout in seconds
-        poke_interval=60,  # Check interval in seconds
-        mode='poke',  # or 'reschedule'
-    )
-
     task_index_ticket_graphicdata = PythonOperator(
         task_id="index_ticket_graphicdata",
         python_callable=index_ticket_graphicdata,
@@ -307,4 +298,4 @@ with DAG(
         python_callable=create_relationships,
     )
 
-    wait_for_download >> task_index_ticket_graphicdata >> task_index_ticket_parent_relationship
+    task_index_ticket_graphicdata >> task_index_ticket_parent_relationship

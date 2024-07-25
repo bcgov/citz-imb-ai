@@ -4,6 +4,7 @@ from airflow.utils.dates import days_ago
 import boto3
 import os
 from dotenv import load_dotenv
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 
 load_dotenv("/vault/secrets/zuba-secret-dev")
 # Set environment variables
@@ -101,4 +102,13 @@ with DAG(
         python_callable=download_ticket_graphicdata,
     )
 
-    task_download_acts >> task_download_regulations >> task_download_glossary >> task_download_graphicdata
+    trigger_next_dag = TriggerDagRunOperator(
+        task_id='trigger_indexing_dag',
+        trigger_dag_id='ticket_graphicdata_indexing',  # DAG id to trigger
+        wait_for_completion=True,
+        reset_dag_run=True,
+        allowed_states=['success'],
+        poke_interval=60,
+    )
+
+    task_download_acts >> task_download_regulations >> task_download_glossary >> task_download_graphicdata >> trigger_next_dag
