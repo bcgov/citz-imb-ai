@@ -1,5 +1,8 @@
 FROM apache/airflow:2.9.3
 
+ENV HOME=/home/airflow
+ENV AIRFLOW_HOME=/home/airflow
+
 # Install any system dependencies if needed
 # RUN apt-get update && apt-get install -y <common-packages>
 
@@ -11,7 +14,14 @@ COPY requirements.txt /opt/airflow/requirements.txt
 # Install Python packages from requirements.txt
 RUN pip install --upgrade pip && pip install --no-cache-dir -r /opt/airflow/requirements.txt
 
+# Debugging steps
+RUN echo "Python version:" && python --version
+RUN echo "Pip version:" && pip --version
+RUN echo "Installed packages:" && pip list
+RUN echo "Python path:" && python -c "import sys; print(sys.path)"
+
 # Set the working directory
 WORKDIR /opt/airflow
 
 # The CMD will be specified in the docker-compose.yml file
+CMD ["airflow", "scheduler"]
