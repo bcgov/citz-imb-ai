@@ -15,10 +15,6 @@ S3_ACCESS_KEY = os.getenv('S3_ACCESS_KEY')
 S3_SECRET_ACCESS_KEY = os.getenv('S3_SECRET_ACCESS_KEY')
 S3_ENDPOINT_URL = os.getenv('S3_ENDPOINT_URL')
 
-S3_ENDPOINT_URL='https://citz-cirmo-dpia.objectstore.gov.bc.ca'
-S3_ACCESS_KEY='AKIA888F53C76A903E19'
-S3_SECRET_ACCESS_KEY='q6MKKuzNU2eLejnQGCAO0AHCrvBEower9N6mB4vR'
-
 linode_obj_config = {
     "aws_access_key_id": S3_ACCESS_KEY,
     "aws_secret_access_key": S3_SECRET_ACCESS_KEY,
