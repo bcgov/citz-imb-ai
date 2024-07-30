@@ -6,16 +6,22 @@ from dotenv import load_dotenv
 import os
 from bs4 import BeautifulSoup
 from langchain_community.graphs import Neo4jGraph
-from langchain.text_splitter import RecursiveCharacterTextSplitter, SentenceTransformersTokenTextSplitter
+from langchain.text_splitter import (
+    RecursiveCharacterTextSplitter,
+    SentenceTransformersTokenTextSplitter,
+)
 import warnings
 from langchain_community.document_loaders import DirectoryLoader
 from llama_index.core import SimpleDirectoryReader, StorageContext
+
 warnings.filterwarnings("ignore")
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from airflow.sensors.external_task_sensor import ExternalTaskSensor
+from datetime import timedelta
 import json
 
 load_dotenv("/vault/secrets/zuba-secret-dev")
+
 
 def neo4j():
     NEO4J_URI = "bolt://citz-imb-ai-neo4j-svc:7687"
@@ -30,19 +36,25 @@ def neo4j():
     )
     return kg
 
+
 kg = neo4j()
-    
+
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
 file_metadata = lambda x: {"filename": x}
+
+
 def graphic_documents():
     graphic_documents = SimpleDirectoryReader(
         "./JSON_graphicdata/", file_metadata=file_metadata
     ).load_data()
     return graphic_documents
 
+
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 1000,
-    chunk_overlap  = 200,
-    length_function = len,
+    chunk_size=1000,
+    chunk_overlap=200,
+    length_function=len,
     separators=["\n\n", "\n", ". ", " ", ""],
 )
 
@@ -114,7 +126,7 @@ def create_chunk_embeddings(tokens, embeddings):
         else:
             print(result)
             print("Embedding not created")
-    create_chunk_relationship(tokens[0] )
+    create_chunk_relationship(tokens[0])
 
 
 def create_metadata(
@@ -167,7 +179,6 @@ def create_chunks(item_text, title, section_heading, section_id):
 
 
 def index_ticket_graphicdata():
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200,
@@ -238,7 +249,7 @@ def index_ticket_graphicdata():
 
 
 ## Creating the parent chunk relationship
-#Create Parent Chunk
+# Create Parent Chunk
 def create_parent_form_node(form_info):
     cypher = """
         MERGE (mergedChunk:form {formtitle: $chunkParam.Title })
@@ -250,7 +261,8 @@ def create_parent_form_node(form_info):
         mergedChunk.RegId = $chunkParam.RegId,
         mergedChunk.LawId = $chunkParam.ActId
             """
-    kg.query(cypher, params={'chunkParam': form_info})
+    kg.query(cypher, params={"chunkParam": form_info})
+
 
 def connect_form_parentNode():
     cypher = """
@@ -269,6 +281,11 @@ def create_relationships():
         json_obj = json.loads(graphic_document.get_text())
         create_parent_form_node(json_obj)
         connect_form_parentNode()
+        
+# Custom function to generate a list of execution dates to check
+def last_two_days(execution_date):
+    dates = [execution_date - timedelta(days=i) for i in range(3)]
+    return dates
 
 default_args = {
     "owner": "airflow",
@@ -287,15 +304,48 @@ with DAG(
     catchup=False,
     tags=["bclaws", "graphicdata", "indexing"],
 ) as dag:
-    
+
+    wait_for_data = ExternalTaskSensor(
+        task_id="wait_for_data",
+        external_dag_id="retrieve_data_from_s3_dag",
+        external_task_id="download_ticket_graphicdata",
+        allowed_states=["success"],
+        failed_states=["failed", "skipped"],
+        check_existence=True,
+        timeout=3600,  # Timeout in seconds
+        poke_interval=60,  # Check interval in seconds
+        mode="poke",
+        execution_date_fn=lambda dt: dt  # Ensure matching execution dates
+    )
+
+    wait_for_download = ExternalTaskSensor(
+        task_id="wait_for_download",
+        external_dag_id="download_sentence_transformer",
+        external_task_id="task_download_sentence_transformer",
+        allowed_states=["success"],
+        failed_states=["failed", "skipped"],
+        check_existence=True,
+        timeout=3600,  # Timeout in seconds
+        poke_interval=60,  # Check interval in seconds
+        mode="poke",
+        execution_date_fn=lambda dt: dt  # Ensure matching execution dates
+    )
+
     task_index_ticket_graphicdata = PythonOperator(
         task_id="index_ticket_graphicdata",
         python_callable=index_ticket_graphicdata,
+        execution_timeout=timedelta(minutes=30),  # Adjust based on task requirements
     )
 
     task_index_ticket_parent_relationship = PythonOperator(
         task_id="create_relationships",
         python_callable=create_relationships,
+        execution_timeout=timedelta(minutes=30),  # Adjust based on task requirements
     )
 
-    task_index_ticket_graphicdata >> task_index_ticket_parent_relationship
+    (
+        wait_for_data
+        >> wait_for_download
+        >> task_index_ticket_graphicdata
+        >> task_index_ticket_parent_relationship
+    )

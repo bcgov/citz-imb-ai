@@ -5,6 +5,7 @@ import boto3
 import os
 from dotenv import load_dotenv
 from airflow.operators.trigger_dagrun import TriggerDagRunOperator
+from datetime import timedelta
 
 load_dotenv("/vault/secrets/zuba-secret-dev")
 # Set environment variables
@@ -85,30 +86,25 @@ with DAG(
     task_download_acts = PythonOperator(
         task_id='download_bclaws_acts',
         python_callable=download_bclaws_acts,
+        execution_timeout=timedelta(hours=1),
     )
 
     task_download_regulations = PythonOperator(
         task_id='download_bclaws_regulations',
         python_callable=download_bclaws_regulations,
+        execution_timeout=timedelta(hours=1),
     )
     
     task_download_glossary = PythonOperator(
         task_id='download_bclaws_glossary',
         python_callable=download_bclaws_glossary,
+        execution_timeout=timedelta(hours=1),
     )
 
     task_download_graphicdata = PythonOperator(
         task_id='download_ticket_graphicdata',
         python_callable=download_ticket_graphicdata,
+        execution_timeout=timedelta(hours=1),
     )
 
-    trigger_next_dag = TriggerDagRunOperator(
-        task_id='trigger_indexing_dag',
-        trigger_dag_id='ticket_graphicdata_indexing',  # DAG id to trigger
-        wait_for_completion=True,
-        reset_dag_run=True,
-        allowed_states=['success'],
-        poke_interval=60,
-    )
-
-    task_download_acts >> task_download_regulations >> task_download_glossary >> task_download_graphicdata >> trigger_next_dag
+    task_download_acts >> task_download_regulations >> task_download_glossary >> task_download_graphicdata
