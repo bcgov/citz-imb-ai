@@ -6,12 +6,29 @@
 #include "token_text_splitter.h"
 #include "memory_pool.h"
 #include <immintrin.h>
+#include <stdbool.h>
+
+void removeWhitespace(char *input) {
+    char *output = input;
+    char *temp = input;
+    
+    while (*temp != '\0') {
+        if (!isspace((unsigned char)*temp)) {
+            *output = *temp;
+            output++;
+        }
+        temp++;
+    }
+    *output = '\0';
+}
 
 // Function to check if a substring exists in the hash table
 char *check_substring(HashTable *table, const char *substring) {
     char *result;
+    removeWhitespace(substring);
+    //printf("The sub_string is %s\n", substring);
     result =  search(table, substring);
-
+    //printf("The result is %s\n", result);
     return result;
 }
 
@@ -29,8 +46,8 @@ void to_lowercase(char *str) {
  * @param str The input string to be converted to lowercase.
  * @return The input string with all uppercase characters converted to lowercase.
  */
-char *to_lowercase_avx512(char *str) {
-    size_t len = strlen(str); // Get the length of the input string
+char *to_lowercase_avx512(char *str, size_t len) {
+    //size_t len = strlen(str); // Get the length of the input string
     size_t i = 0; // Initialize index to traverse the string
 
     // Create a 512-bit mask with each byte set to 0x20 (32 in decimal)
@@ -75,51 +92,246 @@ char *to_lowercase_avx512(char *str) {
     return str;
 }
 
+// Create a lookup table for punctuation characters
+const char punctuation_lookup[256] = {
+    ['!'] = 1, ['"'] = 1, ['#'] = 1, ['$'] = 1, ['%'] = 1, ['&'] = 1, ['\''] = 1,
+    ['('] = 1, [')'] = 1, ['*'] = 1, ['+'] = 1, [','] = 1, ['-'] = 1, ['.'] = 1,
+    ['/'] = 1, [':'] = 1, [';'] = 1, ['<'] = 1, ['='] = 1, ['>'] = 1, ['?'] = 1,
+    ['@'] = 1, ['['] = 1, ['\\'] = 1, [']'] = 1, ['^'] = 1, ['_'] = 1, ['`'] = 1,
+    ['{'] = 1, ['|'] = 1, ['}'] = 1, ['~'] = 1, 
+};
+
+// Helper function to identify punctuation using SIMD
+void mark_punctuation_avx512(const char *str, size_t len, char *punctuation_mask) {
+    // Process the string in chunks of 64 bytes
+    size_t i = 0;
+    while (i + 64 <= len) {
+        // Load 64 bytes of the input string into an AVX-512 register
+        __m512i chunk = _mm512_loadu_si512((__m512i *)(str + i));
+        
+        // Initialize a mask to store the result of punctuation checking
+        __mmask64 is_punct = 0;
+        
+        // Check each byte in the chunk to see if it is a punctuation character
+        for (int j = 0; j < 64; j++) {
+            char c = ((char *)&chunk)[j];
+            if (punctuation_lookup[(unsigned char)c]) {
+                is_punct |= (1ULL << j); // Set the corresponding bit in the mask
+            }
+        }
+        
+        // Store 1s in punctuation_mask where is_punct is true (indicating punctuation)
+        _mm512_mask_storeu_epi8(punctuation_mask + i, is_punct, _mm512_set1_epi8(1));
+        
+        // Store 0s in punctuation_mask where is_punct is false (indicating non-punctuation)
+        _mm512_mask_storeu_epi8(punctuation_mask + i, ~is_punct, _mm512_set1_epi8(0));
+        
+        // Move to the next 64-byte chunk
+        i += 64;
+    }
+
+    // Handle any remaining characters that were not processed in the 64-byte chunks
+    for (; i < len; i++) {
+        punctuation_mask[i] = ispunct(str[i]) ? 1 : 0;
+    }
+}
+
+// Function to split punctuations and convert to lowercase
+char* split_punctuations_and_to_lowercase(const char *str) {
+    size_t len = strlen(str);
+    
+    // Allocate memory for the mutable copy of the input string
+    char *lower_str = (char *)malloc(len + 1);
+    if (!lower_str) {
+        return NULL; // Memory allocation failed
+    }
+    strcpy(lower_str, str);
+
+    // Convert to lowercase
+    to_lowercase_avx512(lower_str, len);
+
+    // Allocate memory for the punctuation mask
+    char *punctuation_mask = (char *)malloc(len);
+    if (!punctuation_mask) {
+        free(lower_str);
+        return NULL; // Memory allocation failed
+    }
+
+    // Mark punctuation positions
+    mark_punctuation_avx512(lower_str, len, punctuation_mask);
+
+    // Calculate the new length of the string considering added spaces
+    size_t new_len = len;
+    for (size_t i = 0; i < len; i++) {
+        if (punctuation_mask[i]) {
+            new_len += 2; // Add space before and after punctuation
+        }
+    }
+    printf("word is %s, total len is %d \n", lower_str, new_len);
+
+    // Allocate memory for the new string
+    char *result = (char*)malloc(new_len + 1);
+    if (!result) {
+        free(lower_str);
+        free(punctuation_mask);
+        return NULL; // Memory allocation failed
+    }
+
+    // Build the new string
+    size_t i = 0, j = 0;
+    while (i < len) {
+        char ch = lower_str[i];
+        if (punctuation_mask[i]) {
+            result[j++] = ' ';
+            result[j++] = ch;
+            result[j++] = ' ';
+        } else {
+            result[j++] = ch;
+        }
+        i++;
+    }
+
+    result[new_len] = '\0'; // Null-terminate the new string
+
+    // Free allocated memory
+    free(lower_str);
+    free(punctuation_mask);
+
+    return result;
+}
+
 tokens_t get_token(HashTable *table, const char *text) {
     size_t len = strlen(text);
     char *buffer = malloc(len + 1);
-    char *prefix_buffer = malloc(len + 3); // Additional space for "##"
+    char *prefix_buffer = malloc(len + 3);
     tokens_t token_result;
     token_result.token_values = malloc((len + 1) * sizeof(int));
-    token_result.word = strdup(text); // Copy the original word
+    token_result.word = strdup(text);
     token_result.token_count = 0;
 
     if (buffer == NULL || prefix_buffer == NULL || token_result.token_values == NULL || token_result.word == NULL) {
         perror("Failed to allocate memory");
+        free(buffer);
+        free(prefix_buffer);
+        free(token_result.token_values);
+        free(token_result.word);
         exit(EXIT_FAILURE);
     }
-
+    //printf("The word is %s \n", text);
+    bool prefix = false;
     for (size_t i = 0; i < len;) {
         int found = 0;
-        // Try to find the longest token
         for (size_t j = len - i; j > 0; j--) {
             strncpy(buffer, text + i, j);
             buffer[j] = '\0';
-            to_lowercase_avx512(buffer);
 
-            char *key_found = check_substring(table, buffer);
+
+	    if (isdigit((unsigned char)*buffer) || !prefix) {
+	        	snprintf(prefix_buffer, j + 1, "%s", buffer);
+	    } else {
+	        	snprintf(prefix_buffer, j + 3, "##%s", buffer);
+	    }
+            
+	    char *key_found = check_substring(table, prefix_buffer);
+
+            if (key_found) {
+                token_result.token_values[token_result.token_count++] = atoi(key_found);
+		prefix = true;
+		i += j;
+		found = true;
+		break;
+	    }
+        }   
+        if (!found) {
+            printf("Unrecognized token part: %c\n", text[i]);
+            i++;
+	    prefix = false;
+        }
+    }
+
+    free(buffer);
+    free(prefix_buffer);
+
+    return token_result;
+}
+
+
+
+
+tokens_t get_token2(HashTable *table, const char *text) {
+    size_t len = strlen(text);
+    char *buffer = malloc(len + 1);
+    char *prefix_buffer = malloc(len + 3);
+    tokens_t token_result;
+    token_result.token_values = malloc((len + 1) * sizeof(int));
+    token_result.word = strdup(text);
+    token_result.token_count = 0;
+
+    if (buffer == NULL || prefix_buffer == NULL || token_result.token_values == NULL || token_result.word == NULL) {
+        perror("Failed to allocate memory");
+        free(buffer);
+        free(prefix_buffer);
+        free(token_result.token_values);
+        free(token_result.word);
+        exit(EXIT_FAILURE);
+    }
+    
+    for (size_t i = 0; i < len;) {
+        int found = 0;
+        for (size_t j = len - i; j > 0; j--) {
+            strncpy(buffer, text + i, j);
+            buffer[j] = '\0';
+
+            char *processed_buffer = split_punctuations_and_to_lowercase(buffer);
+            if (!processed_buffer) {
+                perror("Failed to process buffer");
+                free(buffer);
+                free(prefix_buffer);
+                free(token_result.token_values);
+                free(token_result.word);
+                exit(EXIT_FAILURE);
+            }
+
+            char *key_found = check_substring(table, processed_buffer);
+            free(processed_buffer);
+
             if (key_found) {
                 token_result.token_values[token_result.token_count++] = atoi(key_found);
                 i += j;
                 found = 1;
 
-                // Check if there's remaining text to be matched as a subword
                 if (i < len && text[i] != ' ') {
                     size_t remaining_len = len - i;
                     for (size_t k = remaining_len; k > 0; k--) {
                         strncpy(buffer, text + i, k);
                         buffer[k] = '\0';
-                        to_lowercase_avx512(buffer);
 
-                        snprintf(prefix_buffer, k + 3, "##%s", buffer);
+                        processed_buffer = split_punctuations_and_to_lowercase(buffer);
+                        if (!processed_buffer) {
+                            perror("Failed to process buffer");
+                            free(buffer);
+                            free(prefix_buffer);
+                            free(token_result.token_values);
+                            free(token_result.word);
+                            exit(EXIT_FAILURE);
+                        }
+			if (isdigit((unsigned char)*processed_buffer)) {
+				snprintf(prefix_buffer, k + 3, "%s", processed_buffer);
+			} else {
+				snprintf(prefix_buffer, k + 3, "##%s", processed_buffer);
+			}
+                        free(processed_buffer);
 
                         key_found = check_substring(table, prefix_buffer);
                         if (key_found) {
                             token_result.token_values[token_result.token_count++] = atoi(key_found);
                             i += k;
-                            break;
+                    	    //remaining_len = len - i;
+			     found = 1;
+                             break;
                         }
                     }
+		    if (!found) break;
                 }
 
                 break;
@@ -341,16 +553,17 @@ void split_text_to_words(const char *text, char ***words, int *word_count, Memor
 void token_text_splitter(HashTable *table, const char *text, MemoryPool *pool) {
     char **words;
     int word_count;
-    //printf("%s \n", text);
-    split_text_to_words(text, &words, &word_count, pool);
+    printf("%s \n", text);
+    char *processed_buffer = split_punctuations_and_to_lowercase(text);
+    split_text_to_words(processed_buffer, &words, &word_count, pool);
     for (int i = 0; i < word_count; i++) {
         tokens_t token = get_token(table, words[i]);
         //printf("Original word: %s\n", token.word);
         //printf("Token count: %d\n", token.token_count);
         //printf("Token values: ");
-        //for (int j = 0; j < token.token_count; j++) {
-        //    printf("%d ", token.token_values[j]);
-        //}
+        for (int j = 0; j < token.token_count; j++) {
+            printf("%d, ", token.token_values[j]);
+        }
         //printf("\n");
 
         free(token.token_values);
@@ -361,4 +574,5 @@ void token_text_splitter(HashTable *table, const char *text, MemoryPool *pool) {
     //    free(words[i]);
    // }
     free(words);
+    free(processed_buffer);
 }
