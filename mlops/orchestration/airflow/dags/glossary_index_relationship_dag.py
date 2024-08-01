@@ -8,6 +8,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter, SentenceTran
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import boto3
 import os
+from dotenv import load_dotenv
+load_dotenv("/vault/secrets/zuba-secret-dev")
 
 
 ## STEP 1 - Download Glossary from S3
