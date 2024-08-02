@@ -78,11 +78,14 @@ text_splitter = RecursiveCharacterTextSplitter(
     separators=["\n\n", "\n", ". ", " ", ""],
 )
 
-def create_index():
+def get_glossary_file():
     # need to ensure that the glossary.json file is available
     f = open('/opt/airflow/JSON_glossary/glossary.json')
     glossaries = json.load(f)
+    return glossaries
 
+def create_index():
+    glossaries = get_glossary_file()
     token_splitter = SentenceTransformersTokenTextSplitter(chunk_overlap=20, tokens_per_chunk=256)
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
@@ -135,6 +138,7 @@ def create_index():
 
 ##STEP 3 - Create Edges
 def connect_chunks():
+    glossaries = get_glossary_file()
     connect_chunks = """
       MATCH (chunk:UpdatedChunk), (f:UpdatedChunk)
       WHERE
