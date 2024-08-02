@@ -80,7 +80,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 
 def create_index():
     # need to ensure that the glossary.json file is available
-    f = open('/opt/airflow/dags/JSON_glossary/glossary.json')
+    f = open('/opt/airflow/JSON_glossary/glossary.json')
     glossaries = json.load(f)
 
     token_splitter = SentenceTransformersTokenTextSplitter(chunk_overlap=20, tokens_per_chunk=256)
@@ -193,6 +193,7 @@ with DAG(
     default_args=default_args,
     description='A DAG to index the BC Laws glossary and create relationships in Neo4j',
     schedule_interval=timedelta(days=1),
+    tags=['glossary', 'bclaws', 'indexing'],
 ) as dag:
     download_glossary_from_s3 = PythonOperator(
         task_id='download_glossary_from_s3',
