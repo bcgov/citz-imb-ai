@@ -62,6 +62,7 @@ To navigate all the work done in the project, please refer to the table below:
     <tbody>
         <tr>
             <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture">Architecture</a></td>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture/detailedflow">Detailed Flow</a></td>
             <td colspan="3" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture/preprocessing">Preprocessing Workflow</a></td>
             <td colspan="3" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture/activelearning">Active Learning Pipeline</a></td>
         </tr>

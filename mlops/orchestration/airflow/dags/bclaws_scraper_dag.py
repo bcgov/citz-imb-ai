@@ -19,6 +19,7 @@ default_args = {
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
+    
 }
 
 dag = DAG(
@@ -26,6 +27,7 @@ dag = DAG(
     default_args=default_args,
     description='A DAG to scrape and download BC Laws',
     schedule_interval=timedelta(days=1),
+    tags=['bclaws', 'scraping'],
 )
 
 async def fetch_content(url, session):
