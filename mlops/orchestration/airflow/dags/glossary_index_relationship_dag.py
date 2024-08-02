@@ -78,14 +78,14 @@ text_splitter = RecursiveCharacterTextSplitter(
     separators=["\n\n", "\n", ". ", " ", ""],
 )
 
-# need to ensure that the glossary.json file is available
-f = open('/opt/airflow/dags/JSON_glossary/glossary.json')
-glossaries = json.load(f)
-
-token_splitter = SentenceTransformersTokenTextSplitter(chunk_overlap=20, tokens_per_chunk=256)
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
 def create_index():
+    # need to ensure that the glossary.json file is available
+    f = open('/opt/airflow/dags/JSON_glossary/glossary.json')
+    glossaries = json.load(f)
+
+    token_splitter = SentenceTransformersTokenTextSplitter(chunk_overlap=20, tokens_per_chunk=256)
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
     merge_chunk_node_query = """
     MERGE(mergedChunk:UpdatedChunk {chunkId: $chunkParam.chunkId})
         ON CREATE SET 
