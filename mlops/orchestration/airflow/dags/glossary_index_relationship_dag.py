@@ -139,6 +139,8 @@ def create_index():
 ##STEP 3 - Create Edges
 def connect_chunks():
     glossaries = get_glossary_file()
+    token_splitter = SentenceTransformersTokenTextSplitter(chunk_overlap=20, tokens_per_chunk=256)
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     connect_chunks = """
       MATCH (chunk:UpdatedChunk), (f:UpdatedChunk)
       WHERE
