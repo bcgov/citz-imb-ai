@@ -284,11 +284,13 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
                     if (!newSectionContent)
                     {
                         free(itemText);
-                        free(sectionContent);
+			free(sectionContent);
                         if (sectionHeading)
-                            xmlFree(sectionHeading);
+				xmlFree(sectionHeading);
                         if (sectionNumber)
-                            xmlFree(sectionNumber);
+				xmlFree(sectionNumber);
+                        if (sectionUrl)
+				xmlFree(sectionUrl);
                         return (Section){NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL}; // Allocation failed
                     }
 
@@ -314,7 +316,6 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     Section newSection;
     newSection.number = sectionNumber ? strdup((char *)sectionNumber) : NULL;
     newSection.content = trim_and_normalize_whitespace(sectionContent);
-    free(sectionContent);
     newSection.title = sectionHeading ? strdup((char *)sectionHeading) : NULL;
     newSection.act_title = getNodeContent(titleNode);
     newSection.reg_title = getNodeContent(regTitleNode);
@@ -344,6 +345,10 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     {
         xmlFree(sectionNumber);
     }
+    if (sectionContent) 
+    {
+	xmlFree(sectionContent);
+    }
 
     return newSection;
 }
@@ -364,6 +369,7 @@ void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, 
                     {
                         fprintf(stderr, "Realloc failed\n");
                         free_sections(*sections, *num_sections);
+			printf("Error occured \n");
                         exit(1); // Handle the error as needed
                     }
                     *sections = newSections;
@@ -455,7 +461,6 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
 
     // Process all sections
     processAllSections(rootElement, &sections, num_sections, &max_sections, titleNode, regTitleNode, print_outputs, id);
-
     xmlFree(id);
     xmlFreeDoc(doc);
     return sections;

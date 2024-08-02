@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <immintrin.h>
+#include <stdio.h>
 #include "data_structures/hash_table.h"
 
 uint32_t MurmurHash3(const char* key, uint32_t len, uint32_t seed) {

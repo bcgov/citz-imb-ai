@@ -62,6 +62,14 @@ else()
     message(FATAL_ERROR "Kafka library not found")
 endif()
 
+# Find C-JSON package
+find_library(JSON_LIBRARIES json-c REQUIRED)
+if (JSON_LIBRARIES)
+    message(STATUS "JSON-C library found: ${JSON_LIBRARIES}")
+else()
+    message(FATAL_ERROR "JSON-C library not found")
+endif()
+
 # Include directories
 include_directories(include)
 
@@ -80,7 +88,7 @@ list(APPEND SOURCES src/main.c)
 add_executable(HPCChain ${SOURCES})
 
 # Link MPI, libxml2, NUMA, and OpenMP libraries
-target_link_libraries(HPCChain MPI::MPI_C ${LIBXML2_LIBRARIES} ${NUMA_LIBRARIES} OpenMP::OpenMP_C)
+target_link_libraries(HPCChain MPI::MPI_C ${LIBXML2_LIBRARIES} ${NUMA_LIBRARIES} OpenMP::OpenMP_C ${JSON_LIBRARIES})
 
 # Set compiler flags
 if(CMAKE_C_COMPILER_ID MATCHES "Intel")
