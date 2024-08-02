@@ -56,7 +56,7 @@ To navigate all the work done in the project, please refer to the table below:
 <table>
     <thead>
         <tr>
-            <th colspan="8" align="center">Overview</th>
+            <th colspan="10" align="center">Overview</th>
         </tr>
     </thead>
     <tbody>
@@ -67,35 +67,35 @@ To navigate all the work done in the project, please refer to the table below:
             <td colspan="3" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/architecture/activelearning">Active Learning Pipeline</a></td>
         </tr>
         <tr>
-            <td colspan="8" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
+            <td colspan="10" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
         </tr>
         <tr>
-            <th colspan="8"> Web Interface (frontend and backend) </th>
+            <th colspan="10"> Web Interface (frontend and backend) </th>
         </tr>
         <tr>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web/frontend">Frontend</a></td>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web/backend-fastapi">Backend</a></td>
+            <td colspan="5" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web/frontend">Frontend</a></td>
+            <td colspan="5" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web/backend-fastapi">Backend</a></td>
         </tr>
         <tr>
-            <th colspan="8"> Feedback infrastructure </th>
+            <th colspan="10"> Feedback infrastructure </th>
         <tr>
         <tr>
-            <td colspan="8" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web/frontend-feedback-analytics"> Embedding Adaptors</a>
+            <td colspan="10" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/web/frontend-feedback-analytics"> Embedding Adaptors</a>
         </tr>
         <tr>
-            <th colspan="8"> MLOps </th>
+            <th colspan="10"> MLOps </th>
         </tr>   
         <tr>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/mlops"> MLOps</a></td>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/mlops/orchestration/airflow"> Airflow Scripts</a></td>
+            <td colspan="5" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/mlops"> MLOps</a></td>
+            <td colspan="5" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/mlops/orchestration/airflow"> Airflow Scripts</a></td>
         </tr>
         <tr>
-            <th colspan="8"> Hardware </th>
+            <th colspan="10"> Hardware </th>
         <tr>
         <tr>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/intelHW"> Intel 3rd Gen Xeon CPU</a>
+            <td colspan="5 align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/intelHW"> Intel 3rd Gen Xeon CPU</a>
             </td>
-            <td colspan="4" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings"> HPC  - Embeddings Generation</a>
+            <td colspan="5" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings"> HPC  - Embeddings Generation</a>
             </td>
         </tr>
     </tbody>

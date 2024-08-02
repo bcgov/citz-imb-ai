@@ -1,6 +1,6 @@
 # A.I Architecture Overview
 
-[![../assets/ai_architecture.png](../assets/overall_architecture.jpg)](../assets/overall_architecture.jpg)
+[![../assets/ai_architecture.png](../../assets/overall_architecture.jpg)](../assets/overall_architecture.jpg)
 
 ## RAG System Architecture Overview
 
