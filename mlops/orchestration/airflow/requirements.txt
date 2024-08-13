@@ -15,7 +15,7 @@ llama-index-core
 neo4j
 psycopg[binary]
 psycopg2-binary
-jinja2==3.0.3
+#jinja2==3.0.3
 python-multipart
 langchain==0.1.14
 #langchain_community==0.0.31
@@ -27,3 +27,5 @@ python-keycloak
 pytest
 httpx
 boto3
+dbt-core
+dbt-postgres

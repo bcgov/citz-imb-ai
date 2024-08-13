@@ -7,9 +7,10 @@ USER airflow
 
 # Copy requirements.txt
 COPY requirements.txt /opt/airflow/requirements.txt
-
+# COPY ../dbt /home/airflow/.dbt
 # Install Python packages from requirements.txt
 RUN pip install --upgrade pip && pip install --no-cache-dir -r /opt/airflow/requirements.txt
+RUN mkdir -p /home/airflow/.dbt
 
 # Set the working directory
 WORKDIR /opt/airflow
