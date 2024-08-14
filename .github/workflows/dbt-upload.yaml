@@ -1,0 +1,45 @@
+name: Push DBT to OCP Volume
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '/mlops/orchestration/dbt/**'  # Only trigger when DBT files change
+
+jobs:
+  push-dags:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    # Login to the Openshift Cluster
+    - name: Login to Openshift
+      uses: redhat-actions/oc-login@v1
+      with:
+        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        openshift_token: ${{ secrets.OPENSHIFT_SA_DEV_TOKEN }}
+        namespace: ${{ secrets.OPENSHIFT_DEV_NAMESPACE }}
+
+    # Get Generated Pod Name
+    - name: Get Pod Name
+      run: |
+        POD_NAME=$(oc get pods -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} -l role=airflow-webserver --no-headers -o custom-columns=":metadata.name")
+        echo "POD_NAME=$POD_NAME" >> $GITHUB_ENV
+
+    # Push DBT to OCP Airflow volume
+    - name: Push DBT to OCP Volume
+      run: |
+        # Assuming your DBT are in a 'dbt' directory
+        oc rsync ./mlops/orchestration/dbt/ ${{ env.POD_NAME }}:/opt/airflow/dbt -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }}
+
+    - name: Verify DBT transfer
+      run: |
+        oc exec ${{ env.POD_NAME }} -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} -- ls -l /opt/airflow/dbt
+
