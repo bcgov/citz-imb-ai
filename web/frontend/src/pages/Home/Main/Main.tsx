@@ -7,6 +7,7 @@ import AnswerSection from '@/components/AnswerSection/AnswerSection';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import { Link } from 'react-router-dom';
+import { getUserId } from '@/utils/auth';
 
 type Message = {
   type: 'user' | 'ai';
@@ -143,6 +144,7 @@ const Main = () => {
             message={message}
             isLastMessage={index === allMessages.length - 1}
             generationComplete={generationComplete}
+            userId={getUserId()}
           />
         )}
       </div>
@@ -257,7 +259,7 @@ const Main = () => {
                   incomplete. Always verify information independently.
                 </li>
                 <li>Response generation may take up to 2 minutes.</li>
-                <li>By using BC AI, you agree to our terms of service.</li>
+                <li>By using BC Laws AI, you agree to our terms of service.</li>
                 <li>
                   We are committed to AI safety. Learn more about our{' '}
                   <Link to="/safety" className="safety-link">
