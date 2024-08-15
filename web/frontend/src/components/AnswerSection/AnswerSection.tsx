@@ -33,16 +33,27 @@ const AnswerSection: React.FC = () => {
   const { messages, generationComplete } = context;
   const userId = getUserId();
 
+  const initializeAnalytics = () => {
+    const aiMessages = messages.filter((msg) => msg.type === 'ai');
+    const userMessages = messages.filter((msg) => msg.type === 'user');
+    if (aiMessages.length > 0 && userMessages.length > 0) {
+      const lastAiMessage = aiMessages[aiMessages.length - 1];
+      const lastUserMessage = userMessages[userMessages.length - 1];
+      if (lastAiMessage.topk) {
+        initAnalytics(
+          userId,
+          lastAiMessage.topk,
+          lastUserMessage.content,
+          lastAiMessage.content,
+        );
+        saveAnalytics();
+      }
+    }
+  };
+
   useEffect(() => {
     if (generationComplete) {
-      const aiMessages = messages.filter((msg) => msg.type === 'ai');
-      if (aiMessages.length > 0) {
-        const lastAiMessage = aiMessages[aiMessages.length - 1];
-        if (lastAiMessage.topk) {
-          initAnalytics(userId, lastAiMessage.topk);
-          saveAnalytics();
-        }
-      }
+      initializeAnalytics();
     }
   }, [generationComplete, messages, userId]);
 

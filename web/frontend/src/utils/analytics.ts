@@ -1,26 +1,37 @@
 import { TopKItem } from '@/components/AnswerSection/AnswerSection';
 
 interface AnalyticsData {
-  analyticsId: string;
+  timestamp: string;
   userId: string;
+  userPrompt: string;
+  llmResponse: string;
   sources: {
     key: number;
     source: TopKItem;
     clicks: number;
+    lastClickTimestamp: string;
   }[];
 }
 
 let analyticsData: AnalyticsData | null = null;
 
-export const initAnalytics = (userId: string, topk: TopKItem[] | undefined) => {
+export const initAnalytics = (
+  userId: string,
+  topk: TopKItem[] | undefined,
+  userPrompt: string,
+  llmResponse: string,
+) => {
   analyticsData = {
-    analyticsId: `analytics_${Date.now()}`,
+    timestamp: new Date().toISOString(),
     userId,
+    userPrompt,
+    llmResponse,
     sources: topk
       ? topk.map((item, index) => ({
           key: index,
           source: item,
           clicks: 0,
+          lastClickTimestamp: '',
         }))
       : [],
   };
@@ -31,15 +42,21 @@ export const trackSourceClick = (key: number) => {
     const sourceIndex = analyticsData.sources.findIndex((s) => s.key === key);
     if (sourceIndex !== -1) {
       analyticsData.sources[sourceIndex].clicks++;
+      analyticsData.sources[sourceIndex].lastClickTimestamp = new Date().toISOString();
     }
   }
 };
 
-export const saveAnalytics = () => {
+export const saveAnalytics = async () => {
   if (analyticsData) {
-    // Here you would typically send this data to your backend or analytics service
-    // For now, we're just logging it to the console once
-    console.log('Saving Analytics Data:', analyticsData);
+    try {
+      // Here you would typically send this data to your backend or analytics service
+      // For now, we're just logging it to the console
+      console.log('Saving Analytics Data:', analyticsData);
+      // await sendToBackend(analyticsData);
+    } catch (error) {
+      console.error('Error saving analytics:', error);
+    }
   }
 };
 
