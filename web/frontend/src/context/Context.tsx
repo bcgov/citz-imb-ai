@@ -231,6 +231,10 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         });
         setIsAuthenticated(authenticated);
         if (authenticated) {
+          localStorage.setItem(
+            'keycloak-user-id',
+            keycloak.tokenParsed?.idir_user_guid ?? '',
+          );
           localStorage.setItem('keycloak-token', keycloak.token ?? '');
           localStorage.setItem(
             'keycloak-refresh-token',
