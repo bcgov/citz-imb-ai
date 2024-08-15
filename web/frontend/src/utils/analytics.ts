@@ -42,7 +42,8 @@ export const trackSourceClick = (key: number) => {
     const sourceIndex = analyticsData.sources.findIndex((s) => s.key === key);
     if (sourceIndex !== -1) {
       analyticsData.sources[sourceIndex].clicks++;
-      analyticsData.sources[sourceIndex].lastClickTimestamp = new Date().toISOString();
+      analyticsData.sources[sourceIndex].lastClickTimestamp =
+        new Date().toISOString();
     }
   }
 };
@@ -53,7 +54,6 @@ export const saveAnalytics = async () => {
       // Here you would typically send this data to your backend or analytics service
       // For now, we're just logging it to the console
       console.log('Saving Analytics Data:', analyticsData);
-      // await sendToBackend(analyticsData);
     } catch (error) {
       console.error('Error saving analytics:', error);
     }
