@@ -14,9 +14,6 @@ interface AnalyticsData {
   }[];
 }
 
-// Store analytics data in memory
-let analyticsData: AnalyticsData | null = null;
-
 // Initialize analytics data with user interaction details
 export const initAnalytics = (
   userId: string,
@@ -24,7 +21,7 @@ export const initAnalytics = (
   userPrompt: string,
   llmResponse: string,
 ) => {
-  analyticsData = {
+  const analyticsData: AnalyticsData = {
     timestamp: new Date().toISOString(),
     userId,
     userPrompt,
@@ -38,34 +35,40 @@ export const initAnalytics = (
         }))
       : [],
   };
+
+  const existingData = sessionStorage.getItem('analyticsData');
+  const dataArray = existingData ? JSON.parse(existingData) : [];
+  dataArray.push(analyticsData);
+  sessionStorage.setItem('analyticsData', JSON.stringify(dataArray));
 };
 
 // Track when a user clicks on a source
-export const trackSourceClick = (key: number) => {
-  if (analyticsData) {
-    const sourceIndex = analyticsData.sources.findIndex((s) => s.key === key);
-    if (sourceIndex !== -1) {
-      analyticsData.sources[sourceIndex].clicks++;
-      analyticsData.sources[sourceIndex].lastClickTimestamp =
-        new Date().toISOString();
+export const trackSourceClick = (promptIndex: number, sourceKey: number) => {
+  const existingData = sessionStorage.getItem('analyticsData');
+  if (existingData) {
+    const dataArray = JSON.parse(existingData);
+    if (dataArray[promptIndex]) {
+      const sourceIndex = dataArray[promptIndex].sources.findIndex(
+        (s: any) => s.key === sourceKey,
+      );
+      if (sourceIndex !== -1) {
+        dataArray[promptIndex].sources[sourceIndex].clicks++;
+        dataArray[promptIndex].sources[sourceIndex].lastClickTimestamp =
+          new Date().toISOString();
+        sessionStorage.setItem('analyticsData', JSON.stringify(dataArray));
+      }
     }
   }
 };
 
-// Save analytics data (currently just logs to console)
+// Save analytics data (currently just stores in session storage)
 export const saveAnalytics = async () => {
-  if (analyticsData) {
-    try {
-      // Here you would typically send this data to your backend or analytics service
-      // For now, we're just logging it to the console
-      console.log('Saving Analytics Data:', analyticsData);
-    } catch (error) {
-      console.error('Error saving analytics:', error);
-    }
-  }
+  // This function is now redundant as we're saving data immediately in initAnalytics and trackSourceClick
+  // Keeping it for potential future use (e.g., sending data to a server)
 };
 
-// Retrieve the current analytics data
-export const getAnalyticsData = () => {
-  return analyticsData;
+// Retrieve all analytics data
+export const getAnalyticsData = (): AnalyticsData[] => {
+  const data = sessionStorage.getItem('analyticsData');
+  return data ? JSON.parse(data) : [];
 };

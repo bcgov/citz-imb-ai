@@ -6,7 +6,6 @@ import { assets } from '@/assets/icons/assets';
 import {
   initAnalytics,
   trackSourceClick,
-  getAnalyticsData,
   saveAnalytics,
 } from '@/utils/analytics';
 import { Context } from '@/context/Context';
@@ -63,8 +62,8 @@ const AnswerSection: React.FC = () => {
   // Handle click on a source card
   const handleCardClick = (item: TopKItem, index: number) => {
     setSelectedItem(item);
-    trackSourceClick(index);
-    console.log('Current Analytics Data:', getAnalyticsData());
+    const promptIndex = messages.filter((msg) => msg.type === 'ai').length - 1;
+    trackSourceClick(promptIndex, index);
   };
 
   // Close the modal
