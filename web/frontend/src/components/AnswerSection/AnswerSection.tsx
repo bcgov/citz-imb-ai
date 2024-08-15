@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './AnswerSection.scss';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import { assets } from '@/assets/icons/assets';
+import {
+  initAnalytics,
+  trackSourceClick,
+  getAnalyticsData,
+  saveAnalytics,
+} from '@/utils/analytics';
+import { Context } from '@/context/Context';
+import { getUserId } from '@/utils/auth';
 
-interface TopKItem {
+export interface TopKItem {
   ActId: string;
   Regulations: string | null;
   score: number;
@@ -14,39 +22,34 @@ interface TopKItem {
   url: string | null;
 }
 
-interface Message {
-  type: 'user' | 'ai';
-  content: string;
-  topk?: TopKItem[];
-}
-
-interface AnswerSectionProps {
-  message: Message;
-  isLastMessage: boolean;
-  generationComplete: boolean;
-}
-
-const AnswerSection: React.FC<AnswerSectionProps> = ({
-  message,
-  isLastMessage,
-  generationComplete,
-}) => {
+const AnswerSection: React.FC = () => {
+  const context = useContext(Context);
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
-  const [isAnswerComplete, setIsAnswerComplete] = useState(false);
-  const [showSources, setShowSources] = useState(true);
+
+  if (!context) {
+    throw new Error('AnswerSection must be used within a ContextProvider');
+  }
+
+  const { messages, generationComplete } = context;
+  const userId = getUserId();
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
     if (generationComplete) {
-      timer = setTimeout(() => {
-        setIsAnswerComplete(true);
-      }, 500);
+      const aiMessages = messages.filter((msg) => msg.type === 'ai');
+      if (aiMessages.length > 0) {
+        const lastAiMessage = aiMessages[aiMessages.length - 1];
+        if (lastAiMessage.topk) {
+          initAnalytics(userId, lastAiMessage.topk);
+          saveAnalytics();
+        }
+      }
     }
-    return () => clearTimeout(timer);
-  }, [generationComplete]);
+  }, [generationComplete, messages, userId]);
 
-  const handleCardClick = (item: TopKItem) => {
+  const handleCardClick = (item: TopKItem, index: number) => {
     setSelectedItem(item);
+    trackSourceClick(index);
+    console.log('Current Analytics Data:', getAnalyticsData());
   };
 
   const handleCloseModal = () => {
@@ -93,43 +96,44 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 
   return (
     <div className="answer-section">
-      <div className="message-title">
-        <img src={assets.bc_icon} alt="BC AI" />
-        <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
-      </div>
-      {message.topk && message.topk.length > 0 && (
-        <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
-          <h3
-            onClick={() => setShowSources(!showSources)}
-            style={{ cursor: 'pointer' }}
-          >
-            Sources
-            <img
-              src={assets.down_arrow}
-              alt={showSources ? 'Hide sources' : 'Show sources'}
-              className={`chevron-icon ${showSources ? '' : 'rotated'}`}
-            />
-          </h3>
-          <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
-            <div className="topk-cards">
-              {message.topk.map((item, index) => (
+      {messages.map(
+        (message, index) =>
+          message.type === 'ai' && (
+            <div key={index}>
+              <div className="message-title">
+                <img src={assets.bc_icon} alt="BC AI" />
+                <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
+              </div>
+              {message.topk && message.topk.length > 0 && (
                 <div
-                  key={index}
-                  className="topk-card"
-                  onClick={() => handleCardClick(item)}
+                  className={`sources-section ${generationComplete ? 'fade-in' : ''}`}
                 >
-                  <h3>{item.ActId}</h3>
-                  <p className="truncated-text">
-                    {truncateText(item.text, 100)}
-                  </p>
-                  <span className="card-number">{index + 1}</span>
+                  <h3>Sources</h3>
+                  <div className="topk-container">
+                    <div className="topk-cards">
+                      {message.topk.map((item, index) => (
+                        <div
+                          key={index}
+                          className="topk-card"
+                          onClick={() => handleCardClick(item, index)}
+                        >
+                          <h3>{item.ActId}</h3>
+                          <p className="truncated-text">
+                            {truncateText(item.text, 100)}
+                          </p>
+                          <span className="card-number">{index + 1}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              ))}
+              )}
+              {index === messages.length - 1 && generationComplete && (
+                <FeedbackBar />
+              )}
             </div>
-          </div>
-        </div>
+          ),
       )}
-      {isLastMessage && generationComplete && <FeedbackBar />}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}

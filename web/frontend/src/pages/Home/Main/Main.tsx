@@ -7,12 +7,6 @@ import AnswerSection from '@/components/AnswerSection/AnswerSection';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import { Link } from 'react-router-dom';
-import { getUserId } from '@/utils/auth';
-
-type Message = {
-  type: 'user' | 'ai';
-  content: string;
-};
 
 const Main = () => {
   const context = useContext(Context);
@@ -125,7 +119,7 @@ const Main = () => {
   };
 
   const renderMessages = () => {
-    const allMessages: Message[] = [
+    const allMessages = [
       ...messages,
       ...(pendingMessage
         ? [{ type: 'user' as const, content: pendingMessage }]
@@ -140,12 +134,7 @@ const Main = () => {
             <p>{message.content}</p>
           </div>
         ) : (
-          <AnswerSection
-            message={message}
-            isLastMessage={index === allMessages.length - 1}
-            generationComplete={generationComplete}
-            userId={getUserId()}
-          />
+          <AnswerSection />
         )}
       </div>
     ));
