@@ -1,5 +1,6 @@
 import { TopKItem } from '@/components/AnswerSection/AnswerSection';
 
+// Define the structure for analytics data
 interface AnalyticsData {
   timestamp: string;
   userId: string;
@@ -13,8 +14,10 @@ interface AnalyticsData {
   }[];
 }
 
+// Store analytics data in memory
 let analyticsData: AnalyticsData | null = null;
 
+// Initialize analytics data with user interaction details
 export const initAnalytics = (
   userId: string,
   topk: TopKItem[] | undefined,
@@ -37,6 +40,7 @@ export const initAnalytics = (
   };
 };
 
+// Track when a user clicks on a source
 export const trackSourceClick = (key: number) => {
   if (analyticsData) {
     const sourceIndex = analyticsData.sources.findIndex((s) => s.key === key);
@@ -48,6 +52,7 @@ export const trackSourceClick = (key: number) => {
   }
 };
 
+// Save analytics data (currently just logs to console)
 export const saveAnalytics = async () => {
   if (analyticsData) {
     try {
@@ -60,6 +65,7 @@ export const saveAnalytics = async () => {
   }
 };
 
+// Retrieve the current analytics data
 export const getAnalyticsData = () => {
   return analyticsData;
 };

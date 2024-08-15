@@ -12,6 +12,7 @@ import {
 import { Context } from '@/context/Context';
 import { getUserId } from '@/utils/auth';
 
+// Define the structure for TopKItem
 export interface TopKItem {
   ActId: string;
   Regulations: string | null;
@@ -33,6 +34,7 @@ const AnswerSection: React.FC = () => {
   const { messages, generationComplete } = context;
   const userId = getUserId();
 
+  // Initialize analytics when the AI generation is complete
   const initializeAnalytics = () => {
     const aiMessages = messages.filter((msg) => msg.type === 'ai');
     const userMessages = messages.filter((msg) => msg.type === 'user');
@@ -51,22 +53,26 @@ const AnswerSection: React.FC = () => {
     }
   };
 
+  // Call initializeAnalytics when generation is complete
   useEffect(() => {
     if (generationComplete) {
       initializeAnalytics();
     }
   }, [generationComplete, messages, userId]);
 
+  // Handle click on a source card
   const handleCardClick = (item: TopKItem, index: number) => {
     setSelectedItem(item);
     trackSourceClick(index);
     console.log('Current Analytics Data:', getAnalyticsData());
   };
 
+  // Close the modal
   const handleCloseModal = () => {
     setSelectedItem(null);
   };
 
+  // Format the description for the modal
   const formatDescription = (item: TopKItem) => (
     <div>
       <p>
@@ -100,13 +106,16 @@ const AnswerSection: React.FC = () => {
     </div>
   );
 
+  // Truncate text to a specified length
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) return text;
     return text.slice(0, maxLength) + '...';
   };
 
+  // Render the component
   return (
     <div className="answer-section">
+      {/* Render AI messages and sources */}
       {messages.map(
         (message, index) =>
           message.type === 'ai' && (
@@ -145,6 +154,7 @@ const AnswerSection: React.FC = () => {
             </div>
           ),
       )}
+      {/* Render modal for selected item */}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}
