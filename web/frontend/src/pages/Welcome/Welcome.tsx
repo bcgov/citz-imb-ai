@@ -13,9 +13,9 @@ const Welcome = () => {
     <div className="welcome-page">
       <div className="heading">
         <h1>
-          Chat with <span>BC AI</span>
+          Chat with <span>BC Laws</span>
         </h1>
-        <h3>Experience BC's AI model in your browser.</h3>
+        <h3>Experience BC Laws AI chat model in your browser.</h3>
         <button className="start-button" onClick={handleLogin}>
           Login
         </button>
