@@ -17,11 +17,7 @@ TRULENS_HOST = os.getenv('TRULENS_HOST')
 
 # Define a function to print the loaded environment variables (for debugging or logging)
 def print_env_variables():
-    print(f"TRULENS_USER: {TRULENS_USER}")
-    print(f"TRULENS_PASSWORD: {TRULENS_PASSWORD}")
-    print(f"TRULENS_DB: {TRULENS_DB}")
-    print(f"TRULENS_PORT: {TRULENS_PORT}")
-    print(f"TRULENS_HOST: {TRULENS_HOST}")
+    return f'Trulens environment variables loaded'
 
 # Define the DAG
 default_args = {
@@ -35,6 +31,7 @@ dag = DAG(
     default_args=default_args,
     description='A DAG to initialize DBT with Vault secrets',
     schedule_interval='@daily',
+    tags=['dbt', 'trulens','bclaws', 'bclaws_analytics'],
 )
 
 # Task to print the environment variables (optional for debugging)
@@ -54,7 +51,11 @@ move_profiles_yml = BashOperator(
 # Task to run the DBT command
 run_dbt = BashOperator(
     task_id='run_dbt_command',
-    bash_command='/home/airflow/.local/bin/dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/trulens',
+    bash_command='''
+    source /opt/airflow/dbt_venv/bin/activate
+    /home/airflow/.local/bin/dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/trulens
+    deactivate
+    ''',
     env={
         'DBT_USER': TRULENS_USER if TRULENS_USER else 'postgres',
         'DBT_PASSWORD': TRULENS_PASSWORD if TRULENS_PASSWORD else 'root',
