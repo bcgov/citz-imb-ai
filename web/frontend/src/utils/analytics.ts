@@ -27,97 +27,96 @@ interface AnalyticsData {
   chats: ChatInteraction[];
 }
 
-// Initialize analytics data with session and user details
-export const initAnalytics = (userId: string) => {
-  // Check if analytics data already exists in sessionStorage
-  const existingData = sessionStorage.getItem('analyticsData');
-  if (existingData) {
-    return; // Analytics already initialized, do nothing
-  }
+const ANALYTICS_STORAGE_KEY = 'analyticsData';
 
-  const sessionId = new Date().toISOString(); // Implement this function to generate a unique session ID
-  const analyticsData: AnalyticsData = {
-    sessionId,
-    userId,
-    chats: [],
-  };
-  sessionStorage.setItem('analyticsData', JSON.stringify(analyticsData));
+const getAnalyticsData = (): AnalyticsData => {
+  const data = sessionStorage.getItem(ANALYTICS_STORAGE_KEY);
+  return data ? JSON.parse(data) : { sessionId: '', userId: '', chats: [] };
 };
 
-// Add a new chat interaction
+const setAnalyticsData = (data: AnalyticsData): void => {
+  sessionStorage.setItem(ANALYTICS_STORAGE_KEY, JSON.stringify(data));
+};
+
+const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
+  const data = getAnalyticsData();
+  updater(data);
+  setAnalyticsData(data);
+};
+
+export const initAnalytics = (userId: string): void => {
+  const existingData = getAnalyticsData();
+  if (existingData.userId) return;
+
+  setAnalyticsData({
+    sessionId: new Date().toISOString(),
+    userId,
+    chats: [],
+  });
+};
+
 export const addChatInteraction = (
   userPrompt: string,
   llmResponse: string,
   topk: TopKItem[] | undefined,
-) => {
-  const analyticsData: AnalyticsData = JSON.parse(
-    sessionStorage.getItem('analyticsData') || '{}',
-  );
-
-  const newChat: ChatInteraction = {
-    timestamp: new Date().toISOString(),
-    userPrompt,
-    llmResponse,
-    llmResponseInteraction: {
-      hoverDuration: 0,
-      clicks: 0,
-      lastClickTimestamp: '',
-    },
-    sources: topk
-      ? topk.map((item, index) => ({
+): number => {
+  let newChatIndex = -1;
+  updateAnalyticsData((data) => {
+    const newChat: ChatInteraction = {
+      timestamp: new Date().toISOString(),
+      userPrompt,
+      llmResponse,
+      llmResponseInteraction: {
+        hoverDuration: 0,
+        clicks: 0,
+        lastClickTimestamp: '',
+      },
+      sources:
+        topk?.map((item, index) => ({
           key: index,
           source: item,
           clicks: 0,
           lastClickTimestamp: '',
-        }))
-      : [],
-  };
-
-  analyticsData.chats.push(newChat);
-  sessionStorage.setItem('analyticsData', JSON.stringify(analyticsData));
-  return analyticsData.chats.length - 1; // Return the index of the new chat
+        })) || [],
+    };
+    data.chats.push(newChat);
+    newChatIndex = data.chats.length - 1;
+  });
+  return newChatIndex;
 };
 
-// Track when a user clicks on a source
-export const trackSourceClick = (chatIndex: number, sourceKey: number) => {
-  const analyticsData: AnalyticsData = JSON.parse(
-    sessionStorage.getItem('analyticsData') || '{}',
-  );
-  const sourceIndex = analyticsData.chats[chatIndex].sources.findIndex(
-    (s) => s.key === sourceKey,
-  );
-
-  if (sourceIndex !== -1) {
-    analyticsData.chats[chatIndex].sources[sourceIndex].clicks++;
-    analyticsData.chats[chatIndex].sources[sourceIndex].lastClickTimestamp =
-      new Date().toISOString();
-    sessionStorage.setItem('analyticsData', JSON.stringify(analyticsData));
-  }
+export const trackSourceClick = (
+  chatIndex: number,
+  sourceKey: number,
+): void => {
+  updateAnalyticsData((data) => {
+    const sourceIndex = data.chats[chatIndex]?.sources.findIndex(
+      (s) => s.key === sourceKey,
+    );
+    if (sourceIndex !== -1) {
+      const source = data.chats[chatIndex].sources[sourceIndex];
+      source.clicks++;
+      source.lastClickTimestamp = new Date().toISOString();
+    }
+  });
 };
 
-// Track LLM response interactions
 export const trackLLMResponseInteraction = (
   chatIndex: number,
   interactionType: 'hover' | 'click',
   duration?: number,
-) => {
-  const analyticsData: AnalyticsData = JSON.parse(
-    sessionStorage.getItem('analyticsData') || '{}',
-  );
-
-  if (interactionType === 'hover') {
-    analyticsData.chats[chatIndex].llmResponseInteraction.hoverDuration +=
-      duration || 0;
-  } else if (interactionType === 'click') {
-    analyticsData.chats[chatIndex].llmResponseInteraction.clicks++;
-    analyticsData.chats[chatIndex].llmResponseInteraction.lastClickTimestamp =
-      new Date().toISOString();
-  }
-
-  sessionStorage.setItem('analyticsData', JSON.stringify(analyticsData));
+): void => {
+  updateAnalyticsData((data) => {
+    const interaction = data.chats[chatIndex]?.llmResponseInteraction;
+    if (interaction) {
+      if (interactionType === 'hover') {
+        interaction.hoverDuration += duration || 0;
+      } else if (interactionType === 'click') {
+        interaction.clicks++;
+        interaction.lastClickTimestamp = new Date().toISOString();
+      }
+    }
+  });
 };
 
-// Retrieve all analytics data
-export const getAnalyticsData = (): AnalyticsData => {
-  return JSON.parse(sessionStorage.getItem('analyticsData') || '{}');
-};
+export { getAnalyticsData };
