@@ -33,6 +33,7 @@ install_dbt = BashOperator(
     bash_command='''
     source /opt/airflow/dbt_venv/bin/activate
     pip install dbt-core
+    pip install dbt-postgres
     deactivate
     ''',
     dag=dag,
