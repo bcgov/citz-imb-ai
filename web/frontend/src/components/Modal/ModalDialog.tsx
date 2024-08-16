@@ -1,6 +1,7 @@
 import React from 'react';
 import './ModalDialog.scss';
 
+// Interface for ModalDialog props
 interface ModalDialogProps {
   title: string;
   description: React.ReactNode;
@@ -15,6 +16,7 @@ interface ModalDialogProps {
   closeOnOutsideClick?: boolean;
 }
 
+// ModalDialog component
 const ModalDialog: React.FC<ModalDialogProps> = ({
   title,
   description,
@@ -22,21 +24,26 @@ const ModalDialog: React.FC<ModalDialogProps> = ({
   option2,
   closeOnOutsideClick = false,
 }) => {
+  // Function to handle clicks on the overlay
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (closeOnOutsideClick && e.target === e.currentTarget) {
       option1?.onClick();
     }
   };
 
+  // Render the modal dialog
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-dialog">
+        {/* Modal header */}
         <div className="modal-header">
           <span className="modal-title">{title}</span>
         </div>
+        {/* Modal body */}
         <div className="modal-body">
           <div className="modal-description">{description}</div>
         </div>
+        {/* Modal footer with action buttons */}
         <div className="modal-footer">
           {option1 && (
             <button

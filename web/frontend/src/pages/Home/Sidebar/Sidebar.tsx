@@ -4,15 +4,21 @@ import { Context } from '@/context/Context';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import './Sidebar.scss';
 
+// Sidebar component
 const Sidebar = () => {
+  // State for sidebar collapse and modal visibility
   const [isCollapsed] = useState(true);
   const [isModalVisible, setIsModalVisible] = useState(false);
+
+  // Use context for global state management
   const context = useContext(Context);
 
+  // Ensure context is available
   if (!context) {
     throw new Error('Sidebar must be used within a ContextProvider');
   }
 
+  // Destructure context values
   const {
     onSent,
     prevPrompts,
@@ -22,20 +28,24 @@ const Sidebar = () => {
     KeycloakLogout,
   } = context;
 
+  // Function to load a previous prompt
   const loadPrompt = async (prompt: string) => {
     await onSent(prompt);
     setRecentPrompt(prompt);
   };
 
+  // Function to toggle sidebar
   // const toggleSidebar = () => {
   //   setIsCollapsed(!isCollapsed);
   // };
 
+  // Function to handle user logout
   const handleLogout = () => {
     resetContext();
     KeycloakLogout();
   };
 
+  // Functions to open and close the modal
   const openModal = () => {
     setIsModalVisible(true);
   };
@@ -44,17 +54,21 @@ const Sidebar = () => {
     setIsModalVisible(false);
   };
 
+  // Render the sidebar component
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
+      {/* Sidebar header */}
       {/* <div className="sidebar-header" title="Menu" onClick={toggleSidebar}>
         <img src={assets.menu_icon} className="menu-icon" alt="menu icon" />
       </div> */}
 
+      {/* New chat button */}
       <div onClick={() => newChat()} className="new-chat" title="New Chat">
         <img src={assets.plus_icon} alt="new chat" />
         {!isCollapsed ? <p>New Chat</p> : null}
       </div>
 
+      {/* Recent prompts section (visible when expanded) */}
       {!isCollapsed ? (
         <div className="recent">
           <p className="recent-title">Recent</p>
@@ -75,11 +89,13 @@ const Sidebar = () => {
         </div>
       ) : null}
 
+      {/* Logout button */}
       <div onClick={openModal} className="bottom" title="Logout">
         <img src={assets.user_icon} alt="user" />
         {!isCollapsed ? <p>Logout</p> : null}
       </div>
 
+      {/* Logout confirmation modal */}
       {isModalVisible && (
         <ModalDialog
           title="Logout"

@@ -1,26 +1,32 @@
+// Main container for the answer section
 .answer-section {
+  // Styles for the message title
   .message-title {
     display: flex;
     align-items: start;
     gap: 20px;
 
+    // Styles for the BC AI icon
     img {
       width: 40px;
       margin-top: 10px;
     }
 
+    // Styles for the message content
     p {
       word-wrap: break-word;
       overflow: auto;
     }
   }
 
+  // Styles for the sources section
   .sources-section {
     margin-left: 60px;
     margin-bottom: 50px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 
+    // Styles for the "Sources" heading
     h3 {
       margin-bottom: 10px;
       font-size: 18px;
@@ -28,22 +34,26 @@
       display: flex;
       align-items: center;
 
+      // Styles for the chevron icon
       .chevron-icon {
         margin-left: 8px;
         width: 24px;
         height: 24px;
         transition: transform 0.3s ease;
 
+        // Rotate the chevron icon when sources are hidden
         &.rotated {
           transform: rotate(180deg);
         }
       }
     }
 
+    // Fade in animation for the sources section
     &.fade-in {
       opacity: 1;
     }
 
+    // Container for the top-k results
     .topk-container {
       overflow: hidden;
       transition:
@@ -52,6 +62,7 @@
       max-height: 1000px;
       opacity: 1;
 
+      // Hide the top-k container
       &.hide {
         max-height: 0;
         opacity: 0;
@@ -59,10 +70,12 @@
     }
   }
 
+  // Additional styles for the top-k container
   .topk-container {
     margin-top: 10px;
   }
 
+  // Styles for the top-k cards container
   .topk-cards {
     display: flex;
     overflow-x: auto;
@@ -70,6 +83,7 @@
     scrollbar-width: thin;
     scrollbar-color: var(--main-scrollbar-color) transparent;
 
+    // Webkit scrollbar styles
     &::-webkit-scrollbar {
       height: 8px;
     }
@@ -84,6 +98,7 @@
     }
   }
 
+  // Styles for individual top-k cards
   .topk-card {
     position: relative;
     flex: 0 0 auto;
@@ -99,11 +114,13 @@
       background-color 0.2s;
     overflow: hidden;
 
+    // Hover effects for top-k cards
     &:hover {
       transform: translateY(-5px);
       background-color: var(--main-hover-color);
     }
 
+    // Styles for the card title
     h3 {
       margin: 0 0 10px 0;
       font-size: 16px;
@@ -113,6 +130,7 @@
       text-overflow: ellipsis;
     }
 
+    // Styles for the truncated text in the card
     .truncated-text {
       margin: 0;
       font-size: 14px;
@@ -124,6 +142,7 @@
       text-overflow: ellipsis;
     }
 
+    // Styles for the card number
     .card-number {
       position: absolute;
       bottom: 10px;

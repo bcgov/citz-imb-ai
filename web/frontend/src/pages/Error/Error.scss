@@ -1,3 +1,4 @@
+// Main container for the error page
 .error-page {
   display: flex;
   flex-direction: column;
@@ -9,6 +10,7 @@
   overflow: hidden;
   gap: 20px;
 
+  // Styles for the heading section
   .heading {
     display: flex;
     flex-direction: column;
@@ -18,6 +20,7 @@
     text-align: center;
     animation: slideIn 1s ease-in-out;
 
+    // Styles for the main error title
     h1 {
       font-size: 7rem;
       line-height: 110%;
@@ -27,6 +30,7 @@
       transition: 0.4s;
       animation: slideIn 1.2s ease-in-out;
 
+      // Gradient text effect for the error message
       span {
         background: linear-gradient(
           60deg,
@@ -39,6 +43,7 @@
       }
     }
 
+    // Styles for the error description
     h3 {
       margin: 20px;
       font-size: 1.375rem;
@@ -47,6 +52,7 @@
     }
   }
 
+  // Styles for the "Go Back" button
   .back-button {
     background-color: var(--button-bg-color-red);
     color: var(--text-color);
@@ -69,6 +75,7 @@
     }
   }
 
+  // Media query for smaller screens
   @media screen and (max-width: 800px) {
     .heading {
       h1 {
@@ -83,6 +90,7 @@
   }
 }
 
+// Keyframe animations for fading in and sliding in elements
 @keyframes fadeIn {
   0% {
     opacity: 0;

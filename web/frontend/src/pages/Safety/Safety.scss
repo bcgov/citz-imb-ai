@@ -1,3 +1,4 @@
+// Main container for the safety page
 .safety-page {
   min-height: 100vh;
   background-color: var(--main-background-color);
@@ -5,12 +6,14 @@
   overflow-y: auto;
 }
 
+// Content wrapper for the safety page
 .safety-content {
   padding: 20px;
   transition: margin-left 0.3s ease;
   animation: safetyFadeIn 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+// Main container for the safety content
 .safety-main-container {
   max-width: 1000px;
   margin: auto;
@@ -18,6 +21,7 @@
   animation: safetyFadeIn 0.5s ease-in-out;
 }
 
+// Styles for the back button
 .safety-back-button {
   display: inline-block;
   background-color: var(--button-bg-color);
@@ -43,6 +47,7 @@
   }
 }
 
+// Styles for the main greeting section
 .safety-greet {
   font-size: 80px;
   color: var(--main-secondary-text-color);
@@ -53,6 +58,7 @@
   letter-spacing: -1px;
   text-align: center;
 
+  // Gradient text effect for the span
   span {
     background: -webkit-linear-gradient(
       16deg,
@@ -73,6 +79,7 @@
   }
 }
 
+// Styles for the introduction alert section
 .safety-intro-alert {
   padding: 10px 20px;
   margin-bottom: 20px;
@@ -93,6 +100,7 @@
   }
 }
 
+// Grid layout for safety cards
 .safety-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -101,6 +109,7 @@
   animation: safetyFadeIn 0.5s ease-in-out;
 }
 
+// Styles for individual safety cards
 .safety-card {
   height: auto;
   padding: 20px;
@@ -131,6 +140,7 @@
   }
 }
 
+// General styles for h2 elements in the safety page
 .safety-page h2 {
   color: var(--main-result-text-color);
   margin-top: 20px;
@@ -138,6 +148,7 @@
   font-size: 32px;
 }
 
+// General styles for p elements in the safety page
 .safety-page p {
   color: var(--main-text-color);
   font-size: 18px;
@@ -145,6 +156,7 @@
   margin-bottom: 15px;
 }
 
+// Keyframe animation for fading in elements
 @keyframes safetyFadeIn {
   0% {
     opacity: 0;

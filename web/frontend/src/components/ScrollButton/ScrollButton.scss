@@ -1,8 +1,10 @@
+// Container for the scroll button
 .scroll-button-container {
   position: relative;
   height: 100%;
 }
 
+// Styles for the scroll button
 .scroll-button {
   position: absolute;
   bottom: 0px;
@@ -17,6 +19,7 @@
   z-index: 100;
   height: 40px;
 
+  // Hover and active states
   &:hover {
     background-color: var(--sidebar-hover-color);
   }
@@ -25,12 +28,14 @@
     background-color: var(--sidebar-hover-color-active);
   }
 
+  // Styles for the scroll icon
   img {
     width: 20px;
     height: 20px;
   }
 }
 
+// Tooltip styles for the scroll button
 .scroll-button:hover::after {
   content: attr(title);
   position: absolute;

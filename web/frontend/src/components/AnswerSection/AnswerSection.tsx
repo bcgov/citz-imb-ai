@@ -1,10 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useContext,
+  useRef,
+  useCallback,
+} from 'react';
 import './AnswerSection.scss';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import { assets } from '@/assets/icons/assets';
+import {
+  initAnalytics,
+  addChatInteraction,
+  trackSourceClick,
+  trackLLMResponseInteraction,
+} from '@/utils/analytics';
+import { Context } from '@/context/Context';
+import { getUserId } from '@/utils/auth';
+import { debounce } from '@/utils/debounce';
 
-interface TopKItem {
+// Interfaces
+export interface TopKItem {
   ActId: string;
   Regulations: string | null;
   score: number;
@@ -14,89 +30,178 @@ interface TopKItem {
   url: string | null;
 }
 
-interface Message {
-  type: 'user' | 'ai';
-  content: string;
-  topk?: TopKItem[];
-}
-
 interface AnswerSectionProps {
-  message: Message;
+  message: {
+    content: string;
+    topk?: TopKItem[];
+  };
   isLastMessage: boolean;
   generationComplete: boolean;
+  recording_id: string;
 }
 
+// Component for displaying AI-generated answers and related sources
 const AnswerSection: React.FC<AnswerSectionProps> = ({
   message,
   isLastMessage,
   generationComplete,
+  recording_id,
 }) => {
+  const context = useContext(Context);
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
   const [isAnswerComplete, setIsAnswerComplete] = useState(false);
   const [showSources, setShowSources] = useState(true);
+  const [hoverStartTime, setHoverStartTime] = useState<number | null>(null);
+  const [chatIndex, setChatIndex] = useState<number | null>(null);
+  const analyticsInitialized = useRef(false);
 
+  // Ensure the component is used within a ContextProvider
+  if (!context) {
+    throw new Error('AnswerSection must be used within a ContextProvider');
+  }
+
+  // Get user ID and messages from context
+  const userId = getUserId();
+  const { messages } = context;
+
+  // Create a debounced version of the hover tracking function
+  const debouncedTrackHover = useRef(
+    debounce((chatIndex: number, duration: number) => {
+      trackLLMResponseInteraction(chatIndex, 'hover', duration);
+    }, 500),
+  ).current;
+
+  // Initialize analytics on component mount
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (generationComplete) {
-      timer = setTimeout(() => {
-        setIsAnswerComplete(true);
-      }, 500);
+    if (!analyticsInitialized.current) {
+      initAnalytics(userId);
+      analyticsInitialized.current = true;
     }
-    return () => clearTimeout(timer);
+  }, [userId]);
+
+  // Record chat interaction when generation is complete
+  useEffect(() => {
+    if (generationComplete && isLastMessage) {
+      const aiMessages = messages.filter((msg) => msg.type === 'ai');
+      const userMessages = messages.filter((msg) => msg.type === 'user');
+      if (aiMessages.length > 0 && userMessages.length > 0) {
+        const lastAiMessage = aiMessages[aiMessages.length - 1];
+        const lastUserMessage = userMessages[userMessages.length - 1];
+        const newChatIndex = addChatInteraction(
+          lastUserMessage.content,
+          lastAiMessage.content,
+          recording_id,
+          lastAiMessage.topk,
+        );
+        setChatIndex(newChatIndex);
+      }
+    }
+  }, [generationComplete, isLastMessage, messages, recording_id]);
+
+  // Show answer complete animation after a delay
+  useEffect(() => {
+    if (generationComplete) {
+      const timer = setTimeout(() => setIsAnswerComplete(true), 500);
+      return () => clearTimeout(timer);
+    }
+    return () => {};
   }, [generationComplete]);
 
-  const handleCardClick = (item: TopKItem) => {
-    setSelectedItem(item);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedItem(null);
-  };
-
-  const formatDescription = (item: TopKItem) => (
-    <div>
-      <p>
-        <strong>Score:</strong> {item.score || 'N/A'}
-      </p>
-      <p>
-        <strong>Act ID:</strong> {item.ActId || 'N/A'}
-      </p>
-      <p>
-        <strong>Section Name:</strong> {item.sectionName || 'N/A'}
-      </p>
-      <p>
-        <strong>Section ID:</strong> {item.sectionId || 'N/A'}
-      </p>
-      <p>
-        <strong>Regulations:</strong> {item.Regulations || 'N/A'}
-      </p>
-      <p>
-        <strong>URL:</strong>{' '}
-        {item.url ? (
-          <a href={item.url} target="_blank" rel="noopener noreferrer">
-            {item.url}
-          </a>
-        ) : (
-          'N/A'
-        )}
-      </p>
-      <p>
-        <strong>Text:</strong> {item.text || 'N/A'}
-      </p>
-    </div>
+  // Event handlers
+  const handleCardClick = useCallback(
+    (item: TopKItem, index: number) => {
+      setSelectedItem(item);
+      if (chatIndex !== null) {
+        trackSourceClick(chatIndex, index);
+      }
+    },
+    [chatIndex],
   );
 
-  const truncateText = (text: string, maxLength: number) => {
-    if (text.length <= maxLength) return text;
-    return text.slice(0, maxLength) + '...';
-  };
+  // Handles hover tracking for the LLM response
+  const handleLLMResponseHover = useCallback(
+    (isHovering: boolean) => {
+      if (chatIndex === null) return;
+
+      if (isHovering) {
+        setHoverStartTime(Date.now());
+      } else if (hoverStartTime !== null) {
+        const hoverDuration = Date.now() - hoverStartTime;
+        debouncedTrackHover(chatIndex, hoverDuration);
+        setHoverStartTime(null);
+      }
+    },
+    [chatIndex, hoverStartTime, debouncedTrackHover],
+  );
+
+  // Handles click tracking for the LLM response
+  const handleLLMResponseClick = useCallback(() => {
+    if (chatIndex !== null) {
+      trackLLMResponseInteraction(chatIndex, 'click');
+    }
+  }, [chatIndex]);
+
+  // Handles closing the modal
+  const handleCloseModal = useCallback(() => {
+    setSelectedItem(null);
+  }, []);
+
+  // Formats the description for the modal
+  const formatDescription = useCallback(
+    (item: TopKItem) => (
+      <div>
+        <p>
+          <strong>Score:</strong> {item.score || 'N/A'}
+        </p>
+        <p>
+          <strong>Act ID:</strong> {item.ActId || 'N/A'}
+        </p>
+        <p>
+          <strong>Section Name:</strong> {item.sectionName || 'N/A'}
+        </p>
+        <p>
+          <strong>Section ID:</strong> {item.sectionId || 'N/A'}
+        </p>
+        <p>
+          <strong>Regulations:</strong> {item.Regulations || 'N/A'}
+        </p>
+        <p>
+          <strong>URL:</strong>{' '}
+          {item.url ? (
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              {item.url}
+            </a>
+          ) : (
+            'N/A'
+          )}
+        </p>
+        <p>
+          <strong>Text:</strong> {item.text || 'N/A'}
+        </p>
+      </div>
+    ),
+    [],
+  );
+
+  // Truncates text to a maximum length
+  const truncateText = useCallback((text: string, maxLength: number) => {
+    return text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
+  }, []);
 
   return (
     <div className="answer-section">
-      <div className="message-title">
+      {/* AI response */}
+      <div
+        className="message-title"
+        onMouseEnter={() => handleLLMResponseHover(true)}
+        onMouseLeave={() => handleLLMResponseHover(false)}
+        onClick={handleLLMResponseClick}
+      >
         <img src={assets.bc_icon} alt="BC AI" />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
+
+      {/* Sources section */}
       {message.topk && message.topk.length > 0 && (
         <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
           <h3
@@ -116,7 +221,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
                 <div
                   key={index}
                   className="topk-card"
-                  onClick={() => handleCardClick(item)}
+                  onClick={() => handleCardClick(item, index)}
                 >
                   <h3>{item.ActId}</h3>
                   <p className="truncated-text">
@@ -129,7 +234,11 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
           </div>
         </div>
       )}
+
+      {/* Feedback bar */}
       {isLastMessage && generationComplete && <FeedbackBar />}
+
+      {/* Modal for displaying source details */}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}

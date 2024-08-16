@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -9,18 +8,22 @@ import Welcome from '@/pages/Welcome/Welcome';
 import Main from '@/pages/Home/Main/Main';
 import Error from '@/pages/Error/Error';
 import Safety from '@/pages/Safety/Safety';
-import { Context } from '@/context/Context';
+import { isAuthenticated } from '@/utils/auth';
 
 const App = () => {
-  const context = useContext(Context);
-  const isAuthenticated = context ? context.isAuthenticated : false;
+  // Check if the user is authenticated
+  const Authenticated = isAuthenticated();
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={isAuthenticated ? <Main /> : <Welcome />} />
+        {/* Route for the home page, conditionally rendering Main or Welcome based on authentication */}
+        <Route path="/" element={Authenticated ? <Main /> : <Welcome />} />
+        {/* Route for the error page */}
         <Route path="/error" element={<Error />} />
+        {/* Catch-all route that redirects to the error page */}
         <Route path="*" element={<Navigate to="/error" />} />
+        {/* Route for the safety page */}
         <Route path="/safety" element={<Safety />} />
       </Routes>
     </Router>

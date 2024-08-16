@@ -1,13 +1,16 @@
+// Main container for the feedback bar
 .feedback-bar {
   display: flex;
   justify-content: start;
   margin-left: 60px;
   margin-top: -30px;
 
+  // Container for feedback buttons
   .feedback-buttons {
     display: flex;
     gap: 20px;
 
+    // Styles for individual thumb buttons
     .thumb-button {
       background: none;
       border: none;
@@ -17,6 +20,7 @@
       transition: background-color 0.1s;
       animation: fadeIn 2.5s ease-in-out;
 
+      // Hover and active states
       &:hover {
         background-color: var(--sidebar-hover-color);
       }
@@ -25,21 +29,25 @@
         background-color: var(--sidebar-hover-color-active);
       }
 
+      // Styles for the thumb icon
       img {
         width: 20px;
         display: flex;
       }
     }
 
+    // Active state for thumb buttons
     .thumb-button.active {
       background-color: var(--sidebar-hover-color-active);
     }
   }
 }
 
+// Tooltip styles for thumb buttons
 .feedback-bar .thumb-button {
   position: relative;
 
+  // Show tooltip on hover
   &:hover::after {
     content: attr(title);
     position: absolute;
