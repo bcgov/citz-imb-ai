@@ -126,18 +126,27 @@ const Main = () => {
         : []),
     ];
 
-    return allMessages.map((message, index) => (
-      <div key={index} className={`message ${message.type}`}>
-        {message.type === 'user' ? (
-          <div className="message-title">
-            <img src={assets.user_icon} alt="" />
-            <p>{message.content}</p>
-          </div>
-        ) : (
-          <AnswerSection />
-        )}
-      </div>
-    ));
+    return allMessages.reduce((acc, message, index, array) => {
+      if (message.type === 'user') {
+        const aiResponse = array[index + 1];
+        acc.push(
+          <div key={index} className="message-group">
+            <div className={`message ${message.type}`}>
+              <div className="message-title">
+                <img src={assets.user_icon} alt="" />
+                <p>{message.content}</p>
+              </div>
+            </div>
+            {aiResponse && aiResponse.type === 'ai' && (
+              <div className={`message ${aiResponse.type}`}>
+                <AnswerSection message={aiResponse} key={`ai-${index}`} />
+              </div>
+            )}
+          </div>,
+        );
+      }
+      return acc;
+    }, [] as JSX.Element[]);
   };
 
   return (

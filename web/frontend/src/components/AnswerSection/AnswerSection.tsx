@@ -22,7 +22,14 @@ export interface TopKItem {
   url: string | null;
 }
 
-const AnswerSection: React.FC = () => {
+interface AnswerSectionProps {
+  message: {
+    content: string;
+    topk?: TopKItem[];
+  };
+}
+
+const AnswerSection: React.FC<AnswerSectionProps> = ({ message }) => {
   const context = useContext(Context);
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
 
@@ -41,13 +48,20 @@ const AnswerSection: React.FC = () => {
       const lastAiMessage = aiMessages[aiMessages.length - 1];
       const lastUserMessage = userMessages[userMessages.length - 1];
       if (lastAiMessage.topk) {
-        initAnalytics(
-          userId,
-          lastAiMessage.topk,
-          lastUserMessage.content,
-          lastAiMessage.content,
+        const existingData = sessionStorage.getItem('analyticsData');
+        const dataArray = existingData ? JSON.parse(existingData) : [];
+        const existingEntry = dataArray.find(
+          (entry: any) => entry.userPrompt === lastUserMessage.content,
         );
-        saveAnalytics();
+        if (!existingEntry) {
+          initAnalytics(
+            userId,
+            lastAiMessage.topk,
+            lastUserMessage.content,
+            lastAiMessage.content,
+          );
+          saveAnalytics();
+        }
       }
     }
   };
@@ -114,46 +128,35 @@ const AnswerSection: React.FC = () => {
   // Render the component
   return (
     <div className="answer-section">
-      {/* Render AI messages and sources */}
-      {messages.map(
-        (message, index) =>
-          message.type === 'ai' && (
-            <div key={index}>
-              <div className="message-title">
-                <img src={assets.bc_icon} alt="BC AI" />
-                <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
-              </div>
-              {message.topk && message.topk.length > 0 && (
+      <div className="message-title">
+        <img src={assets.bc_icon} alt="BC AI" />
+        <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
+      </div>
+      {message.topk && message.topk.length > 0 && (
+        <div
+          className={`sources-section ${generationComplete ? 'fade-in' : ''}`}
+        >
+          <h3>Sources</h3>
+          <div className="topk-container">
+            <div className="topk-cards">
+              {message.topk.map((item, index) => (
                 <div
-                  className={`sources-section ${generationComplete ? 'fade-in' : ''}`}
+                  key={index}
+                  className="topk-card"
+                  onClick={() => handleCardClick(item, index)}
                 >
-                  <h3>Sources</h3>
-                  <div className="topk-container">
-                    <div className="topk-cards">
-                      {message.topk.map((item, index) => (
-                        <div
-                          key={index}
-                          className="topk-card"
-                          onClick={() => handleCardClick(item, index)}
-                        >
-                          <h3>{item.ActId}</h3>
-                          <p className="truncated-text">
-                            {truncateText(item.text, 100)}
-                          </p>
-                          <span className="card-number">{index + 1}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <h3>{item.ActId}</h3>
+                  <p className="truncated-text">
+                    {truncateText(item.text, 100)}
+                  </p>
+                  <span className="card-number">{index + 1}</span>
                 </div>
-              )}
-              {index === messages.length - 1 && generationComplete && (
-                <FeedbackBar />
-              )}
+              ))}
             </div>
-          ),
+          </div>
+        </div>
       )}
-      {/* Render modal for selected item */}
+      {generationComplete && <FeedbackBar />}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}
