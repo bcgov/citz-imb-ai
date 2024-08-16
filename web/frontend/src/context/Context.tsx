@@ -10,6 +10,8 @@ interface Message {
   topk?: TopKItem[];
 }
 
+type userFeedbackType = 'up_vote' | 'down_vote' | 'no_vote';
+
 // Interface for TopKItem structure
 interface TopKItem {
   ActId: string;
@@ -50,7 +52,7 @@ interface ContextProps {
   isAuthenticated: boolean;
   KeycloakLogin: () => void;
   KeycloakLogout: () => void;
-  sendUserFeedback: (feedbackType: 'up_vote' | 'down_vote' | 'no_vote') => void;
+  sendUserFeedback: (feedbackType: userFeedbackType) => Promise<void>;
   generationComplete: boolean;
   recordingHash: string;
   errorState: {
@@ -109,9 +111,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   };
 
   // Function to send user feedback
-  const sendUserFeedback = async (
-    feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
-  ) => {
+  const sendUserFeedback = async (feedbackType: userFeedbackType) => {
     await sendFeedback(feedbackType, recordingHash);
   };
 
