@@ -236,6 +236,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setMessages([]);
     setGenerationComplete(false);
     sessionStorage.removeItem('chatHistory');
+    sessionStorage.removeItem('analyticsData');
   };
 
   // Function to refresh the Keycloak token
