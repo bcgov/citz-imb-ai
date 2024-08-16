@@ -8,5 +8,5 @@ trulens:
       user: "{{ env_var('TRULENS_USER', 'postgres') }}"
       pass: "{{ env_var('TRULENS_PASSWORD', 'root') }}"
       dbname: "{{ env_var('TRULENS_DB', 'postgres') }}"
-      schema: dbt
+      schema: public
   target: dev
