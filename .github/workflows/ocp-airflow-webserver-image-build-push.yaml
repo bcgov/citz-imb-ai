@@ -32,7 +32,7 @@ jobs:
     # Build the image
     - name: Build Image
       run: |
-        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build ocp_airflow_webserver
+        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build ocp_airflow_webserver
 
     # Tag the image
     - name: Tag Image
