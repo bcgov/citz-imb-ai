@@ -17,6 +17,7 @@ import {
 } from '@/utils/analytics';
 import { Context } from '@/context/Context';
 import { getUserId } from '@/utils/auth';
+import { debounce } from '@/utils/debounce';
 
 // Interfaces
 export interface TopKItem {
@@ -52,12 +53,21 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   const [chatIndex, setChatIndex] = useState<number | null>(null);
   const analyticsInitialized = useRef(false);
 
+  // Ensure the component is used within a ContextProvider
   if (!context) {
     throw new Error('AnswerSection must be used within a ContextProvider');
   }
 
-  const { messages } = context;
+  // Get user ID and messages from context
   const userId = getUserId();
+  const { messages } = context;
+
+  // Create a debounced version of the hover tracking function
+  const debouncedTrackHover = useRef(
+    debounce((chatIndex: number, duration: number) => {
+      trackLLMResponseInteraction(chatIndex, 'hover', duration);
+    }, 500),
+  ).current;
 
   // Initialize analytics on component mount
   useEffect(() => {
@@ -105,6 +115,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     [chatIndex],
   );
 
+  // Handles hover tracking for the LLM response
   const handleLLMResponseHover = useCallback(
     (isHovering: boolean) => {
       if (chatIndex === null) return;
@@ -113,19 +124,21 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         setHoverStartTime(Date.now());
       } else if (hoverStartTime !== null) {
         const hoverDuration = Date.now() - hoverStartTime;
-        trackLLMResponseInteraction(chatIndex, 'hover', hoverDuration);
+        debouncedTrackHover(chatIndex, hoverDuration);
         setHoverStartTime(null);
       }
     },
-    [chatIndex, hoverStartTime],
+    [chatIndex, hoverStartTime, debouncedTrackHover],
   );
 
+  // Handles click tracking for the LLM response
   const handleLLMResponseClick = useCallback(() => {
     if (chatIndex !== null) {
       trackLLMResponseInteraction(chatIndex, 'click');
     }
   }, [chatIndex]);
 
+  // Handles closing the modal
   const handleCloseModal = useCallback(() => {
     setSelectedItem(null);
   }, []);
@@ -167,6 +180,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     [],
   );
 
+  // Truncates text to a maximum length
   const truncateText = useCallback((text: string, maxLength: number) => {
     return text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
   }, []);

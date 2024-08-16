@@ -31,16 +31,18 @@ interface AnalyticsData {
 // Key for storing analytics data in session storage
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
 
-// Helper functions for managing analytics data in session storage
+// Retrieves analytics data from session storage
 const getAnalyticsData = (): AnalyticsData => {
   const data = sessionStorage.getItem(ANALYTICS_STORAGE_KEY);
   return data ? JSON.parse(data) : { sessionId: '', userId: '', chats: [] };
 };
 
+// Saves analytics data to session storage
 const setAnalyticsData = (data: AnalyticsData): void => {
   sessionStorage.setItem(ANALYTICS_STORAGE_KEY, JSON.stringify(data));
 };
 
+// Updates analytics data and saves it to session storage
 const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
   const data = getAnalyticsData();
   updater(data);
@@ -115,8 +117,8 @@ export const trackLLMResponseInteraction = (
   updateAnalyticsData((data) => {
     const interaction = data.chats[chatIndex]?.llmResponseInteraction;
     if (interaction) {
-      if (interactionType === 'hover') {
-        interaction.hoverDuration += duration || 0;
+      if (interactionType === 'hover' && duration) {
+        interaction.hoverDuration += duration;
       } else if (interactionType === 'click') {
         interaction.clicks++;
         interaction.lastClickTimestamp = new Date().toISOString();
