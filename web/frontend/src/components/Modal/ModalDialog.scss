@@ -1,3 +1,4 @@
+// Styles for the modal overlay
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -12,6 +13,7 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
+// Styles for the modal dialog
 .modal-dialog {
   background: var(--card-background-color);
   padding: 40px;
@@ -25,6 +27,7 @@
   max-height: 80vh;
 }
 
+// Styles for the modal header
 .modal-header {
   margin-bottom: 20px;
   color: var(--main-text-color);
@@ -37,6 +40,7 @@
   }
 }
 
+// Styles for the modal body
 .modal-body {
   flex-grow: 1;
   overflow-y: auto;
@@ -50,12 +54,14 @@
   }
 }
 
+// Styles for the modal footer
 .modal-footer {
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
 }
 
+// Styles for the modal buttons
 .modal-button {
   padding: 15px 20px;
   border-radius: 50px;
@@ -70,6 +76,7 @@
   }
 }
 
+// Styles for the blue button
 .blue-button {
   background-color: var(--button-bg-color);
   color: var(--text-color);
@@ -80,6 +87,7 @@
   }
 }
 
+// Styles for the red button
 .red-button {
   background-color: var(--button-bg-color-red);
   color: var(--text-color);
@@ -90,6 +98,7 @@
   }
 }
 
+// Animation for fading in elements
 @keyframes fadeIn {
   0% {
     opacity: 0;

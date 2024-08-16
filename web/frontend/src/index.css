@@ -1,6 +1,8 @@
 @import '@bcgov/bc-sans/css/BCSans';
 
+/* Define root variables for theming */
 :root {
+  /* Color variables */
   --background-color: hsl(0, 0%, 2%);
   --text-color: #ffffffde;
   --gradient-start: #598ff0;
@@ -38,19 +40,24 @@
   --bc-blue: #234075;
   --search-box-height: 300px;
 
+  /* Font settings */
   font-family: 'BCSans', sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  /* Font rendering optimizations */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Apply box-sizing to all elements */
 * {
   box-sizing: border-box;
 }
 
+/* Reset body margin */
 body {
   margin: 0;
 }

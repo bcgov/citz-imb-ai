@@ -1,3 +1,4 @@
+// Main sidebar container
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -10,10 +11,12 @@
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeIn 0.5s ease-in-out;
 
+  // Collapsed state styles
   &.collapsed {
     width: 75px;
   }
 
+  // Common styles for sidebar elements
   .sidebar-header,
   .new-chat,
   .bottom {
@@ -26,6 +29,7 @@
     transition: background-color 0.1s;
     animation: fadeIn 0.5s ease-in-out;
 
+    // Hover and active states
     &:hover {
       background-color: var(--sidebar-hover-color);
     }
@@ -35,12 +39,14 @@
     }
   }
 
+  // New chat button styles
   .new-chat {
     margin-top: 60px;
     width: 100%;
     background-color: var(--sidebar-new-chat-background-color);
   }
 
+  // Recent chats section
   .recent {
     display: flex;
     flex-direction: column;
@@ -50,12 +56,14 @@
     overflow-y: auto;
     padding-bottom: 20px;
 
+    // Recent title styles
     .recent-title {
       font-weight: bold;
       padding: 15px;
       flex-shrink: 0;
     }
 
+    // Container for recent entries
     .recent-entries {
       display: flex;
       flex-direction: column;
@@ -65,6 +73,7 @@
       scrollbar-color: var(--main-scrollbar-color) transparent;
     }
 
+    // Individual recent entry styles
     .recent-entry {
       display: flex;
       align-items: center;
@@ -75,6 +84,7 @@
       transition: background-color 0.1s;
       animation: fadeIn 0.5s ease-in-out;
 
+      // Hover and active states
       &:hover {
         background-color: var(--sidebar-hover-color);
       }
@@ -83,6 +93,7 @@
         background-color: var(--sidebar-hover-color-active);
       }
 
+      // Icon styles
       img {
         width: 20px;
         margin-left: 5px;
@@ -90,23 +101,27 @@
     }
   }
 
+  // Bottom section (logout button) styles
   .bottom {
     margin-top: auto;
     margin-bottom: 30px;
     width: 100%;
   }
 
+  // Common image styles
   img {
     width: 25px;
     animation: fadeIn 0.5s ease-in-out;
   }
 
+  // Text styles
   p {
     margin: 0;
     overflow: hidden;
     white-space: nowrap;
   }
 
+  // Expanded state styles
   &.expanded {
     .new-chat p,
     .bottom p,
@@ -118,11 +133,13 @@
   }
 }
 
+// Styles for collapsed sidebar elements
 .sidebar.collapsed .sidebar-header,
 .sidebar.collapsed .new-chat,
 .sidebar.collapsed .bottom {
   position: relative;
 
+  // Tooltip styles for collapsed elements
   &:hover::after {
     content: attr(title);
     position: absolute;
@@ -139,6 +156,7 @@
   }
 }
 
+// Keyframe animations
 @keyframes textExpand {
   0% {
     max-width: 0;

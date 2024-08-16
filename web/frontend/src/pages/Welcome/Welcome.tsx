@@ -3,12 +3,17 @@ import { useContext } from 'react';
 import { Context } from '@/context/Context';
 import { Link } from 'react-router-dom';
 
+// Welcome component for the landing page
 const Welcome = () => {
+  // Use context for global state management
   const context = useContext(Context);
+
+  // Function to handle login button click
   const handleLogin = () => {
     context?.KeycloakLogin();
   };
 
+  // Render the welcome page
   return (
     <div className="welcome-page">
       <div className="heading">

@@ -22,6 +22,7 @@ export interface TopKItem {
   url: string | null;
 }
 
+// Define props for AnswerSection component
 interface AnswerSectionProps {
   message: {
     content: string;
@@ -31,20 +32,24 @@ interface AnswerSectionProps {
   generationComplete: boolean;
 }
 
+// AnswerSection component
 const AnswerSection: React.FC<AnswerSectionProps> = ({
   message,
   isLastMessage,
   generationComplete,
 }) => {
+  // Use context and set up state
   const context = useContext(Context);
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
   const [isAnswerComplete, setIsAnswerComplete] = useState(false);
   const [showSources, setShowSources] = useState(true);
 
+  // Ensure context is available
   if (!context) {
     throw new Error('AnswerSection must be used within a ContextProvider');
   }
 
+  // Destructure context values and get user ID
   const { messages, generationComplete: generationCompleteState } = context;
   const userId = getUserId();
 
@@ -146,10 +151,12 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   // Render the component
   return (
     <div className="answer-section">
+      {/* Render message content */}
       <div className="message-title">
         <img src={assets.bc_icon} alt="BC AI" />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
+      {/* Render sources section if available */}
       {message.topk && message.topk.length > 0 && (
         <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
           <h3
@@ -182,7 +189,9 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
           </div>
         </div>
       )}
+      {/* Render feedback bar for last message when generation is complete */}
       {isLastMessage && generationComplete && <FeedbackBar />}
+      {/* Render modal dialog when a source is selected */}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}

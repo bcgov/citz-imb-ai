@@ -1,5 +1,6 @@
 import './Error.scss';
 
+// ErrorPage component
 const ErrorPage = () => {
   return (
     <div className="error-page">

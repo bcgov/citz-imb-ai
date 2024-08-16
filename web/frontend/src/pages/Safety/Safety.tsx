@@ -1,19 +1,23 @@
 import { Link } from 'react-router-dom';
 import './Safety.scss';
 
+// Safety page component to display AI safety information
 const SafetyPage = () => {
   return (
     <div className="safety-page">
       <div className="safety-content">
+        {/* Back button to return to home page */}
         <Link to="/" className="safety-back-button">
           Back to Home
         </Link>
         <div className="safety-main-container">
+          {/* Main heading */}
           <div className="safety-greet">
             <p>
               <span>Our Commitment to Safe and Ethical AI</span>
             </p>
           </div>
+          {/* Introduction to AI safety practices */}
           <div className="safety-intro-alert">
             <h2>
               At BC Gov, we prioritize trust, safety, and effectiveness in our
@@ -24,7 +28,9 @@ const SafetyPage = () => {
               responsibly:
             </p>
           </div>
+          {/* Cards displaying various AI safety measures */}
           <div className="safety-cards">
+            {/* Human-in-the-Loop card */}
             <div className="safety-card">
               <h3>Human-in-the-Loop (HITL)</h3>
               <p>
@@ -32,6 +38,7 @@ const SafetyPage = () => {
                 to ensure accuracy and accountability.
               </p>
             </div>
+            {/* Ethical AI Practices card */}
             <div className="safety-card">
               <h3>Ethical AI Practices</h3>
               <p>
@@ -39,6 +46,7 @@ const SafetyPage = () => {
                 our AI practices.
               </p>
             </div>
+            {/* Security and Privacy card */}
             <div className="safety-card">
               <h3>Security and Privacy</h3>
               <p>
@@ -46,6 +54,7 @@ const SafetyPage = () => {
                 paramount.
               </p>
             </div>
+            {/* Performance Monitoring card */}
             <div className="safety-card">
               <h3>Performance Monitoring</h3>
               <p>
@@ -53,13 +62,15 @@ const SafetyPage = () => {
                 to ensure high performance and reliability.
               </p>
             </div>
+            {/* Continuous Improvement card */}
             <div className="safety-card">
               <h3>Continuous Improvement</h3>
               <p>
-                We have established a robust feedback loop to gather user
+                We use feedback loops and performance metrics to gather
                 insights and continuously refine our AI models.
               </p>
             </div>
+            {/* Bias Detection and Mitigation card */}
             <div className="safety-card">
               <h3>Bias Detection and Mitigation</h3>
               <p>
@@ -68,8 +79,10 @@ const SafetyPage = () => {
               </p>
             </div>
           </div>
+          {/* Section for guardrails and safety measures */}
           <h2>Our Guardrails and Safety Measures</h2>
           <div className="safety-cards">
+            {/* Additional safety measure cards */}
             <div className="safety-card">
               <h3>Transparency Reports</h3>
             </div>
@@ -89,6 +102,7 @@ const SafetyPage = () => {
               <h3>Regular Risk Assessments</h3>
             </div>
           </div>
+          {/* Concluding section on ensuring safe AI */}
           <h2>Ensuring Safe AI</h2>
           <p>
             We are dedicated to deploying AI responsibly. Our comprehensive

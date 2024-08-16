@@ -8,17 +8,23 @@ import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import { Link } from 'react-router-dom';
 
+// Main component for the chat interface
 const Main = () => {
+  // Use context for global state management
   const context = useContext(Context);
+
+  // State variables for UI control
   const [isModalVisible, setIsModalVisible] = useState(true);
   const [userScrolled, setUserScrolled] = useState(false);
   const [pendingMessage, setPendingMessage] = useState<string | null>(null);
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
+  // Error handling for context
   if (!context) {
     throw new Error('Main must be used within a ContextProvider');
   }
 
+  // Destructure context values
   const {
     onSent,
     showResult,
@@ -32,9 +38,11 @@ const Main = () => {
     resetError,
   } = context;
 
+  // Refs for DOM elements
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const scrollableSectionRef = useRef<HTMLDivElement>(null);
 
+  // Function to adjust textarea height based on content
   const adjustTextareaHeight = () => {
     const textarea = textareaRef.current;
     if (textarea) {
@@ -43,10 +51,12 @@ const Main = () => {
     }
   };
 
+  // Effect to adjust textarea height when input changes
   useEffect(() => {
     adjustTextareaHeight();
   }, [input]);
 
+  // Effect to handle scrolling behavior
   useEffect(() => {
     const element = scrollableSectionRef.current;
     if (element && !userScrolled) {
@@ -57,6 +67,7 @@ const Main = () => {
     }
   }, [messages, userScrolled, pendingMessage, isWaitingForResponse]);
 
+  // Function to handle scroll events
   const handleScroll = () => {
     const element = scrollableSectionRef.current;
     if (element) {
@@ -66,6 +77,7 @@ const Main = () => {
     }
   };
 
+  // Function to handle key press events in the textarea
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -73,6 +85,7 @@ const Main = () => {
     }
   };
 
+  // Function to handle sending a message
   const handleSend = async () => {
     if (input.trim() && !isWaitingForResponse) {
       setPendingMessage(input);
@@ -87,6 +100,7 @@ const Main = () => {
     }
   };
 
+  // Function to handle clicking on a suggestion card
   const handleCardClick = async (text: string) => {
     setInput(text);
     if (textareaRef.current) {
@@ -94,6 +108,7 @@ const Main = () => {
     }
   };
 
+  // Sample card contents for suggestions
   const cardContents = [
     `How much notice do I need to give to end my rental lease in BC?`,
     `Do I need to wear a seatbelt in BC?`,
@@ -101,6 +116,7 @@ const Main = () => {
     `How do I dispute a traffic ticket in BC?`,
   ];
 
+  // Functions to handle modal actions
   const handleModalYes = () => {
     setIsModalVisible(false);
   };
@@ -118,6 +134,7 @@ const Main = () => {
     resetError();
   };
 
+  // Function to render chat messages
   const renderMessages = () => {
     const allMessages = [
       ...messages,
@@ -145,6 +162,7 @@ const Main = () => {
     ));
   };
 
+  // Main component render
   return (
     <div className="main-page">
       <Sidebar />
@@ -154,6 +172,7 @@ const Main = () => {
         </div>
         <div className="main-container">
           {showResult ? (
+            // Render chat messages and input area
             <div>
               <div
                 className="result"
@@ -181,6 +200,7 @@ const Main = () => {
               />
             </div>
           ) : (
+            // Render welcome screen with suggestion cards
             <>
               <div className="greet">
                 <p>
@@ -203,6 +223,7 @@ const Main = () => {
           )}
 
           <div className="main-bottom">
+            {/* Input area for user messages */}
             <div className="search-box">
               <textarea
                 value={input}
@@ -231,6 +252,7 @@ const Main = () => {
                 ) : null}
               </div>
             </div>
+            {/* Disclaimer and safety link */}
             <p className="bottom-info">
               BC AI may provide inaccurate info. Responses can take up to 2
               minutes. Please verify all outputs. Learn about our{' '}
@@ -241,6 +263,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      {/* Modal for terms agreement */}
       {isModalVisible && (
         <ModalDialog
           title="Notice"
@@ -276,6 +299,7 @@ const Main = () => {
           }}
         />
       )}
+      {/* Error modal */}
       {errorState.hasError && (
         <ModalDialog
           title="Error Occurred"

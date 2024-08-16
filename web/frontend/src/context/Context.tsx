@@ -3,12 +3,14 @@ import runChat from '@/api/chat';
 import sendFeedback from '@/api/feedback';
 import Keycloak from 'keycloak-js';
 
+// Interface for Message structure
 interface Message {
   type: 'user' | 'ai';
   content: string;
   topk?: TopKItem[];
 }
 
+// Interface for TopKItem structure
 interface TopKItem {
   ActId: string;
   Regulations: string | null;
@@ -19,16 +21,19 @@ interface TopKItem {
   url: string | null;
 }
 
+// Interface for API response structure
 interface ApiResponse {
   llm: string;
   topk: TopKItem[];
 }
 
+// Interface for chat history structure
 interface ChatHistory {
   prompt: string;
   response: string;
 }
 
+// Interface for Context props
 interface ContextProps {
   prevPrompts: string[];
   setPrevPrompts: React.Dispatch<React.SetStateAction<string[]>>;
@@ -55,12 +60,15 @@ interface ContextProps {
   resetError: () => void;
 }
 
+// Create a Context with ContextProps type or undefined
 export const Context = createContext<ContextProps | undefined>(undefined);
 
+// Props interface for the ContextProvider component
 interface ContextProviderProps {
   children: ReactNode;
 }
 
+// Keycloak configuration object
 const keycloakConfig = {
   realm: 'standard',
   url: 'https://dev.loginproxy.gov.bc.ca/auth',
@@ -69,9 +77,12 @@ const keycloakConfig = {
   'enable-pkce': true,
 };
 
+// Initialize Keycloak instance
 const keycloak = new Keycloak(keycloakConfig);
 
+// ContextProvider component
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
+  // State declarations
   const [prevPrompts, setPrevPrompts] = useState<string[]>([]);
   const [input, setInput] = useState<string>('');
   const [recentPrompt, setRecentPrompt] = useState<string>('');
@@ -89,6 +100,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     errorMessage: '',
   });
 
+  // Function to reset error state
   const resetError = () => {
     setErrorState({
       hasError: false,
@@ -96,12 +108,14 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     });
   };
 
+  // Function to send user feedback
   const sendUserFeedback = async (
     feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
   ) => {
     await sendFeedback(feedbackType, recordingHash);
   };
 
+  // Function to delay paragraph generation
   const delayPara = (index: number, nextWord: string, totalWords: number) => {
     setTimeout(() => {
       setMessages((prev) => {
@@ -118,6 +132,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     }, 15 * index);
   };
 
+  // Function to update session storage with chat history
   const updateSessionStorage = (prompt: string, response: string) => {
     const chatHistory: ChatHistory[] = JSON.parse(
       sessionStorage.getItem('chatHistory') || '[]',
@@ -129,8 +144,10 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
   };
 
+  // Function to handle sending a message
   const onSent = async (prompt?: string) => {
     try {
+      // Set loading state and prepare for new message
       setLoading(true);
       setShowResult(true);
       setInput('');
@@ -138,14 +155,18 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       let response: { response: ApiResponse; recordingHash: string };
       let currentPrompt = prompt !== undefined ? prompt : input;
 
+      // Get chat history from session storage
       const chatHistory: ChatHistory[] = JSON.parse(
         sessionStorage.getItem('chatHistory') || '[]',
       );
 
+      // Run chat with current prompt and chat history
       response = await runChat(currentPrompt, chatHistory);
 
+      // Set recording hash for feedback
       setRecordingHash(response.recordingHash);
 
+      // Update messages state with user input
       if (prompt !== undefined) {
         setRecentPrompt(prompt);
         setMessages((prev) => [...prev, { type: 'user', content: prompt }]);
@@ -155,9 +176,11 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         setMessages((prev) => [...prev, { type: 'user', content: input }]);
       }
 
+      // Process and display AI response
       const llmResponse = response.response.llm;
       const topkData = response.response.topk;
 
+      // Format response for display
       let responseArray = llmResponse.split('**');
       let newArray = '';
       for (let i = 0; i < responseArray.length; i++) {
@@ -169,13 +192,16 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       }
       responseArray = newArray.split('*').join('</br>').split(' ');
 
+      // Add AI message to state
       setMessages((prev) => [
         ...prev,
         { type: 'ai', content: '', topk: topkData },
       ]);
 
+      // Update session storage
       updateSessionStorage(currentPrompt, JSON.stringify(response.response));
 
+      // Display response word by word
       for (let i = 0; i < responseArray.length; i++) {
         const nextWord = responseArray[i];
         delayPara(i, nextWord + ' ', responseArray.length);
@@ -191,6 +217,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     }
   };
 
+  // Function to start a new chat
   const newChat = async () => {
     setLoading(false);
     setShowResult(false);
@@ -199,6 +226,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     sessionStorage.removeItem('chatHistory');
   };
 
+  // Function to reset the context
   const resetContext = () => {
     setPrevPrompts([]);
     setInput('');
@@ -210,6 +238,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     sessionStorage.removeItem('chatHistory');
   };
 
+  // Function to refresh the Keycloak token
   const refreshToken = () => {
     keycloak.updateToken(70).then((refreshed) => {
       if (refreshed) {
@@ -222,6 +251,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     });
   };
 
+  // Effect to initialize Keycloak and set up event listeners
   useEffect(() => {
     const initKeycloak = async () => {
       if (!keycloak.authenticated) {
@@ -259,17 +289,20 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     };
   }, []);
 
+  // Function to handle Keycloak login
   const KeycloakLogin = async () => {
     await keycloak.login({
       redirectUri: window.location.origin,
     });
   };
 
+  // Function to handle Keycloak logout
   const KeycloakLogout = () => {
     keycloak.logout();
     localStorage.clear();
   };
 
+  // Create context value object
   const contextValue: ContextProps = {
     prevPrompts,
     setPrevPrompts,
@@ -293,6 +326,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     resetError,
   };
 
+  // Render the Context Provider with the context value
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };
 
