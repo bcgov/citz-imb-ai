@@ -134,7 +134,12 @@ const Main = () => {
             <p>{message.content}</p>
           </div>
         ) : (
-          <AnswerSection message={message} key={`ai-${index}`} />
+          <AnswerSection
+            message={message}
+            key={`ai-${index}`}
+            isLastMessage={index === allMessages.length - 1}
+            generationComplete={generationComplete}
+          />
         )}
       </div>
     ));

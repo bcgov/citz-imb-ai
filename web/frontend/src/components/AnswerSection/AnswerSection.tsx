@@ -27,17 +27,25 @@ interface AnswerSectionProps {
     content: string;
     topk?: TopKItem[];
   };
+  isLastMessage: boolean;
+  generationComplete: boolean;
 }
 
-const AnswerSection: React.FC<AnswerSectionProps> = ({ message }) => {
+const AnswerSection: React.FC<AnswerSectionProps> = ({
+  message,
+  isLastMessage,
+  generationComplete,
+}) => {
   const context = useContext(Context);
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
+  const [isAnswerComplete, setIsAnswerComplete] = useState(false);
+  const [showSources, setShowSources] = useState(true);
 
   if (!context) {
     throw new Error('AnswerSection must be used within a ContextProvider');
   }
 
-  const { messages, generationComplete } = context;
+  const { messages, generationComplete: generationCompleteState } = context;
   const userId = getUserId();
 
   // Initialize analytics when the AI generation is complete
@@ -68,10 +76,10 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({ message }) => {
 
   // Call initializeAnalytics when generation is complete
   useEffect(() => {
-    if (generationComplete) {
+    if (generationCompleteState) {
       initializeAnalytics();
     }
-  }, [generationComplete, messages, userId]);
+  }, [generationCompleteState, messages, userId]);
 
   // Handle click on a source card
   const handleCardClick = (item: TopKItem, index: number) => {
@@ -125,6 +133,16 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({ message }) => {
     return text.slice(0, maxLength) + '...';
   };
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (generationComplete) {
+      timer = setTimeout(() => {
+        setIsAnswerComplete(true);
+      }, 500);
+    }
+    return () => clearTimeout(timer);
+  }, [generationComplete]);
+
   // Render the component
   return (
     <div className="answer-section">
@@ -133,11 +151,19 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({ message }) => {
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
       {message.topk && message.topk.length > 0 && (
-        <div
-          className={`sources-section ${generationComplete ? 'fade-in' : ''}`}
-        >
-          <h3>Sources</h3>
-          <div className="topk-container">
+        <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
+          <h3
+            onClick={() => setShowSources(!showSources)}
+            style={{ cursor: 'pointer' }}
+          >
+            Sources
+            <img
+              src={assets.down_arrow}
+              alt={showSources ? 'Hide sources' : 'Show sources'}
+              className={`chevron-icon ${showSources ? '' : 'rotated'}`}
+            />
+          </h3>
+          <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
             <div className="topk-cards">
               {message.topk.map((item, index) => (
                 <div
@@ -156,7 +182,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({ message }) => {
           </div>
         </div>
       )}
-      {generationComplete && <FeedbackBar />}
+      {isLastMessage && generationComplete && <FeedbackBar />}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}
