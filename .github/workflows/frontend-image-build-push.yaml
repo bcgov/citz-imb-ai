@@ -40,7 +40,7 @@ jobs:
     # Build the image
     - name: Build Image
       run: |
-        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build web_frontend
+        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build web_frontend
 
     # Tag the image
     - name: Tag Image

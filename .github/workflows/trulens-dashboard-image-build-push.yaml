@@ -40,7 +40,7 @@ jobs:
     # Build the image
     - name: Build Image
       run: |
-        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build trulens_dashboard
+        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build trulens_dashboard
 
     # Tag the image
     - name: Tag Image

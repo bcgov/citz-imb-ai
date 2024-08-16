@@ -32,7 +32,7 @@ jobs:
     # Build the image
     - name: Build Image
       run: |
-        docker-compose -f ${{ vars.COMPOSE_FILE_NAME }} build aws_creds_cron
+        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build aws_creds_cron
 
     # Tag the image
     - name: Tag Image
