@@ -143,7 +143,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     setSelectedItem(null);
   }, []);
 
-  // Helper functions
+  // Formats the description for the modal
   const formatDescription = useCallback(
     (item: TopKItem) => (
       <div>
