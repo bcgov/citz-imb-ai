@@ -18,6 +18,7 @@ import {
 import { Context } from '@/context/Context';
 import { getUserId } from '@/utils/auth';
 
+// Interfaces
 export interface TopKItem {
   ActId: string;
   Regulations: string | null;
@@ -37,6 +38,7 @@ interface AnswerSectionProps {
   generationComplete: boolean;
 }
 
+// Component for displaying AI-generated answers and related sources
 const AnswerSection: React.FC<AnswerSectionProps> = ({
   message,
   isLastMessage,
@@ -57,6 +59,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   const { messages } = context;
   const userId = getUserId();
 
+  // Initialize analytics on component mount
   useEffect(() => {
     if (!analyticsInitialized.current) {
       initAnalytics(userId);
@@ -64,6 +67,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     }
   }, [userId]);
 
+  // Record chat interaction when generation is complete
   useEffect(() => {
     if (generationComplete && isLastMessage) {
       const aiMessages = messages.filter((msg) => msg.type === 'ai');
@@ -81,6 +85,16 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     }
   }, [generationComplete, isLastMessage, messages]);
 
+  // Show answer complete animation after a delay
+  useEffect(() => {
+    if (generationComplete) {
+      const timer = setTimeout(() => setIsAnswerComplete(true), 500);
+      return () => clearTimeout(timer);
+    }
+    return () => {};
+  }, [generationComplete]);
+
+  // Event handlers
   const handleCardClick = useCallback(
     (item: TopKItem, index: number) => {
       setSelectedItem(item);
@@ -116,6 +130,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     setSelectedItem(null);
   }, []);
 
+  // Helper functions
   const formatDescription = useCallback(
     (item: TopKItem) => (
       <div>
@@ -156,18 +171,9 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     return text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
   }, []);
 
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (generationComplete) {
-      timer = setTimeout(() => {
-        setIsAnswerComplete(true);
-      }, 500);
-    }
-    return () => clearTimeout(timer);
-  }, [generationComplete]);
-
   return (
     <div className="answer-section">
+      {/* AI response */}
       <div
         className="message-title"
         onMouseEnter={() => handleLLMResponseHover(true)}
@@ -177,6 +183,8 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         <img src={assets.bc_icon} alt="BC AI" />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
+
+      {/* Sources section */}
       {message.topk && message.topk.length > 0 && (
         <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
           <h3
@@ -209,7 +217,11 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
           </div>
         </div>
       )}
+
+      {/* Feedback bar */}
       {isLastMessage && generationComplete && <FeedbackBar />}
+
+      {/* Modal for displaying source details */}
       {selectedItem && (
         <ModalDialog
           title={selectedItem.ActId || 'Details'}
