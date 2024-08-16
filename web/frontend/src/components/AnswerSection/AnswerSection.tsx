@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import './AnswerSection.scss';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import { assets } from '@/assets/icons/assets';
 import {
   initAnalytics,
+  addChatInteraction,
   trackSourceClick,
-  saveAnalytics,
+  trackLLMResponseInteraction,
 } from '@/utils/analytics';
 import { Context } from '@/context/Context';
 import { getUserId } from '@/utils/auth';
@@ -43,6 +44,9 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
   const [isAnswerComplete, setIsAnswerComplete] = useState(false);
   const [showSources, setShowSources] = useState(true);
+  const [hoverStartTime, setHoverStartTime] = useState<number | null>(null);
+  const [chatIndex, setChatIndex] = useState<number | null>(null);
+  const analyticsInitialized = useRef(false);
 
   // Ensure context is available
   if (!context) {
@@ -50,47 +54,61 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   }
 
   // Destructure context values and get user ID
-  const { messages, generationComplete: generationCompleteState } = context;
+  const { messages } = context;
   const userId = getUserId();
 
-  // Initialize analytics when the AI generation is complete
-  const initializeAnalytics = () => {
-    const aiMessages = messages.filter((msg) => msg.type === 'ai');
-    const userMessages = messages.filter((msg) => msg.type === 'user');
-    if (aiMessages.length > 0 && userMessages.length > 0) {
-      const lastAiMessage = aiMessages[aiMessages.length - 1];
-      const lastUserMessage = userMessages[userMessages.length - 1];
-      if (lastAiMessage.topk) {
-        const existingData = sessionStorage.getItem('analyticsData');
-        const dataArray = existingData ? JSON.parse(existingData) : [];
-        const existingEntry = dataArray.find(
-          (entry: any) => entry.userPrompt === lastUserMessage.content,
+  // Initialize analytics only once
+  useEffect(() => {
+    if (!analyticsInitialized.current) {
+      initAnalytics(userId);
+      analyticsInitialized.current = true;
+    }
+  }, []);
+
+  // Add chat interaction when the AI generation is complete
+  useEffect(() => {
+    if (generationComplete && isLastMessage) {
+      const aiMessages = messages.filter((msg) => msg.type === 'ai');
+      const userMessages = messages.filter((msg) => msg.type === 'user');
+      if (aiMessages.length > 0 && userMessages.length > 0) {
+        const lastAiMessage = aiMessages[aiMessages.length - 1];
+        const lastUserMessage = userMessages[userMessages.length - 1];
+        const newChatIndex = addChatInteraction(
+          lastUserMessage.content,
+          lastAiMessage.content,
+          lastAiMessage.topk,
         );
-        if (!existingEntry) {
-          initAnalytics(
-            userId,
-            lastAiMessage.topk,
-            lastUserMessage.content,
-            lastAiMessage.content,
-          );
-          saveAnalytics();
-        }
+        setChatIndex(newChatIndex);
       }
     }
-  };
-
-  // Call initializeAnalytics when generation is complete
-  useEffect(() => {
-    if (generationCompleteState) {
-      initializeAnalytics();
-    }
-  }, [generationCompleteState, messages, userId]);
+  }, [generationComplete, isLastMessage, messages]);
 
   // Handle click on a source card
   const handleCardClick = (item: TopKItem, index: number) => {
     setSelectedItem(item);
-    const promptIndex = messages.filter((msg) => msg.type === 'ai').length - 1;
-    trackSourceClick(promptIndex, index);
+    if (chatIndex !== null) {
+      trackSourceClick(chatIndex, index);
+    }
+  };
+
+  // Handle hover on LLM response
+  const handleLLMResponseHover = (isHovering: boolean) => {
+    if (chatIndex === null) return;
+
+    if (isHovering) {
+      setHoverStartTime(Date.now());
+    } else if (hoverStartTime !== null) {
+      const hoverDuration = Date.now() - hoverStartTime;
+      trackLLMResponseInteraction(chatIndex, 'hover', hoverDuration);
+      setHoverStartTime(null);
+    }
+  };
+
+  // Handle click on LLM response
+  const handleLLMResponseClick = () => {
+    if (chatIndex !== null) {
+      trackLLMResponseInteraction(chatIndex, 'click');
+    }
   };
 
   // Close the modal
@@ -151,8 +169,12 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   // Render the component
   return (
     <div className="answer-section">
-      {/* Render message content */}
-      <div className="message-title">
+      <div
+        className="message-title"
+        onMouseEnter={() => handleLLMResponseHover(true)}
+        onMouseLeave={() => handleLLMResponseHover(false)}
+        onClick={handleLLMResponseClick}
+      >
         <img src={assets.bc_icon} alt="BC AI" />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
