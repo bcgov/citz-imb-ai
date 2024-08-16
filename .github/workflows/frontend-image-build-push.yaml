@@ -45,7 +45,7 @@ jobs:
     # Tag the image
     - name: Tag Image
       run: |
-        docker tag docker_web_frontend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend-imagestream:${{github.event.pull_request.number}}
+        docker tag docker-web_frontend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-frontend-imagestream:${{github.event.pull_request.number}}
 
     # Push the image
     - name: Push Image

@@ -45,7 +45,7 @@ jobs:
     # Tag the image
     - name: Tag Image
       run: |
-        docker tag docker_trulens_dashboard ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/trulens-dashboard-imagestream:${{github.event.pull_request.number}}
+        docker tag docker-trulens_dashboard ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/trulens-dashboard-imagestream:${{github.event.pull_request.number}}
 
     # Push the image
     - name: Push Image
