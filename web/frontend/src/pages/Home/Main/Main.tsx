@@ -36,6 +36,7 @@ const Main = () => {
     generationComplete,
     errorState,
     resetError,
+    recordingHash,
   } = context;
 
   // Refs for DOM elements
@@ -156,6 +157,7 @@ const Main = () => {
             key={`ai-${index}`}
             isLastMessage={index === allMessages.length - 1}
             generationComplete={generationComplete}
+            recording_id={recordingHash}
           />
         )}
       </div>

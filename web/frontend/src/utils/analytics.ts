@@ -18,6 +18,7 @@ interface ChatInteraction {
   timestamp: string;
   userPrompt: string;
   llmResponse: string;
+  recording_id: string;
   llmResponseInteraction: LLMResponseInteraction;
   sources: SourceInteraction[];
 }
@@ -65,6 +66,7 @@ export const initAnalytics = (userId: string): void => {
 export const addChatInteraction = (
   userPrompt: string,
   llmResponse: string,
+  recording_id: string,
   topk: TopKItem[] | undefined,
 ): number => {
   let newChatIndex = -1;
@@ -73,6 +75,7 @@ export const addChatInteraction = (
       timestamp: new Date().toISOString(),
       userPrompt,
       llmResponse,
+      recording_id,
       llmResponseInteraction: {
         hoverDuration: 0,
         clicks: 0,

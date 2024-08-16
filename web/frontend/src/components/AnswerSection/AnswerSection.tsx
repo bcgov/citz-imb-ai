@@ -37,6 +37,7 @@ interface AnswerSectionProps {
   };
   isLastMessage: boolean;
   generationComplete: boolean;
+  recording_id: string;
 }
 
 // Component for displaying AI-generated answers and related sources
@@ -44,6 +45,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   message,
   isLastMessage,
   generationComplete,
+  recording_id,
 }) => {
   const context = useContext(Context);
   const [selectedItem, setSelectedItem] = useState<TopKItem | null>(null);
@@ -88,12 +90,13 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         const newChatIndex = addChatInteraction(
           lastUserMessage.content,
           lastAiMessage.content,
+          recording_id,
           lastAiMessage.topk,
         );
         setChatIndex(newChatIndex);
       }
     }
-  }, [generationComplete, isLastMessage, messages]);
+  }, [generationComplete, isLastMessage, messages, recording_id]);
 
   // Show answer complete animation after a delay
   useEffect(() => {
