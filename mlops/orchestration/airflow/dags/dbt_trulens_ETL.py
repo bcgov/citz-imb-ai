@@ -58,10 +58,10 @@ run_dbt = BashOperator(
     deactivate
     ''',
     env={
-        'DBT_USER': TRULENS_USER if TRULENS_USER else 'postgres',
-        'DBT_PASSWORD': TRULENS_PASSWORD if TRULENS_PASSWORD else 'root',
-        'DBT_HOST': TRULENS_HOST if TRULENS_HOST else 'trulens',
-        'DBT_DBNAME': TRULENS_DB if TRULENS_DB else 'postgres',
+        'TRULENS_USER': TRULENS_USER if TRULENS_USER else 'postgres',
+        'TRULENS_PASSWORD': TRULENS_PASSWORD if TRULENS_PASSWORD else 'root',
+        'TRULENS_HOST': TRULENS_HOST if TRULENS_HOST else 'trulens',
+        'TRULENS_DB': TRULENS_DB if TRULENS_DB else 'postgres',
     },
     dag=dag,
 )
