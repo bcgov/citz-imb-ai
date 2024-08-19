@@ -53,7 +53,8 @@ run_dbt = BashOperator(
     task_id='run_dbt_command',
     bash_command='''
     source /opt/airflow/dbt_venv/bin/activate
-    /home/airflow/.local/bin/dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/trulens
+    export HOME=/home/airflow
+    dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/trulens
     deactivate
     ''',
     env={
