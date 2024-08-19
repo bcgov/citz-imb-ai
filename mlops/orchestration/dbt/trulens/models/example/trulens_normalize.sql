@@ -18,7 +18,11 @@ parsed_data AS (
         {{ unroll_json_to_columns('record_json', 10) }},  -- Replace static SQL with dynamic macro call
         record_json->>'record_id' AS json_record_id,  
         record_json->'app_id' AS app_id,
-        record_json  
+        (record_json->'perf'->>'start_time')::timestamp AS start_time,
+        (record_json->'perf'->>'end_time')::timestamp AS end_time,
+        -- Calculate latency in seconds
+        EXTRACT(EPOCH FROM ((record_json->'perf'->>'end_time')::timestamp - (record_json->'perf'->>'start_time')::timestamp)) AS latency_in_seconds, 
+        {{ extract_performance('record_json', 4) }}  -- Replace static SQL with dynamic macro call
     FROM 
         raw_data
 )
