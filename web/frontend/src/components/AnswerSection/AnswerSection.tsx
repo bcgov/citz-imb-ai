@@ -14,10 +14,10 @@ import {
   addChatInteraction,
   trackSourceClick,
   trackLLMResponseInteraction,
-} from '@/utils/analytics';
+} from '@/utils/analyticsUtil';
 import { Context } from '@/context/Context';
-import { getUserId } from '@/utils/auth';
-import { debounce } from '@/utils/debounce';
+import { getUserId } from '@/utils/authUtil';
+import { debounce } from '@/utils/debounceUtil';
 
 // Interfaces
 export interface TopKItem {
