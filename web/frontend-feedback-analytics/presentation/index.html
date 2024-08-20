@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>A.I Technical Presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        text-align: center;
+        animation: slideIn 1s ease-in-out;
+        font-weight: bold;
+      }
+      .heading h1 {
+        font-size: 7rem;
+        line-height: 110%;
+        font-weight: 400;
+        letter-spacing: -0.1rem;
+        margin: 0;
+        transition: 0.4s;
+        animation: slideIn 1.2s ease-in-out;
+        font-weight: bold;
+      }
+      .heading h1 span {
+        background: linear-gradient(60deg, #3e82ff, #295fff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div class="heading">
+            <h1>Chat with <span>BC Laws</span></h1>
+          </div>
+          <h3>Technical presentation</h3>
+        </section>
+        <section>
+          <h2>What we will cover</h2>
+          <ul>
+            <li class="fragment">Introduction</li>
+            <li class="fragment">High level architecture</li>
+            <li class="fragment">Technologies used</li>
+            <li class="fragment">MLOps</li>
+            <li class="fragment">Active Feedback</li>
+            <li class="fragment">Analytics</li>
+            <li class="fragment">Challenges</li>
+            <li class="fragment">Q&A</li>
+          </ul>
+        </section>
+        <section>
+          <img
+            style="transform: scale(115%)"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/ai_query_answer_flow.jpg"
+          />
+        </section>
+        <section>
+          <img
+            style="transform: scale(120%)"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/overall_architecture.jpg"
+          />
+        </section>
+        <section>
+          <img
+            style="transform: scale(120%)"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/preprocessing.jpg"
+          />
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
