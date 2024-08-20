@@ -8,7 +8,7 @@ const ANALYTICS_STORAGE_KEY = 'analyticsData';
 // Last data sent to the backend
 let lastSentData: string | null = null;
 // Whether the analytics data is currently being sent to the backend
-let isAnalyticsSendingActive = false;
+let isFirstDataSent = false;
 
 // Retrieves analytics data from session storage
 export const getAnalyticsData = (): AnalyticsData => {
@@ -28,8 +28,12 @@ const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
   const data = getAnalyticsData();
   updater(data);
   setAnalyticsData(data);
-  if (!isAnalyticsSendingActive) {
-    isAnalyticsSendingActive = true;
+
+  // Send analytics data immediately if it's the first time, otherwise debounce
+  if (!isFirstDataSent) {
+    sendAnalyticsImmediately();
+    isFirstDataSent = true;
+  } else {
     debouncedSendAnalytics();
   }
 };
@@ -37,7 +41,6 @@ const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
 // Debounced function to send analytics data to the backend
 const debouncedSendAnalytics = debounce(() => {
   sendAnalyticsImmediately();
-  isAnalyticsSendingActive = false;
 }, 10000);
 
 // Function to send analytics data immediately
@@ -76,9 +79,6 @@ export const initAnalytics = (userId: string): void => {
     chats: [],
   };
   setAnalyticsData(newData);
-
-  // Send initial analytics data immediately
-  sendAnalyticsDataToBackend(newData);
   lastSentData = JSON.stringify(newData);
 };
 
