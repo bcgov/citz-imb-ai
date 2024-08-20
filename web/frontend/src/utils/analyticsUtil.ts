@@ -11,14 +11,15 @@ import {
 import { generateUUID } from './uuidUtil';
 import { debounce } from './debounceUtil';
 
-// Key for storing analytics data in session storage
+// Constants
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
-// Flag to check if this is the first analytics send
+const DEBOUNCE_DELAY = 30000; // 30 seconds
+
+// State variables
 let isFirstAnalyticsSend = true;
-// Queue for storing analytics updates
 let updateQueue: AnalyticsUpdate[] = [];
 
-// Retrieves analytics data from session storage
+// Helper functions
 export const getAnalyticsData = (): AnalyticsData => {
   const data = sessionStorage.getItem(ANALYTICS_STORAGE_KEY);
   return data
@@ -26,18 +27,18 @@ export const getAnalyticsData = (): AnalyticsData => {
     : { sessionTimestamp: '', sessionId: '', userId: '', chats: [] };
 };
 
-// Saves analytics data to session storage
+// Retrieves analytics data from session storage or returns an empty object if not found
 const setAnalyticsData = (data: AnalyticsData): void => {
   sessionStorage.setItem(ANALYTICS_STORAGE_KEY, JSON.stringify(data));
 };
 
-// Queues an analytics update to be sent to the backend
+// Adds an update to the queue and triggers a debounced send
 const queueUpdate = (update: AnalyticsUpdate): void => {
   updateQueue.push(update);
   debouncedSendAnalytics();
 };
 
-// Updates analytics data and saves it to session storage
+// Updates analytics data and triggers either an immediate or debounced send
 const updateAnalyticsData = (
   updater: (data: AnalyticsData) => void,
   generationComplete?: boolean,
@@ -53,35 +54,29 @@ const updateAnalyticsData = (
   }
 };
 
-// Debounced function to send analytics data to the backend every 30 seconds
+// Sends queued analytics updates to the backend after a 30-second delay
 const debouncedSendAnalytics = debounce(() => {
   if (updateQueue.length > 0) {
     sendAnalyticsUpdatesToBackend(updateQueue, true);
     updateQueue = [];
   }
-}, 30000);
+}, DEBOUNCE_DELAY);
 
-// Function to send analytics data immediately
+// Immediately sends analytics data, using POST for first send and PATCH for updates
 const sendAnalyticsImmediately = (): void => {
   const data = getAnalyticsData();
-  if (data.chats.length === 0) {
-    // No analytics data, don't send anything
-    return;
-  }
-
+  if (data.chats.length === 0) return;
   if (isFirstAnalyticsSend) {
-    // This is the first analytics send, always use POST
     sendFullAnalyticsDataToBackend(data, true);
-    updateQueue = []; // Clear the update queue
-    isFirstAnalyticsSend = false; // Set the flag to false after first send
+    updateQueue = [];
+    isFirstAnalyticsSend = false;
   } else if (updateQueue.length > 0) {
-    // Send only updates using PATCH for subsequent sends
     sendAnalyticsUpdatesToBackend(updateQueue, true);
     updateQueue = [];
   }
 };
 
-// Function to send analytics data when the page visibility changes or before unload
+// Sends analytics data immediately when the user leaves the page
 export const sendAnalyticsImmediatelyOnLeave = (): (() => void) => {
   const handleVisibilityChange = () => {
     if (document.hidden) {
@@ -102,12 +97,12 @@ export const sendAnalyticsImmediatelyOnLeave = (): (() => void) => {
   };
 };
 
-// Initialize analytics data for a new user session
+// Initializes analytics data for a new user session if it doesn't already exist
 export const initAnalytics = (userId: string): void => {
   const existingData = getAnalyticsData();
   if (existingData.userId) return;
 
-  const newData = {
+  const newData: AnalyticsData = {
     sessionTimestamp: new Date().toISOString(),
     sessionId: generateUUID(),
     userId,
@@ -116,7 +111,7 @@ export const initAnalytics = (userId: string): void => {
   setAnalyticsData(newData);
 };
 
-// Record a new chat interaction and return its index
+// Records a new chat interaction and queues an update to be sent
 export const addChatInteraction = (
   recording_id: string,
   topk: TopKItem[] | undefined,
@@ -126,21 +121,21 @@ export const addChatInteraction = (
   const chatIndex = data.chats.length;
   const newChat: ChatInteraction = {
     llmResponseId: generateUUID(),
-    timestamp: new Date().toISOString(),
     recording_id,
+    timestamp: new Date().toISOString(),
     llmResponseInteraction: {
-      hoverDuration: 0,
-      clicks: 0,
-      lastClickTimestamp: '',
       chatIndex,
+      clicks: 0,
+      hoverDuration: 0,
+      lastClickTimestamp: '',
     },
     sources:
-      topk?.map((_item, index) => ({
+      topk?.map((_, index) => ({
+        chatIndex,
         sourceKey: index,
         response: `response_${index + 1}`,
         clicks: 0,
         lastClickTimestamp: '',
-        chatIndex,
       })) || [],
   };
   data.chats.push(newChat);
@@ -161,7 +156,7 @@ export const addChatInteraction = (
   return chatIndex;
 };
 
-// Track when a user clicks on a source
+// Tracks when a user clicks on a source and updates the analytics data
 export const trackSourceClick = (
   chatIndex: number,
   sourceKey: number,
@@ -186,7 +181,7 @@ export const trackSourceClick = (
   });
 };
 
-// Track user interactions with the LLM response (hover or click)
+// Tracks user interactions (hover or click) with the LLM response and updates analytics
 export const trackLLMResponseInteraction = (
   chatIndex: number,
   interactionType: 'hover' | 'click',
