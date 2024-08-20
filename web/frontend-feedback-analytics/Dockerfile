@@ -19,6 +19,8 @@ RUN npm install && npm run build
 COPY feedback1.html /app/dist/
 COPY login.html /app/dist/
 COPY trulens.html /app/dist/
+COPY presentation/ /app/dist/presentation
+
 #COPY src /app/dist/src/
 
 
