@@ -37,14 +37,14 @@ const updateAnalyticsData = (
   }
 };
 
-// Debounced function to send analytics data to the backend
+// Debounced function to send analytics data to the backend every 30 seconds
 const debouncedSendAnalytics = debounce(() => {
   const currentData = JSON.stringify(getAnalyticsData());
   if (currentData !== lastSentData) {
     sendAnalyticsDataToBackend(JSON.parse(currentData), true);
     lastSentData = currentData;
   }
-}, 10000);
+}, 30000);
 
 // Function to send analytics data immediately
 const sendAnalyticsImmediately = (): void => {
