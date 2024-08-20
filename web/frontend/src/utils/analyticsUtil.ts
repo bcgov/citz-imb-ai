@@ -7,8 +7,6 @@ import { debounce } from './debounceUtil';
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
 // Last data sent to the backend
 let lastSentData: string | null = null;
-// Whether the analytics data is currently being sent to the backend
-let isFirstDataSent = false;
 
 // Retrieves analytics data from session storage
 export const getAnalyticsData = (): AnalyticsData => {
@@ -24,15 +22,16 @@ const setAnalyticsData = (data: AnalyticsData): void => {
 };
 
 // Updates analytics data and saves it to session storage
-const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
+const updateAnalyticsData = (
+  updater: (data: AnalyticsData) => void,
+  generationComplete?: boolean,
+): void => {
   const data = getAnalyticsData();
   updater(data);
   setAnalyticsData(data);
 
-  // Send analytics data immediately if it's the first time, otherwise debounce
-  if (!isFirstDataSent) {
+  if (generationComplete) {
     sendAnalyticsImmediately();
-    isFirstDataSent = true;
   } else {
     debouncedSendAnalytics();
   }
@@ -40,7 +39,11 @@ const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
 
 // Debounced function to send analytics data to the backend
 const debouncedSendAnalytics = debounce(() => {
-  sendAnalyticsImmediately();
+  const currentData = JSON.stringify(getAnalyticsData());
+  if (currentData !== lastSentData) {
+    sendAnalyticsDataToBackend(JSON.parse(currentData), true);
+    lastSentData = currentData;
+  }
 }, 10000);
 
 // Function to send analytics data immediately
@@ -88,6 +91,7 @@ export const addChatInteraction = (
   llmResponse: string,
   recording_id: string,
   topk: TopKItem[] | undefined,
+  generationComplete: boolean,
 ): number => {
   let newChatIndex = -1;
   updateAnalyticsData((data) => {
@@ -112,7 +116,7 @@ export const addChatInteraction = (
     };
     data.chats.push(newChat);
     newChatIndex = data.chats.length - 1;
-  });
+  }, generationComplete);
   return newChatIndex;
 };
 
