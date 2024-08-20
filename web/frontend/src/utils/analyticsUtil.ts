@@ -1,41 +1,12 @@
-import { TopKItem } from '@/components/AnswerSection/AnswerSection';
-import { v7 as uuidv7 } from 'uuid';
-
-// Interfaces
-interface SourceInteraction {
-  key: number;
-  source: TopKItem;
-  clicks: number;
-  lastClickTimestamp: string;
-}
-
-interface LLMResponseInteraction {
-  hoverDuration: number;
-  clicks: number;
-  lastClickTimestamp: string;
-}
-
-interface ChatInteraction {
-  timestamp: string;
-  userPrompt: string;
-  llmResponse: string;
-  recording_id: string;
-  llmResponseInteraction: LLMResponseInteraction;
-  sources: SourceInteraction[];
-}
-
-interface AnalyticsData {
-  sessionTimestamp: string;
-  sessionId: string;
-  userId: string;
-  chats: ChatInteraction[];
-}
+import { AnalyticsData, ChatInteraction, TopKItem } from '@/types';
+import { sendAnalyticsDataToBackend } from '@/api/analytics';
+import { generateUUID } from './uuidUtil';
 
 // Key for storing analytics data in session storage
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
 
 // Retrieves analytics data from session storage
-const getAnalyticsData = (): AnalyticsData => {
+export const getAnalyticsData = (): AnalyticsData => {
   const data = sessionStorage.getItem(ANALYTICS_STORAGE_KEY);
   return data
     ? JSON.parse(data)
@@ -52,11 +23,7 @@ const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
   const data = getAnalyticsData();
   updater(data);
   setAnalyticsData(data);
-};
-
-// Generate a new session id using uuid v7
-const generateSessionId = (): string => {
-  return uuidv7();
+  sendAnalyticsDataToBackend(data);
 };
 
 // Initialize analytics data for a new user session
@@ -66,7 +33,7 @@ export const initAnalytics = (userId: string): void => {
 
   setAnalyticsData({
     sessionTimestamp: new Date().toISOString(),
-    sessionId: generateSessionId(),
+    sessionId: generateUUID(),
     userId,
     chats: [],
   });
@@ -82,6 +49,7 @@ export const addChatInteraction = (
   let newChatIndex = -1;
   updateAnalyticsData((data) => {
     const newChat: ChatInteraction = {
+      llmResponseId: generateUUID(),
       timestamp: new Date().toISOString(),
       userPrompt,
       llmResponse,
@@ -139,5 +107,3 @@ export const trackLLMResponseInteraction = (
     }
   });
 };
-
-export { getAnalyticsData };

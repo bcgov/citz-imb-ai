@@ -1,74 +1,18 @@
-import React, { createContext, useState, ReactNode, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import runChat from '@/api/chat';
 import sendFeedback from '@/api/feedback';
 import Keycloak from 'keycloak-js';
-
-// Interface for Message structure
-interface Message {
-  type: 'user' | 'ai';
-  content: string;
-  topk?: TopKItem[];
-}
-
-type userFeedbackType = 'up_vote' | 'down_vote' | 'no_vote';
-
-// Interface for TopKItem structure
-interface TopKItem {
-  ActId: string;
-  Regulations: string | null;
-  score: number;
-  sectionId: string;
-  sectionName: string;
-  text: string;
-  url: string | null;
-}
-
-// Interface for API response structure
-interface ApiResponse {
-  llm: string;
-  topk: TopKItem[];
-}
-
-// Interface for chat history structure
-interface ChatHistory {
-  prompt: string;
-  response: string;
-}
-
-// Interface for Context props
-interface ContextProps {
-  prevPrompts: string[];
-  setPrevPrompts: React.Dispatch<React.SetStateAction<string[]>>;
-  onSent: (prompt?: string) => Promise<void>;
-  setRecentPrompt: React.Dispatch<React.SetStateAction<string>>;
-  recentPrompt: string;
-  showResult: boolean;
-  loading: boolean;
-  messages: Message[];
-  input: string;
-  setInput: React.Dispatch<React.SetStateAction<string>>;
-  newChat: () => void;
-  resetContext: () => void;
-  isAuthenticated: boolean;
-  KeycloakLogin: () => void;
-  KeycloakLogout: () => void;
-  sendUserFeedback: (feedbackType: userFeedbackType) => Promise<void>;
-  generationComplete: boolean;
-  recordingHash: string;
-  errorState: {
-    hasError: boolean;
-    errorMessage: string;
-  };
-  resetError: () => void;
-}
+import {
+  ApiResponse,
+  Message,
+  ChatHistory,
+  userFeedbackType,
+  ContextProps,
+  ContextProviderProps,
+} from '@/types';
 
 // Create a Context with ContextProps type or undefined
 export const Context = createContext<ContextProps | undefined>(undefined);
-
-// Props interface for the ContextProvider component
-interface ContextProviderProps {
-  children: ReactNode;
-}
 
 // Keycloak configuration object
 const keycloakConfig = {
