@@ -8,7 +8,7 @@ import Welcome from '@/pages/Welcome/Welcome';
 import Main from '@/pages/Home/Main/Main';
 import Error from '@/pages/Error/Error';
 import Safety from '@/pages/Safety/Safety';
-import { isAuthenticated } from '@/utils/auth';
+import { isAuthenticated } from '@/utils/authUtil';
 
 const App = () => {
   // Check if the user is authenticated
