@@ -42,7 +42,7 @@ const debouncedSendAnalytics = debounce(() => {
     lastSentData = currentData;
   }
   isAnalyticsSendingActive = false;
-}, 5000);
+}, 10000);
 
 // Initialize analytics data for a new user session
 export const initAnalytics = (userId: string): void => {
