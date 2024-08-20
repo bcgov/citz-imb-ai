@@ -87,8 +87,6 @@ export const initAnalytics = (userId: string): void => {
 
 // Record a new chat interaction and return its index
 export const addChatInteraction = (
-  userPrompt: string,
-  llmResponse: string,
   recording_id: string,
   topk: TopKItem[] | undefined,
   generationComplete: boolean,
@@ -98,8 +96,6 @@ export const addChatInteraction = (
     const newChat: ChatInteraction = {
       llmResponseId: generateUUID(),
       timestamp: new Date().toISOString(),
-      userPrompt,
-      llmResponse,
       recording_id,
       llmResponseInteraction: {
         hoverDuration: 0,
@@ -107,9 +103,9 @@ export const addChatInteraction = (
         lastClickTimestamp: '',
       },
       sources:
-        topk?.map((item, index) => ({
+        topk?.map((_item, index) => ({
           key: index,
-          source: item,
+          response: `response_${index + 1}`,
           clicks: 0,
           lastClickTimestamp: '',
         })) || [],

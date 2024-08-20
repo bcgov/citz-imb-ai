@@ -1,8 +1,6 @@
-import { TopKItem } from './chat.types';
-
 export interface SourceInteraction {
   key: number;
-  source: TopKItem;
+  response: string;
   clicks: number;
   lastClickTimestamp: string;
 }
@@ -16,8 +14,6 @@ export interface LLMResponseInteraction {
 export interface ChatInteraction {
   llmResponseId: string;
   timestamp: string;
-  userPrompt: string;
-  llmResponse: string;
   recording_id: string;
   llmResponseInteraction: LLMResponseInteraction;
   sources: SourceInteraction[];
