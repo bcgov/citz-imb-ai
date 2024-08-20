@@ -5,6 +5,10 @@ import { debounce } from './debounceUtil';
 
 // Key for storing analytics data in session storage
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
+// Last data sent to the backend
+let lastSentData: string | null = null;
+// Whether the analytics data is currently being sent to the backend
+let isAnalyticsSendingActive = false;
 
 // Retrieves analytics data from session storage
 export const getAnalyticsData = (): AnalyticsData => {
@@ -24,26 +28,21 @@ const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
   const data = getAnalyticsData();
   updater(data);
   setAnalyticsData(data);
-  debouncedSendAnalytics();
-};
-
-let isAnalyticsSendingActive = false;
-
-const debouncedSendAnalytics = debounce(() => {
   if (!isAnalyticsSendingActive) {
     isAnalyticsSendingActive = true;
-    const intervalId = setInterval(() => {
-      const data = getAnalyticsData();
-      sendAnalyticsDataToBackend(data);
-    }, 5000);
-
-    // Stop sending after 5 minutes of inactivity
-    setTimeout(() => {
-      clearInterval(intervalId);
-      isAnalyticsSendingActive = false;
-    }, 300000);
+    debouncedSendAnalytics();
   }
-}, 1000);
+};
+
+// Debounced function to send analytics data to the backend
+const debouncedSendAnalytics = debounce(() => {
+  const currentData = JSON.stringify(getAnalyticsData());
+  if (currentData !== lastSentData) {
+    sendAnalyticsDataToBackend(JSON.parse(currentData));
+    lastSentData = currentData;
+  }
+  isAnalyticsSendingActive = false;
+}, 5000);
 
 // Initialize analytics data for a new user session
 export const initAnalytics = (userId: string): void => {
@@ -60,9 +59,7 @@ export const initAnalytics = (userId: string): void => {
 
   // Send initial analytics data immediately
   sendAnalyticsDataToBackend(newData);
-
-  // Start the debounced sending process
-  debouncedSendAnalytics();
+  lastSentData = JSON.stringify(newData);
 };
 
 // Record a new chat interaction and return its index
