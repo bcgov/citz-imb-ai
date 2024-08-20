@@ -15,16 +15,32 @@ async def save_analytics(request: Request):
         if not session_id:
             raise HTTPException(status_code=400, detail="sessionId is required in the analytics data")
 
-        # Create a filename based on the sessionId
-        file_name = f"analytics_{session_id}.json"
-        file_path = os.path.join("analytics_data", file_name)
+        # Define a single file for all analytics data
+        file_path = os.path.join("analytics_data", "all_analytics.json")
 
         # Ensure the directory exists
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-        # Write the analytics data to a JSON file, overwriting if it exists
+        # Read existing data or create an empty list
+        if os.path.exists(file_path):
+            with open(file_path, "r") as file:
+                all_data = json.load(file)
+        else:
+            all_data = []
+
+        # Check if session_id already exists
+        session_index = next((index for (index, d) in enumerate(all_data) if d["sessionId"] == session_id), None)
+
+        if session_index is not None:
+            # Update existing session data
+            all_data[session_index] = analytics_data
+        else:
+            # Add new session data
+            all_data.append(analytics_data)
+
+        # Write the updated data back to the file
         with open(file_path, "w") as file:
-            json.dump(analytics_data, file, indent=2)
+            json.dump(all_data, file, indent=2)
 
         return {"message": f"Analytics data saved successfully for session {session_id}"}
     except Exception as e:
