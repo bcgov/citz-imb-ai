@@ -3,6 +3,7 @@ export interface SourceInteraction {
   response: string;
   clicks: number;
   lastClickTimestamp: string;
+  chatIndex: number;
 }
 
 export interface LLMResponseInteraction {
@@ -24,4 +25,22 @@ export interface AnalyticsData {
   sessionId: string;
   userId: string;
   chats: ChatInteraction[];
+}
+
+export interface AnalyticsUpdate {
+  sessionId: string;
+  chatIndex?: number;
+  newChat?: ChatInteraction;
+  sourceUpdate?: {
+    chatIndex: number;
+    sourceKey: number;
+    clicks: number;
+    lastClickTimestamp: string;
+  };
+  llmResponseUpdate?: {
+    chatIndex: number;
+    hoverDuration?: number;
+    clicks?: number;
+    lastClickTimestamp?: string;
+  };
 }
