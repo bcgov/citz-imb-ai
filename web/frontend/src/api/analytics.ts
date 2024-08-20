@@ -2,7 +2,7 @@ import { AnalyticsData, AnalyticsUpdate } from '@/types';
 
 const baseUrl = '/api';
 
-// Send full analytics data to the backend (existing method)
+// Send full analytics data to the backend
 export const sendFullAnalyticsDataToBackend = async (
   data: AnalyticsData,
   useKeepalive = false,
@@ -22,7 +22,7 @@ export const sendFullAnalyticsDataToBackend = async (
   }
 };
 
-// Send partial analytics updates to the backend (new method)
+// Send partial analytics updates to the backend
 export const sendAnalyticsUpdatesToBackend = async (
   updates: AnalyticsUpdate[],
   useKeepalive = false,
