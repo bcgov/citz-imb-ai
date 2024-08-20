@@ -1,5 +1,5 @@
 export interface SourceInteraction {
-  key: number;
+  sourceKey: number;
   response: string;
   clicks: number;
   lastClickTimestamp: string;
@@ -10,6 +10,7 @@ export interface LLMResponseInteraction {
   hoverDuration: number;
   clicks: number;
   lastClickTimestamp: string;
+  chatIndex: number;
 }
 
 export interface ChatInteraction {
