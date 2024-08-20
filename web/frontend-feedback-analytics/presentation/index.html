@@ -78,14 +78,83 @@
         <section>
           <img
             style="transform: scale(120%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/overall_architecture.jpg"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/tech_stack.jpg"
           />
         </section>
         <section>
           <img
             style="transform: scale(120%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/preprocessing.jpg"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/overall_architecture.jpg"
           />
+        </section>
+        <section>
+          <section>
+            <img
+              style="transform: scale(130%)"
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/preprocessing.jpg"
+            />
+          </section>
+          <section>
+            <h2>Graph Database and vector store</h2>
+			<ul>
+				<li class="fragment">
+			  We use a graph database to store the data and a vector store to
+              store the embeddings.
+				</li>
+				<li class="fragment">
+              Neo4J is used for both. 
+			  </li>
+			  <li class="fragment">
+              We use Neo4j to do more advanced queries that require clustering
+              the data, finding communities which are much easier to implement using a graph
+              database.
+			  </li>
+			</ul>
+            </p>
+          </section>
+          <section>
+            <h2>HPC</h2>
+            <p>High Performance Computing for pre-processing the data</p>
+          </section>
+        </section>
+        <section>
+          <h2>MLOps and Airflow</h2>
+          <p>
+            All our jupyter notebook scripts are converted and orchestrated
+            using Airflow
+          </p>
+        </section>
+        <section>
+          <h2>Analytics</h2>
+          <ul>
+            <li class="fragment">Frontend user tracking data</li>
+            <li class="fragment">Backend RAG Chain tracking</li>
+          </ul>
+        </section>
+        <section>
+          <img
+            style="transform: scale(130%)"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/active_learning.jpg"
+          />
+        </section>
+        <section>
+          <h2>Challenges</h2>
+          <ul>
+            <li class="fragment">Getting this running in openshift</li>
+            <li class="fragment">Getting the data to train the A.I</li>
+            <li class="fragment">Training the A.I requires A LOT of data</li>
+            <li class="fragment">
+              A lot of knowledge is required to train and work with A.I
+            </li>
+            <li class="fragment">
+              Having a good understanding of the data, the A.I alogirthm and
+              performance compute is key
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Q&A</h2>
+          <p>Questions?</p>
         </section>
       </div>
     </div>
