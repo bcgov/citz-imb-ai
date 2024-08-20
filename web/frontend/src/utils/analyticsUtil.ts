@@ -41,12 +41,27 @@ const debouncedSendAnalytics = debounce(() => {
 }, 10000);
 
 // Function to send analytics data immediately
-const sendAnalyticsImmediately = () => {
+const sendAnalyticsImmediately = (): void => {
   const currentData = JSON.stringify(getAnalyticsData());
   if (currentData !== lastSentData) {
-    sendAnalyticsDataToBackend(JSON.parse(currentData));
+    sendAnalyticsDataToBackend(JSON.parse(currentData), true);
     lastSentData = currentData;
   }
+};
+
+// Function to send analytics data when the page visibility changes or before unload
+export const sendAnalyticsImmediatelyOnLeave = (): (() => void) => {
+  const handleVisibilityChange = () =>
+    document.hidden && sendAnalyticsImmediately();
+  const handleBeforeUnload = () => sendAnalyticsImmediately();
+
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+  window.addEventListener('beforeunload', handleBeforeUnload);
+
+  return () => {
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    window.removeEventListener('beforeunload', handleBeforeUnload);
+  };
 };
 
 // Initialize analytics data for a new user session
@@ -65,31 +80,6 @@ export const initAnalytics = (userId: string): void => {
   // Send initial analytics data immediately
   sendAnalyticsDataToBackend(newData);
   lastSentData = JSON.stringify(newData);
-};
-
-// Function to send analytics data immediately when the user tries to leave the page
-export const sendAnalyticsImmediatelyOnLeave = (): void => {
-  // Add beforeunload event listener with dialog
-  const onBeforeUnload = () => {
-    window.addEventListener('beforeunload', (event) => {
-      sendAnalyticsImmediately();
-      event.preventDefault();
-      // deprecated but required for some older browsers
-      event.returnValue = '';
-      return '';
-    });
-  };
-
-  // Add unload event listener
-  const onUnload = () => {
-    window.addEventListener('unload', () => {
-      sendAnalyticsImmediately();
-    });
-  };
-
-  // Add both event listeners to ensure analytics data is sent
-  onBeforeUnload();
-  onUnload();
 };
 
 // Record a new chat interaction and return its index

@@ -1,10 +1,15 @@
 import { AnalyticsData } from '@/types';
 
+const url = '/api/saveAnalytics';
+
+// Send analytics data to the backend
 export const sendAnalyticsDataToBackend = async (
   data: AnalyticsData,
+  useKeepalive = false,
 ): Promise<void> => {
   try {
-    const response = await fetch('/api/saveAnalytics', {
+    const response = await fetch(url, {
+      keepalive: useKeepalive,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
