@@ -36,13 +36,18 @@ const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
 
 // Debounced function to send analytics data to the backend
 const debouncedSendAnalytics = debounce(() => {
+  sendAnalyticsImmediately();
+  isAnalyticsSendingActive = false;
+}, 10000);
+
+// Function to send analytics data immediately
+const sendAnalyticsImmediately = () => {
   const currentData = JSON.stringify(getAnalyticsData());
   if (currentData !== lastSentData) {
     sendAnalyticsDataToBackend(JSON.parse(currentData));
     lastSentData = currentData;
   }
-  isAnalyticsSendingActive = false;
-}, 10000);
+};
 
 // Initialize analytics data for a new user session
 export const initAnalytics = (userId: string): void => {
@@ -60,6 +65,14 @@ export const initAnalytics = (userId: string): void => {
   // Send initial analytics data immediately
   sendAnalyticsDataToBackend(newData);
   lastSentData = JSON.stringify(newData);
+
+  // Add beforeunload event listener with dialog
+  window.addEventListener('beforeunload', (event) => {
+    sendAnalyticsImmediately();
+    event.preventDefault();
+    event.returnValue = '';
+    return '';
+  });
 };
 
 // Record a new chat interaction and return its index
