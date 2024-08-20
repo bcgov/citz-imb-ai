@@ -72,6 +72,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
           lastAiMessage.content,
           recording_id,
           lastAiMessage.topk,
+          generationComplete
         );
         setChatIndex(newChatIndex);
       }
