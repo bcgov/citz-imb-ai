@@ -10,7 +10,13 @@ class AnalyticsService:
     def __init__(self):
         self.file_path = os.path.join("analytics_data", "all_analytics.json")
         self.lock = asyncio.Lock()
+        # Create the directory if it doesn't exist
         os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
+    
+        # Create the file if it doesn't exist
+        if not os.path.exists(self.file_path):
+            with open(self.file_path, 'w') as f:
+                json.dump([], f)
 
     # read data from disk
     async def read_data(self) -> List[Dict[str, Any]]:
