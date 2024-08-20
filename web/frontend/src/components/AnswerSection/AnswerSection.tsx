@@ -63,16 +63,12 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   useEffect(() => {
     if (generationComplete && isLastMessage) {
       const aiMessages = messages.filter((msg) => msg.type === 'ai');
-      const userMessages = messages.filter((msg) => msg.type === 'user');
-      if (aiMessages.length > 0 && userMessages.length > 0) {
+      if (aiMessages.length > 0) {
         const lastAiMessage = aiMessages[aiMessages.length - 1];
-        const lastUserMessage = userMessages[userMessages.length - 1];
         const newChatIndex = addChatInteraction(
-          lastUserMessage.content,
-          lastAiMessage.content,
           recording_id,
           lastAiMessage.topk,
-          generationComplete
+          generationComplete,
         );
         setChatIndex(newChatIndex);
       }
