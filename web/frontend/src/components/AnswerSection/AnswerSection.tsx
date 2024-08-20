@@ -48,7 +48,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   const debouncedTrackHover = useRef(
     debounce((chatIndex: number, duration: number) => {
       trackLLMResponseInteraction(chatIndex, 'hover', duration);
-    }, 500),
+    }, 1000),
   ).current;
 
   // Initialize analytics on component mount
