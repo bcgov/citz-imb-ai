@@ -1,9 +1,12 @@
 import { AnalyticsData, ChatInteraction, TopKItem } from '@/types';
 import { sendAnalyticsDataToBackend } from '@/api/analytics';
 import { generateUUID } from './uuidUtil';
+import { debounce } from './debounceUtil';
 
 // Key for storing analytics data in session storage
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
+// Last data sent to the backend
+let lastSentData: string | null = null;
 
 // Retrieves analytics data from session storage
 export const getAnalyticsData = (): AnalyticsData => {
@@ -19,11 +22,52 @@ const setAnalyticsData = (data: AnalyticsData): void => {
 };
 
 // Updates analytics data and saves it to session storage
-const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
+const updateAnalyticsData = (
+  updater: (data: AnalyticsData) => void,
+  generationComplete?: boolean,
+): void => {
   const data = getAnalyticsData();
   updater(data);
   setAnalyticsData(data);
-  sendAnalyticsDataToBackend(data);
+
+  if (generationComplete) {
+    sendAnalyticsImmediately();
+  } else {
+    debouncedSendAnalytics();
+  }
+};
+
+// Debounced function to send analytics data to the backend
+const debouncedSendAnalytics = debounce(() => {
+  const currentData = JSON.stringify(getAnalyticsData());
+  if (currentData !== lastSentData) {
+    sendAnalyticsDataToBackend(JSON.parse(currentData), true);
+    lastSentData = currentData;
+  }
+}, 10000);
+
+// Function to send analytics data immediately
+const sendAnalyticsImmediately = (): void => {
+  const currentData = JSON.stringify(getAnalyticsData());
+  if (currentData !== lastSentData) {
+    sendAnalyticsDataToBackend(JSON.parse(currentData), true);
+    lastSentData = currentData;
+  }
+};
+
+// Function to send analytics data when the page visibility changes or before unload
+export const sendAnalyticsImmediatelyOnLeave = (): (() => void) => {
+  const handleVisibilityChange = () =>
+    document.hidden && sendAnalyticsImmediately();
+  const handleBeforeUnload = () => sendAnalyticsImmediately();
+
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+  window.addEventListener('beforeunload', handleBeforeUnload);
+
+  return () => {
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    window.removeEventListener('beforeunload', handleBeforeUnload);
+  };
 };
 
 // Initialize analytics data for a new user session
@@ -31,12 +75,14 @@ export const initAnalytics = (userId: string): void => {
   const existingData = getAnalyticsData();
   if (existingData.userId) return;
 
-  setAnalyticsData({
+  const newData = {
     sessionTimestamp: new Date().toISOString(),
     sessionId: generateUUID(),
     userId,
     chats: [],
-  });
+  };
+  setAnalyticsData(newData);
+  lastSentData = JSON.stringify(newData);
 };
 
 // Record a new chat interaction and return its index
@@ -45,6 +91,7 @@ export const addChatInteraction = (
   llmResponse: string,
   recording_id: string,
   topk: TopKItem[] | undefined,
+  generationComplete: boolean,
 ): number => {
   let newChatIndex = -1;
   updateAnalyticsData((data) => {
@@ -69,7 +116,7 @@ export const addChatInteraction = (
     };
     data.chats.push(newChat);
     newChatIndex = data.chats.length - 1;
-  });
+  }, generationComplete);
   return newChatIndex;
 };
 

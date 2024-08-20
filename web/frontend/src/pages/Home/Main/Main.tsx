@@ -7,6 +7,7 @@ import AnswerSection from '@/components/AnswerSection/AnswerSection';
 import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import { Link } from 'react-router-dom';
+import { sendAnalyticsImmediatelyOnLeave } from '@/utils/analyticsUtil';
 
 // Main component for the chat interface
 const Main = () => {
@@ -56,6 +57,12 @@ const Main = () => {
   useEffect(() => {
     adjustTextareaHeight();
   }, [input]);
+
+  // Effect to send analytics data immediately when the user tries to leave the page
+  useEffect(() => {
+    const cleanup = sendAnalyticsImmediatelyOnLeave();
+    return cleanup;
+  }, []);
 
   // Effect to handle scrolling behavior
   useEffect(() => {
