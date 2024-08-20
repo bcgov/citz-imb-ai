@@ -4,6 +4,7 @@ from app.services.analytics_service import AnalyticsService
 router = APIRouter()
 analytics_service = AnalyticsService()
 
+# post request to save initial analytics
 @router.post("/saveAnalytics")
 async def save_analytics(request: Request):
     try:
@@ -18,6 +19,7 @@ async def save_analytics(request: Request):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# patch request to update analytics
 @router.patch("/updateAnalytics")
 async def update_analytics(request: Request):
     try:

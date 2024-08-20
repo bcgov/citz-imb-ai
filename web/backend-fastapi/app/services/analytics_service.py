@@ -4,21 +4,26 @@ import aiofiles
 import asyncio
 from typing import List, Dict, Any
 
+# AnalyticsService class to handle analytics data
 class AnalyticsService:
+    # initialize the service
     def __init__(self):
         self.file_path = os.path.join("analytics_data", "all_analytics.json")
         self.lock = asyncio.Lock()
         os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
 
+    # read data from disk
     async def read_data(self) -> List[Dict[str, Any]]:
         async with aiofiles.open(self.file_path, mode='r') as file:
             content = await file.read()
             return json.loads(content) if content else []
 
+    # write data to disk
     async def write_data(self, data: List[Dict[str, Any]]):
         async with aiofiles.open(self.file_path, mode='w') as file:
             await file.write(json.dumps(data, indent=2))
 
+    # save analytics data
     async def save_analytics(self, analytics_data: Dict[str, Any]) -> str:
         session_id = analytics_data.get('sessionId')
         async with self.lock:
@@ -31,6 +36,7 @@ class AnalyticsService:
             await self.write_data(all_data)
         return f"Analytics data saved successfully for session {session_id}"
 
+    # update analytics data
     async def update_analytics(self, updates: List[Dict[str, Any]]) -> str:
         async with self.lock:
             all_data = await self.read_data()
