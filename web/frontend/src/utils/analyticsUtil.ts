@@ -1,6 +1,7 @@
 import { AnalyticsData, ChatInteraction, TopKItem } from '@/types';
 import { sendAnalyticsDataToBackend } from '@/api/analytics';
 import { generateUUID } from './uuidUtil';
+import { debounce } from './debounceUtil';
 
 // Key for storing analytics data in session storage
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
@@ -23,20 +24,45 @@ const updateAnalyticsData = (updater: (data: AnalyticsData) => void): void => {
   const data = getAnalyticsData();
   updater(data);
   setAnalyticsData(data);
-  sendAnalyticsDataToBackend(data);
+  debouncedSendAnalytics();
 };
+
+let isAnalyticsSendingActive = false;
+
+const debouncedSendAnalytics = debounce(() => {
+  if (!isAnalyticsSendingActive) {
+    isAnalyticsSendingActive = true;
+    const intervalId = setInterval(() => {
+      const data = getAnalyticsData();
+      sendAnalyticsDataToBackend(data);
+    }, 5000);
+
+    // Stop sending after 5 minutes of inactivity
+    setTimeout(() => {
+      clearInterval(intervalId);
+      isAnalyticsSendingActive = false;
+    }, 300000);
+  }
+}, 1000);
 
 // Initialize analytics data for a new user session
 export const initAnalytics = (userId: string): void => {
   const existingData = getAnalyticsData();
   if (existingData.userId) return;
 
-  setAnalyticsData({
+  const newData = {
     sessionTimestamp: new Date().toISOString(),
     sessionId: generateUUID(),
     userId,
     chats: [],
-  });
+  };
+  setAnalyticsData(newData);
+
+  // Send initial analytics data immediately
+  sendAnalyticsDataToBackend(newData);
+
+  // Start the debounced sending process
+  debouncedSendAnalytics();
 };
 
 // Record a new chat interaction and return its index
