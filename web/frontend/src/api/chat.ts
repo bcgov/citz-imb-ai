@@ -1,25 +1,4 @@
-// Interface for chat history items
-interface ChatHistory {
-  prompt: string;
-  response: string;
-}
-
-// Interface for top-k items returned by the API
-interface TopKItem {
-  ActId: string;
-  Regulations: string | null;
-  score: number;
-  sectionId: string;
-  sectionName: string;
-  text: string;
-  url: string | null;
-}
-
-// Interface for the API response
-interface ApiResponse {
-  llm: string;
-  topk: TopKItem[];
-}
+import { ChatHistory, ApiResponse } from '@/types';
 
 // Function to run a chat interaction with the API
 const runChat = async (

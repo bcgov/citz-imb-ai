@@ -18,27 +18,7 @@ import {
 import { Context } from '@/context/Context';
 import { getUserId } from '@/utils/authUtil';
 import { debounce } from '@/utils/debounceUtil';
-
-// Interfaces
-export interface TopKItem {
-  ActId: string;
-  Regulations: string | null;
-  score: number;
-  sectionId: string;
-  sectionName: string;
-  text: string;
-  url: string | null;
-}
-
-interface AnswerSectionProps {
-  message: {
-    content: string;
-    topk?: TopKItem[];
-  };
-  isLastMessage: boolean;
-  generationComplete: boolean;
-  recording_id: string;
-}
+import { AnswerSectionProps, TopKItem } from '@/types';
 
 // Component for displaying AI-generated answers and related sources
 const AnswerSection: React.FC<AnswerSectionProps> = ({

@@ -1,6 +1,8 @@
+import { userFeedbackType } from '@/types';
+
 // Function to send user feedback to the server
 const sendFeedback = async (
-  feedbackType: 'up_vote' | 'down_vote' | 'no_vote',
+  feedbackType: userFeedbackType,
   recordingHash: string,
 ): Promise<string> => {
   // Send a POST request to the feedback endpoint

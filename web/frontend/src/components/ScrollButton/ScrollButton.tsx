@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ScrollButton.scss';
 import { assets } from '@/assets/icons/assets';
-
-// Define props interface for ScrollButton component
-interface ScrollButtonProps {
-  scrollableElementId: string;
-  generationComplete: boolean;
-}
+import { ScrollButtonProps } from '@/types';
 
 // ScrollButton component
 const ScrollButton: React.FC<ScrollButtonProps> = ({

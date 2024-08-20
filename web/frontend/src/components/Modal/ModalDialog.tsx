@@ -1,20 +1,6 @@
 import React from 'react';
 import './ModalDialog.scss';
-
-// Interface for ModalDialog props
-interface ModalDialogProps {
-  title: string;
-  description: React.ReactNode;
-  option1?: {
-    text: string;
-    onClick: () => void;
-  };
-  option2?: {
-    text: string;
-    onClick: () => void;
-  };
-  closeOnOutsideClick?: boolean;
-}
+import { ModalDialogProps } from '@/types';
 
 // ModalDialog component
 const ModalDialog: React.FC<ModalDialogProps> = ({
