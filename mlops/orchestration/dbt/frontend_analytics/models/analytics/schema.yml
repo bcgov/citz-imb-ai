@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: frontend_analytics
+    database: trulens
+    schema: frontend_analytics
+    tables:
+      - name: raw_frontend_analytics
+
+models:
+  - name: raw_frontend_analytics
+    description: "Raw frontend analytics data"
+    columns:
+      - name: session_timestamp
+        description: "Timestamp of the session"
+      - name: session_id
+        description: "Unique identifier for the session"
+      - name: user_id
+        description: "Unique identifier for the user"
+      - name: chats
+        description: "JSON array of chat data"
+
+  - name: normalized_frontend_analytics
+    description: "Normalized frontend analytics data"
+    columns:
+      - name: session_timestamp
+        description: "Timestamp of the session"
+      - name: session_id
+        description: "Unique identifier for the session"
+      - name: user_id
+        description: "Unique identifier for the user"
+      - name: llm_response_id
+        description: "Unique identifier for the LLM response"
+      - name: recording_id
+        description: "Identifier for the recording"
+      - name: chat_timestamp
+        description: "Timestamp of the chat"
+      - name: chat_index
+        description: "Index of the chat"
+      - name: llm_response_clicks
+        description: "Number of clicks on the LLM response"
+      - name: llm_response_hover_duration
+        description: "Duration of hover on the LLM response"
+      - name: llm_response_last_click_timestamp
+        description: "Timestamp of the last click on the LLM response"
+      - name: source_chat_index
+        description: "Chat index for the source"
+      - name: source_key
+        description: "Key of the source"
+      - name: source_response
+        description: "Response of the source"
+      - name: source_clicks
+        description: "Number of clicks on the source"
+      - name: source_last_click_timestamp
+        description: "Timestamp of the last click on the source"
