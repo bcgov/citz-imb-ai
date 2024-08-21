@@ -10,3 +10,16 @@ trulens:
       dbname: "{{ env_var('TRULENS_DB', 'postgres') }}"
       schema: public
   target: dev
+
+frontend_analytics:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: "{{ env_var('TRULENS_HOST', 'trulens') }}"
+      port: "{{ env_var('TRULENS_PORT', 5432) }}"
+      user: "{{ env_var('TRULENS_USER', 'postgres') }}"
+      pass: "{{ env_var('TRULENS_PASSWORD', 'root') }}"
+      dbname: "{{ env_var('TRULENS_DB', 'postgres') }}"
+      schema: frontend_analytics
+  target: dev
