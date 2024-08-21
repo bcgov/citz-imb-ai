@@ -50,13 +50,13 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>
+        <section data-auto-animate>
           <div class="heading">
             <h1>Chat with <span>BC Laws</span></h1>
           </div>
           <h3>Technical presentation</h3>
         </section>
-        <section>
+        <section data-auto-animate>
           <h2>What we will cover</h2>
           <ul>
             <li class="fragment">Introduction</li>
@@ -95,6 +95,13 @@
             />
           </section>
           <section>
+            <h2>How we index the acts and regulations</h2>
+            <img
+              style="transform: scale(120%)"
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/indexing_acts_process.jpg"
+            />
+          </section>
+          <section>
             <h2>How data is stored in Neo4j</h2>
             <img
               src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/graph_neo4j.png"
@@ -102,18 +109,27 @@
           </section>
           <section>
             <h2>Graph Database and vector store</h2>
-            <ul>
-              <li class="fragment">
-                We us e a graph database to store the data and a vector store to
-                store the embeddings.
-              </li>
-              <li class="fragment">Neo4J is used for both.</li>
-              <li class="fragment">
-                We use Neo4j to do more advanced queries that require clustering
-                the data, finding communities which are much easier to implement
-                using a graph database.
-              </li>
-            </ul>
+            <table style="font-size: 18px;">
+              <thead>
+                <tr>
+                  <th>Data storage</th>
+                  <th>Neo4j Integration</th>
+                  <th>Advanced Querying</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>We use a graph database to store the data.</td>
+                  <td>Neo4J is leveraged for both the graph database and the vector store.</td>
+                  <td>Neo4J enables advanced queries, such as clustering the data and finding communities.</td>
+                </tr>
+                <tr>
+                  <td>Vector store is utilized for storing embeddings.</td>
+                  <td></td>
+                  <td>These tasks are more efficient and easier to implement using a graph database.</td>
+                </tr>
+              </tbody>
+            </table>
           </section>
           <section>
             <h2>HPC</h2>
@@ -158,9 +174,10 @@
         <section>
           <h2>Q&A</h2>
           <p>Questions?</p>
-		  <p>
-			All of our presentation and diagrams can be found in our github repository.
-		  </p>
+          <p>
+            All of our presentation and diagrams can be found in our github
+            repository.
+          </p>
         </section>
       </div>
     </div>
