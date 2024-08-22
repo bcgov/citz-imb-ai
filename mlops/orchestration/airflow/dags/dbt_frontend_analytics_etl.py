@@ -120,7 +120,7 @@ def cleanup_source_file():
     cur = conn.cursor()
 
     # Get processed session IDs
-    cur.execute("SELECT session_id FROM frontend_analytics.raw_data")
+    cur.execute("SELECT data->>'sessionId' FROM frontend_analytics.raw_frontend_analytics")
     processed_sessions = set(row[0] for row in cur.fetchall())
 
     # Read and filter JSON file
