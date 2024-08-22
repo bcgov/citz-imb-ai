@@ -2,10 +2,11 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.operators.dummy_operator import DummyOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.models import Connection
-from airflow.utils.dates import days_ago
 from airflow import settings
+from airflow.operators.python import BranchPythonOperator
 from datetime import datetime, timedelta
 import json
 import os
@@ -43,7 +44,7 @@ dag = DAG(
     'frontend_analytics_etl',
     default_args=default_args,
     description='ETL process for frontend analytics',
-    schedule_interval=timedelta(days=1),
+    schedule_interval='@daily',
     tags=['dbt', 'bclaws', 'bclaws_analytics', 'trulens'],
 )
 
@@ -76,6 +77,22 @@ def get_postgres_hook():
 def print_env_variables():
     return f'Trulens environment variables loaded'
 
+# Function to check if json data exists and has valid sessionIds
+def check_json_data():
+    json_file_path = '/opt/airflow/analytics_data/all_analytics.json'
+    try:
+        with open(json_file_path, 'r') as f:
+            data = json.load(f)
+        
+        valid_data = [item for item in data if item.get('sessionId')]
+        
+        if valid_data:
+            return 'load_data'
+        else:
+            return 'skip_processing'
+    except (FileNotFoundError, json.JSONDecodeError):
+        return 'skip_processing'
+
 # Function to load JSON data to Postgres
 def load_json_to_postgres():
     pg_hook = get_postgres_hook()
@@ -86,10 +103,11 @@ def load_json_to_postgres():
         data = json.load(f)
 
     for item in data:
-        cur.execute(
-            "INSERT INTO frontend.raw_frontend_analytics (data) VALUES (%s)",
-            (json.dumps(item),)
-        )
+        if item.get('sessionId'):  # Only insert items with a sessionId
+            cur.execute(
+                "INSERT INTO frontend.raw_frontend_analytics (data) VALUES (%s)",
+                (json.dumps(item),)
+            )
 
     conn.commit()
     cur.close()
@@ -113,14 +131,9 @@ def cleanup_source_file():
         with open(original_file, 'r') as f:
             original_data = json.load(f)
         
-        filtered_data = [item for item in original_data if item['sessionId'] not in processed_sessions]
+        filtered_data = [item for item in original_data if item.get('sessionId') not in processed_sessions]
         
-        with open(original_file, 'r') as f:
-            new_data = json.load(f)
-        
-        merged_data = filtered_data + [item for item in new_data if item not in original_data]
-        
-        json.dump(merged_data, temp_file)
+        json.dump(filtered_data, temp_file)
         temp_file.flush()
         os.fsync(temp_file.fileno())
     
@@ -155,6 +168,12 @@ create_raw_table = PostgresOperator(
     dag=dag,
 )
 
+check_data = BranchPythonOperator(
+    task_id='check_data',
+    python_callable=check_json_data,
+    dag=dag,
+)
+
 load_data = PythonOperator(
     task_id='load_json_to_postgres',
     python_callable=load_json_to_postgres,
@@ -185,11 +204,28 @@ run_dbt = BashOperator(
     dag=dag,
 )
 
+# Define the DAG tasks
+skip_processing = DummyOperator(
+    task_id='skip_processing',
+    dag=dag,
+)
+
+end_task = DummyOperator(
+    task_id='end_task',
+    trigger_rule='none_failed_or_skipped',
+    dag=dag,
+)
+
 cleanup_task = PythonOperator(
     task_id='cleanup_source_file',
     python_callable=cleanup_source_file,
     dag=dag,
 )
 
-# Define the DAG tasks
-retrieve_secrets >> create_schema >> create_raw_table >> load_data >> move_profiles_yml >> run_dbt >> cleanup_task
+# Define the task dependencies
+retrieve_secrets >> create_schema >> create_raw_table >> check_data
+check_data >> [load_data, skip_processing]
+load_data >> run_dbt >> move_profiles_yml >> cleanup_task
+[cleanup_task, skip_processing] >> end_task
+
+
