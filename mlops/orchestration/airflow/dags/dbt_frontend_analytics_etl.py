@@ -3,6 +3,9 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
+from airflow.models import Connection
+from airflow.utils.dates import days_ago
+from airflow import settings
 from datetime import datetime, timedelta
 import json
 import os
@@ -19,7 +22,10 @@ TRULENS_USER = os.getenv('TRULENS_USER', 'postgres')
 TRULENS_PASSWORD = os.getenv('TRULENS_PASSWORD', 'root')
 TRULENS_DB = os.getenv('TRULENS_DB', 'postgres')
 TRULENS_HOST = os.getenv('TRULENS_HOST', 'trulens')
-TRULENS_PORT = os.getenv('TRULENS_PORT', '5432')
+TRULENS_PORT = os.getenv('TRULENS_PORT', 5432)
+
+# Define the Postgres connection ID
+POSTGRES_CONN_ID = 'trulens_postgres'
 
 # Define default arguments for the DAG
 default_args = {
@@ -41,15 +47,30 @@ dag = DAG(
     tags=['dbt', 'bclaws', 'bclaws_analytics', 'trulens'],
 )
 
+# Function to create the Postgres connection if it doesn't exist
+def create_postgres_connection():
+    session = settings.Session()
+    conn = session.query(Connection).filter(Connection.conn_id == POSTGRES_CONN_ID).first()
+    if not conn:
+        new_conn = Connection(
+            conn_id=POSTGRES_CONN_ID,
+            conn_type='postgres',
+            host=TRULENS_HOST,
+            schema=TRULENS_DB,
+            login=TRULENS_USER,
+            password=TRULENS_PASSWORD,
+            port=TRULENS_PORT
+        )
+        session.add(new_conn)
+        session.commit()
+    session.close()
+
+# Create the Postgres connection
+create_postgres_connection()
+
 # Function to get PostgresHook
 def get_postgres_hook():
-    return PostgresHook(
-        host=TRULENS_HOST,
-        database=TRULENS_DB,
-        user=TRULENS_USER,
-        password=TRULENS_PASSWORD,
-        port=int(TRULENS_PORT)
-    )
+    return PostgresHook(postgres_conn_id=POSTGRES_CONN_ID)
 
 # Function to print environment variables (for debugging)
 def print_env_variables():
@@ -118,7 +139,7 @@ retrieve_secrets = PythonOperator(
 create_schema = PostgresOperator(
     task_id='create_schema',
     sql="CREATE SCHEMA IF NOT EXISTS frontend;",
-    postgres_hook=get_postgres_hook(),
+    postgres_conn_id=POSTGRES_CONN_ID,
     dag=dag,
 )
 
@@ -130,7 +151,7 @@ create_raw_table = PostgresOperator(
         data JSONB NOT NULL
     );
     """,
-    postgres_hook=get_postgres_hook(),
+    postgres_conn_id=POSTGRES_CONN_ID,
     dag=dag,
 )
 
@@ -151,6 +172,7 @@ run_dbt = BashOperator(
     bash_command='''
     source /opt/airflow/dbt_venv/bin/activate
     export HOME=/home/airflow
+    dbt deps --project-dir /opt/airflow/dbt/analytics
     dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/analytics
     deactivate
     ''',
@@ -159,7 +181,6 @@ run_dbt = BashOperator(
         'TRULENS_PASSWORD': TRULENS_PASSWORD,
         'TRULENS_HOST': TRULENS_HOST,
         'TRULENS_DB': TRULENS_DB,
-        'TRULENS_PORT': TRULENS_PORT,
     },
     dag=dag,
 )
