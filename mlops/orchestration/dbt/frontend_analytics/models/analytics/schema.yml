@@ -53,3 +53,48 @@ models:
         description: "Number of clicks on the source"
       - name: source_last_click_timestamp
         description: "Timestamp of the last click on the source"
+
+  - name: sessions
+    columns:
+      - name: session_id
+        tests:
+          - unique
+          - not_null
+      - name: session_timestamp
+      - name: user_id
+
+  - name: chats
+    columns:
+      - name: chat_id
+        tests:
+          - unique
+          - not_null
+      - name: session_id
+      - name: llm_response_id
+      - name: recording_id
+      - name: timestamp
+
+  - name: llm_response_interactions
+    columns:
+      - name: interaction_id
+        tests:
+          - unique
+          - not_null
+      - name: chat_id
+      - name: chat_index
+      - name: clicks
+      - name: hover_duration
+      - name: last_click_timestamp
+
+  - name: sources
+    columns:
+      - name: source_id
+        tests:
+          - unique
+          - not_null
+      - name: chat_id
+      - name: chat_index
+      - name: source_key
+      - name: response
+      - name: clicks
+      - name: last_click_timestamp
