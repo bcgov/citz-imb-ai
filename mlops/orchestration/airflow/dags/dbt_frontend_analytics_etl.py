@@ -87,7 +87,7 @@ def check_json_data():
         valid_data = [item for item in data if item.get('sessionId')]
         
         if valid_data:
-            return 'load_data'
+            return 'load_json_to_postgres'
         else:
             return 'skip_processing'
     except (FileNotFoundError, json.JSONDecodeError):
@@ -187,7 +187,7 @@ move_profiles_yml = BashOperator(
 )
 
 run_dbt = BashOperator(
-    task_id='run_dbt_command',
+    task_id='run_dbt',
     bash_command='''
     source /opt/airflow/dbt_venv/bin/activate
     export HOME=/home/airflow
@@ -227,5 +227,3 @@ retrieve_secrets >> create_schema >> create_raw_table >> check_data
 check_data >> [load_data, skip_processing]
 load_data >> run_dbt >> move_profiles_yml >> cleanup_task
 [cleanup_task, skip_processing] >> end_task
-
-
