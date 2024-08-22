@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: frontend_analytics
+  - name: frontend
     database: trulens
-    schema: frontend_analytics
+    schema: frontend
     tables:
       - name: raw_frontend_analytics
 
