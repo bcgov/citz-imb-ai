@@ -25,7 +25,7 @@ source_data AS (
 ),
 trulens_data AS (
   SELECT *
-  FROM {{ source('public_trulens_analytics', 'trulens_normalize') }}
+  FROM {{ ref('trulens_normalize') }}
 )
 SELECT
   sd.session_timestamp,
