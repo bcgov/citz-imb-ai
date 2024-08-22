@@ -8,6 +8,6 @@ SELECT
     source->>'response' AS response,
     (source->>'clicks')::int AS clicks,
     (source->>'lastClickTimestamp')::timestamp AS last_click_timestamp
-FROM {{ source('frontend_analytics', 'raw_frontend_analytics') }},
+FROM {{ source('frontend', 'raw_frontend_analytics') }},
     jsonb_array_elements(data->'chats') AS chat,
     jsonb_array_elements(chat->'sources') AS source

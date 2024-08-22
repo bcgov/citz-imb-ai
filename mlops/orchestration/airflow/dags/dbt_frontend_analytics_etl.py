@@ -63,7 +63,7 @@ def load_json_to_postgres():
 
     for item in data:
         cur.execute(
-            "INSERT INTO frontend_analytics.raw_frontend_analytics (data) VALUES (%s)",
+            "INSERT INTO frontend.raw_frontend_analytics (data) VALUES (%s)",
             (Json(item),)
         )
 
@@ -75,7 +75,7 @@ def load_json_to_postgres():
 create_schema = PostgresOperator(
     task_id='create_schema',
     postgres_conn_id='trulens_db',
-    sql="CREATE SCHEMA IF NOT EXISTS frontend_analytics;",
+    sql="CREATE SCHEMA IF NOT EXISTS frontend;",
     dag=dag,
 )
 
@@ -84,7 +84,7 @@ create_raw_table = PostgresOperator(
     task_id='create_raw_table',
     postgres_conn_id='trulens_db',
     sql="""
-    CREATE TABLE IF NOT EXISTS frontend_analytics.raw_frontend_analytics (
+    CREATE TABLE IF NOT EXISTS frontend.raw_frontend_analytics (
         id SERIAL PRIMARY KEY,
         data JSONB NOT NULL
     );
@@ -139,7 +139,7 @@ def cleanup_source_file():
     cur = conn.cursor()
 
     # Get processed session IDs
-    cur.execute("SELECT data->>'sessionId' FROM frontend_analytics.raw_frontend_analytics")
+    cur.execute("SELECT data->>'sessionId' FROM frontend.raw_frontend_analytics")
     processed_sessions = set(row[0] for row in cur.fetchall())
 
     original_file = '/opt/airflow/analytics_data/all_analytics.json'
