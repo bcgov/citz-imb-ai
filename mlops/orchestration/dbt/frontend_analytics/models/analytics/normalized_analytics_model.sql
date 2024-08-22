@@ -22,21 +22,31 @@ source_data AS (
     chat->'llmResponseInteraction'->>'lastClickTimestamp' AS llm_response_last_click_timestamp,
     jsonb_array_elements(chat->'sources') AS source
   FROM chat_data
+),
+trulens_data AS (
+  SELECT *
+  FROM {{ source('public_trulens_analytics', 'trulens_normalize') }}
 )
 SELECT
-  session_timestamp,
-  session_id,
-  user_id,
-  llm_response_id,
-  recording_id,
-  chat_timestamp,
-  chat_index,
-  llm_response_clicks,
-  llm_response_hover_duration,
-  llm_response_last_click_timestamp,
-  (source->>'chatIndex')::int AS source_chat_index,
-  (source->>'sourceKey')::int AS source_key,
-  source->>'response' AS source_response,
-  (source->>'clicks')::int AS source_clicks,
-  source->>'lastClickTimestamp' AS source_last_click_timestamp
-FROM source_data
+  sd.session_timestamp,
+  sd.session_id,
+  sd.user_id,
+  sd.llm_response_id,
+  sd.recording_id,
+  sd.chat_timestamp,
+  sd.chat_index,
+  sd.llm_response_clicks,
+  sd.llm_response_hover_duration,
+  sd.llm_response_last_click_timestamp,
+  (sd.source->>'chatIndex')::int AS source_chat_index,
+  (sd.source->>'sourceKey')::int AS source_key,
+  sd.source->>'response' AS source_response,
+  (sd.source->>'clicks')::int AS source_clicks,
+  sd.source->>'lastClickTimestamp' AS source_last_click_timestamp,
+  td.input AS trulens_input,
+  td.output AS trulens_output,
+  td.latency_in_seconds AS trulens_latency,
+  td.start_time AS trulens_start_time,
+  td.end_time AS trulens_end_time
+FROM source_data sd
+LEFT JOIN trulens_data td ON sd.recording_id = td.record_id
