@@ -1,7 +1,7 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
-from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.providers.postgres.hooks.postgres import PostgresHook
 from datetime import datetime, timedelta
 import json
 import os
@@ -14,21 +14,22 @@ import fcntl
 load_dotenv("/vault/secrets/zuba-secret-dev")
 
 # Retrieve environment variables
-TRULENS_USER = os.getenv('TRULENS_USER')
-TRULENS_PASSWORD = os.getenv('TRULENS_PASSWORD')
-TRULENS_DB = os.getenv('TRULENS_DB')
-TRULENS_HOST = os.getenv('TRULENS_HOST')
-TRULENS_PORT = os.getenv('TRULENS_PORT')
+TRULENS_USER = os.getenv('TRULENS_USER', 'postgres')
+TRULENS_PASSWORD = os.getenv('TRULENS_PASSWORD', 'root')
+TRULENS_DB = os.getenv('TRULENS_DB', 'postgres')
+TRULENS_HOST = os.getenv('TRULENS_HOST', 'trulens')
+TRULENS_PORT = os.getenv('TRULENS_PORT', '5432')
 
 # Define a function to print the loaded environment variables (for debugging or logging)
 def print_env_variables():
     return f'Trulens environment variables loaded'
 
+
 # Define default arguments for the DAG
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2024, 8, 23),
+    'start_date': datetime(2024, 8, 22),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -44,18 +45,50 @@ dag = DAG(
     tags=['dbt', 'bclaws', 'bclaws_analytics', 'trulens'],
 )
 
-# Define a function to load JSON data to Postgres
-def load_json_to_postgres():
-    import psycopg2
-    from psycopg2.extras import Json
+# Task to print the environment variables (optional for debugging)
+retrieve_secrets = PythonOperator(
+    task_id='retrieve_secrets_from_vault',
+    python_callable=print_env_variables,
+    dag=dag,
+)
 
-    conn = psycopg2.connect(
-        dbname=TRULENS_DB,
+# Add this function to create a dynamic Postgres connection
+def get_postgres_hook():
+    return PostgresHook(
+        host=TRULENS_HOST,
+        database=TRULENS_DB,
         user=TRULENS_USER,
         password=TRULENS_PASSWORD,
-        host=TRULENS_HOST,
-        port=TRULENS_PORT
+        port=int(TRULENS_PORT)
     )
+
+# Update the create_schema and create_raw_table tasks
+create_schema = PostgresOperator(
+    task_id='create_schema',
+    sql="CREATE SCHEMA IF NOT EXISTS frontend;",
+    postgres_hook=get_postgres_hook(),
+    dag=dag,
+)
+
+create_raw_table = PostgresOperator(
+    task_id='create_raw_table',
+    sql="""
+    CREATE TABLE IF NOT EXISTS frontend.raw_frontend_analytics (
+        id SERIAL PRIMARY KEY,
+        data JSONB NOT NULL
+    );
+    """,
+    postgres_hook=get_postgres_hook(),
+    dag=dag,
+)
+
+# Update the load_json_to_postgres function to use Airflow's PostgresHook
+def load_json_to_postgres():
+    from airflow.providers.postgres.hooks.postgres import PostgresHook
+    import json
+
+    pg_hook = get_postgres_hook()
+    conn = pg_hook.get_conn()
     cur = conn.cursor()
 
     with open('/opt/airflow/analytics_data/all_analytics.json', 'r') as f:
@@ -64,33 +97,12 @@ def load_json_to_postgres():
     for item in data:
         cur.execute(
             "INSERT INTO frontend.raw_frontend_analytics (data) VALUES (%s)",
-            (Json(item),)
+            (json.dumps(item),)
         )
 
     conn.commit()
     cur.close()
     conn.close()
-
-# Define a task to create the schema
-create_schema = PostgresOperator(
-    task_id='create_schema',
-    postgres_conn_id='trulens_db',
-    sql="CREATE SCHEMA IF NOT EXISTS frontend;",
-    dag=dag,
-)
-
-# Define a task to create the raw table
-create_raw_table = PostgresOperator(
-    task_id='create_raw_table',
-    postgres_conn_id='trulens_db',
-    sql="""
-    CREATE TABLE IF NOT EXISTS frontend.raw_frontend_analytics (
-        id SERIAL PRIMARY KEY,
-        data JSONB NOT NULL
-    );
-    """,
-    dag=dag,
-)
 
 load_data = PythonOperator(
     task_id='load_json_to_postgres',
@@ -183,4 +195,4 @@ cleanup_task = PythonOperator(
 )
 
 # Define the DAG tasks
-create_schema >> create_raw_table >> load_data >> move_profiles_yml >> run_dbt >> cleanup_task
+retrieve_secrets >> create_schema >> create_raw_table >> load_data >> move_profiles_yml >> run_dbt >> cleanup_task
