@@ -6,7 +6,7 @@ WITH chat_data AS (
     session_id,
     user_id,
     jsonb_array_elements(chats) AS chat
-  FROM {{ ref('raw_frontend_analytics') }}
+  FROM {{ source('frontend', 'raw_frontend_analytics') }}
 ),
 source_data AS (
   SELECT
