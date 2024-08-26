@@ -155,6 +155,21 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         <p>
           <strong>Text:</strong> {item.text || 'N/A'}
         </p>
+        <p>
+        {item.references && item.references.length > 0 && item.references[0].refActId && (
+          <div>
+            <strong>References:</strong>
+              {item.references.map((ref, index) => (
+            <ul>
+                <li key={index}>{(ref.refActId) ? "Act Name: " + ref.refActId: ""}</li>
+                <li key={index}>{(ref.refSectionId) ? "Section Id: " + ref.refSectionId : ""}</li>
+                <li key={index}>{(ref.refText) ? "Text: " + ref.refText : ""}</li>
+                <hr></hr>
+            </ul>
+              ))}
+          </div>
+        )}
+        </p>
       </div>
     ),
     [],

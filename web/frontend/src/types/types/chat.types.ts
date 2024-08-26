@@ -3,6 +3,12 @@ export interface ChatHistory {
   response: string;
 }
 
+export interface references {
+  refSectionId: string;
+  refActId: string;
+  refText: string;
+}
+
 export interface TopKItem {
   ActId: string;
   Regulations: string | null;
@@ -11,6 +17,7 @@ export interface TopKItem {
   sectionName: string;
   text: string;
   url: string | null;
+  references: references[];
 }
 
 export interface ApiResponse {

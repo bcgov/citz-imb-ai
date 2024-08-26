@@ -6,7 +6,10 @@ def neo4j_vector_search(question, embeddings, kg):
     query_embedding = embeddings.embed_query(question)
     vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score
-        RETURN score, node.ActId,  node.RegId as Regulations, node.sectionId, node.sectionName, node.url,  node.text AS text
+        OPTIONAL MATCH (node)-[:REFERENCES]->(refNode)
+        RETURN score, node.ActId,  node.RegId as Regulations, node.sectionId, node.sectionName, node.url,  node.text AS text,
+        collect({refSectionId: refNode.sectionId, refSectionName: refNode.sectionName, refActId: refNode.ActId, refText: refNode.text}) AS references
+    ORDER BY score DESC
     """
     NEO4J_VECTOR_INDEX = os.getenv('NEO4J_VECTOR_INDEX')
     similar = kg.query(vector_search_query,
