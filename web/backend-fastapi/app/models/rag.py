@@ -79,6 +79,8 @@ class get_full_rag:
             k_obj['sectionName'] = k['node.sectionName']
             k_obj['url'] = k['node.url']
             k_obj['text'] = k['text']
+            if 'references' in k:
+                k_obj['references'] = k['references']
             prettier['topk'].append(k_obj)
         return prettier
 
