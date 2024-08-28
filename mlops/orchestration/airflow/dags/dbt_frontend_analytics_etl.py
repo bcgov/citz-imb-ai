@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 import tempfile
 import shutil
 import fcntl
+from airflow.sensors.external_task_sensor import ExternalTaskSensor
 
 # Load environment variables from the .env file
 load_dotenv("/vault/secrets/zuba-secret-dev")
@@ -44,7 +45,7 @@ dag = DAG(
     'frontend_analytics_etl',
     default_args=default_args,
     description='ETL process for frontend analytics',
-    schedule_interval='@daily',
+    schedule_interval='0 0 * * *',
     tags=['dbt', 'bclaws', 'bclaws_analytics', 'trulens'],
 )
 
@@ -223,7 +224,19 @@ cleanup_task = PythonOperator(
 )
 
 # Define the task dependencies
-retrieve_secrets >> create_schema >> create_raw_table >> check_data
+wait_for_trulens_etl = ExternalTaskSensor(
+    task_id='wait_for_trulens_etl',
+    external_dag_id='initialize_dbt_with_vault',
+    external_task_id='run_dbt_command',
+    allowed_states=['success'],
+    failed_states=['failed', 'skipped'],
+    mode='poke',
+    poke_interval=60,
+    timeout=3600,
+    dag=dag,
+)
+
+wait_for_trulens_etl >> retrieve_secrets >> create_schema >> create_raw_table >> check_data
 check_data >> [load_data, skip_processing]
 load_data >> move_profiles_yml >> run_dbt >> cleanup_task
 [cleanup_task, skip_processing] >> end_task

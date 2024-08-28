@@ -30,7 +30,7 @@ dag = DAG(
     'initialize_dbt_with_vault',
     default_args=default_args,
     description='A DAG to initialize DBT with Vault secrets',
-    schedule_interval='@daily',
+    schedule_interval='0 0 * * *',
     tags=['dbt', 'trulens','bclaws', 'bclaws_analytics'],
 )
 
