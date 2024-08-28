@@ -2,10 +2,10 @@
 
 WITH chat_data AS (
   SELECT
-    session_timestamp,
-    session_id,
-    user_id,
-    jsonb_array_elements(chats) AS chat
+    data->>'sessionTimestamp' AS session_timestamp,
+    data->>'sessionId' AS session_id,
+    data->>'userId' AS user_id,
+    jsonb_array_elements(data->'chats') AS chat
   FROM {{ source('frontend', 'raw_frontend_analytics') }}
 ),
 source_data AS (
