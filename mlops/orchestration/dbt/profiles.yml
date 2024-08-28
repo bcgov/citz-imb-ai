@@ -8,5 +8,5 @@ analytics:
       user: "{{ env_var('TRULENS_USER', 'postgres') }}"
       pass: "{{ env_var('TRULENS_PASSWORD', 'root') }}"
       dbname: "{{ env_var('TRULENS_DB', 'postgres') }}"
-      schema: analytics
+      schema: public
   target: dev

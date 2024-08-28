@@ -29,12 +29,11 @@ clean-targets: # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   analytics:
-    +schema: analytics
     trulens:
-      +schema: trulens_analytics
+      +schema: trulens
       +materialized: view
     frontend:
-      +schema: frontend_analytics
+      +schema: frontend
       +materialized: table
       sessions:
         +materialized: table
@@ -44,5 +43,5 @@ models:
         +materialized: table
       sources:
         +materialized: table
-      normalized_analytics_model:
+      normalized_analytics:
         +materialized: table
