@@ -19,11 +19,11 @@ import fcntl
 load_dotenv("/vault/secrets/zuba-secret-dev")
 
 # Retrieve environment variables
-TRULENS_USER = os.getenv('TRULENS_USER', 'postgres')
-TRULENS_PASSWORD = os.getenv('TRULENS_PASSWORD', 'root')
-TRULENS_DB = os.getenv('TRULENS_DB', 'postgres')
-TRULENS_HOST = os.getenv('TRULENS_HOST', 'trulens')
-TRULENS_PORT = os.getenv('TRULENS_PORT', 5432)
+TRULENS_USER = os.getenv('TRULENS_USER')
+TRULENS_PASSWORD = os.getenv('TRULENS_PASSWORD')
+TRULENS_DB = os.getenv('TRULENS_DB')
+TRULENS_HOST = os.getenv('TRULENS_HOST')
+TRULENS_PORT = os.getenv('TRULENS_PORT')
 
 # Define the Postgres connection ID
 POSTGRES_CONN_ID = 'trulens_postgres'
