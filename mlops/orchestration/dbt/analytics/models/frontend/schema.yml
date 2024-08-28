@@ -7,19 +7,7 @@ sources:
       - name: raw_frontend_analytics
 
 models:
-  - name: raw_frontend_analytics
-    description: "Raw frontend analytics data"
-    columns:
-      - name: session_timestamp
-        description: "Timestamp of the session"
-      - name: session_id
-        description: "Unique identifier for the session"
-      - name: user_id
-        description: "Unique identifier for the user"
-      - name: chats
-        description: "JSON array of chat data"
-
-  - name: normalized_frontend_analytics
+  - name: normalized_analytics
     description: "Normalized frontend analytics data"
     columns:
       - name: session_timestamp
