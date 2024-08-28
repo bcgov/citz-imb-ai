@@ -120,6 +120,8 @@ services:
       - ../mlops/orchestration/airflow/plugins:/opt/airflow/plugins
       - ../mlops/orchestration/airflow/scripts:/opt/airflow/scripts
       - ../mlops/orchestration/airflow/data:/opt/airflow/data
+      - ../mlops/orchestration/dbt:/opt/airflow/dbt
+      - ../web/backend-fastapi/analytics_data:/opt/airflow/analytics_data/
     networks:
       - zuba
     command: ["airflow", "webserver"]
@@ -147,6 +149,7 @@ services:
       - ../mlops/orchestration/airflow/scripts:/opt/airflow/scripts
       - ../mlops/orchestration/airflow/data:/opt/airflow/data
       - ../mlops/orchestration/dbt:/opt/airflow/dbt
+      - ../web/backend-fastapi/analytics_data:/opt/airflow/analytics_data/
     networks:
       - zuba
     command: ["airflow", "scheduler"]
