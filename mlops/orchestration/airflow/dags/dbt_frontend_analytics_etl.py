@@ -192,7 +192,7 @@ run_dbt = BashOperator(
     source /opt/airflow/dbt_venv/bin/activate
     export HOME=/home/airflow
     dbt deps --project-dir /opt/airflow/dbt/analytics
-    dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/analytics
+    dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/analytics --select frontend
     deactivate
     ''',
     env={
@@ -225,5 +225,5 @@ cleanup_task = PythonOperator(
 # Define the task dependencies
 retrieve_secrets >> create_schema >> create_raw_table >> check_data
 check_data >> [load_data, skip_processing]
-load_data >> run_dbt >> move_profiles_yml >> cleanup_task
+load_data >> move_profiles_yml >> run_dbt >> cleanup_task
 [cleanup_task, skip_processing] >> end_task
