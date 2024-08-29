@@ -37,3 +37,17 @@ models:
         description: "Number of clicks for each response (columns named response_1_clicks, response_2_clicks, etc.)"
       - name: response_last_click_timestamp
         description: "Timestamp of the last click for each response (columns named response_1_last_click_timestamp, response_2_last_click_timestamp, etc.)"
+
+  - name: combined_analytics
+    description: "Combined view of frontend analytics and trulens data"
+    columns:
+      - name: record_id
+        description: "Identifier for the recording, used to join the tables"
+        tests:
+          - not_null
+      # Catch-all for columns from normalized_analytics
+      - name: normalized_analytics_columns
+        description: "All columns from the normalized_analytics model"
+      # Catch-all for columns from trulens_normalize
+      - name: trulens_normalize_columns
+        description: "All columns from the trulens_normalize model"
