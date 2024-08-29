@@ -120,7 +120,6 @@ services:
       - ../mlops/orchestration/airflow/plugins:/opt/airflow/plugins
       - ../mlops/orchestration/airflow/scripts:/opt/airflow/scripts
       - ../mlops/orchestration/airflow/data:/opt/airflow/data
-      - ../mlops/orchestration/dbt:/opt/airflow/dbt
     networks:
       - zuba
     command: ["airflow", "webserver"]
