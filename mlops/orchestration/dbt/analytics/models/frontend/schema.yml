@@ -8,17 +8,20 @@ sources:
 
 models:
   - name: normalized_analytics
-    description: "Normalized frontend analytics data"
+    description: "Consolidated and normalized frontend analytics data"
     columns:
-      - name: session_timestamp
-        description: "Timestamp of the session"
       - name: session_id
         description: "Unique identifier for the session"
+        tests:
+          - unique
+          - not_null
+      - name: session_timestamp
+        description: "Timestamp of the session"
       - name: user_id
         description: "Unique identifier for the user"
       - name: llm_response_id
         description: "Unique identifier for the LLM response"
-      - name: recording_id
+      - name: record_id
         description: "Identifier for the recording"
       - name: chat_timestamp
         description: "Timestamp of the chat"
@@ -30,58 +33,7 @@ models:
         description: "Duration of hover on the LLM response"
       - name: llm_response_last_click_timestamp
         description: "Timestamp of the last click on the LLM response"
-      - name: source_chat_index
-        description: "Chat index for the source"
-      - name: source_key
-        description: "Key of the source"
-      - name: source_response
-        description: "Response of the source"
-      - name: source_clicks
-        description: "Number of clicks on the source"
-      - name: source_last_click_timestamp
-        description: "Timestamp of the last click on the source"
-
-  - name: sessions
-    columns:
-      - name: session_id
-        tests:
-          - unique
-          - not_null
-      - name: session_timestamp
-      - name: user_id
-
-  - name: chats
-    columns:
-      - name: chat_id
-        tests:
-          - unique
-          - not_null
-      - name: session_id
-      - name: llm_response_id
-      - name: recording_id
-      - name: timestamp
-
-  - name: llm_response_interactions
-    columns:
-      - name: interaction_id
-        tests:
-          - unique
-          - not_null
-      - name: chat_id
-      - name: chat_index
-      - name: clicks
-      - name: hover_duration
-      - name: last_click_timestamp
-
-  - name: sources
-    columns:
-      - name: source_id
-        tests:
-          - unique
-          - not_null
-      - name: chat_id
-      - name: chat_index
-      - name: source_key
-      - name: response
-      - name: clicks
-      - name: last_click_timestamp
+      - name: response_clicks
+        description: "Number of clicks for each response (columns named response_1_clicks, response_2_clicks, etc.)"
+      - name: response_last_click_timestamp
+        description: "Timestamp of the last click for each response (columns named response_1_last_click_timestamp, response_2_last_click_timestamp, etc.)"
