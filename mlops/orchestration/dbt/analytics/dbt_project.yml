@@ -35,13 +35,5 @@ models:
     frontend:
       +schema: frontend
       +materialized: table
-      sessions:
-        +materialized: table
-      chats:
-        +materialized: table
-      llm_response_interactions:
-        +materialized: table
-      sources:
-        +materialized: table
       normalized_analytics:
         +materialized: table
