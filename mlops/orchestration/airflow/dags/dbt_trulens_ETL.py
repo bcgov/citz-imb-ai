@@ -30,7 +30,7 @@ dag = DAG(
     'initialize_dbt_with_vault',
     default_args=default_args,
     description='A DAG to initialize DBT with Vault secrets',
-    schedule_interval='@daily',
+    schedule_interval='0 0 * * *',
     tags=['dbt', 'trulens','bclaws', 'bclaws_analytics'],
 )
 
@@ -54,7 +54,8 @@ run_dbt = BashOperator(
     bash_command='''
     source /opt/airflow/dbt_venv/bin/activate
     export HOME=/home/airflow
-    dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/trulens
+    dbt deps --project-dir /opt/airflow/dbt/analytics
+    dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/analytics --select trulens
     deactivate
     ''',
     env={

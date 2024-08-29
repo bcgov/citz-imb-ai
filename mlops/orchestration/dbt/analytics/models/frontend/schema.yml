@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: frontend
+    schema: frontend
+    tables:
+      - name: raw_frontend_analytics
+
+models:
+  - name: normalized_analytics
+    description: "Consolidated and normalized frontend analytics data"
+    columns:
+      - name: session_id
+        description: "Unique identifier for the session"
+        tests:
+          - unique
+          - not_null
+      - name: session_timestamp
+        description: "Timestamp of the session"
+      - name: user_id
+        description: "Unique identifier for the user"
+      - name: llm_response_id
+        description: "Unique identifier for the LLM response"
+      - name: record_id
+        description: "Identifier for the recording"
+      - name: chat_timestamp
+        description: "Timestamp of the chat"
+      - name: chat_index
+        description: "Index of the chat"
+      - name: llm_response_clicks
+        description: "Number of clicks on the LLM response"
+      - name: llm_response_hover_duration
+        description: "Duration of hover on the LLM response"
+      - name: llm_response_last_click_timestamp
+        description: "Timestamp of the last click on the LLM response"
+      - name: response_clicks
+        description: "Number of clicks for each response (columns named response_1_clicks, response_2_clicks, etc.)"
+      - name: response_last_click_timestamp
+        description: "Timestamp of the last click for each response (columns named response_1_last_click_timestamp, response_2_last_click_timestamp, etc.)"
