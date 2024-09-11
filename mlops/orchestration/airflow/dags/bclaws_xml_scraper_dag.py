@@ -49,14 +49,31 @@ dag = DAG(
     tags=['bclaws', 'scraping'],
 )
 
+# ================================
+# Helper Functions
+# ================================
+
+def create_folder_if_not_exists(folder_path):
+    """Ensure that the folder exists by creating it if necessary."""
+    try:
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+            print(f"Created directory: {folder_path}")
+    except Exception as e:
+        print(f"Failed to create directory {folder_path}. Reason: {e}")
+
 # ===============================
 # Task 1: Cleaning XML Folder
 # ===============================
 
-def clean_bclaws():
+def clean_xml_folder():
     """Clean the XML directory before starting the scraper."""
     folder = os.path.join(BASE_PATH, XML_DIR)
     
+    # Step 1: Ensure the folder exists, if not, create it
+    create_folder_if_not_exists(folder)
+    
+    # Step 2: If folder exists, clean it
     if os.path.exists(folder):
         for filename in os.listdir(folder):
             file_path = os.path.join(folder, filename)
@@ -267,9 +284,9 @@ check_changes_task = BranchPythonOperator(
 )
 
 # Step 2: If changes were detected, clean the BCLAWS directory
-clean_bclaws_task = PythonOperator(
-    task_id='clean_bclaws_dir',
-    python_callable=clean_bclaws,  # Clean directory before scraping
+clean_xml_folder_task = PythonOperator(
+    task_id='clean_xml_folder',
+    python_callable=clean_xml_folder,  # Clean directory before scraping
     dag=dag,
 )
 
@@ -307,7 +324,7 @@ trigger_html_scraper = TriggerDagRunOperator(
 # =======================
 
 # Based on the check, either proceed with the cleaning -> scraping -> sorting, or end the DAG
-check_changes_task >> [clean_bclaws_task, no_changes_task]  
-clean_bclaws_task >> scrape_task  # Clean before scraping
+check_changes_task >> [clean_xml_folder_task, no_changes_task]  
+clean_xml_folder_task >> scrape_task  # Clean before scraping
 scrape_task >> sort_files_task    # Sort files after scraping
 sort_files_task >> trigger_html_scraper  # Trigger HTML Scraper after sorting is complete

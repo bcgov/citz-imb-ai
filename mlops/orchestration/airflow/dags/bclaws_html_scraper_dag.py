@@ -47,14 +47,31 @@ dag = DAG(
     tags=['bclaws', 'scraping'],
 )
 
+# ================================
+# Helper Functions
+# ================================
+
+def create_folder_if_not_exists(folder_path):
+    """Ensure that the folder exists by creating it if necessary."""
+    try:
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+            print(f"Created directory: {folder_path}")
+    except Exception as e:
+        print(f"Failed to create directory {folder_path}. Reason: {e}")
+
 # ===============================
 # Task 1: Cleaning HTML Folder
 # ===============================
 
-def clean_bclaws():
-    """Clean the HTML directory before starting the scraper."""
+def clean_html_folder():
+    """Clean the HTML directory before starting the scraper and ensure the folder exists."""
     folder = os.path.join(BASE_PATH, HTML_DIR)
+
+    # Step 1: Ensure the folder exists, if not, create it
+    create_folder_if_not_exists(folder)
     
+    # Step 2: If folder exists, clean it
     if os.path.exists(folder):
         for filename in os.listdir(folder):
             file_path = os.path.join(folder, filename)
@@ -90,7 +107,7 @@ def fetch_content(url):
     try:
         response = requests.get(url, verify=False)
         response.raise_for_status()
-        return BeautifulSoup(response.content, 'html.parser')
+        return BeautifulSoup(response.content, 'xml')
     except requests.exceptions.RequestException as e:
         print(f"Error fetching URL {url}: {e}")
         return None
@@ -196,9 +213,9 @@ def get_target_folder(file_name):
 # ===============================
 
 # Step 1: Clean the HTML directory
-clean_bclaws_task = PythonOperator(
-    task_id='clean_bclaws_dir',
-    python_callable=clean_bclaws,  # Clean directory before scraping
+clean_html_folder_task = PythonOperator(
+    task_id='clean_html_folder',
+    python_callable=clean_html_folder,  # Clean directory before scraping
     dag=dag,
 )
 
@@ -230,6 +247,6 @@ trigger_data_transform = TriggerDagRunOperator(
 # =======================
 
 # Clean before scraping, then sort the files
-clean_bclaws_task >> scrape_task  # Clean before scraping
+clean_html_folder_task >> scrape_task  # Clean before scraping
 scrape_task >> sort_files_task    # Sort files after scraping
 sort_files_task >> trigger_data_transform  # Trigger data transform after sorting is complete
