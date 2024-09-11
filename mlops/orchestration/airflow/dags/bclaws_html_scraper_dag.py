@@ -1,12 +1,11 @@
 from airflow import DAG
-from airflow.operators.python import PythonOperator, BranchPythonOperator
+from airflow.operators.python import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.models import Variable
 from datetime import datetime, timedelta
 import os
 import requests
 import shutil
-import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 from tenacity import retry, stop_after_attempt, wait_exponential
 
@@ -16,12 +15,10 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 
 # URL constants for scraping BC laws
 BASE_URL = "https://www.bclaws.gov.bc.ca/civix/content/complete/statreg/"
-CHECK_CHANGES_URL = "https://www.bclaws.gov.bc.ca/civix/index/complete/statreg/document.xml"
 
 # Directory paths for where files are stored
 BASE_PATH = "/opt/airflow/"
-BCLAWS_DIR = "data/bclaws"         # Folder where files are initially downloaded
-XML_DIR = "data/bclaws/xml"        # Folder where files are sorted
+HTML_DIR = "data/bclaws/html"  # Folder for HTML files
 
 # Retry behavior configuration when making HTTP requests
 RETRY_CONFIG = {
@@ -40,38 +37,30 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-# ========================================
-# Define the DAG (Directed Acyclic Graph)
-# ========================================
-
 dag = DAG(
-    'bclaws_xml_scraper_dag',
+    'bclaws_html_scraper_dag',
     default_args=default_args,
-    description='A DAG to scrape and download xml laws from BC Laws',
-    schedule_interval=timedelta(days=1),
+    description='A DAG to scrape and download HTML laws from BC Laws',
+    schedule_interval=None,  # This will be triggered by an external DAG
     catchup=False,
     tags=['bclaws', 'scraping'],
 )
 
 # ===============================
-# Task 1: Cleaning BCLAWS Directory
+# Task 1: Cleaning HTML Folder
 # ===============================
 
-# Purpose: Delete all existing files in the `BCLAWS_DIR` before the scraper runs to ensure we start with fresh data
 def clean_bclaws():
-    """Clean the BCLAWS directory before starting the scraper."""
-    folder = os.path.join(BASE_PATH, BCLAWS_DIR)
+    """Clean the HTML directory before starting the scraper."""
+    folder = os.path.join(BASE_PATH, HTML_DIR)
     
     if os.path.exists(folder):
-        # Iterate through all files and directories in the folder
         for filename in os.listdir(folder):
             file_path = os.path.join(folder, filename)
             try:
-                # Remove file or symbolic link
                 if os.path.isfile(file_path) or os.path.islink(file_path):
                     os.remove(file_path)
                     print(f"Deleted file: {file_path}")
-                # Recursively delete directories
                 elif os.path.isdir(file_path):
                     shutil.rmtree(file_path)
                     print(f"Deleted directory: {file_path}")
@@ -80,55 +69,15 @@ def clean_bclaws():
     else:
         print(f"Folder does not exist: {folder}")
     
-    print("BCLAWS folder cleaned.")
-
-# ========================================
-# Task 2: Checking for Updates (Branching)
-# ========================================
-
-# Purpose: Check if changes have been made to the law documents.
-# If changes are found, initiate the scraping process. Otherwise, skip and end the DAG.
-
-def parse_last_modified():
-    try:
-        # Make request to check for the latest modifications
-        response = requests.get(CHECK_CHANGES_URL, verify=False)
-        response.raise_for_status()
-
-        # Parse the XML response to extract the last modified time from the first <ix:dir> tag
-        soup = BeautifulSoup(response.content, 'xml')
-        latest_last_modified = soup.find('ix:dir')['lastModified']
-
-        # Convert the lastModified string to a datetime object
-        latest_modified_time = datetime.strptime(latest_last_modified, "%m/%d/%Y %I:%M:%S %p")
-        
-        # Retrieve the previous last modified time stored in Airflow Variables (default: very old date)
-        previous_modified_time = Variable.get("bclaws_last_modified", default_var="01/01/2000 12:00:00 AM")
-        previous_modified_time = datetime.strptime(previous_modified_time, "%m/%d/%Y %I:%M:%S %p")
-
-        # If the latest modified time is newer, changes have occurred, so we proceed
-        if latest_modified_time > previous_modified_time:
-            # Update the variable in Airflow with the new last modified time
-            Variable.set("bclaws_last_modified", latest_last_modified)
-            print(f"Changes were detected. Proceeding with scraping...")
-            return 'clean_bclaws_dir'  # Proceed to clean the BCLAWS directory
-        else:
-            # No changes detected, skip the tasks
-            print(f"No changes detected. DAG will skip tasks.")
-            return 'no_changes'  # Skip and end the DAG gracefully
-    except requests.exceptions.RequestException as e:
-        print(f"Error during API call or XML parsing: {e}")
-        return 'no_changes'
+    print("HTML folder cleaned.")
 
 # ================================
-# Task 3: Scraping Logic (Fetch Data)
+# Task 2: Scraping Logic (Fetch Data)
 # ================================
-
-# Purpose: Download the relevant law data and save it locally as XML files.
 
 def construct_download_url(index_id, doc_id):
-    """Generate the URL for downloading a specific document."""
-    return f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}/xml"
+    """Generate the URL for downloading a specific document (HTML in this case)."""
+    return f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}_multi"
 
 def get_sanitized_title(title):
     """Sanitize document titles to be suitable for filenames."""
@@ -136,25 +85,23 @@ def get_sanitized_title(title):
 
 @retry(**RETRY_CONFIG)
 def fetch_content(url):
-    """Fetch content by making a request, and return the parsed XML."""
+    """Fetch content by making a request, and return the parsed HTML."""
     try:
         response = requests.get(url, verify=False)
         response.raise_for_status()
-        content = response.content
-        return BeautifulSoup(content, 'xml')
+        return BeautifulSoup(response.content, 'html.parser')
     except requests.exceptions.RequestException as e:
         print(f"Error fetching URL {url}: {e}")
         return None
 
-@retry(**RETRY_CONFIG)  # Retry this function in case of intermittent failures
-def download_xml(url, filename):
-    """Download an XML file from the given URL and save it to the specified location."""
+@retry(**RETRY_CONFIG)
+def download_html(url, filename):
+    """Download an HTML file from the given URL and save it to the specified location."""
     try:
         response = requests.get(url, stream=True, verify=False)
         response.raise_for_status()
         create_folder_if_not_exists(os.path.dirname(filename))
 
-        # Write the file in chunks to avoid memory overload
         with open(filename, 'wb') as file:
             for chunk in response.iter_content(chunk_size=8192):
                 if chunk:
@@ -164,13 +111,11 @@ def download_xml(url, filename):
         print(f"Failed to download {url}: {e}")
 
 def process_directory(url, depth=0, parent_path=""):
-    """Recursively process the directory to download relevant XML files."""
-    # Fetch directory content
+    """Recursively process the directory to download relevant HTML files."""
     soup = fetch_content(url)
     if not soup:
         return
 
-    # Iterate over each directory or document element
     for element in soup.find_all(['dir', 'document']):
         doc_id = element.find('CIVIX_DOCUMENT_ID')
         if not doc_id:
@@ -189,157 +134,101 @@ def process_directory(url, depth=0, parent_path=""):
             title = element.find('CIVIX_DOCUMENT_TITLE').text
             sanitized_title = get_sanitized_title(title)
             download_url = construct_download_url(index_id, doc_id)
-            filename = os.path.join(BASE_PATH, BCLAWS_DIR, f"{sanitized_title}.xml")
-            download_xml(download_url, filename)
+            filename = os.path.join(BASE_PATH, HTML_DIR, f"{sanitized_title}.html")
+            download_html(download_url, filename)
 
 def run_scraper():
-    """Main function to run the entire scraping process."""
-    create_folder_if_not_exists(os.path.join(BASE_PATH, BCLAWS_DIR))
+    """Main function to run the entire scraping process for HTML files."""
+    create_folder_if_not_exists(os.path.join(BASE_PATH, HTML_DIR))
     process_directory(BASE_URL)
     print("Download completed.")
 
 # ===============================
-# Task 4: Sorting Downloaded Files
+# Task 3: Sorting Downloaded Files
 # ===============================
 
-# Purpose: Sort downloaded XML files into their respective folders based on their name patterns.
 def move_files_to_folders():
-    """Sort files into the appropriate XML subfolders after downloading, and handle special cases."""
-    source_folder = os.path.join(BASE_PATH, BCLAWS_DIR)
-    destination_folder = os.path.join(BASE_PATH, XML_DIR)
-    
-    # Ensure the destination base folder exists
-    create_folder_if_not_exists(destination_folder)
-
-    # A set to keep track of files that we've successfully sorted and moved
+    """Sort files into the appropriate subfolders after downloading."""
+    folder = os.path.join(BASE_PATH, HTML_DIR)
     sorted_files = set()
 
-    # Iterate over every file in the source folder (BCLAWS download folder)
-    for file_name in os.listdir(source_folder):
-        file_path = os.path.join(source_folder, file_name)
+    for file_name in os.listdir(folder):
+        file_path = os.path.join(folder, file_name)
 
-        # Only process XML files in the folder
-        if os.path.isfile(file_path) and file_path.endswith('.xml'):
-            
-            ### Handle Table_of_Contents_ files ###
-            if "Table_of_Contents_" in file_name:
-                # Delete files that contain "Table_of_Contents_" in the filename
-                os.remove(file_path)
-                print(f"Deleted file: {file_name} (Table_of_Contents_ file)")
-                continue  # Skip to the next file, since it's been deleted
-            
-            ### Handle Repealed files (based on content) ###
-            try:
-                tree = ET.parse(file_path)  # Parse the XML file
-                root = tree.getroot()
-                
-                # Check if the file contains "REPEALED BY B.C." in its content
-                if any(elem.text and "REPEALED BY B.C." in elem.text for elem in root.iter()):
-                    # Move this file to the "Repealed" folder
-                    target_folder = os.path.join(destination_folder, "Repealed")
-                    create_folder_if_not_exists(target_folder)
-                    shutil.move(file_path, os.path.join(target_folder, file_name))
-                    print(f"Moved {file_name} to the Repealed folder.")
-                    continue  # Skip to the next file after moving to "Repealed"
-            
-            except ET.ParseError:
-                # If parsing fails, report the error and skip this file
-                print(f"Error parsing the XML file: {file_name}. Skipping...")
-                continue
-
+        if os.path.isfile(file_path) and file_path.endswith('.html'):
             ### General Sorting (Handle other files based on the filename pattern) ###
-            # Determine the folder based on the filename pattern
             target_folder = get_target_folder(file_name)
-            
-            # Ensure the target subfolder exists
             create_folder_if_not_exists(target_folder)
-            
-            # Move the file to the appropriate folder
             shutil.move(file_path, os.path.join(target_folder, file_name))
             print(f"Moved {file_name} to {os.path.basename(target_folder)} folder.")
-            sorted_files.add(file_name)  # Track that the file has been successfully sorted
+            sorted_files.add(file_name)
     
-    print("File sorting and special file handling completed.")
+    print("File sorting completed.")
 
-# Helper function to get target folder based on file name patterns
 def get_target_folder(file_name):
-    """Sort files into the correct category directories based on naming patterns."""
+    folder = os.path.join(BASE_PATH, HTML_DIR)  # Target folder is within HTML_DIR
     if "Edition_TLC" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Editions")
+        return os.path.join(folder, "Editions")
     elif file_name.startswith("Historical_Table_"):
-        return os.path.join(BASE_PATH, XML_DIR, "Historical Tables")
+        return os.path.join(folder, "Historical_Tables")
     elif file_name.startswith("Appendices_") or file_name.startswith("Appendix_"):
-        return os.path.join(BASE_PATH, XML_DIR, "Appendix")
+        return os.path.join(folder, "Appendix")
     elif file_name.startswith("Chapter_"):
-        return os.path.join(BASE_PATH, XML_DIR, "Chapters")
+        return os.path.join(folder, "Chapters")
     elif file_name.startswith("Part"):
-        return os.path.join(BASE_PATH, XML_DIR, "Parts")
+        return os.path.join(folder, "Parts")
     elif "Regulation" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Regulations")
+        return os.path.join(folder, "Regulations")
     elif "Schedule" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Schedules")
+        return os.path.join(folder, "Schedules")
     elif "Sections_" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Sections")
+        return os.path.join(folder, "Sections")
     elif "Rule" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Rules")
-    elif file_name.endswith("_Act.xml"):
-        return os.path.join(BASE_PATH, XML_DIR, "Acts")
+        return os.path.join(folder, "Rules")
+    elif file_name.endswith("_Act.html"):
+        return os.path.join(folder, "Acts")
     else:
-        return os.path.join(BASE_PATH, XML_DIR, "Others")  # Fallback if no pattern matches
+        return os.path.join(folder, "Others")
 
 # ===============================
 # Define the DAG Workflow and Task Dependencies
 # ===============================
 
-# Step 1: First, check for any changes
-check_changes_task = BranchPythonOperator(
-    task_id='check_for_changes',
-    python_callable=parse_last_modified,  # Check if changes exist
-    dag=dag,
-)
-
-# Step 2: If changes were detected, clean the BCLAWS directory
+# Step 1: Clean the HTML directory
 clean_bclaws_task = PythonOperator(
     task_id='clean_bclaws_dir',
     python_callable=clean_bclaws,  # Clean directory before scraping
     dag=dag,
 )
 
-# Step 3: If cleaned, run the scraping process
+# Step 2: Run the scraping process for HTML files
 scrape_task = PythonOperator(
     task_id='scrape_bclaws',
     python_callable=run_scraper,  # Download files
     dag=dag,
 )
 
-# Step 4: After scraping, sort the downloaded files
+# Step 3: After scraping, sort the downloaded files
 sort_files_task = PythonOperator(
     task_id='sort_files',
     python_callable=move_files_to_folders,  # Organize sorted files
     dag=dag,
 )
 
-# Step 5: Trigger the S3 upload DAG after scraper finishes
-trigger_s3_upload = TriggerDagRunOperator(
-    task_id='trigger_upload_to_s3',
-    trigger_dag_id='upload_data_to_s3_dag',  # Name of the DAG to trigger
+# Step 4: Trigger the HTML Scraper DAG after XML Scraper finishes
+trigger_data_transform = TriggerDagRunOperator(
+    task_id='trigger_data_transform',
+    trigger_dag_id='bclaws_data_transform_dag',  # Name of the DAG to trigger
     wait_for_completion=False,               # Do not wait for the upload DAG to complete
-    trigger_rule='all_success',              # Trigger S3 upload only if the scraper succeeds completely
+    trigger_rule='all_success',              # Trigger html scraper only if the xml scraper succeeds completely
     dag=dag
-)
-
-# Dummy Task: If no changes are detected, gracefully end
-no_changes_task = DummyOperator(
-    task_id='no_changes',
-    dag=dag,
 )
 
 # =======================
 # Set Up Task Dependencies
 # =======================
 
-# Based on the check, either proceed with the cleaning -> scraping -> sorting, or end the DAG
-check_changes_task >> [clean_bclaws_task, no_changes_task]  
+# Clean before scraping, then sort the files
 clean_bclaws_task >> scrape_task  # Clean before scraping
 scrape_task >> sort_files_task    # Sort files after scraping
-sort_files_task >> trigger_s3_upload  # Trigger S3 upload only after sorting is complete
+sort_files_task >> trigger_data_transform  # Trigger data transform after sorting is complete
