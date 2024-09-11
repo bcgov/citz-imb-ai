@@ -20,8 +20,7 @@ CHECK_CHANGES_URL = "https://www.bclaws.gov.bc.ca/civix/index/complete/statreg/d
 
 # Directory paths for where files are stored
 BASE_PATH = "/opt/airflow/"
-BCLAWS_DIR = "data/bclaws"         # Folder where files are initially downloaded
-XML_DIR = "data/bclaws/xml"        # Folder where files are sorted
+XML_DIR = "data/bclaws/xml"  # Main folder for everything (initial download and sorting)
 
 # Retry behavior configuration when making HTTP requests
 RETRY_CONFIG = {
@@ -40,10 +39,6 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-# ========================================
-# Define the DAG (Directed Acyclic Graph)
-# ========================================
-
 dag = DAG(
     'bclaws_xml_scraper_dag',
     default_args=default_args,
@@ -54,24 +49,20 @@ dag = DAG(
 )
 
 # ===============================
-# Task 1: Cleaning BCLAWS Directory
+# Task 1: Cleaning XML Folder
 # ===============================
 
-# Purpose: Delete all existing files in the `BCLAWS_DIR` before the scraper runs to ensure we start with fresh data
 def clean_bclaws():
-    """Clean the BCLAWS directory before starting the scraper."""
-    folder = os.path.join(BASE_PATH, BCLAWS_DIR)
+    """Clean the XML directory before starting the scraper."""
+    folder = os.path.join(BASE_PATH, XML_DIR)
     
     if os.path.exists(folder):
-        # Iterate through all files and directories in the folder
         for filename in os.listdir(folder):
             file_path = os.path.join(folder, filename)
             try:
-                # Remove file or symbolic link
                 if os.path.isfile(file_path) or os.path.islink(file_path):
                     os.remove(file_path)
                     print(f"Deleted file: {file_path}")
-                # Recursively delete directories
                 elif os.path.isdir(file_path):
                     shutil.rmtree(file_path)
                     print(f"Deleted directory: {file_path}")
@@ -80,7 +71,7 @@ def clean_bclaws():
     else:
         print(f"Folder does not exist: {folder}")
     
-    print("BCLAWS folder cleaned.")
+    print("XML folder cleaned.")
 
 # ========================================
 # Task 2: Checking for Updates (Branching)
@@ -124,8 +115,6 @@ def parse_last_modified():
 # Task 3: Scraping Logic (Fetch Data)
 # ================================
 
-# Purpose: Download the relevant law data and save it locally as XML files.
-
 def construct_download_url(index_id, doc_id):
     """Generate the URL for downloading a specific document."""
     return f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}/xml"
@@ -154,7 +143,6 @@ def download_xml(url, filename):
         response.raise_for_status()
         create_folder_if_not_exists(os.path.dirname(filename))
 
-        # Write the file in chunks to avoid memory overload
         with open(filename, 'wb') as file:
             for chunk in response.iter_content(chunk_size=8192):
                 if chunk:
@@ -165,12 +153,10 @@ def download_xml(url, filename):
 
 def process_directory(url, depth=0, parent_path=""):
     """Recursively process the directory to download relevant XML files."""
-    # Fetch directory content
     soup = fetch_content(url)
     if not soup:
         return
 
-    # Iterate over each directory or document element
     for element in soup.find_all(['dir', 'document']):
         doc_id = element.find('CIVIX_DOCUMENT_ID')
         if not doc_id:
@@ -189,12 +175,12 @@ def process_directory(url, depth=0, parent_path=""):
             title = element.find('CIVIX_DOCUMENT_TITLE').text
             sanitized_title = get_sanitized_title(title)
             download_url = construct_download_url(index_id, doc_id)
-            filename = os.path.join(BASE_PATH, BCLAWS_DIR, f"{sanitized_title}.xml")
+            filename = os.path.join(BASE_PATH, XML_DIR, f"{sanitized_title}.xml")
             download_xml(download_url, filename)
 
 def run_scraper():
     """Main function to run the entire scraping process."""
-    create_folder_if_not_exists(os.path.join(BASE_PATH, BCLAWS_DIR))
+    create_folder_if_not_exists(os.path.join(BASE_PATH, XML_DIR))
     process_directory(BASE_URL)
     print("Download completed.")
 
@@ -202,90 +188,71 @@ def run_scraper():
 # Task 4: Sorting Downloaded Files
 # ===============================
 
-# Purpose: Sort downloaded XML files into their respective folders based on their name patterns.
 def move_files_to_folders():
     """Sort files into the appropriate XML subfolders after downloading, and handle special cases."""
-    source_folder = os.path.join(BASE_PATH, BCLAWS_DIR)
-    destination_folder = os.path.join(BASE_PATH, XML_DIR)
-    
-    # Ensure the destination base folder exists
-    create_folder_if_not_exists(destination_folder)
-
-    # A set to keep track of files that we've successfully sorted and moved
+    folder = os.path.join(BASE_PATH, XML_DIR)
     sorted_files = set()
 
-    # Iterate over every file in the source folder (BCLAWS download folder)
-    for file_name in os.listdir(source_folder):
-        file_path = os.path.join(source_folder, file_name)
+    for file_name in os.listdir(folder):
+        file_path = os.path.join(folder, file_name)
 
-        # Only process XML files in the folder
         if os.path.isfile(file_path) and file_path.endswith('.xml'):
-            
             ### Handle Table_of_Contents_ files ###
             if "Table_of_Contents_" in file_name:
-                # Delete files that contain "Table_of_Contents_" in the filename
                 os.remove(file_path)
                 print(f"Deleted file: {file_name} (Table_of_Contents_ file)")
-                continue  # Skip to the next file, since it's been deleted
+                continue
             
             ### Handle Repealed files (based on content) ###
             try:
-                tree = ET.parse(file_path)  # Parse the XML file
+                tree = ET.parse(file_path)
                 root = tree.getroot()
                 
                 # Check if the file contains "REPEALED BY B.C." in its content
                 if any(elem.text and "REPEALED BY B.C." in elem.text for elem in root.iter()):
-                    # Move this file to the "Repealed" folder
-                    target_folder = os.path.join(destination_folder, "Repealed")
+                    target_folder = os.path.join(folder, "Repealed")
                     create_folder_if_not_exists(target_folder)
                     shutil.move(file_path, os.path.join(target_folder, file_name))
                     print(f"Moved {file_name} to the Repealed folder.")
-                    continue  # Skip to the next file after moving to "Repealed"
+                    continue
             
             except ET.ParseError:
-                # If parsing fails, report the error and skip this file
                 print(f"Error parsing the XML file: {file_name}. Skipping...")
                 continue
 
             ### General Sorting (Handle other files based on the filename pattern) ###
-            # Determine the folder based on the filename pattern
             target_folder = get_target_folder(file_name)
-            
-            # Ensure the target subfolder exists
             create_folder_if_not_exists(target_folder)
-            
-            # Move the file to the appropriate folder
             shutil.move(file_path, os.path.join(target_folder, file_name))
             print(f"Moved {file_name} to {os.path.basename(target_folder)} folder.")
-            sorted_files.add(file_name)  # Track that the file has been successfully sorted
+            sorted_files.add(file_name)
     
     print("File sorting and special file handling completed.")
 
-# Helper function to get target folder based on file name patterns
 def get_target_folder(file_name):
-    """Sort files into the correct category directories based on naming patterns."""
+    folder = os.path.join(BASE_PATH, XML_DIR)  # Target folder is within XML_DIR now
     if "Edition_TLC" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Editions")
+        return os.path.join(folder, "Editions")
     elif file_name.startswith("Historical_Table_"):
-        return os.path.join(BASE_PATH, XML_DIR, "Historical Tables")
+        return os.path.join(folder, "Historical Tables")
     elif file_name.startswith("Appendices_") or file_name.startswith("Appendix_"):
-        return os.path.join(BASE_PATH, XML_DIR, "Appendix")
+        return os.path.join(folder, "Appendix")
     elif file_name.startswith("Chapter_"):
-        return os.path.join(BASE_PATH, XML_DIR, "Chapters")
+        return os.path.join(folder, "Chapters")
     elif file_name.startswith("Part"):
-        return os.path.join(BASE_PATH, XML_DIR, "Parts")
+        return os.path.join(folder, "Parts")
     elif "Regulation" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Regulations")
+        return os.path.join(folder, "Regulations")
     elif "Schedule" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Schedules")
+        return os.path.join(folder, "Schedules")
     elif "Sections_" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Sections")
+        return os.path.join(folder, "Sections")
     elif "Rule" in file_name:
-        return os.path.join(BASE_PATH, XML_DIR, "Rules")
+        return os.path.join(folder, "Rules")
     elif file_name.endswith("_Act.xml"):
-        return os.path.join(BASE_PATH, XML_DIR, "Acts")
+        return os.path.join(folder, "Acts")
     else:
-        return os.path.join(BASE_PATH, XML_DIR, "Others")  # Fallback if no pattern matches
+        return os.path.join(folder, "Others")
 
 # ===============================
 # Define the DAG Workflow and Task Dependencies
@@ -319,6 +286,12 @@ sort_files_task = PythonOperator(
     dag=dag,
 )
 
+# Dummy Task: If no changes are detected, gracefully end
+no_changes_task = DummyOperator(
+    task_id='no_changes',
+    dag=dag,
+)
+
 ### just for reference for later, remove this later ###
 # Step 5: Trigger the S3 upload DAG after scraper finishes
 trigger_s3_upload = TriggerDagRunOperator(
@@ -329,12 +302,6 @@ trigger_s3_upload = TriggerDagRunOperator(
     dag=dag
 )
 ### ###
-
-# Dummy Task: If no changes are detected, gracefully end
-no_changes_task = DummyOperator(
-    task_id='no_changes',
-    dag=dag,
-)
 
 # =======================
 # Set Up Task Dependencies
