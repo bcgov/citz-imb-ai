@@ -45,9 +45,9 @@ default_args = {
 # ========================================
 
 dag = DAG(
-    'bclaws_scraper_dag',
+    'bclaws_xml_scraper_dag',
     default_args=default_args,
-    description='A DAG to scrape and download laws from BC Laws',
+    description='A DAG to scrape and download xml laws from BC Laws',
     schedule_interval=timedelta(days=1),
     catchup=False,
     tags=['bclaws', 'scraping'],
@@ -319,6 +319,17 @@ sort_files_task = PythonOperator(
     dag=dag,
 )
 
+### just for reference for later, remove this later ###
+# Step 5: Trigger the S3 upload DAG after scraper finishes
+trigger_s3_upload = TriggerDagRunOperator(
+    task_id='trigger_upload_to_s3',
+    trigger_dag_id='upload_data_to_s3_dag',  # Name of the DAG to trigger
+    wait_for_completion=False,               # Do not wait for the upload DAG to complete
+    trigger_rule='all_success',              # Trigger S3 upload only if the scraper succeeds completely
+    dag=dag
+)
+### ###
+
 # Dummy Task: If no changes are detected, gracefully end
 no_changes_task = DummyOperator(
     task_id='no_changes',
@@ -330,6 +341,10 @@ no_changes_task = DummyOperator(
 # =======================
 
 # Based on the check, either proceed with the cleaning -> scraping -> sorting, or end the DAG
-check_changes_task >> [clean_bclaws_task, no_changes_task]  # If changes, proceed; if not, end
-clean_bclaws_task >> scrape_task  # Clean must complete before scraping
-scrape_task >> sort_files_task    # Scraping must complete before sorting
+check_changes_task >> [clean_bclaws_task, no_changes_task]  
+clean_bclaws_task >> scrape_task  # Clean before scraping
+scrape_task >> sort_files_task    # Sort files after scraping
+
+### just for reference for later, remove this later ###
+sort_files_task >> trigger_s3_upload  # Trigger S3 upload only after sorting is complete
+### ###
