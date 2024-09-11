@@ -292,16 +292,14 @@ no_changes_task = DummyOperator(
     dag=dag,
 )
 
-### just for reference for later, remove this later ###
-# Step 5: Trigger the S3 upload DAG after scraper finishes
-trigger_s3_upload = TriggerDagRunOperator(
-    task_id='trigger_upload_to_s3',
-    trigger_dag_id='upload_data_to_s3_dag',  # Name of the DAG to trigger
+# Step 5: Trigger the HTML Scraper DAG after XML Scraper finishes
+trigger_html_scraper = TriggerDagRunOperator(
+    task_id='trigger_html_scraper',
+    trigger_dag_id='bclaws_html_scraper_dag',  # Name of the DAG to trigger
     wait_for_completion=False,               # Do not wait for the upload DAG to complete
-    trigger_rule='all_success',              # Trigger S3 upload only if the scraper succeeds completely
+    trigger_rule='all_success',              # Trigger html scraper only if the xml scraper succeeds completely
     dag=dag
 )
-### ###
 
 # =======================
 # Set Up Task Dependencies
@@ -311,7 +309,4 @@ trigger_s3_upload = TriggerDagRunOperator(
 check_changes_task >> [clean_bclaws_task, no_changes_task]  
 clean_bclaws_task >> scrape_task  # Clean before scraping
 scrape_task >> sort_files_task    # Sort files after scraping
-
-### just for reference for later, remove this later ###
-sort_files_task >> trigger_s3_upload  # Trigger S3 upload only after sorting is complete
-### ###
+sort_files_task >> trigger_html_scraper  # Trigger HTML Scraper after sorting is complete
