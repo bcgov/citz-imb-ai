@@ -7,6 +7,8 @@ import aiohttp
 import aiofiles
 from bs4 import BeautifulSoup
 import ssl
+import shutil
+import xml.etree.ElementTree as ET
 
 BASE_URL = "https://www.bclaws.gov.bc.ca/civix/content/complete/statreg/"
 BASE_PATH = "/opt/airflow/"
@@ -101,10 +103,80 @@ async def main():
 def run_scraper():
     asyncio.run(main())
 
+def move_files_to_folders():
+    source_folder = os.path.join(BASE_PATH, BCLAWS_DIR)
+    destination_folder = os.path.join(BASE_PATH, XML_DIR)
+    
+    # Ensure the destination folder exists
+    os.makedirs(destination_folder, exist_ok=True)
+
+    for file_name in os.listdir(source_folder):
+        file_path = os.path.join(source_folder, file_name)
+        if os.path.isfile(file_path) and file_path.endswith('.xml'):
+            # Check for "Table_of_Contents_" and delete the file if found
+            if "Table_of_Contents_" in file_name:
+                os.remove(file_path)
+                print(f'Deleted {file_name}')
+                continue
+
+            # Check for "REPEALED BY B.C." in the file content
+            try:
+                tree = ET.parse(file_path)
+                root = tree.getroot()
+                if any(elem.text and "REPEALED BY B.C." in elem.text for elem in root.iter()):
+                    target_folder = os.path.join(destination_folder, "Repealed")
+                    if not os.path.exists(target_folder):
+                        os.makedirs(target_folder)
+                    shutil.move(file_path, os.path.join(target_folder, file_name))
+                    continue
+            except ET.ParseError:
+                print(f"Error parsing {file_name}. Skipping...")
+                continue
+
+            # Determine the appropriate folder based on file name patterns
+            if "Edition_TLC" in file_name:
+                target_folder = os.path.join(destination_folder, "Editions")
+            elif file_name.startswith("Historical_Table_"):
+                target_folder = os.path.join(destination_folder, "Historical Tables")
+            elif file_name.startswith("Appendices_") or file_name.startswith("Appendix_"):
+                target_folder = os.path.join(destination_folder, "Appendix")
+            elif file_name.startswith("Chapter_"):
+                target_folder = os.path.join(destination_folder, "Chapters")
+            elif file_name.startswith("Part"):
+                target_folder = os.path.join(destination_folder, "Parts")
+            elif file_name.startswith("Point_in_Time_"):
+                target_folder = os.path.join(destination_folder, "Point in Times")
+            elif "Regulation" in file_name:
+                target_folder = os.path.join(destination_folder, "Regulations")
+            elif "Schedule" in file_name:
+                target_folder = os.path.join(destination_folder, "Schedules")
+            elif "Sections_" in file_name:
+                target_folder = os.path.join(destination_folder, "Sections")
+            elif "Rule" in file_name:
+                target_folder = os.path.join(destination_folder, "Rules")
+            elif file_name.endswith("_Act.xml"):
+                target_folder = os.path.join(destination_folder, "Acts")
+            else:
+                # Move remaining files to the "Others" folder
+                target_folder = os.path.join(destination_folder, "Others")
+
+            # Create the target folder if it doesn't exist and move the file
+            if not os.path.exists(target_folder):
+                os.makedirs(target_folder)
+            shutil.move(file_path, os.path.join(target_folder, file_name))
+    
+    print("File sorting and moving completed.")
+
 scrape_task = PythonOperator(
     task_id='scrape_bclaws',
     python_callable=run_scraper,
     dag=dag,
 )
 
-scrape_task
+sort_files_task = PythonOperator(
+    task_id='sort_files',
+    python_callable=move_files_to_folders,
+    dag=dag,
+)
+
+scrape_task >> sort_files_task
