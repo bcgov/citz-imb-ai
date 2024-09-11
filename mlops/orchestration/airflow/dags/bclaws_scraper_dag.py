@@ -164,6 +164,9 @@ def move_files_to_folders():
     
     create_folder_if_not_exists(destination_folder)
 
+    # Initialize a set to keep track of files that are sorted (moved to other folders)
+    sorted_files = set()
+
     for file_name in os.listdir(source_folder):
         file_path = os.path.join(source_folder, file_name)
         if os.path.isfile(file_path) and file_path.endswith('.xml'):
@@ -181,6 +184,8 @@ def move_files_to_folders():
                     target_folder = os.path.join(destination_folder, "Repealed")
                     create_folder_if_not_exists(target_folder)
                     shutil.move(file_path, os.path.join(target_folder, file_name))
+                    print(f"Moved {file_name} to Repealed folder.")
+                    sorted_files.add(file_name)  # Track as processed
                     continue
             except ET.ParseError:
                 print(f"Error parsing {file_name}. Skipping...")
@@ -191,8 +196,18 @@ def move_files_to_folders():
 
             create_folder_if_not_exists(target_folder)
             shutil.move(file_path, os.path.join(target_folder, file_name))
+            print(f"Moved {file_name} to {os.path.basename(target_folder)} folder.")
+            sorted_files.add(file_name)  # Track as processed
     
-    print("File sorting and moving completed.")
+    # Clean up remaining files that have not been processed
+    for file_name in os.listdir(source_folder):
+        if file_name.endswith(".xml") and file_name not in sorted_files:
+            file_path = os.path.join(source_folder, file_name)
+            os.remove(file_path)
+            print(f"Deleted unsorted file: {file_name}")
+    
+    # All files processed
+    print("File sorting and cleanup completed.")
 
 def get_target_folder(file_name):
     """Determine the appropriate folder based on file name patterns."""
