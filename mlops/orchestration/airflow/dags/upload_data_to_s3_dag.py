@@ -67,6 +67,7 @@ default_args = {
     'depends_on_past': False,
     'email_on_failure': False,
     'email_on_retry': False,
+    'start_date': datetime(2024, 9, 11),
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
@@ -77,7 +78,6 @@ with DAG(
     default_args=default_args,                    # DAG default settings
     description='Upload B.C. laws data to S3 from bclaws directory into a timestamped folder',
     schedule_interval=None,                       # This DAG is triggered manually
-    start_date=days_ago(1),
     catchup=False,
     tags=['upload', 's3', 'bclaws'],
 ) as dag:
