@@ -273,7 +273,7 @@ def get_target_folder(file_name):
         return os.path.join(folder, "Others")
 
 # ===============================
-# Define the DAG Workflow and Task Dependencies
+# Task Definitions
 # ===============================
 
 # Step 1: First, check for any changes
