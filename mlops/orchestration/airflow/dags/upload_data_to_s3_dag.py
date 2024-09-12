@@ -1,7 +1,6 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from airflow.utils.dates import days_ago
-from airflow.exceptions import AirflowSkipException
+from airflow.operators.dummy_operator import DummyOperator
 import boto3
 import os
 import shutil
@@ -54,11 +53,12 @@ def check_for_data():
     
     # Check if directory is empty
     if not any(os.scandir(base_dir)):
-        # If there is no data inside the directory, raise TaskSkipException to skip the DAG
+        # If the directory is empty, log a message and return `False`
         print(f"No data found in {base_dir}. Skipping the upload...")
-        raise AirflowSkipException(f"No data found in {base_dir}. DAG will be skipped.")
+        return False
 
     print(f"Data found in {base_dir}. Proceeding with the DAG.")
+    return True
 
 
 def upload_to_s3(file_path, bucket_name, key_prefix="", client=None):
@@ -89,7 +89,7 @@ def upload_bclaws_to_s3():
     # Walk through the local directory to find files for upload
     for root, dirs, files in os.walk(base_dir):
         relative_path = os.path.relpath(root, base_dir)  # Relative path (subfolder structure) inside the base folder
-        if relative_path == ".":  
+        if relative_path == ".": 
             relative_path = ""  # No relative path at root
 
         # Generate the S3 key prefix including the relative folder structure
@@ -126,8 +126,14 @@ def clean_bclaws_folder():
 
 # Task: Check if there is data before running the DAG
 check_for_data_task = PythonOperator(
-    task_id='check_for_data',  # New task ID
-    python_callable=check_for_data,
+    task_id='check_for_data',
+    python_callable=lambda: check_for_data() or False,  # Check for data, return success/failure
+    dag=dag,
+)
+
+# Dummy Task: If no data found, skip
+no_data_task = DummyOperator(
+    task_id='no_data_found',
     dag=dag,
 )
 
@@ -148,6 +154,11 @@ clean_bclaws_task = PythonOperator(
 )
 
 # ==========================
-# Setting Task Dependencies
+# Set Up Task Dependencies
 # ==========================
-check_for_data_task >> upload_to_s3_task >> clean_bclaws_task
+
+# Based on the check, either trigger S3 upload (if data exists) or end the DAG with no changes
+check_for_data_task >> [upload_to_s3_task, no_data_task]
+
+# Only proceed to cleanup if upload is successful
+upload_to_s3_task >> clean_bclaws_task
