@@ -28,7 +28,7 @@ default_args = {
 }
 
 dag = DAG(
-    'dbt_trulens_etl',
+    'initialize_dbt_with_vault',
     default_args=default_args,
     description='A DAG to initialize DBT with Vault secrets',
     schedule_interval='0 0 * * *',
