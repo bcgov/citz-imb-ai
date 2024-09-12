@@ -202,6 +202,7 @@ run_dbt = BashOperator(
         'TRULENS_HOST': TRULENS_HOST if TRULENS_HOST else 'trulens',
         'TRULENS_DB': TRULENS_DB if TRULENS_DB else 'postgres',
     },
+    execution_timeout=timedelta(minutes=30),
     dag=dag,
 )
 
