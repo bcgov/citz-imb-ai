@@ -1,22 +1,3 @@
-# # Step 5: Trigger the S3 upload DAG after transformations finish
-# trigger_s3_upload = TriggerDagRunOperator(
-#     task_id='trigger_upload_to_s3',
-#     trigger_dag_id='upload_data_to_s3_dag',  # Name of the DAG to trigger
-#     wait_for_completion=False,               # Do not wait for the upload DAG to complete
-#     trigger_rule='all_success',              # Trigger S3 upload only if the scraper succeeds completely
-#     dag=dag
-# )
-# ### ###
-
-# # =======================
-# # Set Up Task Dependencies
-# # =======================
-
-# trigger_s3_upload 
-
-
-
-
 import os
 import re
 from bs4 import BeautifulSoup
@@ -29,18 +10,14 @@ from datetime import datetime, timedelta
 # Constants and Configuration Setup
 # ================================
 
-# Directory paths for where files are stored
 BASE_PATH = "/opt/airflow/"
 HTML_DIR = "data/bclaws/html"
-XML_DIR = "data/bclaws/xml"
 
-# Retry behavior configuration for tasks in the transformation
 RETRY_CONFIG = {
     "retries": 3,  # Retry up to 3 times for each task
     "retry_delay": timedelta(minutes=5),  # Wait 5 minutes between retries
 }
 
-# Default arguments configuration for the DAG
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -55,10 +32,10 @@ default_args = {
 # Define the DAG
 # ================================
 dag = DAG(
-    'bclaws_data_transform_dag',
+    'bclaws_html_transform_dag',
     default_args=default_args,
     description='A DAG to transform downloaded BC Laws HTML data',
-    schedule_interval=None,  # This will be triggered externally, like in the Scraper DAG
+    schedule_interval=None,  # This will be triggered externally
     catchup=False,
     tags=['bclaws', 'transformation'],
 )
@@ -76,11 +53,9 @@ def handle_unicode_errors():
             if filename.endswith(".html"):
                 file_path = os.path.join(root, filename)
                 try:
-                    # Open the file, replace invalid Unicode characters, and save it back
                     with open(file_path, 'r', encoding='utf-8', errors='replace') as file:
                         content = file.read()
 
-                    # Save the cleaned content back to the file
                     with open(file_path, 'w', encoding='utf-8') as file:
                         file.write(content)
 
@@ -101,12 +76,10 @@ def prettify_html_files():
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
                 
-                # Prettify content
                 formatter = HTMLFormatter(indent=3)
                 soup = BeautifulSoup(content, 'html.parser')
                 content = soup.prettify(formatter=formatter)
 
-                # Save prettified content back to the same file
                 with open(file_path, 'w', encoding='utf-8') as file:
                     file.write(content)
                 
@@ -124,7 +97,6 @@ def remove_unwanted_tags():
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
 
-                # Remove unwanted tags and attributes
                 content = re.sub(r'<\?xml version="1.0" encoding="UTF-8"\?>', '', content, flags=re.DOTALL)
                 content = re.sub(r'<!DOCTYPE html[^>]*>', '', content)
                 content = re.sub(r'<head[^>]*>.*?</head>', '', content, flags=re.DOTALL)
@@ -136,7 +108,6 @@ def remove_unwanted_tags():
                 content = re.sub(r'<div id="contents"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
                 content = re.sub(r'<p class="copyright"[^>]*>.*?</p>', '', content, flags=re.DOTALL)
 
-                # Save cleaned content back to the same file
                 with open(file_path, 'w', encoding='utf-8') as file:
                     file.write(content)
                 
@@ -154,16 +125,49 @@ def final_prettify():
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
 
-                # Final prettification
                 formatter = HTMLFormatter(indent=3)
                 soup = BeautifulSoup(content, 'html.parser')
                 content = soup.prettify(formatter=formatter)
 
-                # Save prettified content back to the same file
                 with open(file_path, 'w', encoding='utf-8') as file:
                     file.write(content)
                 
                 print(f'Final prettification done for {filename} in {root}')
+
+
+def fix_html_tasks():
+    """Fixes the HTML files by removing nested <p> tags and fixing block-level elements inside <p> tags."""
+    downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
+
+    for root, _, files in os.walk(downloads_folder):
+        for file in files:
+            if file.endswith('.html'):
+                file_path = os.path.join(root, file)
+                fix_html(file_path)
+
+
+def fix_html(file_path):
+    """Fixes nested <p> tags and moves block-level elements outside <p> tags."""
+    with open(file_path, 'r', encoding='utf-8') as file:
+        html_content = file.read()
+
+    # Remove nested <p> tags
+    html_content = re.sub(r'<p[^>]*>\s*<p', '<p', html_content)
+    html_content = re.sub(r'</p>\s*</p>', '</p>', html_content)
+
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # Fix <p> tags containing block-level elements
+    for p in soup.find_all('p'):
+        if p.find(['div', 'p']):
+            new_tag = soup.new_tag('div')
+            new_tag.extend(p.contents)
+            p.replace_with(new_tag)
+
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(str(soup))
+
+    print(f"Fixed: {file_path}")
 
 
 # ================================
@@ -173,6 +177,14 @@ def final_prettify():
 handle_unicode_errors_task = PythonOperator(
     task_id='handle_unicode_errors',
     python_callable=handle_unicode_errors,
+    dag=dag,
+    retries=RETRY_CONFIG["retries"],
+    retry_delay=RETRY_CONFIG["retry_delay"],
+)
+
+fix_html_task = PythonOperator(
+    task_id='fix_html',
+    python_callable=fix_html_tasks,
     dag=dag,
     retries=RETRY_CONFIG["retries"],
     retry_delay=RETRY_CONFIG["retry_delay"],
@@ -202,9 +214,17 @@ final_prettify_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
+trigger_txt_transform_task = TriggerDagRunOperator(
+    task_id='trigger_bclaws_txt_transform_dag',
+    trigger_dag_id='bclaws_txt_transform_dag',
+    wait_for_completion=False,  # Trigger and move on (no need to wait for text DAG to finish)
+    trigger_rule='all_success',
+    dag=dag,
+)
+
 # ================================
 # Set Up Task Dependencies
 # ================================
 
-# Fix Unicode errors -> Prettify -> Remove Tags -> Final Prettification
-handle_unicode_errors_task >> prettify_html_task >> remove_unwanted_tags_task >> final_prettify_task
+# Fix Unicode errors -> Fix HTML -> Prettify -> Remove Tags -> Final Prettification -> Trigger TXT Transform
+handle_unicode_errors_task >> fix_html_task >> prettify_html_task >> remove_unwanted_tags_task >> final_prettify_task >> trigger_txt_transform_task

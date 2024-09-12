@@ -234,9 +234,9 @@ sort_files_task = PythonOperator(
 )
 
 # Step 4: Trigger the HTML Scraper DAG after XML Scraper finishes
-trigger_data_transform = TriggerDagRunOperator(
-    task_id='trigger_data_transform',
-    trigger_dag_id='bclaws_data_transform_dag',  # Name of the DAG to trigger
+trigger_html_transform = TriggerDagRunOperator(
+    task_id='trigger_html_transform',
+    trigger_dag_id='bclaws_html_transform_dag',  # Name of the DAG to trigger
     wait_for_completion=False,               # Do not wait for the upload DAG to complete
     trigger_rule='all_success',              # Trigger html scraper only if the xml scraper succeeds completely
     dag=dag
@@ -249,4 +249,4 @@ trigger_data_transform = TriggerDagRunOperator(
 # Clean before scraping, then sort the files
 clean_html_folder_task >> scrape_task  # Clean before scraping
 scrape_task >> sort_files_task    # Sort files after scraping
-sort_files_task >> trigger_data_transform  # Trigger data transform after sorting is complete
+sort_files_task >> trigger_html_transform  # Trigger data transform after sorting is complete
