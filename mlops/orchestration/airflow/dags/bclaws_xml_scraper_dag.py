@@ -44,7 +44,7 @@ dag = DAG(
     'bclaws_xml_scraper_dag',
     default_args=default_args,
     description='A DAG to scrape and download xml laws from BC Laws',
-    schedule_interval=timedelta(days=5),
+    schedule_interval=timedelta(days=1),
     catchup=False,
     tags=['bclaws', 'scraping'],
 )
