@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from bs4.formatter import HTMLFormatter
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime, timedelta
 
 # ================================
