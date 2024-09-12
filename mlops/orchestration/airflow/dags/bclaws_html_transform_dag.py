@@ -41,7 +41,7 @@ dag = DAG(
 )
 
 # ================================
-# Transformation Functions (One per Task)
+# Transformation Functions
 # ================================
 
 def handle_unicode_errors():
