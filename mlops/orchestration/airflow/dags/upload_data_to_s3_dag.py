@@ -1,8 +1,10 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.utils.dates import days_ago
+from airflow.exceptions import AirflowSkipException
 import boto3
 import os
+import shutil
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
@@ -46,6 +48,19 @@ dag = DAG(
 # Task Logic - Upload to S3
 # ==========================
 
+def check_for_data():
+    """Check if there's any data in the 'bclaws' folder. If not, skip the DAG."""
+    base_dir = os.path.join("/opt/airflow/", "data/bclaws/")
+    
+    # Check if directory is empty
+    if not any(os.scandir(base_dir)):
+        # If there is no data inside the directory, raise TaskSkipException to skip the DAG
+        print(f"No data found in {base_dir}. Skipping the upload...")
+        raise AirflowSkipException(f"No data found in {base_dir}. DAG will be skipped.")
+
+    print(f"Data found in {base_dir}. Proceeding with the DAG.")
+
+
 def upload_to_s3(file_path, bucket_name, key_prefix="", client=None):
     """Upload a given file to the S3 bucket under a key prefix (directory in S3)."""
     if client is None:
@@ -85,16 +100,54 @@ def upload_bclaws_to_s3():
             file_path = os.path.join(root, file_name)  # Absolute local file path
             upload_to_s3(file_path, bucket_name, key_prefix=upload_prefix, client=client)            
 
+    print(f"Data successfully uploaded to S3 at '{root_key_prefix}'.")
+
+
+def clean_bclaws_folder():
+    """Delete all contents inside the bclaws folder but keep the folder itself."""
+    base_dir = os.path.join("/opt/airflow/", "data/bclaws/")
+    
+    # Walk through the directory and delete contents
+    for root, dirs, files in os.walk(base_dir):
+        for file_name in files:
+            file_path = os.path.join(root, file_name)
+            os.remove(file_path)
+            print(f"Deleted file: {file_path}")
+        for dir_name in dirs:
+            dir_path = os.path.join(root, dir_name)
+            shutil.rmtree(dir_path)
+            print(f"Deleted directory: {dir_path}")
+
+    print(f"All contents of {base_dir} have been deleted.")
 
 # ==========================
-# Task Definition
+# Task Definitions
 # ==========================
-task_upload_to_s3 = PythonOperator(
-    task_id='upload_files_to_s3',
-    python_callable=upload_bclaws_to_s3,  # Call the S3 upload logic
-    execution_timeout=timedelta(hours=1),  # Set a timeout for the upload job
-    dag=dag,                               # Associated DAG
+
+# Task: Check if there is data before running the DAG
+check_for_data_task = PythonOperator(
+    task_id='check_for_data',  # New task ID
+    python_callable=check_for_data,
+    dag=dag,
 )
 
-# Set task in standalone mode for standalone upload (as done previously)
-task_upload_to_s3
+# Task: Upload files to S3
+upload_to_s3_task = PythonOperator(
+    task_id='upload_files_to_s3',
+    python_callable=upload_bclaws_to_s3,  # Call the S3 upload logic only if data exists
+    execution_timeout=timedelta(hours=1),
+    dag=dag,
+)
+
+# Task: Clean up the bclaws directory after successful upload
+clean_bclaws_task = PythonOperator(
+    task_id='clean_bclaws_folder',
+    python_callable=clean_bclaws_folder,
+    execution_timeout=timedelta(minutes=30),
+    dag=dag,
+)
+
+# ==========================
+# Setting Task Dependencies
+# ==========================
+check_for_data_task >> upload_to_s3_task >> clean_bclaws_task
