@@ -1,6 +1,3 @@
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from datetime import datetime, timedelta
 import os
 import asyncio
 import aiohttp
@@ -8,27 +5,6 @@ import aiofiles
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.bclaws.gov.bc.ca/civix/content/complete/statreg/"
-BASE_PATH = "/opt/airflow/"
-XML_DIR = "data/xml"
-
-default_args = {
-    'owner': 'airflow',
-    'depends_on_past': False,
-    'start_date': datetime(2024, 7, 23),
-    'email_on_failure': False,
-    'email_on_retry': False,
-    'retries': 1,
-    'retry_delay': timedelta(minutes=5),
-    
-}
-
-dag = DAG(
-    'bclaws_scraper',
-    default_args=default_args,
-    description='A DAG to scrape and download BC Laws',
-    schedule_interval=timedelta(days=1),
-    tags=['bclaws', 'scraping'],
-)
 
 async def fetch_content(url, session):
     try:
@@ -75,35 +51,24 @@ async def process_directory(url, session, depth=0):
         document_ext = elem.find('CIVIX_DOCUMENT_EXT').text
         
         if document_ext == 'htm':
-            download_url = f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{document_id}_multi/xml"
+            download_url = f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{document_id}_multi"
         elif document_ext == 'xml':
-            download_url = f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{document_id}/xml"
+            download_url = f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{document_id}"
         else:
             continue
 
         sanitized_title = ''.join(c if c.isalnum() or c.isspace() else '_' for c in document_title).replace(' ', '_')
         filename = os.path.join(
-            BASE_PATH,
-            XML_DIR,
-            f"{sanitized_title}.{'multi.xml' if document_ext == 'htm' else 'xml'}"
+            os.path.dirname(__file__),
+            "html",
+            f"{sanitized_title}.{'multi.html' if document_ext == 'htm' else 'html'}"
         )
         await download_xml(download_url, filename, session)
 
 async def main():
-    # Create the directory if it doesn't exist
-    os.makedirs(os.path.join(BASE_PATH, XML_DIR), exist_ok=True)
-    
     async with aiohttp.ClientSession() as session:
         await process_directory(BASE_URL, session)
     print("Download completed.")
 
-def run_scraper():
+if __name__ == "__main__":
     asyncio.run(main())
-
-scrape_task = PythonOperator(
-    task_id='scrape_bclaws',
-    python_callable=run_scraper,
-    dag=dag,
-)
-
-scrape_task
