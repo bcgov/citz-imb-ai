@@ -41,7 +41,7 @@ default_args = {
 
 # Define the DAG
 dag = DAG(
-    'dbt_frontend_analytics_etl',
+    'frontend_analytics_etl',
     default_args=default_args,
     description='ETL process for frontend analytics',
     schedule_interval=None,  # This will be triggered by an external DAG

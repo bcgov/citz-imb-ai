@@ -72,7 +72,7 @@ run_dbt = BashOperator(
 # Task to trigger the frontend analytics DAG upon successful completion of run_dbt
 trigger_frontend_analytics_dag = TriggerDagRunOperator(
     task_id='trigger_frontend_analytics_etl',
-    trigger_dag_id='dbt_frontend_analytics_etl',
+    trigger_dag_id='frontend_analytics_etl',
     wait_for_completion=False,  # Don't wait for the triggered DAG to complete
     trigger_rule='all_success',  # Trigger the frontend DAG only if the current DAG completes successfully
     dag=dag,
