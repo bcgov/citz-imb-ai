@@ -1,6 +1,7 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime
 import os
 from dotenv import load_dotenv
@@ -27,11 +28,12 @@ default_args = {
 }
 
 dag = DAG(
-    'initialize_dbt_with_vault',
+    'dbt_trulens_etl',
     default_args=default_args,
     description='A DAG to initialize DBT with Vault secrets',
     schedule_interval='0 0 * * *',
-    tags=['dbt', 'trulens','bclaws', 'bclaws_analytics'],
+    catchup=False,
+    tags=['dbt', 'trulens', 'bclaws', 'bclaws_analytics'],
 )
 
 # Task to print the environment variables (optional for debugging)
@@ -67,5 +69,14 @@ run_dbt = BashOperator(
     dag=dag,
 )
 
-# Define the task dependencies
-retrieve_secrets >> move_profiles_yml >> run_dbt
+# Task to trigger the frontend analytics DAG upon successful completion of run_dbt
+trigger_frontend_analytics_dag = TriggerDagRunOperator(
+    task_id='trigger_frontend_analytics_etl',
+    trigger_dag_id='dbt_frontend_analytics_etl',
+    wait_for_completion=False,  # Don't wait for the triggered DAG to complete
+    trigger_rule='all_success',  # Trigger the frontend DAG only if the current DAG completes successfully
+    dag=dag,
+)
+
+# Set up task dependencies
+retrieve_secrets >> move_profiles_yml >> run_dbt >> trigger_frontend_analytics_dag

@@ -14,7 +14,6 @@ from dotenv import load_dotenv
 import tempfile
 import shutil
 import fcntl
-from airflow.sensors.external_task_sensor import ExternalTaskSensor
 
 # Load environment variables from the .env file
 load_dotenv("/vault/secrets/zuba-secret-dev")
@@ -42,10 +41,11 @@ default_args = {
 
 # Define the DAG
 dag = DAG(
-    'frontend_analytics_etl',
+    'dbt_frontend_analytics_etl',
     default_args=default_args,
     description='ETL process for frontend analytics',
-    schedule_interval='0 0 * * *',
+    schedule_interval=None,  # This will be triggered by an external DAG
+    catchup=False,
     tags=['dbt', 'bclaws', 'bclaws_analytics', 'trulens'],
 )
 
@@ -197,10 +197,10 @@ run_dbt = BashOperator(
     deactivate
     ''',
     env={
-        'TRULENS_USER': TRULENS_USER,
-        'TRULENS_PASSWORD': TRULENS_PASSWORD,
-        'TRULENS_HOST': TRULENS_HOST,
-        'TRULENS_DB': TRULENS_DB,
+        'TRULENS_USER': TRULENS_USER if TRULENS_USER else 'postgres',
+        'TRULENS_PASSWORD': TRULENS_PASSWORD if TRULENS_PASSWORD else 'root',
+        'TRULENS_HOST': TRULENS_HOST if TRULENS_HOST else 'trulens',
+        'TRULENS_DB': TRULENS_DB if TRULENS_DB else 'postgres',
     },
     dag=dag,
 )
@@ -223,20 +223,8 @@ cleanup_task = PythonOperator(
     dag=dag,
 )
 
-# Define the task dependencies
-wait_for_trulens_etl = ExternalTaskSensor(
-    task_id='wait_for_trulens_etl',
-    external_dag_id='initialize_dbt_with_vault',
-    external_task_id='run_dbt_command',
-    allowed_states=['success'],
-    failed_states=['failed', 'skipped'],
-    mode='poke',
-    poke_interval=60,
-    timeout=3600,
-    dag=dag,
-)
 
-wait_for_trulens_etl >> retrieve_secrets >> create_schema >> create_raw_table >> check_data
+retrieve_secrets >> create_schema >> create_raw_table >> check_data
 check_data >> [load_data, skip_processing]
 load_data >> move_profiles_yml >> run_dbt >> cleanup_task
 [cleanup_task, skip_processing] >> end_task
