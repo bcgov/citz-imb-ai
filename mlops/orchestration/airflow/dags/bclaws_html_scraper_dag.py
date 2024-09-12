@@ -95,7 +95,7 @@ def clean_html_folder():
 
 def construct_download_url(index_id, doc_id):
     """Generate the URL for downloading a specific document (HTML in this case)."""
-    return f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}_multi"
+    return f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}"
 
 def get_sanitized_title(title):
     """Sanitize document titles to be suitable for filenames."""
