@@ -6,7 +6,6 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime, timedelta
 
-
 # ================================
 # Constants and Configuration Setup
 # ================================
@@ -15,11 +14,13 @@ BASE_PATH = "/opt/airflow/"
 HTML_DIR = "data/bclaws/html"
 TXT_DIR = "data/bclaws/txt"
 
+# Retry configuration for task failures
 RETRY_CONFIG = {
-    "retries": 3,
-    "retry_delay": timedelta(minutes=5),
+    "retries": 3,  # Maximum number of retry attempts
+    "retry_delay": timedelta(minutes=5),  # Delay between retries
 }
 
+# Default arguments for all DAG tasks
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -30,6 +31,7 @@ default_args = {
     'retry_delay': RETRY_CONFIG["retry_delay"],
 }
 
+# Define the DAG
 dag = DAG(
     'bclaws_txt_transform_dag',
     default_args=default_args,
@@ -69,10 +71,10 @@ def clean_txt_folder():
             file_path = os.path.join(folder, filename)
             try:
                 if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.remove(file_path)
+                    os.remove(file_path)  # Remove files and symlinks
                     print(f"Deleted file: {file_path}")
                 elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
+                    shutil.rmtree(file_path)  # Remove directories
                     print(f"Deleted directory: {file_path}")
             except Exception as e:
                 print(f"Failed to delete {file_path}. Reason: {e}")
@@ -86,6 +88,7 @@ def clean_txt_folder():
 # ================================
 
 def convert_html_to_text():
+    """Convert HTML files to plain text, maintaining folder structure."""
     input_folder = os.path.join(BASE_PATH, HTML_DIR)
     output_folder = os.path.join(BASE_PATH, TXT_DIR)
     
@@ -103,22 +106,25 @@ def convert_html_to_text():
 
                 output_file_path = os.path.join(output_subfolder, filename.replace('.html', '.txt'))
 
+                # Read HTML content
                 with open(input_file_path, 'r', encoding='utf-8') as file:
                     html_content = file.read()
 
+                # Parse HTML and extract text
                 soup = BeautifulSoup(html_content, 'html.parser')
                 text = soup.get_text()
 
                 # Clean up the text (removes leading and trailing whitespace)
                 cleaned_text = '\n'.join(line.strip() for line in text.splitlines())
 
+                # Write cleaned text to output file
                 with open(output_file_path, 'w', encoding='utf-8') as file:
                     file.write(cleaned_text)
 
                 print(f'Converted {input_file_path} to plain text at {output_file_path}.')
 
 # ================================
-# Task 2: Remove Blank Lines from Text Files
+# Task 3: Remove Blank Lines from Text Files
 # ================================
 
 def remove_all_blank_lines(file_path):
@@ -175,7 +181,7 @@ remove_blank_lines_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
-#Trigger the S3 upload DAG after transformations finish
+# Trigger the S3 upload DAG after transformations finish
 trigger_s3_upload = TriggerDagRunOperator(
     task_id='trigger_upload_to_s3',
     trigger_dag_id='upload_data_to_s3_dag',  # Name of the DAG to trigger

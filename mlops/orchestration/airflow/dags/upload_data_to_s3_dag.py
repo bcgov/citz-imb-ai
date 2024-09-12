@@ -7,22 +7,23 @@ import shutil
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
-# Load secret environment variables for S3 access
+# Load environment variables
 load_dotenv("/vault/secrets/zuba-secret-dev")
 
+# S3 configuration
 S3_ACCESS_KEY = os.getenv('S3_ACCESS_KEY')
 S3_SECRET_ACCESS_KEY = os.getenv('S3_SECRET_ACCESS_KEY')
 S3_ENDPOINT_URL = os.getenv('S3_ENDPOINT_URL')
 bucket_name = "IMBAIPilot"
 
-# Configuration for the S3 client
+# S3 client configuration
 linode_obj_config = {
     "aws_access_key_id": S3_ACCESS_KEY,
     "aws_secret_access_key": S3_SECRET_ACCESS_KEY,
     "endpoint_url": S3_ENDPOINT_URL,
 }
 
-# Define the DAG's default arguments
+# DAG default arguments
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -33,12 +34,12 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-# Define the DAG
+# DAG definition
 dag = DAG(
     'upload_data_to_s3_dag',
     default_args=default_args,
     description='Upload B.C. laws data to S3 from bclaws directory into a timestamped folder',
-    schedule_interval=None,  # This DAG is triggered manually
+    schedule_interval=None,  # Manual trigger
     catchup=False,
     tags=['upload', 's3', 'bclaws'],
 )
@@ -48,12 +49,11 @@ dag = DAG(
 # ==========================
 
 def check_for_data():
-    """Check if there's any data in the 'bclaws' folder. If not, skip the DAG."""
+    """Check if 'bclaws' folder has data."""
     base_dir = os.path.join("/opt/airflow/", "data/bclaws/")
     
-    # Check if directory is empty
+    # Return False if directory is empty
     if not any(os.scandir(base_dir)):
-        # If the directory is empty, log a message and return `False`
         print(f"No data found in {base_dir}. Skipping the upload...")
         return False
 
@@ -62,52 +62,49 @@ def check_for_data():
 
 
 def upload_to_s3(file_path, bucket_name, key_prefix="", client=None):
-    """Upload a given file to the S3 bucket under a key prefix (directory in S3)."""
+    """Upload file to S3 bucket."""
+    # Initialize S3 client if not provided
     if client is None:
-        client = boto3.client("s3", **linode_obj_config)  # Initialize the S3 client if not already provided
+        client = boto3.client("s3", **linode_obj_config)
     
-    file_name = os.path.basename(file_path)  # Determine the filename from the file_path
-    s3_key = f"{key_prefix}{file_name}"     # Full S3 key (path inside the bucket)
+    file_name = os.path.basename(file_path)
+    s3_key = f"{key_prefix}{file_name}"
 
-    # Upload the file to the specified S3 bucket and key
+    # Perform upload
     client.upload_file(file_path, bucket_name, s3_key)
     print(f"Uploaded {file_name} to {bucket_name}/{s3_key}")
 
 
 def upload_bclaws_to_s3():
-    """Upload all files and subfolders from the 'bclaws' directory to S3, under a timestamped folder."""
-    base_dir = os.path.join("/opt/airflow/", "data/bclaws/")  # Root directory where scraper stores files
+    """Upload 'bclaws' directory contents to S3."""
+    base_dir = os.path.join("/opt/airflow/", "data/bclaws/")
 
-    # Generate the desired timestamp format (e.g., "2024_10_10-11_30_00PM")
-    timestamp = datetime.utcnow().strftime('%Y_%m_%d-%I_%M_%S%p')  # Format for the folder (12-hour clock with AM/PM)
-    
-    # The key prefix will include the timestamp to create a unique folder in S3
+    # Create timestamped folder name
+    timestamp = datetime.utcnow().strftime('%Y_%m_%d-%I_%M_%S%p')
     root_key_prefix = f"bclaws/{timestamp}/"
 
-    client = boto3.client("s3", **linode_obj_config)  # Initialize S3 client
+    client = boto3.client("s3", **linode_obj_config)
     
-    # Walk through the local directory to find files for upload
+    # Traverse directory and upload files
     for root, dirs, files in os.walk(base_dir):
-        relative_path = os.path.relpath(root, base_dir)  # Relative path (subfolder structure) inside the base folder
-        if relative_path == ".": 
-            relative_path = ""  # No relative path at root
+        relative_path = os.path.relpath(root, base_dir)
+        relative_path = "" if relative_path == "." else relative_path
 
-        # Generate the S3 key prefix including the relative folder structure
         upload_prefix = f"{root_key_prefix}{relative_path}/"
 
-        # Upload each file found in the directory
+        # Upload each file in current directory
         for file_name in files:
-            file_path = os.path.join(root, file_name)  # Absolute local file path
+            file_path = os.path.join(root, file_name)
             upload_to_s3(file_path, bucket_name, key_prefix=upload_prefix, client=client)            
 
     print(f"Data successfully uploaded to S3 at '{root_key_prefix}'.")
 
 
 def clean_bclaws_folder():
-    """Delete all contents inside the bclaws folder but keep the folder itself."""
+    """Remove all contents from 'bclaws' folder."""
     base_dir = os.path.join("/opt/airflow/", "data/bclaws/")
     
-    # Walk through the directory and delete contents
+    # Delete files and subdirectories
     for root, dirs, files in os.walk(base_dir):
         for file_name in files:
             file_path = os.path.join(root, file_name)
@@ -124,28 +121,28 @@ def clean_bclaws_folder():
 # Task Definitions
 # ==========================
 
-# Task: Check if there is data before running the DAG
+# Check for data presence
 check_for_data_task = PythonOperator(
     task_id='check_for_data',
-    python_callable=lambda: check_for_data() or False,  # Check for data, return success/failure
+    python_callable=lambda: check_for_data() or False,
     dag=dag,
 )
 
-# Dummy Task: If no data found, skip
+# Dummy task for no data scenario
 no_data_task = DummyOperator(
     task_id='no_data_found',
     dag=dag,
 )
 
-# Task: Upload files to S3
+# Upload files to S3
 upload_to_s3_task = PythonOperator(
     task_id='upload_files_to_s3',
-    python_callable=upload_bclaws_to_s3,  # Call the S3 upload logic only if data exists
+    python_callable=upload_bclaws_to_s3,
     execution_timeout=timedelta(hours=1),
     dag=dag,
 )
 
-# Task: Clean up the bclaws directory after successful upload
+# Clean up after successful upload
 clean_bclaws_task = PythonOperator(
     task_id='clean_bclaws_folder',
     python_callable=clean_bclaws_folder,
@@ -154,11 +151,11 @@ clean_bclaws_task = PythonOperator(
 )
 
 # ==========================
-# Set Up Task Dependencies
+# Task Dependencies
 # ==========================
 
-# Based on the check, either trigger S3 upload (if data exists) or end the DAG with no changes
+# Execute upload or skip based on data presence
 check_for_data_task >> [upload_to_s3_task, no_data_task]
 
-# Only proceed to cleanup if upload is successful
+# Clean up only after successful upload
 upload_to_s3_task >> clean_bclaws_task

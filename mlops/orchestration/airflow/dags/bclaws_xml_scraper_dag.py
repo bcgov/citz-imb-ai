@@ -99,34 +99,32 @@ def clean_xml_folder():
 # If changes are found, initiate the scraping process. Otherwise, skip and end the DAG.
 
 def parse_last_modified():
+    # Check for changes in BC Laws content
     try:
-        # Make request to check for the latest modifications
+        # Fetch latest modification time
         response = requests.get(CHECK_CHANGES_URL, verify=False)
         response.raise_for_status()
 
-        # Parse the XML response to extract the last modified time from the first <ix:dir> tag
+        # Extract last modified time from XML
         soup = BeautifulSoup(response.content, 'xml')
         latest_last_modified = soup.find('ix:dir')['lastModified']
-
-        # Convert the lastModified string to a datetime object
         latest_modified_time = datetime.strptime(latest_last_modified, "%m/%d/%Y %I:%M:%S %p")
         
-        # Retrieve the previous last modified time stored in Airflow Variables (default: very old date)
+        # Compare with previous modification time
         previous_modified_time = Variable.get("bclaws_last_modified", default_var="01/01/2000 12:00:00 AM")
         previous_modified_time = datetime.strptime(previous_modified_time, "%m/%d/%Y %I:%M:%S %p")
 
-        # If the latest modified time is newer, changes have occurred, so we proceed
         if latest_modified_time > previous_modified_time:
-            # Update the variable in Airflow with the new last modified time
+            # Update stored modification time and proceed with scraping
             Variable.set("bclaws_last_modified", latest_last_modified)
-            print(f"Changes were detected. Proceeding with scraping...")
-            return 'clean_bclaws_dir'  # Proceed to clean the BCLAWS directory
+            print(f"Changes detected. Proceeding with scraping...")
+            return 'clean_bclaws_dir'
         else:
-            # No changes detected, skip the tasks
-            print(f"No changes detected. DAG will skip tasks.")
-            return 'no_changes'  # Skip and end the DAG gracefully
+            # No changes, skip scraping
+            print(f"No changes detected. Skipping tasks.")
+            return 'no_changes'
     except requests.exceptions.RequestException as e:
-        print(f"Error during API call or XML parsing: {e}")
+        print(f"Error checking for changes: {e}")
         return 'no_changes'
 
 # ================================

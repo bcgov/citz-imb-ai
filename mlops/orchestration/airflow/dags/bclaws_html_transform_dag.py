@@ -14,11 +14,13 @@ from datetime import datetime, timedelta
 BASE_PATH = "/opt/airflow/"
 HTML_DIR = "data/bclaws/html"
 
+# Retry configuration for task failures
 RETRY_CONFIG = {
-    "retries": 3,  # Retry up to 3 times for each task
-    "retry_delay": timedelta(minutes=5),  # Wait 5 minutes between retries
+    "retries": 3,  # Max retry attempts
+    "retry_delay": timedelta(minutes=5),  # Delay between retries
 }
 
+# Default arguments for DAG tasks
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -46,17 +48,20 @@ dag = DAG(
 # ================================
 
 def handle_unicode_errors():
-    """Handle Unicode errors in all HTML files by replacing invalid characters."""
+    """Replace invalid Unicode characters in HTML files."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
     
     for root, dirs, files in os.walk(downloads_folder):
         for filename in files:
             if filename.endswith(".html"):
+                # Process each HTML file
                 file_path = os.path.join(root, filename)
                 try:
+                    # Read with 'replace' to handle Unicode errors
                     with open(file_path, 'r', encoding='utf-8', errors='replace') as file:
                         content = file.read()
 
+                    # Write back the cleaned content
                     with open(file_path, 'w', encoding='utf-8') as file:
                         file.write(content)
 
@@ -67,20 +72,23 @@ def handle_unicode_errors():
 
 
 def prettify_html_files():
-    """Recursively prettify all HTML files in the root and subdirectories."""
+    """Improve HTML formatting for all files."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
     
     for root, dirs, files in os.walk(downloads_folder):
         for filename in files:
             if filename.endswith(".html"):
+                # Process each HTML file
                 file_path = os.path.join(root, filename)
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
                 
+                # Use BeautifulSoup to prettify HTML
                 formatter = HTMLFormatter(indent=3)
                 soup = BeautifulSoup(content, 'html.parser')
                 content = soup.prettify(formatter=formatter)
 
+                # Write back the prettified content
                 with open(file_path, 'w', encoding='utf-8') as file:
                     file.write(content)
                 
@@ -88,16 +96,18 @@ def prettify_html_files():
 
 
 def remove_unwanted_tags():
-    """Remove unwanted tags and attributes from all HTML files in the root and subdirectories."""
+    """Clean up HTML by removing unnecessary tags and attributes."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
     
     for root, dirs, files in os.walk(downloads_folder):
         for filename in files:
             if filename.endswith(".html"):
+                # Process each HTML file
                 file_path = os.path.join(root, filename)
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
 
+                # Remove various unwanted elements
                 content = re.sub(r'<\?xml version="1.0" encoding="UTF-8"\?>', '', content, flags=re.DOTALL)
                 content = re.sub(r'<!DOCTYPE html[^>]*>', '', content)
                 content = re.sub(r'<head[^>]*>.*?</head>', '', content, flags=re.DOTALL)
@@ -109,6 +119,7 @@ def remove_unwanted_tags():
                 content = re.sub(r'<div id="contents"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
                 content = re.sub(r'<p class="copyright"[^>]*>.*?</p>', '', content, flags=re.DOTALL)
 
+                # Write back the cleaned content
                 with open(file_path, 'w', encoding='utf-8') as file:
                     file.write(content)
                 
@@ -116,20 +127,23 @@ def remove_unwanted_tags():
 
 
 def final_prettify():
-    """Do a final prettification of all HTML files in the root and subdirectories."""
+    """Perform final HTML prettification."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
     
     for root, dirs, files in os.walk(downloads_folder):
         for filename in files:
             if filename.endswith(".html"):
+                # Process each HTML file
                 file_path = os.path.join(root, filename)
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
 
+                # Use BeautifulSoup to prettify HTML
                 formatter = HTMLFormatter(indent=3)
                 soup = BeautifulSoup(content, 'html.parser')
                 content = soup.prettify(formatter=formatter)
 
+                # Write back the prettified content
                 with open(file_path, 'w', encoding='utf-8') as file:
                     file.write(content)
                 
@@ -137,7 +151,7 @@ def final_prettify():
 
 
 def fix_html_tasks():
-    """Fixes the HTML files by removing nested <p> tags and fixing block-level elements inside <p> tags."""
+    """Fix HTML structure issues in all files."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
 
     for root, _, files in os.walk(downloads_folder):
@@ -148,7 +162,7 @@ def fix_html_tasks():
 
 
 def fix_html(file_path):
-    """Fixes nested <p> tags and moves block-level elements outside <p> tags."""
+    """Fix nested <p> tags and block-level elements inside <p> tags."""
     with open(file_path, 'r', encoding='utf-8') as file:
         html_content = file.read()
 
@@ -165,6 +179,7 @@ def fix_html(file_path):
             new_tag.extend(p.contents)
             p.replace_with(new_tag)
 
+    # Write back the fixed content
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(str(soup))
 
@@ -175,6 +190,7 @@ def fix_html(file_path):
 # Task Definitions
 # ================================
 
+# Task to handle Unicode errors
 handle_unicode_errors_task = PythonOperator(
     task_id='handle_unicode_errors',
     python_callable=handle_unicode_errors,
@@ -183,6 +199,7 @@ handle_unicode_errors_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
+# Task to fix HTML structure
 fix_html_task = PythonOperator(
     task_id='fix_html',
     python_callable=fix_html_tasks,
@@ -191,6 +208,7 @@ fix_html_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
+# Task for initial HTML prettification
 prettify_html_task = PythonOperator(
     task_id='prettify_html',
     python_callable=prettify_html_files,
@@ -199,6 +217,7 @@ prettify_html_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
+# Task to remove unwanted HTML elements
 remove_unwanted_tags_task = PythonOperator(
     task_id='remove_unwanted_tags',
     python_callable=remove_unwanted_tags,
@@ -207,6 +226,7 @@ remove_unwanted_tags_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
+# Task for final HTML prettification
 final_prettify_task = PythonOperator(
     task_id='final_prettify',
     python_callable=final_prettify,
@@ -215,10 +235,11 @@ final_prettify_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
+# Task to trigger the text transformation DAG
 trigger_txt_transform_task = TriggerDagRunOperator(
     task_id='trigger_bclaws_txt_transform_dag',
     trigger_dag_id='bclaws_txt_transform_dag',
-    wait_for_completion=False,  # Trigger and move on (no need to wait for text DAG to finish)
+    wait_for_completion=False,  # Don't wait for text DAG to finish
     trigger_rule='all_success',
     dag=dag,
 )
@@ -227,5 +248,5 @@ trigger_txt_transform_task = TriggerDagRunOperator(
 # Set Up Task Dependencies
 # ================================
 
-# Fix Unicode errors -> Fix HTML -> Prettify -> Remove Tags -> Final Prettification -> Trigger TXT Transform
+# Define the order of task execution
 handle_unicode_errors_task >> fix_html_task >> prettify_html_task >> remove_unwanted_tags_task >> final_prettify_task >> trigger_txt_transform_task

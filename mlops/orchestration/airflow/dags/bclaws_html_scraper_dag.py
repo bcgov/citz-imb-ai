@@ -21,13 +21,13 @@ BASE_URL = "https://www.bclaws.gov.bc.ca/civix/content/complete/statreg/"
 BASE_PATH = "/opt/airflow/"
 HTML_DIR = "data/bclaws/html"  # Folder for HTML files
 
-# Retry behavior configuration when making HTTP requests
+# Retry configuration for HTTP requests
 RETRY_CONFIG = {
-    "stop": stop_after_attempt(3),  # Retry up to 3 times
-    "wait": wait_exponential(min=1, max=10),  # Exponential backoff
+    "stop": stop_after_attempt(3),  # Max 3 retry attempts
+    "wait": wait_exponential(min=1, max=10),  # Exponential backoff between retries
 }
 
-# Default argument configuration for the DAG
+# Default DAG arguments
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -38,6 +38,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
+# DAG definition
 dag = DAG(
     'bclaws_html_scraper_dag',
     default_args=default_args,
@@ -52,7 +53,7 @@ dag = DAG(
 # ================================
 
 def create_folder_if_not_exists(folder_path):
-    """Ensure that the folder exists by creating it if necessary."""
+    """Create folder if it doesn't exist."""
     try:
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
@@ -65,7 +66,7 @@ def create_folder_if_not_exists(folder_path):
 # ===============================
 
 def clean_html_folder():
-    """Clean the HTML directory before starting the scraper and ensure the folder exists."""
+    """Clean HTML directory and ensure it exists."""
     folder = os.path.join(BASE_PATH, HTML_DIR)
 
     # Step 1: Ensure the folder exists, if not, create it
@@ -94,16 +95,16 @@ def clean_html_folder():
 # ================================
 
 def construct_download_url(index_id, doc_id):
-    """Generate the URL for downloading a specific document (HTML in this case)."""
+    """Generate download URL for a specific document."""
     return f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}"
 
 def get_sanitized_title(title):
-    """Sanitize document titles to be suitable for filenames."""
+    """Sanitize document titles for use as filenames."""
     return ''.join(c if c.isalnum() or c.isspace() else '_' for c in title).replace(' ', '_')
 
 @retry(**RETRY_CONFIG)
 def fetch_content(url):
-    """Fetch content by making a request, and return the parsed HTML."""
+    """Fetch and parse HTML content from URL."""
     try:
         response = requests.get(url, verify=False)
         response.raise_for_status()
@@ -114,7 +115,7 @@ def fetch_content(url):
 
 @retry(**RETRY_CONFIG)
 def download_html(url, filename):
-    """Download an HTML file from the given URL and save it to the specified location."""
+    """Download HTML file and save to specified location."""
     try:
         response = requests.get(url, stream=True, verify=False)
         response.raise_for_status()
@@ -129,7 +130,7 @@ def download_html(url, filename):
         print(f"Failed to download {url}: {e}")
 
 def process_directory(url, depth=0, parent_path=""):
-    """Recursively process the directory to download relevant HTML files."""
+    """Recursively process directory and download HTML files."""
     soup = fetch_content(url)
     if not soup:
         return
@@ -156,7 +157,7 @@ def process_directory(url, depth=0, parent_path=""):
             download_html(download_url, filename)
 
 def run_scraper():
-    """Main function to run the entire scraping process for HTML files."""
+    """Main function to run the entire scraping process."""
     create_folder_if_not_exists(os.path.join(BASE_PATH, HTML_DIR))
     process_directory(BASE_URL)
     print("Download completed.")
@@ -166,7 +167,7 @@ def run_scraper():
 # ===============================
 
 def move_files_to_folders():
-    """Sort files into the appropriate subfolders after downloading."""
+    """Sort downloaded files into appropriate subfolders."""
     folder = os.path.join(BASE_PATH, HTML_DIR)
     sorted_files = set()
 
@@ -184,6 +185,7 @@ def move_files_to_folders():
     print("File sorting completed.")
 
 def get_target_folder(file_name):
+    """Determine target folder based on file name."""
     folder = os.path.join(BASE_PATH, HTML_DIR)  # Target folder is within HTML_DIR
     if "Edition_TLC" in file_name:
         return os.path.join(folder, "Editions")
@@ -212,28 +214,28 @@ def get_target_folder(file_name):
 # Define the DAG Workflow and Task Dependencies
 # ===============================
 
-# Step 1: Clean the HTML directory
+# Task 1: Clean HTML folder
 clean_html_folder_task = PythonOperator(
     task_id='clean_html_folder',
     python_callable=clean_html_folder,  # Clean directory before scraping
     dag=dag,
 )
 
-# Step 2: Run the scraping process for HTML files
+# Task 2: Scrape BC Laws website
 scrape_task = PythonOperator(
     task_id='scrape_bclaws',
     python_callable=run_scraper,  # Download files
     dag=dag,
 )
 
-# Step 3: After scraping, sort the downloaded files
+# Task 3: Sort downloaded files
 sort_files_task = PythonOperator(
     task_id='sort_files',
     python_callable=move_files_to_folders,  # Organize sorted files
     dag=dag,
 )
 
-# Step 4: Trigger the HTML Scraper DAG after XML Scraper finishes
+# Task 4: Trigger HTML transform DAG
 trigger_html_transform = TriggerDagRunOperator(
     task_id='trigger_html_transform',
     trigger_dag_id='bclaws_html_transform_dag',  # Name of the DAG to trigger
@@ -246,7 +248,7 @@ trigger_html_transform = TriggerDagRunOperator(
 # Set Up Task Dependencies
 # =======================
 
-# Clean before scraping, then sort the files
+# Define task execution order
 clean_html_folder_task >> scrape_task  # Clean before scraping
 scrape_task >> sort_files_task    # Sort files after scraping
 sort_files_task >> trigger_html_transform  # Trigger data transform after sorting is complete
