@@ -64,76 +64,119 @@ dag = DAG(
 )
 
 # ================================
-# Transformation Functions
+# Transformation Functions (One per Task)
 # ================================
 
-def prettify_html_files():
-    """Prettify the HTML files in the specified directory."""
+def handle_unicode_errors():
+    """Handle Unicode errors in all HTML files by replacing invalid characters."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
+    
+    for root, dirs, files in os.walk(downloads_folder):
+        for filename in files:
+            if filename.endswith(".html"):
+                file_path = os.path.join(root, filename)
+                try:
+                    # Open the file, replace invalid Unicode characters, and save it back
+                    with open(file_path, 'r', encoding='utf-8', errors='replace') as file:
+                        content = file.read()
 
-    for filename in os.listdir(downloads_folder):
-        file_path = os.path.join(downloads_folder, filename)
-        if os.path.isfile(file_path) and file_path.endswith('.html'):
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
-            formatter = HTMLFormatter(indent=3)
-            soup = BeautifulSoup(content, 'html.parser')
-            content = soup.prettify(formatter=formatter)
-            with open(file_path, 'w', encoding='utf-8') as file:
-                file.write(content)
-            print(f'Prettified {filename}')
+                    # Save the cleaned content back to the file
+                    with open(file_path, 'w', encoding='utf-8') as file:
+                        file.write(content)
+
+                    print(f'Repaired Unicode in {filename} in {root}')
+                
+                except Exception as e:
+                    print(f"Failed to handle Unicode for {file_path}: {e}")
+
+
+def prettify_html_files():
+    """Recursively prettify all HTML files in the root and subdirectories."""
+    downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
+    
+    for root, dirs, files in os.walk(downloads_folder):
+        for filename in files:
+            if filename.endswith(".html"):
+                file_path = os.path.join(root, filename)
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    content = file.read()
+                
+                # Prettify content
+                formatter = HTMLFormatter(indent=3)
+                soup = BeautifulSoup(content, 'html.parser')
+                content = soup.prettify(formatter=formatter)
+
+                # Save prettified content back to the same file
+                with open(file_path, 'w', encoding='utf-8') as file:
+                    file.write(content)
+                
+                print(f'Prettified {filename} in {root}')
 
 
 def remove_unwanted_tags():
-    """Remove unwanted tags and attributes from the HTML files."""
+    """Remove unwanted tags and attributes from all HTML files in the root and subdirectories."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
+    
+    for root, dirs, files in os.walk(downloads_folder):
+        for filename in files:
+            if filename.endswith(".html"):
+                file_path = os.path.join(root, filename)
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    content = file.read()
 
-    for filename in os.listdir(downloads_folder):
-        file_path = os.path.join(downloads_folder, filename)
-        if os.path.isfile(file_path) and file_path.endswith('.html'):
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
+                # Remove unwanted tags and attributes
+                content = re.sub(r'<\?xml version="1.0" encoding="UTF-8"\?>', '', content, flags=re.DOTALL)
+                content = re.sub(r'<!DOCTYPE html[^>]*>', '', content)
+                content = re.sub(r'<head[^>]*>.*?</head>', '', content, flags=re.DOTALL)
+                content = re.sub(r'<html[^>]*>', '<html>', content)
+                content = re.sub(r'<body[^>]*>', '<body>', content)
+                content = re.sub(r'<div id="toolBar"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
+                content = re.sub(r'<div id="header"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
+                content = re.sub(r'<div id="act:currency"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
+                content = re.sub(r'<div id="contents"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
+                content = re.sub(r'<p class="copyright"[^>]*>.*?</p>', '', content, flags=re.DOTALL)
 
-            # Remove unwanted tags and attributes
-            content = re.sub(r'<\?xml version="1.0" encoding="UTF-8"\?>', '', content, flags=re.DOTALL)
-            content = re.sub(r'<!DOCTYPE html[^>]*>', '', content)
-            content = re.sub(r'<head[^>]*>.*?</head>', '', content, flags=re.DOTALL)
-            content = re.sub(r'<html[^>]*>', '<html>', content)
-            content = re.sub(r'<body[^>]*>', '<body>', content)
-            content = re.sub(r'<div id="toolBar"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
-            content = re.sub(r'<div id="header"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
-            content = re.sub(r'<div id="act:currency"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
-            content = re.sub(r'<div id="contents"[^>]*>.*?</div>', '', content, flags=re.DOTALL)
-            content = re.sub(r'<p class="copyright"[^>]*>.*?</p>', '', content, flags=re.DOTALL)
-
-            with open(file_path, 'w', encoding='utf-8') as file:
-                file.write(content)
-            print(f'Tags cleaned in {filename}')
+                # Save cleaned content back to the same file
+                with open(file_path, 'w', encoding='utf-8') as file:
+                    file.write(content)
+                
+                print(f'Tags removed from {filename} in {root}')
 
 
 def final_prettify():
-    """Do a final prettification of the HTML files."""
+    """Do a final prettification of all HTML files in the root and subdirectories."""
     downloads_folder = os.path.join(BASE_PATH, HTML_DIR)
+    
+    for root, dirs, files in os.walk(downloads_folder):
+        for filename in files:
+            if filename.endswith(".html"):
+                file_path = os.path.join(root, filename)
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    content = file.read()
 
-    for filename in os.listdir(downloads_folder):
-        file_path = os.path.join(downloads_folder, filename)
-        if os.path.isfile(file_path) and file_path.endswith('.html'):
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
+                # Final prettification
+                formatter = HTMLFormatter(indent=3)
+                soup = BeautifulSoup(content, 'html.parser')
+                content = soup.prettify(formatter=formatter)
 
-            # Final prettify
-            formatter = HTMLFormatter(indent=3)
-            soup = BeautifulSoup(content, 'html.parser')
-            content = soup.prettify(formatter=formatter)
-
-            with open(file_path, 'w', encoding='utf-8') as file:
-                file.write(content)
-            print(f'Final prettification done for {filename}')
+                # Save prettified content back to the same file
+                with open(file_path, 'w', encoding='utf-8') as file:
+                    file.write(content)
+                
+                print(f'Final prettification done for {filename} in {root}')
 
 
 # ================================
 # Task Definitions
 # ================================
+
+handle_unicode_errors_task = PythonOperator(
+    task_id='handle_unicode_errors',
+    python_callable=handle_unicode_errors,
+    dag=dag,
+    retries=RETRY_CONFIG["retries"],
+    retry_delay=RETRY_CONFIG["retry_delay"],
+)
 
 prettify_html_task = PythonOperator(
     task_id='prettify_html',
@@ -163,5 +206,5 @@ final_prettify_task = PythonOperator(
 # Set Up Task Dependencies
 # ================================
 
-# Prettify -> Remove Tags -> Final Prettification
-prettify_html_task >> remove_unwanted_tags_task >> final_prettify_task
+# Fix Unicode errors -> Prettify -> Remove Tags -> Final Prettification
+handle_unicode_errors_task >> prettify_html_task >> remove_unwanted_tags_task >> final_prettify_task
