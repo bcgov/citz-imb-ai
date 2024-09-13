@@ -79,13 +79,11 @@
           <h2>RAG Pipeline</h2>
           <ul>
             <li class="fragment">Feed the query to sentence transformer</li>
-            <li class="fragment">
-              The output is fed to NEO4j (vector search)
-            </li>
+            <li class="fragment">The output is fed to NEO4j (vector search)</li>
             <li class="fragment">Top K results returned (Top 10)</li>
             <li class="fragment">Rerank the topK (optional)</li>
             <li class="fragment">
-              Create a prompt whihc includes Query stack + topk + latest query
+              Create a prompt which includes Query stack + topk + latest query
             </li>
             <li class="fragment">Feed to gen A.I</li>
             <li class="fragment">Get the response</li>
@@ -163,11 +161,33 @@
           </section>
         </section>
         <section>
-          <h2>MLOps and Airflow</h2>
-          <p>
-            All our jupyter notebook scripts are converted and orchestrated
-            using Airflow
-          </p>
+          <section>
+            <h2>MLOps and Airflow</h2>
+            <p>
+              All our jupyter notebook scripts are converted and orchestrated
+              using Airflow
+            </p>
+          </section>
+          <section>
+            <h2>Airflow Dags</h2>
+            <p class="fragment">
+              An airflwo DAG == Automated maintainable jupyter notebook
+            </p>
+            <img
+              class="fragment"
+              style="transform: scale(120%)"
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_dags.jpg"
+            />
+          </section>
+          <section>
+            <h2>Tasks</h2>
+            <p class="fragment">A task is a unit of work in a DAG.</p>
+            <img
+              class="fragment"
+              style="transform: scale(120%)"
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_task.jpg"
+            />
+          </section>
         </section>
         <section>
           <h2>Analytics</h2>
@@ -177,10 +197,43 @@
           </ul>
         </section>
         <section>
-          <img
-            style="transform: scale(130%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/active_learning.jpg"
-          />
+          <section>
+            <img
+              style="transform: scale(130%)"
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/active_learning.jpg"
+            />
+          </section>
+          <section>
+            <h2>Human in the Loop</h2>
+            <p class="fragment">
+              To improve the A.I model we need to annotate and format the data
+              properly. After the data is annotated we can use it to train the
+              different models.
+            </p>
+          </section>
+          <section>
+            <h2>Embedding Adaptors</h2>
+            <p class="fragment">
+              If the top sources are not accurate we can retrain the embedding
+              model based on human feedback.
+            </p>
+            <img
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/embedding_adaptor_training.jpg"
+            />
+          </section>
+          <section>
+            <h2>Annotating the data (NER)</h2>
+            <p class="fragment">
+              For improving our retrieval and enhancing our result we are using
+              an A.I technique called NER (Named Entity Recognition) to annotate
+              the data. this is done by using a tool called Diffgram.
+            </p>
+          </section>
+          <section>
+            <img
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/diffgram_annotation.jpg"
+            />
+          </section>
         </section>
         <section>
           <h2>Challenges</h2>
