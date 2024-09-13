@@ -163,24 +163,23 @@
           </section>
         </section>
         <section>
-          <h2>MLOps and Airflow</h2>
-          <p>
-            All our jupyter notebook scripts are converted and orchestrated
-            using Airflow
-          </p>
+          <h4>MLOps and Airflow</h4>
+          <img style="width: 35%; height: auto;" src="/assets/analytics_tracking_diagram.png">
         </section>
         <section>
           <h2>Analytics Pipeline</h2>
           <ul>
+            <li class="fragment">All our jupyter notebook scripts are converted and orchestrated
+              using Airflow</li>
             <li class="fragment">Frontend analytics data</li>
             <li class="fragment">Backend RAG Chain tracking</li>
-            <li class="fragment">Airflow for orchestration</li>
+            <li class="fragment">Apache Airflow for orchestration</li>
             <li class="fragment">dbt for data transformation</li>
             <li class="fragment">Integration with active learning pipeline</li>
           </ul>
         </section>
         <section>
-          <h3>Frontend Analytics</h3>
+          <h2>Frontend Analytics</h2>
           <ul>
             <li class="fragment">Tracks user interactions and feedback</li>
             <li class="fragment">Data stored in PostgreSQL database</li>
@@ -188,6 +187,23 @@
             <li class="fragment">dbt models transform raw data into analytics-ready tables</li>
           </ul>
         </section>
+        <section>
+          <h2>Airflow Orchestration</h2>
+          <ul>
+            <li class="fragment">Retrieves secrets and creates necessary schemas</li>
+            <li class="fragment">Loads JSON data into PostgreSQL</li>
+            <li class="fragment">Runs dbt for data transformation</li>
+            <li class="fragment">Includes error handling and cleanup steps</li>
+          </ul>
+        </section>
+        <section>
+          <p style="font-size: 24px">ETL (Extract-Transform-Load) process for frontend analytics orchestrated by Airflow</p>
+          <img
+            class="fragment"
+            src="/assets/airflow_frontend_analytics_dag.png"
+            style="width: 100%; height: auto;"
+          />
+          </section>
         <section>
           <h3>dbt Transformation</h3>
           <ul>
