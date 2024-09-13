@@ -165,42 +165,72 @@
           </section>
         </section>
         <section>
-          <section>
-            <h2>MLOps and Airflow</h2>
-            <p>
-              All our jupyter notebook scripts are converted and orchestrated
-              using Airflow
-            </p>
-          </section>
-          <section>
-            <h2>Airflow Dags</h2>
-            <p class="fragment">
-              An airflwo DAG == Automated maintainable jupyter notebook
-            </p>
-            <img
-              class="fragment"
-              style="transform: scale(120%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_dags.jpg"
-            />
-          </section>
-          <section>
-            <h2>Tasks</h2>
-            <p class="fragment">A task is a unit of work in a DAG.</p>
-            <img
-              class="fragment"
-              style="transform: scale(120%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_task.jpg"
-            />
-          </section>
-        </section>
-        <section>
-          <h2>Analytics</h2>
+          <h2>MLOps & Analytics</h2>
           <ul>
-            <li class="fragment">Frontend user tracking data</li>
+            <li class="fragment">Frontend analytics data</li>
             <li class="fragment">Backend RAG Chain tracking</li>
+            <li class="fragment">Apache Airflow for orchestration</li>
+            <li class="fragment">dbt for data transformation</li>
+            <li class="fragment">Integration with active learning pipeline</li>
           </ul>
         </section>
         <section>
+          <section>
+          <h2>Frontend Analytics</h2>
+          <ul>
+            <li class="fragment">Tracks user interactions and feedback</li>
+            <li class="fragment">Data stored in PostgreSQL database</li>
+            <li class="fragment">Airflow DAGs schedule data processing tasks</li>
+            <li class="fragment">dbt models transform raw data into analytics-ready tables</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Frontend Analytics Dashboard</h3>
+          <img
+            style="width: 65%; height: auto;"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/superset_frontend_analytics.png"
+            alt="Frontend Analytics Dashboard"
+          />
+        </section>
+        </section>
+        <section>
+          <h2>dbt Transformation</h2>
+          <ul>
+            <li class="fragment">Normalizes raw frontend data</li>
+            <li class="fragment">Combines frontend data with backend RAG chain data</li>
+            <li class="fragment">Creates views and tables for efficient querying</li>
+            <li class="fragment">Enables data quality tests and documentation</li>
+          </ul>
+        </section>
+        <section>
+        <section>
+          <h2>Airflow Orchestration</h2>
+          <ul>
+            <li class="fragment">Retrieves secrets and creates necessary schemas</li>
+            <li class="fragment">Loads JSON data into PostgreSQL</li>
+            <li class="fragment">Runs dbt for data transformation</li>
+            <li class="fragment">Includes error handling and cleanup steps</li>
+          </ul>
+        </section>
+        <section>
+          <p style="font-size: 24px">ETL (Extract-Transform-Load) process for frontend analytics orchestrated by Airflow</p>
+          <img
+            class="fragment"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_frontend_analytics_dag.png"
+            style="width: 100%; height: auto;"
+          />
+          </section>
+        </section>
+        <section>
+          <section>
+          <h3>Active Learning Integration</h3>
+          <ul>
+            <li class="fragment">Analytics data feeds into active learning pipeline</li>
+            <li class="fragment">Helps identify areas for model improvement</li>
+            <li class="fragment">Informs data selection for model fine-tuning</li>
+            <li class="fragment">Enables continuous improvement of the AI system</li>
+          </ul>
+        </section>
           <section>
             <img
               style="transform: scale(130%)"
@@ -222,11 +252,11 @@
               model based on human feedback.
             </p>
           </section>
-          <setion>
+          <section>
             <img
               src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/embedding_adaptor_training.jpg"
             />
-          </setion>
+          </section>
           <section>
             <h2>Annotating the data (NER)</h2>
             <p class="fragment">
