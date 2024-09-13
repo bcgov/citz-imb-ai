@@ -195,6 +195,7 @@ services:
     container_name: citz-imb-ai-neo4j-svc
     image: neo4j:latest
     restart: unless-stopped
+    platform: linux/amd64
     environment:
       - USERNAME=${NEO4J_USERNAME:-neo4j}
       - PASSWORD=${NEO4J_PASSWORD:-12345678}
@@ -202,8 +203,10 @@ services:
       - NEO4J_AUTH=none
       - NEO4JLABS_PLUGINS=["apoc", "graph-data-science"]
       - NEO4J_PLUGINS=["apoc", "graph-data-science"]
+      - NEO4J_DEBUG=yes
     volumes:
       - neo4j:/var/lib/neo4j/data
+      - neo4j-plugins:/var/lib/neo4j/plugins
       - neo4j-backup:/var/lib/neo4j/backups
     ports:
       - "${NEO4J_PORT:-7474}:7474"
@@ -330,4 +333,5 @@ volumes:
   pgadmin_data:
   airflow_pgdata:
   airflow_logs:
+  neo4j-plugins:
 ########################### End Volumes Definition ##########################
