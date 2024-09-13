@@ -196,8 +196,6 @@
         <section>
           <h2>Analytics Pipeline</h2>
           <ul>
-            <li class="fragment">All our jupyter notebook scripts are converted and orchestrated
-              using Airflow</li>
             <li class="fragment">Frontend analytics data</li>
             <li class="fragment">Backend RAG Chain tracking</li>
             <li class="fragment">Apache Airflow for orchestration</li>
@@ -271,6 +269,15 @@
           />
           </section>
         <section>
+          <h2>Frontend Analytics</h2>
+          <ul>
+            <li class="fragment">Tracks user interactions and feedback</li>
+            <li class="fragment">Data stored in PostgreSQL database</li>
+            <li class="fragment">Airflow DAGs schedule data processing tasks</li>
+            <li class="fragment">dbt models transform raw data into analytics-ready tables</li>
+          </ul>
+        </section>
+        <section>
           <h3>dbt Transformation</h3>
           <ul>
             <li class="fragment">Normalizes raw frontend data</li>
@@ -280,6 +287,14 @@
           </ul>
         </section>
         <section>
+          <h3>Frontend Analytics Dashboard</h3>
+          <img
+            style="width: 65%; height: auto;"
+            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/superset_frontend_analytics.png"
+            alt="Frontend Analytics Dashboard"
+          />
+        </section>
+        <section>
           <h3>Active Learning Integration</h3>
           <ul>
             <li class="fragment">Analytics data feeds into active learning pipeline</li>
@@ -287,15 +302,6 @@
             <li class="fragment">Informs data selection for model fine-tuning</li>
             <li class="fragment">Enables continuous improvement of the AI system</li>
           </ul>
-        </section>
-        <section>
-          <h3>Frontend Analytics Dashboard</h3>
-          <img
-            style="width: 65%; height: auto;"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/superset_frontend_analytics.png"
-            alt="Frontend Analytics Dashboard"
-          />
-          <p>Visualized using Apache Superset</p>
         </section>
         <section>
           <img
