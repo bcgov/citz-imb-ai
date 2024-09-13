@@ -76,6 +76,23 @@
           />
         </section>
         <section>
+          <h2>RAG Pipeline</h2>
+          <ul>
+            <li class="fragment">Feed the query to sentence transformer</li>
+            <li class="fragment">
+              The output is fed to NEO4j (vector search)
+            </li>
+            <li class="fragment">Top K results returned (Top 10)</li>
+            <li class="fragment">Rerank the topK (optional)</li>
+            <li class="fragment">
+              Create a prompt whihc includes Query stack + topk + latest query
+            </li>
+            <li class="fragment">Feed to gen A.I</li>
+            <li class="fragment">Get the response</li>
+            <li class="fragment">Return the response to query</li>
+          </ul>
+        </section>
+        <section>
           <img
             style="transform: scale(120%)"
             src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/tech_stack.jpg"
@@ -109,7 +126,7 @@
           </section>
           <section>
             <h2>Graph Database and vector store</h2>
-            <table style="font-size: 18px;">
+            <table style="font-size: 18px">
               <thead>
                 <tr>
                   <th>Data storage</th>
@@ -120,13 +137,22 @@
               <tbody>
                 <tr>
                   <td>We use a graph database to store the data.</td>
-                  <td>Neo4J is leveraged for both the graph database and the vector store.</td>
-                  <td>Neo4J enables advanced queries, such as clustering the data and finding communities.</td>
+                  <td>
+                    Neo4J is leveraged for both the graph database and the
+                    vector store.
+                  </td>
+                  <td>
+                    Neo4J enables advanced queries, such as clustering the data
+                    and finding communities.
+                  </td>
                 </tr>
                 <tr>
                   <td>Vector store is utilized for storing embeddings.</td>
                   <td></td>
-                  <td>These tasks are more efficient and easier to implement using a graph database.</td>
+                  <td>
+                    These tasks are more efficient and easier to implement using
+                    a graph database.
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -159,15 +185,15 @@
         <section>
           <h2>Challenges</h2>
           <ul>
-            <li class="fragment">Getting this running in openshift</li>
-            <li class="fragment">Getting the data to train the A.I</li>
-            <li class="fragment">Training the A.I requires A LOT of data</li>
             <li class="fragment">
-              A lot of knowledge is required to train and work with A.I
+              Getting this running in openshift and public cloud
             </li>
             <li class="fragment">
-              Having a good understanding of the data, the A.I alogirthm and
-              performance compute is key
+              Not enough full time developers working on the project
+            </li>
+            <li class="fragment">
+              Having a good understanding of the data, the A.I algorithms, A.I
+              workflows and performance compute is key
             </li>
           </ul>
         </section>
@@ -175,8 +201,12 @@
           <h2>Q&A</h2>
           <p>Questions?</p>
           <p>
-            All of our presentation and diagrams can be found in our github
-            repository.
+            All of our presentation and diagrams can be found in our
+            <a
+              href="https://ai-feedback-b875cc-dev.apps.silver.devops.gov.bc.ca/presentation/index.html"
+            >
+              github repository.
+            </a>
           </p>
         </section>
       </div>
