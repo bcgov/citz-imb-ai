@@ -78,16 +78,14 @@
         <section>
           <h2>RAG Pipeline</h2>
           <ul>
-            <li class="fragment">Feed the query to sentence transformer</li>
-            <li class="fragment">The output is fed to NEO4j (vector search)</li>
-            <li class="fragment">Top K results returned (Top 10)</li>
-            <li class="fragment">Rerank the topK (optional)</li>
-            <li class="fragment">
-              Create a prompt which includes Query stack + topk + latest query
-            </li>
-            <li class="fragment">Feed to gen A.I</li>
-            <li class="fragment">Get the response</li>
-            <li class="fragment">Return the response to query</li>
+            <li class="fragment">Feed query to sentence transformer</li>
+            <li class="fragment">Search the vector in Neo4j (vector search)</li>
+            <li class="fragment">Capture Top 10 results based on similarity</li>
+            <li class="fragment">Optional: Re-rank results with cross-encoder</li>
+            <li class="fragment">Generate prompt (query stack + Top K + current query)</li>
+            <li class="fragment">Feed prompt to generative AI</li>
+            <li class="fragment">Receive AI-generated response</li>
+            <li class="fragment">Return response to user</li>          
           </ul>
         </section>
         <section>
