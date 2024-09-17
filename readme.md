@@ -70,6 +70,12 @@ To navigate all the work done in the project, please refer to the table below:
             <td colspan="10" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/examples">Examples</a></td>
         </tr>
         <tr>
+            <th colspan="10">Presentations</th>
+        </tr>
+        <tr>
+            <td colspan="10" align="center"><a href="https://ai-feedback-b875cc-dev.apps.silver.devops.gov.bc.ca/presentation/">Technical Presentation</a></td>
+        </tr>
+        <tr>
             <th colspan="10"> Web Interface (frontend and backend) </th>
         </tr>
         <tr>
