@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>A.I Blueprint</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        text-align: center;
+        animation: slideIn 1s ease-in-out;
+        font-weight: bold;
+      }
+      .heading h1 {
+        font-size: 7rem;
+        line-height: 110%;
+        font-weight: 400;
+        letter-spacing: -0.1rem;
+        margin: 0;
+        transition: 0.4s;
+        animation: slideIn 1.2s ease-in-out;
+        font-weight: bold;
+      }
+      .heading h1 span {
+        background: linear-gradient(60deg, #3e82ff, #295fff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-auto-animate>
+          <div class="heading">
+            <h1>The <span>Blueprint</span></h1>
+          </div>
+          <h3>building safe A.I</h3>
+        </section>
+        <section>
+          <h2>Overview</h2>
+          <p>
+            The purpose of this blueprint is to provide a repeatable process
+            that can be used to build safe A.I.
+          </p>
+        </section>
+        <section>
+          <h2>Who is this for?</h2>
+          Project owners, developers, and stakeholders who are looking to build
+          safe A.I. or integrate A.I. into their existing systems.
+        </section>
+        <section>
+          <h2>What we will cover</h2>
+          <ul>
+            <li class="fragment">Business strategy</li>
+            <li class="fragment">Team structure and role</li>
+            <li class="fragment">Technology</li>
+            <li class="fragment">System requirements</li>
+            <li class="fragment">Risk management</li>
+            <li class="fragment">Roadmap and Timeline</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Business Strategy</h2>
+            <ul>
+              <li class="fragment">Value Proposition</li>
+              <li class="fragment">Cost Estimation</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Finding Value in A.I</h3>
+            <table style="font-size: 32px">
+              <tr>
+                <th>Use Case</th>
+                <th>Value</th>
+              </tr>
+              <tr class="fragment">
+                <td>Reduce manual effort</td>
+                <td>
+                  Enhance operational efficiency and free up human resources
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>Automate a process</td>
+                <td>
+                  Improve customer experience by increasing speed and accuracy
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>Improve decision-making</td>
+                <td>
+                  Provide data-driven insights to enhance accuracy in business
+                  choices
+                </td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h3>Considerations for Building or Using A.I</h3>
+            <table style="font-size: 28px">
+              <tr>
+                <th>Scenario</th>
+                <th>Recommendation</th>
+              </tr>
+              <tr class="fragment">
+                <td>Cost-effectiveness and speed are priorities</td>
+                <td>
+                  Use an off-the-shelf solution for faster implementation and
+                  lower cost
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>Data is highly sensitive or unique</td>
+                <td>
+                  Build a custom A.I solution tailored to your specific data
+                  security and use case needs
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>Not sure if A.I is the right solution</td>
+                <td>
+                  A.I is not always ideal; assess whether it provides
+                  substantial improvements in the specific context
+                </td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h3>Operational Cost</h3>
+            <table style="font-size: 28px">
+              <tr>
+                <th>Cost Type</th>
+                <th>Description</th>
+              </tr>
+              <tr class="fragment">
+                <td>Development Costs</td>
+                <td>
+                  Upfront costs such as data acquisition, hiring AI engineers,
+                  infrastructure (cloud services, servers), software licenses,
+                  and integration of Human-in-the-Loop (HITL) systems.
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>Operational Costs</td>
+                <td>
+                  Ongoing costs including cloud computing power, storage, human
+                  expert involvement, data updates, and model re-training.
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>Monitoring and Maintenance</td>
+                <td>
+                  Costs related to system audits, human review, system
+                  refinement, and maintaining compliance.
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>Scalability</td>
+                <td>
+                  Cost structure for scaling up, which includes handling
+                  increased data, higher AI model complexity, and greater human
+                  oversight.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Team Structure for a custom solution</h2>
+            <ul style="font-size: 28px">
+              <li class="fragment">
+                <b>AI Engineers and Data Scientists:</b> For building and improving the
+                AI models.
+              </li>
+              <li class="fragment">
+                <b>Data Engineers:</b> For managing the data pipelines, cleaning data,
+                and ensuring quality input to the AI models.
+              </li>
+              <li class="fragment">
+                <b>Machine Learning Operations (MLOps):</b> To automate model updates,
+                version control, and scaling.
+              </li>
+              <li class="fragment">
+                <b>Human Experts/Domain Specialists:</b> Who provide input into AI
+                training, monitor outputs and performance for continuous improvement.
+              </li>
+              <li class="fragment">
+                <b>UX/UI Designers:</b> To create interfaces that allow non-technical
+                users to understand AI decisions and inputs.
+              </li>
+              <li class="fragment">
+                <b>Product Managers:</b> Oversee system functionality and interaction with clients, ensuring the AI stays aligned with user needs.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+            <h2>Technical Overview</h2>
+            <ul>
+                <li class="fragment">
+                    Start with using a RAG (Retrieval Augmented Generation) model for your AI system.
+                </li>
+                <li class="fragment">
+                    Index your data using a suitable vector database
+                </li>
+                <li class="fragment">
+                    Handy to use Object storage or similar for storing large data
+                </li>
+                <li class="fragment">
+                    Use analytics tools to monitor, track and improve your AI system
+                </li>
+                <li class="fragment">
+                    Have an MLOops to stramline the workflow for Scalability
+                </li>
+                    <li class="fragment">
+
+                    </li>
+            </ul>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
