@@ -60,7 +60,8 @@
           <h2>Overview</h2>
           <p>
             The purpose of this blueprint is to provide a repeatable process
-            that can be used to build safe A.I.
+            that can be used to build safe A.I. using B.C gov on-premises
+            servers.
           </p>
         </section>
         <section>
@@ -190,54 +191,208 @@
             <h2>Team Structure for a custom solution</h2>
             <ul style="font-size: 28px">
               <li class="fragment">
-                <b>AI Engineers and Data Scientists:</b> For building and improving the
-                AI models.
+                <b>AI Engineers and Data Scientists:</b> For building and
+                improving the AI models.
               </li>
               <li class="fragment">
-                <b>Data Engineers:</b> For managing the data pipelines, cleaning data,
-                and ensuring quality input to the AI models.
+                <b>Data Engineers:</b> For managing the data pipelines, cleaning
+                data, and ensuring quality input to the AI models.
               </li>
               <li class="fragment">
-                <b>Machine Learning Operations (MLOps):</b> To automate model updates,
-                version control, and scaling.
+                <b>Openshift / Kubernetes Admins:</b> For managing the
+                on-premises servers and ensuring the AI system is running
+                smoothly.
               </li>
               <li class="fragment">
-                <b>Human Experts/Domain Specialists:</b> Who provide input into AI
-                training, monitor outputs and performance for continuous improvement.
+                <b>Machine Learning Operations (MLOps):</b> To automate model
+                updates, version control, and scaling.
               </li>
               <li class="fragment">
-                <b>UX/UI Designers:</b> To create interfaces that allow non-technical
-                users to understand AI decisions and inputs.
+                <b>Human Experts/Domain Specialists:</b> Who provide input into
+                AI training, monitor outputs and performance for continuous
+                improvement.
               </li>
               <li class="fragment">
-                <b>Product Managers:</b> Oversee system functionality and interaction with clients, ensuring the AI stays aligned with user needs.
+                <b>UX/UI Designers:</b> To create interfaces that allow
+                non-technical users to understand AI decisions and inputs.
+              </li>
+              <li class="fragment">
+                <b>Product Managers:</b> Oversee system functionality and
+                interaction with clients, ensuring the AI stays aligned with
+                user needs.
               </li>
             </ul>
           </section>
         </section>
         <section>
-            <h2>Technical Overview</h2>
-            <ul>
-                <li class="fragment">
-                    Start with using a RAG (Retrieval Augmented Generation) model for your AI system.
-                </li>
-                <li class="fragment">
-                    Index your data using a suitable vector database
-                </li>
-                <li class="fragment">
-                    Handy to use Object storage or similar for storing large data
-                </li>
-                <li class="fragment">
-                    Use analytics tools to monitor, track and improve your AI system
-                </li>
-                <li class="fragment">
-                    Have an MLOops to stramline the workflow for Scalability
-                </li>
-                    <li class="fragment">
-
-                    </li>
+          <h2>Technical Overview</h2>
+          <ul style="font-size: 28px">
+            <li class="fragment">
+              Start with using a
+              <b>RAG (Retrieval Augmented Generation)</b> model for your AI
+              system.
+            </li>
+            <li class="fragment">
+              Index your data using a suitable <b>vector database</b>
+            </li>
+            <li class="fragment">
+              Handy to use <b>Object storage</b> or similar for storing large
+              data
+            </li>
+            <li class="fragment">
+              <b>Use analytics tools</b> to monitor, track and improve your AI
+              system
+            </li>
+            <li class="fragment">
+              Implement MLOps to streamline the A.I workflow for better
+              orchestration of your AI system
+            </li>
+            <li class="fragment">
+              <b>Traceability and Auditing Mechanism</b>
+              Design a system that logs every decision made by the AI, linking
+              it to the original source (documents, data points).
+            </li>
+            <li class="fragment">
+              <b>Active Learning</b>
+              Implement active learning to improve the AI model over time. This
+              involves using human feedback to correct and refine the AI's
+              decisions.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>System Requirements</h2>
+          <ul style="font-size: 24px">
+            <li class="fragment">
+              <b>Data Management System:</b>A robust database structure for
+              storing, updating, and processing the data the AI requires. Ensure
+              traceability is built into the database itself (e.g., versioned
+              data, references to original sources).
+            </li>
+            <li class="fragment">
+              <b>Human Interaction System:</b>
+              A web-based or software-based interface that allows easy
+              interaction between the AI system and human experts. Include a
+              platform for feedback, review, and approval of AI decisions.
+            </li>
+            <li class="fragment">
+              <b>Cloud/Open-Shift Infrastructure:</b>
+              Cloud-based systems may be best for speed and perhaps scalability,
+              while highly sensitive data, cost savings and having full control
+              over the A.I pipeline could require using on-premises servers.
+            </li>
+            <li class="fragment">
+              <b>Security and Compliance:</b>
+              Ensure adherence to data security standards and that both AI and
+              human components maintain audit logs for all actions.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Process for Continous improvement</h2>
+          <ul style="font-size: 24px">
+            <li class="fragment">
+              <b>Feedback Loop:</b> Create a clear feedback mechanism where
+              human experts can input their insights on why a decision was right
+              or wrong. Design a process for systematically collecting this
+              feedback to refine the AI model. Ensure there is a version control
+              system in place to track changes over time in AI logic and human
+              interventions.
+            </li>
+            <li class="fragment">
+              <b>Model Retraining:</b>
+              Schedule regular model retraining, leveraging human input for
+              correction and updating datasets to ensure the AI stays relevant
+              and accurate.
+            </li>
+            <li class="fragment">
+              <b>Performance Audits:</b>
+              Regular audits to compare AI decisions with human outcomes. This
+              helps refine the HITL balance and ensures continuous learning.
+            </li>
+            <li class="fragment">
+              <b>Tooling for Traceability:</b>
+              Implement tools to track AI performance, including accuracy
+              metrics, data sources, and links to human interventions.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Risk Management</h2>
+          <ul style="font-size: 32px">
+            <li class="fragment">
+              <b>Bias and Fairness:</b>
+              Highlight potential risks of bias in AI models and the role humans
+              play in ensuring fair, unbiased outcomes.
+            </li>
+            <li class="fragment">
+              <b>Data Privacy:</b>
+              Ensure all data used is compliant with local regulations, and
+              human oversight guarantees sensitive decisions are not fully
+              automated.
+            </li>
+            <li class="fragment">
+              <b>Ethics and Accountability:</b>
+              Define accountability, ensuring that there is a clear process for
+              investigating and addressing erroneous AI decisions, with human
+              experts taking final responsibility.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Roadmap for Implementation</h2>
+            <ul style="font-size: 36px">
+              <li class="fragment">
+                <ul>
+                  <h3>Short-Term (0-6 months):</h3>
+                  <li class="fragment">
+                    <b>Index</b> your data and set up a basic RAG pipeline
+                  </li>
+                  <li class="fragment">
+                    Setup <b>tracking</b> to track the performance of the AI system
+                  </li>
+                  <li class="fragment">
+                    Develop <b>user interfaces</b> for human interaction and audit
+                    tracking.
+                  </li>
+                  <li class="fragment">
+                    <b>Deploy</b> the system on on-premises servers
+                  </li>
+                  <li class="fragment">
+                    Incorporate <b>MLOps</b> to automate the RAG pipeline, retrieve
+                    analytics and other orchestration tasks.
+                  </li>
+                </ul>
+              </li>
             </ul>
-
+          </section>
+          <section>
+            <ul style="font-size: 36px">
+              <li class="fragment">
+                <ul>
+                  <h3>Medium-Term (6-12 months):</h3>
+                  <li class="fragment">
+                    Implement <b>active</b> learning to improve the AI model over time
+                  </li>
+                  <li class="fragment">
+                    Setup <b>annotation tools</b> for human feedback to correct and 
+                    refine the AI's decisions
+                  </li>
+                  <li class="fragment">
+                    Schedule regular model <b>retraining</b> and performance audits
+                  </li>
+                  <li class="fragment">
+                    Implement <b>High performance</b> computing for faster processing for both
+                    training and inference of the AI model
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Questions</h2>
         </section>
       </div>
     </div>
