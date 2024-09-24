@@ -127,7 +127,7 @@
                 <td>Cost-effectiveness and speed are priorities</td>
                 <td>
                   Use an off-the-shelf solution for faster implementation and
-                  lower cost
+                  lower cost (data privacy is not a concern)
                 </td>
               </tr>
               <tr class="fragment">
@@ -191,21 +191,20 @@
             <h2>Team Structure for a custom solution</h2>
             <ul style="font-size: 28px">
               <li class="fragment">
-                <b>AI Engineers and Data Scientists:</b> For building and
-                improving the AI models.
+                <b>AI Engineers, MLOps, Data Scientists:</b> For building and
+                improving the AI models, managing the data pipelines, cleaning
+                data, and ensuring quality input to the AI models, modelling
+                performance.
               </li>
               <li class="fragment">
-                <b>Data Engineers:</b> For managing the data pipelines, cleaning
-                data, and ensuring quality input to the AI models.
+                <b>Performance Engineers</b> Optimize data pre-processing, model
+                training and inference for better performance for a givem
+                hardware (CPU).
               </li>
               <li class="fragment">
                 <b>Openshift / Kubernetes Admins:</b> For managing the
                 on-premises servers and ensuring the AI system is running
                 smoothly.
-              </li>
-              <li class="fragment">
-                <b>Machine Learning Operations (MLOps):</b> To automate model
-                updates, version control, and scaling.
               </li>
               <li class="fragment">
                 <b>Human Experts/Domain Specialists:</b> Who provide input into
@@ -350,18 +349,19 @@
                     <b>Index</b> your data and set up a basic RAG pipeline
                   </li>
                   <li class="fragment">
-                    Setup <b>tracking</b> to track the performance of the AI system
+                    Setup <b>tracking</b> to track the performance of the AI
+                    system
                   </li>
                   <li class="fragment">
-                    Develop <b>user interfaces</b> for human interaction and audit
-                    tracking.
+                    Develop <b>user interfaces</b> for human interaction and
+                    audit tracking.
                   </li>
                   <li class="fragment">
                     <b>Deploy</b> the system on on-premises servers
                   </li>
                   <li class="fragment">
-                    Incorporate <b>MLOps</b> to automate the RAG pipeline, retrieve
-                    analytics and other orchestration tasks.
+                    Incorporate <b>MLOps</b> to automate the RAG pipeline,
+                    retrieve analytics and other orchestration tasks.
                   </li>
                 </ul>
               </li>
@@ -373,18 +373,20 @@
                 <ul>
                   <h3>Medium-Term (6-12 months):</h3>
                   <li class="fragment">
-                    Implement <b>active</b> learning to improve the AI model over time
+                    Implement <b>active</b> learning to improve the AI model
+                    over time
                   </li>
                   <li class="fragment">
-                    Setup <b>annotation tools</b> for human feedback to correct and 
-                    refine the AI's decisions
+                    Setup <b>annotation tools</b> for human feedback to correct
+                    and refine the AI's decisions
                   </li>
                   <li class="fragment">
-                    Schedule regular model <b>retraining</b> and performance audits
+                    Schedule regular model <b>retraining</b> and performance
+                    audits
                   </li>
                   <li class="fragment">
-                    Implement <b>High performance</b> computing for faster processing for both
-                    training and inference of the AI model
+                    Implement <b>High performance</b> computing for faster
+                    processing for both training and inference of the AI model
                   </li>
                 </ul>
               </li>
@@ -392,7 +394,64 @@
           </section>
         </section>
         <section>
+          <h2>Our core strength / Service Offerings</h2>
+          <ul style="font-size: 24px">
+            <li class="fragment">
+              <b>Analyzing your data for graph like properties:</b> Ability to
+              help automate search and retrieval of information from your data
+              and summarize it in a human-readable format. E.g Laws, policies,
+              legal documents, contracts etc
+            </li>
+            <li class="fragment">
+              <b>Human in the loop - Active Learning:</b> If your A.I system is
+              making decisions that are critical, we can help you setup a human
+              in the loop system to ensure that the decisions are accurate and
+              fair. We can also help you setup an active learning system to
+              improve the AI model over time.
+            </li>
+            <li class="fragment">
+              <b>On premise servers:</b> We can help you setup your A.I system
+              on on-premises servers to ensure that your data is not leaked
+              to the cloud.
+            </li>
+            <li class="fragment">
+              <b>Gen A.I setup on cloud:</b> If you are looking for a quick and
+              cost-effective solution, we can help you setup a Gen A.I model on
+              the cloud (Amazon /Azure). (Note: This is not recommended for
+              highly sensitive data)
+            </li>
+          </ul>
+        </section>
+        <section>
           <h2>Questions</h2>
+        </section>
+        <section>
+          <h2>Appendix</h2>
+          <ul>
+            <li class="fragment">
+              <b>Tools and libraries used</b>
+              <ul style="font-size:24px;">
+                <li class="fragment">
+                  Intel Extension for Pytorch - For building and training the
+                  RAG model 
+                  <br><a href="https://github.com/intel/intel-extension-for-pytorch">
+                    Intel Extension for Pytorch
+                  </a>
+                  <br><a href="xFasterTransformer">
+                    https://github.com/intel/xFasterTransformer
+                  </a>
+                </li>
+                <li class="fragment">
+                  Neo4J - For indexing the data and building a graph database
+                  (knowledge graph)
+                </li>
+                <li class="fragment"><b>Object Storage:</b>Amazon S3</li>
+                <li class="fragment">
+                  <b>Other Tools:</b> DBT, Airflow, superset, diffgram etc
+                </li>
+              </ul>
+            </li>
+          </ul>
         </section>
       </div>
     </div>
