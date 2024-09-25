@@ -181,12 +181,12 @@ remove_blank_lines_task = PythonOperator(
     retry_delay=RETRY_CONFIG["retry_delay"],
 )
 
-# Trigger the S3 upload DAG after transformations finish
-trigger_s3_upload = TriggerDagRunOperator(
-    task_id='trigger_upload_to_s3',
-    trigger_dag_id='upload_data_to_s3_dag',  # Name of the DAG to trigger
-    wait_for_completion=False,               # Do not wait for the upload DAG to complete
-    trigger_rule='all_success',              # Trigger S3 upload only if the scraper succeeds completely
+# Task: Trigger image scraper DAG
+trigger_image_scraper_dag = TriggerDagRunOperator(
+    task_id='trigger_image_scraper_dag',
+    trigger_dag_id='bclaws_image_scraper_dag',
+    wait_for_completion=False,
+    trigger_rule='all_success',
     dag=dag
 )
 
@@ -195,4 +195,4 @@ trigger_s3_upload = TriggerDagRunOperator(
 # ================================
 
 # Clean Text Folder -> Convert HTML to Text -> Remove Blank Lines -> Trigger S3 Upload
-clean_txt_folder_task >> convert_html_to_text_task >> remove_blank_lines_task >> trigger_s3_upload
+clean_txt_folder_task >> convert_html_to_text_task >> remove_blank_lines_task >> trigger_image_scraper_dag
