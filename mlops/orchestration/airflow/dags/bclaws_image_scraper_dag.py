@@ -136,9 +136,13 @@ def filter_high_quality_images(image_urls):
 def scrape_images_from_xml(xml_file_path):
     """
     Gather and scrape images from an XML while skipping low-quality versions.
+    Organize images to reflect the XML file structure.
     """
+    # Get the relative path of the XML file
     xml_relative_path = os.path.relpath(xml_file_path, start=os.path.join(BASE_PATH, XML_DIR))
-    image_save_folder = os.path.join(BASE_PATH, IMAGE_DIR, os.path.dirname(xml_relative_path))
+    
+    # Create a corresponding folder for images, maintaining the XML structure
+    image_save_folder = os.path.join(BASE_PATH, IMAGE_DIR, os.path.splitext(xml_relative_path)[0])
     create_folder_if_not_exists(image_save_folder)
 
     # First, gather all image URLs
