@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.models import Variable
 from datetime import datetime, timedelta
 from tenacity import retry, stop_after_attempt, wait_exponential
@@ -198,3 +199,19 @@ scrape_images_task = PythonOperator(
     python_callable=run_image_scraper,
     dag=dag,
 )
+
+# Task 2: Trigger the S3 upload DAG after transformations finish
+trigger_s3_upload = TriggerDagRunOperator(
+    task_id='trigger_upload_to_s3',
+    trigger_dag_id='upload_data_to_s3_dag',  # Name of the DAG to trigger
+    wait_for_completion=False,               # Do not wait for the upload DAG to complete
+    trigger_rule='all_success',              # Trigger S3 upload only if the scraper succeeds completely
+    dag=dag
+)
+
+# ================================
+# Set Up Task Dependencies
+# ================================
+
+# Scrape Images -> Trigger S3 Upload
+scrape_images_task >> trigger_s3_upload
