@@ -33,7 +33,7 @@ IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg']
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2024, 9, 11),
+    'start_date': datetime(2024, 9, 24),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -78,16 +78,32 @@ def download_image(url, save_path):
         print(f"Error downloading {url}: {e}")
         return False
 
+def should_remove_by_prefix(filename):
+    """
+    Check if the filename begins with any of the specified prefixes.
+    """
+    prefixes_to_remove = [
+        'bcsigb', 'bracket', 'checkbox', 'parenthesis',
+        'parleft', 'parright', 'arrow_', 'brace'
+    ]
+    lowercase_filename = filename.lower()
+    return any(lowercase_filename.startswith(prefix) for prefix in prefixes_to_remove)
+
 def is_low_quality_version(url, all_urls):
     """
-    Identify low-quality image versions.
+    Identify low-quality image versions or images that should be removed.
     """
     filename = url.split('/')[-1]
     print(f"Checking quality of: {filename}")
     
-    # Check for "_sm_" pattern
-    if "_sm_" in filename:
-        base_filename = filename.replace("_sm_", "_lg_")
+    # Check if the filename begins with any of the specified prefixes
+    if should_remove_by_prefix(filename):
+        print(f"Removing due to prefix: {filename}")
+        return True
+    
+    # Check for "_sm_" or "_sm-" patterns
+    if "_sm_" in filename or "_sm-" in filename:
+        base_filename = filename.replace("_sm_", "_lg_").replace("_sm-", "_lg-")
         if any(base_filename in u for u in all_urls):
             print(f"Low-quality version detected (sm): {filename}")
             return True
