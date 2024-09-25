@@ -78,57 +78,82 @@ def download_image(url, save_path):
         print(f"Error downloading {url}: {e}")
         return False
 
-def is_low_quality_version(filename, all_filenames):
-    """Identify and skip low-quality images."""
-    low_quality_patterns = [
-        r"_sm_",  # pattern like "07043_sm_T_1_Watershed_Huu_RGB"
-        r"_\.",   # trailing underscore before the extension, e.g., "99002_appendix-a-1_.jpg"
-    ]
-
-    for pattern in low_quality_patterns:
-        if re.search(pattern, filename):
-            base_filename = re.sub(pattern, "", filename)
-            # In case of trailing underscore before extension, remove the last underscore for comparison
-            base_filename = re.sub(r"_\.", ".", base_filename)
-            if base_filename in all_filenames:
-                print(f"Low-quality version detected: {filename}, skipping in favor of {base_filename}")
-                return True
+def is_low_quality_version(url, all_urls):
+    """
+    Identify low-quality image versions.
+    """
+    filename = url.split('/')[-1]
+    print(f"Checking quality of: {filename}")
+    
+    # Check for "_sm_" pattern
+    if "_sm_" in filename:
+        base_filename = filename.replace("_sm_", "_lg_")
+        if any(base_filename in u for u in all_urls):
+            print(f"Low-quality version detected (sm): {filename}")
+            return True
+    
+    # Check for trailing underscore before extension
+    if re.search(r"_\.[^.]+$", filename):
+        base_filename = re.sub(r"_(\.[^.]+)$", r"\1", filename)
+        if any(base_filename in u for u in all_urls):
+            print(f"Low-quality version detected (underscore): {filename}")
+            return True
+    
+    print(f"High-quality version: {filename}")
     return False
 
+def filter_high_quality_images(image_urls):
+    """
+    Filter out low-quality versions of images.
+    """
+    high_quality_images = []
+    for url in image_urls:
+        if not is_low_quality_version(url, image_urls):
+            high_quality_images.append(url)
+            print(f"Keeping high-quality image: {url}")
+        else:
+            print(f"Filtering out low-quality image: {url}")
+    print(f"Total images: {len(image_urls)}, High-quality images: {len(high_quality_images)}")
+    return high_quality_images
+
 def scrape_images_from_xml(xml_file_path):
-    """Scrape images from XML and skip low-quality versions."""
+    """
+    Gather and scrape images from an XML while skipping low-quality versions.
+    """
     xml_relative_path = os.path.relpath(xml_file_path, start=os.path.join(BASE_PATH, XML_DIR))
     image_save_folder = os.path.join(BASE_PATH, IMAGE_DIR, os.path.dirname(xml_relative_path))
-
     create_folder_if_not_exists(image_save_folder)
 
-    all_image_filenames = []
+    # First, gather all image URLs
+    image_urls = []
 
     with open(xml_file_path, 'r', encoding='utf-8') as xml_file:
         tree = etree.parse(xml_file)
         root = tree.getroot()
 
-        # Collect all filenames
+        # Collect all image URLs that match known image extensions and locations
         for element in root.iter():
             href = element.get('href')
             if href and any(href.lower().endswith(ext) for ext in IMAGE_EXTENSIONS):
                 if "/statreg/" in href:
                     image_name = href.split('/statreg/')[-1]
-                    all_image_filenames.append(image_name)
-
-        # Download images while skipping low-quality versions
-        for element in root.iter():
-            href = element.get('href')
-            if href and any(href.lower().endswith(ext) for ext in IMAGE_EXTENSIONS):
-                if "/statreg/" in href:
-                    image_name = href.split('/statreg/')[-1]
-
-                    if is_low_quality_version(image_name, all_image_filenames):
-                        continue
-
                     image_url = BASE_URL + image_name
-                    save_path = os.path.join(image_save_folder, image_name)
-                    download_image(image_url, save_path)
+                    image_urls.append(image_url)
+
+    print(f"Found {len(image_urls)} total image URLs in {xml_file_path}")
+
+    # Filter out low-quality images before downloading
+    high_quality_images = filter_high_quality_images(image_urls)
+
+    print(f"Filtered to {len(high_quality_images)} high-quality images")
+
+    # Download only high-quality images
+    for image_url in high_quality_images:
+        filename = image_url.split('/')[-1]
+        save_path = os.path.join(image_save_folder, filename)
+        download_image(image_url, save_path)
+
+    print(f"Processed {xml_file_path}: Found {len(image_urls)} images, downloaded {len(high_quality_images)} high-quality images.")
 
 def list_xml_files(xml_folder):
     """List all XML files in a directory."""
@@ -157,4 +182,3 @@ scrape_images_task = PythonOperator(
     python_callable=run_image_scraper,
     dag=dag,
 )
-
