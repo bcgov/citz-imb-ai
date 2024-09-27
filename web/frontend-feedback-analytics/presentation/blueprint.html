@@ -392,10 +392,59 @@
               </li>
             </ul>
           </section>
+          <section>
+            <h3>Human in the loop - Improving A.I</h3>
+            <ol style="font-size:24px">
+              <li class="fragment">
+                <b>Type of training</b> To train an A.I it is important to know what
+                output you want your A.I to generate and accordingly prepare
+                your data. E.g. Instruction based, Question-Answer based,
+                Summary based, Name Entity Recognition, Embedding adaptors, etc (2-3 days)
+              </li>
+              <li class="fragment">
+                <b>Data Preparation</b> - Chunk your data into smaller pieces
+                that can be annotated by human experts. Typical batch size can be 64.
+                Split the data into
+                training, validation and test sets. (2-3 days)
+                </li>
+                <li class="fragment">
+                <b>Schema:</b> - Define the schema of the data you want to
+                generate. E.g. If you are generating a summary, define the
+                structure of the summary. If you are doing NER, define the
+                entities you want to extract. (1 day)
+                </li>
+                <li class="fragment">
+                <b>Annotation</b> - Annotate the data with the output you want
+                the A.I to generate. 
+                Optional: Use an A.I to help with annotation 
+                Start with small batches of annotation and test the A.I instead 
+                of annotating all the data at once. (1 day for batch of 64 datasets, 2-4 weeks to annotate 1000+ datasets)
+              </li>
+                <li class="fragment">
+                <b>Training</b> - Train the A.I model on the annotated data (1 day)
+                </li>
+                <li class="fragment">
+                <b>Validation/ Testing</b> - Test and validate the model on the test/validation set
+                (1 - day)
+                </li>
+                <li class="fragment">
+                  <b>Retrain</b> - If the model is not performing well, retrain the model with more data
+                  (Repeat step 4)
+                </li>
+                <li class="fragment">
+                  <b>Deploy</b> - Deploy the model on the on-premises servers or cloud
+                  (1-4 day)
+                </li>
+                <li class="fragment">
+                  To automate the above steps and create a script and ML pipeline
+                  (2 - 4 weeks)
+                </li>
+            </ol>
+          </section>
         </section>
         <section>
           <h2>Our core strength / Service Offerings</h2>
-          <ul style="font-size: 24px">
+          <ul style="font-size:24px">
             <li class="fragment">
               <b>Analyzing your data for graph like properties:</b> Ability to
               help automate search and retrieval of information from your data
@@ -403,7 +452,10 @@
               legal documents, contracts etc
             </li>
             <li class="fragment">
-              <b>Human in the loop - Active Learning:</b> If your A.I system is
+              <b>Human in the loop</b> Human oversight at the service level to
+              ensure that the AI is making the right decisions. This can be
+              useful for critical decisions where the AI is not 100% accurate. 
+              <b>Active Learning:</b> If your A.I system is
               making decisions that are critical, we can help you setup a human
               in the loop system to ensure that the decisions are accurate and
               fair. We can also help you setup an active learning system to
