@@ -4,6 +4,7 @@ WITH raw_data AS (
         app_id,  
         input,
         output,
+        ts,
         record_json::json AS record_json
     FROM 
         {{ source('public', 'records') }}  -- Use dbt's source function
@@ -14,6 +15,7 @@ parsed_data AS (
     SELECT 
         record_id,
         input,
+        ts,
         record_json->'calls'->2->'rets' AS LLM_output,
         {{ unroll_json_to_columns('record_json', 10) }},  -- Replace static SQL with dynamic macro call
         record_json->>'record_id' AS json_record_id,  
@@ -25,8 +27,27 @@ parsed_data AS (
         {{ extract_performance('record_json', 4) }}  -- Replace static SQL with dynamic macro call
     FROM 
         raw_data
+),
+feedback_data AS (
+    SELECT 
+        record_id,
+        array_agg(result) AS result  -- Replace this with actual column names in feedbacks
+    FROM 
+        {{ source('public', 'feedbacks') }}  -- Join feedbacks table
+    GROUP BY 
+        record_id  -- Group by record_id to aggregate feedbacks
 )
 
 -- Final SELECT statement to retrieve data from the last CTE
-SELECT *
-FROM parsed_data
+-- SELECT *
+-- FROM parsed_data
+
+-- Final join to merge parsed_data with feedback_data based on record_id hash
+SELECT 
+    pd.*,
+    fb.result  -- Include feedback details
+FROM 
+    parsed_data pd
+LEFT JOIN 
+    feedback_data fb
+    ON pd.record_id = fb.record_id
