@@ -134,7 +134,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
           newArray += '<b>' + responseArray[i] + '</b>';
         }
       }
-      responseArray = newArray.split('*').join('</br>').split(' ');
+      responseArray = newArray.split('\n').join('</br>').split(' ');
 
       // Add AI message to state
       setMessages((prev) => [
