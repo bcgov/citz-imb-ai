@@ -180,17 +180,22 @@ def process_directory(url, depth=0, parent_path=""):
 
         doc_id = doc_id.text
         index_id = element.find('CIVIX_INDEX_ID').text
-        is_visible = element.find('CIVIX_DOCUMENT_VISIBLE').text if element.find('CIVIX_DOCUMENT_VISIBLE') else "true"
 
         if element.name == 'dir':
             next_url = f"{BASE_URL}{parent_path}/{doc_id}"
             process_directory(next_url, depth + 1, f"{parent_path}/{doc_id}")
         elif element.name == 'document':
-            if is_visible == "false":
-                doc_id += "_multi"
+            document_ext = element.find('CIVIX_DOCUMENT_EXT').text
+            
+            if document_ext == 'htm':
+                download_url = f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}_multi/xml"
+            elif document_ext == 'xml':
+                download_url = f"https://www.bclaws.gov.bc.ca/civix/document/id/complete/{index_id}/{doc_id}/xml"
+            else:
+                continue  # Skip if it's neither 'htm' nor 'xml'
+
             title = element.find('CIVIX_DOCUMENT_TITLE').text
             sanitized_title = get_sanitized_title(title)
-            download_url = construct_download_url(index_id, doc_id)
             filename = os.path.join(BASE_PATH, XML_DIR, f"{sanitized_title}.xml")
             download_xml(download_url, filename)
 
@@ -209,6 +214,12 @@ def move_files_to_folders():
     folder = os.path.join(BASE_PATH, XML_DIR)
     sorted_files = set()
 
+    # Delete INFO.xml if it exists
+    info_xml_path = os.path.join(folder, 'INFO.xml')
+    if os.path.exists(info_xml_path):
+        os.remove(info_xml_path)
+        print("Deleted INFO.xml file")
+
     for file_name in os.listdir(folder):
         file_path = os.path.join(folder, file_name)
 
@@ -221,19 +232,18 @@ def move_files_to_folders():
             
             ### Handle Repealed files (based on content) ###
             try:
-                tree = ET.parse(file_path)
-                root = tree.getroot()
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    content = file.read()
                 
-                # Check if the file contains "REPEALED BY B.C." in its content
-                if any(elem.text and "REPEALED BY B.C." in elem.text for elem in root.iter()):
+                if "REPEALED BY B.C." in content or "act:repealedtext" in content:
                     target_folder = os.path.join(folder, "Repealed")
                     create_folder_if_not_exists(target_folder)
                     shutil.move(file_path, os.path.join(target_folder, file_name))
                     print(f"Moved {file_name} to the Repealed folder.")
                     continue
             
-            except ET.ParseError:
-                print(f"Error parsing the XML file: {file_name}. Skipping...")
+            except Exception as e:
+                print(f"Error reading the file: {file_name}. Error: {e}. Skipping...")
                 continue
 
             ### General Sorting (Handle other files based on the filename pattern) ###
@@ -244,7 +254,6 @@ def move_files_to_folders():
             sorted_files.add(file_name)
     
     print("File sorting and special file handling completed.")
-
 def get_target_folder(file_name):
     folder = os.path.join(BASE_PATH, XML_DIR)  # Target folder is within XML_DIR now
     if "Edition_TLC" in file_name:
@@ -257,6 +266,8 @@ def get_target_folder(file_name):
         return os.path.join(folder, "Chapters")
     elif file_name.startswith("Part"):
         return os.path.join(folder, "Parts")
+    elif file_name.startswith("Point_in_Time_"):
+        return os.path.join(folder, "Point in Times")
     elif "Regulation" in file_name:
         return os.path.join(folder, "Regulations")
     elif "Schedule" in file_name:
