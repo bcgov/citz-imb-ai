@@ -94,17 +94,18 @@ class get_full_rag:
         return prettier
 
     @instrument
-    def re_rank_reference(self, topk, compared_text):
-        # Map topk to [query, text] pairs list
-        pairs = [[compared_text, doc["text"]] for doc in topk]
-        # Produces list of float values. Higher is more closely related. Should be parallel with pairs list.
+    def re_rank_reference(self, topk, compared_text, doc_fields=["text"]):
         model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
-        scores = model.predict(pairs)
-        # Apply these scores to the original objects
-        for index, _ in enumerate(topk):
-            topk[index]["cross_score"] = scores[index]
+        for field_index, field in enumerate(doc_fields):
+            # Map topk to [compared_text, doc_field] pairs list
+            pairs = [[compared_text, doc[field]] for doc in topk]
+            # Produces list of float values. Higher is more closely related. Should be parallel with pairs list.
+            scores = model.predict(pairs)
+            # Apply these scores to the original objects
+            for index, _ in enumerate(topk):
+                topk[index][f"cross_score_{field_index}"] = scores[index]
         # Sort by these new scores
-        topk.sort(key=lambda x: x["cross_score"], reverse=True)
+        topk.sort(key=lambda x: tuple(x[field] for field in doc_fields), reverse=True)
         return topk
 
     @instrument
@@ -115,6 +116,10 @@ class get_full_rag:
         create_prompt = self.create_prompt(query, context_str, chat_history)
         bedrock_response = self.get_response(create_prompt)
         # Rerank again to sort references by relevance to response
-        context_str = self.re_rank_reference(context_str, bedrock_response)
+        context_str = self.re_rank_reference(
+            context_str,
+            bedrock_response,
+            ["node.ActId", "text"],
+        )
         pretty_output = self.formatoutput(context_str, bedrock_response)
         return json.dumps(pretty_output)
