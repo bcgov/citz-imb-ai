@@ -96,7 +96,9 @@ class get_full_rag:
     @instrument
     def re_rank_reference(self, topk, compared_text, doc_fields=["text"]):
         model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+        score_field_names = []
         for field_index, field in enumerate(doc_fields):
+            score_field_names.append(f"cross_score_{field_index}")
             # Map topk to [compared_text, doc_field] pairs list
             pairs = [[compared_text, doc[field]] for doc in topk]
             # Produces list of float values. Higher is more closely related. Should be parallel with pairs list.
@@ -105,17 +107,21 @@ class get_full_rag:
             for index, _ in enumerate(topk):
                 topk[index][f"cross_score_{field_index}"] = scores[index]
         # Sort by these new scores
-        topk.sort(key=lambda x: tuple(x[field] for field in doc_fields), reverse=True)
+        # Sort priority determined by order of doc_fields. Index 0 = highest priority
+        topk.sort(
+            key=lambda x: tuple(
+                x[score_field_name] for score_field_name in score_field_names
+            ),
+            reverse=True,
+        )
         return topk
 
     @instrument
     def query(self, query: str, chat_history: List[ChatHistory], embeddings, kg) -> str:
         context_str = self.retrieve(query, embeddings, kg)
-        # Rerank once to order for LLM
-        context_str = self.re_rank_reference(context_str, query)
         create_prompt = self.create_prompt(query, context_str, chat_history)
         bedrock_response = self.get_response(create_prompt)
-        # Rerank again to sort references by relevance to response
+        # Rerank to sort references by relevance to response
         context_str = self.re_rank_reference(
             context_str,
             bedrock_response,
