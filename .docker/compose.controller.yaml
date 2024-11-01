@@ -135,7 +135,7 @@ services:
     environment:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_postgres/airflow
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      NEO4J_USERNAME: ${NEO4J_USERNAME:-neo4j}
+      NEO4J_USERNAME: ${NEO4J_USER:-neo4j}
       NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
       NEO4J_DB: ${NEO4J_DB:-neo4j}
       NEO4J_PORT: ${NEO4J_PORT:-7687}
@@ -197,7 +197,7 @@ services:
     image: neo4j:latest
     restart: unless-stopped
     environment:
-      - USERNAME=${NEO4J_USERNAME:-neo4j}
+      - USERNAME=${NEO4J_USER:-neo4j}
       - PASSWORD=${NEO4J_PASSWORD:-12345678}
       - DB=${NEO4J_DB:-bclaws}
       - NEO4J_AUTH=none
@@ -255,7 +255,7 @@ services:
       TRULENS_DB: ${TRULENS_DB:-postgres}
       TRULENS_PORT: ${TRULENS_PORT:-5432}
       TRULENS_HOST: trulens
-      NEO4J_USERNAME: ${NEO4J_USERNAME:-neo4j}
+      NEO4J_USERNAME: ${NEO4J_USER:-neo4j}
       NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
       NEO4J_VECTOR_INDEX: ${NEO4J_VECTOR_INDEX:-Acts_Updatedchunks}
       NEO4J_DB: ${NEO4J_DB:-neo4j}
