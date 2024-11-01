@@ -96,22 +96,19 @@ class get_full_rag:
     @instrument
     def re_rank_reference(self, topk, compared_text, doc_fields=["text"]):
         model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
-        score_field_names = []
-        for field_index, field in enumerate(doc_fields):
-            score_field_names.append(f"cross_score_{field_index}")
+        for field in doc_fields:
             # Map topk to [compared_text, doc_field] pairs list
             pairs = [[compared_text, doc[field]] for doc in topk]
             # Produces list of float values. Higher is more closely related. Should be parallel with pairs list.
             scores = model.predict(pairs)
-            # Apply these scores to the original objects
+            # Apply these scores to the original objects. Sum of any existing score + next field's score.
             for index, _ in enumerate(topk):
-                topk[index][f"cross_score_{field_index}"] = scores[index]
+                topk[index]["cross_score"] = scores[index] + topk[index].get(
+                    "cross_score", 0
+                )
         # Sort by these new scores
-        # Sort priority determined by order of doc_fields. Index 0 = highest priority
         topk.sort(
-            key=lambda x: tuple(
-                x[score_field_name] for score_field_name in score_field_names
-            ),
+            key=lambda x: x["cross_score"],
             reverse=True,
         )
         return topk
