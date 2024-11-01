@@ -265,6 +265,8 @@ services:
       NEO4J_VECTOR_INDEX: ${NEO4J_VECTOR_INDEX:-Acts_Updatedchunks}
       NEO4J_DB: ${NEO4J_DB:-neo4j}
       NEO4J_PORT: ${NEO4J_PORT:-7687}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
     ports:
       - "10000:10000"
     volumes:

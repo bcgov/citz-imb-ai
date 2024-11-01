@@ -29,23 +29,23 @@ Before diving into this repository, it is beneficial to have a basic understandi
 - __MLOPs (Airflow)__: Familiarity with Apache Airflow or MLOps concepts for workflow orchestration.
 - __Graph DB (Neo4j)__: Basic knowledge of graph databases, specifically Neo4j, as it is used in this project.
 
-
 ### Getting started with the project
 The best way to get started is to launch the jupyter notebook docker container. The container will start the jupyter notebook server and you can access the notebooks from the browser.
 
-All the exmaple files should be present when you launch the notebook. Try running some of the examples to get started. You may need to install some of the dependencies, connect to the VPN and may need to modify some of the scripts like which folder do you want to download the files to, etc to run the examples.
+All the example files should be present when you launch the notebook. Try running some of the examples to get started. You may need to install some of the dependencies, connect to the VPN and may need to modify some of the scripts like which folder do you want to download the files to, etc to run the examples.
 
-```bash
-#### SetUp local env
+#### Set Up Local ENV
 
-1. Step 1: Build the docker images
-1. Step 2: Open Localhost where the jupyter notebook is running
-1. Step 3: Open terminal on jupyter notebook
-1. Step 4: Run `pip install -r requirement.txt`
-1. Step 5: Run python s3.py to download acts(make sure you are connected to bc gov vpn)
-1. ALL set to use existing jyupter notebooks
-```
-Note :: Add future dependences in requirement.txt so that we can keep track of the them and avoid code breakage
+1. Create and populate a `.docker/.env` file. Identify needed keys based on the listed environment variables for the container in the `compose.controller.yaml` file. Obtain values from team members.
+1. Build the docker images.
+1. Open Localhost where the jupyter notebook is running.
+1. Open terminal on jupyter notebook.
+1. Run `pip install -r requirement.txt`.
+1. Run python s3.py to download acts. (Make sure you are connected to BC Gov VPN.)
+
+You are now set to use existing jupyter notebooks.
+
+Note: Add future dependences in `requirement.txt` so that we can keep track of the them and avoid code breakage
 
 For all the example notebooks click here: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/examples)
 
