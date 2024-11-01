@@ -94,18 +94,20 @@ class get_full_rag:
         return prettier
 
     @instrument
-    def re_rank_reference(self, topk, compared_text, doc_fields=["text"]):
+    def re_rank_reference(
+        self, topk, compared_text, doc_fields=[{"name": "text", "weight": 1}]
+    ):
         model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
         for field in doc_fields:
             # Map topk to [compared_text, doc_field] pairs list
-            pairs = [[compared_text, doc[field]] for doc in topk]
+            pairs = [[compared_text, doc[field["name"]]] for doc in topk]
             # Produces list of float values. Higher is more closely related. Should be parallel with pairs list.
             scores = model.predict(pairs)
-            # Apply these scores to the original objects. Sum of any existing score + next field's score.
+            # Apply these scores to the original objects. Sum of any existing score + (next field's score * its weight).
             for index, _ in enumerate(topk):
-                topk[index]["cross_score"] = scores[index] + topk[index].get(
-                    "cross_score", 0
-                )
+                topk[index]["cross_score"] = (scores[index] * field["weight"]) + topk[
+                    index
+                ].get("cross_score", 0)
         # Sort by these new scores
         topk.sort(
             key=lambda x: x["cross_score"],
@@ -122,7 +124,7 @@ class get_full_rag:
         context_str = self.re_rank_reference(
             context_str,
             bedrock_response,
-            ["node.ActId", "text"],
+            [{"name": "node.ActId", "weight": 2}, {"name": "text", "weight": 1}],
         )
         pretty_output = self.formatoutput(context_str, bedrock_response)
         return json.dumps(pretty_output)
