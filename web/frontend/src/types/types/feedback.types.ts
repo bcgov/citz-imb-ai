@@ -8,3 +8,8 @@ export type userFeedbackType = VoteType;
 export interface FeedbackBarProps {
   onFeedback: (feedbackType: userFeedbackType) => void;
 }
+
+export interface ThumbButtonsProps {
+  activeButton: string | null;
+  onVote: (type: VoteType) => void;
+}
