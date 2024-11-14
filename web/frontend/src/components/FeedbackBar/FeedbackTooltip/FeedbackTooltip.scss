@@ -48,10 +48,15 @@
     button {
       padding: 8px 16px;
       border: none;
-      border-radius: 4px;
+      border-radius: 50px;
+      font-size: 0.875rem;
       cursor: pointer;
-      font-size: 14px;
-      transition: background-color 0.2s;
+      transition: 0.2s;
+      animation: fadeIn 0.3s ease-in-out;
+
+      &:active {
+        transform: translateY(2px);
+      }
 
       &[type='submit'] {
         background-color: var(--button-bg-color);
@@ -59,16 +64,17 @@
 
         &:hover {
           background-color: var(--button-bg-color-hover);
+          transition: 0.1s;
         }
       }
 
       &[type='button'] {
-        background-color: var(--main-background-color);
-        color: var(--main-text-color);
-        border: 1px solid var(--main-border-color);
+        background-color: var(--button-bg-color-red);
+        color: var(--text-color);
 
         &:hover {
-          background-color: var(--main-hover-color);
+          background-color: var(--button-bg-color-red-hover);
+          transition: 0.1s;
         }
       }
     }

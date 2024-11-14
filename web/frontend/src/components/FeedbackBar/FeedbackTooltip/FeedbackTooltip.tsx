@@ -35,10 +35,8 @@ const FeedbackTooltip = ({
           autoFocus
         />
         <div className="tooltip-buttons">
-          <button type="submit">Submit</button>
-          <button type="button" onClick={onClose}>
-            Cancel
-          </button>
+          <button type="submit" onClick={handleSubmit}>Submit</button>
+          <button type="button" onClick={onClose}>Cancel</button>
         </div>
       </form>
     </div>
