@@ -24,7 +24,7 @@ const FeedbackBar = () => {
   return (
     <div className="feedback-bar">
       <ThumbButtons activeButton={activeButton} onVote={handleVote} />
-      <CopyButton textToCopy={''} />
+      <CopyButton />
     </div>
   );
 };
