@@ -24,7 +24,7 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   };
 
   return (
-    <div className="feedback-buttons " style={{ position: 'relative' }}>
+    <div className="feedback-buttons">
       <button
         className={`feedback-action-button ${activeButton === VoteType.upvote ? 'active' : ''}`}
         title="Good Response"
