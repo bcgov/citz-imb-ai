@@ -3,6 +3,7 @@ import { Copy } from '@phosphor-icons/react';
 import { Context } from '@/context/Context';
 
 const CopyButton = () => {
+  // State to track whether text has been copied
   const [copied, setCopied] = useState(false);
   const context = useContext(Context);
 
@@ -14,15 +15,16 @@ const CopyButton = () => {
 
   const handleCopy = async () => {
     try {
-      // Get the last AI message content
+      // Find the most recent AI message by reversing the array and finding first AI message
       const lastAiMessage = [...messages]
         .reverse()
         .find((message) => message.type === 'ai');
 
       if (lastAiMessage) {
-        // Remove HTML tags from the content
+        // Strip any HTML tags from the message content for clean copying
         const cleanContent = lastAiMessage.content.replace(/<[^>]*>/g, '');
         await navigator.clipboard.writeText(cleanContent);
+        // Show copied state for 2 seconds
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       }

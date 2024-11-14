@@ -13,3 +13,10 @@ export interface ThumbButtonsProps {
   activeButton: string | null;
   onVote: (type: VoteType) => void;
 }
+
+export interface FeedbackTooltipProps {
+  isOpen: boolean;
+  onSubmit: (comment: string) => void;
+  onClose: () => void;
+  rating: VoteType;
+}
