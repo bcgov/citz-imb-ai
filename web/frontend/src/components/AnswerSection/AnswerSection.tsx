@@ -19,6 +19,7 @@ import { Context } from '@/context/Context';
 import { getUserId } from '@/utils/authUtil';
 import { debounce } from '@/utils/debounceUtil';
 import { AnswerSectionProps, TopKItem } from '@/types';
+import { CaretDown } from '@phosphor-icons/react';
 
 // Component for displaying AI-generated answers and related sources
 const AnswerSection: React.FC<AnswerSectionProps> = ({
@@ -201,9 +202,8 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
             style={{ cursor: 'pointer' }}
           >
             Sources
-            <img
-              src={assets.down_arrow}
-              alt={showSources ? 'Hide sources' : 'Show sources'}
+            <CaretDown
+              size={24}
               className={`chevron-icon ${showSources ? '' : 'rotated'}`}
             />
           </h3>

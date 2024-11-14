@@ -1,26 +1,26 @@
-import { assets } from '@/assets/icons/assets';
 import { VoteType } from '@/types';
 import { ThumbButtonsProps } from '@/types/types/feedback.types';
+import { ThumbsUp, ThumbsDown } from '@phosphor-icons/react';
 
 const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   return (
     <div className="feedback-buttons">
       <button
-        className={`thumb-button ${activeButton === VoteType.upvote ? 'active' : ''}`}
+        className={`thumb-button thumb-button-icon ${activeButton === VoteType.upvote ? 'active' : ''}`}
         title="Good Response"
         onClick={() => onVote(VoteType.upvote)}
       >
-        <img src={assets.thumbs_up} alt="Good Response" />
+        <ThumbsUp size={20} />
       </button>
       <button
-        className={`thumb-button ${activeButton === VoteType.downvote ? 'active' : ''}`}
+        className={`thumb-button thumb-button-icon ${activeButton === VoteType.downvote ? 'active' : ''}`}
         title="Bad Response"
         onClick={() => onVote(VoteType.downvote)}
       >
-        <img src={assets.thumbs_down} alt="Bad Response" />
+        <ThumbsDown size={20} />
       </button>
     </div>
   );
 };
 
-export default ThumbButtons; 
+export default ThumbButtons;
