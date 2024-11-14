@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './FeedbackTooltip.scss';
 import { FeedbackTooltipProps, VoteType } from '@/types';
 
-// Tooltip component for collecting user feedback after voting
 const FeedbackTooltip = ({
   isOpen,
   onSubmit,
