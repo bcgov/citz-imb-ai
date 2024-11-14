@@ -13,3 +13,6 @@ export interface ThumbButtonsProps {
   activeButton: string | null;
   onVote: (type: VoteType) => void;
 }
+export interface CopyButtonProps {
+  textToCopy: string;
+}

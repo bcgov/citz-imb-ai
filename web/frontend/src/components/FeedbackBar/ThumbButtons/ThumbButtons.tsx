@@ -6,14 +6,14 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   return (
     <div className="feedback-buttons">
       <button
-        className={`thumb-button thumb-button-icon ${activeButton === VoteType.upvote ? 'active' : ''}`}
+        className={`feedback-action-button ${activeButton === VoteType.upvote ? 'active' : ''}`}
         title="Good Response"
         onClick={() => onVote(VoteType.upvote)}
       >
         <ThumbsUp size={20} />
       </button>
       <button
-        className={`thumb-button thumb-button-icon ${activeButton === VoteType.downvote ? 'active' : ''}`}
+        className={`feedback-action-button ${activeButton === VoteType.downvote ? 'active' : ''}`}
         title="Bad Response"
         onClick={() => onVote(VoteType.downvote)}
       >

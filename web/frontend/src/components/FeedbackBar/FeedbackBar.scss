@@ -4,64 +4,55 @@
   justify-content: start;
   margin-left: 60px;
   margin-top: -30px;
+  gap: 20px;
 
-  // Container for feedback buttons
-  .feedback-buttons {
-    display: flex;
-    gap: 20px;
+  // Base styles for all interactive buttons in the feedback bar
+  .feedback-action-button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 15px;
+    padding-bottom: 12px;
+    transition: background-color 0.1s;
+    animation: fadeIn 2.5s ease-in-out;
+    color: var(--main-result-text-color);
 
-    // Styles for individual thumb buttons
-    .thumb-button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      border-radius: 50%;
-      padding: 15px;
-      padding-bottom: 12px;
-      transition: background-color 0.1s;
-      animation: fadeIn 2.5s ease-in-out;
-
-      // Hover and active states
-      &:hover {
-        background-color: var(--sidebar-hover-color);
-      }
-
-      &:active {
-        background-color: var(--sidebar-hover-color-active);
-      }
-
-      // Styles for the thumb icon
-      img {
-        width: 20px;
-        display: flex;
-      }
+    // Hover and active states
+    &:hover {
+      background-color: var(--sidebar-hover-color);
     }
 
-    // Active state for thumb buttons
-    .thumb-button.active {
+    &:active {
       background-color: var(--sidebar-hover-color-active);
     }
-  }
-}
 
-// Tooltip styles for thumb buttons
-.feedback-bar .thumb-button {
-  position: relative;
+    // Active state for buttons
+    &.active {
+      background-color: var(--sidebar-hover-color-active);
+    }
 
-  // Show tooltip on hover
-  &:hover::after {
-    content: attr(title);
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--main-hover-color);
-    color: var(--main-result-text-color);
-    padding: 15px;
-    border-radius: 50px;
-    white-space: nowrap;
-    z-index: 1;
-    animation: fadeIn 0.3s ease-in-out;
+    // Success state (for copy button)
+    &.copied {
+      color: var(--success-color);
+    }
+
+    // Tooltip styles
+    &:hover::after {
+      content: attr(title);
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--main-hover-color);
+      color: var(--main-result-text-color);
+      padding: 15px;
+      border-radius: 50px;
+      white-space: nowrap;
+      z-index: 1;
+      animation: fadeIn 0.3s ease-in-out;
+    }
   }
 }
 

@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import { Context } from '@/context/Context';
 import { VoteType } from '@/types';
 import ThumbButtons from '@/components/FeedbackBar/ThumbButtons/ThumbButtons';
+import CopyButton from '@/components/FeedbackBar/CopyButton/CopyButton';
 
 const FeedbackBar = () => {
   const context = useContext(Context);
@@ -23,6 +24,7 @@ const FeedbackBar = () => {
   return (
     <div className="feedback-bar">
       <ThumbButtons activeButton={activeButton} onVote={handleVote} />
+      <CopyButton textToCopy={''} />
     </div>
   );
 };
