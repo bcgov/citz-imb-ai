@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { Copy } from '@phosphor-icons/react';
 import { Context } from '@/context/Context';
+import sanitizeHtml from 'sanitize-html';
 
 const CopyButton = () => {
   // State to track whether text has been copied
@@ -21,8 +22,12 @@ const CopyButton = () => {
         .find((message) => message.type === 'ai');
 
       if (lastAiMessage) {
-        // Strip any HTML tags from the message content for clean copying
-        const cleanContent = lastAiMessage.content.replace(/<[^>]*>/g, '');
+        // Replace regex with sanitize-html
+        const cleanContent = sanitizeHtml(lastAiMessage.content, {
+          allowedTags: [], // Remove all HTML tags
+          allowedAttributes: {}, // Remove all attributes
+          textFilter: (text: string) => text.trim(), // Trim whitespace
+        });
         await navigator.clipboard.writeText(cleanContent);
         // Show copied state for 2 seconds
         setCopied(true);
