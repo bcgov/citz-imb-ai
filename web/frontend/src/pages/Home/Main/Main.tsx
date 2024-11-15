@@ -8,6 +8,7 @@ import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
 import { Link } from 'react-router-dom';
 import { sendAnalyticsImmediatelyOnLeave } from '@/utils/analyticsUtil';
+import { PaperPlaneRight, UserCircle } from '@phosphor-icons/react';
 
 // Main component for the chat interface
 const Main = () => {
@@ -155,7 +156,7 @@ const Main = () => {
       <div key={index} className={`message ${message.type}`}>
         {message.type === 'user' ? (
           <div className="message-title">
-            <img src={assets.user_icon} alt="" />
+            <UserCircle size={40} />
             <p>{message.content}</p>
           </div>
         ) : (
@@ -251,12 +252,12 @@ const Main = () => {
               />
               <div>
                 {input && !isWaitingForResponse ? (
-                  <div className="send-button" title="Send">
-                    <img
-                      onClick={handleSend}
-                      src={assets.send_icon}
-                      alt="send icon"
-                    />
+                  <div
+                    className="send-button"
+                    title="Send"
+                    onClick={handleSend}
+                  >
+                    <PaperPlaneRight size={24} />
                   </div>
                 ) : null}
               </div>

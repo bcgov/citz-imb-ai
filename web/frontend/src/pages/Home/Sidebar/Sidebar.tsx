@@ -1,6 +1,7 @@
 import { useState, useContext, Key } from 'react';
-import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
+import { Chat, Plus, UserCircle } from '@phosphor-icons/react';
+
 import ModalDialog from '@/components/Modal/ModalDialog';
 import './Sidebar.scss';
 
@@ -59,12 +60,12 @@ const Sidebar = () => {
     <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
       {/* Sidebar header */}
       {/* <div className="sidebar-header" title="Menu" onClick={toggleSidebar}>
-        <img src={assets.menu_icon} className="menu-icon" alt="menu icon" />
+        <List size={24} />
       </div> */}
 
       {/* New chat button */}
       <div onClick={() => newChat()} className="new-chat" title="New Chat">
-        <img src={assets.plus_icon} alt="new chat" />
+        <Plus size={24} />
         {!isCollapsed ? <p>New Chat</p> : null}
       </div>
 
@@ -79,7 +80,7 @@ const Sidebar = () => {
                 onClick={() => loadPrompt(item)}
                 className="recent-entry"
               >
-                <img src={assets.message_icon} alt="" />
+                <Chat size={24} />
                 <p>
                   {item.slice(0, 18)} {'...'}
                 </p>
@@ -91,7 +92,7 @@ const Sidebar = () => {
 
       {/* Logout button */}
       <div onClick={openModal} className="bottom" title="Logout">
-        <img src={assets.user_icon} alt="user" />
+        <UserCircle size={26} />
         {!isCollapsed ? <p>Logout</p> : null}
       </div>
 

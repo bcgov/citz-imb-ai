@@ -1,0 +1,82 @@
+.feedback-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--card-background-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  min-width: 300px;
+  animation: fadeIn 0.3s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--card-background-color);
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid var(--main-border-color);
+    border-radius: 4px;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    resize: vertical;
+    margin-bottom: 10px;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: var(--main-border-color-focus);
+    }
+  }
+
+  .tooltip-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: 0.2s;
+      animation: fadeIn 0.3s ease-in-out;
+
+      &:active {
+        transform: translateY(2px);
+      }
+
+      &[type='submit'] {
+        background-color: var(--button-bg-color);
+        color: var(--text-color);
+
+        &:hover {
+          background-color: var(--button-bg-color-hover);
+          transition: 0.1s;
+        }
+      }
+
+      &[type='button'] {
+        background-color: var(--button-bg-color-red);
+        color: var(--text-color);
+
+        &:hover {
+          background-color: var(--button-bg-color-red-hover);
+          transition: 0.1s;
+        }
+      }
+    }
+  }
+}
