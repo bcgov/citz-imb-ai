@@ -1,4 +1,4 @@
-import pluginJs from '@eslint/js';
+import js from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
 
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -35,14 +35,13 @@ export default [
     },
   },
   // Core ESLint recommended rules
-  pluginJs.configs.recommended,
+  js.configs.recommended,
 
   // Import plugin rules for better import/export handling
   importPlugin.flatConfigs.recommended,
 
   // TypeScript-ESLint recommended rules
-  ...tseslint.configs.recommended,
-  ...tseslint.configs['recommended-requiring-type-checking'],
+  tseslint.configs.recommended,
 
   // Promises best practices
   pluginPromise.configs['flat/recommended'],
