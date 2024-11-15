@@ -1,6 +1,8 @@
 import React from 'react';
-import './ModalDialog.scss';
+
 import { ModalDialogProps } from '@/types';
+
+import './ModalDialog.scss';
 
 // ModalDialog component
 const ModalDialog: React.FC<ModalDialogProps> = ({
@@ -19,31 +21,29 @@ const ModalDialog: React.FC<ModalDialogProps> = ({
 
   // Render the modal dialog
   return (
-    <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal-dialog">
+    <div className='modal-overlay' onClick={handleOverlayClick}>
+      <div className='modal-dialog'>
         {/* Modal header */}
-        <div className="modal-header">
-          <span className="modal-title">{title}</span>
+        <div className='modal-header'>
+          <span className='modal-title'>{title}</span>
         </div>
         {/* Modal body */}
-        <div className="modal-body">
-          <div className="modal-description">{description}</div>
+        <div className='modal-body'>
+          <div className='modal-description'>{description}</div>
         </div>
         {/* Modal footer with action buttons */}
-        <div className="modal-footer">
+        <div className='modal-footer'>
           {option1 && (
             <button
-              className="modal-button blue-button"
-              onClick={option1.onClick}
-            >
+              className='modal-button blue-button'
+              onClick={option1.onClick}>
               {option1.text}
             </button>
           )}
           {option2 && (
             <button
-              className="modal-button red-button"
-              onClick={option2.onClick}
-            >
+              className='modal-button red-button'
+              onClick={option2.onClick}>
               {option2.text}
             </button>
           )}

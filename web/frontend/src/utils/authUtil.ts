@@ -1,5 +1,6 @@
-import { Context } from '@/context/Context';
 import { useContext } from 'react';
+
+import { Context } from '@/context/Context';
 
 // Check if the user is authenticated
 export const isAuthenticated = (): boolean => {

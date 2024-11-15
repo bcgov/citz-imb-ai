@@ -1,4 +1,4 @@
-import { ChatHistory, ApiResponse } from '@/types';
+import { ApiResponse, ChatHistory } from '@/types';
 
 // Function to run a chat interaction with the API
 const runChat = async (
