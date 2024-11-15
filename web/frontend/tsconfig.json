@@ -1,35 +1,28 @@
 {
   "compilerOptions": {
-    // Paths
     "paths": {
-      "@/*": ["./src/*"] // Allows using "@" as an alias for the src directory
+      "@/*": ["./src/*"]
     },
-
-    // Output settings
-    "target": "ESNext", // Set the JavaScript version for emitted JavaScript and include compatible library declarations
-    "lib": ["ESNext", "DOM", "DOM.Iterable"], // Include type definitions for specific library files
-    "jsx": "react-jsx", // Use the React JSX transform
-    "sourceMap": true, // Generate source map files for better debugging experience
-
-    // Modules
-    "module": "ESNext", // Set the module code generation method
-    "moduleResolution": "Bundler", // Use the bundler's module resolution strategy (e.g., Vite, Webpack)
-    "allowImportingTsExtensions": true, // Allow importing files with .ts extensions without specifying the extension
-    "resolveJsonModule": true, // Allow importing JSON files as modules
-    "isolatedModules": true, // Ensure each file can be safely transpiled without relying on other files
-
-    // Compiler checks
-    "strict": true, // Enable all strict type-checking options
-    "noEmit": true, // Do not emit output (e.g., .js files)
-    "noUnusedLocals": true, // Report errors on unused local variables
-    "noUnusedParameters": true, // Report errors on unused parameters
-    "noImplicitReturns": true, // Report error when not all code paths in function return a value
-    "noImplicitOverride": true, // Ensure overridden methods are marked with an 'override' modifier
-    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
-    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
-    "exactOptionalPropertyTypes": true, // Interpret optional property types as written, rather than adding 'undefined'
-    "skipLibCheck": true, // Skip type checking of declaration files
-    "allowSyntheticDefaultImports": true // Allow default imports from modules with no default export
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src", "vite.config.ts"] // Specify the files to be included in the compilation
+  "include": ["src", "vite.config.ts"]
 }
