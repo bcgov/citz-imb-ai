@@ -1,25 +1,27 @@
 import React, {
-  useState,
-  useEffect,
-  useContext,
-  useRef,
   useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
 } from 'react';
-import './AnswerSection.scss';
-import ModalDialog from '@/components/Modal/ModalDialog';
-import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
+
 import { assets } from '@/assets/icons/assets';
-import {
-  initAnalytics,
-  addChatInteraction,
-  trackSourceClick,
-  trackLLMResponseInteraction,
-} from '@/utils/analyticsUtil';
+import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
+import ModalDialog from '@/components/Modal/ModalDialog';
 import { Context } from '@/context/Context';
+import { AnswerSectionProps, TopKItem } from '@/types';
+import {
+  addChatInteraction,
+  initAnalytics,
+  trackLLMResponseInteraction,
+  trackSourceClick,
+} from '@/utils/analyticsUtil';
 import { getUserId } from '@/utils/authUtil';
 import { debounce } from '@/utils/debounceUtil';
-import { AnswerSectionProps, TopKItem } from '@/types';
 import { CaretDown } from '@phosphor-icons/react';
+
+import './AnswerSection.scss';
 
 // Component for displaying AI-generated answers and related sources
 const AnswerSection: React.FC<AnswerSectionProps> = ({
@@ -146,7 +148,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         <p>
           <strong>URL:</strong>{' '}
           {item.url ? (
-            <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <a href={item.url} target='_blank' rel='noopener noreferrer'>
               {item.url}
             </a>
           ) : (
@@ -157,19 +159,29 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
           <strong>Text:</strong> {item.text || 'N/A'}
         </p>
         <p>
-        {item.references && item.references.length > 0 && item.references[0].refActId && (
-          <div>
-            <strong>References:</strong>
-              {item.references.map((ref, index) => (
-            <ul>
-                <li key={index}>{(ref.refActId) ? "Act Name: " + ref.refActId: ""}</li>
-                <li key={index}>{(ref.refSectionId) ? "Section Id: " + ref.refSectionId : ""}</li>
-                <li key={index}>{(ref.refText) ? "Text: " + ref.refText : ""}</li>
-                <hr></hr>
-            </ul>
-              ))}
-          </div>
-        )}
+          {item.references &&
+            item.references.length > 0 &&
+            item.references[0].refActId && (
+              <div>
+                <strong>References:</strong>
+                {item.references.map((ref, index) => (
+                  <ul>
+                    <li key={index}>
+                      {ref.refActId ? 'Act Name: ' + ref.refActId : ''}
+                    </li>
+                    <li key={index}>
+                      {ref.refSectionId
+                        ? 'Section Id: ' + ref.refSectionId
+                        : ''}
+                    </li>
+                    <li key={index}>
+                      {ref.refText ? 'Text: ' + ref.refText : ''}
+                    </li>
+                    <hr></hr>
+                  </ul>
+                ))}
+              </div>
+            )}
         </p>
       </div>
     ),
@@ -182,15 +194,14 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   }, []);
 
   return (
-    <div className="answer-section">
+    <div className='answer-section'>
       {/* AI response */}
       <div
-        className="message-title"
+        className='message-title'
         onMouseEnter={() => handleLLMResponseHover(true)}
         onMouseLeave={() => handleLLMResponseHover(false)}
-        onClick={handleLLMResponseClick}
-      >
-        <img src={assets.bc_icon} alt="BC AI" />
+        onClick={handleLLMResponseClick}>
+        <img src={assets.bc_icon} alt='BC AI' />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
 
@@ -199,8 +210,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
           <h3
             onClick={() => setShowSources(!showSources)}
-            style={{ cursor: 'pointer' }}
-          >
+            style={{ cursor: 'pointer' }}>
             Sources
             <CaretDown
               size={24}
@@ -208,18 +218,17 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
             />
           </h3>
           <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
-            <div className="topk-cards">
+            <div className='topk-cards'>
               {message.topk.map((item, index) => (
                 <div
                   key={index}
-                  className="topk-card"
-                  onClick={() => handleCardClick(item, index)}
-                >
+                  className='topk-card'
+                  onClick={() => handleCardClick(item, index)}>
                   <h3>{item.ActId}</h3>
-                  <p className="truncated-text">
+                  <p className='truncated-text'>
                     {truncateText(item.text, 100)}
                   </p>
-                  <span className="card-number">{index + 1}</span>
+                  <span className='card-number'>{index + 1}</span>
                 </div>
               ))}
             </div>

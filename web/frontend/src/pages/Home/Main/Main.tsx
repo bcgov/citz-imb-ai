@@ -1,14 +1,16 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
-import './Main.scss';
-import Sidebar from '@/pages/Home/Sidebar/Sidebar';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+
+import { assets } from '@/assets/icons/assets';
+import AnswerSection from '@/components/AnswerSection/AnswerSection';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import ScrollButton from '@/components/ScrollButton/ScrollButton';
-import AnswerSection from '@/components/AnswerSection/AnswerSection';
-import { assets } from '@/assets/icons/assets';
 import { Context } from '@/context/Context';
-import { Link } from 'react-router-dom';
+import Sidebar from '@/pages/Home/Sidebar/Sidebar';
 import { sendAnalyticsImmediatelyOnLeave } from '@/utils/analyticsUtil';
 import { PaperPlaneRight, UserCircle } from '@phosphor-icons/react';
+
+import './Main.scss';
+import { Link } from 'react-router-dom';
 
 // Main component for the chat interface
 const Main = () => {
@@ -155,7 +157,7 @@ const Main = () => {
     return allMessages.map((message, index) => (
       <div key={index} className={`message ${message.type}`}>
         {message.type === 'user' ? (
-          <div className="message-title">
+          <div className='message-title'>
             <UserCircle size={40} />
             <p>{message.content}</p>
           </div>
@@ -174,57 +176,55 @@ const Main = () => {
 
   // Main component render
   return (
-    <div className="main-page">
+    <div className='main-page'>
       <Sidebar />
-      <div className="content">
-        <div className="nav">
+      <div className='content'>
+        <div className='nav'>
           <p>BC AI</p>
         </div>
-        <div className="main-container">
+        <div className='main-container'>
           {showResult ? (
             // Render chat messages and input area
             <div>
               <div
-                className="result"
-                id="scrollable-section"
+                className='result'
+                id='scrollable-section'
                 ref={scrollableSectionRef}
-                onScroll={handleScroll}
-              >
+                onScroll={handleScroll}>
                 {renderMessages()}
                 {isWaitingForResponse && (
-                  <div className="message ai">
-                    <div className="message-title">
-                      <img src={assets.bc_icon} alt="" />
-                      <div className="loader">
-                        <hr className="animated-bg" />
-                        <hr className="animated-bg" />
-                        <hr className="animated-bg" />
+                  <div className='message ai'>
+                    <div className='message-title'>
+                      <img src={assets.bc_icon} alt='' />
+                      <div className='loader'>
+                        <hr className='animated-bg' />
+                        <hr className='animated-bg' />
+                        <hr className='animated-bg' />
                       </div>
                     </div>
                   </div>
                 )}
               </div>
               <ScrollButton
-                scrollableElementId="scrollable-section"
+                scrollableElementId='scrollable-section'
                 generationComplete={generationComplete}
               />
             </div>
           ) : (
             // Render welcome screen with suggestion cards
             <>
-              <div className="greet">
+              <div className='greet'>
                 <p>
                   <span>Hello,</span>
                 </p>
                 <p>How can I help you today?</p>
               </div>
-              <div className="cards">
+              <div className='cards'>
                 {cardContents.map((content, index) => (
                   <div
-                    className="card"
+                    className='card'
                     key={index}
-                    onClick={() => handleCardClick(content)}
-                  >
+                    onClick={() => handleCardClick(content)}>
                     <p>{content}</p>
                   </div>
                 ))}
@@ -232,41 +232,40 @@ const Main = () => {
             </>
           )}
 
-          <div className="main-bottom">
+          <div className='main-bottom'>
             {/* Input area for user messages */}
-            <div className="search-box">
+            <div className='search-box'>
               <textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="textarea"
-                autoComplete="on"
+                className='textarea'
+                autoComplete='on'
                 spellCheck={true}
                 autoFocus={true}
-                placeholder="Enter a prompt here"
+                placeholder='Enter a prompt here'
                 onInput={adjustTextareaHeight}
                 onKeyDown={handleKeyDown}
                 ref={textareaRef}
                 rows={1}
-                id="prompt-input"
+                id='prompt-input'
                 disabled={isWaitingForResponse}
               />
               <div>
                 {input && !isWaitingForResponse ? (
                   <div
-                    className="send-button"
-                    title="Send"
-                    onClick={handleSend}
-                  >
+                    className='send-button'
+                    title='Send'
+                    onClick={handleSend}>
                     <PaperPlaneRight size={24} />
                   </div>
                 ) : null}
               </div>
             </div>
             {/* Disclaimer and safety link */}
-            <p className="bottom-info">
+            <p className='bottom-info'>
               BC AI may provide inaccurate info. Responses can take up to 2
               minutes. Please verify all outputs. Learn about our{' '}
-              <Link to="/safety" className="safety-link">
+              <Link to='/safety' className='safety-link'>
                 AI safety measures.
               </Link>
             </p>
@@ -276,9 +275,9 @@ const Main = () => {
       {/* Modal for terms agreement */}
       {isModalVisible && (
         <ModalDialog
-          title="Notice"
+          title='Notice'
           description={
-            <div className="modal-content">
+            <div className='modal-content'>
               <p>Before proceeding, please note the following:</p>
               <ul>
                 <li>
@@ -289,12 +288,12 @@ const Main = () => {
                 <li>By using BC Laws AI, you agree to our terms of service.</li>
                 <li>
                   We are committed to AI safety. Learn more about our{' '}
-                  <Link to="/safety" className="safety-link">
+                  <Link to='/safety' className='safety-link'>
                     AI safety practices.
                   </Link>
                 </li>
               </ul>
-              <p className="agreement-text">
+              <p className='agreement-text'>
                 Do you understand and agree to proceed?
               </p>
             </div>
@@ -312,7 +311,7 @@ const Main = () => {
       {/* Error modal */}
       {errorState.hasError && (
         <ModalDialog
-          title="Error Occurred"
+          title='Error Occurred'
           description={
             <>
               <p>An error occurred while processing your request.</p>

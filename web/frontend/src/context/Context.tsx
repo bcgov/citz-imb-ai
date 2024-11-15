@@ -1,15 +1,17 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+
 import runChat from '@/api/chat';
 import sendFeedback from '@/api/feedback';
-import Keycloak from 'keycloak-js';
 import {
   ApiResponse,
-  Message,
   ChatHistory,
-  userFeedbackType,
   ContextProps,
   ContextProviderProps,
+  Message,
+  userFeedbackType,
 } from '@/types';
+
+import Keycloak from 'keycloak-js';
 
 // Create a Context with ContextProps type or undefined
 export const Context = createContext<ContextProps | undefined>(undefined);
