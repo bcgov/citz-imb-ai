@@ -64,7 +64,8 @@ const Main = () => {
   // Effect to send analytics data immediately when the user tries to leave the page
   useEffect(() => {
     const cleanup = sendAnalyticsImmediatelyOnLeave();
-    return cleanup;
+    
+return cleanup;
   }, []);
 
   // Effect to handle scrolling behavior

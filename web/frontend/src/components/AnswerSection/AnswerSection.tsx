@@ -82,8 +82,10 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   useEffect(() => {
     if (generationComplete) {
       const timer = setTimeout(() => setIsAnswerComplete(true), 500);
+
       return () => clearTimeout(timer);
     }
+
     return () => {};
   }, [generationComplete]);
 

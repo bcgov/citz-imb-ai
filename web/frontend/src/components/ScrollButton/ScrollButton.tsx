@@ -40,6 +40,7 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({
     if (element) {
       element.addEventListener('scroll', handleScroll);
     }
+
     return () => {
       if (element) {
         element.removeEventListener('scroll', handleScroll);
