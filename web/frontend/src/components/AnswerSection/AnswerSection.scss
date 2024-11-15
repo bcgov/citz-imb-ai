@@ -8,6 +8,7 @@
 
     // Styles for the BC AI icon
     img {
+      align-self: flex-start;
       width: 40px;
       margin-top: 10px;
     }
@@ -137,6 +138,7 @@
       color: var(--main-text-color);
       display: -webkit-box;
       -webkit-line-clamp: 3;
+      line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
