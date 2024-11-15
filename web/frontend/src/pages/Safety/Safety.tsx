@@ -24,7 +24,7 @@ const SafetyPage = () => {
               AI solutions.
             </h2>
             <p>
-              Here's how we ensure our AI systems are designed and deployed
+              Here&apos;s how we ensure our AI systems are designed and deployed
               responsibly:
             </p>
           </div>
