@@ -1,8 +1,9 @@
 import { useState } from 'react';
+
+import FeedbackTooltip from '@/components/FeedbackBar/FeedbackTooltip/FeedbackTooltip';
 import { VoteType } from '@/types';
 import { ThumbButtonsProps } from '@/types/types/feedback.types';
-import { ThumbsUp, ThumbsDown } from '@phosphor-icons/react';
-import FeedbackTooltip from '@/components/FeedbackBar/FeedbackTooltip/FeedbackTooltip';
+import { ThumbsDown, ThumbsUp } from '@phosphor-icons/react';
 
 const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   // Control visibility of feedback tooltip
@@ -32,22 +33,20 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   };
 
   return (
-    <div className="feedback-buttons">
+    <div className='feedback-buttons'>
       {/* Thumbs up button - becomes active when upvoted */}
       <button
         className={`feedback-action-button ${activeButton === VoteType.upvote ? 'active' : ''}`}
-        title="Good Response"
-        onClick={() => handleVoteClick(VoteType.upvote)}
-      >
+        title='Good Response'
+        onClick={() => handleVoteClick(VoteType.upvote)}>
         <ThumbsUp size={20} />
       </button>
 
       {/* Thumbs down button - becomes active when downvoted */}
       <button
         className={`feedback-action-button ${activeButton === VoteType.downvote ? 'active' : ''}`}
-        title="Bad Response"
-        onClick={() => handleVoteClick(VoteType.downvote)}
-      >
+        title='Bad Response'
+        onClick={() => handleVoteClick(VoteType.downvote)}>
         <ThumbsDown size={20} />
       </button>
 

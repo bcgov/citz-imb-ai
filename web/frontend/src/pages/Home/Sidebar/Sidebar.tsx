@@ -1,8 +1,9 @@
-import { useState, useContext, Key } from 'react';
+import { Key, useContext, useState } from 'react';
+
+import ModalDialog from '@/components/Modal/ModalDialog';
 import { Context } from '@/context/Context';
 import { Chat, Plus, UserCircle } from '@phosphor-icons/react';
 
-import ModalDialog from '@/components/Modal/ModalDialog';
 import './Sidebar.scss';
 
 // Sidebar component
@@ -64,22 +65,21 @@ const Sidebar = () => {
       </div> */}
 
       {/* New chat button */}
-      <div onClick={() => newChat()} className="new-chat" title="New Chat">
+      <div onClick={() => newChat()} className='new-chat' title='New Chat'>
         <Plus size={24} />
         {!isCollapsed ? <p>New Chat</p> : null}
       </div>
 
       {/* Recent prompts section (visible when expanded) */}
       {!isCollapsed ? (
-        <div className="recent">
-          <p className="recent-title">Recent</p>
-          <div className="recent-entries">
+        <div className='recent'>
+          <p className='recent-title'>Recent</p>
+          <div className='recent-entries'>
             {prevPrompts.map((item: string, index: Key) => (
               <div
                 key={index}
                 onClick={() => loadPrompt(item)}
-                className="recent-entry"
-              >
+                className='recent-entry'>
                 <Chat size={24} />
                 <p>
                   {item.slice(0, 18)} {'...'}
@@ -91,7 +91,7 @@ const Sidebar = () => {
       ) : null}
 
       {/* Logout button */}
-      <div onClick={openModal} className="bottom" title="Logout">
+      <div onClick={openModal} className='bottom' title='Logout'>
         <UserCircle size={26} />
         {!isCollapsed ? <p>Logout</p> : null}
       </div>
@@ -99,7 +99,7 @@ const Sidebar = () => {
       {/* Logout confirmation modal */}
       {isModalVisible && (
         <ModalDialog
-          title="Logout"
+          title='Logout'
           description={
             <>
               <p>Do you really want to log out?</p>

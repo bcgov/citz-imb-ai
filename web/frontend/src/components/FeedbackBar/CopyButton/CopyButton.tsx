@@ -1,6 +1,8 @@
-import { useState, useContext } from 'react';
-import { Copy } from '@phosphor-icons/react';
+import { useContext, useState } from 'react';
+
 import { Context } from '@/context/Context';
+import { Copy } from '@phosphor-icons/react';
+
 import sanitizeHtml from 'sanitize-html';
 
 const CopyButton = () => {
@@ -42,8 +44,7 @@ const CopyButton = () => {
     <button
       className={`feedback-action-button ${copied ? 'copied' : ''}`}
       onClick={handleCopy}
-      title={copied ? 'Copied!' : 'Copy to clipboard'}
-    >
+      title={copied ? 'Copied!' : 'Copy to clipboard'}>
       <Copy size={20} />
     </button>
   );
