@@ -70,7 +70,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         if (lastMessage && lastMessage.type === 'ai') {
           lastMessage.content += nextWord;
         }
-        return newMessages;
+        
+return newMessages;
       });
       if (index === totalWords - 1) {
         setGenerationComplete(true);
@@ -99,7 +100,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       setInput('');
       setGenerationComplete(false);
       let response: { response: ApiResponse; recordingHash: string };
-      let currentPrompt = prompt !== undefined ? prompt : input;
+      const currentPrompt = prompt !== undefined ? prompt : input;
 
       // Get chat history from session storage
       const chatHistory: ChatHistory[] = JSON.parse(

@@ -22,6 +22,7 @@ const sendFeedback = async (
 
   // Parse and return the response data
   const data = await response.json();
+
   return data.message;
 };
 
