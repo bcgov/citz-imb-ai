@@ -23,8 +23,8 @@ let updateQueue: AnalyticsUpdate[] = [];
 // Helper functions
 export const getAnalyticsData = (): AnalyticsData => {
   const data = sessionStorage.getItem(ANALYTICS_STORAGE_KEY);
-  
-return data
+
+  return data
     ? JSON.parse(data)
     : { sessionTimestamp: '', sessionId: '', userId: '', chats: [] };
 };
