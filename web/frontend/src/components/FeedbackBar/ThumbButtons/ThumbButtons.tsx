@@ -14,8 +14,7 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   // Handle initial vote click and show tooltip for additional feedback
   const handleVoteClick = (type: VoteType) => {
     setSelectedRating(type);
-    // TODO: Implement actual feedback submission logic (currently turned off)
-    // setShowTooltip(true);
+    setShowTooltip(true);
     onVote(type);
   };
 
