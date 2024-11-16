@@ -56,8 +56,16 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   };
 
   // Function to send user feedback
-  const sendUserFeedback = async (feedbackType: userFeedbackType) => {
-    await sendFeedback(feedbackType, recordingHash);
+  const sendUserFeedback = async (
+    feedbackType: userFeedbackType,
+    comment?: string,
+  ) => {
+    try {
+      await sendFeedback(feedbackType, recordingHash, comment);
+    } catch (error) {
+      console.error('Error sending feedback:', error);
+      // Optionally handle error state
+    }
   };
 
   // Function to delay paragraph generation

@@ -6,12 +6,12 @@ export enum VoteType {
 export type userFeedbackType = VoteType;
 
 export interface FeedbackBarProps {
-  onFeedback: (feedbackType: userFeedbackType) => void;
+  onFeedback: (feedbackType: userFeedbackType, comment?: string) => void;
 }
 
 export interface ThumbButtonsProps {
   activeButton: string | null;
-  onVote: (type: VoteType) => void;
+  onVote: (type: VoteType, comment?: string) => void;
 }
 
 export interface FeedbackTooltipProps {

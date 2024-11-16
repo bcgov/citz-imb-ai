@@ -4,15 +4,22 @@ import { userFeedbackType } from '@/types';
 const sendFeedback = async (
   feedbackType: userFeedbackType,
   recordingHash: string,
+  comment?: string,
 ): Promise<string> => {
+  const formData = new FormData();
+  formData.append('feedback', feedbackType);
+  formData.append('recording_id', recordingHash);
+  if (comment) {
+    formData.append('comment', comment);
+  }
+
   // Send a POST request to the feedback endpoint
   const response = await fetch('/api/feedbackrag/', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
     },
-    body: `feedback=${encodeURIComponent(feedbackType)}&recording_id=${encodeURIComponent(recordingHash)}`,
+    body: formData,
   });
 
   // Throw an error if the response is not successful

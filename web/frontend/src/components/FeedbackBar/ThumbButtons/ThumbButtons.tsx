@@ -19,10 +19,10 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   };
 
   // Handle submission of text feedback from tooltip
-  // Currently just logs to console and closes tooltip
-  // TODO: Implement actual feedback submission logic
   const handleSubmitFeedback = (comment: string) => {
-    console.log('Feedback:', comment);
+    if (selectedRating) {
+      onVote(selectedRating, comment);
+    }
     setShowTooltip(false);
   };
 
