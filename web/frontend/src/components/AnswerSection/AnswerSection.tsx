@@ -49,7 +49,8 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 
   // Create a debounced version of the hover tracking function
   const debouncedTrackHover = useRef(
-    debounce((chatIndex: number, duration: number) => {
+    debounce((...args: [number, number]) => {
+      const [chatIndex, duration] = args;
       trackLLMResponseInteraction(chatIndex, 'hover', duration);
     }, 1000),
   ).current;
@@ -167,16 +168,16 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
               <div>
                 <strong>References:</strong>
                 {item.references.map((ref, index) => (
-                  <ul>
-                    <li key={index}>
+                  <ul key={`ref-${index}`}>
+                    <li key={`act-${index}`}>
                       {ref.refActId ? 'Act Name: ' + ref.refActId : ''}
                     </li>
-                    <li key={index}>
+                    <li key={`section-${index}`}>
                       {ref.refSectionId
                         ? 'Section Id: ' + ref.refSectionId
                         : ''}
                     </li>
-                    <li key={index}>
+                    <li key={`text-${index}`}>
                       {ref.refText ? 'Text: ' + ref.refText : ''}
                     </li>
                     <hr></hr>
