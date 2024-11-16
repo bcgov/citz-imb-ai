@@ -13,9 +13,17 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
 
   // Handle initial vote click and show tooltip for additional feedback
   const handleVoteClick = (type: VoteType) => {
-    setSelectedRating(type);
-    setShowTooltip(true);
-    onVote(type);
+    // If clicking the same button that's already active, just deactivate it
+    if (activeButton === type) {
+      setSelectedRating(null);
+      setShowTooltip(false);
+      onVote(type);
+    } else {
+      // If clicking a different button or first time clicking, show tooltip
+      setSelectedRating(type);
+      setShowTooltip(true);
+      onVote(type);
+    }
   };
 
   // Handle submission of text feedback from tooltip
