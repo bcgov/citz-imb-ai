@@ -3,7 +3,6 @@ import React, { createContext, useEffect, useState } from 'react';
 import runChat from '@/api/chat';
 import sendFeedback from '@/api/feedback';
 import {
-  ApiResponse,
   ChatHistory,
   ContextProps,
   ContextProviderProps,
@@ -70,8 +69,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         if (lastMessage && lastMessage.type === 'ai') {
           lastMessage.content += nextWord;
         }
-        
-return newMessages;
+
+        return newMessages;
       });
       if (index === totalWords - 1) {
         setGenerationComplete(true);
@@ -99,16 +98,11 @@ return newMessages;
       setShowResult(true);
       setInput('');
       setGenerationComplete(false);
-      let response: { response: ApiResponse; recordingHash: string };
       const currentPrompt = prompt !== undefined ? prompt : input;
-
-      // Get chat history from session storage
-      const chatHistory: ChatHistory[] = JSON.parse(
+      const chatHistory = JSON.parse(
         sessionStorage.getItem('chatHistory') || '[]',
       );
-
-      // Run chat with current prompt and chat history
-      response = await runChat(currentPrompt, chatHistory);
+      const response = await runChat(currentPrompt, chatHistory);
 
       // Set recording hash for feedback
       setRecordingHash(response.recordingHash);
@@ -188,15 +182,24 @@ return newMessages;
 
   // Function to refresh the Keycloak token
   const refreshToken = () => {
-    keycloak.updateToken(70).then((refreshed) => {
-      if (refreshed) {
-        localStorage.setItem('keycloak-token', keycloak.token ?? '');
-        localStorage.setItem(
-          'keycloak-refresh-token',
-          keycloak.refreshToken ?? '',
-        );
-      }
-    });
+    keycloak
+      .updateToken(70)
+      .then((refreshed) => {
+        if (refreshed) {
+          localStorage.setItem('keycloak-token', keycloak.token ?? '');
+          localStorage.setItem(
+            'keycloak-refresh-token',
+            keycloak.refreshToken ?? '',
+          );
+        }
+
+        return refreshed;
+      })
+      .catch((error) => {
+        console.error('Failed to refresh token:', error);
+        KeycloakLogout();
+        throw error;
+      });
   };
 
   // Effect to initialize Keycloak and set up event listeners
