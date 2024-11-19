@@ -50,35 +50,24 @@ def fetch_rag_feedback(record_id):
 
 def fetch_human_feedback(record_id):
     conn = tru_connect()
-    cur = conn.cursor()
-    try:
-        cur.execute(
-            """
-            SELECT 
-                R.input,
-                F.multi_result,
-                F.result,
-                R.app_id
-            FROM public.records R 
-            LEFT JOIN feedbacks F ON F.record_id = R.record_id 
-            WHERE R.record_id = %s
-            """,
-            (record_id,),
-        )
-        rows = cur.fetchall()
-        return rows
-    finally:
-        cur.close()
-        conn.close()
+    cur = conn.cursor()  # creating a cursor
+    cur.execute(
+        """
+        SELECT R.input, F.multi_result, F.result, R.app_id result FROM public.records R 
+        LEFT JOIN feedbacks F ON F.record_id = R.record_id WHERE
+        R.record_id= %s
+    """,
+        (record_id,),
+    )
+    rows = cur.fetchall()
+    return rows
 
 
 def get_feedback_value(feedback):
-    if feedback == "up_vote":
+    if feedback == "thumbs_up":
         return 1
-    elif feedback == "down_vote":
+    else:
         return -1
-    else:  # no_vote
-        return 0
 
 
 def process_feedback(index, feedback, record_id=None, bulk=False):
@@ -106,27 +95,22 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
         return None
 
 
-def process_rag_feedback(feedback, record_id=None, tru=None, comment=None):
-    feedback_value = get_feedback_value(feedback)
-        
-    feedback_data = {
-        "name": "Human Feedback",
-        "record_id": record_id,
-        "app_id": APP_ID,
-        "result": feedback_value,
-    }
-    
-    # Add comment to multi_result if provided
-    if comment:
-        feedback_data["multi_result"] = json.dumps({
-            "comment": comment,
-            "vote_type": feedback  # Store the original vote type
-        })
-    
-    tru_feedback = tru.add_feedback(**feedback_data)
-    
+def process_rag_feedback(feedback, record_id=None, tru=None):
+    if feedback == "up_vote":
+        feedback = 1
+    else:
+        feedback = -1
+    tru_feedback = tru.add_feedback(
+        name="Human Feedack",
+        record_id=record_id,
+        app_id=APP_ID,
+        result=feedback,
+    )
     rows = fetch_human_feedback(record_id)
-    return rows if rows else None
+    if rows:
+        return rows
+    else:
+        return None
 
 
 def tru_rag(rag):
