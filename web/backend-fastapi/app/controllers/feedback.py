@@ -3,6 +3,7 @@ from app.dependencies import get_user_info
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from app.models import neo4j, trulens, rag
 import json
+import logging
 
 router = APIRouter()
 
@@ -75,9 +76,10 @@ async def feedbackrag(
             "message": "No feedback data found"
         }
     except Exception as e:
+        logging.error(f"Error processing feedback: {str(e)}")
         return {
             "status": False,
-            "message": f"Error processing feedback: {str(e)}"
+            "message": "An internal error has occurred. Please try again later."
         }
 
 
