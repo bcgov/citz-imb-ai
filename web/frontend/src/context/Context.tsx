@@ -64,7 +64,6 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       await sendFeedback(feedbackType, recordingHash, comment);
     } catch (error) {
       console.error('Error sending feedback:', error);
-      // Optionally handle error state
     }
   };
 
