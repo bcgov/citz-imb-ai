@@ -74,7 +74,7 @@ This workbook uses an Intel extension for Pytorch that will not work on your loc
 
 The variables you may want to adjust:
 
-- `batch_size` -> Should be powers of 2 and correspond with your CPU hardware
+- `batch_size` -> Should be powers of 2
 - `learning_rate` -> Smaller number = smaller steps towards the goal
 - `num_epochs` -> Additional epochs may have better results, but there is a plateau
 - `running_locally` -> True if running not on the AI Operator
