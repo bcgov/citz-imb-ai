@@ -27,12 +27,6 @@
   &:active {
     background-color: var(--sidebar-hover-color-active);
   }
-
-  // Styles for the scroll icon
-  img {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 // Tooltip styles for the scroll button
@@ -49,4 +43,8 @@
   white-space: nowrap;
   z-index: 1;
   animation: fadeIn 0.3s ease-in-out;
+}
+
+.scroll-button-icon {
+  color: var(--main-result-text-color);
 }

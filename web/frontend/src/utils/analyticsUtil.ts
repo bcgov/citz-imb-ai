@@ -1,15 +1,16 @@
 import {
+  sendAnalyticsUpdatesToBackend,
+  sendFullAnalyticsDataToBackend,
+} from '@/api/analytics';
+import {
   AnalyticsData,
+  AnalyticsUpdate,
   ChatInteraction,
   TopKItem,
-  AnalyticsUpdate,
 } from '@/types';
-import {
-  sendFullAnalyticsDataToBackend,
-  sendAnalyticsUpdatesToBackend,
-} from '@/api/analytics';
-import { generateUUID } from './uuidUtil';
+
 import { debounce } from './debounceUtil';
+import { generateUUID } from './uuidUtil';
 
 // Constants
 const ANALYTICS_STORAGE_KEY = 'analyticsData';
@@ -22,6 +23,7 @@ let updateQueue: AnalyticsUpdate[] = [];
 // Helper functions
 export const getAnalyticsData = (): AnalyticsData => {
   const data = sessionStorage.getItem(ANALYTICS_STORAGE_KEY);
+
   return data
     ? JSON.parse(data)
     : { sessionTimestamp: '', sessionId: '', userId: '', chats: [] };

@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
-import './ScrollButton.scss';
-import { assets } from '@/assets/icons/assets';
+import { useEffect, useState } from 'react';
+
 import { ScrollButtonProps } from '@/types';
+import { CaretDown, CaretUp } from '@phosphor-icons/react';
+
+import './ScrollButton.scss';
 
 // ScrollButton component
 const ScrollButton: React.FC<ScrollButtonProps> = ({
@@ -38,6 +40,7 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({
     if (element) {
       element.addEventListener('scroll', handleScroll);
     }
+
     return () => {
       if (element) {
         element.removeEventListener('scroll', handleScroll);
@@ -47,16 +50,12 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({
 
   // Render the scroll button
   return (
-    <div className="scroll-button-container">
+    <div className='scroll-button-container'>
       <button
-        className="scroll-button"
+        className='scroll-button scroll-button-icon'
         onClick={scrollTo}
-        title={atBottom ? 'Scroll to Top' : 'Scroll to Bottom'}
-      >
-        <img
-          src={atBottom ? assets.up_arrow : assets.down_arrow}
-          alt="scroll icon"
-        />
+        title={atBottom ? 'Scroll to Top' : 'Scroll to Bottom'}>
+        {atBottom ? <CaretUp size={20} /> : <CaretDown size={20} />}
       </button>
     </div>
   );

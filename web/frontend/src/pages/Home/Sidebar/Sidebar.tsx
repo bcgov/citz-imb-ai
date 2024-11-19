@@ -1,7 +1,9 @@
-import { useState, useContext, Key } from 'react';
-import { assets } from '@/assets/icons/assets';
-import { Context } from '@/context/Context';
+import { Key, useContext, useState } from 'react';
+
 import ModalDialog from '@/components/Modal/ModalDialog';
+import { Context } from '@/context/Context';
+import { Chat, Plus, UserCircle } from '@phosphor-icons/react';
+
 import './Sidebar.scss';
 
 // Sidebar component
@@ -59,27 +61,26 @@ const Sidebar = () => {
     <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
       {/* Sidebar header */}
       {/* <div className="sidebar-header" title="Menu" onClick={toggleSidebar}>
-        <img src={assets.menu_icon} className="menu-icon" alt="menu icon" />
+        <List size={24} />
       </div> */}
 
       {/* New chat button */}
-      <div onClick={() => newChat()} className="new-chat" title="New Chat">
-        <img src={assets.plus_icon} alt="new chat" />
+      <div onClick={() => newChat()} className='new-chat' title='New Chat'>
+        <Plus size={24} />
         {!isCollapsed ? <p>New Chat</p> : null}
       </div>
 
       {/* Recent prompts section (visible when expanded) */}
       {!isCollapsed ? (
-        <div className="recent">
-          <p className="recent-title">Recent</p>
-          <div className="recent-entries">
+        <div className='recent'>
+          <p className='recent-title'>Recent</p>
+          <div className='recent-entries'>
             {prevPrompts.map((item: string, index: Key) => (
               <div
                 key={index}
                 onClick={() => loadPrompt(item)}
-                className="recent-entry"
-              >
-                <img src={assets.message_icon} alt="" />
+                className='recent-entry'>
+                <Chat size={24} />
                 <p>
                   {item.slice(0, 18)} {'...'}
                 </p>
@@ -90,15 +91,15 @@ const Sidebar = () => {
       ) : null}
 
       {/* Logout button */}
-      <div onClick={openModal} className="bottom" title="Logout">
-        <img src={assets.user_icon} alt="user" />
+      <div onClick={openModal} className='bottom' title='Logout'>
+        <UserCircle size={26} />
         {!isCollapsed ? <p>Logout</p> : null}
       </div>
 
       {/* Logout confirmation modal */}
       {isModalVisible && (
         <ModalDialog
-          title="Logout"
+          title='Logout'
           description={
             <>
               <p>Do you really want to log out?</p>
