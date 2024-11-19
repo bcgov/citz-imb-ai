@@ -23,13 +23,74 @@ Users should be able to take existing acts and laws data stored in their local d
 
 ## Export Nodes from Neo4j
 
+This part uses the `Convert Nodes for Annotation` notebook.
+
+1. Open and log in to the Neo4j portal
+1. Run a query to select a subset of nodes
+
+```sql
+-- e.g. This gets a set of 300 after the first 300
+MATCH (n:UpdatedChunk) SKIP 300 RETURN n LIMIT 300
+```
+
+3. Use the option in Neo4j to export to JSON
+
 ## Convert Nodes
 
+1. Move the exported Neo4j data to the folder with the `Convert Nodes for Annotation` file.
+   1. Ensure the name of the file matches what is in the script. (`neo4j_export.json`)
+1. Run the script to output the `doccano_import.jsonl` file.
+
 ## Annotate Data
+
 ### Manually with Doccano
+
+If manually annotating, start the Docanno containers first, then...
+
+1. Create a project in Doccano if one does not already exist.
+   1. Type should be `Sequence Labeling`
+   1. Give the project a name
+   1. Do not allow overlapping spans
+   1. The tags here are not your project labels
+1. Create the labels you need for annotation.
+1. Under **Dataset > Actions**, select **Import Dataset**.
+   1. File format is JSONL
+   1. `Column Data` = `text`
+   1. `Column Label` = `label`
+   1. `Encoding` = `utf_8`
+   1. Select the file `doccano_import.jsonl` and import
+1. Choose `Start Annotation` and annotate your records
+   1. For demos, see the [Doccano webpage](https://doccano.github.io/doccano/tutorial/).
 
 ### Automatically with AWS Bedrock
 
-## Train Model
+WIP
+
+## Training a Model
+
+This part uses the `Training a Model` workbook.
+
+This workbook uses an Intel extension for Pytorch that will not work on your local system. Change `running_locally` to `True` for local runs.
+
+The variables you may want to adjust:
+
+- `batch_size` -> Should be powers of 2 and correspond with your CPU hardware
+- `learning_rate` -> Smaller number = smaller steps towards the goal
+- `num_epochs` -> Additional epochs may have better results, but there is a plateau
+- `running_locally` -> True if running not on the AI Operator
+- `entity_types` -> Must include all possible labels
+
+1. Export the Docanno annotation data to a `docanno_export.jsonl` file in this folder. If you've used a different name, you must adjust this in the workbook.
+1. Run the notebook. A model will be saved under `exported_models/fine_tuned_ner_model`.
 
 ## Annotation by Model
+
+This section uses the `Annotation by Model` workbook.
+
+You must have exported the model from `Training a Model`.
+
+The variable `label_list` must include all labels you wish the model to apply to the texts.
+
+1. Ensure the `doccano_import.jsonl` file is available for reading. Otherwise, provide your own file and adjust the workbook.
+1. Run the workbook and observe that a `model_annotated_input.jsonl` file should have been created.
+1. Visually inspect its results by importing the data into Doccano.
