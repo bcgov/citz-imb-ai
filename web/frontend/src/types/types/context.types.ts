@@ -19,7 +19,10 @@ export interface ContextProps {
   isAuthenticated: boolean;
   KeycloakLogin: () => void;
   KeycloakLogout: () => void;
-  sendUserFeedback: (feedbackType: userFeedbackType) => Promise<void>;
+  sendUserFeedback: (
+    feedbackType: userFeedbackType,
+    comment?: string,
+  ) => Promise<void>;
   generationComplete: boolean;
   recordingHash: string;
   errorState: {
