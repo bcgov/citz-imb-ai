@@ -8,8 +8,7 @@ WITH raw_data AS (
         record_json::json AS record_json
     FROM 
         {{ source('public', 'records') }}  -- Use dbt's source function
-    WHERE
-        app_id = 'TopK_Feedback_System_v1'    
+    -- Removing app_id filter to show all data
 ), 
 parsed_data AS (
     SELECT 
@@ -31,11 +30,19 @@ parsed_data AS (
 feedback_data AS (
     SELECT 
         record_id,
-        array_agg(result) AS result  -- Replace this with actual column names in feedbacks
+        array_agg(result) AS result,
+        array_agg(comment) AS comment,
+        array_agg(CASE 
+            WHEN result = 1 THEN 'up_vote'
+            WHEN result = -1 THEN 'down_vote'
+            ELSE 'no_vote'
+        END) AS vote_type,
+        array_agg(result::float) AS feedback_score,
+        array_agg(created_at) AS feedback_timestamp
     FROM 
-        {{ source('public', 'feedbacks') }}  -- Join feedbacks table
+        {{ source('public', 'feedbacks') }}
     GROUP BY 
-        record_id  -- Group by record_id to aggregate feedbacks
+        record_id
 )
 
 -- Final SELECT statement to retrieve data from the last CTE
@@ -45,9 +52,12 @@ feedback_data AS (
 -- Final join to merge parsed_data with feedback_data based on record_id hash
 SELECT 
     pd.*,
-    fb.result  -- Include feedback details
+    fb.result,
+    fb.comment AS user_comment,
+    fb.vote_type,
+    fb.feedback_score,
+    fb.feedback_timestamp
 FROM 
     parsed_data pd
 LEFT JOIN 
-    feedback_data fb
-    ON pd.record_id = fb.record_id
+    feedback_data fb ON pd.record_id = fb.record_id
