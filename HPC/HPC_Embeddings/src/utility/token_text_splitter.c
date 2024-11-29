@@ -73,7 +73,7 @@ char *to_lowercase_avx512(char *str, size_t len)
         __m512i chunk = _mm512_loadu_si512((__m512i *)(str + i));
 
         // Create a mask where each bit is set if the corresponding byte is less than or equal to 'Z'
-        __mmask64 mask = _mm512_cmplt_epu8_mask(chunk, upper_limit);
+        __mmask64 mask = _mm512_cmple_epu8_mask(chunk, upper_limit);
 
         // Update the mask to only include bytes that are greater than or equal to 'A'
         mask &= _mm512_cmpge_epu8_mask(chunk, lower_limit);
@@ -315,163 +315,6 @@ tokens_t get_token(HashTable *table, const char *text)
     return token_result;
 }
 
-tokens_t get_token2(HashTable *table, const char *text)
-{
-    size_t len = strlen(text);
-    char *buffer = malloc(len + 1);
-    char *prefix_buffer = malloc(len + 3);
-    tokens_t token_result;
-    token_result.token_values = malloc((len + 1) * sizeof(int));
-    token_result.word = strdup(text);
-    token_result.token_count = 0;
-
-    if (buffer == NULL || prefix_buffer == NULL || token_result.token_values == NULL || token_result.word == NULL)
-    {
-        perror("Failed to allocate memory");
-        free(buffer);
-        free(prefix_buffer);
-        free(token_result.token_values);
-        free(token_result.word);
-        exit(EXIT_FAILURE);
-    }
-
-    for (size_t i = 0; i < len;)
-    {
-        int found = 0;
-        for (size_t j = len - i; j > 0; j--)
-        {
-            strncpy(buffer, text + i, j);
-            buffer[j] = '\0';
-
-            char *processed_buffer = split_punctuations_and_to_lowercase(buffer);
-            if (!processed_buffer)
-            {
-                perror("Failed to process buffer");
-                free(buffer);
-                free(prefix_buffer);
-                free(token_result.token_values);
-                free(token_result.word);
-                exit(EXIT_FAILURE);
-            }
-
-            char *key_found = check_substring(table, processed_buffer);
-            free(processed_buffer);
-
-            if (key_found)
-            {
-                token_result.token_values[token_result.token_count++] = atoi(key_found);
-                i += j;
-                found = 1;
-
-                if (i < len && text[i] != ' ')
-                {
-                    size_t remaining_len = len - i;
-                    for (size_t k = remaining_len; k > 0; k--)
-                    {
-                        strncpy(buffer, text + i, k);
-                        buffer[k] = '\0';
-
-                        processed_buffer = split_punctuations_and_to_lowercase(buffer);
-                        if (!processed_buffer)
-                        {
-                            perror("Failed to process buffer");
-                            free(buffer);
-                            free(prefix_buffer);
-                            free(token_result.token_values);
-                            free(token_result.word);
-                            exit(EXIT_FAILURE);
-                        }
-                        if (isdigit((unsigned char)*processed_buffer))
-                        {
-                            snprintf(prefix_buffer, k + 3, "%s", processed_buffer);
-                        }
-                        else
-                        {
-                            snprintf(prefix_buffer, k + 3, "##%s", processed_buffer);
-                        }
-                        free(processed_buffer);
-
-                        key_found = check_substring(table, prefix_buffer);
-                        if (key_found)
-                        {
-                            token_result.token_values[token_result.token_count++] = atoi(key_found);
-                            i += k;
-                            // remaining_len = len - i;
-                            found = 1;
-                            break;
-                        }
-                    }
-                    if (!found)
-                        break;
-                }
-
-                break;
-            }
-        }
-
-        if (!found)
-        {
-            printf("Unrecognized token part: %c\n", text[i]);
-            i++;
-        }
-    }
-
-    free(buffer);
-    free(prefix_buffer);
-
-    return token_result;
-}
-
-// Function to split text into words
-void split_text_to_words2(const char *text, char ***words, int *word_count, MemoryPool *pool)
-{
-    // printf("%s ", text);
-    // return;
-    char *text_copy;
-    text_copy = pool_strdup(pool, text);
-    if (text_copy == NULL)
-    {
-        perror("Failed to duplicate text");
-        exit(EXIT_FAILURE);
-    }
-    char *token = strtok(text_copy, " ");
-    int count = 0;
-    char **result = NULL;
-
-    while (token)
-    {
-        char **temp;
-        temp = realloc(result, sizeof(char *) * (count + 1));
-        if (temp == NULL)
-        {
-            // Handle memory allocation failure
-            for (int i = 0; i < count; i++)
-            {
-                free(result[i]);
-            }
-            free(result);
-            // free(text_copy);
-            *words = NULL;
-            *word_count = 0;
-            perror("Failed to reallocate memory");
-            exit(EXIT_FAILURE);
-        }
-        result = temp;
-        result[count] = pool_strdup(pool, token);
-        if (result[count] == NULL)
-        {
-            perror("Failed to duplicate token");
-            exit(EXIT_FAILURE);
-        }
-        count++;
-        token = strtok(NULL, " ");
-    }
-
-    *words = result;
-    *word_count = count;
-    free(text_copy);
-}
-
 // handle remaining characters
 void less_than_64_bytes_extract_words(size_t len, char *text_copy, char *token_start, int *count, char **result, MemoryPool *pool)
 {
@@ -654,41 +497,6 @@ void split_text_to_words(const char *text, char ***words, int *word_count, Memor
 
     *words = result;
     *word_count = count;
-}
-
-// Function to split text into tokens and process them
-void token_text_splitter1(HashTable *table, const char *text, MemoryPool *pool)
-{
-    char **words;
-    int word_count;
-
-    printf("%s \n", text);
-
-    char *processed_buffer = split_punctuations_and_to_lowercase(text);
-    split_text_to_words(processed_buffer, &words, &word_count, pool);
-
-    for (int i = 0; i < word_count; i++)
-    {
-        tokens_t token = get_token(table, words[i]);
-
-        // printf("Original word: %s\n", token.word);
-        // printf("Token count: %d\n", token.token_count);
-        // printf("Token values: ");
-        for (int j = 0; j < token.token_count; j++)
-        {
-            printf("%d, ", token.token_values[j]);
-        }
-        // printf("\n");
-
-        free(token.token_values);
-        free(token.word);
-    }
-
-    // for (int i = 0; i < word_count; i++) {
-    //     free(words[i]);
-    // }
-    free(words);
-    free(processed_buffer);
 }
 
 // Function to split text into tokens and return them
