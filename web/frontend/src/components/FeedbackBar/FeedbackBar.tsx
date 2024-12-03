@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 
 import CopyButton from '@/components/FeedbackBar/CopyButton/CopyButton';
+import RegenerateButton from '@/components/FeedbackBar/RegenerateButton/RegenerateButton';
 import ThumbButtons from '@/components/FeedbackBar/ThumbButtons/ThumbButtons';
 import { Context } from '@/context/Context';
 import { VoteType } from '@/types';
@@ -31,6 +32,7 @@ const FeedbackBar = () => {
     <div className='feedback-bar'>
       <ThumbButtons activeButton={activeButton} onVote={handleVote} />
       <CopyButton />
+      <RegenerateButton />
     </div>
   );
 };
