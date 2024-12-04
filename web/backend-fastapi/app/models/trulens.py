@@ -86,10 +86,10 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
         multi_result = {"bulk": []}
         feedback = feedback.split(",")
         for feedback_value in feedback:
-            multi_result["bulk"].append(get_feedback_value(feedback_value))
+            multi_result["bulk"].append(int(get_feedback_value(feedback_value)))
         multi_result = json.dumps(multi_result)
     else:
-        feedbackvalue = get_feedback_value(feedback)
+        feedbackvalue = int(get_feedback_value(feedback))
         multi_result = json.dumps({index: [feedbackvalue]})
 
     tru_feedback = tru.add_feedback(
@@ -107,7 +107,7 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
 
 
 def process_rag_feedback(feedback, record_id=None, tru=None, comment=None):
-    feedback_value = get_feedback_value(feedback)
+    feedback_value = int(get_feedback_value(feedback))
         
     feedback_data = {
         "name": "Human Feedback",
