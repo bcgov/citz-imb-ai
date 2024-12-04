@@ -120,7 +120,7 @@ double traverse_directory(const char *dirpath, file_info_t **files, size_t *file
             snprintf(filepath, sizeof(filepath), "%s/%s", dirpath, entry->d_name);
             double time_taken = read_file_to_memory(filepath, &(*files)[*file_index]);
             if (time_taken != -1) {
-                printf("Loaded %s in %.6f seconds\n", filepath, time_taken);
+                //printf("Loaded %s in %.6f seconds\n", filepath, time_taken);
                 total_time += time_taken;
                 (*file_index)++;
             }
@@ -183,9 +183,9 @@ void load_file_to_memory(char *directory_path, file_info_t **files, size_t *num_
 
     *num_files = file_index;
 
-    printf("Total time to load all files: %.6f seconds\n", total_time);
-    printf("Total execution time: %.6f seconds\n", elapsed);
-    printf("Allocated for %zu files, traversed %zu files\n", max_files, *num_files);
+    //printf("Total time to load all files: %.6f seconds\n", total_time);
+    //printf("Total execution time: %.6f seconds\n", elapsed);
+    //printf("Allocated for %zu files, traversed %zu files\n", max_files, *num_files);
 }
 
 void init_dram_data(char *directory_path, directory_info_t *dir_info) {

@@ -10,6 +10,7 @@
 #include <sched.h>
 #include "data_structures/hash_table.h"
 #include "load_tokens.h"
+#include "../include/mpi_def.h"
 
 int main(int argc, char *argv[])
 {
@@ -63,7 +64,7 @@ int main(int argc, char *argv[])
     }
 
     int print_output = 0;
-    if (argc > 3)
+    if (argc > 4)
     {    
         print_output = 1;
     }
@@ -73,10 +74,29 @@ int main(int argc, char *argv[])
     if (rank == 0)
     {
         process_acts_reg(argv[2], print_output, table, 0);
+	
+	// Wait for rank 1 completion
+        int completion_signal;
+        MPI_Recv(&completion_signal, 1, MPI_INT, 1, 98, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        printf("Rank 0 received completion from rank 1\n");
+
+        // Send termination to Python
+        MPI_Datatype section_type;
+        create_mpi_section_type(&section_type);
+        
+        MPISection end_section = {0};
+        strcpy(end_section.content, "END_OF_TRANSMISSION");
+        MPI_Send(&end_section, 1, section_type, 2, 99, MPI_COMM_WORLD);
+        
+        MPI_Type_free(&section_type);
     }
     else
     {
         process_acts_reg(argv[3], print_output, table, 1);
+
+	// Signal completion to rank 0
+        int completion_signal = 1;
+        MPI_Send(&completion_signal, 1, MPI_INT, 0, 98, MPI_COMM_WORLD);
     }
 
     printf("Completed work from rank %d of %d.\n", rank, size);

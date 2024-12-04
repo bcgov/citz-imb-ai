@@ -1,3 +1,6 @@
+#ifndef XML_PARSER
+#define XML_PARSER 
+
 #include <stdio.h>
 #include <string.h>
 #include <libxml/parser.h>
@@ -21,3 +24,5 @@ typedef struct {
 void parse_xml(const char *filename, const char *tag);
 Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections, int print_outputs);
 void free_sections(Section *sections, int num_sections);
+
+#endif

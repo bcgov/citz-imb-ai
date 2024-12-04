@@ -332,7 +332,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
         concat_url(&newSection.url, id);
         printf("Url is: %s\n", newSection.url);
         newSection.section_url = sectionUrl;
-        printf("Url is: %s\n", newSection.section_url);
+        printf("Section url is: %s\n", newSection.section_url);
         printf("\n");
         printf("-----------------------------------\n");
     }
