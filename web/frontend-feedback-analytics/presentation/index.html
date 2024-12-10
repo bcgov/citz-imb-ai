@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>A.I Technical Presentation</title>
+    <title>AI Technical Presentation</title>
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
@@ -243,7 +243,7 @@
           <section>
             <h2>Human in the Loop</h2>
             <p class="fragment">
-              To improve the A.I model we need to annotate and format the data
+              To improve the AI model we need to annotate and format the data
               properly. After the data is annotated we can use it to train the
               different models.
             </p>
@@ -261,22 +261,41 @@
             />
           </section>
           <section>
-            <h2>Annotating the data (NER)</h2>
+            <h2>Data Annotation (NER)</h2>
             <p class="fragment">
               For improving our retrieval and enhancing our result we are using
-              an A.I technique called NER (Named Entity Recognition) to annotate
-              the data. this is done by using a tool called Diffgram.
+              an AI technique called NER (Named Entity Recognition) to annotate
+              the data.
+            </p>
+            <p class="fragment">
+              This can be done manually with tools such as Diffgram or Doccano or can be automated using an AI model to pre-annotate.
             </p>
           </section>
           <section>
+            <h3>Doccano</h3>
             <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/diffgram_annotation.jpg"
+              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/doccano_annotation.png"
             />
           </section>
-        </section>
-        <section>
           <section>
-            <img src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/ai_with_active_learning_.jpg" />
+            <h3>Assisted Annotation Process</h3>
+            <ul>
+              <li class="fragment">
+                Need large amounts of training data. 
+                Initial results suggest thousands of samples would be needed for reliable results.                
+              </li>
+              <li class="fragment">
+                Manually annotating this data takes people resources, but AI annotation is less accurate. For 5000 records:
+              </li>
+              <ul>
+                <li class="fragment">
+                  Manually: 8-10 days with high accuracy.
+                </li>
+                <li class="fragment">
+                  Automated with generative AI: only hours but is not accurate so far.
+                </li>
+              </ul>
+            </ul>
           </section>
         </section>
         <section>
@@ -286,10 +305,7 @@
               Getting this running in openshift and public cloud
             </li>
             <li class="fragment">
-              Not enough full time developers working on the project
-            </li>
-            <li class="fragment">
-              Having a good understanding of the data, the A.I algorithms, A.I
+              Having a good understanding of the data, the AI algorithms, AI
               workflows and performance compute is key
             </li>
           </ul>
