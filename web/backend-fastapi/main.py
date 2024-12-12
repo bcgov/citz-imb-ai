@@ -34,7 +34,7 @@ app.include_router(chat_RAG.router)
 app.include_router(analytics.router)
 
 # Register middleware
-# app.add_middleware(LoggingMiddleware)
+app.add_middleware(LoggingMiddleware)
 app.add_middleware(AuthenticationMiddleware)
 
 load_dotenv(
