@@ -34,4 +34,6 @@ models:
       +materialized: materialized_view
     frontend:
       +schema: frontend
-      +materialized: materialized_view
+      +materialized: table
+      normalized_analytics:
+        +materialized: table
