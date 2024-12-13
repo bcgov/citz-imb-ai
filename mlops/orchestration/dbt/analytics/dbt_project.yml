@@ -31,9 +31,7 @@ models:
   analytics:
     trulens:
       +schema: trulens
-      +materialized: view
+      +materialized: materialized_view
     frontend:
       +schema: frontend
-      +materialized: table
-      normalized_analytics:
-        +materialized: table
+      +materialized: materialized_view
