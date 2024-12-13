@@ -65,20 +65,6 @@ services:
       - zuba
   ########################## End Jupyter Notebook ####################################
 
-  ########################## gradio #########################################
-  gradio:
-    container_name: gradio
-    restart: unless-stopped
-    build:
-      context: ../gradio
-      dockerfile: Dockerfile
-    ports:
-      - "8080:8080"
-    platform: linux/amd64
-    networks:
-      - zuba
-  ########################## End gradio ####################################
-
   ############################ AIRFLOW #########################################
   airflow_postgres:
     container_name: airflow_postgres
