@@ -1,4 +1,4 @@
-# GitHub Actions workflow for building and tagging the APP image on PR
+# GitHub Actions workflow for building and tagging the API image on PR
 name: Backend Build and Push on PR
 
 on:
@@ -13,7 +13,7 @@ on:
       - web/backend-fastapi/**
 
 jobs:
-  # Job to build, tag, and push the APP image
+  # Job to build, tag, and push the API image
   build-tag-push:
     environment: dev
     runs-on: ubuntu-latest
@@ -24,16 +24,9 @@ jobs:
       with:
         fetch-depth: 0
 
-    # Login to the Openshift Cluster
-    - name: Login to Openshift
-      uses: redhat-actions/oc-login@v1
-      with:
-        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
-        openshift_token: ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
-        namespace: ${{ secrets.OPENSHIFT_TOOLS_NAMESPACE }}
 
-    # Login to BC Gov Artifactory Docker Image Repository
-    - name: Login to Artifactory
+    # Login to BC Gov OCP ImageStream
+    - name: Login to OCP
       run : |
         docker login ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_TOOLS_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
 
