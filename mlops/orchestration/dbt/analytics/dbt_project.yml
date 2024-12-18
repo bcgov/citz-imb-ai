@@ -31,7 +31,16 @@ models:
   analytics:
     trulens:
       +schema: trulens
-      +materialized: materialized_view
+      trulens_normalize:
+        +materialized: materialized_view
+      trulens_base:
+        +materialized: materialized_view
+      trulens_feedback:
+        +materialized: materialized_view
+      trulens_timings:
+        +materialized: materialized_view
+      trulens_responses:
+        +materialized: materialized_view
     frontend:
       +schema: frontend
       +materialized: table
