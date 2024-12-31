@@ -295,7 +295,7 @@ tokens_t get_token(HashTable *table, const char *text)
             if (key_found)
             {
                 token_result.token_values[token_result.token_count++] = atoi(key_found);
-                prefix = true;
+                prefix = !isdigit((unsigned char)*buffer); // Reset prefix for numbers
                 i += j;
                 found = true;
                 break;
