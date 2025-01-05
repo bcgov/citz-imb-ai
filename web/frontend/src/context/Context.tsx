@@ -35,6 +35,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [recentPrompt, setRecentPrompt] = useState<string>('');
   const [showResult, setShowResult] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+  const [isRegenerating, setIsRegenerating] = useState<boolean>(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [generationComplete, setGenerationComplete] = useState<boolean>(false);
@@ -282,6 +283,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     recordingHash,
     errorState,
     resetError,
+    isRegenerating,
+    setIsRegenerating,
   };
 
   // Render the Context Provider with the context value
