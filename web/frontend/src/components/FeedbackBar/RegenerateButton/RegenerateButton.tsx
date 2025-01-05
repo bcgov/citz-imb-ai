@@ -10,7 +10,13 @@ const RegenerateButton = () => {
     throw new Error('RegenerateButton must be used within a ContextProvider');
   }
 
-  const { recentPrompt, onSent, resetContext, setIsRegenerating } = context;
+  const {
+    recentPrompt,
+    onSent,
+    resetContext,
+    setIsRegenerating,
+    setPendingMessage,
+  } = context;
 
   const handleRegenerate = async () => {
     // Reset the context to clear previous messages
@@ -18,8 +24,10 @@ const RegenerateButton = () => {
     setIsRegenerating(true);
     // Send the most recent prompt again
     if (recentPrompt) {
+      setPendingMessage(recentPrompt);
       await onSent(recentPrompt);
       setIsRegenerating(false);
+      setPendingMessage(null);
     }
   };
 

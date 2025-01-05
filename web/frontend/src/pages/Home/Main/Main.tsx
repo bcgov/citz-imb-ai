@@ -20,7 +20,6 @@ const Main = () => {
   // State variables for UI control
   const [isModalVisible, setIsModalVisible] = useState(true);
   const [userScrolled, setUserScrolled] = useState(false);
-  const [pendingMessage, setPendingMessage] = useState<string | null>(null);
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
   // Error handling for context
@@ -42,6 +41,8 @@ const Main = () => {
     resetError,
     recordingHash,
     isRegenerating,
+    pendingMessage,
+    setPendingMessage,
   } = context;
 
   // Refs for DOM elements

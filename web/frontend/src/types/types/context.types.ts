@@ -32,6 +32,8 @@ export interface ContextProps {
   resetError: () => void;
   isRegenerating: boolean;
   setIsRegenerating: React.Dispatch<React.SetStateAction<boolean>>;
+  pendingMessage: string | null;
+  setPendingMessage: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export interface ContextProviderProps {
