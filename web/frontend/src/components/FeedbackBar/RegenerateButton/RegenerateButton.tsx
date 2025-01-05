@@ -1,8 +1,24 @@
+import { useContext } from 'react';
+
+import { Context } from '@/context/Context';
 import { ArrowClockwise } from '@phosphor-icons/react';
 
 const RegenerateButton = () => {
-  const handleRegenerate = () => {
-    console.log('Regenerate');
+  const context = useContext(Context);
+
+  if (!context) {
+    throw new Error('RegenerateButton must be used within a ContextProvider');
+  }
+
+  const { recentPrompt, onSent, resetContext } = context;
+
+  const handleRegenerate = async () => {
+    // Reset the context to clear previous messages
+    resetContext();
+    // Send the most recent prompt again
+    if (recentPrompt) {
+      await onSent(recentPrompt);
+    }
   };
 
   return (
