@@ -682,12 +682,13 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
     const int chunk_size = 255;
     const int overlap_size = 50;
     const int stride = chunk_size - overlap_size;
-    result.chunk_count = (total_tokens + stride - 1) / stride;
+    result.chunk_count = (total_tokens < chunk_size) ? 1 : ((total_tokens - overlap_size) / stride + 1);
     result.token_chunks = (int **)malloc(result.chunk_count * sizeof(int *));
 
     for (int i = 0; i < result.chunk_count; i++) {
         result.token_chunks[i] = (int *)malloc(chunk_size * sizeof(int));
-        int start = i * stride;
+
+        int start = (i == 0) ? 0 : (i * stride); // No overlap for the first chunk
         int remaining = total_tokens - start;
         int copy_size = (remaining < chunk_size) ? remaining : chunk_size;
 
