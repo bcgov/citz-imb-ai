@@ -500,7 +500,7 @@ void split_text_to_words(const char *text, char ***words, int *word_count, Memor
 }
 
 // Function to split text into tokens and return them
-TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool *pool)
+TokenizedData token_text_splitter1(HashTable *table, const char *text, MemoryPool *pool)
 {
     TokenizedData result;
     result.words = NULL;
@@ -538,6 +538,92 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
         // Free memory allocated in get_token
         free(token.token_values);
         free(token.word);
+    }
+
+    // Free intermediate buffers
+    free(words);
+    free(processed_buffer);
+
+    return result;
+}
+
+TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool *pool) {
+    TokenizedData result;
+    result.words = NULL;
+    result.token_values = NULL;
+    result.token_counts = NULL;
+    result.word_count = 0;
+    result.flattened_tokens = NULL;
+    result.flattened_count = 0;
+    result.token_chunks = NULL;
+    result.chunk_count = 0;
+
+    char **words;
+    int word_count;
+
+    // Preprocess the text
+    char *processed_buffer = split_punctuations_and_to_lowercase(text);
+    split_text_to_words(processed_buffer, &words, &word_count, pool);
+
+    // Allocate memory for the tokenized data
+    result.words = (char **)malloc(word_count * sizeof(char *));
+    result.token_values = (int **)malloc(word_count * sizeof(int *));
+    result.token_counts = (int *)malloc(word_count * sizeof(int));
+    result.word_count = word_count;
+
+    int total_tokens = 0;
+
+    for (int i = 0; i < word_count; i++) {
+        tokens_t token = get_token(table, words[i]);
+
+        // Store the word and its tokens
+        result.words[i] = strdup(words[i]); // Copy the word
+        result.token_counts[i] = token.token_count;
+
+        // Allocate memory for token values and copy them
+        result.token_values[i] = (int *)malloc(token.token_count * sizeof(int));
+        for (int j = 0; j < token.token_count; j++) {
+            result.token_values[i][j] = token.token_values[j];
+        }
+
+        total_tokens += token.token_count;
+
+        // Free memory allocated in get_token
+        free(token.token_values);
+        free(token.word);
+    }
+
+    // Create flattened tokens
+    result.flattened_tokens = (int *)malloc(total_tokens * sizeof(int));
+    result.flattened_count = total_tokens;
+
+    int index = 0;
+    for (int i = 0; i < word_count; i++) {
+        for (int j = 0; j < result.token_counts[i]; j++) {
+            result.flattened_tokens[index++] = result.token_values[i][j];
+        }
+    }
+
+    // Split flattened tokens into 255-token chunks with overlap
+    const int chunk_size = 255;
+    const int overlap_size = 50;
+    const int stride = chunk_size - overlap_size;
+    result.chunk_count = (total_tokens + stride - 1) / stride;
+    result.token_chunks = (int **)malloc(result.chunk_count * sizeof(int *));
+
+    for (int i = 0; i < result.chunk_count; i++) {
+        result.token_chunks[i] = (int *)malloc(chunk_size * sizeof(int));
+        int start = i * stride;
+        int remaining = total_tokens - start;
+        int copy_size = (remaining < chunk_size) ? remaining : chunk_size;
+
+        // Copy tokens for this chunk
+        memcpy(result.token_chunks[i], &result.flattened_tokens[start], copy_size * sizeof(int));
+
+        // Zero-pad if needed
+        if (copy_size < chunk_size) {
+            memset(&result.token_chunks[i][copy_size], 0, (chunk_size - copy_size) * sizeof(int));
+        }
     }
 
     // Free intermediate buffers
