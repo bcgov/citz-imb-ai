@@ -108,12 +108,14 @@ class MPIReceiver:
             )
 
             tokens = data.get('tokens', [])
-            print(f"Received section: {section.title} with {len(tokens)} tokens")
+            token_chunks = data.get('token_chunks', [])  # Extract token chunks
+            print(f"Received section: {section.title} with {len(tokens)} tokens and {len(token_chunks)} chunks")
 
-            return section, tokens
+            return section, tokens, token_chunks
         except Exception as e:
             print(f"Error receiving section: {e}")
-            return None, None
+            return None, None, None
+
         
     def handle_shutdown(self, signum, frame):
         print(f"\nReceived signal {signum}, saving data and shutting down...")
@@ -133,7 +135,7 @@ class MPIReceiver:
                 continue
                 
     def save_batch(self, rank):
-        """Save sections and their tokens from a specific rank"""
+        """Save sections, their tokens, and token chunks from a specific rank"""
         sections_with_tokens = self.sections_by_rank.get(rank, [])
         if not sections_with_tokens:
             return
@@ -152,9 +154,10 @@ class MPIReceiver:
             'sections': []
         }
 
-        for section, tokens in sections_with_tokens:
+        for section, tokens, token_chunks in sections_with_tokens:
             section_dict = asdict(section)
             section_dict['tokens'] = tokens  # Add tokens to the section data
+            section_dict['token_chunks'] = token_chunks  # Add token chunks to the section data
             data['sections'].append(section_dict)
 
         with open(output_path, 'w', encoding='utf-8') as f:
@@ -166,13 +169,14 @@ class MPIReceiver:
     def run(self):
         try:
             while self.running:
-                section, tokens = self.receive_section()
+                section, tokens, token_chunks = self.receive_section()
                 if section is None:  # Termination or error
                     break
 
                 source_rank = section.source_rank
                 if source_rank in self.sections_by_rank:
-                    self.sections_by_rank[source_rank].append((section, tokens))  # Store section and tokens
+                    # Store section, tokens, and chunks
+                    self.sections_by_rank[source_rank].append((section, tokens, token_chunks))
                     self.section_count_by_rank[source_rank] += 1
                     self.total_count += 1
 
@@ -192,7 +196,6 @@ class MPIReceiver:
             # Save remaining sections for all ranks
             for rank in self.sections_by_rank.keys():
                 self.save_batch(rank)
-
 
 def main():
     receiver = MPIReceiver()

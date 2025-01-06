@@ -136,6 +136,7 @@ const char punctuation_lookup[256] = {
     ['|'] = 1,
     ['}'] = 1,
     ['~'] = 1,
+    ['-'] = 1,
 };
 
 // Helper function to identify punctuation using SIMD
@@ -179,7 +180,7 @@ void mark_punctuation_avx512(const char *str, size_t len, char *punctuation_mask
 }
 
 // Function to split punctuations and convert to lowercase
-char *split_punctuations_and_to_lowercase(const char *str)
+char *split_punctuations_and_to_lowercase_old(const char *str)
 {
     size_t len = strlen(str);
 
@@ -252,6 +253,81 @@ char *split_punctuations_and_to_lowercase(const char *str)
     return result;
 }
 
+char *split_punctuations_and_to_lowercase(const char *str) {
+    size_t len = strlen(str);
+    char *lower_str = (char *)malloc(len + 1);
+    if (!lower_str) {
+        return NULL;
+    }
+    
+    // First pass: copy while handling UTF-8 NBSP (0xC2 0xA0)
+    size_t j = 0;
+    for (size_t i = 0; i < len; i++) {
+        unsigned char current = (unsigned char)str[i];
+        unsigned char next = (i + 1 < len) ? (unsigned char)str[i + 1] : 0;
+        
+        // Check for UTF-8 NBSP sequence (0xC2 0xA0)
+        if (current == 0xC2 && next == 0xA0) {
+            lower_str[j++] = ' '; // Replace with regular space
+            i++; // Skip the next byte
+            continue;
+        }
+        
+        lower_str[j++] = str[i];
+    }
+    lower_str[j] = '\0';
+    
+    // Update len to the new length after NBSP handling
+    len = j;
+
+    // Convert to lowercase
+    to_lowercase_avx512(lower_str, len);
+
+    // Rest of your original function remains the same
+    char *punctuation_mask = (char *)malloc(len);
+    if (!punctuation_mask) {
+        free(lower_str);
+        return NULL;
+    }
+
+    mark_punctuation_avx512(lower_str, len, punctuation_mask);
+
+    size_t new_len = len;
+    for (size_t i = 0; i < len; i++) {
+        if (punctuation_mask[i]) {
+            new_len += 2;
+        }
+    }
+
+    printf("word is %s, total len is %zu \n", lower_str, new_len);
+
+    char *result = (char *)malloc(new_len + 1);
+    if (!result) {
+        free(lower_str);
+        free(punctuation_mask);
+        return NULL;
+    }
+
+    size_t i = 0;
+    j = 0;
+    while (i < len) {
+        char ch = lower_str[i];
+        if (punctuation_mask[i]) {
+            result[j++] = ' ';
+            result[j++] = ch;
+            result[j++] = ' ';
+        } else {
+            result[j++] = ch;
+        }
+        i++;
+    }
+    result[new_len] = '\0';
+
+    free(lower_str);
+    free(punctuation_mask);
+    return result;
+}
+
 tokens_t get_token(HashTable *table, const char *text)
 {
     size_t len = strlen(text);
@@ -281,11 +357,9 @@ tokens_t get_token(HashTable *table, const char *text)
             strncpy(buffer, text + i, j);
             buffer[j] = '\0';
 
-            if (isdigit((unsigned char)*buffer) || !prefix)
-            {
-                snprintf(prefix_buffer, j + 1, "%s", buffer);
-            }
-            else
+            if (!prefix) {
+                snprintf(prefix_buffer, j + 1, "%s", buffer); // First subword, no prefix
+             } else
             {
                 snprintf(prefix_buffer, j + 3, "##%s", buffer);
             }
@@ -303,7 +377,7 @@ tokens_t get_token(HashTable *table, const char *text)
         }
         if (!found)
         {
-            printf("Unrecognized token part: %c\n", text[i]);
+            printf("Unrecognized token part: %c, %#x \n", text[i], text[i]);
             i++;
             prefix = false;
         }

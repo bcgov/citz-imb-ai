@@ -66,6 +66,21 @@ void send_section_as_json(Section *section, TokenizedData *tokens, int rank)
     // Add the tokens array to the main JSON object
     json_object_object_add(json_section, "tokens", json_tokens);
 
+    // Add 255-token chunks to JSON object
+    json_object *json_chunks = json_object_new_array();
+    for (int i = 0; i < tokens->chunk_count; i++)
+    {
+        json_object *json_chunk = json_object_new_array();
+        for (int j = 0; j < 255; j++)
+        {
+            json_object_array_add(json_chunk, json_object_new_int(tokens->token_chunks[i][j]));
+        }
+        json_object_array_add(json_chunks, json_chunk);
+    }
+
+    // Add the chunks array to the main JSON object
+    json_object_object_add(json_section, "token_chunks", json_chunks);
+
     // Convert to string and send via MPI
     const char *json_str = json_object_to_json_string(json_section);
     int str_len = strlen(json_str);
@@ -143,6 +158,21 @@ void process_acts_reg(char *directory_path, int print_outputs, HashTable *table,
                     free(tokens.words);
                     free(tokens.token_values);
                     free(tokens.token_counts);
+                    // Free flattened_tokens
+                    if (tokens.flattened_tokens)
+                    {
+                        free(tokens.flattened_tokens);
+                    }
+
+                    // Free token_chunks
+                    if (tokens.token_chunks)
+                    {
+                        for (int i = 0; i < tokens.chunk_count; i++)
+                        {
+                            free(tokens.token_chunks[i]);
+                        }
+                        free(tokens.token_chunks);
+                    }
                 }
             }
             free_sections(sections, num_sections);
