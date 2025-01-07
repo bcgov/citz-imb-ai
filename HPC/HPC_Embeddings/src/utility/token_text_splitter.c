@@ -180,7 +180,7 @@ void mark_punctuation_avx512(const char *str, size_t len, char *punctuation_mask
 }
 
 // Function to split punctuations and convert to lowercase
-char *split_punctuations_and_to_lowercase_old(const char *str)
+char *split_punctuations_and_to_lowercase_without_utf(const char *str)
 {
     size_t len = strlen(str);
 
@@ -571,54 +571,6 @@ void split_text_to_words(const char *text, char ***words, int *word_count, Memor
 
     *words = result;
     *word_count = count;
-}
-
-// Function to split text into tokens and return them
-TokenizedData token_text_splitter1(HashTable *table, const char *text, MemoryPool *pool)
-{
-    TokenizedData result;
-    result.words = NULL;
-    result.token_values = NULL;
-    result.token_counts = NULL;
-    result.word_count = 0;
-
-    char **words;
-    int word_count;
-
-    char *processed_buffer = split_punctuations_and_to_lowercase(text);
-    split_text_to_words(processed_buffer, &words, &word_count, pool);
-
-    // Allocate memory for the tokenized data
-    result.words = (char **)malloc(word_count * sizeof(char *));
-    result.token_values = (int **)malloc(word_count * sizeof(int *));
-    result.token_counts = (int *)malloc(word_count * sizeof(int));
-    result.word_count = word_count;
-
-    for (int i = 0; i < word_count; i++)
-    {
-        tokens_t token = get_token(table, words[i]);
-
-        // Store the word and its tokens
-        result.words[i] = strdup(words[i]); // Copy the word
-        result.token_counts[i] = token.token_count;
-
-        // Allocate memory for token values and copy them
-        result.token_values[i] = (int *)malloc(token.token_count * sizeof(int));
-        for (int j = 0; j < token.token_count; j++)
-        {
-            result.token_values[i][j] = token.token_values[j];
-        }
-
-        // Free memory allocated in get_token
-        free(token.token_values);
-        free(token.word);
-    }
-
-    // Free intermediate buffers
-    free(words);
-    free(processed_buffer);
-
-    return result;
 }
 
 TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool *pool) {
