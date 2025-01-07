@@ -678,26 +678,43 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
         }
     }
 
-    // Split flattened tokens into 255-token chunks with overlap
-    const int chunk_size = 255;
-    const int overlap_size = 50;
-    const int stride = chunk_size - overlap_size;
-    result.chunk_count = (total_tokens < chunk_size) ? 1 : ((total_tokens - overlap_size) / stride + 1);
+    // Define special tokens
+    const int CLS_TOKEN = 101; // Example ID for [CLS]
+    const int SEP_TOKEN = 102; // Example ID for [SEP]
+
+    const int chunk_size = 255;   // Total chunk size, including [CLS] and [SEP]
+    const int overlap_size = 50;  // Overlap size for chunks
+    const int effective_chunk_size = chunk_size - 2; // Space for actual tokens
+    const int stride = effective_chunk_size - overlap_size;
+
+    // Calculate the number of chunks
+    result.chunk_count = (total_tokens <= effective_chunk_size)
+                            ? 1
+                            : ((total_tokens - overlap_size) / stride + 1);
+
+    // Allocate memory for chunks
     result.token_chunks = (int **)malloc(result.chunk_count * sizeof(int *));
 
     for (int i = 0; i < result.chunk_count; i++) {
         result.token_chunks[i] = (int *)malloc(chunk_size * sizeof(int));
 
-        int start = (i == 0) ? 0 : (i * stride); // No overlap for the first chunk
+        // Calculate start index and number of tokens to copy
+        int start = (i == 0) ? 0 : (i * stride);
         int remaining = total_tokens - start;
-        int copy_size = (remaining < chunk_size) ? remaining : chunk_size;
+        int copy_size = (remaining < effective_chunk_size) ? remaining : effective_chunk_size;
 
-        // Copy tokens for this chunk
-        memcpy(result.token_chunks[i], &result.flattened_tokens[start], copy_size * sizeof(int));
+        // Insert [CLS] token at the beginning
+        result.token_chunks[i][0] = CLS_TOKEN;
+
+        // Copy tokens into the chunk
+        memcpy(&result.token_chunks[i][1], &result.flattened_tokens[start], copy_size * sizeof(int));
+
+        // Insert [SEP] token at the end
+        result.token_chunks[i][copy_size + 1] = SEP_TOKEN;
 
         // Zero-pad if needed
-        if (copy_size < chunk_size) {
-            memset(&result.token_chunks[i][copy_size], 0, (chunk_size - copy_size) * sizeof(int));
+        if (copy_size < effective_chunk_size) {
+            memset(&result.token_chunks[i][copy_size + 2], 0, (chunk_size - copy_size - 2) * sizeof(int));
         }
     }
 
