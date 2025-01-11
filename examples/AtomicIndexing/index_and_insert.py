@@ -54,16 +54,7 @@ def process_act(file_name):
     sections = act_content.find_all("bcl:section", recursive=False)
 
     for section in sections:
-        section_title = section.find("bcl:marginalnote").getText()
-
-        # What if it's a definitions block?
-        if section_title.lower() == "definitions":
-            # Get all definitions
-            definitions = section.find_all("bcl:definition")
-            for definition in definitions:
-                act_node.addDefinition(definition)
-        else:
-            act_node.addSection(section)
+        act_node.addSection(section)
 
     ## Part 2 - Add Act to Neo4j
     act_id = act_node.addNodeToDatabase(neo4j)
@@ -108,18 +99,16 @@ def process_act(file_name):
                     token_splitter,
                     embeddings,
                 )
-
-    # Part 4 - Add Definitions to Neo4j
-    for definition in act_node.definitions:
-        definition.addNodeToDatabase(neo4j, act_id)
+        for definition in section.definitions:
+            definition.addNodeToDatabase(neo4j, section_id)
 
     print(f"{file_name} end")
 
 
 path = "examples/HTML_Acts/"
 directory = Path(path)
-file_names = [f.name for f in directory.iterdir() if f.is_file()]
-# file_names = ["Access_to_Abortion_Services_Act.xml"]
+# file_names = [f.name for f in directory.iterdir() if f.is_file()]
+file_names = ["Access_to_Abortion_Services_Act.xml"]
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
     list(executor.map(process_act, file_names))

@@ -30,32 +30,6 @@ class Act:
         node_id = result[0]["id"] if result else None
         return node_id
 
-    def addDefinition(self, definition):
-        # Get the first text block in a definition. This one is guaranteed
-        definition_text_blocks = definition.findAll("bcl:text", recursive=False)
-        definition_term_block = definition_text_blocks[0].find("in:term")
-        # If a term wasn't found, don't bother continuing
-        if definition_term_block is None:
-            return
-        definition_term = definition_term_block.getText()
-        definition_text = definition_text_blocks[0].getText()
-
-        # It also may have paragraphs
-        # Extract and format all <bcl:paragraph> elements
-        paragraphs = definition.find_all("bcl:paragraph", recursive=False)
-        for paragraph in paragraphs:
-            num = paragraph.find("bcl:num").getText()
-            text = paragraph.find("bcl:text").getText()
-            definition_text += f"\n({num}) {text}"
-        # There may be additional text after the paragraphs
-        if len(definition_text_blocks) - len(paragraphs) > 1:
-            definition_text += (
-                "\n" + definition.find_all("bcl:text", recursive=False)[-1].getText()
-            )
-        # Connect definition to section
-        definition_node = Definition(definition_term, definition_text)
-        self.definitions.append(definition_node)
-
     def addSection(self, section):
         section_num = section.find("bcl:num").getText()
         section_text = section.find("bcl:text").getText()
@@ -142,6 +116,34 @@ class Act:
 
             # Connect paragraph to section
             section_node.paragraphs.append(paragraph_node)
+        # Add definitions to the section
+        definitions = section.find_all("bcl:definition")
+        for definition in definitions:
+            # Get the first text block in a definition. This one is guaranteed
+            definition_text_blocks = definition.findAll("bcl:text", recursive=False)
+            definition_term_block = definition_text_blocks[0].find("in:term")
+            # If a term wasn't found, don't bother continuing
+            if definition_term_block is None:
+                return
+            definition_term = definition_term_block.getText()
+            definition_text = definition_text_blocks[0].getText()
+
+            # It also may have paragraphs
+            # Extract and format all <bcl:paragraph> elements
+            paragraphs = definition.find_all("bcl:paragraph", recursive=False)
+            for paragraph in paragraphs:
+                num = paragraph.find("bcl:num").getText()
+                text = paragraph.find("bcl:text").getText()
+                definition_text += f"\n({num}) {text}"
+            # There may be additional text after the paragraphs
+            if len(definition_text_blocks) - len(paragraphs) > 1:
+                definition_text += (
+                    "\n"
+                    + definition.find_all("bcl:text", recursive=False)[-1].getText()
+                )
+            # Connect definition to section
+            definition_node = Definition(definition_term, definition_text)
+            section_node.definitions.append(definition_node)
         # Connect section to act
         self.sections.append(section_node)
 
@@ -219,6 +221,7 @@ class Section(ContentNode):
         self.title = title
         self.subsections = []
         self.paragraphs = []
+        self.definitions = []
 
     def createQuery(self):
         return """
@@ -271,6 +274,7 @@ class Definition:
                """
 
     def addNodeToDatabase(self, db, parent_id):
+        # TODO: Should we create embeddings for this?
         query = self.createQuery()
         # Parameters for the node
         params = {"term": self.term, "definition": self.definition}
