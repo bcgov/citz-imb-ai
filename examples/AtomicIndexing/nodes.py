@@ -18,7 +18,7 @@ class Act:
                RETURN elementId(n) AS id
                """
 
-    def addNodeToDatabase(self, db):
+    def addNodeToDatabase(self, db, token_splitter, embeddings):
         query = self.createQuery()
         # Parameters for the node
         params = {"title": self.title, "year": self.year, "chapter": self.chapter}
@@ -27,8 +27,51 @@ class Act:
         result = db.query(query, params=params)
 
         # Get the ID of the created node
-        node_id = result[0]["id"] if result else None
-        return node_id
+        act_node_id = result[0]["id"] if result else None
+
+        # Add all the child nodes within the act
+        for section in self.sections:
+            section_id = section.addNodeToDatabase(
+                db, act_node_id, token_splitter, embeddings, {"title": section.title}
+            )
+            for subsection in section.subsections:
+                subsection_id = subsection.addNodeToDatabase(
+                    db,
+                    section_id,
+                    token_splitter,
+                    embeddings,
+                )
+                for paragraph in subsection.paragraphs:
+                    paragraph_id = paragraph.addNodeToDatabase(
+                        db,
+                        subsection_id,
+                        token_splitter,
+                        embeddings,
+                    )
+                    for subparagraph in paragraph.subparagraphs:
+                        subparagraph.addNodeToDatabase(
+                            db,
+                            paragraph_id,
+                            token_splitter,
+                            embeddings,
+                        )
+            for paragraph in section.paragraphs:
+                paragraph_id = paragraph.addNodeToDatabase(
+                    db,
+                    section_id,
+                    token_splitter,
+                    embeddings,
+                )
+                for subparagraph in paragraph.subparagraphs:
+                    subparagraph.addNodeToDatabase(
+                        db,
+                        paragraph_id,
+                        token_splitter,
+                        embeddings,
+                    )
+            for definition in section.definitions:
+                definition.addNodeToDatabase(db, section_id)
+        return act_node_id
 
     def addSection(self, section):
         section_num = section.find("bcl:num").getText()
@@ -117,7 +160,7 @@ class Act:
             # Connect paragraph to section
             section_node.paragraphs.append(paragraph_node)
         # Add definitions to the section
-        definitions = section.find_all("bcl:definition")
+        definitions = section.find_all("bcl:definition", recursive=False)
         for definition in definitions:
             # Get the first text block in a definition. This one is guaranteed
             definition_text_blocks = definition.findAll("bcl:text", recursive=False)
@@ -128,13 +171,18 @@ class Act:
             definition_term = definition_term_block.getText()
             definition_text = definition_text_blocks[0].getText()
 
-            # It also may have paragraphs
+            # It also may have paragraphs with subparagraphs
             # Extract and format all <bcl:paragraph> elements
             paragraphs = definition.find_all("bcl:paragraph", recursive=False)
             for paragraph in paragraphs:
                 num = paragraph.find("bcl:num").getText()
                 text = paragraph.find("bcl:text").getText()
                 definition_text += f"\n({num}) {text}"
+                subparagraphs = paragraph.find_all("bcl:subparagraph", recursive=False)
+                for subparagraph in subparagraphs:
+                    num = subparagraph.find("bcl:num").getText()
+                    text = subparagraph.find("bcl:text").getText()
+                    definition_text += f"\n({num}) {text}"
             # There may be additional text after the paragraphs
             if len(definition_text_blocks) - len(paragraphs) > 1:
                 definition_text += (

@@ -38,69 +38,32 @@ def process_act(file_name):
         data = f.read()
 
     act_xml = BeautifulSoup(data, features="xml")
+    try:
+        ## Part 1 - Break Act into Nodes
 
-    ## Part 1 - Break Act into Nodes
+        act_title = act_xml.find("act:title").getText()
+        act_chapter = act_xml.find("act:chapter").getText()
+        act_year = act_xml.find("act:yearenacted").getText()
 
-    act_title = act_xml.find("act:title").getText()
-    act_chapter = act_xml.find("act:chapter").getText()
-    act_year = act_xml.find("act:yearenacted").getText()
+        # Create Act Node
+        act_node = Act(act_title, act_chapter, act_year)
+        act_content = act_xml.find("act:content")
 
-    # Create Act Node
-    act_node = Act(act_title, act_chapter, act_year)
-
-    act_content = act_xml.find("act:content")
-
-    # For each section, log metadata, create node
-    sections = act_content.find_all("bcl:section", recursive=False)
-
-    for section in sections:
-        act_node.addSection(section)
-
-    ## Part 2 - Add Act to Neo4j
-    act_id = act_node.addNodeToDatabase(neo4j)
-
-    ## Part 3 - Add Content Nodes to Neo4j
-    for section in act_node.sections:
-        section_id = section.addNodeToDatabase(
-            neo4j, act_id, token_splitter, embeddings, {"title": section.title}
+        # For each section, create node
+        # Not all acts have content
+        sections = (
+            act_content.find_all("bcl:section", recursive=False)
+            if act_content is not None
+            else act_xml.find_all("bcl:section")
         )
-        for subsection in section.subsections:
-            subsection_id = subsection.addNodeToDatabase(
-                neo4j,
-                section_id,
-                token_splitter,
-                embeddings,
-            )
-            for paragraph in subsection.paragraphs:
-                paragraph_id = paragraph.addNodeToDatabase(
-                    neo4j,
-                    subsection_id,
-                    token_splitter,
-                    embeddings,
-                )
-                for subparagraph in paragraph.subparagraphs:
-                    subparagraph.addNodeToDatabase(
-                        neo4j,
-                        paragraph_id,
-                        token_splitter,
-                        embeddings,
-                    )
-        for paragraph in section.paragraphs:
-            paragraph_id = paragraph.addNodeToDatabase(
-                neo4j,
-                section_id,
-                token_splitter,
-                embeddings,
-            )
-            for subparagraph in paragraph.subparagraphs:
-                subparagraph.addNodeToDatabase(
-                    neo4j,
-                    paragraph_id,
-                    token_splitter,
-                    embeddings,
-                )
-        for definition in section.definitions:
-            definition.addNodeToDatabase(neo4j, section_id)
+
+        for section in sections:
+            act_node.addSection(section)
+
+        ## Part 2 - Index Act and Add to Neo4j
+        act_id = act_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
+    except Exception as e:
+        print(f"Error in {file_name}: {e}")
 
     print(f"{file_name} end")
 
@@ -108,7 +71,9 @@ def process_act(file_name):
 path = "examples/HTML_Acts/"
 directory = Path(path)
 # file_names = [f.name for f in directory.iterdir() if f.is_file()]
-file_names = ["Access_to_Abortion_Services_Act.xml"]
+file_names = ["Access_to_Abortion_Services_Act.xml", "Property_Transfer_Tax_Act.xml"]
+# file_names = ["Access_to_Abortion_Services_Act.xml"]
+
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
     list(executor.map(process_act, file_names))
