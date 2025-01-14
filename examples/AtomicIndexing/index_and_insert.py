@@ -40,25 +40,8 @@ def process_act(file_name):
     act_xml = BeautifulSoup(data, features="xml")
     try:
         ## Part 1 - Break Act into Nodes
-
-        act_title = act_xml.find("act:title").getText()
-        act_chapter = act_xml.find("act:chapter").getText()
-        act_year = act_xml.find("act:yearenacted").getText()
-
         # Create Act Node
-        act_node = Act(act_title, act_chapter, act_year)
-        act_content = act_xml.find("act:content")
-
-        # For each section, create node
-        # Not all acts have content
-        sections = (
-            act_content.find_all("bcl:section", recursive=False)
-            if act_content is not None
-            else act_xml.find_all("bcl:section")
-        )
-
-        for section in sections:
-            act_node.addSection(section)
+        act_node = Act(act_xml)
 
         ## Part 2 - Index Act and Add to Neo4j
         act_id = act_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
@@ -71,8 +54,11 @@ def process_act(file_name):
 path = "examples/HTML_Acts/"
 directory = Path(path)
 # file_names = [f.name for f in directory.iterdir() if f.is_file()]
-file_names = ["Access_to_Abortion_Services_Act.xml", "Property_Transfer_Tax_Act.xml"]
-# file_names = ["Access_to_Abortion_Services_Act.xml"]
+# file_names = ["Access_to_Abortion_Services_Act.xml", "Property_Transfer_Tax_Act.xml"]
+file_names = [
+    "Access_to_Abortion_Services_Act.xml",
+    "Community_Charter_Transitional_Provisions_Consequential_Amendments_and_Other_Amendments_Act_2003.xml",
+]
 
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
