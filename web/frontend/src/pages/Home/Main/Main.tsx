@@ -20,7 +20,6 @@ const Main = () => {
   // State variables for UI control
   const [isModalVisible, setIsModalVisible] = useState(true);
   const [userScrolled, setUserScrolled] = useState(false);
-  const [pendingMessage, setPendingMessage] = useState<string | null>(null);
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
   // Error handling for context
@@ -41,6 +40,9 @@ const Main = () => {
     errorState,
     resetError,
     recordingHash,
+    isRegenerating,
+    pendingMessage,
+    setPendingMessage,
   } = context;
 
   // Refs for DOM elements
@@ -193,7 +195,7 @@ const Main = () => {
                 ref={scrollableSectionRef}
                 onScroll={handleScroll}>
                 {renderMessages()}
-                {isWaitingForResponse && (
+                {(isWaitingForResponse || isRegenerating) && (
                   <div className='message ai'>
                     <div className='message-title'>
                       <img src={assets.bc_icon} alt='' />
@@ -249,10 +251,10 @@ const Main = () => {
                 ref={textareaRef}
                 rows={1}
                 id='prompt-input'
-                disabled={isWaitingForResponse}
+                disabled={isWaitingForResponse || isRegenerating}
               />
               <div>
-                {input && !isWaitingForResponse ? (
+                {input && !(isWaitingForResponse || isRegenerating) ? (
                   <div
                     className='send-button'
                     title='Send'
