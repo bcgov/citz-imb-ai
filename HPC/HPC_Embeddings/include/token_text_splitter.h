@@ -25,6 +25,12 @@ typedef struct {
     int **token_values;  // 2D array for token values
     int *token_counts;   // Array to store the number of tokens per word
     int word_count;
+
+    int *flattened_tokens; // Flattened array of all tokens
+    int flattened_count;   // Total number of tokens in the flattened array
+
+    int **token_chunks;    // E.g Array of 255-token chunks
+    int chunk_count;       // Number of chunks
 } TokenizedData;
 
 //void token_text_splitter(HashTable *table, const char *text, MemoryPool *pool);

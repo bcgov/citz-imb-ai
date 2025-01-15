@@ -136,6 +136,7 @@ const char punctuation_lookup[256] = {
     ['|'] = 1,
     ['}'] = 1,
     ['~'] = 1,
+    ['-'] = 1,
 };
 
 // Helper function to identify punctuation using SIMD
@@ -179,7 +180,7 @@ void mark_punctuation_avx512(const char *str, size_t len, char *punctuation_mask
 }
 
 // Function to split punctuations and convert to lowercase
-char *split_punctuations_and_to_lowercase(const char *str)
+char *split_punctuations_and_to_lowercase_without_utf(const char *str)
 {
     size_t len = strlen(str);
 
@@ -252,6 +253,81 @@ char *split_punctuations_and_to_lowercase(const char *str)
     return result;
 }
 
+char *split_punctuations_and_to_lowercase(const char *str) {
+    size_t len = strlen(str);
+    char *lower_str = (char *)malloc(len + 1);
+    if (!lower_str) {
+        return NULL;
+    }
+    
+    // First pass: copy while handling UTF-8 NBSP (0xC2 0xA0)
+    size_t j = 0;
+    for (size_t i = 0; i < len; i++) {
+        unsigned char current = (unsigned char)str[i];
+        unsigned char next = (i + 1 < len) ? (unsigned char)str[i + 1] : 0;
+        
+        // Check for UTF-8 NBSP sequence (0xC2 0xA0)
+        if (current == 0xC2 && next == 0xA0) {
+            lower_str[j++] = ' '; // Replace with regular space
+            i++; // Skip the next byte
+            continue;
+        }
+        
+        lower_str[j++] = str[i];
+    }
+    lower_str[j] = '\0';
+    
+    // Update len to the new length after NBSP handling
+    len = j;
+
+    // Convert to lowercase
+    to_lowercase_avx512(lower_str, len);
+
+    // Rest of your original function remains the same
+    char *punctuation_mask = (char *)malloc(len);
+    if (!punctuation_mask) {
+        free(lower_str);
+        return NULL;
+    }
+
+    mark_punctuation_avx512(lower_str, len, punctuation_mask);
+
+    size_t new_len = len;
+    for (size_t i = 0; i < len; i++) {
+        if (punctuation_mask[i]) {
+            new_len += 2;
+        }
+    }
+
+    printf("word is %s, total len is %zu \n", lower_str, new_len);
+
+    char *result = (char *)malloc(new_len + 1);
+    if (!result) {
+        free(lower_str);
+        free(punctuation_mask);
+        return NULL;
+    }
+
+    size_t i = 0;
+    j = 0;
+    while (i < len) {
+        char ch = lower_str[i];
+        if (punctuation_mask[i]) {
+            result[j++] = ' ';
+            result[j++] = ch;
+            result[j++] = ' ';
+        } else {
+            result[j++] = ch;
+        }
+        i++;
+    }
+    result[new_len] = '\0';
+
+    free(lower_str);
+    free(punctuation_mask);
+    return result;
+}
+
 tokens_t get_token(HashTable *table, const char *text)
 {
     size_t len = strlen(text);
@@ -281,11 +357,9 @@ tokens_t get_token(HashTable *table, const char *text)
             strncpy(buffer, text + i, j);
             buffer[j] = '\0';
 
-            if (isdigit((unsigned char)*buffer) || !prefix)
-            {
-                snprintf(prefix_buffer, j + 1, "%s", buffer);
-            }
-            else
+            if (!prefix) {
+                snprintf(prefix_buffer, j + 1, "%s", buffer); // First subword, no prefix
+             } else
             {
                 snprintf(prefix_buffer, j + 3, "##%s", buffer);
             }
@@ -303,7 +377,7 @@ tokens_t get_token(HashTable *table, const char *text)
         }
         if (!found)
         {
-            printf("Unrecognized token part: %c\n", text[i]);
+            printf("Unrecognized token part: %c, %#x \n", text[i], text[i]);
             i++;
             prefix = false;
         }
@@ -499,18 +573,21 @@ void split_text_to_words(const char *text, char ***words, int *word_count, Memor
     *word_count = count;
 }
 
-// Function to split text into tokens and return them
-TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool *pool)
-{
+TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool *pool) {
     TokenizedData result;
     result.words = NULL;
     result.token_values = NULL;
     result.token_counts = NULL;
     result.word_count = 0;
+    result.flattened_tokens = NULL;
+    result.flattened_count = 0;
+    result.token_chunks = NULL;
+    result.chunk_count = 0;
 
     char **words;
     int word_count;
 
+    // Preprocess the text
     char *processed_buffer = split_punctuations_and_to_lowercase(text);
     split_text_to_words(processed_buffer, &words, &word_count, pool);
 
@@ -520,8 +597,9 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
     result.token_counts = (int *)malloc(word_count * sizeof(int));
     result.word_count = word_count;
 
-    for (int i = 0; i < word_count; i++)
-    {
+    int total_tokens = 0;
+
+    for (int i = 0; i < word_count; i++) {
         tokens_t token = get_token(table, words[i]);
 
         // Store the word and its tokens
@@ -530,14 +608,66 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
 
         // Allocate memory for token values and copy them
         result.token_values[i] = (int *)malloc(token.token_count * sizeof(int));
-        for (int j = 0; j < token.token_count; j++)
-        {
+        for (int j = 0; j < token.token_count; j++) {
             result.token_values[i][j] = token.token_values[j];
         }
+
+        total_tokens += token.token_count;
 
         // Free memory allocated in get_token
         free(token.token_values);
         free(token.word);
+    }
+
+    // Create flattened tokens
+    result.flattened_tokens = (int *)malloc(total_tokens * sizeof(int));
+    result.flattened_count = total_tokens;
+
+    int index = 0;
+    for (int i = 0; i < word_count; i++) {
+        for (int j = 0; j < result.token_counts[i]; j++) {
+            result.flattened_tokens[index++] = result.token_values[i][j];
+        }
+    }
+
+    // Define special tokens
+    const int CLS_TOKEN = 101; // Example ID for [CLS]
+    const int SEP_TOKEN = 102; // Example ID for [SEP]
+
+    const int chunk_size = 255;   // Total chunk size, including [CLS] and [SEP]
+    const int overlap_size = 50;  // Overlap size for chunks
+    const int effective_chunk_size = chunk_size - 2; // Space for actual tokens
+    const int stride = effective_chunk_size - overlap_size;
+
+    // Calculate the number of chunks
+    result.chunk_count = (total_tokens <= effective_chunk_size)
+                            ? 1
+                            : ((total_tokens - overlap_size) / stride + 1);
+
+    // Allocate memory for chunks
+    result.token_chunks = (int **)malloc(result.chunk_count * sizeof(int *));
+
+    for (int i = 0; i < result.chunk_count; i++) {
+        result.token_chunks[i] = (int *)malloc(chunk_size * sizeof(int));
+
+        // Calculate start index and number of tokens to copy
+        int start = (i == 0) ? 0 : (i * stride);
+        int remaining = total_tokens - start;
+        int copy_size = (remaining < effective_chunk_size) ? remaining : effective_chunk_size;
+
+        // Insert [CLS] token at the beginning
+        result.token_chunks[i][0] = CLS_TOKEN;
+
+        // Copy tokens into the chunk
+        memcpy(&result.token_chunks[i][1], &result.flattened_tokens[start], copy_size * sizeof(int));
+
+        // Insert [SEP] token at the end
+        result.token_chunks[i][copy_size + 1] = SEP_TOKEN;
+
+        // Zero-pad if needed
+        if (copy_size < effective_chunk_size) {
+            memset(&result.token_chunks[i][copy_size + 2], 0, (chunk_size - copy_size - 2) * sizeof(int));
+        }
     }
 
     // Free intermediate buffers
