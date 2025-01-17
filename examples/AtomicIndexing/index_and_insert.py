@@ -35,7 +35,7 @@ neo4j = Neo4jGraph(
 def process_act(file_name):
     if file_name == "":
         return
-    # print(f"{file_name} start")
+    print(f"{file_name} start")
     with open(f"{path}{file_name}", "r") as f:
         data = f.read()
 
@@ -51,27 +51,12 @@ def process_act(file_name):
         print(f"Error in {file_name}: {e}")
         print(e.with_traceback())
 
-    # print(f"{file_name} end")
+    print(f"{file_name} end")
 
 
 path = "examples/HTML_Acts/"
 directory = Path(path)
-# file_names = [f.name for f in directory.iterdir() if f.is_file()]
-file_names = [
-    # "Access_to_Abortion_Services_Act.xml",
-    # "Community_Charter_Transitional_Provisions_Consequential_Amendments_and_Other_Amendments_Act_2003.xml",
-    "Societies_Act.xml",
-    # "Pharmaceutical_Services_Act.xml",
-    # "Laboratory_Services_Act.xml",
-    # "Health_Professions_and_Occupations_Act.xml",
-    # "Farm_Practices_Protection_Right_to_Farm_Act.xml",
-    # "Accessible_British_Columbia_Act.xml",
-    # "Provincial_Court_Child_Family_and_Community_Service_Act_Rules_53395.xml", ####
-    # "Municipalities_Enabling_and_Validating_Act.xml",
-    # "Mutual_Fire_Insurance_Companies_Act.xml",
-    # "Speculation_and_Vacancy_Tax_Act.xml",
-    # "Property_Transfer_Tax_Act.xml",
-]
+file_names = [f.name for f in directory.iterdir() if f.is_file()]
 
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
