@@ -57,7 +57,6 @@ def process_act(file_name):
 path = "examples/HTML_Acts/"
 directory = Path(path)
 file_names = [f.name for f in directory.iterdir() if f.is_file()]
-file_names = ["Farm_Practices_Protection_Right_to_Farm_Act.xml"]
 
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
