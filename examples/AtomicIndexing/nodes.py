@@ -456,13 +456,27 @@ class Definition:
         # Extract and format all <bcl:paragraph> elements
         paragraphs = definition.find_all("bcl:paragraph", recursive=False)
         for paragraph in paragraphs:
-            num = paragraph.find("bcl:num").getText()
-            text = paragraph.find("bcl:text").getText()
+            num = (
+                paragraph.find("bcl:num").getText() if paragraph.find("bcl:num") else ""
+            )
+            text = (
+                paragraph.find("bcl:text").getText()
+                if paragraph.find("bcl:text")
+                else ""
+            )
             definition_text += f"\n({num}) {text}"
             subparagraphs = paragraph.find_all("bcl:subparagraph", recursive=False)
             for subparagraph in subparagraphs:
-                num = subparagraph.find("bcl:num").getText()
-                text = subparagraph.find("bcl:text").getText()
+                num = (
+                    subparagraph.find("bcl:num").getText()
+                    if subparagraph.find("bcl:num")
+                    else ""
+                )
+                text = (
+                    subparagraph.find("bcl:text").getText()
+                    if subparagraph.find("bcl:text")
+                    else ""
+                )
                 definition_text += f"\n({num}) {text}"
         # There may be additional text after the paragraphs
         if len(definition_text_blocks) - len(paragraphs) > 1:
