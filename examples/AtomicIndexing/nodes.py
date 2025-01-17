@@ -534,7 +534,7 @@ class Table:
                 # Skip columns that are just white space
                 if column_tag in excluded_columns:
                     continue
-                column_name = column_names[column_tag]
+                column_name = column_names.get(column_tag, "unknown")
                 data[column_name] = entry.getText().strip()
             self.rows.append(data)
 
