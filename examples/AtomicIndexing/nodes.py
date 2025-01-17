@@ -113,6 +113,7 @@ class Part:
         self.sections = []
         self.tables = []
         self.conseqheads = []
+        self.divisions = []
 
         # For each section, create node
         sections = part.find_all("bcl:section", recursive=False)
@@ -128,6 +129,11 @@ class Part:
                 self.conseqheads.append(Consequence(el["conseqhead"], el["table"]))
             elif el["table"]:
                 self.tables.append(Table(el["table"]))
+
+        # Add divisions
+        divisions = part.find_all("bcl:division", recursive=False)
+        for division in divisions:
+            self.divisions.append(Division(division))
 
     def createQuery(self):
         return """
@@ -154,6 +160,8 @@ class Part:
             table.addNodeToDatabase(db, part_id)
         for conseq in self.conseqheads:
             conseq.addNodeToDatabase(db, part_id)
+        for div in self.divisions:
+            div.addNodeToDatabase(db, part_id, token_splitter, embeddings)
         # Connect the first section node to the act
         if part_id:
             connect_child_to_parent(db, part_id, parent_id)
@@ -175,15 +183,53 @@ class ContentNode:
 
         previous_node_id = None
         first_node_id = None
-        for i, chunk in enumerate(chunks):
-            # Create embedding for the chunk
-            text_embedding = embeddings.embed_query(chunk)
+        if len(chunks) > 0:
+            for i, chunk in enumerate(chunks):
+                # Create embedding for the chunk
+                text_embedding = embeddings.embed_query(chunk)
+                # Parameters for the node
+                params = {
+                    "number": self.number,
+                    "text": chunk,
+                    "textEmbedding": text_embedding,
+                    "chunk_index": i,
+                }
+
+                if unique_params is not None:
+                    params.update(unique_params)
+
+                # Run the query
+                result = db.query(query, params=params)
+
+                # Get the ID of the created node
+                node_id = result[0]["id"] if result else None
+                if i == 0:
+                    first_node_id = node_id
+
+                # If there's a previous chunk, create a relationship to maintain order
+                if previous_node_id:
+                    relationship_query = """
+                    MATCH (a), (b)
+                    WHERE elementId(a) = $prev_id AND elementId(b) = $current_id
+                    CREATE (a)-[r:NEXT]->(b)
+                    RETURN r
+                    """
+                    relationship_params = {
+                        "prev_id": previous_node_id,
+                        "current_id": node_id,
+                    }
+                    db.query(relationship_query, relationship_params)
+
+                previous_node_id = node_id
+        else:
+            # Create embedding for the node
+            text_embedding = embeddings.embed_query(self.text)
             # Parameters for the node
             params = {
                 "number": self.number,
-                "text": chunk,
+                "text": self.text,
                 "textEmbedding": text_embedding,
-                "chunk_index": i,
+                "chunk_index": 0,
             }
 
             if unique_params is not None:
@@ -194,24 +240,7 @@ class ContentNode:
 
             # Get the ID of the created node
             node_id = result[0]["id"] if result else None
-            if i == 0:
-                first_node_id = node_id
-
-            # If there's a previous chunk, create a relationship to maintain order
-            if previous_node_id:
-                relationship_query = """
-                MATCH (a), (b)
-                WHERE elementId(a) = $prev_id AND elementId(b) = $current_id
-                CREATE (a)-[r:NEXT]->(b)
-                RETURN r
-                """
-                relationship_params = {
-                    "prev_id": previous_node_id,
-                    "current_id": node_id,
-                }
-                db.query(relationship_query, relationship_params)
-
-            previous_node_id = node_id
+            first_node_id = node_id
 
         # Connect the first chunk of these nodes to the parent
         if first_node_id:
@@ -338,8 +367,7 @@ class Subsection(ContentNode):
         subsection_id = super().addNodeToDatabase(
             db, parent_id, token_splitter, embeddings, unique_params
         )
-        if subsection_id:
-            connect_child_to_parent(db, subsection_id, parent_id)
+
         for paragraph in self.paragraphs:
             paragraph_id = paragraph.addNodeToDatabase(
                 db,
@@ -582,3 +610,50 @@ class Consequence:
             connect_child_to_parent(db, node_id, parent_id)
 
         return node_id
+
+
+class Division:
+    def __init__(self, division):
+        self.number = (
+            division.find("bcl:num", recursive=False).getText()
+            if division.find("bcl:num", recursive=False)
+            else ""
+        )
+        self.text = (
+            division.find("bcl:text", recursive=False).getText()
+            if division.find("bcl:text", recursive=False)
+            else ""
+        )
+        self.sections = []
+        # For each section, create node
+        sections = division.find_all("bcl:section", recursive=False)
+        for section in sections:
+            section_node = Section(section)
+            # Connect section to part
+            self.sections.append(section_node)
+
+    def createQuery(self):
+        return """
+            CREATE (n:Division {text: $text, number: $number})
+            RETURN elementId(n) AS id
+            """
+
+    def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
+        query = self.createQuery()
+        # Parameters for the node
+        params = {"text": self.text, "number": self.number}
+
+        # Run the query
+        result = db.query(query, params=params)
+
+        # Get the ID of the created node
+        division_id = result[0]["id"] if result else None
+
+        for section in self.sections:
+            section.addNodeToDatabase(
+                db, division_id, token_splitter, embeddings, {"title": section.title}
+            )
+        # Connect the first section node to the act
+        if division_id:
+            connect_child_to_parent(db, division_id, parent_id)
+        return division_id
