@@ -45,9 +45,13 @@ def connect_child_to_parent(db, child_id, parent_id):
 
 class Act:
     def __init__(self, act):
-        self.title = act.find("act:title").getText()
-        self.chapter = act.find("act:chapter").getText()
-        self.year = act.find("act:yearenacted").getText()
+        self.title = act.find("act:title").getText() if act.find("act:title") else ""
+        self.chapter = (
+            act.find("act:chapter").getText() if act.find("act:chapter") else ""
+        )
+        self.year = (
+            act.find("act:yearenacted").getText() if act.find("act:yearenacted") else ""
+        )
         self.sections = []
         self.parts = []
 
