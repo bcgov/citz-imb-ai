@@ -1,3 +1,48 @@
+import json
+
+
+def collect_conseq_and_tables(block):
+    # Find all <bcl:conseqhead> and <oasis:table> tags
+    elements = block.find_all(["bcl:conseqhead", "oasis:table"])
+
+    # List to store the results
+    results = []
+
+    # Iterate through the elements
+    for i, element in enumerate(elements):
+        if element.name == "conseqhead":
+            table_inside = element.find("oasis:table")
+            if table_inside:
+                # Case: <bcl:conseqhead> contains a table
+                results.append({"conseqhead": element, "table": table_inside})
+            else:
+                # Check if the next element is a table
+                next_sibling = element.find_next_sibling()
+                if next_sibling and next_sibling.name == "table":
+                    results.append({"conseqhead": element, "table": next_sibling})
+                else:
+                    # Case: <bcl:conseqhead> without a table
+                    results.append({"conseqhead": element, "table": None})
+        elif element.name == "table":
+            # Check if the previous element is a <bcl:conseqhead>
+            prev_sibling = element.find_previous_sibling()
+            if not (prev_sibling and prev_sibling.name == "conseqhead"):
+                # Case: <oasis:table> without a preceding <bcl:conseqhead>
+                results.append({"conseqhead": None, "table": element})
+    return results
+
+
+def connect_child_to_parent(db, child_id, parent_id):
+    edge_query = """
+                MATCH (a), (b)
+                WHERE elementId(a) = $parent_id AND elementId(b) = $child_id
+                CREATE (a)-[r:CONTAINS]->(b)
+                RETURN r
+              """
+    edge_params = {"parent_id": parent_id, "child_id": child_id}
+    db.query(edge_query, edge_params)
+
+
 class Act:
     def __init__(self, act):
         self.title = act.find("act:title").getText()
@@ -66,16 +111,23 @@ class Part:
         self.title = part.find("bcl:text").getText()
         self.number = part.find("bcl:num").getText()
         self.sections = []
+        self.tables = []
+        self.conseqheads = []
 
         # For each section, create node
         sections = part.find_all("bcl:section", recursive=False)
         for section in sections:
-            self.addSection(section)
+            section_node = Section(section)
+            # Connect section to part
+            self.sections.append(section_node)
 
-    def addSection(self, section):
-        section_node = Section(section)
-        # Connect section to part
-        self.sections.append(section_node)
+        # Add the mix of conseqhead and table blocks
+        conseq_and_tables = collect_conseq_and_tables(part)
+        for el in conseq_and_tables:
+            if el["conseqhead"]:
+                self.conseqheads.append(Consequence(el["conseqhead"], el["table"]))
+            elif el["table"]:
+                self.tables.append(Table(el["table"]))
 
     def createQuery(self):
         return """
@@ -98,16 +150,13 @@ class Part:
             section.addNodeToDatabase(
                 db, part_id, token_splitter, embeddings, {"title": section.title}
             )
+        for table in self.tables:
+            table.addNodeToDatabase(db, part_id)
+        for conseq in self.conseqheads:
+            conseq.addNodeToDatabase(db, part_id)
         # Connect the first section node to the act
         if part_id:
-            edge_query = """
-                MATCH (a), (b)
-                WHERE elementId(a) = $parent_id AND elementId(b) = $child_id
-                CREATE (a)-[r:CONTAINS]->(b)
-                RETURN r
-              """
-            edge_params = {"parent_id": parent_id, "child_id": part_id}
-            db.query(edge_query, edge_params)
+            connect_child_to_parent(db, part_id, parent_id)
         return part_id
 
 
@@ -164,29 +213,37 @@ class ContentNode:
 
             previous_node_id = node_id
 
-        # Connect the first section node to the act
+        # Connect the first chunk of these nodes to the parent
         if first_node_id:
-            edge_query = """
-                MATCH (a), (b)
-                WHERE elementId(a) = $parent_id AND elementId(b) = $child_id
-                CREATE (a)-[r:CONTAINS]->(b)
-                RETURN r
-              """
-            edge_params = {"parent_id": parent_id, "child_id": first_node_id}
-            db.query(edge_query, edge_params)
+            connect_child_to_parent(db, first_node_id, parent_id)
+
         return first_node_id
 
 
 class Section(ContentNode):
     def __init__(self, section):
-        section_num = section.find("bcl:num").getText()
-        section_text = section.find("bcl:text").getText()
-        section_title = section.find("bcl:marginalnote").getText()
+        section_num = (
+            section.find("bcl:num", recursive=False).getText()
+            if section.find("bcl:num", recursive=False)
+            else ""
+        )
+        section_text = (
+            section.find("bcl:text", recursive=False).getText()
+            if section.find("bcl:text", recursive=False)
+            else ""
+        )
+        section_title = (
+            section.find("bcl:marginalnote", recursive=False).getText()
+            if section.find("bcl:marginalnote", recursive=False)
+            else ""
+        )
         super().__init__(section_num, section_text)
         self.title = section_title
         self.subsections = []
         self.paragraphs = []
         self.definitions = []
+        self.tables = []
+        self.conseqheads = []
 
         # Get all subsections
         subsections = section.find_all("bcl:subsection", recursive=False)
@@ -207,6 +264,13 @@ class Section(ContentNode):
             # Connect definition to section
             definition_node = Definition(definition)
             self.definitions.append(definition_node)
+        # Add the mix of conseqhead and table blocks
+        conseq_and_tables = collect_conseq_and_tables(section)
+        for el in conseq_and_tables:
+            if el["conseqhead"]:
+                self.conseqheads.append(Consequence(el["conseqhead"], el["table"]))
+            elif el["table"]:
+                self.tables.append(Table(el["table"]))
 
     def addNodeToDatabase(
         self, db, parent_id, token_splitter, embeddings, unique_params=None
@@ -230,6 +294,10 @@ class Section(ContentNode):
             )
         for definition in self.definitions:
             definition.addNodeToDatabase(db, section_id)
+        for table in self.tables:
+            table.addNodeToDatabase(db, section_id)
+        for conseq in self.conseqheads:
+            conseq.addNodeToDatabase(db, section_id)
         return section_id
 
     def createQuery(self):
@@ -270,6 +338,8 @@ class Subsection(ContentNode):
         subsection_id = super().addNodeToDatabase(
             db, parent_id, token_splitter, embeddings, unique_params
         )
+        if subsection_id:
+            connect_child_to_parent(db, subsection_id, parent_id)
         for paragraph in self.paragraphs:
             paragraph_id = paragraph.addNodeToDatabase(
                 db,
@@ -392,13 +462,123 @@ class Definition:
         node_id = result[0]["id"] if result else None
 
         if node_id:
-            edge_query = """
-                MATCH (a), (b)
-                WHERE elementId(a) = $parent_id AND elementId(b) = $child_id
-                CREATE (a)-[r:DEFINED_WITH]->(b)
-                RETURN r
-              """
-            edge_params = {"parent_id": parent_id, "child_id": node_id}
-            db.query(edge_query, edge_params)
+            connect_child_to_parent(db, node_id, parent_id)
+
+        return node_id
+
+
+class Table:
+    def __init__(self, table):
+        self.rows = []
+
+        # Not all conseqhead tags actually have tables
+        if table is None:
+            return
+        # Identify valid columns and store their headers
+        table_header = table.find("oasis:thead")
+        table_body = table.find("oasis:tbody")
+        rows = table_body.find_all("oasis:trow")
+        headers = []
+        # Not all tables have the thead tag. Some just use first row of table as header
+        if table_header is not None:
+            headers = table_header.find_all("oasis:entry")
+        else:
+            headers = rows[0].find_all("oasis:entry")
+            rows = rows[1:]
+        column_names = {}
+        excluded_columns = set()
+        for header in headers:
+            column_name = header.getText().strip()
+            column_tag = header.get("colname")
+            # Some columns are just white space
+            if len(column_name) == 0:
+                excluded_columns.add(column_tag)
+            else:
+                # Add columns with Header text to map
+                column_names.update({column_tag: column_name})
+
+        # Get all rows in the table
+        for i, row in enumerate(rows):
+            data = {"row_num": i}
+            entries = row.find_all("oasis:entry")
+            for entry in entries:
+                column_tag = entry.get("colname")
+                # Skip columns that are just white space
+                if column_tag in excluded_columns:
+                    continue
+                column_name = column_names[column_tag]
+                data[column_name] = entry.getText().strip()
+            self.rows.append(data)
+
+    def createQuery(self):
+        return """
+            CREATE (n:Table {rows: $rows})
+            RETURN elementId(n) AS id
+            """
+
+    def addNodeToDatabase(self, db, parent_id):
+        # TODO: Should we create embeddings for this? Suggestion: summarize the table and use that summary for embeddings
+        query = self.createQuery()
+        # Parameters for the node
+        params = {
+            "rows": json.dumps(self.rows),
+        }
+
+        # Run the query
+        result = db.query(query, params=params)
+
+        # Get the ID of the created node
+        node_id = result[0]["id"] if result else None
+
+        if node_id:
+            connect_child_to_parent(db, node_id, parent_id)
+
+        return node_id
+
+
+class Consequence:
+    def __init__(self, conseqhead, table=None):
+        self.table = None
+        # table = conseqhead.find("oasis:table", recursive=False)
+        if table:
+            self.table = Table(table)
+        self.title = (
+            conseqhead.find("bcl:text", recursive=False).getText().strip()
+            if conseqhead.find("bcl:text", recursive=False)
+            else ""
+        )
+        self.num = (
+            conseqhead.find("bcl:num", recursive=False).getText()
+            if conseqhead.find("bcl:num", recursive=False)
+            else ""
+        )
+        self.note = (
+            conseqhead.find("bcl:conseqnote", recursive=False).getText().strip()
+            if conseqhead.find("bcl:conseqnote", recursive=False)
+            else ""
+        )
+
+    def createQuery(self):
+        return """
+            CREATE (n:Consequence {note: $note, number: $number, title: $title})
+            RETURN elementId(n) AS id
+            """
+
+    def addNodeToDatabase(self, db, parent_id):
+        query = self.createQuery()
+        # Parameters for the node
+        params = {"note": self.note, "number": self.num, "title": self.title}
+
+        # Run the query
+        result = db.query(query, params=params)
+
+        # Get the ID of the created node
+        node_id = result[0]["id"] if result else None
+
+        if self.table:
+            self.table.addNodeToDatabase(db, node_id)
+
+        if node_id:
+            connect_child_to_parent(db, node_id, parent_id)
 
         return node_id
