@@ -1,6 +1,8 @@
 import json
 
 
+# Because some tables are surrounded by the conseqhead block and others aren't
+# This function handles both cases, returning dicts with both elements
 def collect_conseq_and_tables(block):
     # Find all <bcl:conseqhead> and <oasis:table> tags
     elements = block.find_all(["bcl:conseqhead", "oasis:table"])
@@ -32,6 +34,7 @@ def collect_conseq_and_tables(block):
     return results
 
 
+# Creates the CONTAINS edge between a child and parent pair
 def connect_child_to_parent(db, child_id, parent_id):
     edge_query = """
                 MATCH (a), (b)
@@ -43,6 +46,12 @@ def connect_child_to_parent(db, child_id, parent_id):
     db.query(edge_query, edge_params)
 
 
+#####
+# Each class below represents an XML element found in the acts and regulations.
+# The classes search for expected elements within themselves, construct those classes, then store them in memory.
+# Each class comes with its own query and function to add itself to the database.
+# Any class that extends the Content class is expected to have text_embeddings.
+#####
 class Act:
     def __init__(self, act):
         self.title = act.find("act:title").getText() if act.find("act:title") else ""
@@ -671,7 +680,7 @@ class Division:
             section.addNodeToDatabase(
                 db, division_id, token_splitter, embeddings, {"title": section.title}
             )
-        # Connect the first section node to the act
+        # Connect the division to its parent
         if division_id:
             connect_child_to_parent(db, division_id, parent_id)
         return division_id
@@ -733,7 +742,7 @@ class Regulation:
         # Get the ID of the created node
         reg_node_id = result[0]["id"] if result else None
 
-        # Add all the child nodes within the act
+        # Add all the child nodes within the regulation
         for part in self.parts:
             part.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
         for section in self.sections:

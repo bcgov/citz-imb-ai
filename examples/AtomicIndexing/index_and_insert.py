@@ -9,14 +9,13 @@ from nodes import Act, Regulation
 from threading import current_thread
 import traceback
 
+# Set up embeddings and database connection
 token_splitter = SentenceTransformersTokenTextSplitter(
     chunk_overlap=50, tokens_per_chunk=256
 )
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-# Reading the data inside the xml
 start = time.time()
-
 
 NEO4J_URI = "bolt://" + "localhost:7687"  # os.getenv("NEO4J_HOST") + ":7687"
 NEO4J_USERNAME = "admin"  # os.getenv("NEO4J_USER")
@@ -31,6 +30,7 @@ neo4j = Neo4jGraph(
 )
 
 
+# Function to process and index an act
 def process_act(file_name):
     if file_name == "":
         return
@@ -42,7 +42,6 @@ def process_act(file_name):
         act_xml = BeautifulSoup(data, features="xml")
         try:
             ## Part 1 - Break Act into Nodes
-            # Create Act Node
             act_node = Act(act_xml)
 
             ## Part 2 - Index Act and Add to Neo4j
@@ -51,9 +50,10 @@ def process_act(file_name):
             print(f"Error in {file_name}: {e}")
             print(traceback.format_exc())
 
-    print(f"{file_name} end")
+    print(f"Thread {thread}: {file_name} end")
 
 
+# Function to process and index a regulation
 def process_regulation(file_name):
     if file_name == "":
         return
@@ -65,7 +65,6 @@ def process_regulation(file_name):
         reg_xml = BeautifulSoup(data, features="xml")
         try:
             ## Part 1 - Break Regulation into Nodes
-            # Create Act Node
             reg_node = Regulation(reg_xml)
 
             ## Part 2 - Index Regulation and Add to Neo4j
@@ -74,7 +73,7 @@ def process_regulation(file_name):
             print(f"Error in {file_name}: {e}")
             print(traceback.format_exc())
 
-    print(f"{file_name} end")
+    print(f"Thread {thread}: {file_name} end")
 
 
 acts_path = "examples/HTML_Acts/"
@@ -84,10 +83,10 @@ act_file_names = [f.name for f in act_directory.iterdir() if f.is_file()]
 regs_path = "examples/HTML_Regulations/"
 reg_directory = Path(regs_path)
 reg_file_names = [f.name for f in reg_directory.iterdir() if f.is_file()]
-# reg_file_names = ["DewdneyAlouette_Regional_District_Regulation_5691.xml"]
+
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
-    # list(executor.map(process_act, act_file_names))
+    list(executor.map(process_act, act_file_names))
     list(executor.map(process_regulation, reg_file_names))
 
 # Add vector indexes

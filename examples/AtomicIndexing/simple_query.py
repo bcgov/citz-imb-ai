@@ -47,10 +47,17 @@ def create_prompt(query: str, context_str: str) -> str:
 
 
 #### Adjust your question here ####
-question = "Do I have to wear a seatbelt in BC?"
+question = "How much notice do I need to give to end my rental lease in BC?"
+# question = "Do I need to wear a seatbelt in BC?"
 
 query_embeddings = embeddings.embed_query(question)
 
+# This vector query grabs a lot of connected nodes, including:
+# Any connected references
+# Any nodes contained within (subsections, paragraphs, etc.)
+# The node's parent
+# The node's siblings
+# The previous and next nodes created by the chunking process.
 vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) 
         YIELD node, score
@@ -58,13 +65,17 @@ vector_search_query = """
         OPTIONAL MATCH (node)-[:CONTAINS]->(containedNode)
         OPTIONAL MATCH (parent)-[:CONTAINS]->(node) // Find the parent of the node
         OPTIONAL MATCH (parent)-[:CONTAINS]->(siblingNode) 
+        OPTIONAL MATCH (previousChunk)-[:NEXT*]->(node)
+        OPTIONAL MATCH (node)-[:NEXT*]->(nextChunk)
         WHERE node <> siblingNode // Exclude the node itself from its siblings
         RETURN 
             score, 
             node.text AS text,
+            parent.text as parentText,
             collect(DISTINCT {refText: refNode.text}) AS references,
             collect(DISTINCT {containedText: containedNode.text}) AS containedNodes,
-            collect(DISTINCT {siblingText: siblingNode.text}) AS siblings
+            collect(DISTINCT {siblingText: siblingNode.text}) AS siblings,
+            collect(DISTINCT {connectedText: previousChunk.text}) + collect(DISTINCT {connectedText: nextChunk.text}) AS connectedNodes
         ORDER BY score DESC
         """
 
@@ -87,7 +98,7 @@ def get_mixtral_kwargs(prompt):
         "body": json.dumps(
             {
                 "prompt": prompt,
-                "max_tokens": 1024,
+                "max_tokens": 4096,
                 "temperature": 0.5,
                 "top_p": 0.9,
                 "top_k": 50,
@@ -115,7 +126,8 @@ def get_response(prompt):
     return response_body["outputs"][0]["text"]
 
 
-prompt = create_prompt(query_embeddings, similar)
+prompt = create_prompt(question, similar)
+
 bedrock_response = get_response(prompt)
 
-print(bedrock_response)
+print(bedrock_response.strip())
