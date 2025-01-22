@@ -675,3 +675,69 @@ class Division:
         if division_id:
             connect_child_to_parent(db, division_id, parent_id)
         return division_id
+
+
+class Regulation:
+    def __init__(self, regulation):
+        self.title = (
+            regulation.find("reg:title").getText()
+            if regulation.find("reg:title")
+            else ""
+        )
+        self.act_title = (
+            regulation.find("reg:acttitle").getText()
+            if regulation.find("reg:acttitle")
+            else ""
+        )
+        self.deposit_date = (
+            regulation.find("reg:deposited").getText()
+            if regulation.find("reg:deposited")
+            else ""
+        )
+        self.sections = []
+        self.parts = []
+
+        reg_content = (
+            regulation.find("reg:content")
+            if regulation.find("reg:content") is not None
+            else regulation
+        )
+        # Some acts have parts that surround sections!
+        reg_parts = reg_content.find_all("bcl:part", recursive=False)
+        for part in reg_parts:
+            self.parts.append(Part(part))
+
+        # For each section, create node
+        sections = reg_content.find_all("bcl:section", recursive=False)
+        for section in sections:
+            self.sections.append(Section(section))
+
+    def createQuery(self):
+        return """
+               CREATE (n:Regulation {title: $title, deposit_date: $deposit_date, act_title: $act_title})
+               RETURN elementId(n) AS id
+               """
+
+    def addNodeToDatabase(self, db, token_splitter, embeddings):
+        query = self.createQuery()
+        # Parameters for the node
+        params = {
+            "title": self.title,
+            "deposit_date": self.deposit_date,
+            "act_title": self.act_title,
+        }
+
+        # Run the query
+        result = db.query(query, params=params)
+
+        # Get the ID of the created node
+        reg_node_id = result[0]["id"] if result else None
+
+        # Add all the child nodes within the act
+        for part in self.parts:
+            part.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
+        for section in self.sections:
+            section.addNodeToDatabase(
+                db, reg_node_id, token_splitter, embeddings, {"title": section.title}
+            )
+        return reg_node_id

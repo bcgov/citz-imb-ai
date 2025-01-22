@@ -5,10 +5,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from langchain_community.graphs import Neo4jGraph
 from pathlib import Path
-from nodes import Act
-
-# TODO: Add vector indexes
-# https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/
+from nodes import Act, Regulation
+from threading import current_thread
+import traceback
 
 token_splitter = SentenceTransformersTokenTextSplitter(
     chunk_overlap=50, tokens_per_chunk=256
@@ -35,32 +34,75 @@ neo4j = Neo4jGraph(
 def process_act(file_name):
     if file_name == "":
         return
-    print(f"{file_name} start")
-    with open(f"{path}{file_name}", "r") as f:
+    thread = current_thread().getName()
+    print(f"Thread {thread}: {file_name} start")
+    with open(f"{acts_path}{file_name}", "r") as f:
         data = f.read()
 
-    act_xml = BeautifulSoup(data, features="xml")
-    try:
-        ## Part 1 - Break Act into Nodes
-        # Create Act Node
-        act_node = Act(act_xml)
+        act_xml = BeautifulSoup(data, features="xml")
+        try:
+            ## Part 1 - Break Act into Nodes
+            # Create Act Node
+            act_node = Act(act_xml)
 
-        ## Part 2 - Index Act and Add to Neo4j
-        act_id = act_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
-    except Exception as e:
-        print(f"Error in {file_name}: {e}")
-        # print(e.with_traceback())
+            ## Part 2 - Index Act and Add to Neo4j
+            act_id = act_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
+        except Exception as e:
+            print(f"Error in {file_name}: {e}")
+            print(traceback.format_exc())
 
     print(f"{file_name} end")
 
 
-path = "examples/HTML_Acts/"
-directory = Path(path)
-file_names = [f.name for f in directory.iterdir() if f.is_file()]
+def process_regulation(file_name):
+    if file_name == "":
+        return
+    thread = current_thread().getName()
+    print(f"Thread {thread}: {file_name} start")
+    with open(f"{regs_path}{file_name}", "r") as f:
+        data = f.read()
 
+        reg_xml = BeautifulSoup(data, features="xml")
+        try:
+            ## Part 1 - Break Regulation into Nodes
+            # Create Act Node
+            reg_node = Regulation(reg_xml)
+
+            ## Part 2 - Index Regulation and Add to Neo4j
+            reg_id = reg_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
+        except Exception as e:
+            print(f"Error in {file_name}: {e}")
+            print(traceback.format_exc())
+
+    print(f"{file_name} end")
+
+
+acts_path = "examples/HTML_Acts/"
+act_directory = Path(acts_path)
+act_file_names = [f.name for f in act_directory.iterdir() if f.is_file()]
+
+regs_path = "examples/HTML_Regulations/"
+reg_directory = Path(regs_path)
+reg_file_names = [f.name for f in reg_directory.iterdir() if f.is_file()]
+# reg_file_names = ["DewdneyAlouette_Regional_District_Regulation_5691.xml"]
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
-    list(executor.map(process_act, file_names))
+    # list(executor.map(process_act, act_file_names))
+    list(executor.map(process_regulation, reg_file_names))
+
+# Add vector indexes
+# https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/
+# NOTE: 384 vector dimensions seemed to work in local testing, but 256 didn't.
+index_query = """
+CREATE VECTOR INDEX content_embedding IF NOT EXISTS
+FOR (m:Content)
+ON m.text_embedding
+OPTIONS { indexConfig: {
+ `vector.dimensions`: 384,
+ `vector.similarity_function`: 'cosine'
+ } }
+"""
+neo4j.query(index_query)
 
 end = time.time()
 print(end - start)
