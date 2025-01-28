@@ -446,7 +446,7 @@ class Subparagraph(ContentNode):
 
     def createQuery(self):
         return """
-               CREATE (n:Subaragraph:Content {number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index})
+               CREATE (n:Subparagraph:Content {number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index})
                RETURN elementId(n) AS id
                """
 
