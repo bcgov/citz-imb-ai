@@ -29,6 +29,8 @@ neo4j = Neo4jGraph(
     database=NEO4J_DATABASE,
 )
 
+version_tag = "v3"
+
 
 # Function to process and index an act
 def process_act(file_name):
@@ -42,7 +44,7 @@ def process_act(file_name):
         act_xml = BeautifulSoup(data, features="xml")
         try:
             ## Part 1 - Break Act into Nodes
-            act_node = Act(act_xml)
+            act_node = Act(version_tag, act_xml)
 
             ## Part 2 - Index Act and Add to Neo4j
             act_id = act_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
@@ -65,7 +67,7 @@ def process_regulation(file_name):
         reg_xml = BeautifulSoup(data, features="xml")
         try:
             ## Part 1 - Break Regulation into Nodes
-            reg_node = Regulation(reg_xml)
+            reg_node = Regulation(version_tag, reg_xml)
 
             ## Part 2 - Index Regulation and Add to Neo4j
             reg_id = reg_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
@@ -92,14 +94,11 @@ with ThreadPoolExecutor() as executor:
 # Add vector indexes
 # https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/
 # NOTE: 384 vector dimensions seemed to work in local testing, but 256 didn't.
-index_query = """
-CREATE VECTOR INDEX content_embedding IF NOT EXISTS
-FOR (m:Content)
+index_query = f"""
+CREATE VECTOR INDEX content_embedding_{version_tag} IF NOT EXISTS
+FOR (m:Content_{version_tag})
 ON m.text_embedding
-OPTIONS { indexConfig: {
- `vector.dimensions`: 384,
- `vector.similarity_function`: 'cosine'
- } }
+OPTIONS {{ indexConfig: {{ `vector.dimensions`: 384, `vector.similarity_function`: 'cosine'}} }}
 """
 neo4j.query(index_query)
 
