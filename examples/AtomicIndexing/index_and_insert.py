@@ -36,7 +36,7 @@ version_tag = "v3"
 def process_act(file_name):
     if file_name == "":
         return
-    thread = current_thread().getName()
+    thread = current_thread().name
     print(f"Thread {thread}: {file_name} start")
     with open(f"{acts_path}{file_name}", "r") as f:
         data = f.read()
@@ -59,7 +59,7 @@ def process_act(file_name):
 def process_regulation(file_name):
     if file_name == "":
         return
-    thread = current_thread().getName()
+    thread = current_thread().name
     print(f"Thread {thread}: {file_name} start")
     with open(f"{regs_path}{file_name}", "r") as f:
         data = f.read()
