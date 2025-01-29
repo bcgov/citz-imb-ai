@@ -79,7 +79,7 @@ vector_search_query = """
         ORDER BY score DESC
         """
 
-NEO4J_VECTOR_INDEX = "content_embedding"
+NEO4J_VECTOR_INDEX = "content_embedding_v3"
 similar = neo4j.query(
     vector_search_query,
     params={

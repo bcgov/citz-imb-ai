@@ -46,6 +46,35 @@ def connect_child_to_parent(db, child_id, parent_id):
     db.query(edge_query, edge_params)
 
 
+# Uses string key to determine all tags for a node
+def get_node_tags(node_type, version_tag):
+    match (node_type):
+        case "Act":
+            return f":Act:{version_tag}"
+        case "Part":
+            return f":Part:{version_tag}"
+        case "Division":
+            return f":Division:{version_tag}"
+        case "Section":
+            return f":Section:Content:{version_tag}"
+        case "Subsection":
+            return f":Subsection:Content:{version_tag}"
+        case "Paragraph":
+            return f":Paragraph:Content:{version_tag}"
+        case "Subparagraph":
+            return f":Subparagraph:Content:{version_tag}"
+        case "Table":
+            return f":Table:{version_tag}"
+        case "Definition":
+            return f":Definition:{version_tag}"
+        case "Consequence":
+            return f":Consequence:{version_tag}"
+        case "Regulation":
+            return f":Regulation:{version_tag}"
+        case _:
+            return ""
+
+
 #####
 # Each class below represents an XML element found in the acts and regulations.
 # The classes search for expected elements within themselves, construct those classes, then store them in memory.
@@ -86,7 +115,7 @@ class Act:
 
     def createQuery(self):
         return f"""
-               CREATE (n:Act_{self.version} {{title: $title, year: $year, chapter: $chapter}})
+               CREATE (n {get_node_tags("Act", self.version)} {{title: $title, year: $year, chapter: $chapter}})
                RETURN elementId(n) AS id
                """
 
@@ -158,7 +187,7 @@ class Part:
 
     def createQuery(self):
         return f"""
-               CREATE (n:Part_{self.version} {{title: $title, number: $number}})
+               CREATE (n {get_node_tags("Part", self.version)} {{title: $title, number: $number}})
                RETURN elementId(n) AS id
                """
 
@@ -355,7 +384,7 @@ class Section(ContentNode):
 
     def createQuery(self):
         return f"""
-               CREATE (n:Section_{self.version}:Content_{self.version} {{title: $title, number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Section", self.version)} {{title: $title, number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
@@ -382,7 +411,7 @@ class Subsection(ContentNode):
 
     def createQuery(self):
         return f"""
-               CREATE (n:Subsection_{self.version}:Content_{self.version} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Subsection", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
@@ -423,7 +452,7 @@ class Paragraph(ContentNode):
 
     def createQuery(self):
         return f"""
-               CREATE (n:Paragraph_{self.version}:Content_{self.version} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Paragraph", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
@@ -460,7 +489,7 @@ class Subparagraph(ContentNode):
 
     def createQuery(self):
         return f"""
-               CREATE (n:Subparagraph_{self.version}:Content_{self.version} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Subparagraph", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
@@ -515,7 +544,7 @@ class Definition:
 
     def createQuery(self):
         return f"""
-               CREATE (n:Definition_{self.version} {{term: $term, definition: $definition}})
+               CREATE (n {get_node_tags("Definition", self.version)} {{term: $term, definition: $definition}})
                RETURN elementId(n) AS id
                """
 
@@ -586,7 +615,7 @@ class Table:
 
     def createQuery(self):
         return f"""
-            CREATE (n:Table_{self.version} {{rows: $rows}})
+            CREATE (n {get_node_tags("Table", self.version)} {{rows: $rows}})
             RETURN elementId(n) AS id
             """
 
@@ -634,7 +663,7 @@ class Consequence:
 
     def createQuery(self):
         return f"""
-            CREATE (n:Consequence_{self.version} {{note: $note, number: $number, title: $title}})
+            CREATE (n {get_node_tags("Consequence", self.version)} {{note: $note, number: $number, title: $title}})
             RETURN elementId(n) AS id
             """
 
@@ -685,7 +714,7 @@ class Division:
 
     def createQuery(self):
         return f"""
-            CREATE (n:Division_{self.version} {{text: $text, number: $number}})
+            CREATE (n {get_node_tags("Division", self.version)} {{text: $text, number: $number}})
             RETURN elementId(n) AS id
             """
 
@@ -748,7 +777,7 @@ class Regulation:
 
     def createQuery(self):
         return f"""
-               CREATE (n:Regulation_{self.version} {{title: $title, deposit_date: $deposit_date, act_title: $act_title}})
+               CREATE (n {get_node_tags("Regulation", self.version)} {{title: $title, deposit_date: $deposit_date, act_title: $act_title}})
                RETURN elementId(n) AS id
                """
 

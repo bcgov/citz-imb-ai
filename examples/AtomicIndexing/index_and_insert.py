@@ -96,7 +96,7 @@ with ThreadPoolExecutor() as executor:
 # NOTE: 384 vector dimensions seemed to work in local testing, but 256 didn't.
 index_query = f"""
 CREATE VECTOR INDEX content_embedding_{version_tag} IF NOT EXISTS
-FOR (m:Content_{version_tag})
+FOR (m:{version_tag})
 ON m.text_embedding
 OPTIONS {{ indexConfig: {{ `vector.dimensions`: 384, `vector.similarity_function`: 'cosine'}} }}
 """
