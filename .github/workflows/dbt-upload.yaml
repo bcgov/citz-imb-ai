@@ -33,11 +33,6 @@ jobs:
     - name: Check `oc` version
       run: oc version
 
-    # Check PATH
-    - name: Debug PATH
-      run: echo "$PATH"
-
-
     # Login to the Openshift Cluster
     - name: Login to Openshift
       uses: redhat-actions/oc-login@v1
