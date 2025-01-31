@@ -8,7 +8,7 @@ SELECT
     tb.*,
     tt.*,
     tr.*,
-    fb.*
+    tf.*
 FROM 
     {{ref('trulens_base')}} tb
 LEFT JOIN 
