@@ -19,6 +19,25 @@ jobs:
       with:
         fetch-depth: 0
 
+    # Install `oc`
+    - name: Install OpenShift CLI
+      run: |
+        curl -LO https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/oc.tar.gz
+        tar -xvzf oc.tar.gz
+        chmod +x oc
+        mkdir -p $HOME/bin
+        mv oc $HOME/bin/
+        echo "$HOME/bin" >> $GITHUB_PATH
+
+    # Verify `oc`
+    - name: Check `oc` version
+      run: oc version
+
+    # Check PATH
+    - name: Debug PATH
+      run: echo "$PATH"
+
+
     # Login to the Openshift Cluster
     - name: Login to Openshift
       uses: redhat-actions/oc-login@v1
