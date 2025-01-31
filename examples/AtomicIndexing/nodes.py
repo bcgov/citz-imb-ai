@@ -46,6 +46,35 @@ def connect_child_to_parent(db, child_id, parent_id):
     db.query(edge_query, edge_params)
 
 
+# Uses string key to determine all tags for a node
+def get_node_tags(node_type, version_tag):
+    match (node_type):
+        case "Act":
+            return f":Act:{version_tag}"
+        case "Part":
+            return f":Part:{version_tag}"
+        case "Division":
+            return f":Division:{version_tag}"
+        case "Section":
+            return f":Section:Content:{version_tag}"
+        case "Subsection":
+            return f":Subsection:Content:{version_tag}"
+        case "Paragraph":
+            return f":Paragraph:Content:{version_tag}"
+        case "Subparagraph":
+            return f":Subparagraph:Content:{version_tag}"
+        case "Table":
+            return f":Table:{version_tag}"
+        case "Definition":
+            return f":Definition:{version_tag}"
+        case "Consequence":
+            return f":Consequence:{version_tag}"
+        case "Regulation":
+            return f":Regulation:{version_tag}"
+        case _:
+            return ""
+
+
 #####
 # Each class below represents an XML element found in the acts and regulations.
 # The classes search for expected elements within themselves, construct those classes, then store them in memory.
@@ -53,7 +82,7 @@ def connect_child_to_parent(db, child_id, parent_id):
 # Any class that extends the Content class is expected to have text_embeddings.
 #####
 class Act:
-    def __init__(self, act):
+    def __init__(self, version_tag, act):
         self.title = act.find("act:title").getText() if act.find("act:title") else ""
         self.chapter = (
             act.find("act:chapter").getText() if act.find("act:chapter") else ""
@@ -63,6 +92,7 @@ class Act:
         )
         self.sections = []
         self.parts = []
+        self.version = version_tag
 
         act_content = (
             act.find("act:content") if act.find("act:content") is not None else act
@@ -84,15 +114,19 @@ class Act:
         """
 
     def createQuery(self):
-        return """
-               CREATE (n:Act {title: $title, year: $year, chapter: $chapter})
+        return f"""
+               CREATE (n {get_node_tags("Act", self.version)} {{title: $title, year: $year, chapter: $chapter}})
                RETURN elementId(n) AS id
                """
 
     def addNodeToDatabase(self, db, token_splitter, embeddings):
         query = self.createQuery()
         # Parameters for the node
-        params = {"title": self.title, "year": self.year, "chapter": self.chapter}
+        params = {
+            "title": self.title,
+            "year": self.year,
+            "chapter": self.chapter,
+        }
 
         # Run the query
         result = db.query(query, params=params)
@@ -110,28 +144,29 @@ class Act:
         return act_node_id
 
     def addPart(self, part):
-        part_node = Part(part)
+        part_node = Part(self.version, part)
         self.parts.append(part_node)
 
     def addSection(self, section):
-        section_node = Section(section)
+        section_node = Section(self.version, section)
         # Connect section to act
         self.sections.append(section_node)
 
 
 class Part:
-    def __init__(self, part):
+    def __init__(self, version_tag, part):
         self.title = part.find("bcl:text").getText()
         self.number = part.find("bcl:num").getText()
         self.sections = []
         self.tables = []
         self.conseqheads = []
         self.divisions = []
+        self.version = version_tag
 
         # For each section, create node
         sections = part.find_all("bcl:section", recursive=False)
         for section in sections:
-            section_node = Section(section)
+            section_node = Section(self.version, section)
             # Connect section to part
             self.sections.append(section_node)
 
@@ -139,18 +174,20 @@ class Part:
         conseq_and_tables = collect_conseq_and_tables(part)
         for el in conseq_and_tables:
             if el["conseqhead"]:
-                self.conseqheads.append(Consequence(el["conseqhead"], el["table"]))
+                self.conseqheads.append(
+                    Consequence(self.version, el["conseqhead"], el["table"])
+                )
             elif el["table"]:
-                self.tables.append(Table(el["table"]))
+                self.tables.append(Table(self.version, el["table"]))
 
         # Add divisions
         divisions = part.find_all("bcl:division", recursive=False)
         for division in divisions:
-            self.divisions.append(Division(division))
+            self.divisions.append(Division(self.version, division))
 
     def createQuery(self):
-        return """
-               CREATE (n:Part {title: $title, number: $number})
+        return f"""
+               CREATE (n {get_node_tags("Part", self.version)} {{title: $title, number: $number}})
                RETURN elementId(n) AS id
                """
 
@@ -263,7 +300,7 @@ class ContentNode:
 
 
 class Section(ContentNode):
-    def __init__(self, section):
+    def __init__(self, version_tag, section):
         section_num = (
             section.find("bcl:num", recursive=False).getText()
             if section.find("bcl:num", recursive=False)
@@ -286,33 +323,36 @@ class Section(ContentNode):
         self.definitions = []
         self.tables = []
         self.conseqheads = []
+        self.version = version_tag
 
         # Get all subsections
         subsections = section.find_all("bcl:subsection", recursive=False)
         # For each subsection, add to section
         for subsection in subsections:
-            subsection_node = Subsection(subsection)
+            subsection_node = Subsection(self.version, subsection)
             # Connect subsection to section
             self.subsections.append(subsection_node)
         # Some sections have immediate paragraphs
         paragraphs = section.find_all("bcl:paragraph", recursive=False)
         for paragraph in paragraphs:
-            paragraph_node = Paragraph(paragraph)
+            paragraph_node = Paragraph(self.version, paragraph)
             # Connect paragraph to section
             self.paragraphs.append(paragraph_node)
         # Add definitions to the section
         definitions = section.find_all("bcl:definition", recursive=False)
         for definition in definitions:
             # Connect definition to section
-            definition_node = Definition(definition)
+            definition_node = Definition(self.version, definition)
             self.definitions.append(definition_node)
         # Add the mix of conseqhead and table blocks
         conseq_and_tables = collect_conseq_and_tables(section)
         for el in conseq_and_tables:
             if el["conseqhead"]:
-                self.conseqheads.append(Consequence(el["conseqhead"], el["table"]))
+                self.conseqheads.append(
+                    Consequence(self.version, el["conseqhead"], el["table"])
+                )
             elif el["table"]:
-                self.tables.append(Table(el["table"]))
+                self.tables.append(Table(self.version, el["table"]))
 
     def addNodeToDatabase(
         self, db, parent_id, token_splitter, embeddings, unique_params=None
@@ -343,14 +383,14 @@ class Section(ContentNode):
         return section_id
 
     def createQuery(self):
-        return """
-               CREATE (n:Section:Content {title: $title, number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index})
+        return f"""
+               CREATE (n {get_node_tags("Section", self.version)} {{title: $title, number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
 
 class Subsection(ContentNode):
-    def __init__(self, subsection):
+    def __init__(self, version_tag, subsection):
         # Can't assume these exist for .getText
         subsection_num = (
             subsection.find("bcl:num").getText() if subsection.find("bcl:num") else ""
@@ -360,17 +400,18 @@ class Subsection(ContentNode):
         )
         super().__init__(subsection_num, subsection_text)
         self.paragraphs = []
+        self.version = version_tag
 
         # Get all paragraphs and add to subsection
         paragraphs = subsection.find_all("bcl:paragraph", recursive=False)
         for paragraph in paragraphs:
-            paragraph_node = Paragraph(paragraph)
+            paragraph_node = Paragraph(self.version, paragraph)
             # Connect paragraph to subsection
             self.paragraphs.append(paragraph_node)
 
     def createQuery(self):
-        return """
-               CREATE (n:Subsection:Content {number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index})
+        return f"""
+               CREATE (n {get_node_tags("Subsection", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
@@ -392,7 +433,7 @@ class Subsection(ContentNode):
 
 
 class Paragraph(ContentNode):
-    def __init__(self, paragraph):
+    def __init__(self, version_tag, paragraph):
         paragraph_num = (
             paragraph.find("bcl:num").getText() if paragraph.find("bcl:num") else ""
         )
@@ -401,16 +442,17 @@ class Paragraph(ContentNode):
         )
         super().__init__(paragraph_num, paragraph_text)
         self.subparagraphs = []
+        self.version = version_tag
 
         # Address subparagraphs
         subparagraphs = paragraph.find_all("bcl:subparagraph", recursive=False)
         for subparagraph in subparagraphs:
-            subparagraph_node = Subparagraph(subparagraph)
+            subparagraph_node = Subparagraph(self.version, subparagraph)
             self.subparagraphs.append(subparagraph_node)
 
     def createQuery(self):
-        return """
-               CREATE (n:Paragraph:Content {number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index})
+        return f"""
+               CREATE (n {get_node_tags("Paragraph", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
@@ -431,7 +473,7 @@ class Paragraph(ContentNode):
 
 
 class Subparagraph(ContentNode):
-    def __init__(self, subparagraph):
+    def __init__(self, version_tag, subparagraph):
         subparagraph_num = (
             subparagraph.find("bcl:num").getText()
             if subparagraph.find("bcl:num")
@@ -443,18 +485,20 @@ class Subparagraph(ContentNode):
             else ""
         )
         super().__init__(subparagraph_num, subparagraph_text)
+        self.version = version_tag
 
     def createQuery(self):
-        return """
-               CREATE (n:Subaragraph:Content {number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index})
+        return f"""
+               CREATE (n {get_node_tags("Subparagraph", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
                RETURN elementId(n) AS id
                """
 
 
 class Definition:
-    def __init__(self, definition):
+    def __init__(self, version_tag, definition):
         self.term = None
         self.definition = None
+        self.version = version_tag
 
         # Get the first text block in a definition. This one is guaranteed
         definition_text_blocks = definition.findAll("bcl:text", recursive=False)
@@ -499,8 +543,8 @@ class Definition:
         self.definition = definition_text
 
     def createQuery(self):
-        return """
-               CREATE (n:Definition {term: $term, definition: $definition})
+        return f"""
+               CREATE (n {get_node_tags("Definition", self.version)} {{term: $term, definition: $definition}})
                RETURN elementId(n) AS id
                """
 
@@ -508,7 +552,10 @@ class Definition:
         # TODO: Should we create embeddings for this?
         query = self.createQuery()
         # Parameters for the node
-        params = {"term": self.term, "definition": self.definition}
+        params = {
+            "term": self.term,
+            "definition": self.definition,
+        }
 
         # Run the query
         result = db.query(query, params=params)
@@ -523,8 +570,9 @@ class Definition:
 
 
 class Table:
-    def __init__(self, table):
+    def __init__(self, version_tag, table):
         self.rows = []
+        self.version = version_tag
 
         # Not all conseqhead tags actually have tables
         if table is None:
@@ -566,8 +614,8 @@ class Table:
             self.rows.append(data)
 
     def createQuery(self):
-        return """
-            CREATE (n:Table {rows: $rows})
+        return f"""
+            CREATE (n {get_node_tags("Table", self.version)} {{rows: $rows}})
             RETURN elementId(n) AS id
             """
 
@@ -592,11 +640,11 @@ class Table:
 
 
 class Consequence:
-    def __init__(self, conseqhead, table=None):
+    def __init__(self, version_tag, conseqhead, table=None):
         self.table = None
-        # table = conseqhead.find("oasis:table", recursive=False)
+        self.version = version_tag
         if table:
-            self.table = Table(table)
+            self.table = Table(table, self.version)
         self.title = (
             conseqhead.find("bcl:text", recursive=False).getText().strip()
             if conseqhead.find("bcl:text", recursive=False)
@@ -614,15 +662,19 @@ class Consequence:
         )
 
     def createQuery(self):
-        return """
-            CREATE (n:Consequence {note: $note, number: $number, title: $title})
+        return f"""
+            CREATE (n {get_node_tags("Consequence", self.version)} {{note: $note, number: $number, title: $title}})
             RETURN elementId(n) AS id
             """
 
     def addNodeToDatabase(self, db, parent_id):
         query = self.createQuery()
         # Parameters for the node
-        params = {"note": self.note, "number": self.num, "title": self.title}
+        params = {
+            "note": self.note,
+            "number": self.num,
+            "title": self.title,
+        }
 
         # Run the query
         result = db.query(query, params=params)
@@ -640,7 +692,7 @@ class Consequence:
 
 
 class Division:
-    def __init__(self, division):
+    def __init__(self, version_tag, division):
         self.number = (
             division.find("bcl:num", recursive=False).getText()
             if division.find("bcl:num", recursive=False)
@@ -652,16 +704,17 @@ class Division:
             else ""
         )
         self.sections = []
+        self.version = version_tag
         # For each section, create node
         sections = division.find_all("bcl:section", recursive=False)
         for section in sections:
-            section_node = Section(section)
+            section_node = Section(self.version, section)
             # Connect section to part
             self.sections.append(section_node)
 
     def createQuery(self):
-        return """
-            CREATE (n:Division {text: $text, number: $number})
+        return f"""
+            CREATE (n {get_node_tags("Division", self.version)} {{text: $text, number: $number}})
             RETURN elementId(n) AS id
             """
 
@@ -687,7 +740,7 @@ class Division:
 
 
 class Regulation:
-    def __init__(self, regulation):
+    def __init__(self, version_tag, regulation):
         self.title = (
             regulation.find("reg:title").getText()
             if regulation.find("reg:title")
@@ -705,6 +758,7 @@ class Regulation:
         )
         self.sections = []
         self.parts = []
+        self.version = version_tag
 
         reg_content = (
             regulation.find("reg:content")
@@ -714,16 +768,16 @@ class Regulation:
         # Some acts have parts that surround sections!
         reg_parts = reg_content.find_all("bcl:part", recursive=False)
         for part in reg_parts:
-            self.parts.append(Part(part))
+            self.parts.append(Part(self.version, part))
 
         # For each section, create node
         sections = reg_content.find_all("bcl:section", recursive=False)
         for section in sections:
-            self.sections.append(Section(section))
+            self.sections.append(Section(self.version, section))
 
     def createQuery(self):
-        return """
-               CREATE (n:Regulation {title: $title, deposit_date: $deposit_date, act_title: $act_title})
+        return f"""
+               CREATE (n {get_node_tags("Regulation", self.version)} {{title: $title, deposit_date: $deposit_date, act_title: $act_title}})
                RETURN elementId(n) AS id
                """
 
