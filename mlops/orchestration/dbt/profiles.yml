@@ -4,7 +4,7 @@ analytics:
       type: postgres
       threads: 1
       host: "{{ env_var('TRULENS_HOST', 'trulens') }}"
-      port: "{{ env_var('TRULENS_PORT', 5432) }}"
+      port: "{{ env_var('TRULENS_PORT', 5432) | int }}"
       user: "{{ env_var('TRULENS_USER', 'postgres') }}"
       pass: "{{ env_var('TRULENS_PASSWORD', 'root') }}"
       dbname: "{{ env_var('TRULENS_DB', 'postgres') }}"
