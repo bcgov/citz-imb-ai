@@ -1,4 +1,10 @@
+from collections import defaultdict
 import json
+
+
+# Included because passing metadata between classes just makes shallow copies
+def deep_copy(dict):
+    return json.loads(json.dumps(dict))
 
 
 # Because some tables are surrounded by the conseqhead block and others aren't
@@ -83,15 +89,19 @@ def get_node_tags(node_type, version_tag):
 #####
 class Act:
     def __init__(self, version_tag, act):
-        self.title = act.find("act:title").getText() if act.find("act:title") else ""
-        self.chapter = (
+        self.metadata = defaultdict(lambda: "")
+        self.metadata["document_title"] = (
+            act.find("act:title").getText() if act.find("act:title") else ""
+        )
+        self.metadata["act_chapter"] = (
             act.find("act:chapter").getText() if act.find("act:chapter") else ""
         )
-        self.year = (
+        self.metadata["year"] = (
             act.find("act:yearenacted").getText() if act.find("act:yearenacted") else ""
         )
         self.sections = []
         self.parts = []
+        self.divisions = []
         self.version = version_tag
 
         act_content = (
@@ -100,12 +110,16 @@ class Act:
         # Some acts have parts that surround sections!
         act_parts = act_content.find_all("bcl:part", recursive=False)
         for part in act_parts:
-            self.addPart(part)
+            self.parts.append(Part(self.version, part, self.metadata))
 
         # For each section, create node
         sections = act_content.find_all("bcl:section", recursive=False)
         for section in sections:
-            self.addSection(section)
+            self.sections.append(Section(self.version, section, self.metadata))
+
+        act_divisions = act_content.find_all("bcl:division", recursive=False)
+        for division in act_divisions:
+            self.divisions.append(Division(self.version, division, self.metadata))
 
     def __str__(self):
         return f"""
@@ -115,21 +129,19 @@ class Act:
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Act", self.version)} {{title: $title, year: $year, chapter: $chapter}})
+               CREATE (n {get_node_tags("Act", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
     def addNodeToDatabase(self, db, token_splitter, embeddings):
         query = self.createQuery()
         # Parameters for the node
-        params = {
-            "title": self.title,
-            "year": self.year,
-            "chapter": self.chapter,
-        }
+        params = self.metadata
 
         # Run the query
-        result = db.query(query, params=params)
+        wrapped_params = {"params": params}
+        result = db.query(query, params=wrapped_params)
 
         # Get the ID of the created node
         act_node_id = result[0]["id"] if result else None
@@ -138,25 +150,17 @@ class Act:
         for part in self.parts:
             part.addNodeToDatabase(db, act_node_id, token_splitter, embeddings)
         for section in self.sections:
-            section.addNodeToDatabase(
-                db, act_node_id, token_splitter, embeddings, {"title": section.title}
-            )
+            section.addNodeToDatabase(db, act_node_id, token_splitter, embeddings)
+        for division in self.divisions:
+            division.addNodeToDatabase(db, act_node_id, token_splitter, embeddings)
         return act_node_id
-
-    def addPart(self, part):
-        part_node = Part(self.version, part)
-        self.parts.append(part_node)
-
-    def addSection(self, section):
-        section_node = Section(self.version, section)
-        # Connect section to act
-        self.sections.append(section_node)
 
 
 class Part:
-    def __init__(self, version_tag, part):
-        self.title = part.find("bcl:text").getText()
-        self.number = part.find("bcl:num").getText()
+    def __init__(self, version_tag, part, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
+        self.metadata["part_title"] = part.find("bcl:text").getText()
+        self.metadata["part_number"] = part.find("bcl:num").getText()
         self.sections = []
         self.tables = []
         self.conseqheads = []
@@ -166,7 +170,7 @@ class Part:
         # For each section, create node
         sections = part.find_all("bcl:section", recursive=False)
         for section in sections:
-            section_node = Section(self.version, section)
+            section_node = Section(self.version, section, self.metadata)
             # Connect section to part
             self.sections.append(section_node)
 
@@ -175,36 +179,41 @@ class Part:
         for el in conseq_and_tables:
             if el["conseqhead"]:
                 self.conseqheads.append(
-                    Consequence(self.version, el["conseqhead"], el["table"])
+                    Consequence(
+                        self.version, el["conseqhead"], el["table"], self.metadata
+                    )
                 )
             elif el["table"]:
-                self.tables.append(Table(self.version, el["table"]))
+                self.tables.append(Table(self.version, el["table"], self.metadata))
 
         # Add divisions
         divisions = part.find_all("bcl:division", recursive=False)
         for division in divisions:
-            self.divisions.append(Division(self.version, division))
+            self.divisions.append(Division(self.version, division, self.metadata))
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Part", self.version)} {{title: $title, number: $number}})
+               CREATE (n {get_node_tags("Part", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
     def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         query = self.createQuery()
-        # Parameters for the node
-        params = {"title": self.title, "number": self.number}
 
         # Run the query
-        result = db.query(query, params=params)
+        wrapped_params = {"params": self.metadata}
+        result = db.query(query, params=wrapped_params)
 
         # Get the ID of the created node
         part_id = result[0]["id"] if result else None
 
         for section in self.sections:
             section.addNodeToDatabase(
-                db, part_id, token_splitter, embeddings, {"title": section.title}
+                db,
+                part_id,
+                token_splitter,
+                embeddings,
             )
         for table in self.tables:
             table.addNodeToDatabase(db, part_id)
@@ -219,8 +228,7 @@ class Part:
 
 
 class ContentNode:
-    def __init__(self, number, text):
-        self.number = number
+    def __init__(self, text):
         self.text = text
 
     def addNodeToDatabase(
@@ -239,7 +247,6 @@ class ContentNode:
                 text_embedding = embeddings.embed_query(chunk)
                 # Parameters for the node
                 params = {
-                    "number": self.number,
                     "text": chunk,
                     "textEmbedding": text_embedding,
                     "chunk_index": i,
@@ -249,7 +256,8 @@ class ContentNode:
                     params.update(unique_params)
 
                 # Run the query
-                result = db.query(query, params=params)
+                wrapped_params = {"params": params}
+                result = db.query(query, params=wrapped_params)
 
                 # Get the ID of the created node
                 node_id = result[0]["id"] if result else None
@@ -276,7 +284,6 @@ class ContentNode:
             text_embedding = embeddings.embed_query(self.text)
             # Parameters for the node
             params = {
-                "number": self.number,
                 "text": self.text,
                 "textEmbedding": text_embedding,
                 "chunk_index": 0,
@@ -286,7 +293,8 @@ class ContentNode:
                 params.update(unique_params)
 
             # Run the query
-            result = db.query(query, params=params)
+            wrapped_params = {"params": params}
+            result = db.query(query, params=wrapped_params)
 
             # Get the ID of the created node
             node_id = result[0]["id"] if result else None
@@ -300,8 +308,9 @@ class ContentNode:
 
 
 class Section(ContentNode):
-    def __init__(self, version_tag, section):
-        section_num = (
+    def __init__(self, version_tag, section, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
+        self.metadata["section_number"] = (
             section.find("bcl:num", recursive=False).getText()
             if section.find("bcl:num", recursive=False)
             else ""
@@ -311,13 +320,12 @@ class Section(ContentNode):
             if section.find("bcl:text", recursive=False)
             else ""
         )
-        section_title = (
+        self.metadata["section_title"] = (
             section.find("bcl:marginalnote", recursive=False).getText()
             if section.find("bcl:marginalnote", recursive=False)
             else ""
         )
-        super().__init__(section_num, section_text)
-        self.title = section_title
+        super().__init__(section_text)
         self.subsections = []
         self.paragraphs = []
         self.definitions = []
@@ -329,36 +337,36 @@ class Section(ContentNode):
         subsections = section.find_all("bcl:subsection", recursive=False)
         # For each subsection, add to section
         for subsection in subsections:
-            subsection_node = Subsection(self.version, subsection)
+            subsection_node = Subsection(self.version, subsection, self.metadata)
             # Connect subsection to section
             self.subsections.append(subsection_node)
         # Some sections have immediate paragraphs
         paragraphs = section.find_all("bcl:paragraph", recursive=False)
         for paragraph in paragraphs:
-            paragraph_node = Paragraph(self.version, paragraph)
+            paragraph_node = Paragraph(self.version, paragraph, self.metadata)
             # Connect paragraph to section
             self.paragraphs.append(paragraph_node)
         # Add definitions to the section
         definitions = section.find_all("bcl:definition", recursive=False)
         for definition in definitions:
             # Connect definition to section
-            definition_node = Definition(self.version, definition)
+            definition_node = Definition(self.version, definition, self.metadata)
             self.definitions.append(definition_node)
         # Add the mix of conseqhead and table blocks
         conseq_and_tables = collect_conseq_and_tables(section)
         for el in conseq_and_tables:
             if el["conseqhead"]:
                 self.conseqheads.append(
-                    Consequence(self.version, el["conseqhead"], el["table"])
+                    Consequence(
+                        self.version, el["conseqhead"], el["table"], self.metadata
+                    )
                 )
             elif el["table"]:
-                self.tables.append(Table(self.version, el["table"]))
+                self.tables.append(Table(self.version, el["table"], self.metadata))
 
-    def addNodeToDatabase(
-        self, db, parent_id, token_splitter, embeddings, unique_params=None
-    ):
+    def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         section_id = super().addNodeToDatabase(
-            db, parent_id, token_splitter, embeddings, unique_params
+            db, parent_id, token_splitter, embeddings, self.metadata
         )
         for subsection in self.subsections:
             subsection.addNodeToDatabase(
@@ -384,42 +392,49 @@ class Section(ContentNode):
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Section", self.version)} {{title: $title, number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Section", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
 
 class Subsection(ContentNode):
-    def __init__(self, version_tag, subsection):
+    def __init__(self, version_tag, subsection, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
         # Can't assume these exist for .getText
-        subsection_num = (
+        self.metadata["subsection_number"] = (
             subsection.find("bcl:num").getText() if subsection.find("bcl:num") else ""
         )
         subsection_text = (
             subsection.find("bcl:text").getText() if subsection.find("bcl:text") else ""
         )
-        super().__init__(subsection_num, subsection_text)
+        super().__init__(subsection_text)
         self.paragraphs = []
         self.version = version_tag
 
         # Get all paragraphs and add to subsection
         paragraphs = subsection.find_all("bcl:paragraph", recursive=False)
         for paragraph in paragraphs:
-            paragraph_node = Paragraph(self.version, paragraph)
+            paragraph_node = Paragraph(self.version, paragraph, self.metadata)
             # Connect paragraph to subsection
             self.paragraphs.append(paragraph_node)
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Subsection", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Subsection", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
     def addNodeToDatabase(
-        self, db, parent_id, token_splitter, embeddings, unique_params=None
+        self,
+        db,
+        parent_id,
+        token_splitter,
+        embeddings,
     ):
         subsection_id = super().addNodeToDatabase(
-            db, parent_id, token_splitter, embeddings, unique_params
+            db, parent_id, token_splitter, embeddings, self.metadata
         )
 
         for paragraph in self.paragraphs:
@@ -433,34 +448,34 @@ class Subsection(ContentNode):
 
 
 class Paragraph(ContentNode):
-    def __init__(self, version_tag, paragraph):
-        paragraph_num = (
+    def __init__(self, version_tag, paragraph, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
+        self.metadata["paragraph_number"] = (
             paragraph.find("bcl:num").getText() if paragraph.find("bcl:num") else ""
         )
         paragraph_text = (
             paragraph.find("bcl:text").getText() if paragraph.find("bcl:text") else ""
         )
-        super().__init__(paragraph_num, paragraph_text)
+        super().__init__(paragraph_text)
         self.subparagraphs = []
         self.version = version_tag
 
         # Address subparagraphs
         subparagraphs = paragraph.find_all("bcl:subparagraph", recursive=False)
         for subparagraph in subparagraphs:
-            subparagraph_node = Subparagraph(self.version, subparagraph)
+            subparagraph_node = Subparagraph(self.version, subparagraph, self.metadata)
             self.subparagraphs.append(subparagraph_node)
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Paragraph", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Paragraph", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
-    def addNodeToDatabase(
-        self, db, parent_id, token_splitter, embeddings, unique_params=None
-    ):
+    def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         paragraph_id = super().addNodeToDatabase(
-            db, parent_id, token_splitter, embeddings, unique_params
+            db, parent_id, token_splitter, embeddings, self.metadata
         )
         for subparagraph in self.subparagraphs:
             subparagraph.addNodeToDatabase(
@@ -473,8 +488,9 @@ class Paragraph(ContentNode):
 
 
 class Subparagraph(ContentNode):
-    def __init__(self, version_tag, subparagraph):
-        subparagraph_num = (
+    def __init__(self, version_tag, subparagraph, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
+        self.metadata["subparagraph_number"] = (
             subparagraph.find("bcl:num").getText()
             if subparagraph.find("bcl:num")
             else ""
@@ -484,18 +500,26 @@ class Subparagraph(ContentNode):
             if subparagraph.find("bcl:text")
             else ""
         )
-        super().__init__(subparagraph_num, subparagraph_text)
+        super().__init__(subparagraph_text)
         self.version = version_tag
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Subparagraph", self.version)} {{number: $number, text: $text, text_embedding: $textEmbedding, chunk_index: $chunk_index}})
+               CREATE (n {get_node_tags("Subparagraph", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
+    def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
+        subparagraph_id = super().addNodeToDatabase(
+            db, parent_id, token_splitter, embeddings, self.metadata
+        )
+        return subparagraph_id
+
 
 class Definition:
-    def __init__(self, version_tag, definition):
+    def __init__(self, version_tag, definition, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
         self.term = None
         self.definition = None
         self.version = version_tag
@@ -544,7 +568,8 @@ class Definition:
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Definition", self.version)} {{term: $term, definition: $definition}})
+               CREATE (n {get_node_tags("Definition", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
@@ -556,9 +581,10 @@ class Definition:
             "term": self.term,
             "definition": self.definition,
         }
-
+        params.update(self.metadata)
         # Run the query
-        result = db.query(query, params=params)
+        wrapped_params = {"params": params}
+        result = db.query(query, params=wrapped_params)
 
         # Get the ID of the created node
         node_id = result[0]["id"] if result else None
@@ -570,7 +596,8 @@ class Definition:
 
 
 class Table:
-    def __init__(self, version_tag, table):
+    def __init__(self, version_tag, table, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
         self.rows = []
         self.version = version_tag
 
@@ -615,7 +642,8 @@ class Table:
 
     def createQuery(self):
         return f"""
-            CREATE (n {get_node_tags("Table", self.version)} {{rows: $rows}})
+            CREATE (n {get_node_tags("Table", self.version)})
+            SET n += $params
             RETURN elementId(n) AS id
             """
 
@@ -626,9 +654,10 @@ class Table:
         params = {
             "rows": json.dumps(self.rows),
         }
-
+        params.update(self.metadata)
         # Run the query
-        result = db.query(query, params=params)
+        wrapped_params = {"params": params}
+        result = db.query(query, params=wrapped_params)
 
         # Get the ID of the created node
         node_id = result[0]["id"] if result else None
@@ -640,17 +669,16 @@ class Table:
 
 
 class Consequence:
-    def __init__(self, version_tag, conseqhead, table=None):
+    def __init__(self, version_tag, conseqhead, table, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
         self.table = None
         self.version = version_tag
-        if table:
-            self.table = Table(table, self.version)
-        self.title = (
+        self.metadata["consequence_title"] = (
             conseqhead.find("bcl:text", recursive=False).getText().strip()
             if conseqhead.find("bcl:text", recursive=False)
             else ""
         )
-        self.num = (
+        self.metadata["consequence_number"] = (
             conseqhead.find("bcl:num", recursive=False).getText()
             if conseqhead.find("bcl:num", recursive=False)
             else ""
@@ -660,10 +688,13 @@ class Consequence:
             if conseqhead.find("bcl:conseqnote", recursive=False)
             else ""
         )
+        if table:
+            self.table = Table(table, self.version, self.metadata)
 
     def createQuery(self):
         return f"""
-            CREATE (n {get_node_tags("Consequence", self.version)} {{note: $note, number: $number, title: $title}})
+            CREATE (n {get_node_tags("Consequence", self.version)})
+            SET n += $params
             RETURN elementId(n) AS id
             """
 
@@ -672,12 +703,11 @@ class Consequence:
         # Parameters for the node
         params = {
             "note": self.note,
-            "number": self.num,
-            "title": self.title,
         }
-
+        params.update(self.metadata)
         # Run the query
-        result = db.query(query, params=params)
+        wrapped_params = {"params": params}
+        result = db.query(query, params=wrapped_params)
 
         # Get the ID of the created node
         node_id = result[0]["id"] if result else None
@@ -692,8 +722,9 @@ class Consequence:
 
 
 class Division:
-    def __init__(self, version_tag, division):
-        self.number = (
+    def __init__(self, version_tag, division, initial_metadata):
+        self.metadata = deep_copy(initial_metadata)
+        self.metadata["division_number"] = (
             division.find("bcl:num", recursive=False).getText()
             if division.find("bcl:num", recursive=False)
             else ""
@@ -708,31 +739,31 @@ class Division:
         # For each section, create node
         sections = division.find_all("bcl:section", recursive=False)
         for section in sections:
-            section_node = Section(self.version, section)
+            section_node = Section(self.version, section, self.metadata)
             # Connect section to part
             self.sections.append(section_node)
 
     def createQuery(self):
         return f"""
-            CREATE (n {get_node_tags("Division", self.version)} {{text: $text, number: $number}})
+            CREATE (n {get_node_tags("Division", self.version)})
+            SET n += $params
             RETURN elementId(n) AS id
             """
 
     def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         query = self.createQuery()
         # Parameters for the node
-        params = {"text": self.text, "number": self.number}
-
+        params = {"text": self.text}
+        params.update(self.metadata)
         # Run the query
-        result = db.query(query, params=params)
+        wrapped_params = {"params": params}
+        result = db.query(query, params=wrapped_params)
 
         # Get the ID of the created node
         division_id = result[0]["id"] if result else None
 
         for section in self.sections:
-            section.addNodeToDatabase(
-                db, division_id, token_splitter, embeddings, {"title": section.title}
-            )
+            section.addNodeToDatabase(db, division_id, token_splitter, embeddings)
         # Connect the division to its parent
         if division_id:
             connect_child_to_parent(db, division_id, parent_id)
@@ -741,12 +772,13 @@ class Division:
 
 class Regulation:
     def __init__(self, version_tag, regulation):
-        self.title = (
+        self.metadata = defaultdict(lambda: "")
+        self.metadata["document_title"] = (
             regulation.find("reg:title").getText()
             if regulation.find("reg:title")
             else ""
         )
-        self.act_title = (
+        self.metadata["related_act_title"] = (
             regulation.find("reg:acttitle").getText()
             if regulation.find("reg:acttitle")
             else ""
@@ -758,6 +790,7 @@ class Regulation:
         )
         self.sections = []
         self.parts = []
+        self.divisions = []
         self.version = version_tag
 
         reg_content = (
@@ -768,16 +801,21 @@ class Regulation:
         # Some acts have parts that surround sections!
         reg_parts = reg_content.find_all("bcl:part", recursive=False)
         for part in reg_parts:
-            self.parts.append(Part(self.version, part))
+            self.parts.append(Part(self.version, part, self.metadata))
 
         # For each section, create node
         sections = reg_content.find_all("bcl:section", recursive=False)
         for section in sections:
-            self.sections.append(Section(self.version, section))
+            self.sections.append(Section(self.version, section, self.metadata))
+
+        divisions = reg_content.find_all("bcl:division", recursive=False)
+        for division in divisions:
+            self.divisions.append(Division(self.version, division, self.metadata))
 
     def createQuery(self):
         return f"""
-               CREATE (n {get_node_tags("Regulation", self.version)} {{title: $title, deposit_date: $deposit_date, act_title: $act_title}})
+               CREATE (n {get_node_tags("Regulation", self.version)})
+               SET n += $params
                RETURN elementId(n) AS id
                """
 
@@ -785,13 +823,12 @@ class Regulation:
         query = self.createQuery()
         # Parameters for the node
         params = {
-            "title": self.title,
             "deposit_date": self.deposit_date,
-            "act_title": self.act_title,
         }
-
+        params.update(self.metadata)
         # Run the query
-        result = db.query(query, params=params)
+        wrapped_params = {"params": params}
+        result = db.query(query, params=wrapped_params)
 
         # Get the ID of the created node
         reg_node_id = result[0]["id"] if result else None
@@ -800,7 +837,7 @@ class Regulation:
         for part in self.parts:
             part.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
         for section in self.sections:
-            section.addNodeToDatabase(
-                db, reg_node_id, token_splitter, embeddings, {"title": section.title}
-            )
+            section.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
+        for division in self.divisions:
+            division.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
         return reg_node_id
