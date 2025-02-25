@@ -1,0 +1,7 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = s3://IMBAIPilot/dvc-store
+    endpointurl = https://citz-cirmo-dpia.objectstore.gov.bc.ca
+    use_ssl = true
+    verify = false
