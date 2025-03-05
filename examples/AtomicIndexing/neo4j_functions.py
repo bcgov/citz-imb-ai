@@ -89,8 +89,8 @@ def update_edge_weight(edge_id, new_weight):
     return edge
 
 
-# Creates an edge between two nodes. Optional weight argument.
-def create_edge(starting_node_id, ending_node_id, weight=1):
+# Creates a reference edge between two nodes. Optional weight argument.
+def create_reference_edge(starting_node_id, ending_node_id, weight=1):
     edge = neo4j.query(
         f"""
           MATCH (a), (b)
@@ -101,6 +101,34 @@ def create_edge(starting_node_id, ending_node_id, weight=1):
         """
     )
     return edge
+
+
+# Creates an edge (IS) between two nodes to signify they represent the same thing
+# Primarily used to connect UpdatedChunk nodes with corresponding atomic nodes
+def create_is_edge(node_id_a, node_id_b):
+    edge = neo4j.query(
+        f"""
+          MATCH (a), (b)
+          WHERE elementId(a) = "{node_id_a}" AND elementId(b) = "{node_id_b}"
+          MERGE (a)-[r:IS]-(b)
+          ON CREATE SET r.weight = 1
+          RETURN r
+        """
+    )
+    return edge
+
+
+# Gets all UpdatedChunk nodes with a matching ActId property
+def get_updated_chunks(act_id):
+    nodes = neo4j.query(
+        f"""
+          MATCH (n:UpdatedChunk) 
+          WHERE n.ActId = "{act_id}"
+          WITH collect(DISTINCT {{ elementId: elementId(n), properties: properties(n) }}) AS allNodes
+          RETURN allNodes
+        """
+    )
+    return nodes[0].get("allNodes")
 
 
 ### TESTING CASES

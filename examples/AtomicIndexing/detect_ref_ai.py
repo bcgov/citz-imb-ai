@@ -6,7 +6,7 @@ import json
 from neo4j_functions import (
     find_node,
     get_ref_edge,
-    create_edge,
+    create_reference_edge,
     update_edge_weight,
     get_whole_tree,
 )
@@ -150,7 +150,7 @@ def create_node_references(node):
                                 )
                             else:
                                 ### No: create the edge with this reference's count as the weight
-                                create_edge(
+                                create_reference_edge(
                                     node.get("elementId"),
                                     matching_node,
                                     reference.get("count"),
