@@ -1,6 +1,9 @@
 from collections import defaultdict
 import json
 
+# Feature Flags
+embed = False
+
 
 # Included because passing metadata between classes just makes shallow copies
 def deep_copy(dict):
@@ -248,7 +251,7 @@ class ContentNode:
         if len(chunks) > 0:
             for i, chunk in enumerate(chunks):
                 # Create embedding for the chunk
-                text_embedding = embeddings.embed_query(chunk)
+                text_embedding = embeddings.embed_query(chunk) if embed else None
                 # Parameters for the node
                 params = {
                     "text": chunk,
@@ -285,11 +288,11 @@ class ContentNode:
                 previous_node_id = node_id
         else:
             # Create embedding for the node
-            # text_embedding = embeddings.embed_query(self.text)
+            text_embedding = embeddings.embed_query(self.text) if embed else None
             # Parameters for the node
             params = {
                 "text": self.text,
-                # "textEmbedding": text_embedding,
+                "textEmbedding": text_embedding,
                 "chunk_index": 0,
             }
 
