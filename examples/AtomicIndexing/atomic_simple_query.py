@@ -1,5 +1,7 @@
 ###
 # Included this script so that I could test the indexing directly.
+# This query works against the text_embedding property found on atomically-indexed nodes, if created.
+# Initial feedback from use: semantic search context too small for accurate results from Neo4j.
 ###
 
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -7,20 +9,9 @@ from langchain_community.graphs import Neo4jGraph
 import os
 import json
 import boto3
+from neo4j_functions import neo4j
 
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
-NEO4J_URI = "bolt://" + "localhost:7687"  # os.getenv("NEO4J_HOST") + ":7687"
-NEO4J_USERNAME = "admin"  # os.getenv("NEO4J_USER")
-NEO4J_PASSWORD = "admin"  # os.getenv("NEO4J_PASSWORD")
-NEO4J_DATABASE = "neo4j"  # os.getenv('NEO4J_DB')
-
-neo4j = Neo4jGraph(
-    url=NEO4J_URI,
-    username=NEO4J_USERNAME,
-    password=NEO4J_PASSWORD,
-    database=NEO4J_DATABASE,
-)
 
 
 def create_prompt(query: str, context_str: str) -> str:
