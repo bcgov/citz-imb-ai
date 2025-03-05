@@ -104,22 +104,26 @@ class Act:
         self.divisions = []
         self.version = version_tag
 
-        act_content = (
-            act.find("act:content") if act.find("act:content") is not None else act
-        )
-        # Some acts have parts that surround sections!
-        act_parts = act_content.find_all("bcl:part", recursive=False)
-        for part in act_parts:
-            self.parts.append(Part(self.version, part, self.metadata))
+        # There may be one content element, many, or none.
+        # If none, then use the act body
+        act_contents = act.find_all("act:content")
+        if len(act_contents) == 0:
+            act_contents = [act]
 
-        # For each section, create node
-        sections = act_content.find_all("bcl:section", recursive=False)
-        for section in sections:
-            self.sections.append(Section(self.version, section, self.metadata))
+        for act_content in act_contents:
+            # Some acts have parts that surround sections!
+            act_parts = act_content.find_all("bcl:part", recursive=False)
+            for part in act_parts:
+                self.parts.append(Part(self.version, part, self.metadata))
 
-        act_divisions = act_content.find_all("bcl:division", recursive=False)
-        for division in act_divisions:
-            self.divisions.append(Division(self.version, division, self.metadata))
+            # For each section, create node
+            sections = act_content.find_all("bcl:section", recursive=False)
+            for section in sections:
+                self.sections.append(Section(self.version, section, self.metadata))
+
+            act_divisions = act_content.find_all("bcl:division", recursive=False)
+            for division in act_divisions:
+                self.divisions.append(Division(self.version, division, self.metadata))
 
     def __str__(self):
         return f"""
@@ -281,11 +285,11 @@ class ContentNode:
                 previous_node_id = node_id
         else:
             # Create embedding for the node
-            text_embedding = embeddings.embed_query(self.text)
+            # text_embedding = embeddings.embed_query(self.text)
             # Parameters for the node
             params = {
                 "text": self.text,
-                "textEmbedding": text_embedding,
+                # "textEmbedding": text_embedding,
                 "chunk_index": 0,
             }
 
@@ -742,6 +746,12 @@ class Division:
             section_node = Section(self.version, section, self.metadata)
             # Connect section to part
             self.sections.append(section_node)
+        # Some divisions also have parts
+        self.parts = []
+        parts = division.find_all("bcl:part", recursive=False)
+        for part in parts:
+            part_node = Part(self.version, part, self.metadata)
+            self.parts.append(part_node)
 
     def createQuery(self):
         return f"""
@@ -764,6 +774,8 @@ class Division:
 
         for section in self.sections:
             section.addNodeToDatabase(db, division_id, token_splitter, embeddings)
+        for part in self.parts:
+            part.addNodeToDatabase(db, division_id, token_splitter, embeddings)
         # Connect the division to its parent
         if division_id:
             connect_child_to_parent(db, division_id, parent_id)
@@ -793,24 +805,26 @@ class Regulation:
         self.divisions = []
         self.version = version_tag
 
-        reg_content = (
-            regulation.find("reg:content")
-            if regulation.find("reg:content") is not None
-            else regulation
-        )
-        # Some acts have parts that surround sections!
-        reg_parts = reg_content.find_all("bcl:part", recursive=False)
-        for part in reg_parts:
-            self.parts.append(Part(self.version, part, self.metadata))
+        # There may be one content element, many, or none.
+        # If none, then use the regulation body
+        reg_contents = regulation.find_all("reg:content")
+        if len(reg_contents) == 0:
+            reg_contents = [regulation]
 
-        # For each section, create node
-        sections = reg_content.find_all("bcl:section", recursive=False)
-        for section in sections:
-            self.sections.append(Section(self.version, section, self.metadata))
+        for reg_content in reg_contents:
+            # Some acts have parts that surround sections!
+            reg_parts = reg_content.find_all("bcl:part", recursive=False)
+            for part in reg_parts:
+                self.parts.append(Part(self.version, part, self.metadata))
 
-        divisions = reg_content.find_all("bcl:division", recursive=False)
-        for division in divisions:
-            self.divisions.append(Division(self.version, division, self.metadata))
+            # For each section, create node
+            sections = reg_content.find_all("bcl:section", recursive=False)
+            for section in sections:
+                self.sections.append(Section(self.version, section, self.metadata))
+
+            divisions = reg_content.find_all("bcl:division", recursive=False)
+            for division in divisions:
+                self.divisions.append(Division(self.version, division, self.metadata))
 
     def createQuery(self):
         return f"""

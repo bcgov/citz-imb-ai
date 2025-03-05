@@ -23,16 +23,16 @@ def find_node(
     paragraph_num=None,
     subparagraph_num=None,
 ):
-    filters = [f"n.document_title = '{document_title}'"]
+    filters = [f'n.document_title = "{document_title}"']
 
     if section_num:
-        filters.append(f"n.section_number = '{section_num}'")
+        filters.append(f'n.section_number = "{section_num}"')
     if subsection_num:
-        filters.append(f"n.subsection_number = '{subsection_num}'")
+        filters.append(f'n.subsection_number = "{subsection_num}"')
     if paragraph_num:
-        filters.append(f"n.paragraph_number = '{paragraph_num}'")
+        filters.append(f'n.paragraph_number = "{paragraph_num}"')
     if subparagraph_num:
-        filters.append(f"n.subparagraph_number = '{subparagraph_num}'")
+        filters.append(f'n.subparagraph_number = "{subparagraph_num}"')
 
     where_clause = " AND ".join(filters)
 
