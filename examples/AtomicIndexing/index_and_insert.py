@@ -8,6 +8,7 @@ from pathlib import Path
 from nodes import Act, Regulation
 from threading import current_thread
 import traceback
+from neo4j_functions import neo4j
 
 # Set up embeddings and database connection
 token_splitter = SentenceTransformersTokenTextSplitter(
@@ -16,18 +17,6 @@ token_splitter = SentenceTransformersTokenTextSplitter(
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 start = time.time()
-
-NEO4J_URI = "bolt://" + "localhost:7687"  # os.getenv("NEO4J_HOST") + ":7687"
-NEO4J_USERNAME = "admin"  # os.getenv("NEO4J_USER")
-NEO4J_PASSWORD = "admin"  # os.getenv("NEO4J_PASSWORD")
-NEO4J_DATABASE = "neo4j"  # os.getenv('NEO4J_DB')
-
-neo4j = Neo4jGraph(
-    url=NEO4J_URI,
-    username=NEO4J_USERNAME,
-    password=NEO4J_PASSWORD,
-    database=NEO4J_DATABASE,
-)
 
 version_tag = "v3"
 

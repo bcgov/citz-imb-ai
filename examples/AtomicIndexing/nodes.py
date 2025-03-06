@@ -1,6 +1,9 @@
 from collections import defaultdict
 import json
 
+# Feature Flags
+embed = False
+
 
 # Included because passing metadata between classes just makes shallow copies
 def deep_copy(dict):
@@ -77,8 +80,18 @@ def get_node_tags(node_type, version_tag):
             return f":Consequence:{version_tag}"
         case "Regulation":
             return f":Regulation:{version_tag}"
+        case "Schedule":
+            return f":Schedule:Content:{version_tag}"
         case _:
             return ""
+
+
+def get_query_base(node_type, version):
+    return f"""
+            CREATE (n {get_node_tags(node_type, version)})
+            SET n += $params
+            RETURN elementId(n) AS id
+            """
 
 
 #####
@@ -102,24 +115,33 @@ class Act:
         self.sections = []
         self.parts = []
         self.divisions = []
+        self.schedules = []
         self.version = version_tag
 
-        act_content = (
-            act.find("act:content") if act.find("act:content") is not None else act
-        )
-        # Some acts have parts that surround sections!
-        act_parts = act_content.find_all("bcl:part", recursive=False)
-        for part in act_parts:
-            self.parts.append(Part(self.version, part, self.metadata))
+        # There may be one content element, many, or none.
+        # If none, then use the act body
+        act_contents = act.find_all("act:content")
+        if len(act_contents) == 0:
+            act_contents = [act]
 
-        # For each section, create node
-        sections = act_content.find_all("bcl:section", recursive=False)
-        for section in sections:
-            self.sections.append(Section(self.version, section, self.metadata))
+        for act_content in act_contents:
+            # Some acts have parts that surround sections!
+            act_parts = act_content.find_all("bcl:part", recursive=False)
+            for part in act_parts:
+                self.parts.append(Part(self.version, part, self.metadata))
 
-        act_divisions = act_content.find_all("bcl:division", recursive=False)
-        for division in act_divisions:
-            self.divisions.append(Division(self.version, division, self.metadata))
+            # For each section, create node
+            sections = act_content.find_all("bcl:section", recursive=False)
+            for section in sections:
+                self.sections.append(Section(self.version, section, self.metadata))
+
+            act_divisions = act_content.find_all("bcl:division", recursive=False)
+            for division in act_divisions:
+                self.divisions.append(Division(self.version, division, self.metadata))
+
+            schedules = act_content.find_all("bcl:schedule", recursive=False)
+            for schedule in schedules:
+                self.schedules.append(Schedule(self.version, schedule, self.metadata))
 
     def __str__(self):
         return f"""
@@ -128,11 +150,7 @@ class Act:
         """
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Act", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Act", self.version)
 
     def addNodeToDatabase(self, db, token_splitter, embeddings):
         query = self.createQuery()
@@ -153,6 +171,8 @@ class Act:
             section.addNodeToDatabase(db, act_node_id, token_splitter, embeddings)
         for division in self.divisions:
             division.addNodeToDatabase(db, act_node_id, token_splitter, embeddings)
+        for schedule in self.schedules:
+            schedule.addNodeToDatabase(db, act_node_id, token_splitter, embeddings)
         return act_node_id
 
 
@@ -192,11 +212,7 @@ class Part:
             self.divisions.append(Division(self.version, division, self.metadata))
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Part", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Part", self.version)
 
     def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         query = self.createQuery()
@@ -237,56 +253,19 @@ class ContentNode:
         query = self.createQuery()
 
         # Split the text into chunks
-        chunks = token_splitter.split_text(self.text)
+        chunks = token_splitter.split_text(self.text) if embed else [self.text]
 
         previous_node_id = None
         first_node_id = None
-        if len(chunks) > 0:
-            for i, chunk in enumerate(chunks):
-                # Create embedding for the chunk
-                text_embedding = embeddings.embed_query(chunk)
-                # Parameters for the node
-                params = {
-                    "text": chunk,
-                    "textEmbedding": text_embedding,
-                    "chunk_index": i,
-                }
 
-                if unique_params is not None:
-                    params.update(unique_params)
-
-                # Run the query
-                wrapped_params = {"params": params}
-                result = db.query(query, params=wrapped_params)
-
-                # Get the ID of the created node
-                node_id = result[0]["id"] if result else None
-                if i == 0:
-                    first_node_id = node_id
-
-                # If there's a previous chunk, create a relationship to maintain order
-                if previous_node_id:
-                    relationship_query = """
-                    MATCH (a), (b)
-                    WHERE elementId(a) = $prev_id AND elementId(b) = $current_id
-                    CREATE (a)-[r:NEXT]->(b)
-                    RETURN r
-                    """
-                    relationship_params = {
-                        "prev_id": previous_node_id,
-                        "current_id": node_id,
-                    }
-                    db.query(relationship_query, relationship_params)
-
-                previous_node_id = node_id
-        else:
-            # Create embedding for the node
-            text_embedding = embeddings.embed_query(self.text)
+        for i, chunk in enumerate(chunks):
+            # Create embedding for the chunk
+            text_embedding = embeddings.embed_query(chunk) if embed else None
             # Parameters for the node
             params = {
-                "text": self.text,
+                "text": chunk,
                 "textEmbedding": text_embedding,
-                "chunk_index": 0,
+                "chunk_index": i,
             }
 
             if unique_params is not None:
@@ -298,7 +277,24 @@ class ContentNode:
 
             # Get the ID of the created node
             node_id = result[0]["id"] if result else None
-            first_node_id = node_id
+            if i == 0:
+                first_node_id = node_id
+
+            # If there's a previous chunk, create a relationship to maintain order
+            if previous_node_id:
+                relationship_query = """
+                MATCH (a), (b)
+                WHERE elementId(a) = $prev_id AND elementId(b) = $current_id
+                CREATE (a)-[r:NEXT]->(b)
+                RETURN r
+                """
+                relationship_params = {
+                    "prev_id": previous_node_id,
+                    "current_id": node_id,
+                }
+                db.query(relationship_query, relationship_params)
+
+            previous_node_id = node_id
 
         # Connect the first chunk of these nodes to the parent
         if first_node_id:
@@ -391,11 +387,7 @@ class Section(ContentNode):
         return section_id
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Section", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Section", self.version)
 
 
 class Subsection(ContentNode):
@@ -420,11 +412,7 @@ class Subsection(ContentNode):
             self.paragraphs.append(paragraph_node)
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Subsection", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Subsection", self.version)
 
     def addNodeToDatabase(
         self,
@@ -467,11 +455,7 @@ class Paragraph(ContentNode):
             self.subparagraphs.append(subparagraph_node)
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Paragraph", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Paragraph", self.version)
 
     def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         paragraph_id = super().addNodeToDatabase(
@@ -504,11 +488,7 @@ class Subparagraph(ContentNode):
         self.version = version_tag
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Subparagraph", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Subparagraph", self.version)
 
     def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         subparagraph_id = super().addNodeToDatabase(
@@ -567,11 +547,7 @@ class Definition:
         self.definition = definition_text
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Definition", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Definition", self.version)
 
     def addNodeToDatabase(self, db, parent_id):
         # TODO: Should we create embeddings for this?
@@ -641,11 +617,7 @@ class Table:
             self.rows.append(data)
 
     def createQuery(self):
-        return f"""
-            CREATE (n {get_node_tags("Table", self.version)})
-            SET n += $params
-            RETURN elementId(n) AS id
-            """
+        return get_query_base("Table", self.version)
 
     def addNodeToDatabase(self, db, parent_id):
         # TODO: Should we create embeddings for this? Suggestion: summarize the table and use that summary for embeddings
@@ -692,11 +664,7 @@ class Consequence:
             self.table = Table(table, self.version, self.metadata)
 
     def createQuery(self):
-        return f"""
-            CREATE (n {get_node_tags("Consequence", self.version)})
-            SET n += $params
-            RETURN elementId(n) AS id
-            """
+        return get_query_base("Consequence", self.version)
 
     def addNodeToDatabase(self, db, parent_id):
         query = self.createQuery()
@@ -742,13 +710,15 @@ class Division:
             section_node = Section(self.version, section, self.metadata)
             # Connect section to part
             self.sections.append(section_node)
+        # Some divisions also have parts
+        self.parts = []
+        parts = division.find_all("bcl:part", recursive=False)
+        for part in parts:
+            part_node = Part(self.version, part, self.metadata)
+            self.parts.append(part_node)
 
     def createQuery(self):
-        return f"""
-            CREATE (n {get_node_tags("Division", self.version)})
-            SET n += $params
-            RETURN elementId(n) AS id
-            """
+        return get_query_base("Division", self.version)
 
     def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         query = self.createQuery()
@@ -764,6 +734,8 @@ class Division:
 
         for section in self.sections:
             section.addNodeToDatabase(db, division_id, token_splitter, embeddings)
+        for part in self.parts:
+            part.addNodeToDatabase(db, division_id, token_splitter, embeddings)
         # Connect the division to its parent
         if division_id:
             connect_child_to_parent(db, division_id, parent_id)
@@ -791,33 +763,36 @@ class Regulation:
         self.sections = []
         self.parts = []
         self.divisions = []
+        self.schedules = []
         self.version = version_tag
 
-        reg_content = (
-            regulation.find("reg:content")
-            if regulation.find("reg:content") is not None
-            else regulation
-        )
-        # Some acts have parts that surround sections!
-        reg_parts = reg_content.find_all("bcl:part", recursive=False)
-        for part in reg_parts:
-            self.parts.append(Part(self.version, part, self.metadata))
+        # There may be one content element, many, or none.
+        # If none, then use the regulation body
+        reg_contents = regulation.find_all("reg:content")
+        if len(reg_contents) == 0:
+            reg_contents = [regulation]
 
-        # For each section, create node
-        sections = reg_content.find_all("bcl:section", recursive=False)
-        for section in sections:
-            self.sections.append(Section(self.version, section, self.metadata))
+        for reg_content in reg_contents:
+            # Some acts have parts that surround sections!
+            reg_parts = reg_content.find_all("bcl:part", recursive=False)
+            for part in reg_parts:
+                self.parts.append(Part(self.version, part, self.metadata))
 
-        divisions = reg_content.find_all("bcl:division", recursive=False)
-        for division in divisions:
-            self.divisions.append(Division(self.version, division, self.metadata))
+            # For each section, create node
+            sections = reg_content.find_all("bcl:section", recursive=False)
+            for section in sections:
+                self.sections.append(Section(self.version, section, self.metadata))
+
+            divisions = reg_content.find_all("bcl:division", recursive=False)
+            for division in divisions:
+                self.divisions.append(Division(self.version, division, self.metadata))
+
+            schedules = reg_content.find_all("bcl:schedule", recursive=False)
+            for schedule in schedules:
+                self.schedules.append(Schedule(self.version, schedule, self.metadata))
 
     def createQuery(self):
-        return f"""
-               CREATE (n {get_node_tags("Regulation", self.version)})
-               SET n += $params
-               RETURN elementId(n) AS id
-               """
+        return get_query_base("Regulation", self.version)
 
     def addNodeToDatabase(self, db, token_splitter, embeddings):
         query = self.createQuery()
@@ -840,4 +815,64 @@ class Regulation:
             section.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
         for division in self.divisions:
             division.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
+        for schedule in self.schedules:
+            schedule.addNodeToDatabase(db, reg_node_id, token_splitter, embeddings)
         return reg_node_id
+
+
+class Schedule(ContentNode):
+    def __init__(self, version_tag, schedule, initialMetadata):
+        self.metadata = deep_copy(initialMetadata)
+        self.version = version_tag
+        self.conseqheads = []
+        self.tables = []
+        self.sections = []
+        # Text is composed from multiple elements within the Schedule
+        text = ""
+        misc_text = schedule.find_all(
+            name=("bcl:centertext", "bcl:lefttext", "bcl:indent1"), recursive=False
+        )
+        for e in misc_text:
+            text += e.getText()
+        super().__init__(text)
+        self.title = (
+            schedule.find("bcl:scheduletitle").getText()
+            if schedule.find("bcl:scheduletitle")
+            else ""
+        )
+        # Add the mix of conseqhead and table blocks
+        conseq_and_tables = collect_conseq_and_tables(schedule)
+        for el in conseq_and_tables:
+            if el["conseqhead"]:
+                self.conseqheads.append(
+                    Consequence(
+                        self.version, el["conseqhead"], el["table"], self.metadata
+                    )
+                )
+            elif el["table"]:
+                self.tables.append(Table(self.version, el["table"], self.metadata))
+
+        # Add any sections
+        sections = schedule.find_all("bcl:section", recursive=False)
+        for section in sections:
+            self.sections.append(Section(self.version, section, self.metadata))
+
+    def createQuery(self):
+        return get_query_base("Schedule", self.version)
+
+    def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
+        schedule_node_id = super().addNodeToDatabase(
+            db, parent_id, token_splitter, embeddings, self.metadata
+        )
+
+        if schedule_node_id:
+            connect_child_to_parent(db, schedule_node_id, parent_id)
+
+        # Add all the child nodes within the schedule
+        for section in self.sections:
+            section.addNodeToDatabase(db, schedule_node_id, token_splitter, embeddings)
+        for table in self.tables:
+            table.addNodeToDatabase(db, schedule_node_id)
+        for conseq in self.conseqheads:
+            conseq.addNodeToDatabase(db, schedule_node_id)
+        return schedule_node_id
