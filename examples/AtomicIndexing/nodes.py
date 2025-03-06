@@ -257,7 +257,7 @@ class ContentNode:
 
         previous_node_id = None
         first_node_id = None
-        # if len(chunks) > 0:
+
         for i, chunk in enumerate(chunks):
             # Create embedding for the chunk
             text_embedding = embeddings.embed_query(chunk) if embed else None
@@ -295,26 +295,6 @@ class ContentNode:
                 db.query(relationship_query, relationship_params)
 
             previous_node_id = node_id
-        # else:
-        #     # Create embedding for the node
-        #     text_embedding = embeddings.embed_query(self.text) if embed else None
-        #     # Parameters for the node
-        #     params = {
-        #         "text": self.text,
-        #         "textEmbedding": text_embedding,
-        #         "chunk_index": 0,
-        #     }
-
-        #     if unique_params is not None:
-        #         params.update(unique_params)
-
-        #     # Run the query
-        #     wrapped_params = {"params": params}
-        #     result = db.query(query, params=wrapped_params)
-
-        #     # Get the ID of the created node
-        #     node_id = result[0]["id"] if result else None
-        #     first_node_id = node_id
 
         # Connect the first chunk of these nodes to the parent
         if first_node_id:
