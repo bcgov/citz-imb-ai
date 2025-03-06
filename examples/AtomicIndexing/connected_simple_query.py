@@ -57,12 +57,14 @@ vector_search_query = """
         YIELD node, score
         MATCH (node)-[:IS]-(atomicSection)
         OPTIONAL MATCH (atomicSection)-[:CONTAINS*]->(containedNode)
+        OPTIONAL MATCH (containedNode)-[:NEXT*]->(nextNode)
         OPTIONAL MATCH (containedNode)-[:REFERENCE]->(refNode)
         RETURN 
             atomicSection,
             score, 
             collect(DISTINCT {containedProperties: properties(containedNode)}) AS containedNodes
             collect(DISTINCT {referenceProperties: properties(refNode)}) AS referencedNodes
+            collect(DISTINCT {nextProperties: properties(nextNode)}) AS nextNodes
         ORDER BY score DESC
         """
 
