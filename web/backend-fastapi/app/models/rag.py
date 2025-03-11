@@ -121,10 +121,10 @@ class get_full_rag:
         create_prompt = self.create_prompt(query, context_str, chat_history)
         bedrock_response = self.get_response(create_prompt)
         # Rerank to sort references by relevance to response
-        context_str = self.re_rank_reference(
-            context_str,
-            bedrock_response,
-            [{"name": "node.ActId", "weight": 2}, {"name": "text", "weight": 1}],
-        )
+        # context_str = self.re_rank_reference(
+        #     context_str,
+        #     bedrock_response,
+        #     [{"name": "node.ActId", "weight": 2}, {"name": "text", "weight": 1}],
+        # )
         pretty_output = self.formatoutput(context_str, bedrock_response)
         return json.dumps(pretty_output)
