@@ -71,9 +71,11 @@ class get_full_rag:
         return messages
 
     @instrument
-    def get_response(self, query: str) -> str:
-        bedrock_response = bedrock.get_response(query)
-        return bedrock_response
+    def get_response(self, prompt):
+        """
+        Get a response from Bedrock using the provided prompt.
+        """
+        return bedrock.get_response(prompt)
 
     def formatoutput(self, topk, lm_output):
         prettier = {}
@@ -81,15 +83,18 @@ class get_full_rag:
         prettier["topk"] = []
         for k in topk:
             k_obj = {}
-            k_obj["score"] = k["score"]
-            k_obj["ActId"] = k["node.ActId"]
-            k_obj["Regulations"] = k["Regulations"]
-            k_obj["sectionId"] = k["node.sectionId"]
-            k_obj["sectionName"] = k["node.sectionName"]
-            k_obj["url"] = k["node.url"]
-            k_obj["text"] = k["text"]
+            k_obj["score"] = k.get("score", 0)
+            if "cross_score" in k:
+                k_obj["cross_score"] = k["cross_score"]
+            
+            # Add all fields that exist and are not empty
+            for field in ["ActId", "Regulations", "sectionId", "sectionName", "url", "file_name", "folder", "section", "subfolder", "type", "text"]:
+                if field in k and k[field]:
+                    k_obj[field] = k[field]
+            
             if "references" in k:
                 k_obj["references"] = k["references"]
+                
             prettier["topk"].append(k_obj)
         return prettier
 
@@ -100,17 +105,26 @@ class get_full_rag:
         model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
         for field in doc_fields:
             # Map topk to [compared_text, doc_field] pairs list
-            pairs = [[compared_text, doc[field["name"]]] for doc in topk]
-            # Produces list of float values. Higher is more closely related. Should be parallel with pairs list.
-            scores = model.predict(pairs)
-            # Apply these scores to the original objects. Sum of any existing score + (next field's score * its weight).
-            for index, _ in enumerate(topk):
-                topk[index]["cross_score"] = (scores[index] * field["weight"]) + topk[
-                    index
-                ].get("cross_score", 0)
+            pairs = []
+            for doc in topk:
+                if field["name"] in doc and doc[field["name"]]:
+                    pairs.append([compared_text, doc[field["name"]]])
+                else:
+                    # Use empty string if field is missing
+                    pairs.append([compared_text, ""])
+                    
+            # Produces list of float values. Higher is more closely related.
+            if pairs:
+                scores = model.predict(pairs)
+                # Apply these scores to the original objects
+                for index, _ in enumerate(topk):
+                    topk[index]["cross_score"] = (scores[index] * field["weight"]) + topk[
+                        index
+                    ].get("cross_score", 0)
+        
         # Sort by these new scores
         topk.sort(
-            key=lambda x: x["cross_score"],
+            key=lambda x: x.get("cross_score", 0),
             reverse=True,
         )
         return topk
@@ -121,10 +135,11 @@ class get_full_rag:
         create_prompt = self.create_prompt(query, context_str, chat_history)
         bedrock_response = self.get_response(create_prompt)
         # Rerank to sort references by relevance to response
-        # context_str = self.re_rank_reference(
-        #     context_str,
-        #     bedrock_response,
-        #     [{"name": "node.ActId", "weight": 2}, {"name": "text", "weight": 1}],
-        # )
+        context_str = self.re_rank_reference(
+            context_str,
+            bedrock_response,
+            [{"name": "text", "weight": 1}]  # Use text field which exists in both schemas
+        )
+        
         pretty_output = self.formatoutput(context_str, bedrock_response)
         return json.dumps(pretty_output)
