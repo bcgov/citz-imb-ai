@@ -640,7 +640,7 @@ class Table:
 class Consequence:
     def __init__(self, version_tag, conseqhead, table, initial_metadata):
         self.metadata = deep_copy(initial_metadata)
-        self.table = None
+        self.table = table
         self.version = version_tag
         self.metadata["consequence_title"] = (
             conseqhead.find("bcl:text", recursive=False).getText().strip()
