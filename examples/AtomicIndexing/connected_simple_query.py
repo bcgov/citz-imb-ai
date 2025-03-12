@@ -55,15 +55,15 @@ query_embeddings = embeddings.embed_query(question)
 vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) 
         YIELD node, score
-        MATCH (node)-[:IS]-(atomicSection)
+        OPTIONAL MATCH (node)-[:IS]-(atomicSection)
         OPTIONAL MATCH (atomicSection)-[:CONTAINS*]->(containedNode)
         OPTIONAL MATCH (containedNode)-[:NEXT*]->(nextNode)
         OPTIONAL MATCH (containedNode)-[:REFERENCE]->(refNode)
         RETURN 
             atomicSection,
             score, 
-            collect(DISTINCT {containedProperties: properties(containedNode)}) AS containedNodes
-            collect(DISTINCT {referenceProperties: properties(refNode)}) AS referencedNodes
+            collect(DISTINCT {containedProperties: properties(containedNode)}) AS containedNodes,
+            collect(DISTINCT {referenceProperties: properties(refNode)}) AS referencedNodes,
             collect(DISTINCT {nextProperties: properties(nextNode)}) AS nextNodes
         ORDER BY score DESC
         """
