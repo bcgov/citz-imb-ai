@@ -1,11 +1,7 @@
 # Creates IS edges between all UpdatedChunk nodes and their relevant atomic node
 from concurrent.futures import ThreadPoolExecutor
 
-from neo4j_functions import (
-    find_node,
-    create_is_edge,
-    get_updated_chunks,
-)
+from neo4j_functions import find_node, create_is_edge, get_updated_chunks, neo4j
 
 
 def connect_updated_chunks(act_id):
@@ -36,8 +32,22 @@ def connect_updated_chunks(act_id):
             )
 
 
-act_names = ["Motor Vehicle Act"]
+# Get all Act/Reg names
+act_names = neo4j.query(
+    """
+      MATCH (n:UpdatedChunk)
+      RETURN COLLECT(DISTINCT n.ActId) as data
+    """
+)
+reg_names = neo4j.query(
+    """
+      MATCH (n:UpdatedChunk)
+      RETURN COLLECT(DISTINCT n.RegId) as data
+    """
+)
+
 with ThreadPoolExecutor() as executor:
     print(f"Using {executor._max_workers} threads")
-    list(executor.map(connect_updated_chunks, act_names))
+    list(executor.map(connect_updated_chunks, act_names[0].get("data")))
+    list(executor.map(connect_updated_chunks, reg_names[0].get("data")))
     print("Done!")
