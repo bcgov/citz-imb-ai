@@ -45,14 +45,13 @@ def collect_conseq_and_tables(block):
 
 # Creates the CONTAINS edge between a child and parent pair
 def connect_child_to_parent(db, child_id, parent_id):
-    edge_query = """
-                MATCH (a), (b)
-                WHERE elementId(a) = $parent_id AND elementId(b) = $child_id
+    edge_query = f"""
+                MATCH (a) WHERE elementId(a) = $parent_id
+                MATCH (b) WHERE elementId(b) = $child_id
                 CREATE (a)-[r:CONTAINS]->(b)
                 RETURN r
               """
-    edge_params = {"parent_id": parent_id, "child_id": child_id}
-    db.query(edge_query, edge_params)
+    db.query(edge_query, {"parent_id": parent_id, "child_id": child_id})
 
 
 # Uses string key to determine all tags for a node
@@ -550,7 +549,6 @@ class Definition:
         return get_query_base("Definition", self.version)
 
     def addNodeToDatabase(self, db, parent_id):
-        # TODO: Should we create embeddings for this?
         query = self.createQuery()
         # Parameters for the node
         params = {
@@ -620,7 +618,6 @@ class Table:
         return get_query_base("Table", self.version)
 
     def addNodeToDatabase(self, db, parent_id):
-        # TODO: Should we create embeddings for this? Suggestion: summarize the table and use that summary for embeddings
         query = self.createQuery()
         # Parameters for the node
         params = {
