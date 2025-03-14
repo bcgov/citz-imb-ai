@@ -15,6 +15,7 @@ dag = DAG(
     default_args=default_args,
     description="A DAG to create atomic-level nodes from XML files then connect them to UpdatedChunk nodes",
     catchup=False,
+    schedule_interval=None,
     tags=["bclaws", "indexing"],
 )
 
@@ -233,8 +234,12 @@ class Act:
 class Part:
     def __init__(self, version_tag, part, initial_metadata):
         self.metadata = deep_copy(initial_metadata)
-        self.metadata["part_title"] = part.find("bcl:text").getText()
-        self.metadata["part_number"] = part.find("bcl:num").getText()
+        self.metadata["part_title"] = (
+            part.find("bcl:text").getText() if part.find("bcl:text") else ""
+        )
+        self.metadata["part_number"] = (
+            part.find("bcl:num").getText() if part.find("bcl:num") else ""
+        )
         self.sections = []
         self.tables = []
         self.conseqheads = []
@@ -695,7 +700,7 @@ class Table:
 class Consequence:
     def __init__(self, version_tag, conseqhead, table, initial_metadata):
         self.metadata = deep_copy(initial_metadata)
-        self.table = None
+        self.table = table
         self.version = version_tag
         self.metadata["consequence_title"] = (
             conseqhead.find("bcl:text", recursive=False).getText().strip()
