@@ -1,5 +1,8 @@
 ###
 # Included this script so that I could test the indexing directly.
+# This query uses the UpdatedChunk nodes for the semantic search, but then utilized the atomic nodes for information
+# when sending context to the LLM.
+# Initial feedback from use: responses are good and they can potentially include references to where each piece of info came from.
 ###
 
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -7,20 +10,9 @@ from langchain_community.graphs import Neo4jGraph
 import os
 import json
 import boto3
+from neo4j_functions import neo4j
 
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
-NEO4J_URI = "bolt://" + "localhost:7687"  # os.getenv("NEO4J_HOST") + ":7687"
-NEO4J_USERNAME = "admin"  # os.getenv("NEO4J_USER")
-NEO4J_PASSWORD = "admin"  # os.getenv("NEO4J_PASSWORD")
-NEO4J_DATABASE = "neo4j"  # os.getenv('NEO4J_DB')
-
-neo4j = Neo4jGraph(
-    url=NEO4J_URI,
-    username=NEO4J_USERNAME,
-    password=NEO4J_PASSWORD,
-    database=NEO4J_DATABASE,
-)
 
 
 def create_prompt(query: str, context_str: str) -> str:
@@ -42,50 +34,47 @@ def create_prompt(query: str, context_str: str) -> str:
             {query}
 
             Provide the most accurate and helpful answer based on the information above. If no answer is found, state that you don't know.
+            In your responses, include references to where this piece of information came from. A reference will look like (Document Title, Section, Subsection, Paragraph, Subparagraph)
+            Not all references will have data for all these fields. The order should always be Document Title, Section, Subsection, Paragraph, Subparagraph.
+            Include nothing else in the reference.
+            If you are not confident about what the reference should be, don't include it.
         """
     return messages
 
 
 #### Adjust your question here ####
-question = "How much notice do I need to give to end my rental lease in BC?"
+# question = "What is the meaning of a yellow curb?"
 # question = "Do I need to wear a seatbelt in BC?"
+question = "What is the fine for excessive speeding?"
 
 query_embeddings = embeddings.embed_query(question)
 
-# This vector query grabs a lot of connected nodes, including:
-# Any connected references
-# Any nodes contained within (subsections, paragraphs, etc.)
-# The node's parent
-# The node's siblings
-# The previous and next nodes created by the chunking process.
+# This vector query grabs a lot of connected nodes.
+# It first does the semantic vector search on the index for UpdatedChunk nodes.
+# It then finds the corresponding atomic section node, then pulls it and all its children
 vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) 
         YIELD node, score
-        OPTIONAL MATCH (node)-[:REFERENCES]->(refNode)
-        OPTIONAL MATCH (node)-[:CONTAINS]->(containedNode)
-        OPTIONAL MATCH (parent)-[:CONTAINS]->(node) // Find the parent of the node
-        OPTIONAL MATCH (parent)-[:CONTAINS]->(siblingNode) 
-        OPTIONAL MATCH (previousChunk)-[:NEXT*]->(node)
-        OPTIONAL MATCH (node)-[:NEXT*]->(nextChunk)
-        WHERE node <> siblingNode // Exclude the node itself from its siblings
+        OPTIONAL MATCH (node)-[:IS]-(atomicSection)
+        OPTIONAL MATCH (atomicSection)-[:CONTAINS*]->(containedNode)
+        OPTIONAL MATCH (containedNode)-[:NEXT*]->(nextNode)
+        OPTIONAL MATCH (containedNode)-[:REFERENCE]->(refNode)
         RETURN 
+            atomicSection,
             score, 
-            node.text AS text,
-            parent.text as parentText,
-            collect(DISTINCT {refText: refNode.text}) AS references,
-            collect(DISTINCT {containedText: containedNode.text}) AS containedNodes,
-            collect(DISTINCT {siblingText: siblingNode.text}) AS siblings,
-            collect(DISTINCT {connectedText: previousChunk.text}) + collect(DISTINCT {connectedText: nextChunk.text}) AS connectedNodes
+            collect(DISTINCT {containedProperties: properties(containedNode)}) AS containedNodes,
+            collect(DISTINCT {referenceProperties: properties(refNode)}) AS referencedNodes,
+            collect(DISTINCT {nextProperties: properties(nextNode)}) AS nextNodes
         ORDER BY score DESC
         """
 
-NEO4J_VECTOR_INDEX = "content_embedding_v3"
+NEO4J_VECTOR_INDEX = "Acts_Updatedchunks"
 similar = neo4j.query(
     vector_search_query,
     params={
         "question": query_embeddings,
         "index_name": NEO4J_VECTOR_INDEX,
-        "top_k": 20,
+        "top_k": 10,
     },
 )
 

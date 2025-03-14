@@ -1,5 +1,60 @@
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+
+# Default argument configuration for the DAG
+default_args = {
+    "owner": "airflow",
+    "depends_on_past": False,
+    "email_on_failure": False,
+    "email_on_retry": False,
+    "retries": 0,
+}
+
+dag = DAG(
+    "atomic_nodes_create_and_join",
+    default_args=default_args,
+    description="A DAG to create atomic-level nodes from XML files then connect them to UpdatedChunk nodes",
+    catchup=False,
+    tags=["bclaws", "indexing"],
+)
+
+# ===============================
+# Task 1: Index XML Files
+# ===============================
+from bs4 import BeautifulSoup
+from langchain.text_splitter import SentenceTransformersTokenTextSplitter
+from langchain_huggingface import HuggingFaceEmbeddings
+from concurrent.futures import ThreadPoolExecutor
+from langchain_community.graphs import Neo4jGraph
+from pathlib import Path
+import os
+from threading import current_thread
+import traceback
 from collections import defaultdict
 import json
+
+# Set up embeddings and database connection
+token_splitter = SentenceTransformersTokenTextSplitter(
+    chunk_overlap=50, tokens_per_chunk=256
+)
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
+version_tag = "v3"
+acts_path = "XML_Acts/"
+regs_path = "XML_Regulations/"
+
+NEO4J_URI = "bolt://" + os.getenv("NEO4J_HOST") + ":" + os.getenv("NEO4J_PORT")
+NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+NEO4J_DATABASE = os.getenv("NEO4J_DB")
+
+neo4j = Neo4jGraph(
+    url=NEO4J_URI,
+    username=NEO4J_USERNAME,
+    password=NEO4J_PASSWORD,
+    database=NEO4J_DATABASE,
+)
+
 
 # Feature Flags
 embed = False
@@ -873,3 +928,207 @@ class Schedule(ContentNode):
         for conseq in self.conseqheads:
             conseq.addNodeToDatabase(db, schedule_node_id)
         return schedule_node_id
+
+
+# Function to process and index an act
+def process_act(file_name):
+    if file_name == "":
+        return
+    thread = current_thread().name
+    print(f"Thread {thread}: {file_name} start")
+    with open(f"{acts_path}{file_name}", "r") as f:
+        data = f.read()
+
+        act_xml = BeautifulSoup(data, features="xml")
+        try:
+            ## Part 1 - Break Act into Nodes
+            act_node = Act(version_tag, act_xml)
+
+            ## Part 2 - Index Act and Add to Neo4j
+            act_id = act_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
+            pass
+        except Exception as e:
+            print(f"Error in {file_name}: {e}")
+            print(traceback.format_exc())
+
+    print(f"Thread {thread}: {file_name} end")
+
+
+# Function to process and index a regulation
+def process_regulation(file_name):
+    if file_name == "":
+        return
+    thread = current_thread().name
+    print(f"Thread {thread}: {file_name} start")
+    with open(f"{regs_path}{file_name}", "r") as f:
+        data = f.read()
+
+        reg_xml = BeautifulSoup(data, features="xml")
+        try:
+            ## Part 1 - Break Regulation into Nodes
+            reg_node = Regulation(version_tag, reg_xml)
+
+            ## Part 2 - Index Regulation and Add to Neo4j
+            reg_id = reg_node.addNodeToDatabase(neo4j, token_splitter, embeddings)
+            pass
+        except Exception as e:
+            print(f"Error in {file_name}: {e}")
+            print(traceback.format_exc())
+
+    print(f"Thread {thread}: {file_name} end")
+
+
+def index_acts_regs():
+    act_directory = Path(acts_path)
+    act_file_names = [f.name for f in act_directory.iterdir() if f.is_file()]
+
+    reg_directory = Path(regs_path)
+    reg_file_names = [f.name for f in reg_directory.iterdir() if f.is_file()]
+
+    with ThreadPoolExecutor() as executor:
+        print(f"Using {executor._max_workers} threads")
+        list(executor.map(process_act, act_file_names))
+        list(executor.map(process_regulation, reg_file_names))
+
+
+# ===============================
+# Task 2: Create IS Edges to UpdatedChunk Nodes
+# ===============================
+
+
+# Finds a specific node based on node metadata and returns its elementId.
+# Based on how metadata is transferred to child nodes,
+# specifying only the most specific match is returned.
+def find_node(
+    document_title,
+    section_num=None,
+    subsection_num=None,
+    paragraph_num=None,
+    subparagraph_num=None,
+):
+    filters = ["n.document_title = $document_title"]
+    params = {"document_title": document_title}
+
+    if section_num:
+        filters.append("n.section_number = $section_num")
+        params["section_num"] = section_num
+    if subsection_num:
+        filters.append("n.subsection_number = $subsection_num")
+        params["subsection_num"] = subsection_num
+    if paragraph_num:
+        filters.append("n.paragraph_number = $paragraph_num")
+        params["paragraph_num"] = paragraph_num
+    if subparagraph_num:
+        filters.append("n.subparagraph_number = $subparagraph_num")
+        params["subparagraph_num"] = subparagraph_num
+
+    where_clause = " AND ".join(filters)
+
+    query = f"""
+        MATCH (n:{version_tag})
+        WHERE {where_clause}
+        RETURN elementId(n) as id
+    """
+
+    nodes = neo4j.query(query, params)
+    if len(nodes) > 0:
+        return nodes[0]["id"]
+    return None
+
+
+# Creates an edge (IS) between two nodes to signify they represent the same thing
+# Primarily used to connect UpdatedChunk nodes with corresponding atomic nodes
+def create_is_edge(node_id_a, node_id_b):
+    edge = neo4j.query(
+        f"""
+          MATCH (a) WHERE elementId(a) = $a
+          MATCH (b) WHERE elementId(b) = $b
+          MERGE (a)-[r:IS]-(b)
+          ON CREATE SET r.weight = 1
+          RETURN r
+        """,
+        {"a": node_id_a, "b": node_id_b},
+    )
+    return edge
+
+
+# Gets all UpdatedChunk nodes with a matching ActId property
+def get_updated_chunks(act_id):
+    nodes = neo4j.query(
+        f"""
+          MATCH (n:UpdatedChunk) 
+          WHERE n.ActId = $act_id
+          WITH collect(DISTINCT {{ elementId: elementId(n), properties: properties(n) }}) AS allNodes
+          RETURN allNodes
+        """,
+        {"act_id": act_id},
+    )
+    return nodes[0].get("allNodes")
+
+
+def connect_updated_chunks(act_id):
+    # Get all desired chunks
+    chunks = get_updated_chunks(act_id)
+
+    for chunk in chunks:
+        # Extract useful properties
+        chunk_id = chunk.get("elementId")
+        properties = chunk.get("properties")
+        chunk_document = properties.get("RegId") or properties.get("ActId")
+        chunk_section = properties.get("sectionId")
+        # Find an atomic node that matches the act and section
+        atomic_node_id = find_node(chunk_document, chunk_section)
+        if atomic_node_id:
+            edge = create_is_edge(chunk_id, atomic_node_id)
+            # If no edge was created, don't proceed with the internal reference edges
+            if not edge:
+                print(":IS edge not created", chunk.get("elementId"), atomic_node_id)
+                continue
+
+        else:
+            print(
+                "No atomic node found",
+                chunk.get("elementId"),
+                chunk_document,
+                chunk_section,
+            )
+
+
+def create_is_edges():
+    # Get all Act/Reg names
+    act_names = neo4j.query(
+        """
+          MATCH (n:UpdatedChunk)
+          RETURN COLLECT(DISTINCT n.ActId) as data
+        """
+    )
+    reg_names = neo4j.query(
+        """
+          MATCH (n:UpdatedChunk)
+          RETURN COLLECT(DISTINCT n.RegId) as data
+        """
+    )
+
+    with ThreadPoolExecutor() as executor:
+        print(f"Using {executor._max_workers} threads")
+        list(executor.map(connect_updated_chunks, act_names[0].get("data")))
+        list(executor.map(connect_updated_chunks, reg_names[0].get("data")))
+        print("Done!")
+
+
+# ===============================
+# Task Definitions
+# ===============================
+index_nodes = PythonOperator(
+    task_id="index_atomic_nodes",
+    python_callable=index_acts_regs,
+    dag=dag,
+)
+
+create_is_edges_task = PythonOperator(
+    task_id="create_is_edges",
+    python_callable=create_is_edges,
+    dag=dag,
+)
+
+index_nodes >> create_is_edges_task
