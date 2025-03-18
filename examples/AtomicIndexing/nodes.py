@@ -1,5 +1,6 @@
 from collections import defaultdict
 import json
+from bs4 import Tag
 
 # Feature Flags
 embed = False
@@ -41,6 +42,20 @@ def collect_conseq_and_tables(block):
                 # Case: <oasis:table> without a preceding <bcl:conseqhead>
                 results.append({"conseqhead": None, "table": element})
     return results
+
+
+# Add consequences and tables to class
+def add_consequence_table(self, el):
+    if el["conseqhead"] and el["table"]:
+        self.conseqheads.append(
+            Consequence(self.version, el["conseqhead"], el["table"], self.metadata)
+        )
+    elif el["table"]:
+        self.tables.append(Table(self.version, el["table"], self.metadata))
+    elif el["conseqhead"]:
+        self.conseqheads.append(
+            Consequence(self.version, el["conseqhead"], None, self.metadata)
+        )
 
 
 # Creates the CONTAINS edge between a child and parent pair
@@ -178,8 +193,12 @@ class Act:
 class Part:
     def __init__(self, version_tag, part, initial_metadata):
         self.metadata = deep_copy(initial_metadata)
-        self.metadata["part_title"] = part.find("bcl:text").getText()
-        self.metadata["part_number"] = part.find("bcl:num").getText()
+        self.metadata["part_title"] = (
+            part.find("bcl:text").getText() if part.find("bcl:text") else ""
+        )
+        self.metadata["part_number"] = (
+            part.find("bcl:num").getText() if part.find("bcl:num") else ""
+        )
         self.sections = []
         self.tables = []
         self.conseqheads = []
@@ -196,14 +215,7 @@ class Part:
         # Add the mix of conseqhead and table blocks
         conseq_and_tables = collect_conseq_and_tables(part)
         for el in conseq_and_tables:
-            if el["conseqhead"]:
-                self.conseqheads.append(
-                    Consequence(
-                        self.version, el["conseqhead"], el["table"], self.metadata
-                    )
-                )
-            elif el["table"]:
-                self.tables.append(Table(self.version, el["table"], self.metadata))
+            add_consequence_table(self, el)
 
         # Add divisions
         divisions = part.find_all("bcl:division", recursive=False)
@@ -350,14 +362,7 @@ class Section(ContentNode):
         # Add the mix of conseqhead and table blocks
         conseq_and_tables = collect_conseq_and_tables(section)
         for el in conseq_and_tables:
-            if el["conseqhead"]:
-                self.conseqheads.append(
-                    Consequence(
-                        self.version, el["conseqhead"], el["table"], self.metadata
-                    )
-                )
-            elif el["table"]:
-                self.tables.append(Table(self.version, el["table"], self.metadata))
+            add_consequence_table(self, el)
 
     def addNodeToDatabase(self, db, parent_id, token_splitter, embeddings):
         section_id = super().addNodeToDatabase(
@@ -581,14 +586,19 @@ class Table:
         # Identify valid columns and store their headers
         table_header = table.find("oasis:thead")
         table_body = table.find("oasis:tbody")
-        rows = table_body.find_all("oasis:trow")
+
         headers = []
+        rows = []
+        # If no headers or bodies found, the return value is -1. Check for type.
+        if isinstance(table_body, Tag):
+            rows = table_body.find_all("oasis:trow")
         # Not all tables have the thead tag. Some just use first row of table as header
-        if table_header is not None:
+        if isinstance(table_header, Tag):
             headers = table_header.find_all("oasis:entry")
-        else:
+        elif len(rows) > 1:
             headers = rows[0].find_all("oasis:entry")
             rows = rows[1:]
+
         column_names = {}
         excluded_columns = set()
         for header in headers:
@@ -640,7 +650,7 @@ class Table:
 class Consequence:
     def __init__(self, version_tag, conseqhead, table, initial_metadata):
         self.metadata = deep_copy(initial_metadata)
-        self.table = None
+        self.table = table
         self.version = version_tag
         self.metadata["consequence_title"] = (
             conseqhead.find("bcl:text", recursive=False).getText().strip()
@@ -658,7 +668,7 @@ class Consequence:
             else ""
         )
         if table:
-            self.table = Table(table, self.version, self.metadata)
+            self.table = Table(self.version, table, self.metadata)
 
     def createQuery(self):
         return get_query_base("Consequence", self.version)
@@ -840,14 +850,7 @@ class Schedule(ContentNode):
         # Add the mix of conseqhead and table blocks
         conseq_and_tables = collect_conseq_and_tables(schedule)
         for el in conseq_and_tables:
-            if el["conseqhead"]:
-                self.conseqheads.append(
-                    Consequence(
-                        self.version, el["conseqhead"], el["table"], self.metadata
-                    )
-                )
-            elif el["table"]:
-                self.tables.append(Table(self.version, el["table"], self.metadata))
+            add_consequence_table(self, el)
 
         # Add any sections
         sections = schedule.find_all("bcl:section", recursive=False)
