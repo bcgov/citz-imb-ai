@@ -356,7 +356,8 @@
 						</li>
 					</ul>
 				</section>
-				<!-- Main Vertical Section -->
+
+				<!-- Main Image Vertical Section -->
 				<section>
 					<section>
 						<h2>Indexing Images</h2>
@@ -366,9 +367,9 @@
 							<li class="fragment">AI-Based Image Summarization</li>
 							<li class="fragment">Model Comparison: Open-Source vs Cloud</li>
 							<li class="fragment">Vector Database Indexing</li>
-							<li class="fragment">Semantic Search Capabilities</li>
 						</ul>
 					</section>
+
 					<!-- Image Retrieval & Processing -->
 					<section>
 						<h3>Image Retrieval & Processing</h3>
@@ -388,17 +389,16 @@
 							<div class="col">
 								<h4>Processing Steps</h4>
 								<ul>
-									<li class="fragment">Format standardization (JPEG)</li>
 									<li class="fragment">
 										Base64 encoding for API compatibility
 									</li>
-									<li class="fragment">
-										Metadata preservation for traceability
-									</li>
+									<li class="fragment">Legal document context preservation</li>
+									<li class="fragment">Metadata tracking for traceability</li>
 								</ul>
 							</div>
 						</div>
 					</section>
+
 					<!-- AI-Based Image Summarization -->
 					<section>
 						<h3>AI-Based Image Summarization</h3>
@@ -415,6 +415,7 @@
 							models
 						</p>
 					</section>
+
 					<!-- Model Comparison Part 1 -->
 					<section>
 						<h2>Model Comparison: Infrastructure</h2>
@@ -436,15 +437,15 @@
 								</tr>
 								<tr class="fragment">
 									<td>Parameters</td>
-									<td>7 billion</td>
+									<td>7 Billion</td>
 									<td>Proprietary</td>
-									<td>Proprietary (140B+)</td>
+									<td>Proprietary (175B+)</td>
 								</tr>
 								<tr class="fragment">
 									<td>Processing Time</td>
-									<td>~24 hours batch</td>
-									<td>2-3 sec/image</td>
-									<td>2-4 sec/image</td>
+									<td>15-20 sec/image<br />(~ 24 hours)</td>
+									<td>2-3 sec/image<br />(~ 3-3.5 hours)</td>
+									<td>2-4 sec/image<br />(~ 3-3.5 hours)</td>
 								</tr>
 								<tr class="fragment">
 									<td>Input Cost</td>
@@ -461,6 +462,7 @@
 							</tbody>
 						</table>
 					</section>
+
 					<!-- Model Comparison Part 2 -->
 					<section>
 						<h2>Model Comparison: Performance</h2>
@@ -507,6 +509,7 @@
 							</tbody>
 						</table>
 					</section>
+
 					<!-- Why We Switched to Claude 3.5 -->
 					<section>
 						<h3>Why We Chose Claude 3.5 Sonnet</h3>
@@ -514,28 +517,32 @@
 							<div class="col">
 								<h4>Key Decision Factors</h4>
 								<ul>
-									<li>Superior prompt adherence</li>
-									<li>Consistent structured output</li>
-									<li>Better recognition of legal elements</li>
-									<li>Higher accuracy on technical content</li>
+									<li class="fragment">Superior prompt adherence</li>
+									<li class="fragment">Consistent structured output</li>
+									<li class="fragment">Better recognition of legal elements</li>
+									<li class="fragment">Higher accuracy on technical content</li>
 								</ul>
 							</div>
 							<div class="col">
 								<h4>Cost-Benefit Analysis</h4>
 								<ul>
-									<li>Higher token cost offset by improved quality</li>
-									<li>Reduced need for manual corrections</li>
-									<li>Better downstream search performance</li>
-									<li>Substantially faster than self-hosted solution</li>
+									<li class="fragment">
+										Higher token cost offset by improved quality
+									</li>
+									<li class="fragment">Reduced need for manual corrections</li>
+									<li class="fragment">Better downstream search performance</li>
+									<li class="fragment">
+										Substantially faster than OpenShift solution
+									</li>
 								</ul>
 							</div>
 						</div>
 					</section>
+
 					<!-- JSON Data Structure -->
 					<section>
 						<h3>Structured JSON Storage</h3>
-						<pre class="fragment">
-							<code class="json">{
+						<pre class="fragment"><code class="json">{
   "Acts": {
     "Election Act": {
       "96106_greatseal.gif": "Image Type: Official seal...",
@@ -549,8 +556,7 @@
       // More images...
     }
   }
-}</code>
-						</pre>
+}</code></pre>
 					</section>
 					<section>
 						<h3>Structured JSON Storage Benefits</h3>
@@ -561,6 +567,7 @@
 							<li class="fragment">Simplifies downstream processing</li>
 						</ul>
 					</section>
+
 					<!-- Vector Database Indexing -->
 					<section>
 						<h3>Vector Database Indexing</h3>
@@ -583,30 +590,7 @@
 							</li>
 						</ul>
 					</section>
-					<!-- Semantic Search Capabilities -->
-					<section>
-						<h3>Semantic Search Capabilities</h3>
-						<div class="row">
-							<div class="col">
-								<h4>Search Features</h4>
-								<ul>
-									<li class="fragment">Vector similarity search</li>
-									<li class="fragment">Cross-encoder reranking</li>
-									<li class="fragment">Context retrieval via NEXT</li>
-									<li class="fragment">Document relation traversal</li>
-								</ul>
-							</div>
-							<div class="col">
-								<h4>Two-Stage Search Process</h4>
-								<ol>
-									<li class="fragment">Initial vector similarity</li>
-									<li class="fragment">Precision reranking</li>
-									<li class="fragment">Context expansion</li>
-									<li class="fragment">Result enrichment</li>
-								</ol>
-							</div>
-						</div>
-					</section>
+
 					<!-- Lessons Learned -->
 					<section>
 						<h3>Lessons Learned</h3>
@@ -621,18 +605,25 @@
 							<li class="fragment">
 								Standardized prompts are critical for consistent results
 							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned Cont.</h3>
+						<ul>
 							<li class="fragment">
-								Costs for Claude 3.5 are justified by reduction in
+								Costs for Claude 3.5 Sonnet are justified by reduction in
 								post-processing
 							</li>
 							<li class="fragment">
 								Chunking with relationships preserves critical context
 							</li>
 							<li class="fragment">
-								Two-stage search delivers superior relevance
+								Integration pipeline enables comprehensive legal image search
 							</li>
 						</ul>
 					</section>
+
 					<!-- Future Directions -->
 					<section>
 						<h3>Future Directions</h3>
@@ -650,11 +641,12 @@
 								Enhance handling of complex tables and forms
 							</li>
 							<li class="fragment">
-								Explore multimodal retrieval augmentation
+								Explore multilingual legal document support
 							</li>
 						</ul>
 					</section>
 				</section>
+
 				<section>
 					<h2>Q&A</h2>
 					<p>Questions?</p>
