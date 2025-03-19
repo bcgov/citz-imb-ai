@@ -68,3 +68,25 @@
 .reveal .justify-start { justify-content: flex-start; }
 .reveal .justify-center { justify-content: center; }
 .reveal .justify-end { justify-content: flex-end; }
+
+
+.reveal table {
+  font-size: 0.6em;
+  width: 100%;
+}
+.reveal th {
+  background-color: #4CAF50;
+  color: white;
+}
+.reveal tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.reveal .row {
+  display: flex;
+  width: 100%;
+}
+.reveal .col {
+  flex: 1;
+  padding: 0 10px;
+}
