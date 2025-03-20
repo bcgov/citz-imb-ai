@@ -377,9 +377,9 @@
 							<div class="col">
 								<h4>Retrieval Process</h4>
 								<ul>
-									<li class="fragment">Extraction from BC Laws website</li>
+									<li class="fragment">Extraction from BC Laws site</li>
 									<li class="fragment">
-										Hierarchical organization by document type
+										Hierarchical organization by image type
 									</li>
 									<li class="fragment">
 										Custom path-based metadata extraction
@@ -392,7 +392,7 @@
 									<li class="fragment">
 										Base64 encoding for API compatibility
 									</li>
-									<li class="fragment">Legal document context preservation</li>
+									<li class="fragment">Image context preservation</li>
 									<li class="fragment">Metadata tracking for traceability</li>
 								</ul>
 							</div>
@@ -418,7 +418,7 @@
 
 					<!-- Model Comparison Part 1 -->
 					<section>
-						<h2>Model Comparison: Infrastructure</h2>
+						<h3>Model Comparison: Infrastructure</h3>
 						<table>
 							<thead>
 								<tr>
@@ -459,13 +459,19 @@
 									<td>$0.0032/1K tokens</td>
 									<td>$0.015/1K tokens</td>
 								</tr>
+								<tr class="fragment">
+									<td>Total Cost<br />(4459 images)</td>
+									<td>Free</td>
+									<td>~$20</td>
+									<td>~$60</td>
+								</tr>
 							</tbody>
 						</table>
 					</section>
 
 					<!-- Model Comparison Part 2 -->
 					<section>
-						<h2>Model Comparison: Performance</h2>
+						<h3>Model Comparison: Performance</h3>
 						<table>
 							<thead>
 								<tr>
@@ -545,14 +551,14 @@
 						<pre class="fragment"><code class="json">{
   "Acts": {
     "Election Act": {
-      "96106_greatseal.gif": "Image Type: Official seal...",
+      "96106_greatseal.gif": "1. Image Type and Category...",
       // More images...
     },
     // More acts...
   },
   "Regulations": {
-    "Health Act": {
-      "diagram.png": "Image Type: Technical diagram...",
+    "Wildfire_Regulation___38_2005": {
+      "38_2005.gif": "1. Image Type and Category...",
       // More images...
     }
   }
@@ -596,7 +602,7 @@
 						<h3>Lessons Learned</h3>
 						<ul>
 							<li class="fragment">
-								Larger models dramatically improve legal content extraction
+								Larger models dramatically improve content extraction
 								quality
 							</li>
 							<li class="fragment">
@@ -619,7 +625,7 @@
 								Chunking with relationships preserves critical context
 							</li>
 							<li class="fragment">
-								Integration pipeline enables comprehensive legal image search
+								Integration pipeline enables comprehensive image search
 							</li>
 						</ul>
 					</section>
@@ -639,9 +645,6 @@
 							</li>
 							<li class="fragment">
 								Enhance handling of complex tables and forms
-							</li>
-							<li class="fragment">
-								Explore multilingual legal document support
 							</li>
 						</ul>
 					</section>
