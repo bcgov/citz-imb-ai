@@ -179,6 +179,27 @@
               src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/system_architecture.jpg"
             />
           </section>
+          <section>
+            <h2>Atomic Indexing</h2>
+            <ul>
+              <li>Breaking down indexed data in a way that reflects structure of laws: Acts contain Sections, which may contain Subsections, etc.</li>
+              <li>Adding important metadata as context provided to LLM</li>
+              <li>Including citations in LLM responses. <br>e.g. (Motor Vehicle Act, Section 1 (2)(a))</li>
+            </ul>
+            <img src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/atomic-nodes-neo4j.png" />
+          </section>
+          <section>
+            <h5>Atomic Indexing Process</h5>
+            <ol>
+              <li>Break down XML documents based on element name and construct objects for each element</li>
+              <li>Insert these elements into the database and connect them to their parent and child elements</li>
+              <li>Connect atomic sections with UpdatedChunk sections using the [:IS] relation edge</li>
+            </ol>
+          </section>
+          <section>
+            <h5>Atomic Indexing Example</h5>
+            <img src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/atomic-indexing-example.png" />
+          </section>
         </section>
         <section>
           <section>
