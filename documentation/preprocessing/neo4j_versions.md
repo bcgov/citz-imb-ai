@@ -1,6 +1,6 @@
 # Neo4j Data Versions
 
-This document outlines the various stages of indexed data that have been added to Neo4j over the life of this project. It should be updated with new information as the
+This document outlines the various stages of indexed data that have been added to Neo4j over the life of this project. It should be updated with new information as the data changes or new implementations are added.
 
 Unless otherwise noted, this is an additive approach, keeping the former data versions intact while adding new ones.
 
