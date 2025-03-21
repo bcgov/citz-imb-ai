@@ -1,184 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>AI Technical Presentation</title>
+		<link rel="stylesheet" href="dist/reset.css" />
+		<link rel="stylesheet" href="dist/reveal.css" />
+		<link rel="stylesheet" href="dist/theme/white.css" />
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" />
+		<style>
+			body {
+				font-family: sans-serif;
+			}
 
-    <title>AI Technical Presentation</title>
+			.heading {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+				text-align: center;
+				animation: slideIn 1s ease-in-out;
+				font-weight: bold;
+			}
 
-    <link rel="stylesheet" href="dist/reset.css" />
-    <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/white.css" />
+			.heading h1 {
+				font-size: 7rem;
+				line-height: 110%;
+				font-weight: 400;
+				letter-spacing: -0.1rem;
+				margin: 0;
+				transition: 0.4s;
+				animation: slideIn 1.2s ease-in-out;
+				font-weight: bold;
+			}
 
-    <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
-    <style>
-      body {
-        font-family: sans-serif;
-      }
-      .heading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-        text-align: center;
-        animation: slideIn 1s ease-in-out;
-        font-weight: bold;
-      }
-      .heading h1 {
-        font-size: 7rem;
-        line-height: 110%;
-        font-weight: 400;
-        letter-spacing: -0.1rem;
-        margin: 0;
-        transition: 0.4s;
-        animation: slideIn 1.2s ease-in-out;
-        font-weight: bold;
-      }
-      .heading h1 span {
-        background: linear-gradient(60deg, #3e82ff, #295fff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-auto-animate>
-          <div class="heading">
-            <h1>Chat with <span>BC Laws</span></h1>
-          </div>
-          <h3>Technical presentation</h3>
-        </section>
-        <section data-auto-animate>
-          <h2>What we will cover</h2>
-          <ul>
-            <li class="fragment">Introduction</li>
-            <li class="fragment">High level architecture</li>
-            <li class="fragment">Technologies used</li>
-            <li class="fragment">Preprocessing (HPC)</li>
-            <li class="fragment">MLOps</li>
-            <li class="fragment">Analytics</li>
-            <li class="fragment">Active Feedback</li>
-            <li class="fragment">Challenges</li>
-            <li class="fragment">Q&A</li>
-          </ul>
-        </section>
-        <section>
-          <img
-            style="transform: scale(115%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/ai_query_answer_flow.jpg"
-          />
-        </section>
-        <section>
-          <img
-            style="transform: scale(115%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/answer_flow.jpg"
-          />
-        </section>
-        <section>
-          <h2>RAG Pipeline</h2>
-          <ul>
-            <li class="fragment">Feed query to sentence transformer</li>
-            <li class="fragment">Search the vector in Neo4j (vector search)</li>
-            <li class="fragment">Capture Top 10 results based on similarity</li>
-            <li class="fragment">
-              Optional: Re-rank results with cross-encoder
-            </li>
-            <li class="fragment">
-              Generate prompt (query stack + Top K + current query)
-            </li>
-            <li class="fragment">Feed prompt to generative AI</li>
-            <li class="fragment">Receive AI-generated response</li>
-            <li class="fragment">Return response to user</li>
-          </ul>
-        </section>
-        <section>
-          <img
-            style="transform: scale(120%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/tech_stack.jpg"
-          />
-        </section>
-        <section>
-          <img
-            style="transform: scale(120%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/overall_architecture.jpg"
-          />
-        </section>
-        <section>
-          <img
-            style="transform: scale(120%)"
-            src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/agent_flow.jpg"
-          />
-        </section>
-        <section>
-          <section>
-            <img
-              style="transform: scale(130%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/preprocessing.jpg"
-            />
-          </section>
-          <section>
-            <h2>How we index the acts and regulations</h2>
-            <img
-              style="transform: scale(120%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/indexing_acts_process.jpg"
-            />
-          </section>
-          <section>
-            <h2>How data is stored in Neo4j</h2>
-            <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/graph_neo4j.png"
-            />
-          </section>
-          <section>
-            <h2>Graph Database and vector store</h2>
-            <table style="font-size: 18px">
-              <thead>
-                <tr>
-                  <th>Data storage</th>
-                  <th>Neo4j Integration</th>
-                  <th>Advanced Querying</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>We use a graph database to store the data.</td>
-                  <td>
-                    Neo4J is leveraged for both the graph database and the
-                    vector store.
-                  </td>
-                  <td>
-                    Neo4J enables advanced queries, such as clustering the data
-                    and finding communities.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Vector store is utilized for storing embeddings.</td>
-                  <td></td>
-                  <td>
-                    These tasks are more efficient and easier to implement using
-                    a graph database.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section>
-            <h2>HPC</h2>
-            <p>High Performance Computing for pre-processing the data</p>
-          </section>
-          <section>
-            <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/system_architecture.jpg"
-            />
-          </section>
+			.heading h1 span {
+				background: linear-gradient(60deg, #3e82ff, #295fff);
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-auto-animate>
+					<div class="heading">
+						<h1>Chat with <span>BC Laws</span></h1>
+					</div>
+					<h3>Technical presentation</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>What we will cover</h2>
+					<ul>
+						<li class="fragment">Introduction</li>
+						<li class="fragment">High level architecture</li>
+						<li class="fragment">Technologies used</li>
+						<li class="fragment">Preprocessing (HPC)</li>
+						<li class="fragment">MLOps</li>
+						<li class="fragment">Analytics</li>
+						<li class="fragment">Active Feedback</li>
+						<li class="fragment">Challenges</li>
+						<li class="fragment">Q&A</li>
+					</ul>
+				</section>
+				<section>
+					<img
+						style="transform: scale(115%)"
+						src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/ai_query_answer_flow.jpg"
+					/>
+				</section>
+				<section>
+					<img
+						style="transform: scale(115%)"
+						src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/answer_flow.jpg"
+					/>
+				</section>
+				<section>
+					<h2>RAG Pipeline</h2>
+					<ul>
+						<li class="fragment">Feed query to sentence transformer</li>
+						<li class="fragment">Search the vector in Neo4j (vector search)</li>
+						<li class="fragment">Capture Top 10 results based on similarity</li>
+						<li class="fragment">
+							Optional: Re-rank results with cross-encoder
+						</li>
+						<li class="fragment">
+							Generate prompt (query stack + Top K + current query)
+						</li>
+						<li class="fragment">Feed prompt to generative AI</li>
+						<li class="fragment">Receive AI-generated response</li>
+						<li class="fragment">Return response to user</li>
+					</ul>
+				</section>
+				<section>
+					<img
+						style="transform: scale(120%)"
+						src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/tech_stack.jpg"
+					/>
+				</section>
+				<section>
+					<img
+						style="transform: scale(120%)"
+						src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/overall_architecture.jpg"
+					/>
+				</section>
+				<section>
+					<img
+						style="transform: scale(120%)"
+						src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/agent_flow.jpg"
+					/>
+				</section>
+				<section>
+					<section>
+						<img
+							style="transform: scale(130%)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/preprocessing.jpg"
+						/>
+					</section>
+					<section>
+						<h2>How we index the acts and regulations</h2>
+						<img
+							style="transform: scale(120%)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/indexing_acts_process.jpg"
+						/>
+					</section>
+					<section>
+						<h2>How data is stored in Neo4j</h2>
+						<img
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/graph_neo4j.png"
+						/>
+					</section>
+					<section>
+						<h2>Graph Database and vector store</h2>
+						<table style="font-size: 18px">
+							<thead>
+								<tr>
+									<th>Data storage</th>
+									<th>Neo4j Integration</th>
+									<th>Advanced Querying</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>We use a graph database to store the data.</td>
+									<td>
+										Neo4J is leveraged for both the graph database and the
+										vector store.
+									</td>
+									<td>
+										Neo4J enables advanced queries, such as clustering the data
+										and finding communities.
+									</td>
+								</tr>
+								<tr>
+									<td>Vector store is utilized for storing embeddings.</td>
+									<td></td>
+									<td>
+										These tasks are more efficient and easier to implement using
+										a graph database.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>HPC</h2>
+						<p>High Performance Computing for pre-processing the data</p>
+					</section>
+					<section>
+						<img
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/system_architecture.jpg"
+						/>
+					</section>
           <section>
             <h2>Atomic Indexing</h2>
             <ul>
@@ -201,210 +201,504 @@
             <img src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/atomic-indexing-example.png" />
           </section>
         </section>
-        <section>
-          <section>
-            <h2>MLOps & Analytics</h2>
-            <ul>
-              <li class="fragment">Frontend analytics data</li>
-              <li class="fragment">Backend RAG Chain tracking</li>
-              <li class="fragment">Apache Airflow for orchestration</li>
-              <li class="fragment">dbt for data transformation</li>
-              <li class="fragment">
-                Integration with active learning pipeline
-              </li>
-            </ul>
-          </section>
-          <section>
-            <img
-              style="transform: scale(130%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_dags.jpg"
-            />
-          </section>
-          <section>
-            <img
-              style="transform: scale(130%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_frontend_analytics_dag.png"
-            />
-          </section>
-          <section>
-            <img
-              style="transform: scale(130%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/superset_frontend_analytics.png"
-            />
-          </section>
-          <section>
-            <img
-              style="transform: scale(130%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/superset_trulens.jpg"
-            />
-          </section>
-        </section>
-        <section>
-          <section>
-            <h3>Active Learning Integration</h3>
-            <ul>
-              <li class="fragment">
-                Analytics data feeds into active learning pipeline
-              </li>
-              <li class="fragment">
-                Helps identify areas for model improvement
-              </li>
-              <li class="fragment">
-                Informs data selection for model fine-tuning
-              </li>
-              <li class="fragment">
-                Enables continuous improvement of the AI system
-              </li>
-            </ul>
-          </section>
-          <section>
-            <img
-              style="transform: scale(130%)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/active_learning.jpg"
-            />
-          </section>
-          <section>
-            <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/refs/heads/main/assets/distillation.jpg"
-              style="
-                max-width: 200%;
-                width: 114%;
-                transform: translate(-10%, 0);
-              "
-            />
-          </section>
-          <section>
-            <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/refs/heads/main/assets/training_pipeline_details.jpg"
-              style="
-                width: 116%;
-                max-width: 2000%;
-                transform: translate(-10%, 0);
-              "
-            />
-          </section>
-          <section>
-            <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/refs/heads/main/assets/data_validation.jpg"
-              style="
-                max-width: 200%;
-                width: 122%;
-                transform: translate(-10%, 0);
-              ">
-          </section>
-          <section>
-            <h2>Human in the Loop</h2>
-            <p class="fragment">
-              To improve the AI model we need to annotate and format the data
-              properly. After the data is annotated we can use it to train the
-              different models.
-            </p>
-          </section>
-          <section>
-            <h2>Embedding Adaptors</h2>
-            <p class="fragment">
-              If the top sources are not accurate we can retrain the embedding
-              model based on human feedback.
-            </p>
-          </section>
-          <section>
-            <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/embedding_adaptor_training.jpg"
-            />
-          </section>
-          <section>
-            <h2>Data Annotation (NER)</h2>
-            <p class="fragment">
-              For improving our retrieval and enhancing our result we are using
-              an AI technique called NER (Named Entity Recognition) to annotate
-              the data.
-            </p>
-            <p class="fragment">
-              This can be done manually with tools such as Diffgram or Doccano
-              or can be automated using an AI model to pre-annotate.
-            </p>
-          </section>
-          <section>
-            <h3>Doccano</h3>
-            <img
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/doccano_annotation.png"
-            />
-          </section>
-          <section>
-            <h3>Assisted Annotation Process</h3>
-            <ul>
-              <li class="fragment">
-                Need large amounts of training data. Initial results suggest
-                thousands of samples would be needed for reliable results.
-              </li>
-              <li class="fragment">
-                Manually annotating this data takes people resources, but AI
-                annotation is less accurate. For 5000 records:
-              </li>
-              <ul>
-                <li class="fragment">
-                  Manually: 8-10 days with high accuracy.
-                </li>
-                <li class="fragment">
-                  Automated with generative AI: only hours but is not accurate
-                  so far.
-                </li>
-              </ul>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h1>Public Cloud</h1>
-          </section>
-          <section>
-            <img
-              style="max-width: 130%; transform: translate(-10%, 0)"
-              src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/azure_graphrag.jpg"
-            />
-          </section>
-        </section>
-        <section>
-          <h2>Challenges</h2>
-          <ul>
-            <li class="fragment">
-              Getting this running in openshift and public cloud
-            </li>
-            <li class="fragment">
-              Having a good understanding of the data, the AI algorithms, AI
-              workflows and performance compute is key
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Q&A</h2>
-          <p>Questions?</p>
-          <p>
-            All of our presentation and diagrams can be found in our
-            <a
-              href="https://ai-feedback-b875cc-dev.apps.silver.devops.gov.bc.ca/presentation/index.html"
-            >
-              github repository.
-            </a>
-          </p>
-        </section>
-      </div>
-    </div>
+				</section>
+				<section>
+					<section>
+						<h2>MLOps & Analytics</h2>
+						<ul>
+							<li class="fragment">Frontend analytics data</li>
+							<li class="fragment">Backend RAG Chain tracking</li>
+							<li class="fragment">Apache Airflow for orchestration</li>
+							<li class="fragment">dbt for data transformation</li>
+							<li class="fragment">
+								Integration with active learning pipeline
+							</li>
+						</ul>
+					</section>
+					<section>
+						<img
+							style="transform: scale(130%)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_dags.jpg"
+						/>
+					</section>
+					<section>
+						<img
+							style="transform: scale(130%)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/airflow_frontend_analytics_dag.png"
+						/>
+					</section>
+					<section>
+						<img
+							style="transform: scale(130%)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/superset_frontend_analytics.png"
+						/>
+					</section>
+					<section>
+						<img
+							style="transform: scale(130%)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/superset_trulens.jpg"
+						/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Active Learning Integration</h3>
+						<ul>
+							<li class="fragment">
+								Analytics data feeds into active learning pipeline
+							</li>
+							<li class="fragment">
+								Helps identify areas for model improvement
+							</li>
+							<li class="fragment">
+								Informs data selection for model fine-tuning
+							</li>
+							<li class="fragment">
+								Enables continuous improvement of the AI system
+							</li>
+						</ul>
+					</section>
+					<section>
+						<img
+							style="transform: scale(130%)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/active_learning.jpg"
+						/>
+					</section>
+					<section>
+						<img
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/refs/heads/main/assets/distillation.jpg"
+							style="
+								max-width: 200%;
+								width: 114%;
+								transform: translate(-10%, 0);
+							"
+						/>
+					</section>
+					<section>
+						<img
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/refs/heads/main/assets/training_pipeline_details.jpg"
+							style="
+								width: 116%;
+								max-width: 2000%;
+								transform: translate(-10%, 0);
+							"
+						/>
+					</section>
+					<section>
+						<img
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/refs/heads/main/assets/data_validation.jpg"
+							style="
+								max-width: 200%;
+								width: 122%;
+								transform: translate(-10%, 0);
+							"
+						/>
+					</section>
+					<section>
+						<h2>Human in the Loop</h2>
+						<p class="fragment">
+							To improve the AI model we need to annotate and format the data
+							properly. After the data is annotated we can use it to train the
+							different models.
+						</p>
+					</section>
+					<section>
+						<h2>Embedding Adaptors</h2>
+						<p class="fragment">
+							If the top sources are not accurate we can retrain the embedding
+							model based on human feedback.
+						</p>
+					</section>
+					<section>
+						<img
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/embedding_adaptor_training.jpg"
+						/>
+					</section>
+					<section>
+						<h2>Data Annotation (NER)</h2>
+						<p class="fragment">
+							For improving our retrieval and enhancing our result we are using
+							an AI technique called NER (Named Entity Recognition) to annotate
+							the data.
+						</p>
+						<p class="fragment">
+							This can be done manually with tools such as Diffgram or Doccano
+							or can be automated using an AI model to pre-annotate.
+						</p>
+					</section>
+					<section>
+						<h3>Doccano</h3>
+						<img
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/doccano_annotation.png"
+						/>
+					</section>
+					<section>
+						<h3>Assisted Annotation Process</h3>
+						<ul>
+							<li class="fragment">
+								Need large amounts of training data. Initial results suggest
+								thousands of samples would be needed for reliable results.
+							</li>
+							<li class="fragment">
+								Manually annotating this data takes people resources, but AI
+								annotation is less accurate. For 5000 records:
+							</li>
+							<ul>
+								<li class="fragment">
+									Manually: 8-10 days with high accuracy.
+								</li>
+								<li class="fragment">
+									Automated with generative AI: only hours but is not accurate
+									so far.
+								</li>
+							</ul>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Public Cloud</h1>
+					</section>
+					<section>
+						<img
+							style="max-width: 130%; transform: translate(-10%, 0)"
+							src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/azure_graphrag.jpg"
+						/>
+					</section>
+				</section>
+				<section>
+					<h2>Challenges</h2>
+					<ul>
+						<li class="fragment">
+							Getting this running in openshift and public cloud
+						</li>
+						<li class="fragment">
+							Having a good understanding of the data, the AI algorithms, AI
+							workflows and performance compute is key
+						</li>
+					</ul>
+				</section>
 
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
-      Reveal.initialize({
-        hash: true,
+				<!-- Main Image Vertical Section -->
+				<section>
+					<section>
+						<h2>Indexing Images</h2>
+						<p>Making legal document images fully searchable</p>
+						<ul>
+							<li class="fragment">Image Retrieval & Processing</li>
+							<li class="fragment">AI-Based Image Summarization</li>
+							<li class="fragment">Model Comparison: Open-Source vs Cloud</li>
+							<li class="fragment">Vector Database Indexing</li>
+						</ul>
+					</section>
 
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-      });
-    </script>
-  </body>
+					<!-- Image Retrieval & Processing -->
+					<section>
+						<h3>Image Retrieval & Processing</h3>
+						<div class="row">
+							<div class="col">
+								<h4>Retrieval Process</h4>
+								<ul>
+									<li class="fragment">Extraction from BC Laws site</li>
+									<li class="fragment">
+										Hierarchical organization by image type
+									</li>
+									<li class="fragment">
+										Custom path-based metadata extraction
+									</li>
+								</ul>
+							</div>
+							<div class="col">
+								<h4>Processing Steps</h4>
+								<ul>
+									<li class="fragment">
+										Base64 encoding for API compatibility
+									</li>
+									<li class="fragment">Image context preservation</li>
+									<li class="fragment">Metadata tracking for traceability</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- AI-Based Image Summarization -->
+					<section>
+						<h3>AI-Based Image Summarization</h3>
+						<h4>Standardized Prompt Structure</h4>
+						<ul>
+							<li class="fragment">Image type & category classification</li>
+							<li class="fragment">Document context extraction</li>
+							<li class="fragment">Content element identification</li>
+							<li class="fragment">Structural component analysis</li>
+							<li class="fragment">Technical specification documentation</li>
+						</ul>
+						<p class="fragment">
+							Consistent prompt design ensures standardized extraction across
+							models
+						</p>
+					</section>
+
+					<!-- Model Comparison Part 1 -->
+					<section>
+						<h3>Model Comparison: Infrastructure</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Feature</th>
+									<th>MOLMO 7B</th>
+									<th>Amazon Nova Pro</th>
+									<th>Claude 3.5 Sonnet</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="fragment">
+									<td>Deployment</td>
+									<td>Self-hosted (OpenShift)</td>
+									<td>AWS Bedrock</td>
+									<td>AWS Bedrock</td>
+								</tr>
+								<tr class="fragment">
+									<td>Parameters</td>
+									<td>7 Billion</td>
+									<td>Proprietary</td>
+									<td>Proprietary (175B+)</td>
+								</tr>
+								<tr class="fragment">
+									<td>Processing Time</td>
+									<td>15-20 sec/image<br />(~ 24 hours)</td>
+									<td>2-3 sec/image<br />(~ 3-3.5 hours)</td>
+									<td>2-4 sec/image<br />(~ 3-3.5 hours)</td>
+								</tr>
+								<tr class="fragment">
+									<td>Input Cost</td>
+									<td>Free (self-hosted)</td>
+									<td>$0.0008/1K tokens</td>
+									<td>$0.003/1K tokens</td>
+								</tr>
+								<tr class="fragment">
+									<td>Output Cost</td>
+									<td>Free (self-hosted)</td>
+									<td>$0.0032/1K tokens</td>
+									<td>$0.015/1K tokens</td>
+								</tr>
+								<tr class="fragment">
+									<td>Total Cost<br />(4459 images)</td>
+									<td>Free</td>
+									<td>~$20</td>
+									<td>~$60</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<!-- Model Comparison Part 2 -->
+					<section>
+						<h3>Model Comparison: Performance</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Aspect</th>
+									<th>MOLMO 7B</th>
+									<th>Amazon Nova Pro</th>
+									<th>Claude 3.5 Sonnet</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="fragment">
+									<td>Content Accuracy</td>
+									<td>Moderate</td>
+									<td>Good</td>
+									<td>Excellent</td>
+								</tr>
+								<tr class="fragment">
+									<td>Prompt Following</td>
+									<td>Inconsistent</td>
+									<td>Variable</td>
+									<td>Highly consistent</td>
+								</tr>
+								<tr class="fragment">
+									<td>Output Structure</td>
+									<td>Often deviates</td>
+									<td>Sometimes deviates</td>
+									<td>Follows structure precisely</td>
+								</tr>
+								<tr class="fragment">
+									<td>Legal Domain</td>
+									<td>Basic understanding</td>
+									<td>Good understanding</td>
+									<td>Strong contextual grasp</td>
+								</tr>
+								<tr class="fragment">
+									<td>Overall Quality</td>
+									<td>Acceptable</td>
+									<td>Good</td>
+									<td>Superior</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<!-- Why We Switched to Claude 3.5 -->
+					<section>
+						<h3>Why We Chose Claude 3.5 Sonnet</h3>
+						<div class="row">
+							<div class="col">
+								<h4>Key Decision Factors</h4>
+								<ul>
+									<li class="fragment">Superior prompt adherence</li>
+									<li class="fragment">Consistent structured output</li>
+									<li class="fragment">Better recognition of legal elements</li>
+									<li class="fragment">Higher accuracy on technical content</li>
+								</ul>
+							</div>
+							<div class="col">
+								<h4>Cost-Benefit Analysis</h4>
+								<ul>
+									<li class="fragment">
+										Higher token cost offset by improved quality
+									</li>
+									<li class="fragment">Reduced need for manual corrections</li>
+									<li class="fragment">Better downstream search performance</li>
+									<li class="fragment">
+										Substantially faster than OpenShift solution
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- JSON Data Structure -->
+					<section>
+						<h3>Structured JSON Storage</h3>
+						<pre class="fragment"><code class="json">{
+  "Acts": {
+    "Election Act": {
+      "96106_greatseal.gif": "1. Image Type and Category...",
+      // More images...
+    },
+    // More acts...
+  },
+  "Regulations": {
+    "Wildfire_Regulation___38_2005": {
+      "38_2005.gif": "1. Image Type and Category...",
+      // More images...
+    }
+  }
+}</code></pre>
+					</section>
+					<section>
+						<h3>Structured JSON Storage Benefits</h3>
+						<ul>
+							<li class="fragment">Preserves document hierarchy</li>
+							<li class="fragment">Maintains original context</li>
+							<li class="fragment">Enables incremental updates</li>
+							<li class="fragment">Simplifies downstream processing</li>
+						</ul>
+					</section>
+
+					<!-- Vector Database Indexing -->
+					<section>
+						<h3>Vector Database Indexing</h3>
+						<h4>Key Components</h4>
+						<ul>
+							<li class="fragment">
+								<b>Text Chunking:</b> 256 tokens with 20 token overlap
+							</li>
+							<li class="fragment">
+								<b>Embeddings:</b> all-MiniLM-L6-v2 (384 dimensions)
+							</li>
+							<li class="fragment">
+								<b>Node Labels:</b> ImageChunk, UpdatedChunksAndImagesv4
+							</li>
+							<li class="fragment">
+								<b>Relationships:</b> NEXT (sequential), PART_OF (document)
+							</li>
+							<li class="fragment">
+								<b>Metadata:</b> Source path, document type, file references
+							</li>
+						</ul>
+					</section>
+
+					<!-- Lessons Learned -->
+					<section>
+						<h3>Lessons Learned</h3>
+						<ul>
+							<li class="fragment">
+								Larger models dramatically improve content extraction
+								quality
+							</li>
+							<li class="fragment">
+								AWS Bedrock enables rapid iteration and production scaling
+							</li>
+							<li class="fragment">
+								Standardized prompts are critical for consistent results
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned Cont.</h3>
+						<ul>
+							<li class="fragment">
+								Costs for Claude 3.5 Sonnet are justified by reduction in
+								post-processing
+							</li>
+							<li class="fragment">
+								Chunking with relationships preserves critical context
+							</li>
+							<li class="fragment">
+								Integration pipeline enables comprehensive image search
+							</li>
+						</ul>
+					</section>
+
+					<!-- Future Directions -->
+					<section>
+						<h3>Future Directions</h3>
+						<ul>
+							<li class="fragment">
+								Evaluate additional specialized models for niche content
+							</li>
+							<li class="fragment">
+								Implement automated image change detection
+							</li>
+							<li class="fragment">
+								Optimize chunking based on content characteristics
+							</li>
+							<li class="fragment">
+								Enhance handling of complex tables and forms
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Q&A</h2>
+					<p>Questions?</p>
+					<p>
+						All of our presentation and diagrams can be found in our
+						<a
+							href="https://ai-feedback-b875cc-dev.apps.silver.devops.gov.bc.ca/presentation/index.html"
+						>
+							github repository.
+						</a>
+					</p>
+				</section>
+			</div>
+		</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+		</script>
+	</body>
 </html>
