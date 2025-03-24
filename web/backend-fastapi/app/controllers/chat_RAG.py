@@ -1,23 +1,30 @@
 from collections import defaultdict
 from fastapi import APIRouter, Body
 from app.models import neo4j, trulens, rag
-from app.rag_states import v2_UpdatedChunks
+from app.rag_states import v2_UpdatedChunks, v4_ImagesAndChunks
 from ..common.chat_objects import ChatRequest
 
 router = APIRouter()
 kg = None
 tru = None
 
-
-state_map = defaultdict()
-state_map.update(
+states = [
     {
-        "UpdatedChunks": {
+        "v2UpdatedChunks": {
             "state": v2_UpdatedChunks.UpdatedChunks(),
             "type": "internal",
         },
-    }
-)
+    },
+    {
+        "v4ImagesAndChunks": {
+            "state": v4_ImagesAndChunks.ImagesAndChunks(),
+            "type": "internal",
+        }
+    },
+]
+state_map = defaultdict(lambda: states[0])
+for state in states:
+    state_map.update(state)
 
 
 # TODO: Define data  model for return value

@@ -11,6 +11,8 @@ kg = None
 tru = None
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
+
+# TODO: Can this come out?
 @router.post("/submit/")
 async def submit_question(prompt: str = Form(...)):
     # Add appropriate imports
@@ -52,7 +54,8 @@ async def feedback(
         return {"status": True, "rows": rows}
     else:
         return {"status": False}
-    
+
+
 @router.post("/feedbackrag/")
 async def feedbackrag(
     feedback: str = Form(...),
@@ -69,17 +72,14 @@ async def feedbackrag(
             return {
                 "status": True,
                 "message": "Feedback submitted successfully",
-                "rows": rows
+                "rows": rows,
             }
-        return {
-            "status": False,
-            "message": "No feedback data found"
-        }
+        return {"status": False, "message": "No feedback data found"}
     except Exception as e:
         logging.error(f"Error processing feedback: {str(e)}")
         return {
             "status": False,
-            "message": "An internal error has occurred. Please try again later."
+            "message": "An internal error has occurred. Please try again later.",
         }
 
 

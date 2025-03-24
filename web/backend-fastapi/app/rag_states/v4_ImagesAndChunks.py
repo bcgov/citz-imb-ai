@@ -5,21 +5,37 @@ from ..models.neo4j import neo4j_vector_search
 from ..common.chat_objects import ChatHistory
 
 
-class UpdatedChunks(State):
+class ImagesAndChunks(State):
 
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score
         OPTIONAL MATCH (node)-[:REFERENCES]->(refNode)
-        RETURN score, node.ActId,  node.RegId as Regulations, node.sectionId, node.sectionName, node.url,  node.text AS text,
-        collect({refSectionId: refNode.sectionId, refSectionName: refNode.sectionName, refActId: refNode.ActId, refText: refNode.text}) AS references
+        RETURN score, 
+                node.ActId AS ActId,  
+                node.RegId as Regulations, 
+                node.sectionId AS sectionId, 
+                node.sectionName AS sectionName, 
+                node.url AS url,
+                node.file_name AS file_name,
+                node.folder AS folder,
+                node.section AS section,
+                node.subfolder AS subfolder,
+                node.type AS type,
+                node.text AS text,
+                collect({
+                    refSectionId: refNode.sectionId, 
+                    refSectionName: refNode.sectionName, 
+                    refActId: refNode.ActId, 
+                    refText: refNode.text
+                }) AS references
         ORDER BY score DESC
     """
-    __vector_index = "Acts_Updatedchunks"
+    __vector_index = "UpdatedChunksAndImagesv4"
     __embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     def __init__(self):
         super().__init__(
-            "v2UpdatedChunks",
+            "v4ImagesAndChunks",
             index=self.__vector_index,
             query=self.__vector_search_query,
             kwargs_key="mixtral",
