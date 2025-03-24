@@ -6,7 +6,7 @@ from sentence_transformers import CrossEncoder
 
 
 def retrieval(query_str, embeddings, kg):
-    return neo4j.neo4j_vector_search(query_str, embeddings, kg)
+    return neo4j.neo4j_vector_search(query_str, kg)
 
 
 class ChatHistory:
@@ -17,11 +17,11 @@ class ChatHistory:
 
 class get_top_k:
     @instrument
-    def retrieve(self, query: str, embeddings, kg) -> list:
+    def retrieve(self, query: str, kg) -> list:
         """
         Retrieve relevant text from vector store.
         """
-        return retrieval(query, embeddings, kg)
+        return retrieval(query, kg)
 
     @instrument
     def query(self, query: str, chat_history: List[ChatHistory], embeddings, kg) -> str:
@@ -31,12 +31,12 @@ class get_top_k:
 
 class get_full_rag:
     @instrument
-    def retrieve(self, query: str, embeddings, kg) -> list:
+    def retrieve(self, query: str, kg, state) -> list:
         """
         Retrieve relevant text from vector store.
         """
         print("retrieval processing")
-        return retrieval(query, embeddings, kg)
+        return retrieval(query, kg)
 
     @instrument
     def create_prompt(
@@ -71,11 +71,11 @@ class get_full_rag:
         return messages
 
     @instrument
-    def get_response(self, prompt):
+    def get_response(self, prompt, kwargs_key):
         """
         Get a response from Bedrock using the provided prompt.
         """
-        return bedrock.get_response(prompt)
+        return bedrock.get_response(prompt, kwargs_key)
 
     def formatoutput(self, topk, lm_output):
         prettier = {}
@@ -86,15 +86,27 @@ class get_full_rag:
             k_obj["score"] = k.get("score", 0)
             if "cross_score" in k:
                 k_obj["cross_score"] = k["cross_score"]
-            
+
             # Add all fields that exist and are not empty
-            for field in ["ActId", "Regulations", "sectionId", "sectionName", "url", "file_name", "folder", "section", "subfolder", "type", "text"]:
+            for field in [
+                "ActId",
+                "Regulations",
+                "sectionId",
+                "sectionName",
+                "url",
+                "file_name",
+                "folder",
+                "section",
+                "subfolder",
+                "type",
+                "text",
+            ]:
                 if field in k and k[field]:
                     k_obj[field] = k[field]
-            
+
             if "references" in k:
                 k_obj["references"] = k["references"]
-                
+
             prettier["topk"].append(k_obj)
         return prettier
 
@@ -112,16 +124,16 @@ class get_full_rag:
                 else:
                     # Use empty string if field is missing
                     pairs.append([compared_text, ""])
-                    
+
             # Produces list of float values. Higher is more closely related.
             if pairs:
                 scores = model.predict(pairs)
                 # Apply these scores to the original objects
                 for index, _ in enumerate(topk):
-                    topk[index]["cross_score"] = (scores[index] * field["weight"]) + topk[
-                        index
-                    ].get("cross_score", 0)
-        
+                    topk[index]["cross_score"] = (
+                        scores[index] * field["weight"]
+                    ) + topk[index].get("cross_score", 0)
+
         # Sort by these new scores
         topk.sort(
             key=lambda x: x.get("cross_score", 0),
@@ -130,16 +142,18 @@ class get_full_rag:
         return topk
 
     @instrument
-    def query(self, query: str, chat_history: List[ChatHistory], embeddings, kg) -> str:
-        context_str = self.retrieve(query, embeddings, kg)
-        create_prompt = self.create_prompt(query, context_str, chat_history)
-        bedrock_response = self.get_response(create_prompt)
+    def query(self, question: str, chat_history: List[ChatHistory], kg, state) -> str:
+        context_str = state.query_similar(question, kg)
+        prompt = state.create_prompt(context_str, question, chat_history)
+        bedrock_response = self.get_response(prompt, state.get_kwargs_key())
         # Rerank to sort references by relevance to response
         context_str = self.re_rank_reference(
             context_str,
             bedrock_response,
-            [{"name": "text", "weight": 1}]  # Use text field which exists in both schemas
+            [
+                {"name": "text", "weight": 1}
+            ],  # Use text field which exists in both schemas
         )
-        
+
         pretty_output = self.formatoutput(context_str, bedrock_response)
         return json.dumps(pretty_output)
