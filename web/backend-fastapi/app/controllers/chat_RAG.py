@@ -46,18 +46,20 @@ async def chat(chat_request: ChatRequest = Body(ChatRequest)):
         kg = neo4j.neo4j()
     if tru is None:
         tru = trulens.connect_trulens()
-    tru_rag = trulens.tru_rag(rag_fn)
+
+    state_entry = state_map.get(chat_request.key)
+    state = state_entry.get("state")
+    tru_rag = trulens.tru_rag(rag_fn, state.get_tag())
 
     with tru_rag as recording:
         # Key used to determine class called for query
-        state_entry = state_map.get(chat_request.key)
         if state_entry.get("type") == "internal":
             # For internal operations with Neo4j
             responses = rag_fn.query(
                 chat_request.prompt,
                 chat_history,
                 kg,
-                state_entry.get("state"),
+                state,
             )
         else:
             # For external sources, like Azure
