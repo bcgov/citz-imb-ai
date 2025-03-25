@@ -1,7 +1,5 @@
 from fastapi import APIRouter, Form
-from app.dependencies import get_user_info
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from app.models import neo4j, trulens, rag
+from app.models import trulens
 import json
 import logging
 
@@ -9,29 +7,6 @@ router = APIRouter()
 
 kg = None
 tru = None
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
-
-# TODO: Can this come out?
-@router.post("/submit/")
-async def submit_question(prompt: str = Form(...)):
-    # Add appropriate imports
-
-    # Global variables initialization
-    global kg, tru, APP_ID, embeddings
-    rag_fn = rag.get_top_k()
-    if kg is None:
-        kg = neo4j.neo4j()
-    if tru is None:
-        tru = trulens.connect_trulens()
-    tru_rag = trulens.tru_rag(rag_fn)
-    print(tru_rag)
-    with tru_rag as recording:
-        responses = rag_fn.query(prompt, None, embeddings, kg)
-    record = recording.get()
-    print(responses)
-    # Process question prompt
-    return {"responses": responses, "recording": record.record_id}
 
 
 @router.post("/feedback/")
@@ -40,16 +15,21 @@ async def feedback(
     index: str = Form(...),
     recording_id: str = Form(...),
     bulk: bool = Form(False),
+    trulens_id: str = Form(...),
 ):
-    # Add appropriate imports
-
     # Global variables initialization
-    global tru, APP_ID
+    global tru
     if tru is None:
         tru = trulens.connect_trulens()
 
     # Process feedback
-    rows = process_feedback(index, feedback, recording_id, bulk)
+    rows = process_feedback(
+        index,
+        feedback,
+        trulens_id,
+        recording_id,
+        bulk,
+    )
     if rows:
         return {"status": True, "rows": rows}
     else:
@@ -61,13 +41,16 @@ async def feedbackrag(
     feedback: str = Form(...),
     recording_id: str = Form(...),
     comment: str = Form(None),
+    trulens_id: str = Form(...),
 ):
     global tru
     if tru is None:
         tru = trulens.connect_trulens()
 
     try:
-        rows = trulens.process_rag_feedback(feedback, recording_id, tru, comment)
+        rows = trulens.process_rag_feedback(
+            feedback, trulens_id, recording_id, tru, comment
+        )
         if rows:
             return {
                 "status": True,
@@ -84,23 +67,23 @@ async def feedbackrag(
 
 
 @router.get("/fetch_feedback/")
-async def fetch_all_feedback():
+async def fetch_all_feedback(trulens_id: str = "unknown"):
     # Add appropriate imports
 
     # Global variables initialization
-    global tru, APP_ID
+    global tru
     if tru is None:
         tru = trulens.connect_trulens()
 
     # Fetch all feedback
-    rows = trulens.fetch_all_feedback()
+    rows = trulens.fetch_all_feedback(trulens_id)
     if rows:
         return {"status": True, "rows": rows}
     else:
         return {"status": False}
 
 
-def process_feedback(index, feedback, record_id=None, bulk=False):
+def process_feedback(index, feedback, trulens_id, record_id=None, bulk=False):
     if bulk:
         multi_result = {"bulk": []}
         feedback = feedback.split(",")
@@ -117,7 +100,7 @@ def process_feedback(index, feedback, record_id=None, bulk=False):
     tru_feedback = tru.add_feedback(
         name="Human Feedack",
         record_id=record_id,
-        app_id=trulens.APP_ID,
+        app_id=trulens_id,
         result=0,
         multi_result=multi_result,
     )
