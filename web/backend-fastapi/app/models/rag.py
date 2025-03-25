@@ -1,74 +1,24 @@
 from trulens_eval.tru_custom_app import instrument
-from app.models import neo4j, trulens, rag, bedrock
+from app.models import bedrock
 import json
 from typing import List
 from sentence_transformers import CrossEncoder
-
-
-def retrieval(query_str, embeddings, kg):
-    return neo4j.neo4j_vector_search(query_str, kg)
-
-
-class ChatHistory:
-    def __init__(self, prompt: str, response: str):
-        self.prompt = prompt
-        self.response = response
-
-
-class get_top_k:
-    @instrument
-    def retrieve(self, query: str, kg) -> list:
-        """
-        Retrieve relevant text from vector store.
-        """
-        return retrieval(query, kg)
-
-    @instrument
-    def query(self, query: str, chat_history: List[ChatHistory], embeddings, kg) -> str:
-        context_str = self.retrieve(query, embeddings, kg)
-        return context_str
+from ..common.chat_objects import ChatHistory
 
 
 class get_full_rag:
     @instrument
-    def retrieve(self, query: str, kg, state) -> list:
+    def retrieve(self, question: str, kg, state) -> list:
         """
         Retrieve relevant text from vector store.
         """
-        print("retrieval processing")
-        return retrieval(query, kg)
+        return state.query_similar(question, kg)
 
     @instrument
     def create_prompt(
-        self, query: str, context_str: str, chat_history: List[ChatHistory]
+        self, question: str, context_str: str, chat_history: List[ChatHistory], state
     ) -> str:
-        """
-        Generate a response using the given context and chat history.
-        """
-        chat_history_str = "\n".join(
-            [f"Human: {ch.prompt}\nAI: {ch.response}" for ch in chat_history]
-        )
-        print("chat_history_str: ", chat_history_str)
-        messages = f"""
-            You are a helpful and knowledgeable assistant. Use the following information to answer the user's question accurately and concisely. Do not provide information that is not supported by the given context or chat history.
-
-            - Use the context and previous chat history to form your answer.
-            - Laws and Acts can be used interchangeably.
-            - If the answer is not found in the context or chat history, state that you don't know.
-            - Do not attempt to fabricate an answer.
-
-            Chat history:
-            {chat_history_str}
-
-            Context: 
-            {context_str}
-
-            Question: 
-            {query}
-
-            Provide the most accurate and helpful answer based on the information above. If no answer is found, state that you don't know.
-        """
-        return messages
+        return state.create_prompt(context_str, question, chat_history)
 
     @instrument
     def get_response(self, prompt, kwargs_key):
@@ -143,8 +93,8 @@ class get_full_rag:
 
     @instrument
     def query(self, question: str, chat_history: List[ChatHistory], kg, state) -> str:
-        context_str = state.query_similar(question, kg)
-        prompt = state.create_prompt(context_str, question, chat_history)
+        context_str = self.retrieve(question, kg, state)
+        prompt = self.create_prompt(question, context_str, chat_history, state)
         bedrock_response = self.get_response(prompt, state.get_kwargs_key())
         # Rerank to sort references by relevance to response
         context_str = self.re_rank_reference(
