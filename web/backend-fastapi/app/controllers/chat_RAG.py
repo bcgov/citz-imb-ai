@@ -1,7 +1,7 @@
 from collections import defaultdict
 from fastapi import APIRouter, Body
 from app.models import neo4j, trulens, rag
-from app.rag_states import v2_UpdatedChunks, v4_ImagesAndChunks
+from app.rag_states import v2_UpdatedChunks, v4_ImagesAndChunks, v3_AtomicIndexing
 from ..common.chat_objects import ChatRequest
 
 router = APIRouter()
@@ -16,6 +16,12 @@ states = [
         },
     },
     {
+        "v3AtomicIndexing": {
+            "state": v3_AtomicIndexing.AtomicIndexing(),
+            "type": "internal",
+        }
+    },
+    {
         "v4ImagesAndChunks": {
             "state": v4_ImagesAndChunks.ImagesAndChunks(),
             "type": "internal",
@@ -27,7 +33,6 @@ for state in states:
     state_map.update(state)
 
 
-# TODO: Define data  model for return value
 @router.post("/chat/")
 async def chat(chat_request: ChatRequest = Body(ChatRequest)):
     chat_history = []
