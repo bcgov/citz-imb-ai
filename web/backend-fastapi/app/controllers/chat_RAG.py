@@ -10,21 +10,27 @@ tru = None
 
 states = [
     {
-        "v2UpdatedChunks": {
+        v2_UpdatedChunks.tag: {
             "state": v2_UpdatedChunks.UpdatedChunks(),
             "type": "internal",
+            "trulens_id": v2_UpdatedChunks.trulens_id,
+            "description": "Updated Chunks",
         },
     },
     {
-        "v3AtomicIndexing": {
+        v3_AtomicIndexing.tag: {
             "state": v3_AtomicIndexing.AtomicIndexing(),
             "type": "internal",
+            "trulens_id": v3_AtomicIndexing.trulens_id,
+            "description": "Atomic Indexing",
         }
     },
     {
-        "v4ImagesAndChunks": {
+        v4_ImagesAndChunks.tag: {
             "state": v4_ImagesAndChunks.ImagesAndChunks(),
             "type": "internal",
+            "trulens_id": v4_ImagesAndChunks.trulens_id,
+            "description": "Images and Chunks",
         }
     },
 ]
@@ -48,13 +54,13 @@ async def chat(chat_request: ChatRequest = Body(ChatRequest)):
         tru = trulens.connect_trulens()
 
     state_entry = state_map.get(chat_request.key)
-    state = state_entry.get("state")
-    tru_rag = trulens.tru_rag(rag_fn, state.get_tag())
+    tru_rag = trulens.tru_rag(rag_fn, state_entry.get("trulens_id"))
 
     with tru_rag as recording:
         # Key used to determine class called for query
         if state_entry.get("type") == "internal":
             # For internal operations with Neo4j
+            state = state_entry.get("state")
             responses = rag_fn.query(
                 chat_request.prompt,
                 chat_history,

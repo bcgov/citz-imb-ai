@@ -4,6 +4,10 @@ from .State import State
 from ..models.neo4j import neo4j_vector_search
 from ..common.chat_objects import ChatHistory
 
+tag = "v4ImagesAndChunks"  # Don't update this
+version = "1"  # Update this if making changes
+trulens_id = tag + "-" + version
+
 
 class ImagesAndChunks(State):
 
@@ -35,7 +39,7 @@ class ImagesAndChunks(State):
 
     def __init__(self):
         super().__init__(
-            "v4ImagesAndChunks",
+            tag,
             index=self.__vector_index,
             query=self.__vector_search_query,
             kwargs_key="mixtral",
