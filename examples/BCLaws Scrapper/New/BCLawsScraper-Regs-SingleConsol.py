@@ -4,8 +4,8 @@ import xml.etree.ElementTree as ET
 import time
 import urllib.parse
 
-# Target consolidation number
-CONSOL_NUMBER = 43
+# Target LOO number
+LOO_NUMBER = 110
 
 # Delay between requests (seconds)
 SLOW_DOWN_SECONDS = 0.5
@@ -13,19 +13,24 @@ SLOW_DOWN_SECONDS = 0.5
 # Get the directory where the script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Base URLs with dynamic consol number
-CONTENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/content/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
+# Base URLs with dynamic loo number
+CONTENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/content/loo{LOO_NUMBER}/loo{LOO_NUMBER}/"
 
-DOCUMENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/document/id/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
+DOCUMENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/document/id/loo{LOO_NUMBER}/loo{LOO_NUMBER}/"
 
 # Create root folder in the same directory as the script
-ROOT_FOLDER = os.path.join(SCRIPT_DIR, f"Consol{CONSOL_NUMBER}")
+ROOT_FOLDER = os.path.join(SCRIPT_DIR, f"Regulations_LOO{LOO_NUMBER}")
 
 # Create root folder
 os.makedirs(ROOT_FOLDER, exist_ok=True)
 
 def download_file(url, save_path, max_retries=3):
     """Download a file from URL and save it to save_path"""
+    # Check if file already exists
+    if os.path.exists(save_path):
+        print(f"File already exists, skipping: {save_path}")
+        return True
+        
     retries = 0
     while retries < max_retries:
         try:
@@ -113,7 +118,7 @@ def process_directory(directory_path="", physical_path=None):
             safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
-            # Download the complete multi-document
+            # Download the complete multi-document if it doesn't already exist
             success = download_file(document_url, save_path)
             if success:
                 print(f"Downloaded multi-document: {doc_title}")
@@ -160,14 +165,14 @@ def process_directory(directory_path="", physical_path=None):
             safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
-            # Download the file
+            # Download the file if it doesn't already exist
             success = download_file(document_url, save_path)
             if success:
                 print(f"Downloaded document: {doc_title}")
 
 # Start the scraping process
 if __name__ == "__main__":
-    print(f"Starting BC Laws scraper for consol{CONSOL_NUMBER} content")
+    print(f"Starting BC Laws Regulations scraper for LOO{LOO_NUMBER}")
     print(f"Files will be saved to: {os.path.abspath(ROOT_FOLDER)}")
     print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
     process_directory()
