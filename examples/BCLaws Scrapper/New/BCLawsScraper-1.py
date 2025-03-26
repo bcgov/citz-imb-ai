@@ -1,195 +1,154 @@
 import os
-import time
 import requests
 import xml.etree.ElementTree as ET
-import re
-import logging
-from urllib.parse import urljoin
+import time
+import urllib.parse
 
-# Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("bclaws_scraper.log"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger()
+# Base URLs
+CONTENT_API_BASE = "https://www.bclaws.gov.bc.ca/civix/content/consol43/consol43/"
+DOCUMENT_API_BASE = "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/"
+ROOT_FOLDER = "Consol43"
 
-# Constants
-BASE_CONTENT_URL = "https://www.bclaws.gov.bc.ca/civix/content/consol43/consol43/"
-BASE_DOCUMENT_URL = "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/"
-ROOT_DIR = "Consol43"
-MAX_RETRIES = 3
-RETRY_DELAY = 2  # seconds
-RATE_LIMIT_DELAY = 0.5  # seconds
+# Create root folder
+os.makedirs(ROOT_FOLDER, exist_ok=True)
 
-# Ensure the root directory exists
-os.makedirs(ROOT_DIR, exist_ok=True)
-
-# Track processed documents to avoid duplicates
-processed_doc_ids = set()
-
-def sanitize_filename(name):
-    """Sanitize a string to be used as a filename by removing invalid characters."""
-    if not name:
-        return "untitled"
-    # Replace invalid characters with underscores
-    sanitized = re.sub(r'[\\/*?:"<>|]', "_", name)
-    # Limit length to avoid filesystem issues
-    if len(sanitized) > 200:
-        sanitized = sanitized[:197] + "..."
-    return sanitized
-
-def get_xml_from_url(url):
-    """Fetch XML from a URL with retry logic."""
-    for attempt in range(MAX_RETRIES):
+def download_file(url, save_path, max_retries=3):
+    """Download a file from URL and save it to save_path"""
+    retries = 0
+    while retries < max_retries:
         try:
+            print(f"Downloading: {url}")
             response = requests.get(url, timeout=30)
             response.raise_for_status()
-            return ET.fromstring(response.content)
-        except (requests.RequestException, ET.ParseError) as e:
-            logger.warning(f"Attempt {attempt+1}/{MAX_RETRIES} failed for {url}: {str(e)}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(RETRY_DELAY * (attempt + 1))  # Exponential backoff
-            else:
-                logger.error(f"Failed to retrieve {url} after {MAX_RETRIES} attempts")
-                raise
-
-def process_directory(content_url, local_dir_path):
-    """
-    Process a directory in the BC Laws API.
-    
-    Args:
-        content_url: The URL to the content API for this directory
-        local_dir_path: The local path where files should be saved
-    """
-    logger.info(f"Processing directory: {content_url}")
-    os.makedirs(local_dir_path, exist_ok=True)
-    
-    try:
-        # Get directory content
-        root = get_xml_from_url(content_url)
-        
-        # Check for documents to download
-        found_htm_toc = False
-        
-        # First pass: Check for HTML TOC documents with order=0
-        for doc in root.findall(".//document"):
-            doc_type = doc.find("CIVIX_DOCUMENT_TYPE").text if doc.find("CIVIX_DOCUMENT_TYPE") is not None else ""
-            doc_ext = doc.find("CIVIX_DOCUMENT_EXT").text if doc.find("CIVIX_DOCUMENT_EXT") is not None else ""
-            doc_order = doc.find("CIVIX_DOCUMENT_ORDER").text if doc.find("CIVIX_DOCUMENT_ORDER") is not None else ""
-            doc_id = doc.find("CIVIX_DOCUMENT_ID").text if doc.find("CIVIX_DOCUMENT_ID") is not None else ""
-            
-            if doc_id in processed_doc_ids:
-                continue
-                
-            if doc_type == "document" and doc_order == "0" and doc_ext == "htm":
-                # This is an HTML table of contents - download the multi-document version
-                doc_title = doc.find("CIVIX_DOCUMENT_TITLE").text
-                safe_title = sanitize_filename(doc_title)
-                
-                logger.info(f"Found HTML TOC document: {doc_title} (ID: {doc_id})")
-                download_multi_document(doc_id, safe_title, local_dir_path)
-                processed_doc_ids.add(doc_id)
-                found_htm_toc = True
-                break  # Skip other files in this directory per requirements
-        
-        # If no HTM table of contents was found, process XML documents
-        if not found_htm_toc:
-            for doc in root.findall(".//document"):
-                doc_type = doc.find("CIVIX_DOCUMENT_TYPE").text if doc.find("CIVIX_DOCUMENT_TYPE") is not None else ""
-                doc_ext = doc.find("CIVIX_DOCUMENT_EXT").text if doc.find("CIVIX_DOCUMENT_EXT") is not None else ""
-                doc_order = doc.find("CIVIX_DOCUMENT_ORDER").text if doc.find("CIVIX_DOCUMENT_ORDER") is not None else ""
-                doc_id = doc.find("CIVIX_DOCUMENT_ID").text if doc.find("CIVIX_DOCUMENT_ID") is not None else ""
-                
-                if doc_id in processed_doc_ids:
-                    continue
-                    
-                if doc_type == "document" and doc_order == "0" and doc_ext == "xml":
-                    # Direct XML document
-                    doc_title = doc.find("CIVIX_DOCUMENT_TITLE").text
-                    safe_title = sanitize_filename(doc_title)
-                    
-                    logger.info(f"Found XML document: {doc_title} (ID: {doc_id})")
-                    download_document(doc_id, safe_title, local_dir_path)
-                    processed_doc_ids.add(doc_id)
-        
-        # Process subdirectories
-        for item in root.findall(".//dir"):
-            item_id = item.find("CIVIX_DOCUMENT_ID").text
-            item_title = item.find("CIVIX_DOCUMENT_TITLE").text
-            safe_title = sanitize_filename(item_title)
-            
-            # Create subdirectory path and process it
-            subdir_path = os.path.join(local_dir_path, safe_title)
-            next_url = urljoin(BASE_CONTENT_URL, item_id)
-            process_directory(next_url, subdir_path)
-        
-        # Add a small delay to avoid overwhelming the server
-        time.sleep(RATE_LIMIT_DELAY)
-    
-    except Exception as e:
-        logger.error(f"Error processing directory {content_url}: {str(e)}")
-
-def download_document(doc_id, title, local_dir_path):
-    """Download a regular XML document."""
-    download_url = f"{BASE_DOCUMENT_URL}{doc_id}/xml"
-    save_path = os.path.join(local_dir_path, f"{title}.xml")
-    
-    download_file(download_url, save_path)
-
-def download_multi_document(doc_id, title, local_dir_path):
-    """Download a multi-document XML file."""
-    download_url = f"{BASE_DOCUMENT_URL}{doc_id}_multi/xml"
-    save_path = os.path.join(local_dir_path, f"{title}.xml")
-    
-    download_file(download_url, save_path)
-
-def download_file(url, save_path):
-    """Download a file with retry logic."""
-    if os.path.exists(save_path):
-        logger.info(f"File already exists, skipping: {save_path}")
-        return True
-    
-    logger.info(f"Downloading {url} to {save_path}")
-    
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = requests.get(url, timeout=30)
-            response.raise_for_status()
-            
-            # Ensure directory exists
-            os.makedirs(os.path.dirname(save_path), exist_ok=True)
             
             with open(save_path, 'wb') as f:
                 f.write(response.content)
             
-            logger.info(f"Successfully downloaded: {save_path}")
-            # Add a small delay to avoid overwhelming the server
-            time.sleep(RATE_LIMIT_DELAY)
+            print(f"Successfully saved to: {save_path}")
             return True
-        
-        except requests.RequestException as e:
-            logger.warning(f"Attempt {attempt+1}/{MAX_RETRIES} failed for {url}: {str(e)}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(RETRY_DELAY * (attempt + 1))  # Exponential backoff
-            else:
-                logger.error(f"Failed to download {url} after {MAX_RETRIES} attempts")
+        except Exception as e:
+            retries += 1
+            print(f"Error downloading {url}, retry {retries}/{max_retries}: {e}")
+            time.sleep(1)  # Wait before retrying
+            
+            if retries == max_retries:
+                print(f"Failed to download {url} after {max_retries} retries")
                 return False
 
-def main():
-    """Entry point for the scraper."""
-    logger.info("Starting BC Laws XML Scraper")
-    
-    try:
-        # Start with the root URL
-        process_directory(BASE_CONTENT_URL, ROOT_DIR)
-        logger.info("Scraping completed successfully")
-    
-    except Exception as e:
-        logger.error(f"An error occurred during scraping: {str(e)}")
+def get_xml_content(url, max_retries=3):
+    """Get and parse XML content from a URL"""
+    retries = 0
+    while retries < max_retries:
+        try:
+            response = requests.get(url, timeout=30)
+            response.raise_for_status()
+            return ET.fromstring(response.content)
+        except Exception as e:
+            retries += 1
+            print(f"Error accessing {url}, retry {retries}/{max_retries}: {e}")
+            time.sleep(1)  # Wait before retrying
+            
+            if retries == max_retries:
+                print(f"Failed to access {url} after {max_retries} retries")
+                return None
 
+def process_directory(directory_path="", physical_path=ROOT_FOLDER):
+    """
+    Process a directory in the Content API recursively
+    
+    Args:
+        directory_path: The API path to the directory
+        physical_path: The local filesystem path to save files to
+    """
+    # Create the directory if it doesn't exist
+    os.makedirs(physical_path, exist_ok=True)
+    
+    # Construct the content API URL
+    content_url = CONTENT_API_BASE + directory_path
+    print(f"Processing directory: {content_url}")
+    
+    # Get the directory content
+    root = get_xml_content(content_url)
+    if root is None:
+        return
+    
+    # First pass: Check for multi-part documents
+    has_multi_document = False
+    
+    for doc in root.findall('.//document'):
+        doc_ext_elem = doc.find('CIVIX_DOCUMENT_EXT')
+        doc_order_elem = doc.find('CIVIX_DOCUMENT_ORDER')
+        
+        # Check if this is a table of contents (multi-document marker)
+        if (doc_ext_elem is not None and doc_ext_elem.text == 'htm' and 
+            doc_order_elem is not None and doc_order_elem.text == '0'):
+            
+            # Found a multi-document table of contents
+            doc_id = doc.find('CIVIX_DOCUMENT_ID').text
+            doc_title = doc.find('CIVIX_DOCUMENT_TITLE').text
+            
+            # Construct the multi-document URL (append _multi)
+            document_url = f"{DOCUMENT_API_BASE}{doc_id}_multi/xml"
+            
+            # Create a safe filename
+            safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
+            save_path = os.path.join(physical_path, safe_filename)
+            
+            # Download the complete multi-document
+            success = download_file(document_url, save_path)
+            if success:
+                print(f"Downloaded multi-document: {doc_title}")
+                has_multi_document = True
+                break
+    
+    # Second pass: Process directories and regular documents
+    for element in root:
+        tag_name = element.tag
+        
+        if tag_name == 'dir':
+            # Handle directories recursively
+            dir_id = element.find('CIVIX_DOCUMENT_ID').text
+            dir_title = element.find('CIVIX_DOCUMENT_TITLE').text
+            
+            # Create safe directory name
+            safe_dir_name = dir_title.replace('/', '_').replace('\\', '_')
+            new_physical_path = os.path.join(physical_path, safe_dir_name)
+            
+            # Construct the new directory path for the API
+            new_dir_path = dir_id if not directory_path else f"{directory_path}/{dir_id}"
+            
+            # Process the subdirectory
+            process_directory(new_dir_path, new_physical_path)
+            
+        elif tag_name == 'document' and not has_multi_document:
+            # Skip individual documents if we already have a multi-document
+            doc_id = element.find('CIVIX_DOCUMENT_ID').text
+            doc_title = element.find('CIVIX_DOCUMENT_TITLE').text
+            doc_type = element.find('CIVIX_DOCUMENT_TYPE').text
+            
+            # Skip if not a document or if it's a table of contents (htm)
+            if doc_type != 'document':
+                continue
+                
+            doc_ext_elem = element.find('CIVIX_DOCUMENT_EXT')
+            if doc_ext_elem is None or doc_ext_elem.text != 'xml':
+                continue
+            
+            # Process regular XML document
+            document_url = f"{DOCUMENT_API_BASE}{doc_id}/xml"
+            
+            # Create a safe filename
+            safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
+            save_path = os.path.join(physical_path, safe_filename)
+            
+            # Download the file
+            success = download_file(document_url, save_path)
+            if success:
+                print(f"Downloaded document: {doc_title}")
+
+# Start the scraping process
 if __name__ == "__main__":
-    main()
+    print(f"Starting BC Laws scraper for consol43 content")
+    print(f"Files will be saved to: {os.path.abspath(ROOT_FOLDER)}")
+    process_directory()
+    print("Scraping completed")
