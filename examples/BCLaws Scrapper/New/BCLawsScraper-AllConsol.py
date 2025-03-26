@@ -36,11 +36,13 @@ def get_available_consolidations():
         consolidations = []
         for link in soup.find_all('a'):
             href = link.get('href', '')
-            match = re.search(r'/civix/content/(consol\d+/consol\d+)/', href)
+            match = re.search(r'(?:^|/)civix/content/(consol\d+[a-z]?/consol\d+[a-z]?)/', href)
             if match:
                 path = match.group(1)
                 name = link.text.strip()
-                consolidations.append((path, name))
+                # Only include links that start with "Consol "
+                if name.startswith("Consol "):
+                    consolidations.append((path, name))
         
         print(f"Found {len(consolidations)} consolidations")
         return consolidations
@@ -202,15 +204,15 @@ def process_consolidation(consol_path, consol_name):
     print(f"Processing {consol_name}")
     print(f"{'='*80}")
     
-    # Extract consolidation folder name from path (e.g., consol43 from consol43/consol43)
-    consol_folder = consol_path.split('/')[0]
+    # Use the full consolidation name for the folder (sanitized for file system)
+    safe_folder_name = consol_name.replace('/', '_').replace('\\', '_').replace(':', '-')
     
     # Set up the URLs for this consolidation
     content_api_base = f"https://www.bclaws.gov.bc.ca/civix/content/{consol_path}/"
     document_api_base = f"https://www.bclaws.gov.bc.ca/civix/document/id/{consol_path}/"
     
     # Create root folder in the same directory as the script
-    root_folder = os.path.join(SCRIPT_DIR, consol_folder)
+    root_folder = os.path.join(SCRIPT_DIR, safe_folder_name)
     
     # Create root folder
     os.makedirs(root_folder, exist_ok=True)
