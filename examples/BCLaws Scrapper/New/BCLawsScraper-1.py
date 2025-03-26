@@ -5,15 +5,19 @@ import time
 import urllib.parse
 
 # Configurable parameters
-CONSOL_NUMBER = 42  # Change this to target different consolidations
-SLOW_DOWN_SECONDS = 0  # Delay between requests (seconds)
+CONSOL_NUMBER = 43  # Change this to target different consolidations
+SLOW_DOWN_SECONDS = 0.5  # Delay between requests (seconds)
+
+# Get the directory where the script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Base URLs with dynamic consol number
 CONTENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/content/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
 
 DOCUMENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/document/id/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
 
-ROOT_FOLDER = f"Consol{CONSOL_NUMBER}"
+# Create root folder in the same directory as the script
+ROOT_FOLDER = os.path.join(SCRIPT_DIR, f"Consol{CONSOL_NUMBER}")
 
 # Create root folder
 os.makedirs(ROOT_FOLDER, exist_ok=True)
