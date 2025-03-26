@@ -49,6 +49,17 @@ Note: Add future dependences in `requirement.txt` so that we can keep track of t
 
 For all the example notebooks click here: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/examples)
 
+### Populating Your Neo4j Data
+
+> ⚠️ **Prerequisite**  
+This assumes you already have Jupyter Notebook, Airflow, and Neo4j set up.  
+If not, please follow the instructions above to spin up all required containers before proceeding.
+
+📄 **Next Step:**  
+Refer to [`NEO4J data generation steps`](./documentation/indexing/readme.md) for a detailed breakdown.
+
+---
+
 ## Documentation
 
 To navigate all the work done in the project, please refer to the table below:
