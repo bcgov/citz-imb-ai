@@ -8,7 +8,9 @@ from ..common.chat_objects import ChatHistory
 class ImagesAndChunks(State):
     __tag = "v4ImagesAndChunks"  # Don't update this
     __version = "1"  # Update this if making changes
-    __description = "Images and Chunks"
+    __description = """
+      Uses the same indexing method as UpdatedChunks, but also includes images in the search.
+      """
 
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score

@@ -8,7 +8,10 @@ from ..common.chat_objects import ChatHistory
 class UpdatedChunks(State):
     __tag = "v2UpdatedChunks"  # Don't update this
     __version = "1"  # Update this if making changes
-    __description = "Updated Chunks"
+    __description = """
+      A version of data indexing where each Section is broken into chunks based on a fixed size.
+      Excels at finding broad context for your query.
+      """
 
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score

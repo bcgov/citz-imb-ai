@@ -9,7 +9,10 @@ from ..common.chat_objects import ChatHistory
 class AtomicIndexing(State):
     __tag = "v3AtomicIndexing"  # Don't update this
     __version = "1"  # Update this if making changes
-    __description = "Atomic Indexing"
+    __description = """
+      Structure of data indexing reflects the structure of the Acts and Regulations.
+      Uses UpdatedChunks for initial search, then returns all context of matched Sections.
+      """
 
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) 
