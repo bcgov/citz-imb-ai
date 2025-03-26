@@ -4,10 +4,16 @@ import xml.etree.ElementTree as ET
 import time
 import urllib.parse
 
-# Base URLs
-CONTENT_API_BASE = "https://www.bclaws.gov.bc.ca/civix/content/consol43/consol43/"
-DOCUMENT_API_BASE = "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/"
-ROOT_FOLDER = "Consol43"
+# Configurable parameters
+CONSOL_NUMBER = 42  # Change this to target different consolidations
+SLOW_DOWN_SECONDS = 0  # Delay between requests (seconds)
+
+# Base URLs with dynamic consol number
+CONTENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/content/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
+
+DOCUMENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/document/id/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
+
+ROOT_FOLDER = f"Consol{CONSOL_NUMBER}"
 
 # Create root folder
 os.makedirs(ROOT_FOLDER, exist_ok=True)
@@ -25,6 +31,8 @@ def download_file(url, save_path, max_retries=3):
                 f.write(response.content)
             
             print(f"Successfully saved to: {save_path}")
+            # Add delay after successful download
+            time.sleep(SLOW_DOWN_SECONDS)
             return True
         except Exception as e:
             retries += 1
@@ -42,6 +50,8 @@ def get_xml_content(url, max_retries=3):
         try:
             response = requests.get(url, timeout=30)
             response.raise_for_status()
+            # Add delay after successful request
+            time.sleep(SLOW_DOWN_SECONDS)
             return ET.fromstring(response.content)
         except Exception as e:
             retries += 1
@@ -52,7 +62,7 @@ def get_xml_content(url, max_retries=3):
                 print(f"Failed to access {url} after {max_retries} retries")
                 return None
 
-def process_directory(directory_path="", physical_path=ROOT_FOLDER):
+def process_directory(directory_path="", physical_path=None):
     """
     Process a directory in the Content API recursively
     
@@ -60,6 +70,10 @@ def process_directory(directory_path="", physical_path=ROOT_FOLDER):
         directory_path: The API path to the directory
         physical_path: The local filesystem path to save files to
     """
+    # If no physical path provided, use the root folder
+    if physical_path is None:
+        physical_path = ROOT_FOLDER
+        
     # Create the directory if it doesn't exist
     os.makedirs(physical_path, exist_ok=True)
     
@@ -148,7 +162,8 @@ def process_directory(directory_path="", physical_path=ROOT_FOLDER):
 
 # Start the scraping process
 if __name__ == "__main__":
-    print(f"Starting BC Laws scraper for consol43 content")
+    print(f"Starting BC Laws scraper for consol{CONSOL_NUMBER} content")
     print(f"Files will be saved to: {os.path.abspath(ROOT_FOLDER)}")
+    print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
     process_directory()
     print("Scraping completed")
