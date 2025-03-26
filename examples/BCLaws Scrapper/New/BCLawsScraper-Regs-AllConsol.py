@@ -15,11 +15,11 @@ DOWNLOAD_ALL = True
 # Get the directory where the script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Fetch and parse the archive page to get all available consolidations
+# Fetch and parse the archive page to get all available regulation consolidations
 def get_available_consolidations():
     try:
-        # Fetch the archive page
-        archive_url = "https://www.bclaws.gov.bc.ca/archive-stat.html"
+        # Fetch the regulations archive page
+        archive_url = "https://www.bclaws.gov.bc.ca/archive-reg.html"
         response = requests.get(archive_url, timeout=30)
         response.raise_for_status()
         
@@ -30,7 +30,7 @@ def get_available_consolidations():
         consolidations = []
         for link in soup.find_all('a'):
             href = link.get('href', '')
-            match = re.search(r'(?:^|/)civix/content/(consol\d+[a-z]?/consol\d+[a-z]?)/', href)
+            match = re.search(r'(?:^|/)civix/content/(loo\d+[a-z]?/loo\d+[a-z]?)/', href)
             if match:
                 path = match.group(1)
                 name = link.text.strip()
@@ -38,11 +38,11 @@ def get_available_consolidations():
                 if name.startswith("Consol "):
                     consolidations.append((path, name))
         
-        print(f"Found {len(consolidations)} consolidations")
+        print(f"Found {len(consolidations)} regulation consolidations")
         return consolidations
         
     except Exception as e:
-        print(f"Error fetching consolidations: {e}")
+        print(f"Error fetching regulation consolidations: {e}")
         return []
     
 # Download a file from URL and save it to save_path if it doesn't already exist
@@ -222,27 +222,35 @@ def process_consolidation(consol_path, consol_name):
 
 # Start the scraping process
 if __name__ == "__main__":
-    print(f"Starting BC Laws scraper for all consolidations")
+    print(f"Starting BC Laws Regulations scraper")
     print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
+    
+    # For specific URL if no consolidations found
+    specific_consolidation = "loo110/loo110"
+    specific_name = "LOO 110"
+    use_specific = False
     
     # Get all available consolidations
     consolidations = get_available_consolidations()
     
     if not consolidations:
-        print("No consolidations found. Please check the archive URL or try again later.")
-    else:
-        # Display available consolidations
-        print("\nAvailable consolidations:")
-        for i, (path, name) in enumerate(consolidations, 1):
-            print(f"{i}. {name} ({path})")
-        
-        if DOWNLOAD_ALL:
-            # Process all consolidations
-            print(f"\nProceeding to download all {len(consolidations)} consolidations")
-            for path, name in consolidations:
-                process_consolidation(path, name)
-            print("\nAll consolidations have been processed!")
-        else:
-            print("\nDownload disabled. Set DOWNLOAD_ALL = True to download all consolidations.")
+        print("No regulation consolidations found on the archive page.")
+        print("Using the specific LOO 110 URL you provided.")
+        use_specific = True
+        consolidations = [(specific_consolidation, specific_name)]
     
+    # Display available consolidations
+    print("\nAvailable regulation consolidations:")
+    for i, (path, name) in enumerate(consolidations, 1):
+        print(f"{i}. {name} ({path})")
+    
+    if DOWNLOAD_ALL or use_specific:
+        # Process all consolidations
+        print(f"\nProceeding to download all {len(consolidations)} regulation consolidations")
+        for path, name in consolidations:
+            process_consolidation(path, name)
+        print("\nAll regulation consolidations have been processed!")
+    else:
+        print("\nDownload disabled. Set DOWNLOAD_ALL = True to download all consolidations.")
+
     print("\nScraping completed")
