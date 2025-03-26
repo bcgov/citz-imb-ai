@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from pydantic import BaseModel
 
 
@@ -10,4 +10,4 @@ class ChatHistory(BaseModel):
 class ChatRequest(BaseModel):
     prompt: str
     chatHistory: List[ChatHistory]
-    key: str
+    key: Optional[str] = None

@@ -15,7 +15,7 @@ async def feedback(
     index: str = Form(...),
     recording_id: str = Form(...),
     bulk: bool = Form(False),
-    trulens_id: str = Form(...),
+    trulens_id: str = Form("unknown"),
 ):
     # Global variables initialization
     global tru
@@ -41,7 +41,7 @@ async def feedbackrag(
     feedback: str = Form(...),
     recording_id: str = Form(...),
     comment: str = Form(None),
-    trulens_id: str = Form(...),
+    trulens_id: str = Form("unknown"),
 ):
     global tru
     if tru is None:

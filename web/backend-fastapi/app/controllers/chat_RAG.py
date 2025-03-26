@@ -40,7 +40,9 @@ async def chat(chat_request: ChatRequest = Body(ChatRequest)):
     if tru is None:
         tru = trulens.connect_trulens()
 
-    state_entry = state_map.get(chat_request.key)
+    state_entry = state_map.get(
+        chat_request.key, state_map[UpdatedChunks().tag]  # Default to UpdatedChunks
+    )
     if state_entry is None:
         raise HTTPException(status_code=404, detail="RAG state not found")
     state = state_entry.get("state")
