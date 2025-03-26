@@ -3,27 +3,55 @@ import requests
 import xml.etree.ElementTree as ET
 import time
 import urllib.parse
+import re
+from bs4 import BeautifulSoup
 
-# Configurable parameters
-CONSOL_NUMBER = 43  # Change this to target different consolidations
-SLOW_DOWN_SECONDS = 0.5  # Delay between requests (seconds)
+# Delay between requests in seconds
+SLOW_DOWN_SECONDS = 0.5
+
+# Set to True to download all consolidations, False to just list them
+DOWNLOAD_ALL = True
 
 # Get the directory where the script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Base URLs with dynamic consol number
-CONTENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/content/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
-
-DOCUMENT_API_BASE = f"https://www.bclaws.gov.bc.ca/civix/document/id/consol{CONSOL_NUMBER}/consol{CONSOL_NUMBER}/"
-
-# Create root folder in the same directory as the script
-ROOT_FOLDER = os.path.join(SCRIPT_DIR, f"Consol{CONSOL_NUMBER}")
-
-# Create root folder
-os.makedirs(ROOT_FOLDER, exist_ok=True)
-
+# Fetch and parse the archive page to get all available consolidations
+def get_available_consolidations():
+    try:
+        # Fetch the archive page
+        archive_url = "https://www.bclaws.gov.bc.ca/archive-stat.html"
+        response = requests.get(archive_url, timeout=30)
+        response.raise_for_status()
+        
+        # Parse HTML
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Find all consolidation links
+        consolidations = []
+        for link in soup.find_all('a'):
+            href = link.get('href', '')
+            match = re.search(r'(?:^|/)civix/content/(consol\d+[a-z]?/consol\d+[a-z]?)/', href)
+            if match:
+                path = match.group(1)
+                name = link.text.strip()
+                # Only include links that start with "Consol "
+                if name.startswith("Consol "):
+                    consolidations.append((path, name))
+        
+        print(f"Found {len(consolidations)} consolidations")
+        return consolidations
+        
+    except Exception as e:
+        print(f"Error fetching consolidations: {e}")
+        return []
+    
+# Download a file from URL and save it to save_path if it doesn't already exist
 def download_file(url, save_path, max_retries=3):
-    """Download a file from URL and save it to save_path"""
+    # Check if file already exists
+    if os.path.exists(save_path):
+        print(f"File already exists, skipping: {save_path}")
+        return True
+        
     retries = 0
     while retries < max_retries:
         try:
@@ -47,8 +75,8 @@ def download_file(url, save_path, max_retries=3):
                 print(f"Failed to download {url} after {max_retries} retries")
                 return False
 
+# Get and parse XML content from a URL
 def get_xml_content(url, max_retries=3):
-    """Get and parse XML content from a URL"""
     retries = 0
     while retries < max_retries:
         try:
@@ -66,23 +94,25 @@ def get_xml_content(url, max_retries=3):
                 print(f"Failed to access {url} after {max_retries} retries")
                 return None
 
-def process_directory(directory_path="", physical_path=None):
+# Process a directory in the Content API recursively
+def process_directory(content_api_base, document_api_base, root_folder, directory_path="", physical_path=None):
     """
-    Process a directory in the Content API recursively
-    
     Args:
+        content_api_base: Base URL for content API
+        document_api_base: Base URL for document API
+        root_folder: Local folder to save files to
         directory_path: The API path to the directory
         physical_path: The local filesystem path to save files to
     """
     # If no physical path provided, use the root folder
     if physical_path is None:
-        physical_path = ROOT_FOLDER
+        physical_path = root_folder
         
     # Create the directory if it doesn't exist
     os.makedirs(physical_path, exist_ok=True)
     
     # Construct the content API URL
-    content_url = CONTENT_API_BASE + directory_path
+    content_url = content_api_base + directory_path
     print(f"Processing directory: {content_url}")
     
     # Get the directory content
@@ -106,16 +136,15 @@ def process_directory(directory_path="", physical_path=None):
             doc_title = doc.find('CIVIX_DOCUMENT_TITLE').text
             
             # Construct the multi-document URL (append _multi)
-            document_url = f"{DOCUMENT_API_BASE}{doc_id}_multi/xml"
+            document_url = f"{document_api_base}{doc_id}_multi/xml"
             
             # Create a safe filename
             safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
-            # Download the complete multi-document
+            # Download the complete multi-document if it doesn't already exist
             success = download_file(document_url, save_path)
             if success:
-                print(f"Downloaded multi-document: {doc_title}")
                 has_multi_document = True
                 break
     
@@ -136,7 +165,7 @@ def process_directory(directory_path="", physical_path=None):
             new_dir_path = dir_id if not directory_path else f"{directory_path}/{dir_id}"
             
             # Process the subdirectory
-            process_directory(new_dir_path, new_physical_path)
+            process_directory(content_api_base, document_api_base, root_folder, new_dir_path, new_physical_path)
             
         elif tag_name == 'document' and not has_multi_document:
             # Skip individual documents if we already have a multi-document
@@ -153,21 +182,67 @@ def process_directory(directory_path="", physical_path=None):
                 continue
             
             # Process regular XML document
-            document_url = f"{DOCUMENT_API_BASE}{doc_id}/xml"
+            document_url = f"{document_api_base}{doc_id}/xml"
             
             # Create a safe filename
             safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
-            # Download the file
-            success = download_file(document_url, save_path)
-            if success:
-                print(f"Downloaded document: {doc_title}")
+            # Download the file if it doesn't already exist
+            download_file(document_url, save_path)
+
+# Process a single consolidation
+def process_consolidation(consol_path, consol_name):
+    print(f"\n{'='*80}")
+    print(f"Processing {consol_name}")
+    print(f"{'='*80}")
+    
+    # Use the full consolidation name for the folder (sanitized for file system)
+    safe_folder_name = consol_name.replace('/', '_').replace('\\', '_').replace(':', '-')
+    
+    # Set up the URLs for this consolidation
+    content_api_base = f"https://www.bclaws.gov.bc.ca/civix/content/{consol_path}/"
+    document_api_base = f"https://www.bclaws.gov.bc.ca/civix/document/id/{consol_path}/"
+    
+    # Create root folder in the same directory as the script
+    root_folder = os.path.join(SCRIPT_DIR, safe_folder_name)
+    
+    # Create root folder
+    os.makedirs(root_folder, exist_ok=True)
+    
+    print(f"Content API: {content_api_base}")
+    print(f"Document API: {document_api_base}")
+    print(f"Files will be saved to: {os.path.abspath(root_folder)}")
+    print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
+    
+    # Start the directory processing
+    process_directory(content_api_base, document_api_base, root_folder)
+    
+    print(f"Completed processing {consol_name}")
 
 # Start the scraping process
 if __name__ == "__main__":
-    print(f"Starting BC Laws scraper for consol{CONSOL_NUMBER} content")
-    print(f"Files will be saved to: {os.path.abspath(ROOT_FOLDER)}")
+    print(f"Starting BC Laws scraper for all consolidations")
     print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
-    process_directory()
-    print("Scraping completed")
+    
+    # Get all available consolidations
+    consolidations = get_available_consolidations()
+    
+    if not consolidations:
+        print("No consolidations found. Please check the archive URL or try again later.")
+    else:
+        # Display available consolidations
+        print("\nAvailable consolidations:")
+        for i, (path, name) in enumerate(consolidations, 1):
+            print(f"{i}. {name} ({path})")
+        
+        if DOWNLOAD_ALL:
+            # Process all consolidations
+            print(f"\nProceeding to download all {len(consolidations)} consolidations")
+            for path, name in consolidations:
+                process_consolidation(path, name)
+            print("\nAll consolidations have been processed!")
+        else:
+            print("\nDownload disabled. Set DOWNLOAD_ALL = True to download all consolidations.")
+    
+    print("\nScraping completed")
