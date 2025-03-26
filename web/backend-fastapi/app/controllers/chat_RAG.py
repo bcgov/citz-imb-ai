@@ -1,42 +1,29 @@
 from collections import defaultdict
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, HTTPException
 from app.models import neo4j, trulens, rag
-from app.rag_states import v2_UpdatedChunks, v4_ImagesAndChunks, v3_AtomicIndexing
+from app.rag_states import ImagesAndChunks, AtomicIndexing, UpdatedChunks, StateType
 from ..common.chat_objects import ChatRequest
 
 router = APIRouter()
 kg = None
 tru = None
 
-states = [
-    {
-        v2_UpdatedChunks.tag: {
-            "state": v2_UpdatedChunks.UpdatedChunks(),
-            "type": "internal",
-            "trulens_id": v2_UpdatedChunks.trulens_id,
-            "description": "Updated Chunks",
-        },
-    },
-    {
-        v3_AtomicIndexing.tag: {
-            "state": v3_AtomicIndexing.AtomicIndexing(),
-            "type": "internal",
-            "trulens_id": v3_AtomicIndexing.trulens_id,
-            "description": "Atomic Indexing",
+# Include active states in this state_list
+state_list = [UpdatedChunks, AtomicIndexing, ImagesAndChunks]
+state_map = defaultdict()
+# Each state must be initialized and added to the state_map
+for state in state_list:
+    constructed_state = state()
+    state_map.update(
+        {
+            constructed_state.tag: {
+                "state": constructed_state,
+                "type": constructed_state.type,
+                "trulens_id": constructed_state.trulens_id,
+                "description": constructed_state.description,
+            }
         }
-    },
-    {
-        v4_ImagesAndChunks.tag: {
-            "state": v4_ImagesAndChunks.ImagesAndChunks(),
-            "type": "internal",
-            "trulens_id": v4_ImagesAndChunks.trulens_id,
-            "description": "Images and Chunks",
-        }
-    },
-]
-state_map = defaultdict(lambda: states[0])
-for state in states:
-    state_map.update(state)
+    )
 
 
 @router.post("/chat/")
@@ -54,13 +41,15 @@ async def chat(chat_request: ChatRequest = Body(ChatRequest)):
         tru = trulens.connect_trulens()
 
     state_entry = state_map.get(chat_request.key)
-    tru_rag = trulens.tru_rag(rag_fn, state_entry.get("trulens_id"))
+    if state_entry is None:
+        raise HTTPException(status_code=404, detail="RAG state not found")
+    state = state_entry.get("state")
+    tru_rag = trulens.tru_rag(rag_fn, state.trulens_id)
 
     with tru_rag as recording:
         # Key used to determine class called for query
-        if state_entry.get("type") == "internal":
+        if state.type == StateType.INTERNAL:
             # For internal operations with Neo4j
-            state = state_entry.get("state")
             responses = rag_fn.query(
                 chat_request.prompt,
                 chat_history,

@@ -5,12 +5,11 @@ from .State import State
 from ..models.neo4j import neo4j_vector_search
 from ..common.chat_objects import ChatHistory
 
-tag = "v3AtomicIndexing"  # Don't update this
-version = "1"  # Update this if making changes
-trulens_id = tag + "-" + version
-
 
 class AtomicIndexing(State):
+    __tag = "v3AtomicIndexing"  # Don't update this
+    __version = "1"  # Update this if making changes
+    __description = "Atomic Indexing"
 
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) 
@@ -30,10 +29,12 @@ class AtomicIndexing(State):
 
     def __init__(self):
         super().__init__(
-            tag,
+            self.__tag,
+            self.__version,
             index=self.__vector_index,
             query=self.__vector_search_query,
             kwargs_key="mixtral",
+            description=self.__description,
         )
 
     def create_prompt(

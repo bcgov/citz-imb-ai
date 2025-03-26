@@ -95,7 +95,7 @@ class get_full_rag:
     def query(self, question: str, chat_history: List[ChatHistory], kg, state) -> str:
         context_str = self.retrieve(question, kg, state)
         prompt = self.create_prompt(question, context_str, chat_history, state)
-        bedrock_response = self.get_response(prompt, state.get_kwargs_key())
+        bedrock_response = self.get_response(prompt, state.kwargs_key)
         # Rerank to sort references by relevance to response
         context_str = self.re_rank_reference(
             context_str,
