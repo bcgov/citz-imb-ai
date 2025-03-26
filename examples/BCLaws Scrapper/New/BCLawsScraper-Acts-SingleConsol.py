@@ -24,8 +24,12 @@ ROOT_FOLDER = os.path.join(SCRIPT_DIR, f"Consol{CONSOL_NUMBER}")
 # Create root folder
 os.makedirs(ROOT_FOLDER, exist_ok=True)
 
+# Download a file from URL and save it to save_path if it doesn't already exist
 def download_file(url, save_path, max_retries=3):
-    """Download a file from URL and save it to save_path"""
+    if os.path.exists(save_path):
+        print(f"File already exists, skipping: {save_path}")
+        return True
+        
     retries = 0
     while retries < max_retries:
         try:
@@ -49,8 +53,8 @@ def download_file(url, save_path, max_retries=3):
                 print(f"Failed to download {url} after {max_retries} retries")
                 return False
 
+# Get and parse XML content from a URL
 def get_xml_content(url, max_retries=3):
-    """Get and parse XML content from a URL"""
     retries = 0
     while retries < max_retries:
         try:

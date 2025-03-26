@@ -47,7 +47,6 @@ def get_available_consolidations():
     
 # Download a file from URL and save it to save_path if it doesn't already exist
 def download_file(url, save_path, max_retries=3):
-    # Check if file already exists
     if os.path.exists(save_path):
         print(f"File already exists, skipping: {save_path}")
         return True
