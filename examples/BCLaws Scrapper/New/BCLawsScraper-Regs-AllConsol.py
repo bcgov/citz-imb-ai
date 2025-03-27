@@ -8,10 +8,13 @@ import shutil
 from bs4 import BeautifulSoup
 
 # Delay between requests in seconds
-SLOW_DOWN_SECONDS = 0.1
+SLOW_DOWN_SECONDS = 0
 
 # Set to True to download all consolidations, False to just list them
 DOWNLOAD_ALL = True
+
+# Set to True to clean up empty media folders
+CLEANUP_MEDIA_FOLDERS = True
 
 # Get the directory where the script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,6 +22,38 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 # Define the base directories for storing consolidations
 CONSOLIDATIONS_DIR = os.path.join(SCRIPT_DIR, "Consolidations")
 REGULATIONS_DIR = os.path.join(CONSOLIDATIONS_DIR, "Regulations")
+
+# Function to remove media folders
+def cleanup_media_folders(root_folder):
+    """
+    Find and remove media folders and their subdirectories
+    """
+    print(f"\n{'='*80}")
+    print(f"Cleaning up media folders in {root_folder}")
+    print(f"{'='*80}")
+    
+    media_folders = []
+    
+    # Walk through the directory tree to find media folders
+    for dirpath, dirnames, filenames in os.walk(root_folder, topdown=False):
+        base_dir_name = os.path.basename(dirpath)
+        
+        # Track media folders
+        if base_dir_name == "media" and dirpath.split(os.path.sep)[-2] not in ("media", "images"):
+            media_folders.append(dirpath)
+    
+    # Remove media folders and their subdirectories
+    media_folders_removed = 0
+    for media_folder in media_folders:
+        try:
+            print(f"Removing media folder and subdirectories: {media_folder}")
+            shutil.rmtree(media_folder)
+            media_folders_removed += 1
+        except Exception as e:
+            print(f"Error removing media folder {media_folder}: {e}")
+    
+    print(f"Media folder cleanup complete: {media_folders_removed} folders removed")
+    return media_folders_removed
 
 # Fetch and parse the archive page to get all available regulation consolidations
 def get_available_consolidations():
@@ -222,12 +257,17 @@ def process_consolidation(consol_path, consol_name):
     # Start the directory processing
     process_directory(content_api_base, document_api_base, root_folder)
     
+    # Clean up media folders if enabled
+    if CLEANUP_MEDIA_FOLDERS:
+        cleanup_media_folders(root_folder)
+    
     print(f"Completed processing {consol_name}")
 
 # Start the scraping process
 if __name__ == "__main__":
     print(f"Starting BC Laws Regulations scraper")
     print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
+    print(f"Media folder cleanup is {'enabled' if CLEANUP_MEDIA_FOLDERS else 'disabled'}")
     print(f"Files will be stored in: {os.path.abspath(REGULATIONS_DIR)}")
     
     # Create the base directory structure
@@ -235,7 +275,7 @@ if __name__ == "__main__":
     
     # For specific URL if no consolidations found
     specific_consolidation = "loo110/loo110"
-    specific_name = "LOO 110"
+    specific_name = "LOO 110" 
     use_specific = False
     
     # Get all available consolidations
@@ -260,5 +300,21 @@ if __name__ == "__main__":
         print("\nAll regulation consolidations have been processed!")
     else:
         print("\nDownload disabled. Set DOWNLOAD_ALL = True to download all consolidations.")
+        
+        # Option to just clean up media folders without downloading
+        if CLEANUP_MEDIA_FOLDERS:
+            choice = input("Would you like to clean up media folders in existing files without downloading? (y/n): ")
+            if choice.lower() == 'y':
+                total_media_folders = 0
+                
+                # Look for existing consolidation folders
+                for item in os.listdir(REGULATIONS_DIR):
+                    folder_path = os.path.join(REGULATIONS_DIR, item)
+                    if os.path.isdir(folder_path):
+                        print(f"\nCleaning up media folders in {item}...")
+                        media_folders = cleanup_media_folders(folder_path)
+                        total_media_folders += media_folders
+                
+                print(f"\nCleanup summary: {total_media_folders} media folders and their subdirectories removed")
 
     print("\nScraping completed")
