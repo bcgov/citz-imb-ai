@@ -4,16 +4,100 @@ import xml.etree.ElementTree as ET
 import time
 import urllib.parse
 import re
+import shutil
 from bs4 import BeautifulSoup
 
 # Delay between requests in seconds
-SLOW_DOWN_SECONDS = 0.5
+SLOW_DOWN_SECONDS = 0.1
 
 # Set to True to download all consolidations, False to just list them
 DOWNLOAD_ALL = True
 
+# Set to True to reorganize files after download
+REORGANIZE_FILES = True
+
 # Get the directory where the script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Define the base directories for storing consolidations
+CONSOLIDATIONS_DIR = os.path.join(SCRIPT_DIR, "Consolidations")
+ACTS_DIR = os.path.join(CONSOLIDATIONS_DIR, "Acts")
+
+# Function to reorganize files - new function
+def reorganize_act_files(root_folder):
+    """
+    Traverse through directories and:
+    1. Find files in 'Act' folders with names starting with 'Table of Contents - ',
+       rename them, move them up one directory level, and remove empty Act folders.
+    2. Remove empty media folders and their subdirectories
+    """
+    print(f"\n{'='*80}")
+    print(f"Reorganizing files in {root_folder}")
+    print(f"{'='*80}")
+    
+    # Statistics for reporting
+    act_folders = []
+    media_folders = []
+    files_processed = 0
+    
+    # Walk through the directory tree
+    for dirpath, dirnames, filenames in os.walk(root_folder, topdown=False):  # Use topdown=False to process subdirectories first
+        base_dir_name = os.path.basename(dirpath)
+        
+        # Check if current folder is named "Act"
+        if base_dir_name == "Act":
+            act_folders.append(dirpath)
+            
+            # Process files in the Act folder
+            for filename in filenames:
+                if filename.startswith("Table of Contents - "):
+                    # Full path to the original file
+                    original_file = os.path.join(dirpath, filename)
+                    
+                    # New filename without the prefix
+                    new_filename = filename.replace("Table of Contents - ", "")
+                    
+                    # Parent directory of the Act folder
+                    parent_dir = os.path.dirname(dirpath)
+                    
+                    # Full path for the destination file
+                    destination_file = os.path.join(parent_dir, new_filename)
+                    
+                    print(f"Moving and renaming: {original_file} -> {destination_file}")
+                    
+                    # Move and rename the file
+                    shutil.move(original_file, destination_file)
+                    files_processed += 1
+        
+        # Track media folders
+        if base_dir_name == "media" and dirpath.split(os.path.sep)[-2] not in ("media", "images"):
+            media_folders.append(dirpath)
+    
+    # After processing all files, check and remove empty Act folders
+    folders_removed = 0
+    for act_folder in act_folders:
+        # Check if the folder is empty (no files or subdirectories)
+        if not os.listdir(act_folder):
+            print(f"Removing empty Act folder: {act_folder}")
+            os.rmdir(act_folder)
+            folders_removed += 1
+    
+    # Remove media folders and their subdirectories
+    media_folders_removed = 0
+    for media_folder in media_folders:
+        try:
+            print(f"Removing media folder and subdirectories: {media_folder}")
+            shutil.rmtree(media_folder)
+            media_folders_removed += 1
+        except Exception as e:
+            print(f"Error removing media folder {media_folder}: {e}")
+    
+    print(f"Reorganization complete:")
+    print(f"- {files_processed} files processed")
+    print(f"- {folders_removed} empty Act folders removed")
+    print(f"- {media_folders_removed} media folders and their subdirectories removed")
+    
+    return files_processed, folders_removed, media_folders_removed
 
 # Fetch and parse the archive page to get all available consolidations
 def get_available_consolidations():
@@ -204,10 +288,11 @@ def process_consolidation(consol_path, consol_name):
     content_api_base = f"https://www.bclaws.gov.bc.ca/civix/content/{consol_path}/"
     document_api_base = f"https://www.bclaws.gov.bc.ca/civix/document/id/{consol_path}/"
     
-    # Create root folder in the same directory as the script
-    root_folder = os.path.join(SCRIPT_DIR, safe_folder_name)
+    # Create root folder in the structured Consolidations/Acts hierarchy
+    root_folder = os.path.join(ACTS_DIR, safe_folder_name)
     
-    # Create root folder
+    # Create necessary directories
+    os.makedirs(ACTS_DIR, exist_ok=True)
     os.makedirs(root_folder, exist_ok=True)
     
     print(f"Content API: {content_api_base}")
@@ -218,12 +303,21 @@ def process_consolidation(consol_path, consol_name):
     # Start the directory processing
     process_directory(content_api_base, document_api_base, root_folder)
     
+    # Reorganize files if enabled
+    if REORGANIZE_FILES:
+        reorganize_act_files(root_folder)
+    
     print(f"Completed processing {consol_name}")
 
 # Start the scraping process
 if __name__ == "__main__":
     print(f"Starting BC Laws scraper for all consolidations")
     print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
+    print(f"File reorganization is {'enabled' if REORGANIZE_FILES else 'disabled'}")
+    print(f"Files will be stored in: {os.path.abspath(CONSOLIDATIONS_DIR)}")
+    
+    # Create the base directory structure
+    os.makedirs(ACTS_DIR, exist_ok=True)
     
     # Get all available consolidations
     consolidations = get_available_consolidations()
@@ -244,5 +338,28 @@ if __name__ == "__main__":
             print("\nAll consolidations have been processed!")
         else:
             print("\nDownload disabled. Set DOWNLOAD_ALL = True to download all consolidations.")
+            
+            # Option to just reorganize existing files
+            if REORGANIZE_FILES:
+                choice = input("Would you like to reorganize existing files without downloading? (y/n): ")
+                if choice.lower() == 'y':
+                    total_files = 0
+                    total_folders = 0
+                    total_media_folders = 0
+                    
+                    # Look for existing consolidation folders
+                    for item in os.listdir(ACTS_DIR):
+                        folder_path = os.path.join(ACTS_DIR, item)
+                        if os.path.isdir(folder_path):
+                            print(f"\nReorganizing {item}...")
+                            files, folders, media = reorganize_act_files(folder_path)
+                            total_files += files
+                            total_folders += folders
+                            total_media_folders += media
+                    
+                    print(f"\nReorganization summary:")
+                    print(f"- {total_files} files processed")
+                    print(f"- {total_folders} empty Act folders removed")
+                    print(f"- {total_media_folders} media folders and their subdirectories removed")
     
     print("\nScraping completed")
