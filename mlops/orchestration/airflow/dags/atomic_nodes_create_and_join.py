@@ -991,7 +991,7 @@ def index_acts_regs():
     reg_directory = Path(regs_path)
     reg_file_names = [f.name for f in reg_directory.iterdir() if f.is_file()]
 
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(4) as executor:
         print(f"Using {executor._max_workers} threads")
         list(executor.map(process_act, act_file_names))
         list(executor.map(process_regulation, reg_file_names))
@@ -1115,7 +1115,7 @@ def create_is_edges():
         """
     )
 
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(4) as executor:
         print(f"Using {executor._max_workers} threads")
         list(executor.map(connect_updated_chunks, act_names[0].get("data")))
         list(executor.map(connect_updated_chunks, reg_names[0].get("data")))
