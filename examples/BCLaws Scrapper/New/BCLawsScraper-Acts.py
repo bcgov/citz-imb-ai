@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup
 # Delay between requests in seconds
 SLOW_DOWN_SECONDS = 0
 
-# Set to True to download all consolidations, False to just list them
-DOWNLOAD_ALL = True
+# Set to True to download all consolidations, False to select specific one(s)
+DOWNLOAD_ALL = False
 
 # Set to True to reorganize files after download
 REORGANIZE_FILES = True
@@ -317,9 +317,34 @@ def process_consolidation(consol_path, consol_name):
     
     print(f"Completed processing {consol_name}")
 
+# Function to let user select consolidation(s)
+def select_consolidations(consolidations):
+    print("\nSelect which consolidation(s) to download:")
+    print("Enter a single number, multiple numbers separated by commas, or 'all' for all consolidations")
+    print("Example: '1' or '1,3,5' or 'all'")
+    
+    while True:
+        selection = input("\nYour selection: ")
+        
+        if selection.lower() == 'all':
+            return consolidations
+            
+        try:
+            # Split by commas and convert to integers
+            indices = [int(idx.strip()) for idx in selection.split(',')]
+            
+            # Check if all indices are valid
+            if all(1 <= idx <= len(consolidations) for idx in indices):
+                # Convert 1-based indices to 0-based and return selected consolidations
+                return [consolidations[idx-1] for idx in indices]
+            else:
+                print(f"Invalid selection. Please enter numbers between 1 and {len(consolidations)}")
+        except ValueError:
+            print("Invalid input. Please enter numbers separated by commas, or 'all'")
+
 # Start the scraping process
 if __name__ == "__main__":
-    print(f"Starting BC Laws scraper for all consolidations")
+    print(f"Starting BC Laws scraper for Acts consolidations")
     print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
     print(f"File reorganization is {'enabled' if REORGANIZE_FILES else 'disabled'}")
     print(f"Files will be stored in: {os.path.abspath(CONSOLIDATIONS_DIR)}")
@@ -338,36 +363,44 @@ if __name__ == "__main__":
         for i, (path, name) in enumerate(consolidations, 1):
             print(f"{i}. {name} ({path})")
         
+        # Determine which consolidations to process
         if DOWNLOAD_ALL:
-            # Process all consolidations
+            # Use all consolidations
+            selected_consolidations = consolidations
             print(f"\nProceeding to download all {len(consolidations)} consolidations")
-            for path, name in consolidations:
-                process_consolidation(path, name)
-            print("\nAll consolidations have been processed!")
         else:
-            print("\nDownload disabled. Set DOWNLOAD_ALL = True to download all consolidations.")
-            
-            # Option to just reorganize existing files
-            if REORGANIZE_FILES:
-                choice = input("Would you like to reorganize existing files without downloading? (y/n): ")
-                if choice.lower() == 'y':
-                    total_files = 0
-                    total_folders = 0
-                    total_media_folders = 0
-                    
-                    # Look for existing consolidation folders
-                    for item in os.listdir(ACTS_DIR):
-                        folder_path = os.path.join(ACTS_DIR, item)
-                        if os.path.isdir(folder_path):
-                            print(f"\nReorganizing {item}...")
-                            files, folders, media = reorganize_act_files(folder_path)
-                            total_files += files
-                            total_folders += folders
-                            total_media_folders += media
-                    
-                    print(f"\nReorganization summary:")
-                    print(f"- {total_files} files processed")
-                    print(f"- {total_folders} empty Act folders removed")
-                    print(f"- {total_media_folders} media folders and their subdirectories removed")
+            # Let user select consolidations
+            selected_consolidations = select_consolidations(consolidations)
+            print(f"\nProceeding to download {len(selected_consolidations)} selected consolidation(s)")
+        
+        # Process selected consolidations
+        for path, name in selected_consolidations:
+            process_consolidation(path, name)
+        
+        if selected_consolidations:
+            print("\nAll selected consolidations have been processed!")
+        
+        # Option to just reorganize existing files
+        if not selected_consolidations and REORGANIZE_FILES:
+            choice = input("Would you like to reorganize existing files without downloading? (y/n): ")
+            if choice.lower() == 'y':
+                total_files = 0
+                total_folders = 0
+                total_media_folders = 0
+                
+                # Look for existing consolidation folders
+                for item in os.listdir(ACTS_DIR):
+                    folder_path = os.path.join(ACTS_DIR, item)
+                    if os.path.isdir(folder_path):
+                        print(f"\nReorganizing {item}...")
+                        files, folders, media = reorganize_act_files(folder_path)
+                        total_files += files
+                        total_folders += folders
+                        total_media_folders += media
+                
+                print(f"\nReorganization summary:")
+                print(f"- {total_files} files processed")
+                print(f"- {total_folders} empty Act folders removed")
+                print(f"- {total_media_folders} media folders and their subdirectories removed")
     
     print("\nScraping completed")
