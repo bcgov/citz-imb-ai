@@ -4,8 +4,6 @@ from trulens_eval import Tru
 from trulens_eval import TruCustomApp
 import json
 
-APP_ID = "TopK_ReRank_v1"
-
 
 def connect_trulens():
     TRULENS_USER = os.getenv("TRULENS_USER")
@@ -81,66 +79,40 @@ def get_feedback_value(feedback):
         return 0
 
 
-def process_feedback(index, feedback, record_id=None, bulk=False):
-    if bulk:
-        multi_result = {"bulk": []}
-        feedback = feedback.split(",")
-        for feedback_value in feedback:
-            multi_result["bulk"].append(int(get_feedback_value(feedback_value)))
-        multi_result = json.dumps(multi_result)
-    else:
-        feedbackvalue = int(get_feedback_value(feedback))
-        multi_result = json.dumps({index: [feedbackvalue]})
-
-    tru_feedback = tru.add_feedback(
-        name="Human Feedack",
-        record_id=record_id,
-        app_id=APP_ID,
-        result=0,
-        multi_result=multi_result,
-    )
-    rows = fetch_human_feedback(record_id)
-    if rows:
-        return rows
-    else:
-        return None
-
-
-def process_rag_feedback(feedback, record_id=None, tru=None, comment=None):
+def process_rag_feedback(feedback, trulens_id, record_id=None, tru=None, comment=None):
     feedback_value = int(get_feedback_value(feedback))
-        
+
     feedback_data = {
         "name": "Human Feedback",
         "record_id": record_id,
-        "app_id": APP_ID,
+        "app_id": trulens_id,
         "result": feedback_value,
     }
-    
+
     # Add comment to multi_result if provided
     if comment:
-        feedback_data["multi_result"] = json.dumps({
-            "comment": comment,
-            "vote_type": feedback  # Store the original vote type
-        })
-    
+        feedback_data["multi_result"] = json.dumps(
+            {"comment": comment, "vote_type": feedback}  # Store the original vote type
+        )
+
     tru_feedback = tru.add_feedback(**feedback_data)
-    
+
     rows = fetch_human_feedback(record_id)
     return rows if rows else None
 
 
-def tru_rag(rag):
-    return TruCustomApp(rag, app_id=APP_ID)
+def tru_rag(rag, trulens_id):
+    return TruCustomApp(rag, app_id=trulens_id)
 
 
-def fetch_all_feedback():
+def fetch_all_feedback(trulens_id):
     conn = tru_connect()
     cur = conn.cursor()  # creating a cursor
     cur.execute(
         """SELECT R.input, R.record_json as record_json, F.multi_result, F.result, R.app_id result FROM public.records R 
     LEFT Join feedbacks F ON F.record_id = R.record_id WHERE
     R.app_id = %s""",
-        (APP_ID,),
+        (trulens_id),
     )
     rows = cur.fetchall()
     return rows

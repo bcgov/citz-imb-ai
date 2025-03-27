@@ -1,3 +1,4 @@
+from collections import defaultdict
 import boto3
 import json
 import os
@@ -33,7 +34,7 @@ def get_mixtral_kwargs(prompt):
     return kwargs
 
 
-def get_lama3_kwargs(prompt):
+def get_llama3_kwargs(prompt):
     kwargs = {
         "modelId": "meta.llama3-8b-instruct-v1:0",
         "contentType": "application/json",
@@ -50,8 +51,36 @@ def get_lama3_kwargs(prompt):
     return kwargs
 
 
-def get_response(prompt):
-    kwargs = get_mixtral_kwargs(prompt)
+def get_claude_kwargs(prompt):
+    kwargs = {
+        "modelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+        "contentType": "application/json",
+        "accept": "application/json",
+        "body": json.dumps(
+            {
+                "anthropic_version": "bedrock-2023-05-31",
+                "max_tokens": 5000,
+                "messages": [
+                    {"role": "user", "content": [{"type": "text", "text": prompt}]}
+                ],
+            }
+        ),
+    }
+    return kwargs
+
+
+kwargs_map = defaultdict()
+kwargs_map.update(
+    {
+        "mixtral": get_mixtral_kwargs,
+        "llama3": get_llama3_kwargs,
+        "claude-sonnet-3.5": get_claude_kwargs,
+    }
+)
+
+
+def get_response(prompt, kwargs_key):
+    kwargs = kwargs_map.get(kwargs_key)(prompt)
     response = bedrock_runtime.invoke_model(**kwargs)
     response_body = json.loads(response.get("body").read())
     return response_body["outputs"][0]["text"]
