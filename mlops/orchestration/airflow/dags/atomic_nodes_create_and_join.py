@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
@@ -33,6 +34,8 @@ from threading import current_thread
 import traceback
 from collections import defaultdict
 import json
+
+load_dotenv("/vault/secrets/zuba-secret-dev")
 
 # Set up embeddings and database connection
 token_splitter = SentenceTransformersTokenTextSplitter(
