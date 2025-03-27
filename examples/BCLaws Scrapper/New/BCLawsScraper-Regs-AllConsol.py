@@ -4,16 +4,21 @@ import xml.etree.ElementTree as ET
 import time
 import urllib.parse
 import re
+import shutil
 from bs4 import BeautifulSoup
 
 # Delay between requests in seconds
-SLOW_DOWN_SECONDS = 0.5
+SLOW_DOWN_SECONDS = 0.1
 
 # Set to True to download all consolidations, False to just list them
 DOWNLOAD_ALL = True
 
 # Get the directory where the script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Define the base directories for storing consolidations
+CONSOLIDATIONS_DIR = os.path.join(SCRIPT_DIR, "Consolidations")
+REGULATIONS_DIR = os.path.join(CONSOLIDATIONS_DIR, "Regulations")
 
 # Fetch and parse the archive page to get all available regulation consolidations
 def get_available_consolidations():
@@ -203,8 +208,8 @@ def process_consolidation(consol_path, consol_name):
     content_api_base = f"https://www.bclaws.gov.bc.ca/civix/content/{consol_path}/"
     document_api_base = f"https://www.bclaws.gov.bc.ca/civix/document/id/{consol_path}/"
     
-    # Create root folder in the same directory as the script
-    root_folder = os.path.join(SCRIPT_DIR, safe_folder_name)
+    # Create root folder in the Consolidations/Regulations directory
+    root_folder = os.path.join(REGULATIONS_DIR, safe_folder_name)
     
     # Create root folder
     os.makedirs(root_folder, exist_ok=True)
@@ -223,6 +228,10 @@ def process_consolidation(consol_path, consol_name):
 if __name__ == "__main__":
     print(f"Starting BC Laws Regulations scraper")
     print(f"Using a delay of {SLOW_DOWN_SECONDS} seconds between requests")
+    print(f"Files will be stored in: {os.path.abspath(REGULATIONS_DIR)}")
+    
+    # Create the base directory structure
+    os.makedirs(REGULATIONS_DIR, exist_ok=True)
     
     # For specific URL if no consolidations found
     specific_consolidation = "loo110/loo110"
