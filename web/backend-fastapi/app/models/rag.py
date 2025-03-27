@@ -129,9 +129,17 @@ class get_full_rag:
         )
         return topk
 
+    def query_with_history(self, query: str, chat_history: List[ChatHistory]):
+        query_with_history = ''
+        for chat in chat_history:
+            query_with_history = f'{query_with_history} {chat.prompt}'
+        query_with_history = f'{query_with_history} {query}'
+        return query_with_history
+
     @instrument
     def query(self, query: str, chat_history: List[ChatHistory], embeddings, kg) -> str:
-        context_str = self.retrieve(query, embeddings, kg)
+        query_with_history = self.query_with_history(query, chat_history)
+        context_str = self.retrieve(query_with_history, embeddings, kg)
         create_prompt = self.create_prompt(query, context_str, chat_history)
         bedrock_response = self.get_response(create_prompt)
         # Rerank to sort references by relevance to response
