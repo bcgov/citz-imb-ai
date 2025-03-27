@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup
 # Delay between requests in seconds
 SLOW_DOWN_SECONDS = 0
 
-# Set to True to download all consolidations, False to just list them
-DOWNLOAD_ALL = True
+# Set to True to download all consolidations, False to select specific one(s)
+DOWNLOAD_ALL = False
 
 # Set to True to clean up empty media folders
 CLEANUP_MEDIA_FOLDERS = True
@@ -263,6 +263,31 @@ def process_consolidation(consol_path, consol_name):
     
     print(f"Completed processing {consol_name}")
 
+# Function to let user select consolidation(s)
+def select_consolidations(consolidations):
+    print("\nSelect which consolidation(s) to download:")
+    print("Enter a single number, multiple numbers separated by commas, or 'all' for all consolidations")
+    print("Example: '1' or '1,3,5' or 'all'")
+    
+    while True:
+        selection = input("\nYour selection: ")
+        
+        if selection.lower() == 'all':
+            return consolidations
+            
+        try:
+            # Split by commas and convert to integers
+            indices = [int(idx.strip()) for idx in selection.split(',')]
+            
+            # Check if all indices are valid
+            if all(1 <= idx <= len(consolidations) for idx in indices):
+                # Convert 1-based indices to 0-based and return selected consolidations
+                return [consolidations[idx-1] for idx in indices]
+            else:
+                print(f"Invalid selection. Please enter numbers between 1 and {len(consolidations)}")
+        except ValueError:
+            print("Invalid input. Please enter numbers separated by commas, or 'all'")
+
 # Start the scraping process
 if __name__ == "__main__":
     print(f"Starting BC Laws Regulations scraper")
@@ -292,29 +317,38 @@ if __name__ == "__main__":
     for i, (path, name) in enumerate(consolidations, 1):
         print(f"{i}. {name} ({path})")
     
+    # Determine which consolidations to process
     if DOWNLOAD_ALL or use_specific:
-        # Process all consolidations
-        print(f"\nProceeding to download all {len(consolidations)} regulation consolidations")
-        for path, name in consolidations:
-            process_consolidation(path, name)
-        print("\nAll regulation consolidations have been processed!")
+        # Use all consolidations or the specific fallback
+        selected_consolidations = consolidations
+        msg = "all" if DOWNLOAD_ALL else "the specific fallback"
+        print(f"\nProceeding to download {msg} regulation consolidations ({len(consolidations)} total)")
     else:
-        print("\nDownload disabled. Set DOWNLOAD_ALL = True to download all consolidations.")
+        # Let user select consolidations
+        selected_consolidations = select_consolidations(consolidations)
+        print(f"\nProceeding to download {len(selected_consolidations)} selected regulation consolidation(s)")
+    
+    # Process selected consolidations
+    for path, name in selected_consolidations:
+        process_consolidation(path, name)
+    
+    if selected_consolidations:
+        print("\nAll selected regulation consolidations have been processed!")
         
-        # Option to just clean up media folders without downloading
-        if CLEANUP_MEDIA_FOLDERS:
-            choice = input("Would you like to clean up media folders in existing files without downloading? (y/n): ")
-            if choice.lower() == 'y':
-                total_media_folders = 0
-                
-                # Look for existing consolidation folders
-                for item in os.listdir(REGULATIONS_DIR):
-                    folder_path = os.path.join(REGULATIONS_DIR, item)
-                    if os.path.isdir(folder_path):
-                        print(f"\nCleaning up media folders in {item}...")
-                        media_folders = cleanup_media_folders(folder_path)
-                        total_media_folders += media_folders
-                
-                print(f"\nCleanup summary: {total_media_folders} media folders and their subdirectories removed")
+    # Option to just clean up media folders without downloading
+    if not selected_consolidations and CLEANUP_MEDIA_FOLDERS:
+        choice = input("Would you like to clean up media folders in existing files without downloading? (y/n): ")
+        if choice.lower() == 'y':
+            total_media_folders = 0
+            
+            # Look for existing consolidation folders
+            for item in os.listdir(REGULATIONS_DIR):
+                folder_path = os.path.join(REGULATIONS_DIR, item)
+                if os.path.isdir(folder_path):
+                    print(f"\nCleaning up media folders in {item}...")
+                    media_folders = cleanup_media_folders(folder_path)
+                    total_media_folders += media_folders
+            
+            print(f"\nCleanup summary: {total_media_folders} media folders and their subdirectories removed")
 
     print("\nScraping completed")
