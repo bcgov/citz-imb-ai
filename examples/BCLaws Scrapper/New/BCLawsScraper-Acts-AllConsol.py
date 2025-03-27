@@ -8,7 +8,7 @@ import shutil
 from bs4 import BeautifulSoup
 
 # Delay between requests in seconds
-SLOW_DOWN_SECONDS = 0.1
+SLOW_DOWN_SECONDS = 0
 
 # Set to True to download all consolidations, False to just list them
 DOWNLOAD_ALL = True
@@ -135,7 +135,15 @@ def download_file(url, save_path, max_retries=3):
     if os.path.exists(save_path):
         print(f"File already exists, skipping: {save_path}")
         return True
-        
+    
+    # Special case for document ID "11025_00_multi"
+    if "/11025_00_multi/xml" in url:
+        print(f"Detected special case for document ID 11025_00_multi")
+        corrected_url = url.replace("/11025_00_multi/xml", "/00_11025_00_multi/xml")
+        print(f"Using corrected URL: {corrected_url}")
+        url = corrected_url
+    
+    # Perform the download
     retries = 0
     while retries < max_retries:
         try:
