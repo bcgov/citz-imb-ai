@@ -25,21 +25,14 @@ REGULATIONS_DIR = os.path.join(CONSOLIDATIONS_DIR, "Regulations")
 
 # Function to sanitize filenames
 def sanitize_filename(filename):
-    """
-    Sanitize a filename by removing consecutive spaces and other problematic characters
-    """
     # Replace consecutive whitespace with a single space
     sanitized = re.sub(r'\s+', ' ', filename)
     # Replace other problematic characters
-    sanitized = sanitized.replace('/', '_').replace('\\', '_').replace(':', '-')
+    sanitized = sanitized.replace('/', '_').replace('\\', '_').replace(':', ' -')
     return sanitized.strip()
 
 # Function to remove media folders and sanitize filenames
 def cleanup_media_folders(root_folder):
-    """
-    Find and remove media folders and their subdirectories.
-    Also sanitize filenames by removing consecutive spaces.
-    """
     print(f"\n{'='*80}")
     print(f"Cleaning up media folders and sanitizing filenames in {root_folder}")
     print(f"{'='*80}")
