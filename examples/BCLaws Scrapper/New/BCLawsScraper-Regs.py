@@ -23,24 +23,48 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 CONSOLIDATIONS_DIR = os.path.join(SCRIPT_DIR, "Consolidations")
 REGULATIONS_DIR = os.path.join(CONSOLIDATIONS_DIR, "Regulations")
 
-# Function to remove media folders
+# Function to sanitize filenames
+def sanitize_filename(filename):
+    # Replace consecutive whitespace with a single space
+    sanitized = re.sub(r'\s+', ' ', filename)
+    # Replace other problematic characters
+    sanitized = sanitized.replace('/', '_').replace('\\', '_').replace(':', ' -')
+    return sanitized.strip()
+
+# Function to remove media folders and sanitize filenames
 def cleanup_media_folders(root_folder):
-    """
-    Find and remove media folders and their subdirectories
-    """
     print(f"\n{'='*80}")
-    print(f"Cleaning up media folders in {root_folder}")
+    print(f"Cleaning up media folders and sanitizing filenames in {root_folder}")
     print(f"{'='*80}")
     
     media_folders = []
+    renamed_files = 0
     
-    # Walk through the directory tree to find media folders
+    # Walk through the directory tree to find media folders and files to sanitize
     for dirpath, dirnames, filenames in os.walk(root_folder, topdown=False):
         base_dir_name = os.path.basename(dirpath)
         
         # Track media folders
         if base_dir_name == "media" and dirpath.split(os.path.sep)[-2] not in ("media", "images"):
             media_folders.append(dirpath)
+        
+        # Sanitize filenames
+        for filename in filenames:
+            sanitized_filename = sanitize_filename(filename)
+            # Only rename if the sanitized filename is different
+            if sanitized_filename != filename:
+                old_path = os.path.join(dirpath, filename)
+                new_path = os.path.join(dirpath, sanitized_filename)
+                try:
+                    # Avoid collision by checking if target file exists
+                    if os.path.exists(new_path):
+                        print(f"Cannot rename: {new_path} already exists")
+                        continue
+                    os.rename(old_path, new_path)
+                    print(f"Renamed: {filename} ? {sanitized_filename}")
+                    renamed_files += 1
+                except Exception as e:
+                    print(f"Error renaming {filename}: {e}")
     
     # Remove media folders and their subdirectories
     media_folders_removed = 0
@@ -52,8 +76,25 @@ def cleanup_media_folders(root_folder):
         except Exception as e:
             print(f"Error removing media folder {media_folder}: {e}")
     
-    print(f"Media folder cleanup complete: {media_folders_removed} folders removed")
-    return media_folders_removed
+    print(f"Cleanup complete: {media_folders_removed} media folders removed, {renamed_files} files renamed")
+    return media_folders_removed, renamed_files
+
+# Function to just do cleanup without downloading
+def do_cleanup_only():
+    print("\nPerforming cleanup only (no downloads)")
+    total_media_folders = 0
+    total_renamed_files = 0
+    
+    # Look for existing consolidation folders
+    for item in os.listdir(REGULATIONS_DIR):
+        folder_path = os.path.join(REGULATIONS_DIR, item)
+        if os.path.isdir(folder_path):
+            print(f"\nCleaning up media folders in {item}...")
+            media_folders_removed, renamed_files = cleanup_media_folders(folder_path)
+            total_media_folders += media_folders_removed
+            total_renamed_files += renamed_files
+    
+    print(f"\nCleanup summary: {total_media_folders} media folders and {total_renamed_files} files renamed")
 
 # Fetch and parse the archive page to get all available regulation consolidations
 def get_available_consolidations():
@@ -178,7 +219,7 @@ def process_directory(content_api_base, document_api_base, root_folder, director
             document_url = f"{document_api_base}{doc_id}_multi/xml"
             
             # Create a safe filename
-            safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
+            safe_filename = f"{sanitize_filename(doc_title)}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
             # Download the complete multi-document if it doesn't already exist
@@ -197,7 +238,7 @@ def process_directory(content_api_base, document_api_base, root_folder, director
             dir_title = element.find('CIVIX_DOCUMENT_TITLE').text
             
             # Create safe directory name
-            safe_dir_name = dir_title.replace('/', '_').replace('\\', '_')
+            safe_dir_name = sanitize_filename(dir_title)
             new_physical_path = os.path.join(physical_path, safe_dir_name)
             
             # Construct the new directory path for the API
@@ -224,7 +265,7 @@ def process_directory(content_api_base, document_api_base, root_folder, director
             document_url = f"{document_api_base}{doc_id}/xml"
             
             # Create a safe filename
-            safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
+            safe_filename = f"{sanitize_filename(doc_title)}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
             # Download the file if it doesn't already exist
@@ -237,7 +278,7 @@ def process_consolidation(consol_path, consol_name):
     print(f"{'='*80}")
     
     # Use the full consolidation name for the folder (sanitized for file system)
-    safe_folder_name = consol_name.replace('/', '_').replace('\\', '_').replace(':', '-')
+    safe_folder_name = sanitize_filename(consol_name)
     
     # Set up the URLs for this consolidation
     content_api_base = f"https://www.bclaws.gov.bc.ca/civix/content/{consol_path}/"
@@ -259,21 +300,24 @@ def process_consolidation(consol_path, consol_name):
     
     # Clean up media folders if enabled
     if CLEANUP_MEDIA_FOLDERS:
-        cleanup_media_folders(root_folder)
+        media_folders_removed, renamed_files = cleanup_media_folders(root_folder)
     
     print(f"Completed processing {consol_name}")
 
 # Function to let user select consolidation(s)
 def select_consolidations(consolidations):
     print("\nSelect which consolidation(s) to download:")
-    print("Enter a single number, multiple numbers separated by commas, or 'all' for all consolidations")
-    print("Example: '1' or '1,3,5' or 'all'")
+    print("Enter a single number, multiple numbers separated by commas, 'all' for all consolidations, or 'n' to skip downloads and just do cleanup")
+    print("Example: '1' or '1,3,5' or 'all' or 'n'")
     
     while True:
         selection = input("\nYour selection: ")
         
         if selection.lower() == 'all':
             return consolidations
+        
+        if selection.lower() == 'n':
+            return []
             
         try:
             # Split by commas and convert to integers
@@ -286,7 +330,7 @@ def select_consolidations(consolidations):
             else:
                 print(f"Invalid selection. Please enter numbers between 1 and {len(consolidations)}")
         except ValueError:
-            print("Invalid input. Please enter numbers separated by commas, or 'all'")
+            print("Invalid input. Please enter numbers separated by commas, 'all', or 'n'")
 
 # Start the scraping process
 if __name__ == "__main__":
@@ -297,6 +341,18 @@ if __name__ == "__main__":
     
     # Create the base directory structure
     os.makedirs(REGULATIONS_DIR, exist_ok=True)
+    
+    # Option to skip directly to cleanup
+    if not DOWNLOAD_ALL and CLEANUP_MEDIA_FOLDERS:
+        print("\nOptions:")
+        print("1. Download and process regulation consolidations")
+        print("2. Cleanup only (no downloads)")
+        
+        choice = input("\nSelect option (1 or 2): ")
+        if choice == '2':
+            do_cleanup_only()
+            print("\nCleanup completed")
+            exit()
     
     # For specific URL if no consolidations found
     specific_consolidation = "loo110/loo110"
@@ -326,7 +382,17 @@ if __name__ == "__main__":
     else:
         # Let user select consolidations
         selected_consolidations = select_consolidations(consolidations)
-        print(f"\nProceeding to download {len(selected_consolidations)} selected regulation consolidation(s)")
+        
+        if not selected_consolidations:
+            print("\nNo consolidations selected, proceeding to cleanup only")
+            if CLEANUP_MEDIA_FOLDERS:
+                do_cleanup_only()
+            else:
+                print("Cleanup is disabled. Nothing to do.")
+            print("\nScript completed")
+            exit()
+        else:
+            print(f"\nProceeding to download {len(selected_consolidations)} selected regulation consolidation(s)")
     
     # Process selected consolidations
     for path, name in selected_consolidations:
@@ -334,21 +400,5 @@ if __name__ == "__main__":
     
     if selected_consolidations:
         print("\nAll selected regulation consolidations have been processed!")
-        
-    # Option to just clean up media folders without downloading
-    if not selected_consolidations and CLEANUP_MEDIA_FOLDERS:
-        choice = input("Would you like to clean up media folders in existing files without downloading? (y/n): ")
-        if choice.lower() == 'y':
-            total_media_folders = 0
-            
-            # Look for existing consolidation folders
-            for item in os.listdir(REGULATIONS_DIR):
-                folder_path = os.path.join(REGULATIONS_DIR, item)
-                if os.path.isdir(folder_path):
-                    print(f"\nCleaning up media folders in {item}...")
-                    media_folders = cleanup_media_folders(folder_path)
-                    total_media_folders += media_folders
-            
-            print(f"\nCleanup summary: {total_media_folders} media folders and their subdirectories removed")
 
     print("\nScraping completed")
