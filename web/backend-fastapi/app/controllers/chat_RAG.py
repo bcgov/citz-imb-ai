@@ -28,6 +28,7 @@ async def chat(chat_request: ChatRequest):
     rag_fn = rag.get_full_rag()
     if kg is None:
         kg = neo4j.neo4j()
+        print(kg)
     if tru is None:
         tru = trulens.connect_trulens()
     tru_rag = trulens.tru_rag(rag_fn)
