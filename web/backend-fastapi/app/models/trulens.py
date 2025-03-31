@@ -1,7 +1,5 @@
 import psycopg2
 import os
-#from trulens_eval import Tru
-#from trulens_eval import TruCustomApp
 from trulens.apps.app import instrument
 from trulens.core import TruSession
 from trulens.core.database.connector.default import DefaultDBConnector
