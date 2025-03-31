@@ -23,11 +23,9 @@ async def submit_question(prompt: str = Form(...)):
     if tru is None:
         tru = trulens.connect_trulens()
     tru_rag = trulens.tru_rag(rag_fn)
-    print(tru_rag)
     with tru_rag as recording:
         responses = rag_fn.query(prompt, None, embeddings, kg)
     record = recording.get()
-    print(responses)
     # Process question prompt
     return {"responses": responses, "recording": record.record_id}
 
