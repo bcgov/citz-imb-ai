@@ -1,12 +1,32 @@
 from fastapi import APIRouter, Form
-from app.models import trulens
-import json
+from app.models import trulens, rag, neo4j
+from langchain_community.embeddings import HuggingFaceEmbeddings
 import logging
 
 router = APIRouter()
 
 kg = None
 tru = None
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
+
+@router.post("/submit/")
+async def submit_question(prompt: str = Form(...)):
+    # Add appropriate imports
+
+    # Global variables initialization
+    global kg, tru, APP_ID, embeddings
+    rag_fn = rag.get_top_k()
+    if kg is None:
+        kg = neo4j.neo4j()
+    if tru is None:
+        tru = trulens.connect_trulens()
+    tru_rag = trulens.tru_rag(rag_fn)
+    with tru_rag as recording:
+        responses = rag_fn.query(prompt, None, embeddings, kg)
+    record = recording.get()
+    # Process question prompt
+    return {"responses": responses, "recording": record.record_id}
 
 
 @router.post("/feedback/")
@@ -23,13 +43,7 @@ async def feedback(
         tru = trulens.connect_trulens()
 
     # Process feedback
-    rows = process_feedback(
-        index,
-        feedback,
-        trulens_id,
-        recording_id,
-        bulk,
-    )
+    rows = trulens.process_feedback(tru, index, feedback, recording_id, bulk)
     if rows:
         return {"status": True, "rows": rows}
     else:
@@ -46,7 +60,6 @@ async def feedbackrag(
     global tru
     if tru is None:
         tru = trulens.connect_trulens()
-
     try:
         rows = trulens.process_rag_feedback(
             feedback, trulens_id, recording_id, tru, comment
@@ -81,31 +94,3 @@ async def fetch_all_feedback(trulens_id: str = "unknown"):
         return {"status": True, "rows": rows}
     else:
         return {"status": False}
-
-
-def process_feedback(index, feedback, trulens_id, record_id=None, bulk=False):
-    if bulk:
-        multi_result = {"bulk": []}
-        feedback = feedback.split(",")
-        for feedback_value in feedback:
-            multi_result["bulk"].append(trulens.get_feedback_value(feedback_value))
-        print(multi_result)
-        multi_result = json.dumps(multi_result)
-    else:
-        feedbackvalue = trulens.get_feedback_value(feedback)
-        multi_result = json.dumps({index: [feedbackvalue]})
-
-    print(multi_result)
-
-    tru_feedback = tru.add_feedback(
-        name="Human Feedack",
-        record_id=record_id,
-        app_id=trulens_id,
-        result=0,
-        multi_result=multi_result,
-    )
-    rows = trulens.fetch_human_feedback(record_id)
-    if rows:
-        return rows
-    else:
-        return None

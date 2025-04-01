@@ -42,12 +42,24 @@ All the example files should be present when you launch the notebook. Try runnin
 1. Open terminal on jupyter notebook.
 1. Run `pip install -r requirement.txt`.
 1. Run python s3.py to download acts. (Make sure you are connected to BC Gov VPN.)
+1. To initialize the TruLens database, first create a database named `trulens`. Then, run the upgrade script located at [trulens_upgrade.ipynb](examples/Analytics/trulens_upgrade.ipynb) **before** launching the web application. TruLens is essential for capturing all evaluation data, and the web application will not function properly without this setup.
 
 You are now set to use existing jupyter notebooks.
 
 Note: Add future dependences in `requirement.txt` so that we can keep track of the them and avoid code breakage
 
 For all the example notebooks click here: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/examples)
+
+### Populating Your Neo4j Data
+
+> ⚠️ **Prerequisite**  
+This assumes you already have Jupyter Notebook, Airflow, and Neo4j set up.  
+If not, please follow the instructions above to spin up all required containers before proceeding.
+
+📄 **Next Step:**  
+Refer to [`NEO4J data generation steps`](./documentation/indexing/readme.md) for a detailed breakdown.
+
+---
 
 ## Documentation
 
