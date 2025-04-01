@@ -23,11 +23,9 @@ async def submit_question(prompt: str = Form(...)):
     if tru is None:
         tru = trulens.connect_trulens()
     tru_rag = trulens.tru_rag(rag_fn)
-    print(tru_rag)
     with tru_rag as recording:
         responses = rag_fn.query(prompt, None, embeddings, kg)
     record = recording.get()
-    print(responses)
     # Process question prompt
     return {"responses": responses, "recording": record.record_id}
 
@@ -47,7 +45,7 @@ async def feedback(
         tru = trulens.connect_trulens()
 
     # Process feedback
-    rows = process_feedback(index, feedback, recording_id, bulk)
+    rows = trulens.process_feedback(tru, index, feedback, recording_id, bulk)
     if rows:
         return {"status": True, "rows": rows}
     else:
@@ -62,7 +60,6 @@ async def feedbackrag(
     global tru
     if tru is None:
         tru = trulens.connect_trulens()
-
     try:
         rows = trulens.process_rag_feedback(feedback, recording_id, tru, comment)
         if rows:
@@ -98,31 +95,3 @@ async def fetch_all_feedback():
         return {"status": True, "rows": rows}
     else:
         return {"status": False}
-
-
-def process_feedback(index, feedback, record_id=None, bulk=False):
-    if bulk:
-        multi_result = {"bulk": []}
-        feedback = feedback.split(",")
-        for feedback_value in feedback:
-            multi_result["bulk"].append(trulens.get_feedback_value(feedback_value))
-        print(multi_result)
-        multi_result = json.dumps(multi_result)
-    else:
-        feedbackvalue = trulens.get_feedback_value(feedback)
-        multi_result = json.dumps({index: [feedbackvalue]})
-
-    print(multi_result)
-
-    tru_feedback = tru.add_feedback(
-        name="Human Feedack",
-        record_id=record_id,
-        app_id=trulens.APP_ID,
-        result=0,
-        multi_result=multi_result,
-    )
-    rows = trulens.fetch_human_feedback(record_id)
-    if rows:
-        return rows
-    else:
-        return None

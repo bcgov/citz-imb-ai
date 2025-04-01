@@ -42,6 +42,7 @@ All the example files should be present when you launch the notebook. Try runnin
 1. Open terminal on jupyter notebook.
 1. Run `pip install -r requirement.txt`.
 1. Run python s3.py to download acts. (Make sure you are connected to BC Gov VPN.)
+1. To initialize the TruLens database, first create a database named `trulens`. Then, run the upgrade script located at [trulens_upgrade.ipynb](examples/Analytics/trulens_upgrade.ipynb) **before** launching the web application. TruLens is essential for capturing all evaluation data, and the web application will not function properly without this setup.
 
 You are now set to use existing jupyter notebooks.
 
