@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: simple
+    database: "{{ env_var('TRULENS_DB', 'trulens') }}"
+    schema: public
+    tables:
+      - name: trulens_records
+      - name: trulens_feedbacks

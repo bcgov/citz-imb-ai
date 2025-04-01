@@ -33,6 +33,10 @@ models:
       +schema: trulens
       trulens_normalize:
         +materialized: materialized_view
+    trulens_1_4_7:
+      +schema: trulens
+      trulens_1_4_7_normalized:
+      +materialized: materialized_view
     trulens_modular:
       +schema: trulens_modular
       trulens_normalize:
