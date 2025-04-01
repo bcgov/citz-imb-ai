@@ -43,7 +43,9 @@ async def feedback(
         tru = trulens.connect_trulens()
 
     # Process feedback
-    rows = trulens.process_feedback(tru, index, feedback, recording_id, bulk)
+    rows = trulens.process_feedback(
+        tru, trulens_id, index, feedback, recording_id, bulk
+    )
     if rows:
         return {"status": True, "rows": rows}
     else:
