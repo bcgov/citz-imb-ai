@@ -30,7 +30,7 @@ default_args = {
 }
 
 dag = DAG(
-    "Trulens_Analytics_ETL",
+    "trulens_analytics_etl_Legacy",
     default_args=default_args,
     description="A DAG to initialize DBT with Vault secrets",
     schedule_interval="0 0 * * *",
@@ -59,7 +59,7 @@ run_dbt = BashOperator(
     source /opt/airflow/dbt_venv/bin/activate
     export HOME=/home/airflow
     dbt deps --project-dir /opt/airflow/dbt/analytics
-    dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/analytics --select trulens_1_4_7 --profile analytics_v2
+    dbt run --profiles-dir /home/airflow/.dbt --project-dir /opt/airflow/dbt/analytics --select trulens
     deactivate
     """,
     env={
