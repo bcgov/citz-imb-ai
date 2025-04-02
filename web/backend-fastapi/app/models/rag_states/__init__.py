@@ -3,7 +3,6 @@ from .v2_UpdatedChunks import UpdatedChunks
 from .v3_AtomicIndexing import AtomicIndexing
 from .v4_ImagesAndChunks import ImagesAndChunks
 from .State import StateType  # Keep for export purposes
-from collections import defaultdict
 
 # Include active states in this state_list
 active_states = [UpdatedChunks, AtomicIndexing, ImagesAndChunks]
