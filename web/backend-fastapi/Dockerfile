@@ -4,7 +4,8 @@ FROM python:3.11-slim
 RUN apt-get update && apt-get install -y dos2unix
 RUN apt-get install -y procps
 RUN apt-get install -y vim
-
+RUN apt-get install -y gcc
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /backend
 
 # Copy requirements definition to container

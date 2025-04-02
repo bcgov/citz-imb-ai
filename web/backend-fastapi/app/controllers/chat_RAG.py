@@ -1,29 +1,12 @@
 from collections import defaultdict
 from fastapi import APIRouter, Body, HTTPException
 from app.models import neo4j, trulens, rag
-from app.rag_states import ImagesAndChunks, AtomicIndexing, UpdatedChunks, StateType
+from app.models.rag_states import get_state_map, StateType, default_state
 from ..common.chat_objects import ChatRequest
 
 router = APIRouter()
 kg = None
 tru = None
-
-# Include active states in this state_list
-state_list = [UpdatedChunks, AtomicIndexing, ImagesAndChunks]
-state_map = defaultdict()
-# Each state must be initialized and added to the state_map
-for state in state_list:
-    constructed_state = state()
-    state_map.update(
-        {
-            constructed_state.tag: {
-                "state": constructed_state,
-                "type": constructed_state.type,
-                "trulens_id": constructed_state.trulens_id,
-                "description": constructed_state.description,
-            }
-        }
-    )
 
 
 @router.post("/chat/")
@@ -40,9 +23,9 @@ async def chat(chat_request: ChatRequest = Body(ChatRequest)):
     if tru is None:
         tru = trulens.connect_trulens()
 
-    state_entry = state_map.get(
-        chat_request.key, state_map[UpdatedChunks().tag]  # Default to UpdatedChunks
-    )
+    # Determine which state to use
+    state_map = get_state_map()
+    state_entry = state_map.get(chat_request.key, default_state)
     if state_entry is None:
         raise HTTPException(status_code=404, detail="RAG state not found")
     state = state_entry.get("state")

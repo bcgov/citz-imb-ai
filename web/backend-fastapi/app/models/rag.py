@@ -1,4 +1,4 @@
-from trulens_eval.tru_custom_app import instrument
+from trulens.apps.app import instrument
 from app.models import bedrock
 import json
 from typing import List

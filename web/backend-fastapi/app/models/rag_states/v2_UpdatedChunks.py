@@ -1,41 +1,26 @@
 from typing import List
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from .State import State
-from ..models.neo4j import neo4j_vector_search
-from ..common.chat_objects import ChatHistory
+from ..neo4j import neo4j_vector_search
+from ...common.chat_objects import ChatHistory
 
 
-class ImagesAndChunks(State):
-    __tag = "v4ImagesAndChunks"  # Don't update this
+class UpdatedChunks(State):
+    __tag = "v2UpdatedChunks"  # Don't update this
     __version = "1"  # Update this if making changes
     __description = """
-      Uses the same indexing method as UpdatedChunks, but also includes images in the search.
+      A version of data indexing where each Section is broken into chunks based on a fixed size.
+      Excels at finding broad context for your query.
       """
 
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score
         OPTIONAL MATCH (node)-[:REFERENCES]->(refNode)
-        RETURN score, 
-                node.ActId AS ActId,  
-                node.RegId as Regulations, 
-                node.sectionId AS sectionId, 
-                node.sectionName AS sectionName, 
-                node.url AS url,
-                node.file_name AS file_name,
-                node.folder AS folder,
-                node.section AS section,
-                node.subfolder AS subfolder,
-                node.type AS type,
-                node.text AS text,
-                collect({
-                    refSectionId: refNode.sectionId, 
-                    refSectionName: refNode.sectionName, 
-                    refActId: refNode.ActId, 
-                    refText: refNode.text
-                }) AS references
+        RETURN score, node.ActId,  node.RegId as Regulations, node.sectionId, node.sectionName, node.url,  node.text AS text,
+        collect({refSectionId: refNode.sectionId, refSectionName: refNode.sectionName, refActId: refNode.ActId, refText: refNode.text}) AS references
         ORDER BY score DESC
     """
-    __vector_index = "UpdatedChunksAndImagesv4"
+    __vector_index = "Acts_Updatedchunks"
     __embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     def __init__(self):

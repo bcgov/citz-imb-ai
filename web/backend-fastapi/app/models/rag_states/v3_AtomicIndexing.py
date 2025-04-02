@@ -2,8 +2,8 @@ import json
 from typing import List
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from .State import State
-from ..models.neo4j import neo4j_vector_search
-from ..common.chat_objects import ChatHistory
+from ..neo4j import neo4j_vector_search
+from ...common.chat_objects import ChatHistory
 
 
 class AtomicIndexing(State):
