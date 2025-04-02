@@ -4,11 +4,28 @@ from concurrent.futures import ThreadPoolExecutor
 from neo4j_functions import find_node, create_is_edge, get_updated_chunks, neo4j
 
 
+def has_is_edge(element_id):
+    nodes = neo4j.query(
+        f"""
+          MATCH (n:UpdatedChunk)-[:IS]-() 
+          WHERE elementId(n) = $element_id
+          RETURN n;
+        """,
+        {"element_id": element_id},
+    )
+    if len(nodes) > 0:
+        return True
+    return False
+
+
 def connect_updated_chunks(act_id):
     # Get all desired chunks
     chunks = get_updated_chunks(act_id)
 
     for chunk in chunks:
+        # If chunk already has :IS edge, don't proceed
+        if has_is_edge(chunk["elementId"]):
+            continue
         # Extract useful properties
         chunk_id = chunk.get("elementId")
         properties = chunk.get("properties")
@@ -36,12 +53,14 @@ def connect_updated_chunks(act_id):
 act_names = neo4j.query(
     """
       MATCH (n:UpdatedChunk)
+      WHERE NOT EXISTS {(n)-[:IS]-()}
       RETURN COLLECT(DISTINCT n.ActId) as data
     """
 )
 reg_names = neo4j.query(
     """
       MATCH (n:UpdatedChunk)
+      WHERE NOT EXISTS {(n)-[:IS]-()}
       RETURN COLLECT(DISTINCT n.RegId) as data
     """
 )
