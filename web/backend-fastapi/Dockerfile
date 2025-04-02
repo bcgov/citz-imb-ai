@@ -4,7 +4,10 @@ FROM python:3.11-slim
 RUN apt-get update && apt-get install -y dos2unix
 RUN apt-get install -y procps
 RUN apt-get install -y vim
-RUN apt-get install -y gcc
+# To allow for python wheels installs (C extensions)
+RUN apt-get install -y python3-dev
+RUN apt-get install -y gcc 
+# Removes cached package files and deletes package index files
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /backend
 
