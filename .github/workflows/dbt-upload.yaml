@@ -45,7 +45,7 @@ jobs:
     # Get Generated Pod Name
     - name: Get Pod Name
       run: |
-        POD_NAME=$(oc get pods -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} -l role=airflow-webserver --no-headers -o custom-columns=":metadata.name")
+        POD_NAME=$(oc get pods -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} -l role=airflow-scheduler --no-headers -o custom-columns=":metadata.name")
         echo "POD_NAME=$POD_NAME" >> $GITHUB_ENV
 
     # Sync DBTs to OCP Airflow volume
