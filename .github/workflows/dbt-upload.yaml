@@ -50,8 +50,8 @@ jobs:
 
     # Sync DBTs to OCP Airflow volume
     - name: Sync DBTs to OCP Volume
+      continue-on-error: true
       run: |
-
         oc rsync ./mlops/orchestration/dbt/ ${{ env.POD_NAME }}:/opt/airflow/dbt -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} --delete
 
     - name: Verify DBT transfer
