@@ -1,3 +1,6 @@
+{# At the top of your file, use a safer approach to get max_calls #}
+{% set max_calls = 5 %}  -- Default to 5 calls
+
 WITH raw_data AS (
     SELECT 
         record_id,
@@ -5,10 +8,18 @@ WITH raw_data AS (
         input,
         output,
         ts,
-        record_json::json AS record_json
+        record_json::jsonb AS record_json
     FROM 
         {{ source('simple', 'trulens_records') }}  -- Use dbt's source function
-), 
+),
+
+-- Extract all unique performance keys
+performance_keys AS (
+    SELECT DISTINCT jsonb_object_keys(record_json->'perf') AS perf_key
+    FROM raw_data
+    WHERE record_json->'perf' IS NOT NULL
+),
+
 parsed_data AS (
     SELECT 
         record_id,
@@ -21,8 +32,10 @@ parsed_data AS (
         (record_json->'perf'->>'start_time')::timestamp AS start_time,
         (record_json->'perf'->>'end_time')::timestamp AS end_time,
         -- Calculate latency in seconds
-        EXTRACT(EPOCH FROM ((record_json->'perf'->>'end_time')::timestamp - (record_json->'perf'->>'start_time')::timestamp)) AS latency_in_seconds, 
-        {{ extract_performance('record_json', 4) }}  -- Replace static SQL with dynamic macro call
+        EXTRACT(EPOCH FROM ((record_json->'perf'->>'end_time')::timestamp - (record_json->'perf'->>'start_time')::timestamp)) AS latency, 
+
+        -- Fully dynamic performance extraction
+        {{ extract_dynamic_performance('record_json', max_calls) }}
     FROM 
         raw_data
 ),
