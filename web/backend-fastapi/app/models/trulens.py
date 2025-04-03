@@ -7,7 +7,6 @@ from trulens.core.schema.feedback import FeedbackCall
 from trulens.apps.app import TruApp
 import json
 
-APP_ID = "TopK_ReRank_v1"
 APP_VERSION = "3"
 
 
@@ -18,8 +17,8 @@ def connect_trulens():
     TRULENS_PORT = os.getenv("TRULENS_PORT")
     TRULENS_HOST = os.getenv("TRULENS_HOST")
     TRULENS_CONNECTION_STRING = f"postgresql+psycopg2://{TRULENS_USER}:{TRULENS_PASSWORD}@{TRULENS_HOST}:{TRULENS_PORT}/{TRULENS_DB}"
-    connector = DefaultDBConnector(database_url = TRULENS_CONNECTION_STRING)
-    session = TruSession(connector = connector)
+    connector = DefaultDBConnector(database_url=TRULENS_CONNECTION_STRING)
+    session = TruSession(connector=connector)
     return session
 
 
@@ -86,7 +85,7 @@ def get_feedback_value(feedback):
         return 0
 
 
-def process_feedback(tru, index, feedback, record_id=None, bulk=False):
+def process_feedback(tru, trulens_id, index, feedback, record_id=None, bulk=False):
     if bulk:
         multi_result = {"bulk": []}
         feedback = feedback.split(",")
@@ -100,7 +99,7 @@ def process_feedback(tru, index, feedback, record_id=None, bulk=False):
     tru_feedback = tru.add_feedback(
         name="Human Feedack",
         record_id=record_id,
-        app_id=APP_ID,
+        app_id=trulens_id,
         result=0,
         multi_result=multi_result,
     )
@@ -111,7 +110,7 @@ def process_feedback(tru, index, feedback, record_id=None, bulk=False):
         return None
 
 
-def process_rag_feedback(feedback, record_id=None, tru=None, comment=None):
+def process_rag_feedback(feedback, trulens_id, record_id=None, tru=None, comment=None):
     feedback_value = int(get_feedback_value(feedback))
 
     if comment is None:
@@ -123,28 +122,28 @@ def process_rag_feedback(feedback, record_id=None, tru=None, comment=None):
     tru.add_feedback(
         name="Human Feedback",
         record_id=record_id,
-        app_id=APP_ID,
+        app_id=trulens_id,
         result=feedback_value,
-        calls=calls, 
+        calls=calls,
     )
     print(tru)
-    
+
     rows = fetch_human_feedback(record_id)
     return rows if rows else None
 
 
-def tru_rag(rag):
-    return TruApp(rag, app_id=APP_ID, app_version=APP_VERSION)
+def tru_rag(rag, trulens_id):
+    return TruApp(rag, app_id=trulens_id, app_version=APP_VERSION)
 
 
-def fetch_all_feedback():
+def fetch_all_feedback(trulens_id):
     conn = tru_connect()
     cur = conn.cursor()  # creating a cursor
     cur.execute(
         """SELECT R.input, R.record_json as record_json, F.multi_result, F.result, R.app_id result FROM public.records R 
     LEFT Join feedbacks F ON F.record_id = R.record_id WHERE
     R.app_id = %s""",
-        (APP_ID,),
+        (trulens_id),
     )
     rows = cur.fetchall()
     return rows

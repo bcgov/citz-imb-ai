@@ -251,7 +251,7 @@ services:
     environment:
       TRULENS_USER: ${TRULENS_USER:-postgres}
       TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
-      TRULENS_DB: ${TRULENS_DB:-postgres}
+      TRULENS_DB: ${TRULENS_DB:-trulens}
       TRULENS_PORT: ${TRULENS_PORT:-5432}
       TRULENS_HOST: trulens
       NEO4J_USERNAME: ${NEO4J_USER:-neo4j}
