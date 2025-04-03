@@ -51,8 +51,14 @@ jobs:
     # Sync DAGs to OCP Airflow volume
     - name: Sync DAGs to OCP Volume
       run: |
-
         oc rsync ./mlops/orchestration/airflow/dags/ ${{ env.POD_NAME }}:/opt/airflow/dags -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} --delete
+        EXIT_CODE=$?
+        if [ $EXIT_CODE -eq 23 ]; then
+          echo "Ignoring `rsync` permission error"
+          exit 0
+        else
+          exit $EXIT_CODE
+        fi
 
     - name: Verify DAGs transfer
       run: |
