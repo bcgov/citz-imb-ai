@@ -33,3 +33,21 @@ def get_state_map():
             }
         )
     return state_map
+
+
+def get_states_for_frontend():
+    """
+    Provides a list of states to the frontend to populate the dropdown.
+    """
+    list = []
+    states = get_state_map()
+    for entry in states.values():
+        state = entry.get("state")
+        list.append(
+            {
+                "key": state.tag,
+                "description": state.description,
+                "trulens_id": state.trulens_id,
+            }
+        )
+    return list
