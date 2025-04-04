@@ -1,7 +1,12 @@
 from collections import defaultdict
 from fastapi import APIRouter, Body, HTTPException
 from app.models import neo4j, trulens, rag
-from app.models.rag_states import get_state_map, StateType, default_state
+from app.models.rag_states import (
+    get_state_map,
+    StateType,
+    default_state,
+    get_states_for_frontend,
+)
 from ..common.chat_objects import ChatRequest
 
 router = APIRouter()
@@ -46,3 +51,8 @@ async def chat(chat_request: ChatRequest = Body(ChatRequest)):
             responses = []
     record = recording.get()
     return {"responses": responses, "recording": record.record_id}
+
+
+@router.get("/chat/states/")
+async def get_states():
+    return get_states_for_frontend()
