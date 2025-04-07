@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 
-import runChat from '@/api/chat';
+import { runChat } from '@/api/chat';
 import sendFeedback from '@/api/feedback';
 import {
   ChatHistory,
@@ -111,7 +111,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       const chatHistory = JSON.parse(
         sessionStorage.getItem('chatHistory') || '[]',
       );
-      const response = await runChat(currentPrompt, chatHistory);
+      const ragStateKey = sessionStorage.getItem('ragStateKey');
+      const response = await runChat(currentPrompt, chatHistory, ragStateKey);
 
       // Set recording hash for feedback
       setRecordingHash(response.recordingHash);

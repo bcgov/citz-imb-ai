@@ -19,7 +19,8 @@
   // Common styles for sidebar elements
   .sidebar-header,
   .new-chat,
-  .bottom {
+  .bottom,
+  .options {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -101,11 +102,25 @@
     }
   }
 
+  .lower-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
+  .options {
+    margin: 0 auto;
+    margin-top: auto;
+  }
+
   // Bottom section (logout button) styles
   .bottom {
-    margin-top: auto;
+    margin: 0 auto;
     margin-bottom: 30px;
-    width: 100%;
   }
 
   // Common image styles
@@ -121,10 +136,36 @@
     white-space: nowrap;
   }
 
+  // Styles for RAG options
+  .rag-state-option {
+    display: flex;
+    flex-direction: row;
+
+    .rag-state-option-text {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+      label {
+        p {
+          white-space: normal; /* Allow text to wrap */
+          word-wrap: break-word; /* Break long words if necessary */
+          overflow-wrap: break-word; /* Modern equivalent of word-wrap */
+          max-width: 100%; /* Ensure the text does not exceed the container width */
+        }
+      }
+    }
+  }
+
   // Expanded state styles
   &.expanded {
     .new-chat p,
     .bottom p,
+    .options p,
     .recent-title,
     .recent-entry p {
       max-width: 100%;
@@ -136,7 +177,8 @@
 // Styles for collapsed sidebar elements
 .sidebar.collapsed .sidebar-header,
 .sidebar.collapsed .new-chat,
-.sidebar.collapsed .bottom {
+.sidebar.collapsed .bottom,
+.sidebar.collapsed .options {
   position: relative;
 
   // Tooltip styles for collapsed elements
