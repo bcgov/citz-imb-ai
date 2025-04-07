@@ -151,7 +151,7 @@ const Sidebar = () => {
           title='Options'
           description={
             <>
-              <h2>Index Method</h2>
+              <h2>Select RAG State</h2>
               {activeStates.length ? (
                 activeStates.map((state) => (
                   <div className='rag-state-option' key={state.key}>
@@ -174,13 +174,14 @@ const Sidebar = () => {
                   </div>
                 ))
               ) : (
-                <p>No index methods found.</p>
+                <p>No RAG options found.</p>
               )}
             </>
           }
           option1={{
             text: 'Save',
             onClick: () => {
+              // Save selected option to app context and session storage
               const selectedOption = document.querySelector(
                 'input[name="index_method"]:checked',
               ) as HTMLInputElement;
