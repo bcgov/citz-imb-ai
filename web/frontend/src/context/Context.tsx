@@ -4,6 +4,7 @@ import { runChat } from '@/api/chat';
 import sendFeedback from '@/api/feedback';
 import {
   ChatHistory,
+  ChatState,
   ContextProps,
   ContextProviderProps,
   Message,
@@ -41,6 +42,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [generationComplete, setGenerationComplete] = useState<boolean>(false);
   const [pendingMessage, setPendingMessage] = useState<string | null>(null);
   const [recordingHash, setRecordingHash] = useState<string>('');
+  const [chatState, setChatState] = useState<ChatState | null>(null);
   const [errorState, setErrorState] = useState<{
     hasError: boolean;
     errorMessage: string;
@@ -63,7 +65,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     comment?: string,
   ) => {
     try {
-      await sendFeedback(feedbackType, recordingHash, comment);
+      await sendFeedback(feedbackType, recordingHash, comment, chatState?.trulens_id);
     } catch (error) {
       console.error('Error sending feedback:', error);
     }
@@ -111,7 +113,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       const chatHistory = JSON.parse(
         sessionStorage.getItem('chatHistory') || '[]',
       );
-      const ragStateKey = sessionStorage.getItem('ragStateKey');
+      const ragStateKey = chatState?.key || null;
       const response = await runChat(currentPrompt, chatHistory, ragStateKey);
 
       // Set recording hash for feedback
@@ -289,6 +291,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setIsRegenerating,
     pendingMessage,
     setPendingMessage,
+    chatState,
+    setChatState
   };
 
   // Render the Context Provider with the context value

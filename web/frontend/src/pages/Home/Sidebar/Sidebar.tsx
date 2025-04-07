@@ -10,19 +10,6 @@ import './Sidebar.scss';
 
 // Sidebar component
 const Sidebar = () => {
-  // State for sidebar collapse and modal visibility
-  const [isCollapsed] = useState(true);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
-
-  // State control for RAG state options
-  const [activeStates, setActiveStates] = useState<ChatState[]>([]);
-  const currentState =
-    sessionStorage.getItem('ragStateKey') || activeStates[0]?.key;
-  const [selectedState, setSelectedState] = useState<string | null>(
-    currentState,
-  );
-
   // Use context for global state management
   const context = useContext(Context);
 
@@ -30,6 +17,19 @@ const Sidebar = () => {
   if (!context) {
     throw new Error('Sidebar must be used within a ContextProvider');
   }
+
+  // State for sidebar collapse and modal visibility
+  const [isCollapsed] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+
+  // State control for RAG state options
+  const [activeStates, setActiveStates] = useState<ChatState[]>([]);
+  const defaultState =
+    sessionStorage.getItem('ragStateKey') || activeStates[0]?.key;
+  const [selectedState, setSelectedState] = useState<string | null>(
+    defaultState,
+  );
 
   // Destructure context values
   const {
@@ -53,11 +53,23 @@ const Sidebar = () => {
       .then((data) => setActiveStates(data))
       .catch((e) => console.warn(`Active RAG states not found: ${e}`));
     if (activeStates.length) {
-      if (!currentState) {
+      const setDefaultState = () => {
+        context.setChatState(activeStates.at(0)!);
         setSelectedState(activeStates.at(0)!.key);
         sessionStorage.setItem('ragStateKey', activeStates.at(0)!.key);
+      };
+      if (!defaultState) {
+        setDefaultState();
       } else {
-        setSelectedState(currentState);
+        const foundState = activeStates.find(
+          (state) => state.key === defaultState,
+        );
+        if (foundState) {
+          context.setChatState(foundState);
+          setSelectedState(foundState.key);
+        } else {
+          setDefaultState();
+        }
       }
     }
   }, []);
@@ -149,7 +161,9 @@ const Sidebar = () => {
                       name='index_method'
                       value={state.key}
                       checked={state.key === selectedState}
-                      onChange={() => setSelectedState(state.key)}
+                      onChange={() => {
+                        setSelectedState(state.key);
+                      }}
                     />
                     <div className='rag-state-option-text'>
                       <label htmlFor={state.key}>
@@ -170,8 +184,14 @@ const Sidebar = () => {
               const selectedOption = document.querySelector(
                 'input[name="index_method"]:checked',
               ) as HTMLInputElement;
-              if (selectedOption)
+              if (selectedOption) {
                 sessionStorage.setItem('ragStateKey', selectedOption.value);
+                context.setChatState(
+                  activeStates.find(
+                    (state) => state.key === selectedOption.value,
+                  )!,
+                );
+              }
               setIsOptionsOpen(false);
             },
           }}

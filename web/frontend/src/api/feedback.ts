@@ -5,10 +5,12 @@ const sendFeedback = async (
   feedbackType: userFeedbackType,
   recordingHash: string,
   comment?: string,
+  trulensId?: string,
 ): Promise<string> => {
   const formData = new FormData();
   formData.append('feedback', feedbackType);
   formData.append('recording_id', recordingHash);
+  formData.append('trulens_id', trulensId || ''); // Use empty string if trulensId is undefined
   if (comment) {
     formData.append('comment', comment);
   }
