@@ -47,8 +47,16 @@ feedback_data AS (
         {{ source('simple', 'trulens_feedbacks') }}  -- Join feedbacks table
     GROUP BY 
         record_id  -- Group by record_id to aggregate feedbacks
+),
+reasons_extraction AS (
+    SELECT
+        record_id,
+        array_agg(call_element->'meta'->>'reason') FILTER (WHERE call_element->'meta'->>'reason' IS NOT NULL) AS reason_comments
+    FROM
+        {{ source('simple', 'trulens_feedbacks') }},
+        jsonb_array_elements(calls_json::jsonb->'calls') AS call_element
+    GROUP BY record_id
 )
-
 -- Final SELECT statement to retrieve data from the last CTE
 -- SELECT *
 -- FROM parsed_data
@@ -56,9 +64,13 @@ feedback_data AS (
 -- Final join to merge parsed_data with feedback_data based on record_id hash
 SELECT 
     pd.*,
-    fb.result  -- Include feedback details
+    fb.result,  -- Include feedback details
+    re.reason_comments -- Include extracted reasons
 FROM 
     parsed_data pd
 LEFT JOIN 
     feedback_data fb
     ON pd.record_id = fb.record_id
+LEFT JOIN
+    reasons_extraction re
+    ON pd.record_id = re.record_id
