@@ -1,10 +1,14 @@
 version: 2
-
 sources:
-  - name: simple
+  - name: trulens
     database: "trulens"
     schema: public
     tables:
       - name: trulens_records
       - name: trulens_feedbacks
-      - name: trulens_apps
+
+  - name: frontend
+    database: "trulens"
+    schema: frontend
+    tables:
+      - name: record_id_clicks
