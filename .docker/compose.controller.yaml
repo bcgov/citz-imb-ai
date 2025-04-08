@@ -199,7 +199,6 @@ services:
       - PASSWORD=${NEO4J_PASSWORD:-12345678}
       - DB=${NEO4J_DB:-bclaws}
       - NEO4J_AUTH=none
-      - NEO4JLABS_PLUGINS=["apoc", "graph-data-science"]
       - NEO4J_PLUGINS=["apoc", "graph-data-science"]
       - NEO4J_server_config_strict__validation_enabled=false
     volumes:
