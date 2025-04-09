@@ -1,9 +1,10 @@
-import { ApiResponse, ChatHistory } from '@/types';
+import { ApiResponse, ChatHistory, ChatState } from '@/types';
 
 // Function to run a chat interaction with the API
-const runChat = async (
+export const runChat = async (
   _prompt: string,
   chatHistory: ChatHistory[],
+  ragStateKey: string | null,
 ): Promise<{ response: ApiResponse; recordingHash: string }> => {
   // Send a POST request to the chat endpoint
   const response = await fetch('/api/chat/', {
@@ -15,6 +16,7 @@ const runChat = async (
     body: JSON.stringify({
       prompt: _prompt,
       chatHistory: chatHistory,
+      key: ragStateKey
     }),
   });
 
@@ -34,4 +36,25 @@ const runChat = async (
   };
 };
 
-export default runChat;
+/**
+ * Function to retrieve active RAG states from the API.
+ * @returns {Promise<ChatState[]>} - Returns a promise that resolves to an array of ChatState objects.
+ */
+export const getChatStates = async (): Promise<ChatState[]> => {
+  const response = await fetch('/api/chat/states/', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
+    },
+  });
+
+  if (!response.ok) {
+    // Return an empty array if the response is not successful. 
+    // API will default if no states are found, so frontend should handle case where no states are returned.
+    return []; 
+  }
+  const data = await response.json();
+
+  return data as ChatState[];
+}

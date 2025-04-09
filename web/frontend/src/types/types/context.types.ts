@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Message } from './chat.types';
+import { ChatState, Message } from './chat.types';
 import { userFeedbackType } from './feedback.types';
 
 export interface ContextProps {
@@ -34,6 +34,8 @@ export interface ContextProps {
   setIsRegenerating: React.Dispatch<React.SetStateAction<boolean>>;
   pendingMessage: string | null;
   setPendingMessage: React.Dispatch<React.SetStateAction<string | null>>;
+  chatState: ChatState | null;
+  setChatState: React.Dispatch<React.SetStateAction<ChatState | null>>;
 }
 
 export interface ContextProviderProps {
