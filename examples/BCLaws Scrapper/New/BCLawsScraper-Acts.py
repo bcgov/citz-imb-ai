@@ -23,22 +23,32 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 CONSOLIDATIONS_DIR = os.path.join(SCRIPT_DIR, "Consolidations")
 ACTS_DIR = os.path.join(CONSOLIDATIONS_DIR, "Acts")
 
-# Function to reorganize files - new function
+# Function to sanitize filenames
+def sanitize_filename(filename):
+    # Replace consecutive whitespace with a single space
+    sanitized = re.sub(r'\s+', ' ', filename)
+    # Replace other problematic characters
+    sanitized = sanitized.replace('/', '_').replace('\\', '_').replace(':', ' -')
+    return sanitized.strip()
+
+# Function to reorganize files and sanitize filenames
 def reorganize_act_files(root_folder):
     """
     Traverse through directories and:
     1. Find files in 'Act' folders with names starting with 'Table of Contents - ',
        rename them, move them up one directory level, and remove empty Act folders.
     2. Remove empty media folders and their subdirectories
+    3. Sanitize filenames by removing consecutive spaces
     """
     print(f"\n{'='*80}")
-    print(f"Reorganizing files in {root_folder}")
+    print(f"Reorganizing files and sanitizing filenames in {root_folder}")
     print(f"{'='*80}")
     
     # Statistics for reporting
     act_folders = []
     media_folders = []
     files_processed = 0
+    renamed_files = 0
     
     # Walk through the directory tree
     for dirpath, dirnames, filenames in os.walk(root_folder, topdown=False):  # Use topdown=False to process subdirectories first
@@ -54,8 +64,8 @@ def reorganize_act_files(root_folder):
                     # Full path to the original file
                     original_file = os.path.join(dirpath, filename)
                     
-                    # New filename without the prefix
-                    new_filename = filename.replace("Table of Contents - ", "")
+                    # New filename without the prefix and sanitized
+                    new_filename = sanitize_filename(filename.replace("Table of Contents - ", ""))
                     
                     # Parent directory of the Act folder
                     parent_dir = os.path.dirname(dirpath)
@@ -63,7 +73,7 @@ def reorganize_act_files(root_folder):
                     # Full path for the destination file
                     destination_file = os.path.join(parent_dir, new_filename)
                     
-                    print(f"Moving and renaming: {original_file} -> {destination_file}")
+                    print(f"Moving and renaming: {original_file} ? {destination_file}")
                     
                     # Move and rename the file
                     shutil.move(original_file, destination_file)
@@ -72,6 +82,24 @@ def reorganize_act_files(root_folder):
         # Track media folders
         if base_dir_name == "media" and dirpath.split(os.path.sep)[-2] not in ("media", "images"):
             media_folders.append(dirpath)
+        
+        # Sanitize all filenames
+        for filename in filenames:
+            sanitized_filename = sanitize_filename(filename)
+            # Only rename if the sanitized filename is different
+            if sanitized_filename != filename:
+                old_path = os.path.join(dirpath, filename)
+                new_path = os.path.join(dirpath, sanitized_filename)
+                try:
+                    # Avoid collision by checking if target file exists
+                    if os.path.exists(new_path):
+                        print(f"Cannot rename: {new_path} already exists")
+                        continue
+                    os.rename(old_path, new_path)
+                    print(f"Renamed: {filename} ? {sanitized_filename}")
+                    renamed_files += 1
+                except Exception as e:
+                    print(f"Error renaming {filename}: {e}")
     
     # After processing all files, check and remove empty Act folders
     folders_removed = 0
@@ -94,10 +122,36 @@ def reorganize_act_files(root_folder):
     
     print(f"Reorganization complete:")
     print(f"- {files_processed} files processed")
+    print(f"- {renamed_files} files renamed")
     print(f"- {folders_removed} empty Act folders removed")
     print(f"- {media_folders_removed} media folders and their subdirectories removed")
     
-    return files_processed, folders_removed, media_folders_removed
+    return files_processed, renamed_files, folders_removed, media_folders_removed
+
+# Function to just do cleanup without downloading
+def do_cleanup_only():
+    print("\nPerforming cleanup only (no downloads)")
+    total_files = 0
+    total_renamed_files = 0
+    total_folders = 0
+    total_media_folders = 0
+    
+    # Look for existing consolidation folders
+    for item in os.listdir(ACTS_DIR):
+        folder_path = os.path.join(ACTS_DIR, item)
+        if os.path.isdir(folder_path):
+            print(f"\nReorganizing and cleaning up {item}...")
+            files, renamed, folders, media = reorganize_act_files(folder_path)
+            total_files += files
+            total_renamed_files += renamed
+            total_folders += folders
+            total_media_folders += media
+    
+    print(f"\nCleanup summary:")
+    print(f"- {total_files} files processed")
+    print(f"- {total_renamed_files} files renamed")
+    print(f"- {total_folders} empty Act folders removed")
+    print(f"- {total_media_folders} media folders removed")
 
 # Fetch and parse the archive page to get all available consolidations
 def get_available_consolidations():
@@ -231,7 +285,7 @@ def process_directory(content_api_base, document_api_base, root_folder, director
             document_url = f"{document_api_base}{doc_id}_multi/xml"
             
             # Create a safe filename
-            safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
+            safe_filename = f"{sanitize_filename(doc_title)}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
             # Download the complete multi-document if it doesn't already exist
@@ -250,7 +304,7 @@ def process_directory(content_api_base, document_api_base, root_folder, director
             dir_title = element.find('CIVIX_DOCUMENT_TITLE').text
             
             # Create safe directory name
-            safe_dir_name = dir_title.replace('/', '_').replace('\\', '_')
+            safe_dir_name = sanitize_filename(dir_title)
             new_physical_path = os.path.join(physical_path, safe_dir_name)
             
             # Construct the new directory path for the API
@@ -277,7 +331,7 @@ def process_directory(content_api_base, document_api_base, root_folder, director
             document_url = f"{document_api_base}{doc_id}/xml"
             
             # Create a safe filename
-            safe_filename = f"{doc_title.replace('/', '_').replace('\\', '_')}.xml"
+            safe_filename = f"{sanitize_filename(doc_title)}.xml"
             save_path = os.path.join(physical_path, safe_filename)
             
             # Download the file if it doesn't already exist
@@ -290,7 +344,7 @@ def process_consolidation(consol_path, consol_name):
     print(f"{'='*80}")
     
     # Use the full consolidation name for the folder (sanitized for file system)
-    safe_folder_name = consol_name.replace('/', '_').replace('\\', '_').replace(':', '-')
+    safe_folder_name = sanitize_filename(consol_name)
     
     # Set up the URLs for this consolidation
     content_api_base = f"https://www.bclaws.gov.bc.ca/civix/content/{consol_path}/"
@@ -320,14 +374,17 @@ def process_consolidation(consol_path, consol_name):
 # Function to let user select consolidation(s)
 def select_consolidations(consolidations):
     print("\nSelect which consolidation(s) to download:")
-    print("Enter a single number, multiple numbers separated by commas, or 'all' for all consolidations")
-    print("Example: '1' or '1,3,5' or 'all'")
+    print("Enter a single number, multiple numbers separated by commas, 'all' for all consolidations, or 'n' to skip downloads and just do cleanup")
+    print("Example: '1' or '1,3,5' or 'all' or 'n'")
     
     while True:
         selection = input("\nYour selection: ")
         
         if selection.lower() == 'all':
             return consolidations
+        
+        if selection.lower() == 'n':
+            return []
             
         try:
             # Split by commas and convert to integers
@@ -340,7 +397,7 @@ def select_consolidations(consolidations):
             else:
                 print(f"Invalid selection. Please enter numbers between 1 and {len(consolidations)}")
         except ValueError:
-            print("Invalid input. Please enter numbers separated by commas, or 'all'")
+            print("Invalid input. Please enter numbers separated by commas, 'all', or 'n'")
 
 # Start the scraping process
 if __name__ == "__main__":
@@ -351,6 +408,18 @@ if __name__ == "__main__":
     
     # Create the base directory structure
     os.makedirs(ACTS_DIR, exist_ok=True)
+    
+    # Option to skip directly to cleanup
+    if not DOWNLOAD_ALL and REORGANIZE_FILES:
+        print("\nOptions:")
+        print("1. Download and process act consolidations")
+        print("2. Cleanup only (no downloads)")
+        
+        choice = input("\nSelect option (1 or 2): ")
+        if choice == '2':
+            do_cleanup_only()
+            print("\nCleanup completed")
+            exit()
     
     # Get all available consolidations
     consolidations = get_available_consolidations()
@@ -371,7 +440,17 @@ if __name__ == "__main__":
         else:
             # Let user select consolidations
             selected_consolidations = select_consolidations(consolidations)
-            print(f"\nProceeding to download {len(selected_consolidations)} selected consolidation(s)")
+            
+            if not selected_consolidations:
+                print("\nNo consolidations selected, proceeding to cleanup only")
+                if REORGANIZE_FILES:
+                    do_cleanup_only()
+                else:
+                    print("Reorganization is disabled. Nothing to do.")
+                print("\nScript completed")
+                exit()
+            else:
+                print(f"\nProceeding to download {len(selected_consolidations)} selected consolidation(s)")
         
         # Process selected consolidations
         for path, name in selected_consolidations:
@@ -379,28 +458,5 @@ if __name__ == "__main__":
         
         if selected_consolidations:
             print("\nAll selected consolidations have been processed!")
-        
-        # Option to just reorganize existing files
-        if not selected_consolidations and REORGANIZE_FILES:
-            choice = input("Would you like to reorganize existing files without downloading? (y/n): ")
-            if choice.lower() == 'y':
-                total_files = 0
-                total_folders = 0
-                total_media_folders = 0
-                
-                # Look for existing consolidation folders
-                for item in os.listdir(ACTS_DIR):
-                    folder_path = os.path.join(ACTS_DIR, item)
-                    if os.path.isdir(folder_path):
-                        print(f"\nReorganizing {item}...")
-                        files, folders, media = reorganize_act_files(folder_path)
-                        total_files += files
-                        total_folders += folders
-                        total_media_folders += media
-                
-                print(f"\nReorganization summary:")
-                print(f"- {total_files} files processed")
-                print(f"- {total_folders} empty Act folders removed")
-                print(f"- {total_media_folders} media folders and their subdirectories removed")
-    
+
     print("\nScraping completed")

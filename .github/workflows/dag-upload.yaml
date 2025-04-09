@@ -50,8 +50,8 @@ jobs:
 
     # Sync DAGs to OCP Airflow volume
     - name: Sync DAGs to OCP Volume
+      continue-on-error: true
       run: |
-
         oc rsync ./mlops/orchestration/airflow/dags/ ${{ env.POD_NAME }}:/opt/airflow/dags -n ${{ secrets.OPENSHIFT_DEV_NAMESPACE }} --delete
 
     - name: Verify DAGs transfer

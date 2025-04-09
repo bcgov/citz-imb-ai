@@ -54,3 +54,7 @@ models:
       +materialized: table
       normalized_analytics:
         +materialized: table
+        trulens_unified:
+      +schema: trulens_unified
+    trulens_1_4_7_frontend_unified:
+        +materialized: materialized_view
