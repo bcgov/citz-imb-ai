@@ -16,7 +16,14 @@ class UpdatedChunks(State):
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score
         OPTIONAL MATCH (node)-[:REFERENCES]->(refNode)
-        RETURN score, node.ActId,  node.RegId as Regulations, node.sectionId, node.sectionName, node.url,  node.text AS text,
+        RETURN score, 
+              node.ActId AS ActId,  
+              node.RegId as Regulations, 
+              node.sectionId AS sectionId, 
+              node.sectionName AS sectionName, 
+              node.url AS url,
+              node.type AS type,
+              node.text AS text,
         collect({refSectionId: refNode.sectionId, refSectionName: refNode.sectionName, refActId: refNode.ActId, refText: refNode.text}) AS references
         ORDER BY score DESC
     """
