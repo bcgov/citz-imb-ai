@@ -153,7 +153,7 @@ const Sidebar = () => {
           title='Options'
           description={
             <>
-              <h2>Select RAG State</h2>
+              <h2>Search & Query Version</h2>
               {activeStates.length ? (
                 activeStates.map((state) => (
                   <div className='rag-state-option' key={state.key}>
