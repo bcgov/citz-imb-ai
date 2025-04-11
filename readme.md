@@ -24,7 +24,7 @@ Before diving into this repository, it is beneficial to have a basic understandi
 - __Machine Learning__: Familiarity with machine learning concepts and libraries such as TensorFlow, PyTorch and libraries like langchain, lamaindex.
 - __FastAPI__: Understanding of how to build and deploy APIs using FastAPI.
 - __Javascript react__: Understanding of how to build and deploy frontend using react and javascript.
-- __Docker__: Knowledge of containerization using Docker.
+- __Docker__: Experience containerizing applications with Podman or Docker and using Compose for orchestration. 
 - __Openshift Kubernetes__: Basic understanding of Openshift/Kubernetes for managing containerized applications.
 - __MLOPs (Airflow)__: Familiarity with Apache Airflow or MLOps concepts for workflow orchestration.
 - __Graph DB (Neo4j)__: Basic knowledge of graph databases, specifically Neo4j, as it is used in this project.
@@ -36,19 +36,24 @@ All the example files should be present when you launch the notebook. Try runnin
 
 #### Set Up Local ENV
 
-1. Create and populate a `.docker/.env` file. Identify needed keys based on the listed environment variables for the container in the `compose.controller.yaml` file. Obtain values from team members.
-1. Build the docker images.
-1. Open Localhost where the jupyter notebook is running.
-1. Open terminal on jupyter notebook.
-1. Run `pip install -r requirement.txt`.
-1. Run python s3.py to download acts. (Make sure you are connected to BC Gov VPN.)
-1. To initialize the TruLens database, first create a database named `trulens`. Then, run the upgrade script located at [trulens_upgrade.ipynb](examples/Analytics/trulens_upgrade.ipynb) **before** launching the web application. TruLens is essential for capturing all evaluation data, and the web application will not function properly without this setup.
+1. Create and populate a `.docker/.env` file:
+   - Check `compose.controller.yaml` to identify necessary environment variables.
+   - Obtain values from your team members.
+1. Build the Docker images.
+1. Open the Jupyter notebook interface at `localhost`.
+1. Open a terminal within Jupyter notebook.
+1. Run `pip install -r requirements.txt`.
+1. Run `dvc pull` to fetch data from S3 (ensure you are connected to the BC Gov VPN). Refer to the detailed instructions in [DVCReadme.md](DVCReadme.md) for setup guidance, troubleshooting, and best practices to avoid common data synchronization issues.&#x20;
+1. (Legacy) Run `python s3.py` to download Acts data (ensure you are connected to the BC Gov VPN).
+1. Initialize the TruLens database:
+   - Create a database named `trulens`.
+   - Run the upgrade script located in [trulens\_upgrade.ipynb](examples/Analytics/trulens_upgrade.ipynb) **before** launching the web application.
+   - TruLens captures all evaluation data; the web application requires this setup to function correctly.
+You are now set to use existing Jupyter notebooks.
 
-You are now set to use existing jupyter notebooks.
+**Note**: Always add future dependencies to `requirements.txt` to maintain clarity and prevent code breakage.
 
-Note: Add future dependences in `requirement.txt` so that we can keep track of the them and avoid code breakage
-
-For all the example notebooks click here: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/examples)
+For example notebooks, visit: [Examples](https://github.com/bcgov/citz-imb-ai/tree/main/examples)
 
 ### Populating Your Neo4j Data
 
