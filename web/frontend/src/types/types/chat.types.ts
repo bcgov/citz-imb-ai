@@ -30,3 +30,9 @@ export interface Message {
   content: string;
   topk?: TopKItem[];
 }
+
+export interface ChatState {
+  key: string;
+  description: string;
+  trulens_id: string;
+}
