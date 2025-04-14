@@ -326,7 +326,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
         printf("Act title: %s\n", newSection.act_title);
         printf("Regulation title: %s\n", newSection.reg_title);
         printf("Section title: %s\n", newSection.title);
-        printf("Section content: %s\n", newSection.content);
+        //printf("Section content: %s\n", newSection.content);
         // print_readable(newSection.content);
         printf("Section number: %s\n", newSection.number);
         concat_url(&newSection.url, id);
