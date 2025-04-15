@@ -70,6 +70,24 @@ else()
     message(FATAL_ERROR "JSON-C library not found")
 endif()
 
+# OpenVINO configuration
+set(OPENVINO_DIR "/opt/app-root/src/Programs/openvino_toolkit_rhel8_2025.1.0.18503.6fec06580ab_x86_64")
+set(OPENVINO_INCLUDE_DIR "${OPENVINO_DIR}/runtime/include")
+set(OPENVINO_LIB_DIR "${OPENVINO_DIR}/runtime/lib/intel64")
+
+# Check if OpenVINO is available
+if(EXISTS "${OPENVINO_INCLUDE_DIR}" AND EXISTS "${OPENVINO_LIB_DIR}")
+    include_directories(${OPENVINO_INCLUDE_DIR})
+    link_directories(${OPENVINO_LIB_DIR})
+    set(OPENVINO_LIBRARIES openvino_c openvino)
+    add_definitions(-DUSE_OPENVINO)
+    message(STATUS "OpenVINO found at: ${OPENVINO_DIR}")
+else()
+    message(WARNING "OpenVINO not found at: ${OPENVINO_DIR}. Building without OpenVINO support.")
+    set(OPENVINO_LIBRARIES "")
+endif()
+
+
 # Include directories
 include_directories(include)
 
@@ -88,7 +106,7 @@ list(APPEND SOURCES src/main.c)
 add_executable(HPCChain ${SOURCES})
 
 # Link MPI, libxml2, NUMA, and OpenMP libraries
-target_link_libraries(HPCChain MPI::MPI_C ${LIBXML2_LIBRARIES} ${NUMA_LIBRARIES} OpenMP::OpenMP_C ${JSON_LIBRARIES})
+target_link_libraries(HPCChain MPI::MPI_C ${LIBXML2_LIBRARIES} ${NUMA_LIBRARIES} OpenMP::OpenMP_C ${JSON_LIBRARIES} ${OPENVINO_LIBRARIES})
 
 # Set compiler flags
 if(CMAKE_C_COMPILER_ID MATCHES "Intel")

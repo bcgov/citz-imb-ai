@@ -1,3 +1,6 @@
+#ifndef TOKEN_TEXTSPLITTER
+#define TOKEN_TEXTSPLITTER
+
 #include "data_structures/hash_table.h"
 #include "memory_pool.h"
 
@@ -46,3 +49,4 @@ void add_token_array(TokenCollection* collection, int* values, int count);
 // Function to free a TokenCollection
 void free_token_collection(TokenCollection* collection);
 
+#endif

@@ -12,7 +12,7 @@
 void concat_url(char **complete_url, xmlChar *id)
 {
     // Calculate the length of the final URL
-    printf("Concantinating url %s%s \n", BASE_URL, id);
+    // printf("Concantinating url %s%s \n", BASE_URL, id);
     size_t url_length = strlen(BASE_URL) + strlen(id) + 1;
 
     // Allocate memory for the final URL
@@ -26,7 +26,7 @@ void concat_url(char **complete_url, xmlChar *id)
     // Concatenate the base URL and the id
     strcpy(*complete_url, BASE_URL);
     strcat(*complete_url, id);
-    printf("Completed strcat %s \n", *complete_url);
+    // printf("Completed strcat %s \n", *complete_url);
 }
 
 // Function to parse XML and print values of a specific tag
@@ -46,7 +46,7 @@ void parse_xml(const char *filename, const char *tag)
     {
         if (currentNode->type == XML_ELEMENT_NODE && xmlStrcmp(currentNode->name, (const xmlChar *)tag) == 0)
         {
-            printf("Tag found: %s\n", tag);
+            //printf("Tag found: %s\n", tag);
             xmlChar *content = xmlNodeGetContent(currentNode);
             // printf("Content: %s\n", content);
             xmlFree(content);
@@ -319,6 +319,8 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     newSection.title = sectionHeading ? strdup((char *)sectionHeading) : NULL;
     newSection.act_title = getNodeContent(titleNode);
     newSection.reg_title = getNodeContent(regTitleNode);
+    concat_url(&newSection.url, id);
+    newSection.section_url = sectionUrl;
     if (print_outputs)
     {
         printf("-----------------------------------\n");
@@ -329,9 +331,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
         //printf("Section content: %s\n", newSection.content);
         // print_readable(newSection.content);
         printf("Section number: %s\n", newSection.number);
-        concat_url(&newSection.url, id);
         printf("Url is: %s\n", newSection.url);
-        newSection.section_url = sectionUrl;
         printf("Section url is: %s\n", newSection.section_url);
         printf("\n");
         printf("-----------------------------------\n");
@@ -409,11 +409,11 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     xmlChar *id = xmlGetProp(rootElement, (const xmlChar *)"id");
     if (id != NULL)
     {
-        printf("ID: %s\n", id);
+        //printf("ID: %s\n", id);
     }
     else
     {
-        printf("ID attribute not found\n");
+        //printf("ID attribute not found\n");
     }
 
     // Try to get the title of the regulation
@@ -426,7 +426,7 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     }
     else
     {
-        printf("Not a regulation it is an act \n");
+        //printf("Not a regulation it is an act \n");
     }
 
     if (regTitleNode)

@@ -32,4 +32,3 @@ python BCLawsCopyFiles.py --source "../../data/bclaws/Consolidations" --destinat
 
 
 mpirun -genv I_MPI_DEBUG=5  --bind-to socket:2 -np 2 ./HPCChain ../fb140275c155a9c7c5a3b3e0e77a9e839594a938    ../BCLaws_Output/act_flat/Consol_43___October_15_2024 ../BCLaws_Output/act_flat/Consol_42___March_11_2024 1 : python ../mpi_receiver.py
-~                                                                  
