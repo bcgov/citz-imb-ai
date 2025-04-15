@@ -215,7 +215,7 @@ char *split_punctuations_and_to_lowercase_without_utf(const char *str)
             new_len += 2; // Add space before and after punctuation
         }
     }
-    printf("word is %s, total len is %d \n", lower_str, new_len);
+    //printf("word is %s, total len is %d \n", lower_str, new_len);
 
     // Allocate memory for the new string
     char *result = (char *)malloc(new_len + 1);
@@ -299,7 +299,7 @@ char *split_punctuations_and_to_lowercase(const char *str) {
         }
     }
 
-    printf("word is %s, total len is %zu \n", lower_str, new_len);
+    //printf("word is %s, total len is %zu \n", lower_str, new_len);
 
     char *result = (char *)malloc(new_len + 1);
     if (!result) {
@@ -377,7 +377,7 @@ tokens_t get_token(HashTable *table, const char *text)
         }
         if (!found)
         {
-            printf("Unrecognized token part: %c, %#x \n", text[i], text[i]);
+            //printf("Unrecognized token part: %c, %#x \n", text[i], text[i]);
             i++;
             prefix = false;
         }

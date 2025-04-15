@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
         printf("Rank 0 received completion from rank 1\n");
 
         // Send termination to Python
-        MPI_Datatype section_type;
+ /*       MPI_Datatype section_type;
         create_mpi_section_type(&section_type);
         
         MPISection end_section = {0};
@@ -89,11 +89,11 @@ int main(int argc, char *argv[])
         MPI_Send(&end_section, 1, section_type, 2, 99, MPI_COMM_WORLD);
         
         MPI_Type_free(&section_type);
+*/
     }
     else
     {
         process_acts_reg(argv[3], print_output, table, 1);
-
 	// Signal completion to rank 0
         int completion_signal = 1;
         MPI_Send(&completion_signal, 1, MPI_INT, 0, 98, MPI_COMM_WORLD);
