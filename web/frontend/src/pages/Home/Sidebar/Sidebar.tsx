@@ -50,28 +50,30 @@ const Sidebar = () => {
   // Load the RAG states from the API
   useEffect(() => {
     getChatStates()
-      .then((data) => setActiveStates(data))
-      .catch((e) => console.warn(`Active RAG states not found: ${e}`));
-    if (activeStates.length) {
-      const setDefaultState = () => {
-        context.setChatState(activeStates.at(0)!);
-        setSelectedState(activeStates.at(0)!.key);
-        sessionStorage.setItem('ragStateKey', activeStates.at(0)!.key);
-      };
-      if (!defaultState) {
-        setDefaultState();
-      } else {
-        const foundState = activeStates.find(
-          (state) => state.key === defaultState,
-        );
-        if (foundState) {
-          context.setChatState(foundState);
-          setSelectedState(foundState.key);
-        } else {
-          setDefaultState();
+      .then((data) => {
+        setActiveStates(data);
+        if (data.length) {
+          const setDefaultState = () => {
+            context.setChatState(data.at(0)!);
+            setSelectedState(data.at(0)!.key);
+            sessionStorage.setItem('ragStateKey', data.at(0)!.key);
+          };
+          if (!defaultState) {
+            setDefaultState();
+          } else {
+            const foundState = data.find((state) => state.key === defaultState);
+            if (foundState) {
+              context.setChatState(foundState);
+              setSelectedState(foundState.key);
+            } else {
+              setDefaultState();
+            }
+          }
         }
-      }
-    }
+
+        return data;
+      })
+      .catch((e) => console.warn(`Active RAG states not found: ${e}`));
   }, []);
 
   // Function to toggle sidebar
@@ -151,7 +153,7 @@ const Sidebar = () => {
           title='Options'
           description={
             <>
-              <h2>Select RAG State</h2>
+              <h2>Search & Query Version</h2>
               {activeStates.length ? (
                 activeStates.map((state) => (
                   <div className='rag-state-option' key={state.key}>
