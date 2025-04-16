@@ -1,6 +1,6 @@
 #include "../../include/thread_buffer.h"
 
-void init_thread_buffer(ThreadBuffer *thread_buffer, int *num_threads) {
+void init_thread_buffer(ThreadBuffer *thread_buffers, int *num_threads) {
     // Determine the number of OpenMP threads and allocate an array of per-thread buffers.
     *num_threads = omp_get_max_threads();
     thread_buffers = malloc(*num_threads * sizeof(ThreadBuffer));
