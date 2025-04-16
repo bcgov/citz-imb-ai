@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
     
     if (rank == 0)
     {
-        process_acts_reg(argv[2], print_output, table,num_threads, thread_buffers, 0);
+        process_acts_reg(argv[2], print_output, table,num_threads, thread_buffers, pool, 0);
 
 
 	// Wait for rank 1 completion
@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        process_acts_reg(argv[3], print_output, table,num_threads, thread_buffers, 1);
+        process_acts_reg(argv[3], print_output, table,num_threads, thread_buffers, pool, 1);
 
 	// Signal completion to rank 0
         int completion_signal = 1;
