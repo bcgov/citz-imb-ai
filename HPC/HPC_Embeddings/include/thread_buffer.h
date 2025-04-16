@@ -1,3 +1,6 @@
+#ifndef THREAD_BUFFER
+#define THREAD_BUFFER
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -65,3 +68,5 @@ void buffer_add_chunk(ThreadBuffer_v2 *buf, Section *section, int *tokens, int c
 void save_openvino_format_to_dram_v2(Section *section, TokenizedData *tokens, int rank, int tid, ThreadBuffer_v2 *thread_buffer);
 
 void save_thread_buffers_to_folder_v2(ThreadBuffer_v2 *thread_buffers, int num_threads, const char *folder_name, int rank);
+
+#endif
