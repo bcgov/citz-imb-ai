@@ -181,7 +181,6 @@ void process_acts_reg(char *directory_path, int print_outputs, HashTable *table,
     free(thread_buffers);
     */
 
-    destroy_pool(pool);
     // At program end
     xmlCleanupParser();
     xmlMemoryDump();
