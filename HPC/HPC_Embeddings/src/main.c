@@ -82,7 +82,8 @@ int main(int argc, char *argv[])
         init_thread_buffer(thread_buffers, &num_threads);
         printf("Rank 0: Number of threads %d \n", num_threads);
         process_acts_reg(argv[2], print_output, table,num_threads, thread_buffers, 0);
-        free(thread_buffers);
+        free_thread_buffers(thread_buffers, num_threads);
+
 
 	// Wait for rank 1 completion
         int completion_signal;
@@ -105,7 +106,8 @@ int main(int argc, char *argv[])
         init_thread_buffer(thread_buffers, &num_threads);
         printf("Rank 1: Number of threads %d \n", num_threads);
         process_acts_reg(argv[3], print_output, table,num_threads, thread_buffers, 1);
-        free(thread_buffers);
+        free_thread_buffers(thread_buffers, num_threads);
+
 	// Signal completion to rank 0
         int completion_signal = 1;
         MPI_Send(&completion_signal, 1, MPI_INT, 0, 98, MPI_COMM_WORLD);

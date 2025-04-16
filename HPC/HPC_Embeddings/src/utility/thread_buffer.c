@@ -3,7 +3,7 @@
 void init_thread_buffer(ThreadBuffer *thread_buffer, int *num_threads) {
     // Determine the number of OpenMP threads and allocate an array of per-thread buffers.
     *num_threads = omp_get_max_threads();
-    ThreadBuffer *thread_buffers = malloc(*num_threads * sizeof(ThreadBuffer));
+    thread_buffers = malloc(*num_threads * sizeof(ThreadBuffer));
     if (!thread_buffers) {
         fprintf(stderr, "Error: Cannot allocate thread_buffers\n");
         exit(EXIT_FAILURE);
@@ -18,6 +18,14 @@ void init_thread_buffer(ThreadBuffer *thread_buffer, int *num_threads) {
         thread_buffers[i].capacity = INITIAL_BUFFER_SIZE;
     }
 }
+
+void free_thread_buffers(ThreadBuffer *buffers, int num_threads) {
+    for (int i = 0; i < num_threads; i++) {
+        free(buffers[i].data);
+    }
+    free(buffers);
+}
+
 
 // Ensure the thread buffer has enough space to add additional bytes.
 // If not, reallocate (in this example we double the capacity until it fits).
@@ -67,7 +75,6 @@ void save_thread_buffers_to_folder(ThreadBuffer *thread_buffers, int num_threads
         }
 
         fclose(out);
-        free(thread_buffers[i].data);
     }
 }
 
