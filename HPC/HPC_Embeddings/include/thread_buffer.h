@@ -48,6 +48,8 @@ typedef struct {
 
 void init_thread_buffer(ThreadBuffer *thread_buffer, int *num_threads);
 
+void free_thread_buffers(ThreadBuffer *buffers, int num_threads);
+
 void ensure_capacity(ThreadBuffer *buf, size_t additional);
 
 // Append a block of data to the thread buffer.
