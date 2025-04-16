@@ -72,7 +72,7 @@ void save_thread_buffers_to_folder(ThreadBuffer *thread_buffers, int num_threads
 }
 
 // Initialize thread buffer
-void init_thread_buffer(ThreadBuffer_v2 *buf, int initial_capacity) {
+void init_thread_buffer_v2(ThreadBuffer_v2 *buf, int initial_capacity) {
     buf->chunks = malloc(initial_capacity * sizeof(ChunkData));
     if (!buf->chunks) {
         fprintf(stderr, "Error: Unable to allocate chunk buffer\n");
