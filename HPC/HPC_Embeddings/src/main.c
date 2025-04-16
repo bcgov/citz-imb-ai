@@ -7,6 +7,9 @@
 #include <mpi.h>
 #include "../include/acts_reg.h"
 #include "../include/memory.h"
+#include "memory_pool.h"
+#include <json-c/json.h>
+#include "thread_buffer.h"
 #include <sched.h>
 #include "data_structures/hash_table.h"
 #include "load_tokens.h"
@@ -14,12 +17,13 @@
 
 int main(int argc, char *argv[])
 {
-    if (argc <= 3)
-    {
-        printf("Usage: %s <input_file>\n", argv[0]);
+    if (argc <= 3 && !(argc == 3 && strcmp(argv[1], "--config") == 0)) {
+        printf("Usage: \n");
+        printf("  %s <token_file> <act_path_1> <act_path_2> <print_flag>\n", argv[0]);
+        printf("  or\n");
+        printf("  %s --config <config_file.json>\n", argv[0]);
         return 1;
     }
-
 
     int rank, size;
     MPI_Init(&argc, &argv);
@@ -70,11 +74,13 @@ int main(int argc, char *argv[])
     }
 
     printf("Hello from rank %d of %d\n", rank, size);
-
+    ThreadBuffer *thread_buffers;
     if (rank == 0)
     {
-        process_acts_reg(argv[2], print_output, table, 0);
-	
+        init_thread_buffer(thread_buffer);
+        process_acts_reg(argv[2], print_output, table, thread_buffer, 0);
+        free(thread_buffers);
+
 	// Wait for rank 1 completion
         int completion_signal;
         MPI_Recv(&completion_signal, 1, MPI_INT, 1, 98, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
@@ -93,7 +99,8 @@ int main(int argc, char *argv[])
     }
     else
     {
-        process_acts_reg(argv[3], print_output, table, 1);
+        init_thread_buffer(thread_buffer);
+        process_acts_reg(argv[3], print_output, table, thread_buffer, 1);
 	// Signal completion to rank 0
         int completion_signal = 1;
         MPI_Send(&completion_signal, 1, MPI_INT, 0, 98, MPI_COMM_WORLD);
