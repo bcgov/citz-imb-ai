@@ -76,13 +76,13 @@ int main(int argc, char *argv[])
     printf("Hello from rank %d of %d\n", rank, size);
     ThreadBuffer *thread_buffers = NULL;
     int num_threads;
+    MemoryPool *pool = create_pool(POOL_SIZE);
+    init_thread_buffer(&thread_buffers, &num_threads);
+    printf("Rank %d: Number of threads %d \n", rank,  num_threads);
     
     if (rank == 0)
     {
-        init_thread_buffer(&thread_buffers, &num_threads);
-        printf("Rank 0: Number of threads %d \n", num_threads);
         process_acts_reg(argv[2], print_output, table,num_threads, thread_buffers, 0);
-        free_thread_buffers(thread_buffers, num_threads);
 
 
 	// Wait for rank 1 completion
@@ -103,15 +103,15 @@ int main(int argc, char *argv[])
     }
     else
     {
-        init_thread_buffer(&thread_buffers, &num_threads);
-        printf("Rank 1: Number of threads %d \n", num_threads);
         process_acts_reg(argv[3], print_output, table,num_threads, thread_buffers, 1);
-        free_thread_buffers(thread_buffers, num_threads);
 
 	// Signal completion to rank 0
         int completion_signal = 1;
         MPI_Send(&completion_signal, 1, MPI_INT, 0, 98, MPI_COMM_WORLD);
     }
+    
+    free_thread_buffers(thread_buffers, num_threads);
+    destroy_pool(pool);
 
     printf("Completed work from rank %d of %d.\n", rank, size);
 

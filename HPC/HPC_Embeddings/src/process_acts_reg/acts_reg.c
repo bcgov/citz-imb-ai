@@ -81,7 +81,7 @@ void send_thread_buffers_as_json(ThreadBuffer *thread_buffers, int num_threads, 
     free(thread_buffers);
 }
 
-void process_acts_reg(char *directory_path, int print_outputs, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, bool act_reg)
+void process_acts_reg(char *directory_path, int print_outputs, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool, bool act_reg)
 {
     printf("Processing %s from %s\n", (act_reg) ? "Regulation" : "Acts", directory_path);
     // Initialize streaming context
@@ -96,7 +96,6 @@ void process_acts_reg(char *directory_path, int print_outputs, HashTable *table,
 
     init_dram_data(directory_path, &dir_info);
     printf("Directory info initialized. Number of files: %zu\n", dir_info.num_files);
-    MemoryPool *pool = create_pool(POOL_SIZE);
 
     int rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
