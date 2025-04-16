@@ -75,10 +75,12 @@ int main(int argc, char *argv[])
 
     printf("Hello from rank %d of %d\n", rank, size);
     ThreadBuffer *thread_buffers;
+    int num_threads;
+    
     if (rank == 0)
     {
-        init_thread_buffer(thread_buffer);
-        process_acts_reg(argv[2], print_output, table, thread_buffer, 0);
+        init_thread_buffer(thread_buffer, &num_threads);
+        process_acts_reg(argv[2], print_output, table,num_threads, thread_buffer, 0);
         free(thread_buffers);
 
 	// Wait for rank 1 completion
@@ -99,8 +101,9 @@ int main(int argc, char *argv[])
     }
     else
     {
-        init_thread_buffer(thread_buffer);
-        process_acts_reg(argv[3], print_output, table, thread_buffer, 1);
+        init_thread_buffer(thread_buffer, &num_threads);
+        process_acts_reg(argv[3], print_output, table,num_threads, thread_buffer, 1);
+        free(thread_buffers);
 	// Signal completion to rank 0
         int completion_signal = 1;
         MPI_Send(&completion_signal, 1, MPI_INT, 0, 98, MPI_COMM_WORLD);
