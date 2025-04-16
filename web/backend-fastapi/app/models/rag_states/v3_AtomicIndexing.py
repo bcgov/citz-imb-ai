@@ -21,7 +21,14 @@ class AtomicIndexing(State):
         OPTIONAL MATCH (atomicSection)-[:CONTAINS*]->(containedNode)
         OPTIONAL MATCH (containedNode)-[:NEXT*]->(nextNode)
         OPTIONAL MATCH (containedNode)-[:REFERENCE]->(refNode)
-        RETURN score, node.ActId,  node.RegId as Regulations, node.sectionId, node.sectionName, node.url,  node.text AS text,
+        RETURN score, 
+              node.ActId AS ActId,  
+              node.RegId as Regulations, 
+              node.sectionId AS sectionId, 
+              node.sectionName AS sectionName, 
+              node.url AS url,
+              node.type AS type,
+              node.text AS text,
             collect(DISTINCT {elementId: elementId(atomicSection), containedProperties: properties(atomicSection)}) + collect(DISTINCT {elementId: elementId(containedNode), containedProperties: properties(containedNode)}) AS atomicNodes,
             collect(DISTINCT {elementId: elementId(refNode), referenceProperties: properties(refNode)}) AS referencedNodes,
             collect(DISTINCT {elementId: elementId(nextNode), nextProperties: properties(nextNode)}) AS nextNodes
