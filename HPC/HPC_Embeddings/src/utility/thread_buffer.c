@@ -1,23 +1,26 @@
 #include "../../include/thread_buffer.h"
 
-void init_thread_buffer(ThreadBuffer *thread_buffers, int *num_threads) {
-    // Determine the number of OpenMP threads and allocate an array of per-thread buffers.
+void init_thread_buffer(ThreadBuffer **thread_buffer_ptr, int *num_threads) {
     *num_threads = omp_get_max_threads();
-    thread_buffers = malloc(*num_threads * sizeof(ThreadBuffer));
-    if (!thread_buffers) {
+    ThreadBuffer *buffers = malloc(*num_threads * sizeof(ThreadBuffer));
+    if (!buffers) {
         fprintf(stderr, "Error: Cannot allocate thread_buffers\n");
         exit(EXIT_FAILURE);
     }
+
     for (int i = 0; i < *num_threads; i++) {
-        thread_buffers[i].data = malloc(INITIAL_BUFFER_SIZE);
-        if (!thread_buffers[i].data) {
+        buffers[i].data = malloc(INITIAL_BUFFER_SIZE);
+        if (!buffers[i].data) {
             fprintf(stderr, "Error: Cannot allocate buffer for thread %d\n", i);
             exit(EXIT_FAILURE);
         }
-        thread_buffers[i].used = 0;
-        thread_buffers[i].capacity = INITIAL_BUFFER_SIZE;
+        buffers[i].used = 0;
+        buffers[i].capacity = INITIAL_BUFFER_SIZE;
     }
+
+    *thread_buffer_ptr = buffers;  // ✅ Assign to caller
 }
+
 
 void free_thread_buffers(ThreadBuffer *buffers, int num_threads) {
     for (int i = 0; i < num_threads; i++) {
