@@ -79,8 +79,8 @@ int main(int argc, char *argv[])
     
     if (rank == 0)
     {
-        printf("Rank 0: Number of threads %d \n", num_threads);
         init_thread_buffer(thread_buffers, &num_threads);
+        printf("Rank 0: Number of threads %d \n", num_threads);
         process_acts_reg(argv[2], print_output, table,num_threads, thread_buffers, 0);
         free(thread_buffers);
 
@@ -102,8 +102,8 @@ int main(int argc, char *argv[])
     }
     else
     {
-        printf("Rank 1: Number of threads %d \n", num_threads);
         init_thread_buffer(thread_buffers, &num_threads);
+        printf("Rank 1: Number of threads %d \n", num_threads);
         process_acts_reg(argv[3], print_output, table,num_threads, thread_buffers, 1);
         free(thread_buffers);
 	// Signal completion to rank 0
