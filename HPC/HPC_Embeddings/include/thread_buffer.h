@@ -43,7 +43,7 @@ typedef struct {
     int chunk_capacity;      // Capacity of chunk array
 } ThreadBuffer_v2;
 
-void init_thread_buffer(ThreadBuffer *thread_buffer);
+void init_thread_buffer(ThreadBuffer *thread_buffer int *num_threads);
 
 void ensure_capacity(ThreadBuffer *buf, size_t additional);
 
