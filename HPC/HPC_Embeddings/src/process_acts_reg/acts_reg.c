@@ -81,10 +81,17 @@ void send_thread_buffers_as_json(ThreadBuffer *thread_buffers, int num_threads, 
     free(thread_buffers);
 }
 
-void process_acts_reg(char *directory_path, int print_outputs, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool, bool act_reg)
+void process_acts_reg(legislation *item, int print_output, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool)
 {
-    printf("Processing %s from %s\n", (act_reg) ? "Regulation" : "Acts", directory_path);
+    //printf("Processing %s from %s\n", (act_reg) ? "Regulation" : "Acts", directory_path);
     // Initialize streaming context
+    const char *directory_path = item->source_path;
+    const char *dest_path = item->destination_path;
+
+    if (!directory_path) {
+        fprintf(stderr, "Error: No input file (source_path) provided in legislation struct\n");
+        return;
+    }
 
     if (!directory_path)
     {
@@ -163,7 +170,7 @@ void process_acts_reg(char *directory_path, int print_outputs, HashTable *table,
     }
     printf("total sections is %d \n", total_sections);
     
-    save_thread_buffers_to_folder(thread_buffers, num_threads, "consol_42", rank);
+    save_thread_buffers_to_folder(thread_buffers, num_threads, dest_path, rank);
     //send_thread_buffers_as_json(thread_buffers, num_threads,rank);
 
     // Merge the per-thread buffers by writing them to a single output file.

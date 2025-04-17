@@ -147,8 +147,18 @@ int main(int argc, char *argv[])
         reset_thread_buffers(thread_buffers, num_threads);
         reset_pool(pool);
 
+        if (!item->destination_path) {
+            asprintf(&item->destination_path, "output/rank_%d_%d", rank, i);  // or fallback default
+        }
+
+        if (!item->base_url) {
+            item->base_url = strdup("https://default.url/");
+        }
+
         printf("Rank %d processing: %s\n", rank, item->source_path);
-        process_acts_reg(item->source_path, print_output, table, num_threads, thread_buffers, pool, (item->type == 'R'));
+        //process_acts_reg(item->source_path, print_output, table, num_threads, thread_buffers, pool, (item->type == 'R'));
+        process_acts_reg(item, print_output, table, num_threads, thread_buffers, pool);
+
     }
 
 
