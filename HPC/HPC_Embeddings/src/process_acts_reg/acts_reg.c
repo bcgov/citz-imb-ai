@@ -9,6 +9,7 @@
 
 #include <fcntl.h>
 #include <unistd.h>
+#include "process_config.h"
 
 #define DEST_RANK 2
 #define TAG_LENGTH 0
