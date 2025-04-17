@@ -1,3 +1,6 @@
+#ifndef THREAD_BUFFER
+#define THREAD_BUFFER
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -43,6 +46,10 @@ typedef struct {
     int chunk_capacity;      // Capacity of chunk array
 } ThreadBuffer_v2;
 
+void init_thread_buffer(ThreadBuffer **thread_buffer_ptr, int *num_threads);
+
+void free_thread_buffers(ThreadBuffer *buffers, int num_threads);
+
 void ensure_capacity(ThreadBuffer *buf, size_t additional);
 
 // Append a block of data to the thread buffer.
@@ -51,7 +58,7 @@ void buffer_append(ThreadBuffer *buf, const char *data, size_t len);
 void save_thread_buffers_to_folder(ThreadBuffer *thread_buffers, int num_threads, const char *folder_name, int rank);
 
 // Initialize thread buffer
-void init_thread_buffer(ThreadBuffer_v2 *buf, int initial_capacity);
+void init_thread_buffer_v2(ThreadBuffer_v2 *buf, int initial_capacity);
 
 // Ensure thread buffer has enough capacity
 void ensure_chunk_capacity(ThreadBuffer_v2 *buf, int additional);
@@ -63,3 +70,5 @@ void buffer_add_chunk(ThreadBuffer_v2 *buf, Section *section, int *tokens, int c
 void save_openvino_format_to_dram_v2(Section *section, TokenizedData *tokens, int rank, int tid, ThreadBuffer_v2 *thread_buffer);
 
 void save_thread_buffers_to_folder_v2(ThreadBuffer_v2 *thread_buffers, int num_threads, const char *folder_name, int rank);
+
+#endif

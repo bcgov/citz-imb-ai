@@ -81,7 +81,7 @@ void send_thread_buffers_as_json(ThreadBuffer *thread_buffers, int num_threads, 
     free(thread_buffers);
 }
 
-void process_acts_reg(char *directory_path, int print_outputs, HashTable *table, bool act_reg)
+void process_acts_reg(char *directory_path, int print_outputs, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool, bool act_reg)
 {
     printf("Processing %s from %s\n", (act_reg) ? "Regulation" : "Acts", directory_path);
     // Initialize streaming context
@@ -96,29 +96,11 @@ void process_acts_reg(char *directory_path, int print_outputs, HashTable *table,
 
     init_dram_data(directory_path, &dir_info);
     printf("Directory info initialized. Number of files: %zu\n", dir_info.num_files);
-    MemoryPool *pool = create_pool(POOL_SIZE);
 
     int rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
     int total_sections = 0;
-
-    // Determine the number of OpenMP threads and allocate an array of per-thread buffers.
-    int num_threads = omp_get_max_threads();
-    ThreadBuffer *thread_buffers = malloc(num_threads * sizeof(ThreadBuffer));
-    if (!thread_buffers) {
-        fprintf(stderr, "Error: Cannot allocate thread_buffers\n");
-        exit(EXIT_FAILURE);
-    }
-    for (int i = 0; i < num_threads; i++) {
-        thread_buffers[i].data = malloc(INITIAL_BUFFER_SIZE);
-        if (!thread_buffers[i].data) {
-            fprintf(stderr, "Error: Cannot allocate buffer for thread %d\n", i);
-            exit(EXIT_FAILURE);
-        }
-        thread_buffers[i].used = 0;
-        thread_buffers[i].capacity = INITIAL_BUFFER_SIZE;
-    }
 
 #pragma omp parallel for schedule(dynamic, 1)
     for (size_t i = 0; i < dir_info.num_files; i++)
@@ -199,7 +181,6 @@ void process_acts_reg(char *directory_path, int print_outputs, HashTable *table,
     free(thread_buffers);
     */
 
-    destroy_pool(pool);
     // At program end
     xmlCleanupParser();
     xmlMemoryDump();

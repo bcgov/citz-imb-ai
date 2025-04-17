@@ -1,5 +1,35 @@
 #include "../../include/thread_buffer.h"
 
+void init_thread_buffer(ThreadBuffer **thread_buffer_ptr, int *num_threads) {
+    *num_threads = omp_get_max_threads();
+    ThreadBuffer *buffers = malloc(*num_threads * sizeof(ThreadBuffer));
+    if (!buffers) {
+        fprintf(stderr, "Error: Cannot allocate thread_buffers\n");
+        exit(EXIT_FAILURE);
+    }
+
+    for (int i = 0; i < *num_threads; i++) {
+        buffers[i].data = malloc(INITIAL_BUFFER_SIZE);
+        if (!buffers[i].data) {
+            fprintf(stderr, "Error: Cannot allocate buffer for thread %d\n", i);
+            exit(EXIT_FAILURE);
+        }
+        buffers[i].used = 0;
+        buffers[i].capacity = INITIAL_BUFFER_SIZE;
+    }
+
+    *thread_buffer_ptr = buffers;  // ✅ Assign to caller
+}
+
+
+void free_thread_buffers(ThreadBuffer *buffers, int num_threads) {
+    for (int i = 0; i < num_threads; i++) {
+        free(buffers[i].data);
+    }
+    free(buffers);
+}
+
+
 // Ensure the thread buffer has enough space to add additional bytes.
 // If not, reallocate (in this example we double the capacity until it fits).
 void ensure_capacity(ThreadBuffer *buf, size_t additional) {
@@ -48,14 +78,11 @@ void save_thread_buffers_to_folder(ThreadBuffer *thread_buffers, int num_threads
         }
 
         fclose(out);
-        free(thread_buffers[i].data);
     }
-
-    free(thread_buffers);
 }
 
 // Initialize thread buffer
-void init_thread_buffer(ThreadBuffer_v2 *buf, int initial_capacity) {
+void init_thread_buffer_v2(ThreadBuffer_v2 *buf, int initial_capacity) {
     buf->chunks = malloc(initial_capacity * sizeof(ChunkData));
     if (!buf->chunks) {
         fprintf(stderr, "Error: Unable to allocate chunk buffer\n");
