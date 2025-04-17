@@ -24,3 +24,4 @@ typedef struct {
 } process_files;
 
 void process_config_file(const char *config_path, process_files *config);
+void free_process_files(process_files *config);
