@@ -22,7 +22,7 @@ typedef struct {
 
 // Function declarations
 void parse_xml(const char *filename, const char *tag);
-Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections, int print_outputs);
+Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections, int print_outputs, const char *filename);
 void free_sections(Section *sections, int num_sections);
 
 #endif

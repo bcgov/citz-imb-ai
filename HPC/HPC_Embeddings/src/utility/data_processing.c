@@ -27,7 +27,15 @@ void process_data(char *directory_path, int print_outputs, char *type)
     for (size_t i = 0; i < dir_info.num_files; i++)
     {
         int num_sections;
-        Section *sections = extract_sections_from_memory(dir_info.files[i].buffer, dir_info.files[i].filesize, &num_sections, print_outputs);
+    const char *filename = dir_info.files[i].filename;
+
+    Section *sections = extract_sections_from_memory(
+        dir_info.files[i].buffer,
+        dir_info.files[i].filesize,
+        &num_sections,
+        print_outputs,
+        filename  // pass explicitly
+    );
 
         printf("File name or act: %s\n", dir_info.files[i].filename);
         if (sections)

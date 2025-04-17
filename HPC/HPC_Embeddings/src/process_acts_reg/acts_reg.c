@@ -112,10 +112,19 @@ void process_acts_reg(legislation *item, int print_outputs, HashTable *table, in
 #pragma omp parallel for schedule(dynamic, 1)
     for (size_t i = 0; i < dir_info.num_files; i++)
     {
-        printf("File name or act: %s\n", dir_info.files[i].filename);
+        //printf("File name or act: %s\n", dir_info.files[i].filename);
 
         int num_sections;
-        Section *sections = extract_sections_from_memory(dir_info.files[i].buffer, dir_info.files[i].filesize, &num_sections, print_outputs);
+        // Section *sections = extract_sections_from_memory(dir_info.files[i].buffer, dir_info.files[i].filesize, &num_sections, print_outputs);
+	    const char *filename = dir_info.files[i].filename;
+
+	    Section *sections = extract_sections_from_memory(
+		dir_info.files[i].buffer,
+		dir_info.files[i].filesize,
+		&num_sections,
+		print_outputs,
+		filename  // pass explicitly
+	    );
 
         if (sections)
         {
