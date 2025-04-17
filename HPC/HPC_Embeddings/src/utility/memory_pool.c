@@ -40,9 +40,8 @@ char *pool_strdup(MemoryPool *pool, const char *source) {
 }
 
 void reset_pool(MemoryPool *pool) {
-    for (size_t i = 0; i < pool->count; i++) {
-        free(pool->blocks[i]);
-        pool->blocks[i] = NULL;
-    }
-    pool->count = 0;
+    pthread_mutex_lock(&pool->lock);
+    pool->used = 0;  // just reset the "used" counter
+    memset(pool->pool, 0, pool->size);  // optional: zero out old memory
+    pthread_mutex_unlock(&pool->lock);
 }
