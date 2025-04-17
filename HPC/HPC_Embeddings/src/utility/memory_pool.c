@@ -38,3 +38,10 @@ char *pool_strdup(MemoryPool *pool, const char *source) {
     memcpy(copy, source, length);
     return copy;
 }
+
+void reset_pool(MemoryPool *pool) {
+    pthread_mutex_lock(&pool->lock);
+    pool->used = 0;  // just reset the "used" counter
+    memset(pool->pool, 0, pool->size);  // optional: zero out old memory
+    pthread_mutex_unlock(&pool->lock);
+}

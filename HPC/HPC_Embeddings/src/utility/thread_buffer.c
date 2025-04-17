@@ -1,4 +1,9 @@
 #include "../../include/thread_buffer.h"
+#include <sys/stat.h>
+#include <libgen.h>
+#include <string.h>
+#include <errno.h>
+
 
 void init_thread_buffer(ThreadBuffer **thread_buffer_ptr, int *num_threads) {
     *num_threads = omp_get_max_threads();
@@ -29,6 +34,13 @@ void free_thread_buffers(ThreadBuffer *buffers, int num_threads) {
     free(buffers);
 }
 
+void reset_thread_buffers(ThreadBuffer *buffers, int num_threads) {
+    for (int i = 0; i < num_threads; i++) {
+        buffers[i].used = 0;  // Just reset the used bytes
+        // Optionally memset the buffer to zero for safety
+         memset(buffers[i].data, 0, buffers[i].capacity);
+    }
+}
 
 // Ensure the thread buffer has enough space to add additional bytes.
 // If not, reallocate (in this example we double the capacity until it fits).
@@ -53,9 +65,29 @@ void buffer_append(ThreadBuffer *buf, const char *data, size_t len) {
 }
 
 
+int mkdir_recursive(const char *path) {
+    char tmp[512];
+    char *p = NULL;
+    size_t len;
+
+    snprintf(tmp, sizeof(tmp), "%s", path);
+    len = strlen(tmp);
+    if (tmp[len - 1] == '/') tmp[len - 1] = '\0';
+
+    for (p = tmp + 1; *p; p++) {
+        if (*p == '/') {
+            *p = 0;
+            mkdir(tmp, 0777); // ignore errors (e.g., already exists)
+            *p = '/';
+        }
+    }
+    return mkdir(tmp, 0777);  // final mkdir (target dir)
+}
+
 void save_thread_buffers_to_folder(ThreadBuffer *thread_buffers, int num_threads, const char *folder_name, int rank) {
     // Create output folder
-    mkdir(folder_name, 0777);
+    mkdir_recursive(folder_name);
+    // mkdir(folder_name, 0777);
 
     for (int i = 0; i < num_threads; i++) {
         char filepath[512];

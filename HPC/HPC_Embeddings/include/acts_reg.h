@@ -11,5 +11,6 @@
 #include "memory.h"
 #include "thread_buffer.h"
 #include "data_structures/hash_table.h"
+#include "process_config.h"
 
-void process_acts_reg(char *directory_path, int print_outputs, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool, bool act_reg);
+void process_acts_reg(legislation *item, int print_output, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool);

@@ -20,5 +20,6 @@ void *pool_alloc(MemoryPool *pool, size_t size);
 MemoryPool *create_pool(size_t size);
 void destroy_pool(MemoryPool *pool);
 char *pool_strdup(MemoryPool *pool, const char *source);
+void reset_pool(MemoryPool *pool);
 
 #endif
