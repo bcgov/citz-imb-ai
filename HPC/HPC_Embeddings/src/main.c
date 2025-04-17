@@ -39,12 +39,16 @@ int main(int argc, char *argv[])
 
     process_files config;
     memset(&config, 0, sizeof(process_files));  // initialize to zero
-
+    
+    // Token file path
+    char *file_path;
+    
     if (using_config)
     {
         using_config = 1;
         config_file = argv[2];
         process_config_file(config_file, &config);
+	file_path = config.token_file_path;
     }
     else
     {
@@ -79,6 +83,9 @@ int main(int argc, char *argv[])
             leg1->type = 'A';
             config.properties[1] = leg1;
         }
+    
+	    // Load the token dictionary file
+	    file_path = argv[1];
     }
 
     int rank, size;
@@ -97,20 +104,18 @@ int main(int argc, char *argv[])
     // Set OpenMP to use all available threads on the current node
     omp_set_num_threads(omp_get_max_threads());
 
-    // Load the file
-    char *file_path = argv[1];
+
     printf("the file path is %s \n", file_path);
     FILE *file = fopen(file_path, "r");
     if (!file)
     {
-        perror("Could not open file");
-        return 1;
+	perror("Could not open file");
+	return 1;
     }
     else
     {
-        printf("file is opened properly");
+	printf("file is opened properly");
     }
-
     // process the file and load in hash table
     HashTable *table = load_tokens_and_store(file_path);
     if (!table)
@@ -158,7 +163,6 @@ int main(int argc, char *argv[])
         printf("Rank %d processing: %s\n", rank, item->source_path);
         //process_acts_reg(item->source_path, print_output, table, num_threads, thread_buffers, pool, (item->type == 'R'));
         process_acts_reg(item, print_output, table, num_threads, thread_buffers, pool);
-
     }
 
 

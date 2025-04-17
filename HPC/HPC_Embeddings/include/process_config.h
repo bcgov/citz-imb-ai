@@ -1,3 +1,6 @@
+#ifndef PROCESS_CONFIG
+#define PROCESS_CONFIG
+
 #include <json-c/json.h>
 
 /*
@@ -25,3 +28,5 @@ typedef struct {
 
 void process_config_file(const char *config_path, process_files *config);
 void free_process_files(process_files *config);
+
+#endif

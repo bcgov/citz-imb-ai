@@ -9,7 +9,6 @@
 
 #include <fcntl.h>
 #include <unistd.h>
-#include "process_config.h"
 
 #define DEST_RANK 2
 #define TAG_LENGTH 0
@@ -82,7 +81,7 @@ void send_thread_buffers_as_json(ThreadBuffer *thread_buffers, int num_threads, 
     free(thread_buffers);
 }
 
-void process_acts_reg(legislation *item, int print_output, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool)
+void process_acts_reg(legislation *item, int print_outputs, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool)
 {
     //printf("Processing %s from %s\n", (act_reg) ? "Regulation" : "Acts", directory_path);
     // Initialize streaming context
