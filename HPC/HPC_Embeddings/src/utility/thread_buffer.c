@@ -29,6 +29,13 @@ void free_thread_buffers(ThreadBuffer *buffers, int num_threads) {
     free(buffers);
 }
 
+void reset_thread_buffers(ThreadBuffer *buffers, int num_threads) {
+    for (int i = 0; i < num_threads; i++) {
+        buffers[i].used = 0;  // Just reset the used bytes
+        // Optionally memset the buffer to zero for safety
+         memset(buffers[i].data, 0, buffers[i].capacity);
+    }
+}
 
 // Ensure the thread buffer has enough space to add additional bytes.
 // If not, reallocate (in this example we double the capacity until it fits).

@@ -38,3 +38,11 @@ char *pool_strdup(MemoryPool *pool, const char *source) {
     memcpy(copy, source, length);
     return copy;
 }
+
+void reset_pool(MemoryPool *pool) {
+    for (size_t i = 0; i < pool->count; i++) {
+        free(pool->blocks[i]);
+        pool->blocks[i] = NULL;
+    }
+    pool->count = 0;
+}
