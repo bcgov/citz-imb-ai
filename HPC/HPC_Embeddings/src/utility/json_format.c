@@ -112,6 +112,9 @@ void save_openvino_format_to_dram(Section *section, TokenizedData *tokens, int r
         }
         json_object_object_add(chunk_obj, "tokens", tokens_array);
 
+         // ✅ Add the text corresponding to this token chunk
+        json_object_object_add(chunk_obj, "chunk_text", json_object_new_string(tokens->chunk_texts[i]));
+
         // Convert to string and append to buffer
         const char *json_str = json_object_to_json_string(chunk_obj);
         size_t json_str_len = strlen(json_str);

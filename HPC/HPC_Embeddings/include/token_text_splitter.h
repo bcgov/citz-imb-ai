@@ -33,6 +33,7 @@ typedef struct {
     int flattened_count;   // Total number of tokens in the flattened array
 
     int **token_chunks;    // E.g Array of 255-token chunks
+    char **chunk_texts; // map the token and word
     int chunk_count;       // Number of chunks
 } TokenizedData;
 

@@ -81,6 +81,32 @@ void send_thread_buffers_as_json(ThreadBuffer *thread_buffers, int num_threads, 
     free(thread_buffers);
 }
 
+void free_tokenized_data(TokenizedData *tokens) {
+    for (int i = 0; i < tokens->word_count; i++) {
+        free(tokens->words[i]);
+        free(tokens->token_values[i]);
+    }
+    free(tokens->words);
+    free(tokens->token_values);
+    free(tokens->token_counts);
+
+    if (tokens->flattened_tokens) free(tokens->flattened_tokens);
+
+    if (tokens->token_chunks) {
+        for (int i = 0; i < tokens->chunk_count; i++) {
+            free(tokens->token_chunks[i]);
+        }
+        free(tokens->token_chunks);
+    }
+
+    if (tokens->chunk_texts) {
+        for (int i = 0; i < tokens->chunk_count; i++) {
+            free(tokens->chunk_texts[i]);
+        }
+        free(tokens->chunk_texts);
+    }
+}
+
 void process_acts_reg(legislation *item, int print_outputs, HashTable *table, int num_threads, ThreadBuffer *thread_buffers, MemoryPool *pool)
 {
     //printf("Processing %s from %s\n", (act_reg) ? "Regulation" : "Acts", directory_path);
@@ -147,31 +173,7 @@ void process_acts_reg(legislation *item, int print_outputs, HashTable *table, in
                         // printf("Rank %d sending section with title: %s\n", rank, mpi_section.section_title);
                         //send_section_as_json(&sections[j], &tokens, rank);
                     }
-
-                    // Free tokens memory
-                    for (int i = 0; i < tokens.word_count; i++)
-                    {
-                        free(tokens.words[i]);
-                        free(tokens.token_values[i]);
-                    }
-                    free(tokens.words);
-                    free(tokens.token_values);
-                    free(tokens.token_counts);
-                    // Free flattened_tokens
-                    if (tokens.flattened_tokens)
-                    {
-                        free(tokens.flattened_tokens);
-                    }
-
-                    // Free token_chunks
-                    if (tokens.token_chunks)
-                    {
-                        for (int i = 0; i < tokens.chunk_count; i++)
-                        {
-                            free(tokens.token_chunks[i]);
-                        }
-                        free(tokens.token_chunks);
-                    }
+                    free_tokenized_data(&tokens);
                 }
             }
             free_sections(sections, num_sections);
