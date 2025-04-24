@@ -619,6 +619,20 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
         free(token.word);
     }
 
+	// Early exit if no tokens found
+	if (total_tokens == 0) {
+	    // set these explicitly to avoid uninitialized memory usage later
+	    result.chunk_count = 0;
+	    result.token_chunks = NULL;
+	    result.chunk_texts = NULL;
+
+	    // Clean-up allocated resources if any intermediate were created (words, etc.)
+	    free(words);
+	    free(processed_buffer);
+
+	    return result;
+	}
+
     // Create flattened tokens
     result.flattened_tokens = (int *)malloc(total_tokens * sizeof(int));
     result.flattened_count = total_tokens;
@@ -658,8 +672,14 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
         result.token_chunks[i] = (int *)malloc(chunk_size * sizeof(int));
 
         // Calculate start index and number of tokens to copy
-        int start = (i == 0) ? 0 : (i * stride);
-        int remaining = total_tokens - start;
+        //int start = (i == 0) ? 0 : (i * stride);
+            int start = i * stride;
+	    if (start >= total_tokens) {
+		fprintf(stderr, "Error: start index (%d) exceeds total tokens (%d)\n", start, total_tokens);
+		exit(EXIT_FAILURE);
+	    }
+
+	int remaining = total_tokens - start;
         int copy_size = (remaining < effective_chunk_size) ? remaining : effective_chunk_size;
 
         // Insert [CLS] token at the beginning
@@ -668,8 +688,17 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
         // Copy tokens into the chunk
         memcpy(&result.token_chunks[i][1], &result.flattened_tokens[start], copy_size * sizeof(int));
 
+    // Insert [SEP] token immediately after the copied tokens
+    int sep_token_index = 1 + copy_size;
+    if (sep_token_index >= chunk_size) {
+        // SAFETY CHECK: This should NEVER happen. But if it does, handle explicitly.
+        fprintf(stderr, "Error: sep_token_index (%d) exceeds chunk size (%d). Adjust chunk sizing logic.\n", sep_token_index, chunk_size);
+        exit(EXIT_FAILURE);
+    }
+    result.token_chunks[i][sep_token_index] = SEP_TOKEN;
+
         // Insert [SEP] token at the end
-        result.token_chunks[i][copy_size + 1] = SEP_TOKEN;
+        //result.token_chunks[i][copy_size + 1] = SEP_TOKEN;
 
         // Zero-pad if needed
         if (copy_size < effective_chunk_size) {

@@ -356,7 +356,8 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     }
     if (sectionContent) 
     {
-	xmlFree(sectionContent);
+	//xmlFree(sectionContent);
+	free(sectionContent);
     }
 
     return newSection;
@@ -436,7 +437,7 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     if (regTitleNode)
     {
         char *reg_title = getNodeContent(regTitleNode);
-        printf("reg title Node %s \n", reg_title);
+        //printf("reg title Node %s \n", reg_title);
         free(reg_title);
     }
     else

@@ -202,6 +202,7 @@ void process_acts_reg(legislation *item, int print_outputs, HashTable *table, in
     // At program end
     xmlCleanupParser();
     xmlMemoryDump();
+
     // Free all the memory
     free_dram_data(&dir_info);
 }

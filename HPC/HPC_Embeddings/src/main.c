@@ -210,5 +210,6 @@ int main(int argc, char *argv[])
     // Free the hash table
     free_table(table);
     fclose(file);
+    
     return 0;
 }
