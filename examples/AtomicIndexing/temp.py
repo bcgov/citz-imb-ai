@@ -1,56 +1,5 @@
-import re
 from neo4j_functions import neo4j
-import csv
-
-sample_text = """
-Nam sit amet urna lectus section 4. Nam et lacinia ipsum. Mauris.
-Aliquam sollicitudin libero section 6.2 sed accumsan pretium.
-Maecenas a section 9 (3) turpis eu turpis maximus  aliquet.
-Nullam feugiat urna nec dictum laoreet section 3.4 (1)(a).
-Section 214.2 nullam ut quam sit amet risus maximus volutpat.
-Duis consequat diam commodo urna sagittis mattis section 32 (d).
-Section 9 (a)(iv) sed vestibulum enim id turpis vehicula, a rhoncus velit dignissim.
-Aliquam a augue at orci viverra auctor section 9 (a) of this act.
-Morbi tincidunt nunc vitae section 3 of the Motor Vehicle Act massa vehicula, ac fermentum quam auctor.
-
-
-Vestibulum malesuada urna subsection (1) fermentum mollis consectetur.
-Subsection (3.4)(a) sed a risus eget sem eleifend cursus.
-Cras malesuada orci sed arcu subsection (6)(f)(iv) varius viverra quis nec erat.
-
-Fusce in risus nec paragraph (d) dolor commodo accumsan.
-Nunc in sem id magna dictum paragraph (a)(iii) auctor.
-Paragraph (b)(ii) praesent vehicula purus ut tellus suscipit semper.
-
-Fusce subparagraph (ii) tempor leo dapibus odio blandit scelerisque.
-Subparagraph (v) aecenas tempus elit ac bibendum iaculis.
-"""
-
-###########################################
-# The patterns hidden in the above text are:
-# section 4
-# section 6.2
-# section 9 (3)
-# section 3.4 (1)(a)
-# Section 214.2
-# section 32 (d)
-# Section 9 (a)(iv)
-# section 9 (a) of this act
-# section 3 of the Motor Vehicle Act
-
-# subsection (1)
-# Subsection (3.4)(a)
-# subsection (6)(f)(iv)
-
-# paragraph (d)
-# paragraph (a)(iii)
-# Paragraph (b)(ii)
-
-# subparagraph (ii)
-# Subparagraph (v)
-##########################################
-
-LOGGING = False
+import json
 
 
 def create_node_key(node_metadata):
@@ -89,11 +38,15 @@ def get_paged_v3(page=0, size=1000):
 
 set = {}
 collision_count = 0
+collision_map = {}  # Map to store collisions
+document_set = {}
+
 # Retrieve nodes from atomic node set
 page_number = 0
 page_size = 10000
 page = get_paged_v3(page_number, 10000)
 while len(page) > 0:
+    print(page_number)
     for node in page:
         properties = node.get("properties")
         key = create_node_key(properties)
@@ -108,8 +61,25 @@ while len(page) > 0:
             #     f"Duplicate key found: {key} for node {node} and {set[key]}"
             # )
             collision_count += 1
+            document_set[properties.get("document_title")] = True
+            if key not in collision_map:
+                collision_map[key] = [set[key]]  # Add the original node to the list
+            collision_map[key].append(node)  # Add the colliding node to the list
     # Move to next page
     page_number += 1
     page = get_paged_v3(page_number, 10000)
 
-print(collision_count)
+print(f"Collision count: {collision_count}")
+# print(f"Collision map: {collision_map}")
+print(f"Number of keys: {len(collision_map.keys())}")
+
+# Save the collision map to a JSON file
+if collision_map:
+    with open("collision_map.json", "w") as json_file:
+        json.dump(
+            collision_map, json_file, indent=4, default=str
+        )  # Use default=str to handle non-serializable objects
+    print("Collision map saved to 'collision_map.json'")
+
+print(f"Unique Acts/Regulations with collisions: {len(document_set)}")
+print(document_set.keys())
