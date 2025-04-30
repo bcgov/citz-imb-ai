@@ -1,7 +1,6 @@
 import re
 import time
-from neo4j_functions import get_paged_content
-import csv
+from neo4j_functions import get_paged_content, neo4j
 from pathlib import Path
 import json
 from collections import namedtuple
@@ -20,6 +19,7 @@ Donec nec nunc id ligula facilisis fringilla section 3, 53, and 8.
 Aliquam erat volutpat section 2 and 3. Donec nec nunc id ligula facilisis fringilla.
 Donec nec nunc id ligula facilisis fringilla section 4 of this appendix.
 Donec nec nunc id ligula facilisis fringilla sections 3 and 4 of this Appendix.
+Aliquam erat volutpat sections 39, 40 (1) (a) and 40 (2) (a). Donec nec nunc id ligula facilisis fringilla.
 
 
 Vestibulum malesuada urna subsection (1) fermentum mollis consectetur.
@@ -49,6 +49,7 @@ Subparagraph (v) aecenas tempus elit ac bibendum iaculis.
 # section 2 and 3
 # section 4 of this appendix
 # sections 3 and 4 of this Appendix
+# sections 39, 40 (1) (a) and 40 (2) (a)  <---- Not currently found correctly
 
 # subsection (1)
 # Subsection (3.4)(a)
@@ -353,5 +354,56 @@ print(f"First Match List: {len(first_match_list)}")
 print(f"Shortest Past List: {len(shortest_path_list)}")
 
 end_time = time.time()
-print(f"Time taken: {end_time - start_time} seconds")
+print(f"Time to find references: {end_time - start_time} seconds")
+start_time = time.time()
+
+# Load matches into neo4j
+# Convert first_match_list to a list of dictionaries
+# Because neo4j doesn't support tuples
+rows = [
+    {
+        "source_element_id": match.source_element_id,
+        "target_element_id": match.target_element_id,
+    }
+    for match in first_match_list
+]
+
+# Originally tried to do this via concurrent transactions.
+# There's an issue with lock conflicts when the same node is being accessed by multiple transactions
+# Changed it to only use a single transaction at a time. Speed is still very good.
+# Matches based on the elementId and creates reference edges between two nodes
+result = neo4j.query(
+    f"""
+    UNWIND $rows AS row
+    CALL (row) {{
+        MATCH (n) WHERE elementId(n) = row.source_element_id
+        MATCH (m) WHERE elementId(m) = row.target_element_id
+        MERGE (n)-[r:REFERENCES_v3]->(m)
+        ON CREATE SET r.weight = 1
+        ON MATCH SET r.weight = r.weight + 1
+        RETURN row.source_element_id AS source_id, row.target_element_id AS target_id
+    }} IN 1 CONCURRENT TRANSACTIONS OF 10000 ROWS
+    ON ERROR CONTINUE
+    REPORT STATUS AS s
+    WITH s WHERE s.errorMessage IS NOT NULL
+    RETURN s
+    """,
+    {"rows": rows},
+)
+# TODO: There are so few of these cases (<10) that this can wait for now
+# Add the shortest path cases as references as well
+# Convert shortest_path_list to a list of dictionaries
+# Because neo4j doesn't support tuples
+# rows = [
+#     {
+#         "source_element_id": match.source_element_id,
+#         "target_metadata": match.target_metadata,
+#     }
+#     for match in shortest_path_list
+# ]
+# for row in rows:
+
+print(f"Issues Identified: {len(result)}")
+end_time = time.time()
+print(f"Time to create edges: {end_time - start_time} seconds")
 exit()
