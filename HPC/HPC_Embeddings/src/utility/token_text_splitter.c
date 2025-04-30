@@ -619,14 +619,32 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
         free(token.word);
     }
 
+	// Early exit if no tokens found
+	if (total_tokens == 0) {
+	    // set these explicitly to avoid uninitialized memory usage later
+	    result.chunk_count = 0;
+	    result.token_chunks = NULL;
+	    result.chunk_texts = NULL;
+
+	    // Clean-up allocated resources if any intermediate were created (words, etc.)
+	    free(words);
+	    free(processed_buffer);
+
+	    return result;
+	}
+
     // Create flattened tokens
     result.flattened_tokens = (int *)malloc(total_tokens * sizeof(int));
     result.flattened_count = total_tokens;
 
+    int *flattened_token_to_word_idx = (int *)malloc(total_tokens * sizeof(int));
+
     int index = 0;
     for (int i = 0; i < word_count; i++) {
         for (int j = 0; j < result.token_counts[i]; j++) {
-            result.flattened_tokens[index++] = result.token_values[i][j];
+            result.flattened_tokens[index] = result.token_values[i][j];
+            flattened_token_to_word_idx[index] = i; // <-- new line
+            index++;
         }
     }
 
@@ -647,12 +665,21 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
     // Allocate memory for chunks
     result.token_chunks = (int **)malloc(result.chunk_count * sizeof(int *));
 
+    char **chunk_texts; // tracks the tokens and words
+    result.chunk_texts = (char **)malloc(result.chunk_count * sizeof(char *));
+
     for (int i = 0; i < result.chunk_count; i++) {
         result.token_chunks[i] = (int *)malloc(chunk_size * sizeof(int));
 
         // Calculate start index and number of tokens to copy
-        int start = (i == 0) ? 0 : (i * stride);
-        int remaining = total_tokens - start;
+        //int start = (i == 0) ? 0 : (i * stride);
+            int start = i * stride;
+	    if (start >= total_tokens) {
+		fprintf(stderr, "Error: start index (%d) exceeds total tokens (%d)\n", start, total_tokens);
+		exit(EXIT_FAILURE);
+	    }
+
+	int remaining = total_tokens - start;
         int copy_size = (remaining < effective_chunk_size) ? remaining : effective_chunk_size;
 
         // Insert [CLS] token at the beginning
@@ -661,16 +688,45 @@ TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool
         // Copy tokens into the chunk
         memcpy(&result.token_chunks[i][1], &result.flattened_tokens[start], copy_size * sizeof(int));
 
+    // Insert [SEP] token immediately after the copied tokens
+    int sep_token_index = 1 + copy_size;
+    if (sep_token_index >= chunk_size) {
+        // SAFETY CHECK: This should NEVER happen. But if it does, handle explicitly.
+        fprintf(stderr, "Error: sep_token_index (%d) exceeds chunk size (%d). Adjust chunk sizing logic.\n", sep_token_index, chunk_size);
+        exit(EXIT_FAILURE);
+    }
+    result.token_chunks[i][sep_token_index] = SEP_TOKEN;
+
         // Insert [SEP] token at the end
-        result.token_chunks[i][copy_size + 1] = SEP_TOKEN;
+        //result.token_chunks[i][copy_size + 1] = SEP_TOKEN;
 
         // Zero-pad if needed
         if (copy_size < effective_chunk_size) {
             memset(&result.token_chunks[i][copy_size + 2], 0, (chunk_size - copy_size - 2) * sizeof(int));
         }
+
+        // Extract the words responsible for the tokens in this chunk
+        int min_word_idx = flattened_token_to_word_idx[start];
+        int max_word_idx = flattened_token_to_word_idx[start + copy_size - 1];
+
+        // Estimate length and construct text
+        int buf_size = 0;
+        for (int w = min_word_idx; w <= max_word_idx; w++) {
+            buf_size += strlen(result.words[w]) + 1; // space or null terminator
+        }
+
+        result.chunk_texts[i] = (char *)malloc(buf_size * sizeof(char));
+        result.chunk_texts[i][0] = '\0';
+
+        for (int w = min_word_idx; w <= max_word_idx; w++) {
+            strcat(result.chunk_texts[i], result.words[w]);
+            if (w != max_word_idx) strcat(result.chunk_texts[i], " ");
+        }
+
     }
 
     // Free intermediate buffers
+    free(flattened_token_to_word_idx);
     free(words);
     free(processed_buffer);
 

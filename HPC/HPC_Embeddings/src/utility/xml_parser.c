@@ -226,6 +226,15 @@ xmlNodePtr findNodeByNamespace(xmlNodePtr root, const char *namespace, const cha
     return NULL;
 }
 
+xmlNodePtr findNode(xmlNodePtr root, const char *name) {
+    for (xmlNodePtr cur = root->children; cur != NULL; cur = cur->next) {
+        if (cur->type == XML_ELEMENT_NODE && strcmp((const char *)cur->name, name) == 0) {
+            return cur;
+        }
+    }
+    return NULL;
+}
+
 void printTitle(xmlNodePtr node)
 {
     xmlChar *title = xmlNodeGetContent(node);
@@ -347,7 +356,8 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     }
     if (sectionContent) 
     {
-	xmlFree(sectionContent);
+	//xmlFree(sectionContent);
+	free(sectionContent);
     }
 
     return newSection;
@@ -383,15 +393,21 @@ void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, 
     }
 }
 
-Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections, int print_outputs)
+Section *extract_sections_from_memory(const char *buffer, int size, int *num_sections, int print_outputs, const char *filename)
 {
-    xmlDocPtr doc;
     xmlNodePtr rootElement;
-
-    doc = xmlReadMemory(buffer, size, NULL, NULL, 0);
+    xmlDocPtr doc = xmlReadMemory(buffer, size, NULL, NULL, 0);
     if (doc == NULL)
     {
-        printf("Failed to parse the XML content from memory\n");
+        fprintf(stderr, "\n❌ Failed to parse XML.\nFile: %s\n", filename);
+
+        fprintf(stderr, "Buffer preview (first 200 chars):\n");
+        for (int i = 0; i < size && i < 200; i++) {
+            char c = buffer[i];
+            fputc(isprint((unsigned char)c) ? c : '.', stderr);
+        }
+        fputc('\n', stderr);
+
         return NULL;
     }
 
@@ -421,7 +437,7 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     if (regTitleNode)
     {
         char *reg_title = getNodeContent(regTitleNode);
-        printf("reg title Node %s \n", reg_title);
+        //printf("reg title Node %s \n", reg_title);
         free(reg_title);
     }
     else
@@ -439,6 +455,11 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
         // If regulation title is not found, try to get the act's title
         titleNode = findNodeByNamespace(rootElement, "act", "title");
     }
+
+	// 🔁 Fallback: try plain <title> if namespaced titles not found
+	if (!titleNode) {
+	    titleNode = findNode(rootElement, "title");
+	}
 
     // If neither title is found, free the document and return NULL
     if (!titleNode)

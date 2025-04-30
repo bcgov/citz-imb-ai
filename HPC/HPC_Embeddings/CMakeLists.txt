@@ -108,6 +108,8 @@ add_executable(HPCChain ${SOURCES})
 # Link MPI, libxml2, NUMA, and OpenMP libraries
 target_link_libraries(HPCChain MPI::MPI_C ${LIBXML2_LIBRARIES} ${NUMA_LIBRARIES} OpenMP::OpenMP_C ${JSON_LIBRARIES} ${OPENVINO_LIBRARIES})
 
+set(CMAKE_BUILD_TYPE Debug)
+
 # Set compiler flags
 if(CMAKE_C_COMPILER_ID MATCHES "Intel")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -qopenmp -O3 -mavx512f -mavx -msse3 -mavx512bw -mtune=generic -march=x86-64 -Wall -Wextra")
@@ -118,7 +120,7 @@ endif()
 # Add AddressSanitizer flags for GCC, Clang, and ICX
 if(CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID MATCHES "Intel")
     target_compile_options(HPCChain PRIVATE -fsanitize=address -g)
-    target_link_options(HPCChain PRIVATE -fsanitize=address)
+    target_link_options(HPCChain PRIVATE -fsanitize=address -g)
 endif()
 
 # Print final status
