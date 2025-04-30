@@ -67,6 +67,29 @@ LOGGING = False
 
 
 def create_node_key(node_metadata):
+    """
+    Create a unique key for a document node based on its metadata.
+
+    This function generates a string key by joining various document identifiers
+    (title, section, subsection, paragraph, and subparagraph numbers) with colons.
+    Only non-None values are included in the key.
+
+    Parameters
+    ----------
+    node_metadata : dict
+      A dictionary containing metadata about the document node with potential keys:
+      - document_title (str): The title of the document
+      - section_number (str): The section number
+      - subsection_number (str): The subsection number
+      - paragraph_number (str): The paragraph number
+      - subparagraph_number (str): The subparagraph number
+
+    Returns
+    -------
+    str
+      A colon-separated string of non-None metadata values that uniquely identifies
+      the document node. For example: "Document Title:1:2:3:a"
+    """
     source_document_title = node_metadata.get("document_title")
     source_section_number = node_metadata.get("section_number")
     source_subsection_number = node_metadata.get("subsection_number")
@@ -87,6 +110,36 @@ def create_node_key(node_metadata):
 
 
 def find_and_standardize_references(text, source_metadata):
+    """
+    Extract and standardize legal references from text using regular expressions.
+
+    This function identifies references to sections, subsections, paragraphs, and subparagraphs
+    in legal text and standardizes them into a consistent format.
+
+    Args:
+      text (str): The legal text to search for references.
+      source_metadata (dict): Metadata about the source document containing keys like:
+        - document_title: Title of the current document
+        - act_title: Title of the act (if applicable)
+        - section_number: Current section number (for relative references)
+        - subsection_number: Current subsection number (for relative references)
+        - paragraph_number: Current paragraph letter (for relative references)
+
+    Returns:
+      list: A list of dictionaries, each representing a standardized reference with these fields:
+        - document_title: The title of the referenced document
+        - section_number: The section number (e.g., "1", "2.3")
+        - subsection_number: The subsection number (e.g., "1", "2")
+        - paragraph_number: The paragraph letter (e.g., "a", "b")
+        - subparagraph_number: The subparagraph Roman numeral (e.g., "i", "iv")
+        - in_appendix: Boolean indicating if the reference is to an appendix (only for section references)
+
+    Examples:
+      >>> metadata = {"document_title": "Example Act", "section_number": "5", "subsection_number": "2"}
+      >>> text = "As stated in section 3(1)(a) and subsection (2) of this Act."
+      >>> refs = find_and_standardize_references(text, metadata)
+      >>> # Will return standardized references to section 3(1)(a) and subsection (2)
+    """
     standardized_references = []
     # Finding section references
     # Section pattern that can handle multiple sections (up to 4)
@@ -268,6 +321,7 @@ page_size = 10000
 page = get_paged_content(page_number, 10000)
 
 # Load node_map from json or build if not found
+# This helps with speed on subsequent runs
 node_map = {}
 atomic_nodes_map_file = Path("./data/community_detection/atomic_nodes_map.json")
 if atomic_nodes_map_file.exists():
@@ -403,6 +457,7 @@ result = neo4j.query(
 # ]
 # for row in rows:
 
+# If issues are found, consider running this again and printing them out
 print(f"Issues Identified: {len(result)}")
 end_time = time.time()
 print(f"Time to create edges: {end_time - start_time} seconds")
