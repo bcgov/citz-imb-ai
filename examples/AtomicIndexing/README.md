@@ -22,6 +22,16 @@ This script prompts Amazon Bedrock to extract key information about references t
 1. Update AWS session keys.
 2. Run script.
 
+## Create Edges Between Atomic Nodes with Regex
+
+See file `detect_ref_regex.py`
+
+This file will identify potential references in text of nodes and determine which node it should form the reference edge to. It does not currently handle all types of references, but it can catch a large number of them.
+References are created with the name :REFERENCES_v3.
+
+1. Ensure the above steps of Index Data are complete.
+2. Run script.
+
 ## Test Queries
 
 See file `atomic_simple_query.py`

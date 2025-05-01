@@ -140,6 +140,19 @@ def get_updated_chunks(act_id):
     return nodes[0].get("allNodes")
 
 
+# Gets paged results of content nodes
+def get_paged_content(page=0, size=1000):
+    nodes = neo4j.query(
+        f"""
+          MATCH (n:Content)
+          WITH n
+          SKIP {page * size} LIMIT {size}
+          RETURN collect(DISTINCT {{ elementId: elementId(n), properties: properties(n) }}) AS allNodes
+        """
+    )
+    return nodes[0].get("allNodes")
+
+
 ### TESTING CASES
 # print(find_node("Protection of Public Participation Act"))
 # print(find_node("Protection of Public Participation Act", "11"))
