@@ -379,7 +379,7 @@ tokens_t get_token(HashTable *table, const char *text)
         {
             //printf("Unrecognized token part: %c, %#x \n", text[i], text[i]);
             i++;
-            prefix = false;
+            //prefix = false;
         }
     }
 
