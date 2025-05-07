@@ -99,6 +99,8 @@ services:
       context: ../mlops/orchestration/airflow
       dockerfile: .docker/local/Dockerfile.webserver
     container_name: airflow_webserver
+    env_file:
+      - .env
     depends_on:
       - airflow_postgres
       - airflow_init
@@ -122,6 +124,8 @@ services:
       context: ../mlops/orchestration/airflow
       dockerfile: .docker/local/Dockerfile.scheduler
     container_name: airflow_scheduler
+    env_file:
+      - .env
     depends_on:
       - airflow_postgres
       - airflow_init
@@ -204,6 +208,7 @@ services:
     volumes:
       - neo4j:/var/lib/neo4j/data
       - neo4j-backup:/var/lib/neo4j/backups
+      - ./csv_data:/var/lib/neo4j/import
     ports:
       - "${NEO4J_DASHBOARD_PORT:-7474}:7474"
       - "${NEO4J_PORT:-7687}:7687"
@@ -216,6 +221,19 @@ services:
       - zuba
   ######################## End NEO4J ############################################
 
+  mcp-server:
+    image: mcp/neo4j-cypher:latest
+    build:
+      context: ../mcp/mcp-neo4j/servers/mcp-neo4j-cypher/  # adjust if Dockerfile is in subfolder
+    depends_on:
+      - neo4j
+    environment:
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USERNAME=neo4j
+      - NEO4J_PASSWORD=your-password
+      - NEO4J_DATABASE=neo4j
+    networks:
+      - zuba
   ######################## web FRONTEND ############################################
   web_frontend:
     container_name: citz-imb-ai-frontend-svc
@@ -246,6 +264,8 @@ services:
   ########################## WEB BACKEND ############################################
   web_backend:
     container_name: citz-imb-ai-backend-svc
+    env_file:
+      - .env
     build:
       context: ../web/backend-fastapi
       dockerfile: Dockerfile
@@ -261,12 +281,10 @@ services:
       NEO4J_PORT: ${NEO4J_PORT:-7687}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
-    depends_on:
-      - trulens
-      - neo4j
     ports:
       - "10000:10000"
     volumes:
+      - ../web/backend-fastapi:/backend
       - ../web/backend-fastapi/analytics_data:/backend/analytics_data/
     networks:
       - zuba
