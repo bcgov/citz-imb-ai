@@ -65,3 +65,23 @@ It only works if you've previously run the `connect_updated_chunks.py` script ab
 1. Update AWS keys and Neo4j parameters.
 2. Edit the `question` variable for what you want to ask.
 3. Run the script to see the output.
+
+## Build Communities
+
+See file `community_generation.ipynb`
+
+This workbook file contains instructions on how to build community clusters using the Leiden algorithm.
+Simply follow the queries outlined in the workbook.
+
+## Summarize Communities
+
+See file `community_summarization.py`
+
+This script follows the stages:
+
+- summarizing communities of nodes using AWS Bedrock
+- generating embeddings for these summaries
+- inserting community nodes into neo4j
+- connecting these nodes to other nodes in the same community
+
+Uncomment the function calls at the bottom of the script as needed to only run the parts you require.
