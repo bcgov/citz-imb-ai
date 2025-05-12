@@ -1,4 +1,4 @@
 export interface ScrollButtonProps {
-  scrollableElementId: string;
-  generationComplete: boolean;
+	scrollableElementId: string;
+	generationComplete: boolean;
 }

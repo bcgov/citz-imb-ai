@@ -1,5 +1,5 @@
-import bc_icon from './bc_icon.svg';
+import bc_icon from "./bc_icon.svg";
 
 export const assets = {
-  bc_icon,
+	bc_icon,
 };

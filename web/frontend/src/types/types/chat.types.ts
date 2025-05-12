@@ -1,38 +1,38 @@
 export interface ChatHistory {
-  prompt: string;
-  response: string;
+	prompt: string;
+	response: string;
 }
 
 export interface references {
-  refSectionId: string;
-  refActId: string;
-  refText: string;
+	refSectionId: string;
+	refActId: string;
+	refText: string;
 }
 
 export interface TopKItem {
-  ActId: string;
-  Regulations: string | null;
-  score: number;
-  sectionId: string;
-  sectionName: string;
-  text: string;
-  url: string | null;
-  references: references[];
+	ActId: string;
+	Regulations: string | null;
+	score: number;
+	sectionId: string;
+	sectionName: string;
+	text: string;
+	url: string | null;
+	references: references[];
 }
 
 export interface ApiResponse {
-  llm: string;
-  topk: TopKItem[];
+	llm: string;
+	topk: TopKItem[];
 }
 
 export interface Message {
-  type: 'user' | 'ai';
-  content: string;
-  topk?: TopKItem[];
+	type: "user" | "ai";
+	content: string;
+	topk?: TopKItem[];
 }
 
 export interface ChatState {
-  key: string;
-  description: string;
-  trulens_id: string;
+	key: string;
+	description: string;
+	trulens_id: string;
 }
