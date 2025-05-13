@@ -1,4 +1,4 @@
-import { userFeedbackType } from "@/types";
+import type { userFeedbackType } from "@/types";
 
 // Function to send user feedback to the server
 const sendFeedback = async (

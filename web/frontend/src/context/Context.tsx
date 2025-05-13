@@ -1,8 +1,9 @@
-import React, { createContext, useEffect, useState } from "react";
+import type React from "react";
+import { createContext, useEffect, useState } from "react";
 
 import { runChat } from "@/api/chat";
 import sendFeedback from "@/api/feedback";
-import {
+import type {
 	ChatHistory,
 	ChatState,
 	ContextProps,

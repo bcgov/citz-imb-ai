@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import FeedbackTooltip from "@/components/FeedbackBar/FeedbackTooltip/FeedbackTooltip";
 import { VoteType } from "@/types";
-import { ThumbButtonsProps } from "@/types/types/feedback.types";
+import type { ThumbButtonsProps } from "@/types/types/feedback.types";
 import { ThumbsDown, ThumbsUp } from "@phosphor-icons/react";
 
 const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {

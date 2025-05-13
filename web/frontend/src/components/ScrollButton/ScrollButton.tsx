@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { ScrollButtonProps } from "@/types";
+import type { ScrollButtonProps } from "@/types";
 import { CaretDown, CaretUp } from "@phosphor-icons/react";
 
 import "./ScrollButton.scss";

@@ -2,7 +2,7 @@ import {
 	sendAnalyticsUpdatesToBackend,
 	sendFullAnalyticsDataToBackend,
 } from "@/api/analytics";
-import {
+import type {
 	AnalyticsData,
 	AnalyticsUpdate,
 	ChatInteraction,

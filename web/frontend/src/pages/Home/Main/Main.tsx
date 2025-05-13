@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import type React from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 import { assets } from "@/assets/icons/assets";
 import AnswerSection from "@/components/AnswerSection/AnswerSection";
