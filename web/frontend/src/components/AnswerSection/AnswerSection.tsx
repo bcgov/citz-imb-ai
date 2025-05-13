@@ -1,16 +1,13 @@
-import React, {
-	useCallback,
-	useContext,
-	useEffect,
-	useRef,
-	useState,
-} from "react";
+import type React from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 
 import { assets } from "@/assets/icons/assets";
+import SourcesSection from "@/components/AnswerSection/SourcesSection/SourcesSection";
+import ImagesSection from "@/components/AnswerSection/ImagesSection/ImagesSection";
 import FeedbackBar from "@/components/FeedbackBar/FeedbackBar";
 import ModalDialog from "@/components/Modal/ModalDialog";
 import { Context } from "@/context/Context";
-import { AnswerSectionProps, TopKItem } from "@/types";
+import type { AnswerSectionProps, TopKItem } from "@/types";
 import {
 	addChatInteraction,
 	initAnalytics,
@@ -222,23 +219,17 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 							className={`chevron-icon ${showSources ? "" : "rotated"}`}
 						/>
 					</h3>
-					<div className={`topk-container ${showSources ? "show" : "hide"}`}>
-						<div className="topk-cards">
-							{message.topk.map((item, index) => (
-								<div
-									key={index}
-									className="topk-card"
-									onClick={() => handleCardClick(item, index)}
-								>
-									<h3>{item.ActId}</h3>
-									<p className="truncated-text">
-										{truncateText(item.text, 100)}
-									</p>
-									<span className="card-number">{index + 1}</span>
-								</div>
-							))}
-						</div>
-					</div>
+					<SourcesSection
+						showSources={showSources}
+						message={message}
+						handleCardClick={handleCardClick}
+						truncateText={truncateText}
+					/>
+					<ImagesSection
+						showSources={showSources}
+						message={message}
+						handleCardClick={handleCardClick}
+					/>
 				</div>
 			)}
 
