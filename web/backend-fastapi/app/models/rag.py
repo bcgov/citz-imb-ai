@@ -62,7 +62,11 @@ class get_full_rag:
 
     @instrument
     def re_rank_reference(
-        self, topk, compared_text, doc_fields=[{"name": "text", "weight": 1}]
+        self,
+        topk,
+        compared_text,
+        doc_fields=[{"name": "text", "weight": 1}],
+        take_top=5,
     ):
         model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
         for field in doc_fields:
@@ -89,7 +93,7 @@ class get_full_rag:
             key=lambda x: x.get("cross_score", 0),
             reverse=True,
         )
-        return topk
+        return topk.copy()[:take_top]  # Return top k results
 
     def query_with_history(self, query: str, chat_history: List[ChatHistory]):
         query_with_history = ""
@@ -105,9 +109,6 @@ class get_full_rag:
         context_str = self.re_rank_reference(
             context_str,
             query,
-            [
-                {"name": "text", "weight": 1}
-            ],  # Use text field which exists in both schemas
         )
         create_prompt = self.create_prompt(query, context_str, chat_history, state)
         bedrock_response = self.get_response(create_prompt, state.kwargs_key)
