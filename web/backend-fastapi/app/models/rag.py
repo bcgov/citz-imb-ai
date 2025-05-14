@@ -102,16 +102,14 @@ class get_full_rag:
     def query(self, query: str, chat_history: List[ChatHistory], kg, state) -> str:
         query_with_history = self.query_with_history(query, chat_history)
         context_str = self.retrieve(query_with_history, kg, state)
+        context_str = self.re_rank_reference(
+            context_str,
+            query,
+            [
+                {"name": "text", "weight": 1}
+            ],  # Use text field which exists in both schemas
+        )
         create_prompt = self.create_prompt(query, context_str, chat_history, state)
         bedrock_response = self.get_response(create_prompt, state.kwargs_key)
-        # Rerank to sort references by relevance to response
-        #context_str = self.re_rank_reference(
-        #    context_str,
-        #    bedrock_response,
-        #    [
-        #        {"name": "text", "weight": 1}
-        #    ],  # Use text field which exists in both schemas
-        #)
-
         pretty_output = self.formatoutput(context_str, bedrock_response)
         return json.dumps(pretty_output)
