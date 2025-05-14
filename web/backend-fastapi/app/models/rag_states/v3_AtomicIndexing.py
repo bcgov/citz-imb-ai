@@ -8,7 +8,7 @@ from ...common.chat_objects import ChatHistory
 
 class AtomicIndexing(State):
     __tag = "v3AtomicIndexing"  # Don't update this
-    __version = "1"  # Update this if making changes
+    __version = "2"  # Update this if making changes
     __description = """
       Structure of data indexing reflects the structure of the Acts and Regulations.
       Uses UpdatedChunks for initial search, then returns all context of matched Sections.
@@ -20,7 +20,7 @@ class AtomicIndexing(State):
         OPTIONAL MATCH (node)-[:IS]-(atomicSection)
         OPTIONAL MATCH (atomicSection)-[:CONTAINS*]->(containedNode)
         OPTIONAL MATCH (containedNode)-[:NEXT*]->(nextNode)
-        OPTIONAL MATCH (containedNode)-[:REFERENCE]->(refNode)
+        OPTIONAL MATCH (containedNode)-[:REFERENCES_v3]->(refNode)
         RETURN score, 
               node.ActId AS ActId,  
               node.RegId as Regulations, 
