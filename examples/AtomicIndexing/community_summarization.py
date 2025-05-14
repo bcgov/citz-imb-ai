@@ -64,7 +64,7 @@ def create_prompt(insert_text):
     Do not include any other text.
     Do not include an introduction stating that this is a summary.
     Use markdown to format your response.
-    If the context is insufficient to create a response, respond with "No text content."
+    Even if the context is insufficient to create a proper summary, try your best to summarize what's there.
 
     Original text:
     {insert_text}
@@ -132,10 +132,14 @@ def build_summaries():
         text = ""
         documents_included = set()
         for node in nodes:
-            if node["document_title"] is not None:
+            if node.get("document_title") is not None:
                 documents_included.add(node["document_title"])
-            if node["text"] is not None:
+            if node.get("text") is not None:
                 text += node["text"] + "\n"
+            if node.get("rows") is not None:
+                text += str(node["rows"]) + "\n"
+            if node.get("term") is not None and node.get("definition") is not None:
+                text += f"{node['term']}: {node['definition']}\n"
 
         chunks = token_splitter.split_text(text)
 
