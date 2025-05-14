@@ -45,6 +45,7 @@ class AtomicIndexing(State):
             query=self.__vector_search_query,
             kwargs_key="mixtral",
             description=self.__description,
+            top_k=10,
         )
 
     def create_prompt(
@@ -109,4 +110,5 @@ class AtomicIndexing(State):
             self.__embeddings,
             self.__vector_index,
             self.__vector_search_query,
+            self.top_k,
         )
