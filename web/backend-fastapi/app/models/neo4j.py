@@ -2,7 +2,9 @@ from langchain_community.graphs import Neo4jGraph
 import os
 
 
-def neo4j_vector_search(kg, question, embeddings, vector_index, vector_search_query):
+def neo4j_vector_search(
+    kg, question, embeddings, vector_index, vector_search_query, top_k=10
+):
     """Search for similar nodes using the Neo4j vector index"""
     query_embedding = embeddings.embed_query(question)
     similar = kg.query(
@@ -10,7 +12,7 @@ def neo4j_vector_search(kg, question, embeddings, vector_index, vector_search_qu
         params={
             "question": query_embedding,
             "index_name": vector_index,
-            "top_k": 10,
+            "top_k": top_k,
         },
     )
     return similar

@@ -1,4 +1,16 @@
 import sys
+from sentence_transformers import CrossEncoder
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
+
+# Preload the model at application startup
+# They are stored in cache allowing for faster lookup later
+def preload_models():
+    CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+    HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
+
+preload_models()
 
 
 class MockNestAsyncio:
