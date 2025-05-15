@@ -91,5 +91,14 @@ OPTIONS {{ indexConfig: {{ `vector.dimensions`: 384, `vector.similarity_function
 """
 neo4j.query(index_query)
 
+# Link Acts and Regulations
+link_query = f"""
+MATCH (a:v3:Act), (r:v3:Regulation) 
+WHERE a.document_title = r.related_act_title 
+MERGE (r)-[:BELONGS_TO]->(a) 
+RETURN a, r
+"""
+neo4j.query(link_query)
+
 end = time.time()
 print(end - start)
