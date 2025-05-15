@@ -397,9 +397,21 @@ def connect_communities_to_nodes():
     print("Community connections created.")
 
 
+def create_index():
+    index_query = f"""
+    CREATE VECTOR INDEX community_embeddings IF NOT EXISTS
+    FOR (m:Community_v3)
+    ON m.chunk_embedding
+    OPTIONS {{ indexConfig: {{ `vector.dimensions`: 384, `vector.similarity_function`: 'cosine'}} }}
+    """
+    neo4j.query(index_query)
+    print("Vector index created.")
+
+
 # Run functions as needed to summarize, create embeddings, insert nodes, and connect them
 # build_summaries()
 # create_embeddings()
 # create_community_nodes()
 # connect_community_chunks()
 # connect_communities_to_nodes()
+# create_index()
