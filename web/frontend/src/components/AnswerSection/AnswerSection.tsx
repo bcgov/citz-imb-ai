@@ -204,52 +204,27 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 		return text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
 	}, []);
 
-	// Define available images with their URLs and filenames
-	const availableImages = [
-		{
-			url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/07043_lg_O_3_1_Toq_RGB.gif",
-			filename: "07043_lg_O_3_1_Toq_RGB.gif",
-		},
-		{
-			url: "https://www.bclaws.gov.bc.ca/civix/document/id/loo110/loo110/38_2005.gif",
-			filename: "38_2005.gif",
-		},
-		{
-			url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/07043_lg_O_3_1_Toq_RGB.gif",
-			filename: "07043_lg_O_3_1_Toq_RGB.gif",
-		},
-		{
-			url: "https://www.bclaws.gov.bc.ca/civix/document/id/loo110/loo110/38_2005.gif",
-			filename: "38_2005.gif",
-		},
-		{
-			url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/07043_lg_O_3_1_Toq_RGB.gif",
-			filename: "07043_lg_O_3_1_Toq_RGB.gif",
-		},
-	];
-
 	// Prepare image data for ImagesSection
 	const prepareImageData = useCallback((): ImageItem[] => {
 		if (!message.topk || message.topk.length === 0) {
 			return [];
 		}
 
-		// Only create image items for available images, not all topk items
-		return availableImages.map((availableImage, index) => {
-			const baseItem: ImageItem = {
-				url: availableImage.url,
-				alt: availableImage.filename,
-				filename: availableImage.filename,
-			};
+		// Filter topk items that have image data and create ImageItem objects
+		return message.topk
+			.filter((item) => item.ImageUrl && item.file_name) // Only include items with image data
+			.map((item) => {
+				const baseItem: ImageItem = {
+					url: item.ImageUrl,
+					alt: item.file_name,
+					filename: item.file_name,
+				};
 
-			// Only include topkItem if it exists
-			const associatedTopkItem = message.topk?.[index];
-			if (associatedTopkItem) {
-				baseItem.topkItem = associatedTopkItem;
-			}
+				// Include topkItem for analytics tracking
+				baseItem.topkItem = item;
 
-			return baseItem;
-		});
+				return baseItem;
+			});
 	}, [message.topk]);
 
 	return (
