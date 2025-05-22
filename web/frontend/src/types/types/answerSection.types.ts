@@ -20,11 +20,15 @@ export interface SourcesSectionProps {
 	truncateText: (text: string, length: number) => string;
 }
 
+export interface ImageItem {
+	url: string;
+	alt: string;
+	filename?: string; // Optional filename for display
+	topkItem?: TopKItem; // Optional reference to the original topk item if needed
+}
+
 export interface ImagesSectionProps {
 	showSources: boolean;
-	message: {
-		content: string;
-		topk?: TopKItem[];
-	};
-	handleCardClick: (item: TopKItem, index: number) => void;
+	images: ImageItem[];
+	onImageClick: (image: ImageItem, index: number) => void;
 }

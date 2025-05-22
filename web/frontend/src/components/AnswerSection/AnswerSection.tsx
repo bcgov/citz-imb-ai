@@ -7,7 +7,7 @@ import ImagesSection from "@/components/AnswerSection/ImagesSection/ImagesSectio
 import FeedbackBar from "@/components/FeedbackBar/FeedbackBar";
 import ModalDialog from "@/components/Modal/ModalDialog";
 import { Context } from "@/context/Context";
-import type { AnswerSectionProps, TopKItem } from "@/types";
+import type { AnswerSectionProps, ImageItem, TopKItem } from "@/types";
 import {
 	addChatInteraction,
 	initAnalytics,
@@ -91,6 +91,17 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 	const handleCardClick = useCallback(
 		(item: TopKItem, index: number) => {
 			setSelectedItem(item);
+			if (chatIndex !== null) {
+				trackSourceClick(chatIndex, index);
+			}
+		},
+		[chatIndex],
+	);
+
+	// Handler for image clicks
+	const handleImageClick = useCallback(
+		(_image: ImageItem, index: number) => {
+			// Only track analytics, don't show the source modal
 			if (chatIndex !== null) {
 				trackSourceClick(chatIndex, index);
 			}
@@ -193,6 +204,54 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 		return text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
 	}, []);
 
+	// Define available images with their URLs and filenames
+	const availableImages = [
+		{
+			url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/07043_lg_O_3_1_Toq_RGB.gif",
+			filename: "07043_lg_O_3_1_Toq_RGB.gif",
+		},
+		{
+			url: "https://www.bclaws.gov.bc.ca/civix/document/id/loo110/loo110/38_2005.gif",
+			filename: "38_2005.gif",
+		},
+		{
+			url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/07043_lg_O_3_1_Toq_RGB.gif",
+			filename: "07043_lg_O_3_1_Toq_RGB.gif",
+		},
+		{
+			url: "https://www.bclaws.gov.bc.ca/civix/document/id/loo110/loo110/38_2005.gif",
+			filename: "38_2005.gif",
+		},
+		{
+			url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol43/consol43/07043_lg_O_3_1_Toq_RGB.gif",
+			filename: "07043_lg_O_3_1_Toq_RGB.gif",
+		},
+	];
+
+	// Prepare image data for ImagesSection
+	const prepareImageData = useCallback((): ImageItem[] => {
+		if (!message.topk || message.topk.length === 0) {
+			return [];
+		}
+
+		// Only create image items for available images, not all topk items
+		return availableImages.map((availableImage, index) => {
+			const baseItem: ImageItem = {
+				url: availableImage.url,
+				alt: availableImage.filename,
+				filename: availableImage.filename,
+			};
+
+			// Only include topkItem if it exists
+			const associatedTopkItem = message.topk?.[index];
+			if (associatedTopkItem) {
+				baseItem.topkItem = associatedTopkItem;
+			}
+
+			return baseItem;
+		});
+	}, [message.topk]);
+
 	return (
 		<div className="answer-section">
 			{/* AI response */}
@@ -225,11 +284,14 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 						handleCardClick={handleCardClick}
 						truncateText={truncateText}
 					/>
-					<ImagesSection
-						showSources={showSources}
-						message={message}
-						handleCardClick={handleCardClick}
-					/>
+					{/* Only show ImagesSection if there are images to display */}
+					{prepareImageData().length > 0 && (
+						<ImagesSection
+							showSources={showSources}
+							images={prepareImageData()}
+							onImageClick={handleImageClick}
+						/>
+					)}
 				</div>
 			)}
 
