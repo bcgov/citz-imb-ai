@@ -125,10 +125,10 @@ const Main = () => {
 
 	// Sample card contents for suggestions
 	const cardContents = [
-		`How much notice do I need to give to end my rental lease in BC?`,
-		`Do I need to wear a seatbelt in BC?`,
-		`How many breaks do I get during a workday in BC?`,
-		`How do I dispute a traffic ticket in BC?`,
+		"How much notice do I need to give to end my rental lease in BC?",
+		"Do I need to wear a seatbelt in BC?",
+		"How many breaks do I get during a workday in BC?",
+		"How do I dispute a traffic ticket in BC?",
 	];
 
 	// Functions to handle modal actions
