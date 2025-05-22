@@ -1,63 +1,63 @@
-@import '@bcgov/bc-sans/css/BCSans';
+@import "@bcgov/bc-sans/css/BCSans";
 
 /* Define root variables for theming */
 :root {
-  /* Color variables */
-  --background-color: hsl(0, 0%, 2%);
-  --text-color: #ffffffde;
-  --gradient-start: #598ff0;
-  --gradient-end: #b1c5ff;
-  --button-bg-color: #013366;
-  --button-bg-color-hover: #1e5189;
-  --button-bg-safety-color: #2563eb;
-  --button-bg-color-red: #ce3e39;
-  --button-bg-color-red-hover: #a2312d;
-  --button-hover-brightness: 90%;
-  --error-gradient-start: #ff5f5f;
-  --error-gradient-end: #ffb1b1;
-  --sidebar-background-color: #1e1f20;
-  --sidebar-new-chat-background-color: #1a1a1c;
-  --sidebar-text-color: #e3e3e3;
-  --sidebar-hover-color: #2f3030;
-  --sidebar-hover-color-active: #46494a;
-  --main-background-color: #131314;
-  --main-text-color: #c9ccce;
-  --main-result-text-color: #e3e3e3;
-  --main-gradient-start: #4b90ff;
-  --main-gradient-end: #ff5546;
-  --main-secondary-text-color: #444746;
-  --main-hover-color: #2f3030;
-  --main-hover-color-active: #46494a;
-  --main-scrollbar-color: #46494a;
-  --card-background-color: #1e1f20;
-  --input-background-color: #1e1f20;
-  --input-text-color: #e3e3e3;
-  --loader-background-color: #ffffff;
-  --loader-gradient-start: #9ed7ff;
-  --loader-gradient-middle: #ffffff;
-  --loader-gradient-end: #9ed7ff;
-  --bc-yellow: #e3a82b;
-  --bc-blue: #234075;
-  --search-box-height: 300px;
+	/* Color variables */
+	--background-color: hsl(0, 0%, 2%);
+	--text-color: #ffffffde;
+	--gradient-start: #598ff0;
+	--gradient-end: #b1c5ff;
+	--button-bg-color: #013366;
+	--button-bg-color-hover: #1e5189;
+	--button-bg-safety-color: #2563eb;
+	--button-bg-color-red: #ce3e39;
+	--button-bg-color-red-hover: #a2312d;
+	--button-hover-brightness: 90%;
+	--error-gradient-start: #ff5f5f;
+	--error-gradient-end: #ffb1b1;
+	--sidebar-background-color: #1e1f20;
+	--sidebar-new-chat-background-color: #1a1a1c;
+	--sidebar-text-color: #e3e3e3;
+	--sidebar-hover-color: #2f3030;
+	--sidebar-hover-color-active: #46494a;
+	--main-background-color: #131314;
+	--main-text-color: #c9ccce;
+	--main-result-text-color: #e3e3e3;
+	--main-gradient-start: #4b90ff;
+	--main-gradient-end: #ff5546;
+	--main-secondary-text-color: #444746;
+	--main-hover-color: #2f3030;
+	--main-hover-color-active: #46494a;
+	--main-scrollbar-color: #46494a;
+	--card-background-color: #1e1f20;
+	--input-background-color: #1e1f20;
+	--input-text-color: #e3e3e3;
+	--loader-background-color: #ffffff;
+	--loader-gradient-start: #9ed7ff;
+	--loader-gradient-middle: #ffffff;
+	--loader-gradient-end: #9ed7ff;
+	--bc-yellow: #e3a82b;
+	--bc-blue: #234075;
+	--search-box-height: 300px;
 
-  /* Font settings */
-  font-family: 'BCSans', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	/* Font settings */
+	font-family: "BCSans", sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-  /* Font rendering optimizations */
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* Font rendering optimizations */
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Apply box-sizing to all elements */
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Reset body margin */
 body {
-  margin: 0;
+	margin: 0;
 }
