@@ -24,7 +24,7 @@ const FeedbackTooltip = ({
   };
 
   return (
-    <div className="feedback-tooltip">
+    <div className='feedback-tooltip'>
       <form onSubmit={handleSubmit}>
         {/* Feedback input field */}
         <textarea
@@ -34,11 +34,11 @@ const FeedbackTooltip = ({
           autoFocus
         />
         {/* Submit and cancel buttons */}
-        <div className="tooltip-buttons">
-          <button type="submit" onClick={handleSubmit}>
+        <div className='tooltip-buttons'>
+          <button type='submit' onClick={handleSubmit}>
             Submit
           </button>
-          <button type="button" onClick={onClose}>
+          <button type='button' onClick={onClose}>
             Cancel
           </button>
         </div>

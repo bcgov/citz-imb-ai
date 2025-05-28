@@ -43,18 +43,18 @@ const ImagesSection = ({
   };
 
   const imagePreview = selectedImage ? (
-    <div className="image-preview-container">
+    <div className='image-preview-container'>
       <button
-        type="button"
-        className="image-preview-button"
+        type='button'
+        className='image-preview-button'
         onClick={handleImagePreviewClick}
         onKeyDown={handleImagePreviewKeyDown}
-        title="Click to open image in new tab"
+        title='Click to open image in new tab'
       >
         <img
           src={selectedImage.url}
           alt={selectedImage.alt}
-          className="image-preview clickable-image"
+          className='image-preview clickable-image'
         />
       </button>
     </div>
@@ -63,16 +63,16 @@ const ImagesSection = ({
   return (
     <>
       <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
-        <div className="topk-cards">
+        <div className='topk-cards'>
           {images.map((image, index) => (
             <button
-              type="button"
+              type='button'
               key={`image-${image.url}-${image.alt}`}
-              className="topk-card"
+              className='topk-card'
               onClick={() => handleImageClick(image, index)}
             >
-              <img src={image.url} alt={image.alt} className="topk-card-img" />
-              <span className="card-number">{index + 1}</span>
+              <img src={image.url} alt={image.alt} className='topk-card-img' />
+              <span className='card-number'>{index + 1}</span>
             </button>
           ))}
         </div>

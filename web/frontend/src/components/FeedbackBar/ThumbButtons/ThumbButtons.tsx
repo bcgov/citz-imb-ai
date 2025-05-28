@@ -40,11 +40,11 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
   };
 
   return (
-    <div className="feedback-buttons">
+    <div className='feedback-buttons'>
       {/* Thumbs up button - becomes active when upvoted */}
       <button
         className={`feedback-action-button ${activeButton === VoteType.upvote ? 'active' : ''}`}
-        title="Good Response"
+        title='Good Response'
         onClick={() => handleVoteClick(VoteType.upvote)}
       >
         <ThumbsUp size={20} />
@@ -53,7 +53,7 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
       {/* Thumbs down button - becomes active when downvoted */}
       <button
         className={`feedback-action-button ${activeButton === VoteType.downvote ? 'active' : ''}`}
-        title="Bad Response"
+        title='Bad Response'
         onClick={() => handleVoteClick(VoteType.downvote)}
       >
         <ThumbsDown size={20} />

@@ -105,21 +105,21 @@ const Sidebar = () => {
       </div> */}
 
       {/* New chat button */}
-      <div onClick={() => newChat()} className="new-chat" title="New Chat">
+      <div onClick={() => newChat()} className='new-chat' title='New Chat'>
         <Plus size={24} />
         {!isCollapsed ? <p>New Chat</p> : null}
       </div>
 
       {/* Recent prompts section (visible when expanded) */}
       {!isCollapsed ? (
-        <div className="recent">
-          <p className="recent-title">Recent</p>
-          <div className="recent-entries">
+        <div className='recent'>
+          <p className='recent-title'>Recent</p>
+          <div className='recent-entries'>
             {prevPrompts.map((item: string, index: Key) => (
               <div
                 key={index}
                 onClick={() => loadPrompt(item)}
-                className="recent-entry"
+                className='recent-entry'
               >
                 <Chat size={24} />
                 <p>
@@ -131,11 +131,11 @@ const Sidebar = () => {
         </div>
       ) : null}
 
-      <div className="lower-button-container">
+      <div className='lower-button-container'>
         {/* Options Menu */}
         <div
-          className="options"
-          title="Options"
+          className='options'
+          title='Options'
           onClick={() => setIsOptionsOpen(true)}
         >
           <Gear size={26} />
@@ -143,7 +143,7 @@ const Sidebar = () => {
         </div>
 
         {/* Logout button */}
-        <div onClick={openModal} className="bottom" title="Logout">
+        <div onClick={openModal} className='bottom' title='Logout'>
           <UserCircle size={26} />
           {!isCollapsed ? <p>Logout</p> : null}
         </div>
@@ -152,24 +152,24 @@ const Sidebar = () => {
       {/* Options confirmation modal */}
       {isOptionsOpen && (
         <ModalDialog
-          title="Options"
+          title='Options'
           description={
             <>
               <h2>Search & Query Version</h2>
               {activeStates.length ? (
                 activeStates.map((state) => (
-                  <div className="rag-state-option" key={state.key}>
+                  <div className='rag-state-option' key={state.key}>
                     <input
-                      type="radio"
+                      type='radio'
                       id={state.key}
-                      name="index_method"
+                      name='index_method'
                       value={state.key}
                       checked={state.key === selectedState}
                       onChange={() => {
                         setSelectedState(state.key);
                       }}
                     />
-                    <div className="rag-state-option-text">
+                    <div className='rag-state-option-text'>
                       <label htmlFor={state.key}>
                         <h3>{state.key}</h3>
                         <p>{state.description}</p>
@@ -212,7 +212,7 @@ const Sidebar = () => {
       {/* Logout confirmation modal */}
       {isModalVisible && (
         <ModalDialog
-          title="Logout"
+          title='Logout'
           description={
             <>
               <p>Do you really want to log out?</p>

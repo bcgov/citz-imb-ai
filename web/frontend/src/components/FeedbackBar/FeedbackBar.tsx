@@ -29,7 +29,7 @@ const FeedbackBar = () => {
   };
 
   return (
-    <div className="feedback-bar">
+    <div className='feedback-bar'>
       <ThumbButtons activeButton={activeButton} onVote={handleVote} />
       <CopyButton />
       <RegenerateButton />

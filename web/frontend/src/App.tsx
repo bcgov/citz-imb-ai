@@ -19,13 +19,13 @@ const App = () => {
     <Router>
       <Routes>
         {/* Route for the home page, conditionally rendering Main or Welcome based on authentication */}
-        <Route path="/" element={Authenticated ? <Main /> : <Welcome />} />
+        <Route path='/' element={Authenticated ? <Main /> : <Welcome />} />
         {/* Route for the error page */}
-        <Route path="/error" element={<Error />} />
+        <Route path='/error' element={<Error />} />
         {/* Catch-all route that redirects to the error page */}
-        <Route path="*" element={<Navigate to="/error" />} />
+        <Route path='*' element={<Navigate to='/error' />} />
         {/* Route for the safety page */}
-        <Route path="/safety" element={<Safety />} />
+        <Route path='/safety' element={<Safety />} />
       </Routes>
     </Router>
   );

@@ -4,21 +4,21 @@ import { Link } from 'react-router-dom';
 // Safety page component to display AI safety information
 const SafetyPage = () => {
   return (
-    <div className="safety-page">
-      <div className="safety-content">
+    <div className='safety-page'>
+      <div className='safety-content'>
         {/* Back button to return to home page */}
-        <Link to="/" className="safety-back-button">
+        <Link to='/' className='safety-back-button'>
           Back to Home
         </Link>
-        <div className="safety-main-container">
+        <div className='safety-main-container'>
           {/* Main heading */}
-          <div className="safety-greet">
+          <div className='safety-greet'>
             <p>
               <span>Our Commitment to Safe and Ethical AI</span>
             </p>
           </div>
           {/* Introduction to AI safety practices */}
-          <div className="safety-intro-alert">
+          <div className='safety-intro-alert'>
             <h2>
               At BC Gov, we prioritize trust, safety, and effectiveness in our
               AI solutions.
@@ -29,9 +29,9 @@ const SafetyPage = () => {
             </p>
           </div>
           {/* Cards displaying various AI safety measures */}
-          <div className="safety-cards">
+          <div className='safety-cards'>
             {/* Human-in-the-Loop card */}
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Human-in-the-Loop (HITL)</h3>
               <p>
                 We involve human reviewers in critical decision-making processes
@@ -39,7 +39,7 @@ const SafetyPage = () => {
               </p>
             </div>
             {/* Ethical AI Practices card */}
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Ethical AI Practices</h3>
               <p>
                 Transparency, fairness, and accountability are at the core of
@@ -47,7 +47,7 @@ const SafetyPage = () => {
               </p>
             </div>
             {/* Security and Privacy card */}
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Security and Privacy</h3>
               <p>
                 Protecting sensitive data and ensuring user privacy is
@@ -55,7 +55,7 @@ const SafetyPage = () => {
               </p>
             </div>
             {/* Performance Monitoring card */}
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Performance Monitoring</h3>
               <p>
                 Our AI infrastructure is continuously monitored using OpenShift
@@ -63,7 +63,7 @@ const SafetyPage = () => {
               </p>
             </div>
             {/* Continuous Improvement card */}
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Continuous Improvement</h3>
               <p>
                 We use feedback loops and performance metrics to gather insights
@@ -71,7 +71,7 @@ const SafetyPage = () => {
               </p>
             </div>
             {/* Bias Detection and Mitigation card */}
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Bias Detection and Mitigation</h3>
               <p>
                 We are committed to ensuring our AI systems are fair and
@@ -81,24 +81,24 @@ const SafetyPage = () => {
           </div>
           {/* Section for guardrails and safety measures */}
           <h2>Our Guardrails and Safety Measures</h2>
-          <div className="safety-cards">
+          <div className='safety-cards'>
             {/* Additional safety measure cards */}
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Transparency Reports</h3>
             </div>
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Ethical Audits</h3>
             </div>
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Security Measures</h3>
             </div>
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Human Oversight</h3>
             </div>
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>User Feedback Integration</h3>
             </div>
-            <div className="safety-card">
+            <div className='safety-card'>
               <h3>Regular Risk Assessments</h3>
             </div>
           </div>

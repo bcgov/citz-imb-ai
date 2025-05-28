@@ -50,9 +50,9 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({
 
   // Render the scroll button
   return (
-    <div className="scroll-button-container">
+    <div className='scroll-button-container'>
       <button
-        className="scroll-button scroll-button-icon"
+        className='scroll-button scroll-button-icon'
         onClick={scrollTo}
         title={atBottom ? 'Scroll to Top' : 'Scroll to Bottom'}
       >

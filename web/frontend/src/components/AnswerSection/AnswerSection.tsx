@@ -159,7 +159,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         <p>
           <strong>URL:</strong>{' '}
           {item.url ? (
-            <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <a href={item.url} target='_blank' rel='noopener noreferrer'>
               {item.url}
             </a>
           ) : (
@@ -228,15 +228,15 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   }, [message.topk]);
 
   return (
-    <div className="answer-section">
+    <div className='answer-section'>
       {/* AI response */}
       <div
-        className="message-title"
+        className='message-title'
         onMouseEnter={() => handleLLMResponseHover(true)}
         onMouseLeave={() => handleLLMResponseHover(false)}
         onClick={handleLLMResponseClick}
       >
-        <img src={assets.bc_icon} alt="BC AI" />
+        <img src={assets.bc_icon} alt='BC AI' />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
 

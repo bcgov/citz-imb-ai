@@ -33,9 +33,9 @@ const RegenerateButton = () => {
 
   return (
     <button
-      className="feedback-action-button"
+      className='feedback-action-button'
       onClick={handleRegenerate}
-      title="Regenerate Response"
+      title='Regenerate Response'
     >
       <ArrowClockwise size={20} />
     </button>
