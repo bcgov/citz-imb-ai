@@ -21,7 +21,7 @@ class Neo4jRetrieval:
         UNWIND $terms AS term
         MATCH (n:UpdatedChunk)
         WHERE n.text CONTAINS term
-        RETURN DISTINCT {{text: n.text, ActId: n.ActId, elementId: elementId(n), RegId: n.RegId, sectionName: n.sectionName }} AS n
+        RETURN DISTINCT {{text: n.text, actId: n.ActId, elementId: elementId(n), regId: n.RegId, sectionName: n.sectionName, sectionNumber: n.sectionId }} AS n
         """
         with self.driver.session() as session:
             result = session.run(query, terms=terms)
