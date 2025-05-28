@@ -1,7 +1,10 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"formatter": {
-		"enabled": true
+		"enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf"
 	},
 	"linter": {
 		"enabled": true,
