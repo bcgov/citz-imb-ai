@@ -12,10 +12,7 @@ export interface AnswerSectionProps {
 
 export interface SourcesSectionProps {
   showSources: boolean;
-  message: {
-    content: string;
-    topk?: TopKItem[];
-  };
+  topk?: TopKItem[];
   handleCardClick: (item: TopKItem, index: number) => void;
   truncateText: (text: string, length: number) => string;
 }

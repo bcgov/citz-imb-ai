@@ -215,9 +215,9 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
       .filter((item) => item.ImageUrl && item.file_name) // Only include items with image data
       .map((item) => {
         const baseItem: ImageItem = {
-          url: item.ImageUrl,
-          alt: item.file_name,
-          filename: item.file_name,
+          url: item.ImageUrl ?? 'URL not found.',
+          alt: item.file_name ?? 'File name not found.',
+          filename: item.file_name ?? 'File name not found.',
         };
 
         // Include topkItem for analytics tracking
@@ -253,12 +253,15 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
               className={`chevron-icon ${showSources ? '' : 'rotated'}`}
             />
           </h3>
-          <SourcesSection
-            showSources={showSources}
-            message={message}
-            handleCardClick={handleCardClick}
-            truncateText={truncateText}
-          />
+          {message.topk.filter((r) => !r.ImageUrl).length > 0 && (
+            <SourcesSection
+              showSources={showSources}
+              topk={message.topk.filter((r) => !r.ImageUrl)}
+              handleCardClick={handleCardClick}
+              truncateText={truncateText}
+            />
+          )}
+
           {/* Only show ImagesSection if there are images to display */}
           {prepareImageData().length > 0 && (
             <ImagesSection

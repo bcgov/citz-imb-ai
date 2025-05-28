@@ -2,14 +2,14 @@ import type { SourcesSectionProps } from '@/types/types/answerSection.types';
 
 const SourcesSection = ({
   showSources,
-  message,
+  topk,
   handleCardClick,
   truncateText,
 }: SourcesSectionProps) => {
   return (
     <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
       <div className='topk-cards'>
-        {message.topk?.map((item, index) => (
+        {topk?.map((item, index) => (
           <div
             key={index}
             className='topk-card'
