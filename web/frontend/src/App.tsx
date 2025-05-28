@@ -1,15 +1,15 @@
-import Error from "@/pages/Error/Error";
-import Main from "@/pages/Home/Main/Main";
-import Safety from "@/pages/Safety/Safety";
-import Welcome from "@/pages/Welcome/Welcome";
-import { isAuthenticated } from "@/utils/authUtil";
+import Error from '@/pages/Error/Error';
+import Main from '@/pages/Home/Main/Main';
+import Safety from '@/pages/Safety/Safety';
+import Welcome from '@/pages/Welcome/Welcome';
+import { isAuthenticated } from '@/utils/authUtil';
 
 import {
   Navigate,
   Route,
   BrowserRouter as Router,
   Routes,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 const App = () => {
   // Check if the user is authenticated

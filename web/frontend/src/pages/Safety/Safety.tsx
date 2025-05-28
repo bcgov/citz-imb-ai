@@ -1,5 +1,5 @@
-import "./Safety.scss";
-import { Link } from "react-router-dom";
+import './Safety.scss';
+import { Link } from 'react-router-dom';
 
 // Safety page component to display AI safety information
 const SafetyPage = () => {

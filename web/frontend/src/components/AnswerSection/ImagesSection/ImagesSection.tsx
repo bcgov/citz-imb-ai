@@ -1,10 +1,10 @@
-import ModalDialog from "@/components/Modal/ModalDialog";
+import ModalDialog from '@/components/Modal/ModalDialog';
 import type {
   ImageItem,
   ImagesSectionProps,
-} from "@/types/types/answerSection.types";
-import { useState } from "react";
-import "./ImageSection.scss";
+} from '@/types/types/answerSection.types';
+import { useState } from 'react';
+import './ImageSection.scss';
 
 const ImagesSection = ({
   showSources,
@@ -31,12 +31,12 @@ const ImagesSection = ({
 
   const handleImagePreviewClick = () => {
     if (selectedImage) {
-      window.open(selectedImage.url, "_blank", "noopener,noreferrer");
+      window.open(selectedImage.url, '_blank', 'noopener,noreferrer');
     }
   };
 
   const handleImagePreviewKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === "Enter" || event.key === " ") {
+    if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       handleImagePreviewClick();
     }
@@ -62,7 +62,7 @@ const ImagesSection = ({
 
   return (
     <>
-      <div className={`topk-container ${showSources ? "show" : "hide"}`}>
+      <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
         <div className="topk-cards">
           {images.map((image, index) => (
             <button
@@ -83,7 +83,7 @@ const ImagesSection = ({
           title={selectedImage.filename || selectedImage.alt}
           description={imagePreview}
           option1={{
-            text: "Close",
+            text: 'Close',
             onClick: handleCloseModal,
           }}
           closeOnOutsideClick={true}

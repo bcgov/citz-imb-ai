@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import { Context } from "@/context/Context";
+import { Context } from '@/context/Context';
 
-import "./Welcome.scss";
-import { Link } from "react-router-dom";
+import './Welcome.scss';
+import { Link } from 'react-router-dom';
 
 // Welcome component for the landing page
 const Welcome = () => {
@@ -29,7 +29,7 @@ const Welcome = () => {
       </div>
       <div className="bottom">
         <p>
-          Learn more about our{" "}
+          Learn more about our{' '}
           <Link to="/safety" className="safety-link">
             commitment to AI safety.
           </Link>

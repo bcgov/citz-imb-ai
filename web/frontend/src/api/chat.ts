@@ -1,4 +1,4 @@
-import type { ApiResponse, ChatHistory, ChatState } from "@/types";
+import type { ApiResponse, ChatHistory, ChatState } from '@/types';
 
 // Function to run a chat interaction with the API
 export const runChat = async (
@@ -7,11 +7,11 @@ export const runChat = async (
   ragStateKey: string | null,
 ): Promise<{ response: ApiResponse; recordingHash: string }> => {
   // Send a POST request to the chat endpoint
-  const response = await fetch("/api/chat/", {
-    method: "POST",
+  const response = await fetch('/api/chat/', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("keycloak-token")}`,
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
     },
     body: JSON.stringify({
       prompt: _prompt,
@@ -41,11 +41,11 @@ export const runChat = async (
  * @returns {Promise<ChatState[]>} - Returns a promise that resolves to an array of ChatState objects.
  */
 export const getChatStates = async (): Promise<ChatState[]> => {
-  const response = await fetch("/api/chat/states/", {
-    method: "GET",
+  const response = await fetch('/api/chat/states/', {
+    method: 'GET',
     headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("keycloak-token")}`,
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
     },
   });
 

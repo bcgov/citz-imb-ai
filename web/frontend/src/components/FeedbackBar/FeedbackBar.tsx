@@ -1,12 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext, useState } from 'react';
 
-import CopyButton from "@/components/FeedbackBar/CopyButton/CopyButton";
-import RegenerateButton from "@/components/FeedbackBar/RegenerateButton/RegenerateButton";
-import ThumbButtons from "@/components/FeedbackBar/ThumbButtons/ThumbButtons";
-import { Context } from "@/context/Context";
-import { VoteType } from "@/types";
+import CopyButton from '@/components/FeedbackBar/CopyButton/CopyButton';
+import RegenerateButton from '@/components/FeedbackBar/RegenerateButton/RegenerateButton';
+import ThumbButtons from '@/components/FeedbackBar/ThumbButtons/ThumbButtons';
+import { Context } from '@/context/Context';
+import { VoteType } from '@/types';
 
-import "./FeedbackBar.scss";
+import './FeedbackBar.scss';
 
 const FeedbackBar = () => {
   const context = useContext(Context);

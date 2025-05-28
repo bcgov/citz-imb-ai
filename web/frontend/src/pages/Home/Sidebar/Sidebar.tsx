@@ -1,12 +1,12 @@
-import { type Key, useContext, useEffect, useState } from "react";
+import { type Key, useContext, useEffect, useState } from 'react';
 
-import { getChatStates } from "@/api/chat";
-import ModalDialog from "@/components/Modal/ModalDialog";
-import { Context } from "@/context/Context";
-import type { ChatState } from "@/types";
-import { Chat, Gear, Plus, UserCircle } from "@phosphor-icons/react";
+import { getChatStates } from '@/api/chat';
+import ModalDialog from '@/components/Modal/ModalDialog';
+import { Context } from '@/context/Context';
+import type { ChatState } from '@/types';
+import { Chat, Gear, Plus, UserCircle } from '@phosphor-icons/react';
 
-import "./Sidebar.scss";
+import './Sidebar.scss';
 
 // Sidebar component
 const Sidebar = () => {
@@ -15,7 +15,7 @@ const Sidebar = () => {
 
   // Ensure context is available
   if (!context) {
-    throw new Error("Sidebar must be used within a ContextProvider");
+    throw new Error('Sidebar must be used within a ContextProvider');
   }
 
   // State for sidebar collapse and modal visibility
@@ -26,7 +26,7 @@ const Sidebar = () => {
   // State control for RAG state options
   const [activeStates, setActiveStates] = useState<ChatState[]>([]);
   const defaultState =
-    sessionStorage.getItem("ragStateKey") || activeStates[0]?.key;
+    sessionStorage.getItem('ragStateKey') || activeStates[0]?.key;
   const [selectedState, setSelectedState] = useState<string | null>(
     defaultState,
   );
@@ -56,7 +56,7 @@ const Sidebar = () => {
           const setDefaultState = () => {
             context.setChatState(data.at(0)!);
             setSelectedState(data.at(0)!.key);
-            sessionStorage.setItem("ragStateKey", data.at(0)!.key);
+            sessionStorage.setItem('ragStateKey', data.at(0)!.key);
           };
           if (!defaultState) {
             setDefaultState();
@@ -98,7 +98,7 @@ const Sidebar = () => {
 
   // Render the sidebar component
   return (
-    <div className={`sidebar ${isCollapsed ? "collapsed" : "expanded"}`}>
+    <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
       {/* Sidebar header */}
       {/* <div className="sidebar-header" title="Menu" onClick={toggleSidebar}>
         <List size={24} />
@@ -123,7 +123,7 @@ const Sidebar = () => {
               >
                 <Chat size={24} />
                 <p>
-                  {item.slice(0, 18)} {"..."}
+                  {item.slice(0, 18)} {'...'}
                 </p>
               </div>
             ))}
@@ -183,14 +183,14 @@ const Sidebar = () => {
             </>
           }
           option1={{
-            text: "Save",
+            text: 'Save',
             onClick: () => {
               // Save selected option to app context and session storage
               const selectedOption = document.querySelector(
                 'input[name="index_method"]:checked',
               ) as HTMLInputElement;
               if (selectedOption) {
-                sessionStorage.setItem("ragStateKey", selectedOption.value);
+                sessionStorage.setItem('ragStateKey', selectedOption.value);
                 context.setChatState(
                   activeStates.find(
                     (state) => state.key === selectedOption.value,
@@ -201,7 +201,7 @@ const Sidebar = () => {
             },
           }}
           option2={{
-            text: "Cancel",
+            text: 'Cancel',
             onClick: () => {
               setIsOptionsOpen(false);
             },
@@ -221,11 +221,11 @@ const Sidebar = () => {
             </>
           }
           option1={{
-            text: "Yes, Logout",
+            text: 'Yes, Logout',
             onClick: handleLogout,
           }}
           option2={{
-            text: "No, Take Me Back",
+            text: 'No, Take Me Back',
             onClick: closeModal,
           }}
         />

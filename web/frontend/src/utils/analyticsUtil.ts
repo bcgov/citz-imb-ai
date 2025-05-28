@@ -1,19 +1,19 @@
 import {
   sendAnalyticsUpdatesToBackend,
   sendFullAnalyticsDataToBackend,
-} from "@/api/analytics";
+} from '@/api/analytics';
 import type {
   AnalyticsData,
   AnalyticsUpdate,
   ChatInteraction,
   TopKItem,
-} from "@/types";
+} from '@/types';
 
-import { debounce } from "./debounceUtil";
-import { generateUUID } from "./uuidUtil";
+import { debounce } from './debounceUtil';
+import { generateUUID } from './uuidUtil';
 
 // Constants
-const ANALYTICS_STORAGE_KEY = "analyticsData";
+const ANALYTICS_STORAGE_KEY = 'analyticsData';
 const DEBOUNCE_DELAY = 30000; // 30 seconds
 
 // State variables
@@ -26,7 +26,7 @@ export const getAnalyticsData = (): AnalyticsData => {
 
   return data
     ? JSON.parse(data)
-    : { sessionTimestamp: "", sessionId: "", userId: "", chats: [] };
+    : { sessionTimestamp: '', sessionId: '', userId: '', chats: [] };
 };
 
 // Retrieves analytics data from session storage or returns an empty object if not found
@@ -90,12 +90,12 @@ export const sendAnalyticsImmediatelyOnLeave = (): (() => void) => {
     sendAnalyticsImmediately();
   };
 
-  document.addEventListener("visibilitychange", handleVisibilityChange);
-  window.addEventListener("beforeunload", handleBeforeUnload);
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+  window.addEventListener('beforeunload', handleBeforeUnload);
 
   return () => {
-    document.removeEventListener("visibilitychange", handleVisibilityChange);
-    window.removeEventListener("beforeunload", handleBeforeUnload);
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    window.removeEventListener('beforeunload', handleBeforeUnload);
   };
 };
 
@@ -129,7 +129,7 @@ export const addChatInteraction = (
       chatIndex,
       clicks: 0,
       hoverDuration: 0,
-      lastClickTimestamp: "",
+      lastClickTimestamp: '',
     },
     sources:
       topk?.map((_, index) => ({
@@ -137,7 +137,7 @@ export const addChatInteraction = (
         sourceKey: index,
         response: `response_${index + 1}`,
         clicks: 0,
-        lastClickTimestamp: "",
+        lastClickTimestamp: '',
       })) || [],
   };
   data.chats.push(newChat);
@@ -186,13 +186,13 @@ export const trackSourceClick = (
 // Tracks user interactions (hover or click) with the LLM response and updates analytics
 export const trackLLMResponseInteraction = (
   chatIndex: number,
-  interactionType: "hover" | "click",
+  interactionType: 'hover' | 'click',
   duration?: number,
 ): void => {
   updateAnalyticsData((data) => {
     const interaction = data.chats[chatIndex]?.llmResponseInteraction;
     if (interaction) {
-      if (interactionType === "hover" && duration) {
+      if (interactionType === 'hover' && duration) {
         interaction.hoverDuration += duration;
         queueUpdate({
           sessionId: data.sessionId,
@@ -201,7 +201,7 @@ export const trackLLMResponseInteraction = (
             hoverDuration: interaction.hoverDuration,
           },
         });
-      } else if (interactionType === "click") {
+      } else if (interactionType === 'click') {
         interaction.clicks++;
         interaction.lastClickTimestamp = new Date().toISOString();
         queueUpdate({

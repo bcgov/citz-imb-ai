@@ -1,8 +1,8 @@
-import type React from "react";
+import type React from 'react';
 
-import type { ModalDialogProps } from "@/types";
+import type { ModalDialogProps } from '@/types';
 
-import "./ModalDialog.scss";
+import './ModalDialog.scss';
 
 // ModalDialog component
 const ModalDialog: React.FC<ModalDialogProps> = ({

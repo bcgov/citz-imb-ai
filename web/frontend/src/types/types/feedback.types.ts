@@ -1,7 +1,7 @@
 export enum VoteType {
-  upvote = "up_vote",
-  downvote = "down_vote",
-  novote = "no_vote",
+  upvote = 'up_vote',
+  downvote = 'down_vote',
+  novote = 'no_vote',
 }
 export type userFeedbackType = VoteType;
 

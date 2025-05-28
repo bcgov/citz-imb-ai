@@ -1,4 +1,4 @@
-import type { SourcesSectionProps } from "@/types/types/answerSection.types";
+import type { SourcesSectionProps } from '@/types/types/answerSection.types';
 
 const SourcesSection = ({
   showSources,
@@ -7,7 +7,7 @@ const SourcesSection = ({
   truncateText,
 }: SourcesSectionProps) => {
   return (
-    <div className={`topk-container ${showSources ? "show" : "hide"}`}>
+    <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
       <div className="topk-cards">
         {message.topk?.map((item, index) => (
           <div

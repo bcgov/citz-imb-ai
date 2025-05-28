@@ -1,24 +1,24 @@
-import type React from "react";
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import type React from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 
-import { assets } from "@/assets/icons/assets";
-import ImagesSection from "@/components/AnswerSection/ImagesSection/ImagesSection";
-import SourcesSection from "@/components/AnswerSection/SourcesSection/SourcesSection";
-import FeedbackBar from "@/components/FeedbackBar/FeedbackBar";
-import ModalDialog from "@/components/Modal/ModalDialog";
-import { Context } from "@/context/Context";
-import type { AnswerSectionProps, ImageItem, TopKItem } from "@/types";
+import { assets } from '@/assets/icons/assets';
+import ImagesSection from '@/components/AnswerSection/ImagesSection/ImagesSection';
+import SourcesSection from '@/components/AnswerSection/SourcesSection/SourcesSection';
+import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
+import ModalDialog from '@/components/Modal/ModalDialog';
+import { Context } from '@/context/Context';
+import type { AnswerSectionProps, ImageItem, TopKItem } from '@/types';
 import {
   addChatInteraction,
   initAnalytics,
   trackLLMResponseInteraction,
   trackSourceClick,
-} from "@/utils/analyticsUtil";
-import { getUserId } from "@/utils/authUtil";
-import { debounce } from "@/utils/debounceUtil";
-import { CaretDown } from "@phosphor-icons/react";
+} from '@/utils/analyticsUtil';
+import { getUserId } from '@/utils/authUtil';
+import { debounce } from '@/utils/debounceUtil';
+import { CaretDown } from '@phosphor-icons/react';
 
-import "./AnswerSection.scss";
+import './AnswerSection.scss';
 
 // Component for displaying AI-generated answers and related sources
 const AnswerSection: React.FC<AnswerSectionProps> = ({
@@ -37,7 +37,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 
   // Ensure the component is used within a ContextProvider
   if (!context) {
-    throw new Error("AnswerSection must be used within a ContextProvider");
+    throw new Error('AnswerSection must be used within a ContextProvider');
   }
 
   // Get user ID and messages from context
@@ -48,7 +48,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   const debouncedTrackHover = useRef(
     debounce((...args: [number, number]) => {
       const [chatIndex, duration] = args;
-      trackLLMResponseInteraction(chatIndex, "hover", duration);
+      trackLLMResponseInteraction(chatIndex, 'hover', duration);
     }, 1000),
   ).current;
 
@@ -63,7 +63,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   // Record chat interaction when generation is complete
   useEffect(() => {
     if (generationComplete && isLastMessage) {
-      const aiMessages = messages.filter((msg) => msg.type === "ai");
+      const aiMessages = messages.filter((msg) => msg.type === 'ai');
       if (aiMessages.length > 0) {
         const lastAiMessage = aiMessages[aiMessages.length - 1];
         const newChatIndex = addChatInteraction(
@@ -128,7 +128,7 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   // Handles click tracking for the LLM response
   const handleLLMResponseClick = useCallback(() => {
     if (chatIndex !== null) {
-      trackLLMResponseInteraction(chatIndex, "click");
+      trackLLMResponseInteraction(chatIndex, 'click');
     }
   }, [chatIndex]);
 
@@ -142,32 +142,32 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     (item: TopKItem) => (
       <div>
         <p>
-          <strong>Score:</strong> {item.score || "N/A"}
+          <strong>Score:</strong> {item.score || 'N/A'}
         </p>
         <p>
-          <strong>Act ID:</strong> {item.ActId || "N/A"}
+          <strong>Act ID:</strong> {item.ActId || 'N/A'}
         </p>
         <p>
-          <strong>Section Name:</strong> {item.sectionName || "N/A"}
+          <strong>Section Name:</strong> {item.sectionName || 'N/A'}
         </p>
         <p>
-          <strong>Section ID:</strong> {item.sectionId || "N/A"}
+          <strong>Section ID:</strong> {item.sectionId || 'N/A'}
         </p>
         <p>
-          <strong>Regulations:</strong> {item.Regulations || "N/A"}
+          <strong>Regulations:</strong> {item.Regulations || 'N/A'}
         </p>
         <p>
-          <strong>URL:</strong>{" "}
+          <strong>URL:</strong>{' '}
           {item.url ? (
             <a href={item.url} target="_blank" rel="noopener noreferrer">
               {item.url}
             </a>
           ) : (
-            "N/A"
+            'N/A'
           )}
         </p>
         <p>
-          <strong>Text:</strong> {item.text || "N/A"}
+          <strong>Text:</strong> {item.text || 'N/A'}
         </p>
         <p>
           {item.references &&
@@ -178,15 +178,15 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
                 {item.references.map((ref, index) => (
                   <ul key={`ref-${index}`}>
                     <li key={`act-${index}`}>
-                      {ref.refActId ? "Act Name: " + ref.refActId : ""}
+                      {ref.refActId ? 'Act Name: ' + ref.refActId : ''}
                     </li>
                     <li key={`section-${index}`}>
                       {ref.refSectionId
-                        ? "Section Id: " + ref.refSectionId
-                        : ""}
+                        ? 'Section Id: ' + ref.refSectionId
+                        : ''}
                     </li>
                     <li key={`text-${index}`}>
-                      {ref.refText ? "Text: " + ref.refText : ""}
+                      {ref.refText ? 'Text: ' + ref.refText : ''}
                     </li>
                     <hr></hr>
                   </ul>
@@ -242,15 +242,15 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
 
       {/* Sources section */}
       {message.topk && message.topk.length > 0 && (
-        <div className={`sources-section ${isAnswerComplete ? "fade-in" : ""}`}>
+        <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
           <h3
             onClick={() => setShowSources(!showSources)}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: 'pointer' }}
           >
             Sources
             <CaretDown
               size={24}
-              className={`chevron-icon ${showSources ? "" : "rotated"}`}
+              className={`chevron-icon ${showSources ? '' : 'rotated'}`}
             />
           </h3>
           <SourcesSection
@@ -276,10 +276,10 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
       {/* Modal for displaying source details */}
       {selectedItem && (
         <ModalDialog
-          title={selectedItem.ActId || "Details"}
+          title={selectedItem.ActId || 'Details'}
           description={formatDescription(selectedItem)}
           option1={{
-            text: "Close",
+            text: 'Close',
             onClick: handleCloseModal,
           }}
           closeOnOutsideClick={true}

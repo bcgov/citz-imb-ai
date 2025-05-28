@@ -1,4 +1,4 @@
-import type { TopKItem } from "./chat.types";
+import type { TopKItem } from './chat.types';
 
 export interface AnswerSectionProps {
   message: {

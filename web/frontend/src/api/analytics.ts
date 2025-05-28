@@ -1,6 +1,6 @@
-import type { AnalyticsData, AnalyticsUpdate } from "@/types";
+import type { AnalyticsData, AnalyticsUpdate } from '@/types';
 
-const baseUrl = "/api";
+const baseUrl = '/api';
 
 // Send full analytics data to the backend
 export const sendFullAnalyticsDataToBackend = async (
@@ -9,16 +9,16 @@ export const sendFullAnalyticsDataToBackend = async (
 ): Promise<void> => {
   const response = await fetch(`${baseUrl}/saveAnalytics`, {
     keepalive: useKeepalive,
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("keycloak-token")}`,
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
     },
     body: JSON.stringify(data),
   });
 
   if (!response.ok) {
-    throw new Error("Failed to send full analytics data to the backend");
+    throw new Error('Failed to send full analytics data to the backend');
   }
 };
 
@@ -29,15 +29,15 @@ export const sendAnalyticsUpdatesToBackend = async (
 ): Promise<void> => {
   const response = await fetch(`${baseUrl}/updateAnalytics`, {
     keepalive: useKeepalive,
-    method: "PATCH",
+    method: 'PATCH',
     headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("keycloak-token")}`,
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('keycloak-token')}`,
     },
     body: JSON.stringify(updates),
   });
 
   if (!response.ok) {
-    throw new Error("Failed to send analytics updates to the backend");
+    throw new Error('Failed to send analytics updates to the backend');
   }
 };

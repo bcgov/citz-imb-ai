@@ -1,13 +1,13 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import { Context } from "@/context/Context";
-import { ArrowClockwise } from "@phosphor-icons/react";
+import { Context } from '@/context/Context';
+import { ArrowClockwise } from '@phosphor-icons/react';
 
 const RegenerateButton = () => {
   const context = useContext(Context);
 
   if (!context) {
-    throw new Error("RegenerateButton must be used within a ContextProvider");
+    throw new Error('RegenerateButton must be used within a ContextProvider');
   }
 
   const {

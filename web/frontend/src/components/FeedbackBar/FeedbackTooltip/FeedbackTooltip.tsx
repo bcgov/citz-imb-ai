@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { type FeedbackTooltipProps, VoteType } from "@/types";
+import { type FeedbackTooltipProps, VoteType } from '@/types';
 
-import "./FeedbackTooltip.scss";
+import './FeedbackTooltip.scss';
 
 const FeedbackTooltip = ({
   isOpen,
@@ -11,7 +11,7 @@ const FeedbackTooltip = ({
   rating,
 }: FeedbackTooltipProps) => {
   // Track the user's feedback text
-  const [comment, setComment] = useState("");
+  const [comment, setComment] = useState('');
 
   // Don't show anything if tooltip is closed
   if (!isOpen) return null;
@@ -20,7 +20,7 @@ const FeedbackTooltip = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit(comment);
-    setComment("");
+    setComment('');
   };
 
   return (
@@ -28,7 +28,7 @@ const FeedbackTooltip = ({
       <form onSubmit={handleSubmit}>
         {/* Feedback input field */}
         <textarea
-          placeholder={`Tell us why you ${rating === VoteType.upvote ? "liked" : "didn't like"} this response...`}
+          placeholder={`Tell us why you ${rating === VoteType.upvote ? 'liked' : "didn't like"} this response...`}
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           autoFocus

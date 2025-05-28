@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import { Context } from "@/context/Context";
+import { Context } from '@/context/Context';
 
 // Check if the user is authenticated
 export const isAuthenticated = (): boolean => {
@@ -12,7 +12,7 @@ export const isAuthenticated = (): boolean => {
 
 // Get the user ID from local storage
 export const getUserId = (): string => {
-  const userInfo = localStorage.getItem("keycloak-user-id") || "";
+  const userInfo = localStorage.getItem('keycloak-user-id') || '';
 
   return userInfo;
 };

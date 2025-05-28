@@ -1,17 +1,17 @@
-import type React from "react";
-import { useContext, useEffect, useRef, useState } from "react";
+import type React from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 
-import { assets } from "@/assets/icons/assets";
-import AnswerSection from "@/components/AnswerSection/AnswerSection";
-import ModalDialog from "@/components/Modal/ModalDialog";
-import ScrollButton from "@/components/ScrollButton/ScrollButton";
-import { Context } from "@/context/Context";
-import Sidebar from "@/pages/Home/Sidebar/Sidebar";
-import { sendAnalyticsImmediatelyOnLeave } from "@/utils/analyticsUtil";
-import { PaperPlaneRight, UserCircle } from "@phosphor-icons/react";
+import { assets } from '@/assets/icons/assets';
+import AnswerSection from '@/components/AnswerSection/AnswerSection';
+import ModalDialog from '@/components/Modal/ModalDialog';
+import ScrollButton from '@/components/ScrollButton/ScrollButton';
+import { Context } from '@/context/Context';
+import Sidebar from '@/pages/Home/Sidebar/Sidebar';
+import { sendAnalyticsImmediatelyOnLeave } from '@/utils/analyticsUtil';
+import { PaperPlaneRight, UserCircle } from '@phosphor-icons/react';
 
-import "./Main.scss";
-import { Link } from "react-router-dom";
+import './Main.scss';
+import { Link } from 'react-router-dom';
 
 // Main component for the chat interface
 const Main = () => {
@@ -25,7 +25,7 @@ const Main = () => {
 
   // Error handling for context
   if (!context) {
-    throw new Error("Main must be used within a ContextProvider");
+    throw new Error('Main must be used within a ContextProvider');
   }
 
   // Destructure context values
@@ -54,7 +54,7 @@ const Main = () => {
   const adjustTextareaHeight = () => {
     const textarea = textareaRef.current;
     if (textarea) {
-      textarea.style.height = "auto";
+      textarea.style.height = 'auto';
       textarea.style.height = `${textarea.scrollHeight}px`;
     }
   };
@@ -77,7 +77,7 @@ const Main = () => {
     if (element && !userScrolled) {
       element.scrollTo({
         top: element.scrollHeight,
-        behavior: "auto",
+        behavior: 'auto',
       });
     }
   }, [messages, userScrolled, pendingMessage, isWaitingForResponse]);
@@ -94,7 +94,7 @@ const Main = () => {
 
   // Function to handle key press events in the textarea
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
+    if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSend();
     }
@@ -104,10 +104,10 @@ const Main = () => {
   const handleSend = async () => {
     if (input.trim() && !isWaitingForResponse) {
       setPendingMessage(input);
-      setInput("");
+      setInput('');
       setIsWaitingForResponse(true);
       if (textareaRef.current) {
-        textareaRef.current.style.height = "auto";
+        textareaRef.current.style.height = 'auto';
       }
       await onSent();
       setPendingMessage(null);
@@ -125,10 +125,10 @@ const Main = () => {
 
   // Sample card contents for suggestions
   const cardContents = [
-    "How much notice do I need to give to end my rental lease in BC?",
-    "Do I need to wear a seatbelt in BC?",
-    "How many breaks do I get during a workday in BC?",
-    "How do I dispute a traffic ticket in BC?",
+    'How much notice do I need to give to end my rental lease in BC?',
+    'Do I need to wear a seatbelt in BC?',
+    'How many breaks do I get during a workday in BC?',
+    'How do I dispute a traffic ticket in BC?',
   ];
 
   // Functions to handle modal actions
@@ -154,13 +154,13 @@ const Main = () => {
     const allMessages = [
       ...messages,
       ...(pendingMessage
-        ? [{ type: "user" as const, content: pendingMessage }]
+        ? [{ type: 'user' as const, content: pendingMessage }]
         : []),
     ];
 
     return allMessages.map((message, index) => (
       <div key={index} className={`message ${message.type}`}>
-        {message.type === "user" ? (
+        {message.type === 'user' ? (
           <div className="message-title">
             <UserCircle size={40} />
             <p>{message.content}</p>
@@ -271,7 +271,7 @@ const Main = () => {
             {/* Disclaimer and safety link */}
             <p className="bottom-info">
               BC AI may provide inaccurate info. Responses can take up to 2
-              minutes. Please verify all outputs. Learn about our{" "}
+              minutes. Please verify all outputs. Learn about our{' '}
               <Link to="/safety" className="safety-link">
                 AI safety measures.
               </Link>
@@ -294,7 +294,7 @@ const Main = () => {
                 <li>Response generation may take up to 2 minutes.</li>
                 <li>By using BC Laws AI, you agree to our terms of service.</li>
                 <li>
-                  We are committed to AI safety. Learn more about our{" "}
+                  We are committed to AI safety. Learn more about our{' '}
                   <Link to="/safety" className="safety-link">
                     AI safety practices.
                   </Link>
@@ -306,11 +306,11 @@ const Main = () => {
             </div>
           }
           option1={{
-            text: "Yes, I Agree",
+            text: 'Yes, I Agree',
             onClick: handleModalYes,
           }}
           option2={{
-            text: "No, Take Me Back",
+            text: 'No, Take Me Back',
             onClick: handleModalNo,
           }}
         />
@@ -329,11 +329,11 @@ const Main = () => {
             </>
           }
           option1={{
-            text: "Refresh Page",
+            text: 'Refresh Page',
             onClick: handleErrorModalRefresh,
           }}
           option2={{
-            text: "Cancel",
+            text: 'Cancel',
             onClick: handleErrorModalCancel,
           }}
         />

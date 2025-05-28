@@ -28,7 +28,7 @@ export interface ApiResponse {
 }
 
 export interface Message {
-  type: "user" | "ai";
+  type: 'user' | 'ai';
   content: string;
   topk?: TopKItem[];
 }
