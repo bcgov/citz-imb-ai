@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
-import { ChatState, Message } from './chat.types';
-import { userFeedbackType } from './feedback.types';
+import type { ChatState, Message } from './chat.types';
+import type { userFeedbackType } from './feedback.types';
 
 export interface ContextProps {
   prevPrompts: string[];

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { FeedbackTooltipProps, VoteType } from '@/types';
+import { type FeedbackTooltipProps, VoteType } from '@/types';
 
 import './FeedbackTooltip.scss';
 

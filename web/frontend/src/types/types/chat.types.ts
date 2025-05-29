@@ -18,6 +18,8 @@ export interface TopKItem {
   text: string;
   url: string | null;
   references: references[];
+  ImageUrl?: string;
+  file_name?: string;
 }
 
 export interface ApiResponse {

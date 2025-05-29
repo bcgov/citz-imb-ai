@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import FeedbackTooltip from '@/components/FeedbackBar/FeedbackTooltip/FeedbackTooltip';
 import { VoteType } from '@/types';
-import { ThumbButtonsProps } from '@/types/types/feedback.types';
+import type { ThumbButtonsProps } from '@/types/types/feedback.types';
 import { ThumbsDown, ThumbsUp } from '@phosphor-icons/react';
 
 const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
@@ -45,7 +45,8 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
       <button
         className={`feedback-action-button ${activeButton === VoteType.upvote ? 'active' : ''}`}
         title='Good Response'
-        onClick={() => handleVoteClick(VoteType.upvote)}>
+        onClick={() => handleVoteClick(VoteType.upvote)}
+      >
         <ThumbsUp size={20} />
       </button>
 
@@ -53,7 +54,8 @@ const ThumbButtons = ({ activeButton, onVote }: ThumbButtonsProps) => {
       <button
         className={`feedback-action-button ${activeButton === VoteType.downvote ? 'active' : ''}`}
         title='Bad Response'
-        onClick={() => handleVoteClick(VoteType.downvote)}>
+        onClick={() => handleVoteClick(VoteType.downvote)}
+      >
         <ThumbsDown size={20} />
       </button>
 

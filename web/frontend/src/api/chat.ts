@@ -1,4 +1,4 @@
-import { ApiResponse, ChatHistory, ChatState } from '@/types';
+import type { ApiResponse, ChatHistory, ChatState } from '@/types';
 
 // Function to run a chat interaction with the API
 export const runChat = async (
@@ -16,7 +16,7 @@ export const runChat = async (
     body: JSON.stringify({
       prompt: _prompt,
       chatHistory: chatHistory,
-      key: ragStateKey
+      key: ragStateKey,
     }),
   });
 
@@ -50,11 +50,11 @@ export const getChatStates = async (): Promise<ChatState[]> => {
   });
 
   if (!response.ok) {
-    // Return an empty array if the response is not successful. 
+    // Return an empty array if the response is not successful.
     // API will default if no states are found, so frontend should handle case where no states are returned.
-    return []; 
+    return [];
   }
   const data = await response.json();
 
   return data as ChatState[];
-}
+};

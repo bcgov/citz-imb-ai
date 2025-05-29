@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import type React from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 
 import { assets } from '@/assets/icons/assets';
 import AnswerSection from '@/components/AnswerSection/AnswerSection';
@@ -124,10 +125,10 @@ const Main = () => {
 
   // Sample card contents for suggestions
   const cardContents = [
-    `How much notice do I need to give to end my rental lease in BC?`,
-    `Do I need to wear a seatbelt in BC?`,
-    `How many breaks do I get during a workday in BC?`,
-    `How do I dispute a traffic ticket in BC?`,
+    'How much notice do I need to give to end my rental lease in BC?',
+    'Do I need to wear a seatbelt in BC?',
+    'How many breaks do I get during a workday in BC?',
+    'How do I dispute a traffic ticket in BC?',
   ];
 
   // Functions to handle modal actions
@@ -193,7 +194,8 @@ const Main = () => {
                 className='result'
                 id='scrollable-section'
                 ref={scrollableSectionRef}
-                onScroll={handleScroll}>
+                onScroll={handleScroll}
+              >
                 {renderMessages()}
                 {(isWaitingForResponse || isRegenerating) && (
                   <div className='message ai'>
@@ -227,7 +229,8 @@ const Main = () => {
                   <div
                     className='card'
                     key={index}
-                    onClick={() => handleCardClick(content)}>
+                    onClick={() => handleCardClick(content)}
+                  >
                     <p>{content}</p>
                   </div>
                 ))}
@@ -258,7 +261,8 @@ const Main = () => {
                   <div
                     className='send-button'
                     title='Send'
-                    onClick={handleSend}>
+                    onClick={handleSend}
+                  >
                     <PaperPlaneRight size={24} />
                   </div>
                 ) : null}

@@ -1,16 +1,13 @@
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import type React from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 
 import { assets } from '@/assets/icons/assets';
+import ImagesSection from '@/components/AnswerSection/ImagesSection/ImagesSection';
+import SourcesSection from '@/components/AnswerSection/SourcesSection/SourcesSection';
 import FeedbackBar from '@/components/FeedbackBar/FeedbackBar';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import { Context } from '@/context/Context';
-import { AnswerSectionProps, TopKItem } from '@/types';
+import type { AnswerSectionProps, ImageItem, TopKItem } from '@/types';
 import {
   addChatInteraction,
   initAnalytics,
@@ -94,6 +91,17 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
   const handleCardClick = useCallback(
     (item: TopKItem, index: number) => {
       setSelectedItem(item);
+      if (chatIndex !== null) {
+        trackSourceClick(chatIndex, index);
+      }
+    },
+    [chatIndex],
+  );
+
+  // Handler for image clicks
+  const handleImageClick = useCallback(
+    (_image: ImageItem, index: number) => {
+      // Only track analytics, don't show the source modal
       if (chatIndex !== null) {
         trackSourceClick(chatIndex, index);
       }
@@ -196,6 +204,29 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
     return text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
   }, []);
 
+  // Prepare image data for ImagesSection
+  const prepareImageData = useCallback((): ImageItem[] => {
+    if (!message.topk || message.topk.length === 0) {
+      return [];
+    }
+
+    // Filter topk items that have image data and create ImageItem objects
+    return message.topk
+      .filter((item) => item.ImageUrl && item.file_name) // Only include items with image data
+      .map((item) => {
+        const baseItem: ImageItem = {
+          url: item.ImageUrl ?? 'URL not found.',
+          alt: item.file_name ?? 'File name not found.',
+          filename: item.file_name ?? 'File name not found.',
+        };
+
+        // Include topkItem for analytics tracking
+        baseItem.topkItem = item;
+
+        return baseItem;
+      });
+  }, [message.topk]);
+
   return (
     <div className='answer-section'>
       {/* AI response */}
@@ -203,7 +234,8 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         className='message-title'
         onMouseEnter={() => handleLLMResponseHover(true)}
         onMouseLeave={() => handleLLMResponseHover(false)}
-        onClick={handleLLMResponseClick}>
+        onClick={handleLLMResponseClick}
+      >
         <img src={assets.bc_icon} alt='BC AI' />
         <p dangerouslySetInnerHTML={{ __html: message.content }}></p>
       </div>
@@ -213,29 +245,31 @@ const AnswerSection: React.FC<AnswerSectionProps> = ({
         <div className={`sources-section ${isAnswerComplete ? 'fade-in' : ''}`}>
           <h3
             onClick={() => setShowSources(!showSources)}
-            style={{ cursor: 'pointer' }}>
+            style={{ cursor: 'pointer' }}
+          >
             Sources
             <CaretDown
               size={24}
               className={`chevron-icon ${showSources ? '' : 'rotated'}`}
             />
           </h3>
-          <div className={`topk-container ${showSources ? 'show' : 'hide'}`}>
-            <div className='topk-cards'>
-              {message.topk.map((item, index) => (
-                <div
-                  key={index}
-                  className='topk-card'
-                  onClick={() => handleCardClick(item, index)}>
-                  <h3>{item.ActId}</h3>
-                  <p className='truncated-text'>
-                    {truncateText(item.text, 100)}
-                  </p>
-                  <span className='card-number'>{index + 1}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          {message.topk.filter((r) => !r.ImageUrl).length > 0 && (
+            <SourcesSection
+              showSources={showSources}
+              topk={message.topk.filter((r) => !r.ImageUrl)}
+              handleCardClick={handleCardClick}
+              truncateText={truncateText}
+            />
+          )}
+
+          {/* Only show ImagesSection if there are images to display */}
+          {prepareImageData().length > 0 && (
+            <ImagesSection
+              showSources={showSources}
+              images={prepareImageData()}
+              onImageClick={handleImageClick}
+            />
+          )}
         </div>
       )}
 

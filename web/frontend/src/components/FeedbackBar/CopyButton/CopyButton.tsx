@@ -44,7 +44,8 @@ const CopyButton = () => {
     <button
       className={`feedback-action-button ${copied ? 'copied' : ''}`}
       onClick={handleCopy}
-      title={copied ? 'Copied!' : 'Copy to clipboard'}>
+      title={copied ? 'Copied!' : 'Copy to clipboard'}
+    >
       <Copy size={20} />
     </button>
   );

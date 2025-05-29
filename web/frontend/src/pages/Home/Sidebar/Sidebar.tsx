@@ -1,9 +1,9 @@
-import { Key, useContext, useEffect, useState } from 'react';
+import { type Key, useContext, useEffect, useState } from 'react';
 
 import { getChatStates } from '@/api/chat';
 import ModalDialog from '@/components/Modal/ModalDialog';
 import { Context } from '@/context/Context';
-import { ChatState } from '@/types';
+import type { ChatState } from '@/types';
 import { Chat, Gear, Plus, UserCircle } from '@phosphor-icons/react';
 
 import './Sidebar.scss';
@@ -119,7 +119,8 @@ const Sidebar = () => {
               <div
                 key={index}
                 onClick={() => loadPrompt(item)}
-                className='recent-entry'>
+                className='recent-entry'
+              >
                 <Chat size={24} />
                 <p>
                   {item.slice(0, 18)} {'...'}
@@ -135,7 +136,8 @@ const Sidebar = () => {
         <div
           className='options'
           title='Options'
-          onClick={() => setIsOptionsOpen(true)}>
+          onClick={() => setIsOptionsOpen(true)}
+        >
           <Gear size={26} />
           {!isCollapsed ? <p>Options</p> : null}
         </div>

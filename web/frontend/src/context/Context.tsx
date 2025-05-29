@@ -1,8 +1,9 @@
-import React, { createContext, useEffect, useState } from 'react';
+import type React from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 import { runChat } from '@/api/chat';
 import sendFeedback from '@/api/feedback';
-import {
+import type {
   ChatHistory,
   ChatState,
   ContextProps,
@@ -65,7 +66,12 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     comment?: string,
   ) => {
     try {
-      await sendFeedback(feedbackType, recordingHash, comment, chatState?.trulens_id);
+      await sendFeedback(
+        feedbackType,
+        recordingHash,
+        comment,
+        chatState?.trulens_id,
+      );
     } catch (error) {
       console.error('Error sending feedback:', error);
     }
@@ -292,7 +298,7 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     pendingMessage,
     setPendingMessage,
     chatState,
-    setChatState
+    setChatState,
   };
 
   // Render the Context Provider with the context value

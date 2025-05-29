@@ -1,4 +1,4 @@
-import { AnalyticsData, AnalyticsUpdate } from '@/types';
+import type { AnalyticsData, AnalyticsUpdate } from '@/types';
 
 const baseUrl = '/api';
 

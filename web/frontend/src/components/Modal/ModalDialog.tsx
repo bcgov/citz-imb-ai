@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 
-import { ModalDialogProps } from '@/types';
+import type { ModalDialogProps } from '@/types';
 
 import './ModalDialog.scss';
 
@@ -36,14 +36,16 @@ const ModalDialog: React.FC<ModalDialogProps> = ({
           {option1 && (
             <button
               className='modal-button blue-button'
-              onClick={option1.onClick}>
+              onClick={option1.onClick}
+            >
               {option1.text}
             </button>
           )}
           {option2 && (
             <button
               className='modal-button red-button'
-              onClick={option2.onClick}>
+              onClick={option2.onClick}
+            >
               {option2.text}
             </button>
           )}

@@ -11,7 +11,8 @@ const ErrorPage = () => {
         <h3>You are not authorized to view this page.</h3>
         <button
           className='back-button'
-          onClick={() => (window.location.href = '/')}>
+          onClick={() => (window.location.href = '/')}
+        >
           Go Back
         </button>
       </div>
