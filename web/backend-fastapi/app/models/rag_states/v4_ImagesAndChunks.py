@@ -14,7 +14,6 @@ class ImagesAndChunks(State):
 
     __vector_search_query = """
         CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score
-        WHERE node.type = 'image' OR node.type IS NULL
         OPTIONAL MATCH (node)-[:REFERENCES]->(refNode)
         RETURN score, 
                 node.ActId AS ActId,  
@@ -22,7 +21,6 @@ class ImagesAndChunks(State):
                 node.sectionId AS sectionId, 
                 node.sectionName AS sectionName, 
                 node.url AS url,
-                node.ImageUrl AS ImageUrl,
                 node.file_name AS file_name,
                 node.folder AS folder,
                 node.section AS section,

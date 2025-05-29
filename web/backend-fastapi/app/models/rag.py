@@ -44,7 +44,6 @@ class get_full_rag:
                 "sectionId",
                 "sectionName",
                 "url",
-                "ImageUrl",
                 "file_name",
                 "folder",
                 "section",
