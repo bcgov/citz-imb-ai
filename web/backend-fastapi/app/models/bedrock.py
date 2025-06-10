@@ -13,7 +13,7 @@ session = boto3.Session(
     aws_access_key_id=AWS_ACCESS_KEY_ID,
     aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
 )
-bedrock_runtime = session.client("bedrock-runtime", region_name="us-east-1")
+bedrock_runtime = session.client("bedrock-runtime", region_name="ca-central-1")
 
 
 def get_mixtral_kwargs(prompt):
