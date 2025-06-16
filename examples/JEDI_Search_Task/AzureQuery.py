@@ -12,7 +12,7 @@ class AzureQuery:
         headers = {"Content-Type": "application/json", "api-key": self.key}
         body = {
             "messages": [{"role": "user", "content": query}],
-            "max_tokens": 200,
+            "max_tokens": self.token_max,
         }
         response = requests.post(self.endpoint, headers=headers, json=body)
 
@@ -35,7 +35,7 @@ class AzureQuery:
         headers = {"Content-Type": "application/json", "api-key": self.key}
         body = {
             "messages": self.history,
-            "max_tokens": 200,
+            "max_tokens": self.token_max,
         }
         response = requests.post(self.endpoint, headers=headers, json=body)
 
