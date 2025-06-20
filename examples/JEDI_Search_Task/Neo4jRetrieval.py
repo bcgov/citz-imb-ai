@@ -7,20 +7,22 @@ class Neo4jRetrieval:
     def close(self):
         self.driver.close()
 
-    def run_query(self, query):
+    def run_query(self, query, params={}):
         with self.driver.session() as session:
-            result = session.run(query)
+            result = session.run(query, params)
             return [record for record in result]
 
-    def search(self, search_term):
-        query = f"MATCH (n:UpdatedChunk) WHERE n.text CONTAINS '{search_term}' RETURN n"
+    def search(self, search_term, label="UpdatedChunk") -> list[dict]:
+        query = (
+            f"MATCH (n:{label}) WHERE toLower(n.text) CONTAINS '{search_term}' RETURN n"
+        )
         return self.run_query(query)
 
-    def search_many(self, terms: list[str]) -> list[dict]:
+    def search_many(self, terms: list[str], label="UpdatedChunk") -> list[dict]:
         query = f"""
         UNWIND $terms AS term
-        MATCH (n:UpdatedChunk)
-        WHERE n.text CONTAINS term
+        MATCH (n:{label})
+        WHERE toLower(n.text) CONTAINS term
         RETURN DISTINCT {{text: n.text, actId: n.ActId, elementId: elementId(n), regId: n.RegId, sectionName: n.sectionName, sectionNumber: n.sectionId }} AS n
         """
         with self.driver.session() as session:

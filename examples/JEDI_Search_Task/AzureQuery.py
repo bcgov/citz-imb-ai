@@ -14,7 +14,7 @@ class AzureQuery:
             "messages": [{"role": "user", "content": query}],
             "max_tokens": self.token_max,
         }
-        response = requests.post(self.endpoint, headers=headers, json=body)
+        response = requests.post(self.endpoint, headers=headers, json=body, timeout=30)
 
         if response.status_code == 200:
             if return_raw:
@@ -37,7 +37,7 @@ class AzureQuery:
             "messages": self.history,
             "max_tokens": self.token_max,
         }
-        response = requests.post(self.endpoint, headers=headers, json=body)
+        response = requests.post(self.endpoint, headers=headers, json=body, timeout=30)
 
         if response.status_code == 200:
             text = (
