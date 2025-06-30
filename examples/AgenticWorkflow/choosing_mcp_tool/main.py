@@ -4,6 +4,7 @@ from Neo4jRetrieval import Neo4jRetrieval
 import os
 import json
 
+
 # Neo4j Configuration
 NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USERNAME = "admin"
@@ -36,7 +37,41 @@ def semantic_search(question: str) -> str:
     Returns:
         str: A summarized response based on the search results.
     """
-    return "I chose semantic_search tool for query: " + question
+    from langchain_community.embeddings import HuggingFaceEmbeddings
+
+    neo4j_worker = Neo4jRetrieval(NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD)
+
+    vector_search_query = """
+        CALL db.index.vector.queryNodes($index_name, $top_k, $question) yield node, score
+        OPTIONAL MATCH (node)-[:REFERENCES]->(refNode)
+        RETURN score, 
+              node.ActId AS ActId,  
+              node.RegId as Regulations, 
+              node.sectionId AS sectionId, 
+              node.sectionName AS sectionName, 
+              node.url AS url,
+              node.type AS type,
+              node.text AS text,
+        collect({refSectionId: refNode.sectionId, refSectionName: refNode.sectionName, refActId: refNode.ActId, refText: refNode.text}) AS references
+        ORDER BY score DESC
+    """
+    vector_index = "Acts_Updatedchunks"
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
+    """Search for similar nodes using the Neo4j vector index"""
+    query_embedding = embeddings.embed_query(question)
+    similar = neo4j_worker.run_query(
+        vector_search_query,
+        params={
+            "question": query_embedding,
+            "index_name": vector_index,
+            "top_k": 10,
+        },
+    )
+
+    neo4j_worker.close()
+
+    return similar
 
 
 tools = [
@@ -150,11 +185,23 @@ def chat_loop(initial_question: str):
                 print("Unexpected finish reason:", finish_reason)
                 break
         response_text = response.get("message").get("content", "").strip()
-        print("Final response:", response_text)
+        azure.clear_history()  # Clear history after the conversation
+        return response_text
+        # print("Final response:", response_text)
     except Exception as e:
         print("An error occurred:", str(e))
         raise e
 
 
 if __name__ == "__main__":
-    chat_loop("How many instances of the word 'interprovincial' are there in BC laws?")
+    questions = [
+        "How much notice is required to terminate a tenancy in BC?",
+        "Which section of the Motor Vehicle Act contains rules for speed limits?",
+        "How many instances of the word 'interprovincial' are there in BC laws?",
+        "How many Acts have information about indigenous peoples?",
+        "Which Acts and Regulations contain information on natural resources?",
+    ]
+    for question in questions:
+        print(f"Question: {question}")
+        answer = chat_loop(question)
+        print(f"Answer: {answer}\n")
