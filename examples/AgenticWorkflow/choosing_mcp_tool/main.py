@@ -142,10 +142,6 @@ def get_database_schema():
 
 
 def chat_loop(initial_question: str):
-    # mcp = McpServer()
-    # mcp.run()  # Start the MCP server
-    # tools = mcp.tools  # Ensure tools are set
-    # print(tools)
     try:
         # Supply with database schema first
         schema = get_database_schema()

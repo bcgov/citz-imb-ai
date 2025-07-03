@@ -41,24 +41,6 @@ class AzureQuery:
                         "tool_calls": assistant_message.get("tool_calls"),
                     }
                 )
-                # tool_calls = choice.get("message").get("tool_calls")
-                # for tool_call in tool_calls:
-                #     tool_name = tool_call.get("function").get("name")
-                #     arguments = tool_call.get("function").get("arguments")
-                #     # Content must be a string or array of objects
-                #     # Supported values for type: 'text', 'image_url', 'input_audio', 'refusal', 'audio', and 'file'
-                #     self.history.append(
-                #         {
-                #             "role": "tool",
-                #             "content": [
-                #                 {
-                #                     "tool_name": tool_name,
-                #                     "arguments": arguments,
-                #                     "type": "text",
-                #                 }
-                #             ],
-                #         }
-                #     )
             return choice
         else:
             raise Exception(f"Error: {response.status_code}, {response.text}")
