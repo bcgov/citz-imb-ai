@@ -63,18 +63,22 @@ class AzureQuery:
         # System messages should typically be at the beginning
         self.history.insert(0, {"role": "system", "content": content})
 
-    def set_database_schema(self, schema_info):
+    def set_initial_context(self, schema_info):
         """Set database schema information as a system message."""
-        schema_message = f"""You are an AI assistant that helps users query a Neo4j database. 
+        schema_message = f"""
+        You are an AI assistant that helps users answer questions about BC Laws. 
 
-        Database Schema Information:
+        This is the database schema information you need to know:
         {schema_info}
 
         When using the explicit_search tool, generate valid Cypher queries based on this schema.
         When using the semantic_search tool, help users find relevant information using natural language questions.
-        Priority should be to use nodes with the "UpdatedChunk" label.
 
-        Always consider the schema when constructing queries and provide helpful explanations."""
+        Always consider the schema when constructing queries and provide helpful explanations.
+        This model's maximum context length is 128000 tokens. 
+        Keep your responses concise and relevant to the user's question.
+        Apply limits to the size of database queries to avoid exceeding the context length.
+        """
 
         self.add_system_message(schema_message)
 

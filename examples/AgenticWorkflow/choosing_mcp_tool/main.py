@@ -112,40 +112,53 @@ tools = [
 ]
 
 
-def get_database_schema():
+def get_database_schema(labels: list[str] = []):
     """Get the database schema dynamically from Neo4j."""
     neo4j_worker = Neo4jRetrieval(NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD)
 
-    # Get node labels
-    labels_query = "CALL db.labels()"
-    labels = neo4j_worker.run_query(labels_query)
+    # Get comprehensive schema information
+    schema_query = """
+    CALL apoc.meta.schema()
+    YIELD value
+    RETURN value
+    """
 
-    # Get relationship types
-    relationships_query = "CALL db.relationshipTypes()"
-    relationships = neo4j_worker.run_query(relationships_query)
+    schema = neo4j_worker.run_query(schema_query)
 
-    # Get property keys
-    properties_query = "CALL db.propertyKeys()"
-    properties = neo4j_worker.run_query(properties_query)
-
-    neo4j_worker.close()
-
+    # Filter the schema to only include desired node labels and relationship types
+    if len(labels) > 0:
+        schema_obj = schema[0].get("value", {})
+        # Only keep nodes with specified labels
+        filtered_nodes = {
+            label: properties
+            for label, properties in schema_obj.items()
+            if label in labels
+        }
+        schema = filtered_nodes
+    # Format the schema information
     schema_info = f"""
-      Node Labels: {labels}
-      Relationship Types: {relationships}
-      Property Keys: {properties}
-      
-      Use these when constructing Cypher queries.
-      """
-
+    COMPREHENSIVE DATABASE SCHEMA:
+    {schema}
+    
+    This schema shows:
+    - Node labels with their properties and types
+    - Relationship types and their directions
+    - Property constraints and indexes
+    - Cardinality information
+    
+    Please note that the field document_title actually contains the title of the document.
+    Therefore, if I wanted information about a specific document, such as the Motor Vehicle Act, I would search in the document_title field.
+    Use this information to construct accurate Cypher queries.
+    """
+    neo4j_worker.close()
     return schema_info
 
 
 def chat_loop(initial_question: str):
     try:
         # Supply with database schema first
-        schema = get_database_schema()
-        azure.set_database_schema(schema)
+        schema = get_database_schema("v3")
+        azure.set_initial_context(schema)
         # Continue with the conversation
         response = azure.call_agent_with_history(initial_question, tools=tools)
         finish_reason = response.get("finish_reason")
@@ -177,6 +190,10 @@ def chat_loop(initial_question: str):
                 # Continue the conversation without adding a new user message
                 response = azure.call_agent_with_history("", tools=tools, role="user")
                 finish_reason = response.get("finish_reason")
+            elif finish_reason == "length":
+                print("Response length exceeded the limit.")
+                print(azure.history)
+                break
             else:
                 print("Unexpected finish reason:", finish_reason)
                 break
@@ -191,11 +208,12 @@ def chat_loop(initial_question: str):
 
 if __name__ == "__main__":
     questions = [
-        "How much notice is required to terminate a tenancy in BC?",
-        "Which section of the Motor Vehicle Act contains rules for speed limits?",
-        "How many instances of the word 'interprovincial' are there in BC laws?",
-        "How many Acts have information about indigenous peoples?",
-        "Which Acts and Regulations contain information on natural resources?",
+        # "How much notice is required to terminate a tenancy in BC?",
+        # "Which section of the Motor Vehicle Act contains rules for speed limits?",
+        # "How many instances of the word 'interprovincial' are there in BC laws?",
+        # "How many Acts have information about indigenous peoples?",
+        # "Which Acts and Regulations contain information on natural resources?",
+        "Can you explain section 3 of the Motor Vehicle Act? Find its text and summarize it.",
     ]
     for question in questions:
         print(f"Question: {question}")
