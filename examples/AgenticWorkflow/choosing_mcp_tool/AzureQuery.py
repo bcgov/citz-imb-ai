@@ -2,7 +2,7 @@ import requests
 
 
 class AzureQuery:
-    def __init__(self, endpoint, key, token_max=200):
+    def __init__(self, endpoint, key, token_max=3000):
         self.endpoint = endpoint
         self.key = key
         self.history = []
@@ -75,9 +75,7 @@ class AzureQuery:
         When using the semantic_search tool, help users find relevant information using natural language questions.
 
         Always consider the schema when constructing queries and provide helpful explanations.
-        This model's maximum context length is 128000 tokens. 
         Keep your responses concise and relevant to the user's question.
-        Apply limits to the size of database queries to avoid exceeding the context length.
         """
 
         self.add_system_message(schema_message)

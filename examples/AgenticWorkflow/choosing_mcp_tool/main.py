@@ -213,7 +213,9 @@ if __name__ == "__main__":
         # "How many instances of the word 'interprovincial' are there in BC laws?",
         # "How many Acts have information about indigenous peoples?",
         # "Which Acts and Regulations contain information on natural resources?",
-        "Can you explain section 3 of the Motor Vehicle Act? Find its text and summarize it.",
+        # "Can you explain section 3 of the Motor Vehicle Act? Find its text and summarize it.",
+        # "When was the first version of the Motor Vehicle Act enacted?",
+        "Has the Coal Act been amended since 2010?",
     ]
     for question in questions:
         print(f"Question: {question}")
