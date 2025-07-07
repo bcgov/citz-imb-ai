@@ -257,7 +257,7 @@ char *getNodeContent(xmlNodePtr node)
     return NULL;
 }
 
-Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regTitleNode, int print_outputs, xmlChar *id)
+Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regTitleNode, int print_outputs, xmlChar *id, xmlNodePtr enactedNode)
 {
     xmlNodePtr curNode = NULL;
     xmlChar *sectionHeading = NULL;
@@ -327,6 +327,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     newSection.content = trim_and_normalize_whitespace(sectionContent);
     newSection.title = sectionHeading ? strdup((char *)sectionHeading) : NULL;
     newSection.act_title = getNodeContent(titleNode);
+    newSection.year_enacted = getNodeContent(enactedNode);
     newSection.reg_title = getNodeContent(regTitleNode);
     concat_url(&newSection.url, id);
     newSection.section_url = sectionUrl;
@@ -337,6 +338,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
         printf("Act title: %s\n", newSection.act_title);
         printf("Regulation title: %s\n", newSection.reg_title);
         printf("Section title: %s\n", newSection.title);
+        printf("Year Enacted: %s\n", newSection.year_enacted);
         //printf("Section content: %s\n", newSection.content);
         // print_readable(newSection.content);
         printf("Section number: %s\n", newSection.number);
@@ -363,7 +365,7 @@ Section processSection(xmlNodePtr section, xmlNodePtr titleNode, xmlNodePtr regT
     return newSection;
 }
 
-void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, int *max_sections, xmlNodePtr titleNode, xmlNodePtr regTitleNode, int print_outputs, xmlChar *id)
+void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, int *max_sections, xmlNodePtr titleNode, xmlNodePtr regTitleNode, int print_outputs, xmlChar *id, xmlNodePtr enactedNode)
 {
     for (xmlNodePtr curNode = node; curNode; curNode = curNode->next)
     {
@@ -384,11 +386,11 @@ void processAllSections(xmlNodePtr node, Section **sections, int *num_sections, 
                     }
                     *sections = newSections;
                 }
-                Section newSection = processSection(curNode, titleNode, regTitleNode, print_outputs, id);
+                Section newSection = processSection(curNode, titleNode, regTitleNode, print_outputs, id, enactedNode);
                 (*sections)[*num_sections] = newSection;
                 (*num_sections)++;
             }
-            processAllSections(curNode->children, sections, num_sections, max_sections, titleNode, regTitleNode, print_outputs, id);
+            processAllSections(curNode->children, sections, num_sections, max_sections, titleNode, regTitleNode, print_outputs, id, enactedNode);
         }
     }
 }
@@ -412,6 +414,7 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     }
 
     xmlNodePtr titleNode = NULL;
+    xmlNodePtr enactedNode = NULL;
 
     // Get the root element of the document
     rootElement = xmlDocGetRootElement(doc);
@@ -454,12 +457,28 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     {
         // If regulation title is not found, try to get the act's title
         titleNode = findNodeByNamespace(rootElement, "act", "title");
+        // get the enacted date of the act
+        enactedNode = findNodeByNamespace(rootElement, "act", "yearenacted");
     }
 
-	// 🔁 Fallback: try plain <title> if namespaced titles not found
-	if (!titleNode) {
-	    titleNode = findNode(rootElement, "title");
+    // 🔁 Fallback: try plain <title> if namespaced titles not found
+    if (!titleNode) {
+        titleNode = findNode(rootElement, "title");
+    }
+    
+    // 🔁 Fallback: try plain <title> if namespaced titles not found
+    if (!enactedNode) {
+        enactedNode = findNode(rootElement, "yearenacted");
+        
+	if (print_outputs) { 
+		char *act_title = getNodeContent(titleNode);
+		char *date_str = getNodeContent(enactedNode);
+		
+		printf("The %s has Enacted date: %s\n",act_title, date_str);
+		free(date_str);
+		free(act_title);
 	}
+    }
 
     // If neither title is found, free the document and return NULL
     if (!titleNode)
@@ -468,6 +487,8 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
         xmlFreeDoc(doc);
         return NULL;
     }
+
+    
 
     // Initialize sections array
     *num_sections = 0;
@@ -481,7 +502,7 @@ Section *extract_sections_from_memory(const char *buffer, int size, int *num_sec
     }
 
     // Process all sections
-    processAllSections(rootElement, &sections, num_sections, &max_sections, titleNode, regTitleNode, print_outputs, id);
+    processAllSections(rootElement, &sections, num_sections, &max_sections, titleNode, regTitleNode, print_outputs, id, enactedNode);
     xmlFree(id);
     xmlFreeDoc(doc);
     return sections;
@@ -495,6 +516,7 @@ void free_sections(Section *sections, int num_sections)
         free(sections[i].content);
         free(sections[i].number);
         free(sections[i].act_title);
+        free(sections[i].year_enacted);
         free(sections[i].reg_title);
         free(sections[i].url);
         free(sections[i].section_url);

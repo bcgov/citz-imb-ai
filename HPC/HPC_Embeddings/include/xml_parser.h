@@ -12,6 +12,8 @@ typedef struct {
     char *content;
     char *url;
     char *section_name;
+    char *year_enacted;
+    char *chapter;
     char *section_url;
     char *section_id;
     char *reg_title;
