@@ -1,0 +1,12 @@
+[project]
+name = "choosing-mcp-tool"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-community>=0.3.26",
+    "neo4j>=5.28.1",
+    "requests>=2.32.4",
+    "sentence-transformers>=4.1.0",
+]
