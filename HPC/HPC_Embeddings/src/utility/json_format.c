@@ -97,6 +97,7 @@ void save_openvino_format_to_dram(Section *section, TokenizedData *tokens, int r
         json_object_object_add(chunk_obj, "chunk_id", json_object_new_string(chunk_id));
         json_object_object_add(chunk_obj, "chunk_seq_id", json_object_new_int(i));
         json_object_object_add(chunk_obj, "act_id", json_object_new_string(section->act_title ? section->act_title : ""));
+        json_object_object_add(chunk_obj, "year_enacted", json_object_new_string(section->year_enacted ? section->year_enacted : ""));
         json_object_object_add(chunk_obj, "reg_title", json_object_new_string(section->reg_title ? section->reg_title : ""));
         //json_object_object_add(chunk_obj, "section_id", json_object_new_string(section->section_id ? section->section_id : ""));
         json_object_object_add(chunk_obj, "section_number", json_object_new_string(section->number ? section->number : ""));
