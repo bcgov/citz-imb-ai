@@ -9,8 +9,5 @@ agents_mcp = FastMCP(name="MainAgentServer")
 
 # 3. Mount each individual agent server onto the main one with a prefix.
 #    This makes their tools available under names like 'semanticsearch_search'
-#    and 'communitydetection_detect'.
 agents_mcp.mount(semantic_search_mcp, prefix="semanticsearch")
 agents_mcp.mount(community_detection_mcp, prefix="communitydetection")
-
-# Now, `agents_mcp` is a single object representing all your combined tools.
