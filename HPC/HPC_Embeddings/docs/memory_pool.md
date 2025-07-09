@@ -16,7 +16,7 @@ In a performance-critical application like this, standard library functions like
 
 Every call to `malloc()` is a system call that requires the C library to search the heap for a free block of memory of a suitable size. This involves complex algorithms, bookkeeping, and kernel-level context switching. When you need to allocate memory for thousands of small strings per second (like in `split_text_to_words`), the cumulative overhead of these calls is enormous.
 
-**Solution:** The memory pool makes a single, large `malloc` call at the beginning. Subsequent allocations (`pool_alloc`) are nearly free—they are just a pointer addition and a bounds check, which are orders ofmagnitude faster.
+**Solution:** The memory pool makes a single, large `malloc` call at the beginning. Subsequent allocations (`pool_alloc`) are nearly free—they are just a pointer addition and a bounds check, which are orders of magnitude faster.
 
 #### b. Heap Fragmentation
 
