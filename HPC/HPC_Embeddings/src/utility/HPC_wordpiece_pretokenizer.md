@@ -270,7 +270,7 @@ token_text_splitter() Pipeline Flow:
       ▼
 ┌─────────────────────────┐    ┌─────────────────────────┐
 │ split_punctuations_     │ →  │ Handle UTF-8 NBSP       │
-│ and_to_lowercase()      │    │ (0xC2 0xA0 → space)    │
+│ and_to_lowercase()      │    │ (0xC2 0xA0 → space)     │
 └─────────────────────────┘    └─────────────────────────┘
       ▼                                 ▼
 ┌─────────────────────────┐    ┌─────────────────────────┐
