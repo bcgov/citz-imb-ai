@@ -147,9 +147,6 @@ drwxr-xr-x.  6 1017910000 root 4.0K Jun 20 16:15 include
 - **include**
   - Contains header files for C/C++ and other programming languages, needed for developing and compiling software.
 
-
-
-
 ## Architecture Overview
 
 ![../../assets/system_architecture.jpg](../../assets/system_architecture.jpg)
@@ -161,6 +158,16 @@ The provided image illustrates the HPC (High-Performance Computing) system archi
 ## Definition and Goal
 - **Definition**: High-Performance Computing (HPC) involves aggregating computing power to deliver higher performance.
 - **Goal**: Efficiently solve complex, compute-intensive tasks by leveraging parallelism and optimization.
+
+## Core Components
+
+### Pre-Tokenizer
+- **File:** `HPC_wordpiece_pretokenizer.md`
+- **Purpose:** High-performance C tokenizer with AVX-512 acceleration
+- **Hardware:** Optimized for Intel Xeon Cascade Lake ( Gold 6244 systems and above)
+- **Performance:** ~30 µs per 2KB document on your OpenShift cluster
+
+For detailed implementation, SIMD optimizations, and API reference, see [HPC WordPiece Pre-Tokenizer Documentation](./src/utility/HPC_wordpiece_pretokenizer.md).
 
 ## Flow Chart 1: Indexing of ACT Files
 1. **Read XML ACT Files**:
