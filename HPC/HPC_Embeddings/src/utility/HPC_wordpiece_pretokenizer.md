@@ -45,14 +45,14 @@
 ## 1. Architecture Pipeline
 
 ```
-┌─────────────┐     ┌────────────┐     ┌──────────────┐     ┌──────────┐
-│ Raw UTF‑8   │ →  │Pre‑process │ →  │Word Splitter │ →  │Sub‑word   │
-│ text        │     │(lower+punct)|     │(SIMD spaces) │     │Tokenizer │
-└─────────────┘     └────────────┘     └──────────────┘     └────┬─────┘
-                                                               ▼
-                                                        ┌────────────┐
-                                                        │Chunk Maker │
-                                                        └────────────┘
+┌──────────────┐     ┌─────────────┐     ┌──────────────┐     ┌────────────┐
+│ Raw UTF‑8    │  →  │ Pre‑process │  →  │Word Splitter │  →  │ Sub‑word   │
+│ text         │     │(lower+punct)|     │(SIMD spaces) │     │ Tokenizer  │
+└──────────────┘     └─────────────┘     └──────────────┘     └─────┬──────┘
+                                                                    ▼
+                                                             ┌────────────┐
+                                                             │Chunk Maker │
+                                                             └────────────┘
 ```
 
 ### Pipeline Stages
