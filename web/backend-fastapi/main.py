@@ -35,6 +35,9 @@ import warnings
 import os
 from dotenv import load_dotenv
 
+from fastmcp import FastMCP
+from app.mcp_agents import agents_mcp
+
 warnings.filterwarnings("ignore")
 
 app = FastAPI(root_path="/api")
@@ -48,6 +51,14 @@ app.include_router(analytics.router)
 # Register middleware
 app.add_middleware(LoggingMiddleware)
 app.add_middleware(AuthenticationMiddleware)
+
+# Get the ASGI-compliant app from your main MCP server instance
+mcp_asgi_app = agents_mcp.http_app(path='/mcp')
+
+# Mount the MCP app at the '/agents' endpoint
+# Critical step: MUST pass the lifespan from the FastMCP app to FastAPI.
+app.mount("/agents", mcp_asgi_app)
+app.router.lifespan_context = mcp_asgi_app.lifespan
 
 load_dotenv(
     "/vault/secrets/zuba-secret-dev"
