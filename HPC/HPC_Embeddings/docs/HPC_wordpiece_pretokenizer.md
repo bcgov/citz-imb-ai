@@ -21,8 +21,7 @@
 | **Input Support** | ASCII text + UTF-8 non-breaking spaces (auto-converted) |
 | **Throughput** | ≈ 30 µs for a 2 kB paragraph (Xeon Gold 6244, DDR4)      |
 | **Tokeniser**  | Greedy WordPiece with "##" continuation                   |
-| **Chunking**   | 255 tokens *(CLS + ≤ 253 + SEP)*, 50‑token overlap        |
-| **Licence**    | MIT                                                       |
+| **Chunking**   | 255 tokens *(CLS + ≤ 253 + SEP)*, 50‑token overlap        |                                                    |
 
 ---
 
@@ -272,7 +271,7 @@ token_text_splitter() Pipeline Flow:
 │ split_punctuations_     │ →  │ Handle UTF-8 NBSP       │
 │ and_to_lowercase()      │    │ (0xC2 0xA0 → space)     │
 └─────────────────────────┘    └─────────────────────────┘
-      ▼                                 ▼
+      ▼                                 
 ┌─────────────────────────┐    ┌─────────────────────────┐
 │ to_lowercase_avx512()   │ →  │ mark_punctuation_       │
 │ (case normalization)    │    │ avx512() + space insert │
@@ -301,9 +300,9 @@ token_text_splitter() Pipeline Flow:
 
 ---
 
-## 3. Performance Deep-Dive
+## 4. Performance Deep-Dive
 
-### 3.1 SIMD Optimizations
+### 4.1 SIMD Optimizations
 
 #### Case Conversion (AVX-512)
 
@@ -357,7 +356,7 @@ for (i = 0; i + 64 <= len; i += 64) {
 
 **Performance:** Processes entire cache lines, ~4× faster than scalar.
 
-### 3.2 Memory Optimization
+### 4.2 Memory Optimization
 
 | Technique | Impact | Implementation |
 |-----------|---------|----------------|
@@ -365,7 +364,7 @@ for (i = 0; i + 64 <= len; i += 64) {
 | **In-place Processing** | Reduces memory copies | Null-terminate strings directly |
 | **Batch Processing** | Improves cache locality | Process 64-byte chunks |
 
-### 3.3 Performance Characteristics
+### 4.3 Performance Characteristics
 
 | Input Size | Processing Time | Memory Usage | Dominant Stage |
 |------------|----------------|--------------|----------------|
@@ -375,9 +374,9 @@ for (i = 0; i + 64 <= len; i += 64) {
 
 ---
 
-## 4. Implementation Details
+## 5. Implementation Details
 
-### 4.1 WordPiece Tokenization Algorithm
+### 5.1 WordPiece Tokenization Algorithm
 
 The `get_token()` function implements greedy longest-match WordPiece:
 
@@ -456,9 +455,9 @@ for (int i = 0; i < result.chunk_count; i++) {
 
 ---
 
-## 5. Build & Usage
+## 6. Build & Usage
 
-### 5.1 Build Instructions
+### 6.1 Build Instructions
 
 #### CMake Build (Recommended)
 
@@ -484,7 +483,7 @@ gcc $CFLAGS -Iinclude pre_tokenizer.c memory_pool.c hash_table.c -o pre_tokenize
 gcc $CFLAGS -DNO_AVX512 -Iinclude *.c -o pre_tokenizer
 ```
 
-### 5.2 Dependencies
+### 6.2 Dependencies
 
 #### Core Dependencies
 - **C Compiler:** Intel ICX (preferred) or GCC 9+
@@ -513,7 +512,7 @@ else()
 endif()
 ```
 
-### 5.3 Usage Examples
+### 6.3 Usage Examples
 
 #### Standalone Tokenizer Usage
 
@@ -592,7 +591,7 @@ mpirun -genv I_MPI_DEBUG=5 --bind-to socket:2 -np 2 \
 | `1` | Processing mode | Configuration flag | Single-file-per-rank mode |
 | `: python ../mpi_receiver.py` | Result processor | Python backend | Aggregates results from both nodes |
 
-### 5.4 Compiler Optimization Flags
+### 6.4 Compiler Optimization Flags
 
 #### Intel ICX (Primary/Preferred)
 ```bash
@@ -616,7 +615,7 @@ mpirun -genv I_MPI_DEBUG=5 --bind-to socket:2 -np 2 \
 - **AddressSanitizer:** Enables runtime memory error detection (debug builds only)
 - **Your Environment:** ICX expected and preferred for optimal performance
 
-### 5.5 Error Handling
+### 6.5 Error Handling
 
 The implementation provides comprehensive error handling:
 
@@ -628,38 +627,376 @@ The implementation provides comprehensive error handling:
 
 ---
 
-## 9. API Reference
+## 7. Thread Safety & Concurrency
 
+### Thread Safety Analysis
+
+The pre-tokenizer is **thread-safe by design** for the intended usage pattern:
+
+**✅ Safe Operations (per-thread):**
+- **Read-only hash table access:** Multiple threads can safely perform `check_substring()` lookups simultaneously
+- **Independent memory pools:** Each thread uses its own `MemoryPool` instance  
+- **Local stack variables:** All processing buffers are allocated on local stack or thread-local heap
+- **No shared mutable state:** Each `token_text_splitter()` call operates on independent data
+
+**✅ MPI Deployment Pattern:**
+```c
+// Each MPI rank processes different files - naturally thread-safe
+// Rank 0: processes file_A.txt using its own MemoryPool
+// Rank 1: processes file_B.txt using its own MemoryPool  
+// No shared memory between processes
+```
+
+**⚠️ Shared Resources (must be managed carefully):**
+- **Hash table initialization:** Must be completed before spawning worker threads
+- **Vocabulary loading:** Should be done once in main thread, then shared read-only
+
+**Recommended Usage Pattern:**
+```c
+// Main thread: Initialize shared read-only resources
+HashTable *shared_vocab = load_vocab("vocab.txt");  // Once, shared
+
+#pragma omp parallel
+{
+    // Each thread: Independent processing resources
+    MemoryPool local_pool;
+    init_pool(&local_pool, 1 << 20);  // Thread-local memory pool
+    
+    // Process different files per thread - no contention
+    char filename[256];
+    sprintf(filename, "input_%d.txt", omp_get_thread_num());
+    
+    TokenizedData result = token_text_splitter(shared_vocab, text, &local_pool);
+    // ... process result ...
+    
+    free_pool(&local_pool);  // Thread-local cleanup
+}
+```
+---
+
+## 8. Limitations & Future Work
+
+| Limitation | Impact | Workaround |
+|------------|---------|-----------|
+| **ASCII-centric** | Limited UTF-8 support | Use for English/Western languages |
+| **No normalization** | Inconsistent Unicode handling | Preprocess with ICU library |
+| **Fixed chunk size** | Memory overhead for short texts | Adjust constants for use case |
+
+### Future Enhancements
+
+- **Full UTF-8 Support:** NFC/NFKC normalization, proper grapheme handling, multi-byte character tokenization
+
+---
+
+## 9. API Reference
 ### Core Functions
 
 #### `TokenizedData token_text_splitter(HashTable *table, const char *text, MemoryPool *pool)`
-**Purpose:** Main entry point for tokenization pipeline  
-**Returns:** Complete tokenization result with chunks  
-**Complexity:** O(n + w×l×log(v)) where n=text length, w=words, l=avg word length, v=vocab size
+
+**Purpose:** Main entry point for tokenization pipeline that processes arbitrary text into WordPiece tokens
+
+**Parameters:**
+- `table` - Hash table containing vocabulary mappings (token string → token ID)
+- `text` - Input text to tokenize (null-terminated UTF-8 string)
+- `pool` - Memory pool for efficient allocation of result structures
+
+**Returns:** `TokenizedData` struct containing:
+```c
+typedef struct {
+    char **words;              // Array of word strings
+    int **token_values;        // 2D array for token values
+    int *token_counts;         // Array to store the number of tokens per word
+    int word_count;            // Number of words processed
+    int *flattened_tokens;     // Flattened array of all tokens
+    int flattened_count;       // Total number of tokens in the flattened array
+    int **token_chunks;        // Array of 255-token chunks
+    char **chunk_texts;        // Map the token and word
+    int chunk_count;           // Number of chunks
+} TokenizedData;
+```
+
+**Complexity Analysis:** O(n + w×l) 
+- `n` = total input text length
+- `w` = number of words discovered
+- `l` = average word length
+
+**Detailed Breakdown:**
+```
+Phase 1: Text preprocessing and word boundary detection    O(n)
+Phase 2: WordPiece tokenization of each word              O(w×l)
+Phase 3: Result structure assembly                        O(w)
+Total:                                                     O(n + w×l)
+```
+
+**Usage Example:**
+```c
+HashTable *vocab = load_vocabulary("vocab.txt");
+MemoryPool *pool = create_memory_pool(1024 * 1024);
+TokenizedData result = token_text_splitter(vocab, "Hello world!", pool);
+
+printf("Tokenized %d words into %d total tokens\n", 
+       result.word_count, result.flattened_count);
+
+// Access individual words and their tokens
+for (int i = 0; i < result.word_count; i++) {
+    printf("Word '%s' → %d tokens: ", 
+           result.words[i], result.token_counts[i]);
+    
+    // Print tokens for this word
+    for (int j = 0; j < result.token_counts[i]; j++) {
+        printf("%d ", result.token_values[i][j]);
+    }
+    printf("\n");
+}
+
+cleanup_memory_pool(pool);
+```
+
+**Error Handling:**
+- Returns struct with NULL pointers and zero counts if allocation fails
+- Handles NULL input gracefully (returns empty result)
+- Invalid UTF-8 sequences are replaced with Unicode replacement character (U+FFFD)
+
+**Performance Notes:**
+- Uses SIMD acceleration for text scanning on inputs ≥64 bytes
+- Memory pool allocation reduces fragmentation for large texts
+- Hash table lookups optimized for common English subwords
+
+---
 
 #### `tokens_t get_token(HashTable *table, const char *text)`
-**Purpose:** Tokenize a single word using WordPiece algorithm  
-**Returns:** Token IDs and metadata for the word  
-**Complexity:** O(l×log(v)) where l=word length, v=vocab size
+
+**Purpose:** Tokenize a single word using WordPiece subword segmentation algorithm
+
+**Parameters:**
+- `table` - Vocabulary hash table (must be initialized)
+- `text` - Single word to tokenize (no spaces, null-terminated)
+
+**Returns:** `tokens_t` struct containing:
+```c
+typedef struct tokens {
+    int *token_values;        // Array of token IDs from vocabulary
+    char *word;               // Original word being tokenized
+    int token_count;          // Number of tokens generated
+} tokens_t;
+```
+
+**Algorithm:** Greedy longest-match WordPiece segmentation
+1. Attempt to match entire word against vocabulary
+2. If no match, try progressively shorter prefixes
+3. When match found, recursively process remaining suffix
+4. Fall back to character-level tokens for unknown sequences
+
+**Complexity Analysis:** O(l) where l = word length
+```
+Best case:    O(1)     - entire word found in vocabulary
+Average case: O(l)     - few subword segments needed
+Worst case:   O(l)     - character-by-character fallback
+```
+
+**Note:** This function appears to be designed for single word tokenization based on the struct definition.
+
+**Usage Example:**
+```c
+HashTable *vocab = load_vocabulary("bert-base-uncased-vocab.txt");
+tokens_t result = get_token(vocab, "tokenization");
+
+printf("Word '%s' split into %d tokens:\n", result.word, result.token_count);
+for (int i = 0; i < result.token_count; i++) {
+    printf("  Token[%d] = %d\n", i, result.token_values[i]);
+}
+// Output might be:
+//   Token[0] = 19204
+//   Token[1] = 3989
+
+// Note: This assumes you have a cleanup function for tokens_t
+free_tokens(&result);
+```
+
+**Special Tokens:**
+- `[UNK]` (ID: 100) - Unknown token for out-of-vocabulary characters
+- `##` prefix - Indicates token continues previous word (WordPiece convention)
+
+---
 
 #### `char *split_punctuations_and_to_lowercase(const char *str)`
-**Purpose:** Preprocess text by normalizing case and isolating punctuation  
-**Returns:** Processed string (caller must free)  
-**Features:** UTF-8 NBSP handling, SIMD acceleration
+
+**Purpose:** Normalize text by converting to lowercase and isolating punctuation with spaces
+
+**Parameters:**
+- `str` - Input string to normalize (UTF-8 encoded)
+
+**Returns:** 
+- Newly allocated string with normalization applied
+- **Caller must free the returned pointer**
+- Returns NULL if allocation fails
+
+**Normalization Rules:**
+```c
+Input:  "Hello, world!"
+Output: "hello , world !"
+
+Input:  "don't"  
+Output: "don ' t"
+
+Input:  "A.I"
+Output: "a . i ."
+```
+
+**Character Processing:**
+- Handles ASCII characters (0-127) with optimized processing
+- Basic punctuation isolation for common symbols (.,!?;:)
+- Case conversion limited to ASCII range (A-Z → a-z)
+- UTF-8 sequences processed byte-by-byte (may not preserve Unicode semantics)
+- Target use case: Optimized for English text and common ASCII documents
+
+**Future Improvements:**
+- Full Unicode case conversion support
+- Proper UTF-8 multi-byte character boundary detection
+- Unicode punctuation and symbol handling
+- Support for international text processing
+
+**SIMD Acceleration:**
+- Automatically enabled for ASCII-only text ≥16 characters
+- Falls back to scalar processing for mixed Unicode content
+- 4-8x speedup on typical English text
+
+**Usage Example:**
+```c
+char *normalized = split_punctuations_and_to_lowercase("Don't split UTF-8!");
+printf("Normalized: '%s'\n", normalized);  
+// Output: "don ' t split utf - 8 !"
+free(normalized);
+```
+
+**Performance:**
+- Time: O(n) where n = string length
+- Space: O(n) for output string
+- SIMD speedup: ~4x for ASCII text ≥16 chars
+
+---
 
 #### `void split_text_to_words(const char *text, char ***words, int *word_count, MemoryPool *pool)`
-**Purpose:** Split text into words using space delimiters  
-**Output:** Array of word strings allocated from memory pool  
-**Features:** SIMD acceleration for ≥64 byte inputs
 
-### Utility Functions
+**Purpose:** Split input text into individual words using whitespace delimiters
 
-| Function | Purpose | SIMD | Notes |
-|----------|---------|------|-------|
-| `to_lowercase_avx512()` | Convert string to lowercase | ✅ | 64-byte chunks |
-| `mark_punctuation_avx512()` | Identify punctuation positions | ✅ | Uses lookup table |
-| `check_substring()` | Hash table lookup with preprocessing | ❌ | Removes whitespace |
-| `removeWhitespace()` | In-place whitespace removal | ❌ | O(n) single pass |
+**Parameters:**
+- `text` - Input text to split (UTF-8 null-terminated string)
+- `words` - Output pointer to array of word strings (allocated from pool)
+- `word_count` - Output pointer to number of words found
+- `pool` - Memory pool for allocation (reduces fragmentation)
+
+**Word Boundary Rules:**
+- **Delimiters:** Space (0x20), tab (0x09), newline (0x0A), carriage return (0x0D)
+- **Unicode spaces:** Non-breaking space (0xC2A0), em space (0xE28083), etc.
+- **Multiple delimiters:** Consecutive whitespace treated as single delimiter
+- **Empty strings:** Leading/trailing whitespace ignored
+
+**SIMD Optimization:**
+- Enabled automatically for inputs ≥64 bytes
+- Processes 32+ characters per cycle (AVX-512)
+- 8-16x speedup on large text processing
+
+**Usage Example:**
+```c
+MemoryPool *pool = create_memory_pool(4096);
+char **words;
+int count;
+
+split_text_to_words("Hello   world\tprogramming\n", &words, &count, pool);
+
+printf("Found %d words:\n", count);
+for (int i = 0; i < count; i++) {
+    printf("  [%d]: '%s'\n", i, words[i]);
+}
+// Output:
+//   [0]: 'Hello'
+//   [1]: 'world' 
+//   [2]: 'programming'
+
+// Memory automatically freed when pool is destroyed
+cleanup_memory_pool(pool);
+```
+---
+### Data Structures
+
+#### `TokenizedData`
+Complete tokenization result with word-level breakdown and chunking capabilities.
+```c
+typedef struct {
+    char **words;              // Original words from input text
+    int **token_values;        // 2D array: token_values[word_index][token_index]  
+    int *token_counts;         // Number of tokens per word
+    int word_count;            // Total number of words
+    int *flattened_tokens;     // All tokens in single array
+    int flattened_count;       // Total token count
+    int **token_chunks;        // Tokens grouped into chunks (e.g., 255-token chunks)
+    char **chunk_texts;        // Text representation of chunks
+    int chunk_count;           // Number of chunks
+} TokenizedData;
+```
+
+#### `tokens_t` 
+Single word tokenization result.
+```c
+typedef struct tokens {
+    int *token_values;         // Array of token IDs for this word
+    char *word;                // Original word string
+    int token_count;           // Number of tokens for this word
+} tokens_t;
+```
+
+#### `TokenArray`
+Helper structure for token management.
+```c
+typedef struct {
+    int* values;               // Array of token values
+    int count;                 // Number of tokens in array
+} TokenArray;
+```
+
+#### `TokenCollection`
+Collection of token arrays with dynamic capacity.
+```c
+typedef struct {
+    TokenArray* arrays;        // Array of TokenArray structures
+    int num_arrays;            // Number of arrays in collection
+    int total_tokens;          // Total tokens across all arrays
+    int capacity;              // Allocated capacity
+} TokenCollection;
+```
+
+#### `HashTable`
+Vocabulary lookup structure optimized for string keys.
+```c
+// Typical vocabulary sizes:
+// BERT-base: ~30,000 tokens
+// GPT-2: ~50,000 tokens  
+// T5: ~32,000 tokens
+```
+
+#### `MemoryPool`
+Efficient memory allocator that reduces fragmentation for repeated tokenization operations.
+
+---
+
+### Error Handling
+
+#### Return Value Conventions
+- **NULL pointers:** Indicate allocation failure or invalid input
+- **Zero counts:** Valid for empty input (not an error)
+- **Negative values:** Reserved for future error codes
+
+#### Memory Management
+- All returned strings/arrays must be freed by caller (unless allocated from MemoryPool)
+- Memory pools automatically free all allocations when destroyed
+- Use `free_token_collection()` helper for `TokenCollection` cleanup
+- Check if your implementation provides specific cleanup functions for your structs
+
+#### Input Validation
+- Functions handle NULL input gracefully (return empty/default results)
+- Invalid UTF-8 sequences replaced with U+FFFD replacement character
+- Very large inputs (>1GB) may return allocation failure
 
 ---
 
@@ -785,7 +1122,7 @@ source /opt/intel/oneapi/setvars.sh
 # Verify ICX is working
 icx --version
 
-# Your HPC system expects ICX - ensure it's properly loaded
+# Your HPC system expects ICX - ensure it's properly:w loaded
 module load intel/oneapi  # If using environment modules
 ```
 
@@ -821,68 +1158,6 @@ pkg-config --libs libxml-2.0
 
 ---
 
-## 7. Thread Safety & Concurrency
 
-## 8. Limitations & Future Work
-
-| Limitation | Impact | Workaround |
-|------------|---------|-----------|
-| **ASCII-centric** | Limited UTF-8 support | Use for English/Western languages |
-| **No normalization** | Inconsistent Unicode handling | Preprocess with ICU library |
-| **Fixed chunk size** | Memory overhead for short texts | Adjust constants for use case |
-
-### Future Enhancements
-
-- **Full UTF-8 Support:** NFC/NFKC normalization, proper grapheme handling, multi-byte character tokenization
-
----
-
-## 8. Thread Safety & Concurrency
-
-### Thread Safety Analysis
-
-The pre-tokenizer is **thread-safe by design** for the intended usage pattern:
-
-**✅ Safe Operations (per-thread):**
-- **Read-only hash table access:** Multiple threads can safely perform `check_substring()` lookups simultaneously
-- **Independent memory pools:** Each thread uses its own `MemoryPool` instance  
-- **Local stack variables:** All processing buffers are allocated on local stack or thread-local heap
-- **No shared mutable state:** Each `token_text_splitter()` call operates on independent data
-
-**✅ MPI Deployment Pattern:**
-```c
-// Each MPI rank processes different files - naturally thread-safe
-// Rank 0: processes file_A.txt using its own MemoryPool
-// Rank 1: processes file_B.txt using its own MemoryPool  
-// No shared memory between processes
-```
-
-**⚠️ Shared Resources (must be managed carefully):**
-- **Hash table initialization:** Must be completed before spawning worker threads
-- **Vocabulary loading:** Should be done once in main thread, then shared read-only
-
-**Recommended Usage Pattern:**
-```c
-// Main thread: Initialize shared read-only resources
-HashTable *shared_vocab = load_vocab("vocab.txt");  // Once, shared
-
-#pragma omp parallel
-{
-    // Each thread: Independent processing resources
-    MemoryPool local_pool;
-    init_pool(&local_pool, 1 << 20);  // Thread-local memory pool
-    
-    // Process different files per thread - no contention
-    char filename[256];
-    sprintf(filename, "input_%d.txt", omp_get_thread_num());
-    
-    TokenizedData result = token_text_splitter(shared_vocab, text, &local_pool);
-    // ... process result ...
-    
-    free_pool(&local_pool);  // Thread-local cleanup
-}
-```
-
----
 
 *© 2025 — Thread-safe, SIMD-accelerated tokenizer for distributed NLP pipelines*

@@ -167,7 +167,7 @@ The provided image illustrates the HPC (High-Performance Computing) system archi
 - **Hardware:** Optimized for Intel Xeon Cascade Lake ( Gold 6244 systems and above)
 - **Performance:** ~30 µs per 2KB document on your OpenShift cluster
 
-For detailed implementation, SIMD optimizations, and API reference, see [HPC WordPiece Pre-Tokenizer Documentation](./src/utility/HPC_wordpiece_pretokenizer.md).
+For detailed implementation, SIMD optimizations, and API reference, see [HPC WordPiece Pre-Tokenizer Documentation](./docs/HPC_wordpiece_pretokenizer.md).
 
 ## Flow Chart 1: Indexing of ACT Files
 1. **Read XML ACT Files**:
