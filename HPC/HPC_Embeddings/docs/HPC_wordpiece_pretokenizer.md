@@ -2,7 +2,6 @@
 
 *A production‑ready, AVX‑512‑accelerated WordPiece front‑end for CPU‑only Transformer pipelines*
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![AVX-512](https://img.shields.io/badge/SIMD-AVX--512-green.svg)](https://en.wikipedia.org/wiki/AVX-512)
 [![Thread Safe](https://img.shields.io/badge/Thread-Safe-brightgreen.svg)](https://en.wikipedia.org/wiki/Thread_safety)
 [![C17](https://img.shields.io/badge/C-C17-orange.svg)](https://en.wikipedia.org/wiki/C17_(C_standard_revision))

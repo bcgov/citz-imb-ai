@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1400 1080.9816"
+   version="1.1"
+   id="svg145"
+   width="1400"
+   height="1080.9816"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect
+     width="1400"
+     height="1080.9816"
+     fill="#f8fafc"
+     id="rect1"
+     x="0"
+     y="0"
+     style="stroke-width:1.0397" />
+  <!-- Title -->
+  <text
+     x="700"
+     y="30"
+     text-anchor="middle"
+     fill="#1e293b"
+     font-size="24px"
+     font-weight="bold"
+     id="text1">BC Laws Legislative Data Processing Pipeline</text>
+  <!-- Stage 0: S3/DVC Data Source -->
+  <g
+     id="stage0">
+    <rect
+       x="50"
+       y="80"
+       width="180"
+       height="100"
+       rx="10"
+       fill="#fef3c7"
+       stroke="#f59e0b"
+       stroke-width="2"
+       id="rect2" />
+    <text
+       x="140"
+       y="105"
+       text-anchor="middle"
+       fill="#92400e"
+       font-size="13px"
+       font-weight="bold"
+       id="text2">S3 Data Store</text>
+    <text
+       x="140"
+       y="125"
+       text-anchor="middle"
+       fill="#92400e"
+       font-size="11px"
+       id="text3">(DVC Tracked)</text>
+    <rect
+       x="70"
+       y="140"
+       width="140"
+       height="18"
+       rx="3"
+       fill="#ffffff"
+       stroke="#f59e0b"
+       id="rect3" />
+    <text
+       x="140"
+       y="152"
+       text-anchor="middle"
+       fill="#92400e"
+       font-size="9px"
+       id="text4">Acts/Consolidations/</text>
+    <rect
+       x="70"
+       y="160"
+       width="140"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#f59e0b"
+       id="rect4" />
+    <text
+       x="140"
+       y="170"
+       text-anchor="middle"
+       fill="#92400e"
+       font-size="9px"
+       id="text5">Regulations/</text>
+  </g>
+  <!-- Arrow 0 -->
+  <defs
+     id="defs5">
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,0 10,3.5 0,7 "
+         fill="#374151"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <line
+     x1="230"
+     y1="130"
+     x2="290"
+     y2="130"
+     stroke="#374151"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     id="line5" />
+  <text
+     x="260"
+     y="120"
+     text-anchor="middle"
+     fill="#374151"
+     font-size="9px"
+     id="text6">Pull</text>
+  <!-- Stage 1: BCLawsCopyFiles_v2.py -->
+  <g
+     id="stage1">
+    <rect
+       x="300"
+       y="80"
+       width="200"
+       height="100"
+       rx="10"
+       fill="#dbeafe"
+       stroke="#3b82f6"
+       stroke-width="2"
+       id="rect6" />
+    <text
+       x="400"
+       y="105"
+       text-anchor="middle"
+       fill="#1e40af"
+       font-size="13px"
+       font-weight="bold"
+       id="text7">Flatten Structure</text>
+    <text
+       x="400"
+       y="125"
+       text-anchor="middle"
+       fill="#1e40af"
+       font-size="11px"
+       id="text8">BCLawsCopyFiles_v2.py</text>
+    <rect
+       x="320"
+       y="140"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#3b82f6"
+       id="rect8" />
+    <text
+       x="400"
+       y="150"
+       text-anchor="middle"
+       fill="#1e40af"
+       font-size="9px"
+       id="text9">--workers 16</text>
+    <rect
+       x="320"
+       y="158"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#3b82f6"
+       id="rect9" />
+    <text
+       x="400"
+       y="168"
+       text-anchor="middle"
+       fill="#1e40af"
+       font-size="9px"
+       id="text10">Extract Acts Regs only</text>
+  </g>
+  <!-- Arrow 1 -->
+  <line
+     x1="500"
+     y1="130"
+     x2="560"
+     y2="130"
+     stroke="#374151"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     id="line10" />
+  <text
+     x="530"
+     y="120"
+     text-anchor="middle"
+     fill="#374151"
+     font-size="9px"
+     id="text11">Flat XML</text>
+  <!-- Stage 2: HPC Tokenization -->
+  <g
+     id="stage2">
+    <rect
+       x="570"
+       y="80"
+       width="200"
+       height="100"
+       rx="10"
+       fill="#dcfce7"
+       stroke="#22c55e"
+       stroke-width="2"
+       id="rect11" />
+    <text
+       x="670"
+       y="105"
+       text-anchor="middle"
+       fill="#166534"
+       font-size="13px"
+       font-weight="bold"
+       id="text12">HPC Processing</text>
+    <text
+       x="670"
+       y="125"
+       text-anchor="middle"
+       fill="#166534"
+       font-size="11px"
+       id="text13">./HPCChain --config</text>
+    <rect
+       x="590"
+       y="140"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#22c55e"
+       id="rect13" />
+    <text
+       x="670"
+       y="150"
+       text-anchor="middle"
+       fill="#166534"
+       font-size="9px"
+       id="text14">mpirun -np 2</text>
+    <rect
+       x="590"
+       y="158"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#22c55e"
+       id="rect14" />
+    <text
+       x="670"
+       y="168"
+       text-anchor="middle"
+       fill="#166534"
+       font-size="9px"
+       id="text15">255-token chunks → JSONL</text>
+  </g>
+  <!-- Arrow 2 -->
+  <line
+     x1="770"
+     y1="130"
+     x2="830"
+     y2="130"
+     stroke="#374151"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     id="line15" />
+  <text
+     x="800"
+     y="120"
+     text-anchor="middle"
+     fill="#374151"
+     font-size="9px"
+     id="text16">JSONL</text>
+  <!-- Stage 3: OpenVINO -->
+  <g
+     id="stage3">
+    <rect
+       x="840"
+       y="80"
+       width="200"
+       height="100"
+       rx="10"
+       fill="#fce7f3"
+       stroke="#ec4899"
+       stroke-width="2"
+       id="rect16" />
+    <text
+       x="940"
+       y="105"
+       text-anchor="middle"
+       fill="#be185d"
+       font-size="13px"
+       font-weight="bold"
+       id="text17">Generate Embeddings</text>
+    <text
+       x="940"
+       y="125"
+       text-anchor="middle"
+       fill="#be185d"
+       font-size="11px"
+       id="text18">generate_embeddings_all.py</text>
+    <rect
+       x="860"
+       y="140"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#ec4899"
+       id="rect18" />
+    <text
+       x="940"
+       y="150"
+       text-anchor="middle"
+       fill="#be185d"
+       font-size="9px"
+       id="text19">--batch_size 16</text>
+    <rect
+       x="860"
+       y="158"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#ec4899"
+       id="rect19" />
+    <text
+       x="940"
+       y="168"
+       text-anchor="middle"
+       fill="#be185d"
+       font-size="9px"
+       id="text20">31 consol folders → CSV</text>
+  </g>
+  <!-- Arrow 3 (downward) -->
+  <line
+     x1="1040"
+     y1="130"
+     x2="1100"
+     y2="130"
+     stroke="#374151"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     id="line20" />
+  <text
+     x="1062.7729"
+     y="114.88135"
+     fill="#374151"
+     font-size="9px"
+     id="text21">CSV Files</text>
+  <!-- Stage 4: Neo4j Import -->
+  <g
+     id="stage4"
+     transform="translate(273.88957,-170.55215)">
+    <rect
+       x="840"
+       y="250"
+       width="200"
+       height="100"
+       rx="10"
+       fill="#f3e8ff"
+       stroke="#8b5cf6"
+       stroke-width="2"
+       id="rect21" />
+    <text
+       x="940"
+       y="275"
+       text-anchor="middle"
+       fill="#6b21a8"
+       font-size="13px"
+       font-weight="bold"
+       id="text22">Neo4j Bulk Load</text>
+    <text
+       x="940"
+       y="295"
+       text-anchor="middle"
+       fill="#6b21a8"
+       font-size="11px"
+       id="text23">consolidation_all.ipynb</text>
+    <rect
+       x="860"
+       y="310"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#8b5cf6"
+       id="rect23" />
+    <text
+       x="940"
+       y="320"
+       text-anchor="middle"
+       fill="#6b21a8"
+       font-size="9px"
+       id="text24">Docker cp CSV → import/</text>
+    <rect
+       x="860"
+       y="328"
+       width="160"
+       height="15"
+       rx="3"
+       fill="#ffffff"
+       stroke="#8b5cf6"
+       id="rect24" />
+    <text
+       x="940"
+       y="338"
+       text-anchor="middle"
+       fill="#6b21a8"
+       font-size="9px"
+       id="text25">2.36M nodes loaded</text>
+  </g>
+  <!-- Data Structure Examples -->
+  <g
+     id="data-examples">
+    <!-- Original Structure -->
+    <rect
+       x="50.029179"
+       y="200.02917"
+       width="504.16763"
+       height="119.97307"
+       rx="5.6018624"
+       fill="#fef2f2"
+       stroke="#ef4444"
+       stroke-width="1.05836"
+       id="rect25" />
+    <text
+       x="275"
+       y="220"
+       text-anchor="middle"
+       fill="#dc2626"
+       font-size="12px"
+       font-weight="bold"
+       id="text26">Original S3 Structure</text>
+    <text
+       x="60"
+       y="240"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text27">Acts/</text>
+    <text
+       x="60"
+       y="255"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text28">├── Consol 43 - October 15, 2024/</text>
+    <text
+       x="60"
+       y="270"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text29">├── Consol 42 - March 11, 2024/</text>
+    <text
+       x="60"
+       y="285"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text30">└── Consol 41 - September 13, 2023/</text>
+    <text
+       x="300"
+       y="240"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text31">Regulations/</text>
+    <text
+       x="300"
+       y="255"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text32">├── Consol 110 - December 31, 2024/</text>
+    <text
+       x="300"
+       y="270"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text33">├── Consol 109 - December 31, 2023/</text>
+    <text
+       x="300"
+       y="285"
+       fill="#dc2626"
+       font-size="10px"
+       font-family="monospace"
+       id="text34">└── Consol 108 - December 31, 2022/</text>
+    <!-- Flattened Structure -->
+    <rect
+       x="50.029179"
+       y="339.99774"
+       width="504.16763"
+       height="119.97307"
+       rx="5.6018624"
+       fill="#f0f9ff"
+       stroke="#0ea5e9"
+       stroke-width="1.05836"
+       id="rect34" />
+    <text
+       x="275"
+       y="360"
+       text-anchor="middle"
+       fill="#0284c7"
+       font-size="12px"
+       font-weight="bold"
+       id="text35">Flattened Structure</text>
+    <text
+       x="60"
+       y="380"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text36">act_flat/</text>
+    <text
+       x="60"
+       y="395"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text37">├── Consol_43___October_15_2024/</text>
+    <text
+       x="60"
+       y="410"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text38">│ ├── Access to Abortion Services Act.xml</text>
+    <text
+       x="60"
+       y="425"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text39">│ └── Administrative Tribunals Act.xml</text>
+    <text
+       x="322"
+       y="380"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text40">reg_flat/</text>
+    <text
+       x="322"
+       y="395"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text41">├── Consol_110___December_31_2024/</text>
+    <text
+       x="322"
+       y="410"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text42">│ ├── Regulation_001.xml</text>
+    <text
+       x="322"
+       y="425"
+       fill="#0284c7"
+       font-size="10px"
+       font-family="monospace"
+       id="text43">│ └── Regulation_002.xml</text>
+  </g>
+  <!-- Command Examples -->
+  <g
+     id="commands"
+     transform="translate(140)">
+    <rect
+       x="520.08148"
+       y="200.0815"
+       width="399.83701"
+       height="351.80426"
+       rx="4.9979625"
+       fill="#f0fdf4"
+       stroke="#16a34a"
+       stroke-width="1.16299"
+       id="rect43" />
+    <text
+       x="720"
+       y="220"
+       text-anchor="middle"
+       fill="#15803d"
+       font-size="12px"
+       font-weight="bold"
+       id="text44">Command Examples</text>
+    <!-- Flatten Command -->
+    <text
+       x="530"
+       y="240"
+       fill="#15803d"
+       font-size="11px"
+       font-weight="bold"
+       id="text45">1. Flatten Structure:</text>
+    <rect
+       x="530.05573"
+       y="245.05574"
+       width="379.88852"
+       height="49.43227"
+       rx="2.9991195"
+       fill="#ffffff"
+       stroke="#16a34a"
+       id="rect45"
+       style="stroke-width:1.1115" />
+    <text
+       x="535"
+       y="258"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text46">python BCLawsCopyFiles_v2.py \</text>
+    <text
+       x="535"
+       y="270"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text47">--source ../../data/bclaws/Consolidations/ \</text>
+    <text
+       x="535"
+       y="282"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text48">--destination BCLaws_Output/ --workers 16</text>
+    <!-- HPC Command -->
+    <text
+       x="530"
+       y="317"
+       fill="#15803d"
+       font-size="11px"
+       font-weight="bold"
+       id="text49">2. HPC Tokenization:</text>
+    <rect
+       x="530"
+       y="322"
+       width="380"
+       height="50"
+       rx="3"
+       fill="#ffffff"
+       stroke="#16a34a"
+       id="rect49" />
+    <text
+       x="535"
+       y="335"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text50">mpirun -genv I_MPI_DEBUG=5 \</text>
+    <text
+       x="535"
+       y="347"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text51">--bind-to socket:2 -np 2 \</text>
+    <text
+       x="535"
+       y="359"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text52">./HPCChain --config ../acts.json</text>
+    <!-- OpenVINO Command -->
+    <text
+       x="530"
+       y="391"
+       fill="#15803d"
+       font-size="11px"
+       font-weight="bold"
+       id="text53">3. OpenVINO Embeddings:</text>
+    <rect
+       x="530.02917"
+       y="396.02917"
+       width="379.94165"
+       height="56.01495"
+       rx="2.9995394"
+       fill="#ffffff"
+       stroke="#16a34a"
+       id="rect53"
+       style="stroke-width:1.05836" />
+    <text
+       x="535"
+       y="409"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text54">python generate_embeddings_all.py \</text>
+    <text
+       x="535"
+       y="421"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text55">--base_dir ../build/Processed/ \</text>
+    <text
+       x="535"
+       y="433"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text56">--output_base_dir openvino_test_new \</text>
+    <text
+       x="535"
+       y="445"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text57">--batch_size 16</text>
+    <!-- Neo4j Command -->
+    <text
+       x="530"
+       y="470"
+       fill="#15803d"
+       font-size="11px"
+       font-weight="bold"
+       id="text58">4. Neo4j Import:</text>
+    <rect
+       x="530.02618"
+       y="475.02618"
+       width="379.94766"
+       height="66.454773"
+       rx="2.9995868"
+       fill="#ffffff"
+       stroke="#16a34a"
+       id="rect58"
+       style="stroke-width:1.05234" />
+    <text
+       x="535"
+       y="488"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text59"># Copy CSV files to Neo4j container</text>
+    <text
+       x="535"
+       y="500"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text60">podman cp ./Processed_embeddings \</text>
+    <text
+       x="535"
+       y="512"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text61">neo4j:/var/lib/neo4j/import/</text>
+    <text
+       x="535"
+       y="524"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text62"># Run consolidation_all.ipynb</text>
+    <text
+       x="535"
+       y="536"
+       fill="#15803d"
+       font-size="9px"
+       font-family="monospace"
+       id="text63">→ 2.36M nodes across all consolidations</text>
+  </g>
+  <!-- Processing Details -->
+  <g
+     id="details"
+     transform="translate(0,100)">
+    <rect
+       x="50"
+       y="480"
+       width="1320"
+       height="480"
+       rx="10"
+       fill="#ffffff"
+       stroke="#e5e7eb"
+       stroke-width="2"
+       id="rect63" />
+    <text
+       x="710"
+       y="510"
+       text-anchor="middle"
+       fill="#374151"
+       font-size="18px"
+       font-weight="bold"
+       id="text64">Pipeline Processing Details</text>
+    <!-- Stage Details Grid -->
+    <g
+       id="stage-details">
+      <!-- S3/DVC -->
+      <rect
+         x="80"
+         y="530"
+         width="240"
+         height="140"
+         rx="5"
+         fill="#fffbeb"
+         stroke="#f59e0b"
+         id="rect64" />
+      <text
+         x="200"
+         y="550"
+         text-anchor="middle"
+         fill="#92400e"
+         font-size="12px"
+         font-weight="bold"
+         id="text65">S3 Data Management</text>
+      <text
+         x="90"
+         y="570"
+         fill="#92400e"
+         font-size="10px"
+         id="text66">• DVC version control for large datasets</text>
+      <text
+         x="90"
+         y="585"
+         fill="#92400e"
+         font-size="10px"
+         id="text67">• Hierarchical consolidation structure</text>
+      <text
+         x="90"
+         y="600"
+         fill="#92400e"
+         font-size="10px"
+         id="text68">• Acts: Consol 14-43 (2006-2024)</text>
+      <text
+         x="90"
+         y="615"
+         fill="#92400e"
+         font-size="10px"
+         id="text69">• Regulations: Consol 68-110</text>
+      <text
+         x="90"
+         y="630"
+         fill="#92400e"
+         font-size="10px"
+         id="text70">• 77+ consolidation directories</text>
+      <text
+         x="90"
+         y="645"
+         fill="#92400e"
+         font-size="10px"
+         id="text71">• Time-stamped legislative changes</text>
+      <text
+         x="90"
+         y="660"
+         fill="#92400e"
+         font-size="10px"
+         id="text72">• XML format preservation</text>
+      <!-- Flattening -->
+      <rect
+         x="340"
+         y="530"
+         width="240"
+         height="140"
+         rx="5"
+         fill="#eff6ff"
+         stroke="#3b82f6"
+         id="rect72" />
+      <text
+         x="460"
+         y="550"
+         text-anchor="middle"
+         fill="#1e40af"
+         font-size="12px"
+         font-weight="bold"
+         id="text73">Structure Flattening</text>
+      <text
+         x="350"
+         y="570"
+         fill="#1e40af"
+         font-size="10px"
+         id="text74">• Multi-threaded processing (--workers 16)</text>
+      <text
+         x="350"
+         y="585"
+         fill="#1e40af"
+         font-size="10px"
+         id="text75">• Selective processing (--acts-only/--regs-only)</text>
+      <text
+         x="350"
+         y="600"
+         fill="#1e40af"
+         font-size="10px"
+         id="text76">• Date normalization in folder names</text>
+      <text
+         x="350"
+         y="615"
+         fill="#1e40af"
+         font-size="10px"
+         id="text77">• Clean XML extraction only</text>
+      <text
+         x="350"
+         y="630"
+         fill="#1e40af"
+         font-size="10px"
+         id="text78">• Remove metadata and formatting</text>
+      <text
+         x="350"
+         y="645"
+         fill="#1e40af"
+         font-size="10px"
+         id="text79">• Output: act_flat/ and reg_flat/</text>
+      <text
+         x="350"
+         y="660"
+         fill="#1e40af"
+         font-size="10px"
+         id="text80">• Ready for HPC processing</text>
+      <!-- HPC Processing -->
+      <rect
+         x="600"
+         y="530"
+         width="240"
+         height="140"
+         rx="5"
+         fill="#f0fdf4"
+         stroke="#22c55e"
+         id="rect80" />
+      <text
+         x="720"
+         y="550"
+         text-anchor="middle"
+         fill="#166534"
+         font-size="12px"
+         font-weight="bold"
+         id="text81">HPC Tokenization</text>
+      <text
+         x="610"
+         y="570"
+         fill="#166534"
+         font-size="10px"
+         id="text82">• MPI parallel processing</text>
+      <text
+         x="610"
+         y="585"
+         fill="#166534"
+         font-size="10px"
+         id="text83">• WordPiece tokenization algorithm</text>
+      <text
+         x="610"
+         y="600"
+         fill="#166534"
+         font-size="10px"
+         id="text84">• 255-token chunk optimization</text>
+      <text
+         x="610"
+         y="615"
+         fill="#166534"
+         font-size="10px"
+         id="text85">• JSON configuration driven</text>
+      <text
+         x="610"
+         y="630"
+         fill="#166534"
+         font-size="10px"
+         id="text86">• Per-consolidation processing</text>
+      <text
+         x="610"
+         y="645"
+         fill="#166534"
+         font-size="10px"
+         id="text87">• JSONL output format</text>
+      <text
+         x="610"
+         y="660"
+         fill="#166534"
+         font-size="10px"
+         id="text88">• Metadata preservation</text>
+      <!-- OpenVINO -->
+      <rect
+         x="860"
+         y="530"
+         width="240"
+         height="140"
+         rx="5"
+         fill="#fdf2f8"
+         stroke="#ec4899"
+         id="rect88" />
+      <text
+         x="980"
+         y="550"
+         text-anchor="middle"
+         fill="#be185d"
+         font-size="12px"
+         font-weight="bold"
+         id="text89">OpenVINO Embeddings</text>
+      <text
+         x="870"
+         y="570"
+         fill="#be185d"
+         font-size="10px"
+         id="text90">• generate_embeddings_all.py script</text>
+      <text
+         x="870"
+         y="585"
+         fill="#be185d"
+         font-size="10px"
+         id="text91">• Batch processing (--batch_size 16)</text>
+      <text
+         x="870"
+         y="600"
+         fill="#be185d"
+         font-size="10px"
+         id="text92">• Processes 31 consolidation folders</text>
+      <text
+         x="870"
+         y="615"
+         fill="#be185d"
+         font-size="10px"
+         id="text93">• openvino_model.xml inference</text>
+      <text
+         x="870"
+         y="630"
+         fill="#be185d"
+         font-size="10px"
+         id="text94">• JSONL → Vector embeddings</text>
+      <text
+         x="870"
+         y="645"
+         fill="#be185d"
+         font-size="10px"
+         id="text95">• Per-folder CSV output</text>
+      <text
+         x="870"
+         y="660"
+         fill="#be185d"
+         font-size="10px"
+         id="text96">• consol_14 through consol_43</text>
+      <!-- Neo4j -->
+      <rect
+         x="1120"
+         y="530"
+         width="240"
+         height="140"
+         rx="5"
+         fill="#faf5ff"
+         stroke="#8b5cf6"
+         id="rect96" />
+      <text
+         x="1240"
+         y="550"
+         text-anchor="middle"
+         fill="#6b21a8"
+         font-size="12px"
+         font-weight="bold"
+         id="text97">Neo4j Database Load</text>
+      <text
+         x="1130"
+         y="570"
+         fill="#6b21a8"
+         font-size="10px"
+         id="text98">• consolidation_all.ipynb automation</text>
+      <text
+         x="1130"
+         y="585"
+         fill="#6b21a8"
+         font-size="10px"
+         id="text99">• Docker cp CSV → /import folder</text>
+      <text
+         x="1130"
+         y="600"
+         fill="#6b21a8"
+         font-size="10px"
+         id="text100">• LOAD CSV with HEADERS processing</text>
+      <text
+         x="1130"
+         y="615"
+         fill="#6b21a8"
+         font-size="10px"
+         id="text101">• Per-consolidation node labels</text>
+      <text
+         x="1130"
+         y="630"
+         fill="#6b21a8"
+         font-size="10px"
+         id="text102">• Vector + text indexes created</text>
+      <text
+         x="1130"
+         y="645"
+         fill="#6b21a8"
+         font-size="10px"
+         id="text103">• 2.36M nodes total loaded</text>
+      <text
+         x="1130"
+         y="660"
+         fill="#6b21a8"
+         font-size="10px"
+         id="text104">• Acts + Regulations combined</text>
+    </g>
+    <!-- Performance Metrics -->
+    <rect
+       x="80"
+       y="690"
+       width="1280"
+       height="240"
+       rx="5"
+       fill="#f8fafc"
+       stroke="#64748b"
+       id="rect104" />
+    <text
+       x="720"
+       y="715"
+       text-anchor="middle"
+       fill="#334155"
+       font-size="14px"
+       font-weight="bold"
+       id="text105">Performance Scale Characteristics</text>
+    <g
+       id="metrics">
+      <!-- Data Volume -->
+      <text
+         x="100"
+         y="740"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text106">Data Volume:</text>
+      <text
+         x="100"
+         y="755"
+         fill="#334155"
+         font-size="10px"
+         id="text107">• Source: 77+ consolidation directories</text>
+      <text
+         x="100"
+         y="770"
+         fill="#334155"
+         font-size="10px"
+         id="text108">• Acts: ~30 consolidations (2006-2024)</text>
+      <text
+         x="100"
+         y="785"
+         fill="#334155"
+         font-size="10px"
+         id="text109">• Regulations: ~43 consolidations (2005-2024)</text>
+      <text
+         x="100"
+         y="800"
+         fill="#334155"
+         font-size="10px"
+         id="text110">• Final Neo4j: 2.36M nodes loaded</text>
+      <!-- Processing Time -->
+      <text
+         x="400"
+         y="740"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text111">Processing Time:</text>
+      <text
+         x="400"
+         y="755"
+         fill="#334155"
+         font-size="10px"
+         id="text112">• Flattening: ~30-60 min (16 workers)</text>
+      <text
+         x="400"
+         y="770"
+         fill="#334155"
+         font-size="10px"
+         id="text113">• HPC Tokenization: ~2-6 hours (MPI)</text>
+      <text
+         x="400"
+         y="785"
+         fill="#334155"
+         font-size="10px"
+         id="text114">• OpenVINO Embeddings: ~4-12 hours (31 folders)</text>
+      <text
+         x="400"
+         y="800"
+         fill="#334155"
+         font-size="10px"
+         id="text115">• Neo4j Import: ~15-45 minutes</text>
+      <!-- Configuration -->
+      <text
+         x="700"
+         y="740"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text116">Configuration:</text>
+      <text
+         x="700"
+         y="755"
+         fill="#334155"
+         font-size="10px"
+         id="text117">• Parallel workers: 16 (flattening)</text>
+      <text
+         x="700"
+         y="770"
+         fill="#334155"
+         font-size="10px"
+         id="text118">• MPI processes: 2-16 (HPC)</text>
+      <text
+         x="700"
+         y="785"
+         fill="#334155"
+         font-size="10px"
+         id="text119">• OpenVINO batch size: 16</text>
+      <text
+         x="700"
+         y="800"
+         fill="#334155"
+         font-size="10px"
+         id="text120">• Token chunk size: 255 tokens</text>
+      <!-- Infrastructure -->
+      <text
+         x="1000"
+         y="740"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text121">Infrastructure:</text>
+      <text
+         x="1000"
+         y="755"
+         fill="#334155"
+         font-size="10px"
+         id="text122">• S3 + DVC for data versioning</text>
+      <text
+         x="1000"
+         y="770"
+         fill="#334155"
+         font-size="10px"
+         id="text123">• HPC cluster for tokenization</text>
+      <text
+         x="1000"
+         y="785"
+         fill="#334155"
+         font-size="10px"
+         id="text124">• OpenVINO runtime environment</text>
+      <text
+         x="1000"
+         y="800"
+         fill="#334155"
+         font-size="10px"
+         id="text125">• Neo4j with bulk import support</text>
+      <!-- Output Format -->
+      <text
+         x="100"
+         y="830"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text126">Final Results:</text>
+      <text
+         x="100"
+         y="845"
+         fill="#334155"
+         font-size="10px"
+         id="text127">• Per-consolidation node labels</text>
+      <text
+         x="100"
+         y="860"
+         fill="#334155"
+         font-size="10px"
+         id="text128">• Vector similarity search enabled</text>
+      <text
+         x="100"
+         y="875"
+         fill="#334155"
+         font-size="10px"
+         id="text129">• Text search with indexes</text>
+      <text
+         x="100"
+         y="890"
+         fill="#334155"
+         font-size="10px"
+         id="text130">• Point-in-time law queries</text>
+      <!-- Quality Control -->
+      <text
+         x="400"
+         y="830"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text131">Quality Control:</text>
+      <text
+         x="400"
+         y="845"
+         fill="#334155"
+         font-size="10px"
+         id="text132">• XML validation during flattening</text>
+      <text
+         x="400"
+         y="860"
+         fill="#334155"
+         font-size="10px"
+         id="text133">• Token count verification</text>
+      <text
+         x="400"
+         y="875"
+         fill="#334155"
+         font-size="10px"
+         id="text134">• Embedding dimension consistency</text>
+      <text
+         x="400"
+         y="890"
+         fill="#334155"
+         font-size="10px"
+         id="text135">• Database integrity checks</text>
+      <!-- Automation -->
+      <text
+         x="700"
+         y="830"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text136">Automation Features:</text>
+      <text
+         x="700"
+         y="845"
+         fill="#334155"
+         font-size="10px"
+         id="text137">• JSON configuration management</text>
+      <text
+         x="700"
+         y="860"
+         fill="#334155"
+         font-size="10px"
+         id="text138">• Batch processing capabilities</text>
+      <text
+         x="700"
+         y="875"
+         fill="#334155"
+         font-size="10px"
+         id="text139">• Error handling and recovery</text>
+      <text
+         x="700"
+         y="890"
+         fill="#334155"
+         font-size="10px"
+         id="text140">• Progress monitoring and logging</text>
+      <!-- Scalability -->
+      <text
+         x="1000"
+         y="830"
+         fill="#334155"
+         font-size="12px"
+         font-weight="bold"
+         id="text141">Scalability:</text>
+      <text
+         x="1000"
+         y="845"
+         fill="#334155"
+         font-size="10px"
+         id="text142">• Horizontal HPC scaling</text>
+      <text
+         x="1000"
+         y="860"
+         fill="#334155"
+         font-size="10px"
+         id="text143">• Configurable worker threads</text>
+      <text
+         x="1000"
+         y="875"
+         fill="#334155"
+         font-size="10px"
+         id="text144">• Memory pool optimization</text>
+      <text
+         x="1000"
+         y="890"
+         fill="#334155"
+         font-size="10px"
+         id="text145">• Database sharding support</text>
+    </g>
+  </g>
+</svg>
