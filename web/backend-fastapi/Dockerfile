@@ -14,6 +14,8 @@ WORKDIR /backend
 # Copy requirements definition to container
 COPY ./requirements.txt /backend/requirements.txt
 
+ENV PIP_USE_PEP517=true
+
 # Install dependencies
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /backend/requirements.txt
