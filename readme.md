@@ -113,7 +113,7 @@ To navigate all the work done in the project, please refer to the table below:
             <td colspan="5" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/mlops/orchestration/airflow"> Airflow Scripts</a></td>
         </tr>
         <tr>
-            <th colspan="10"> Hardware </th>
+            <th colspan="10"> Hardware / HPC </th>
         <tr>
         <tr>
             <td colspan="5 align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/intelHW"> Intel 3rd Gen Xeon CPU</a>
@@ -121,6 +121,15 @@ To navigate all the work done in the project, please refer to the table below:
             <td colspan="5" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings"> HPC  - Embeddings Generation</a>
             </td>
         </tr>
+        <tr>
+            <th colspan="10">HPC Documentation</th>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings/docs/HPC_wordpiece_pretokenizer.md">WordPiece Pre-tokenizer</a></td>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings/docs/hashtable_murmur3.md">Murmur3 Hash Table</a></td>
+            <td colspan="2" align="center"><a href="https://github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings/docs/memory_pool.md">Memory Pool</a></td>
+            <td colspan="2" align="center"><a href="github.com/bcgov/citz-imb-ai/tree/main/HPC/HPC_Embeddings/docs/end_to_end_legislative_data_processing.md">End-to-End Legislative Data Processing</a></td>
+            </tr    >
     </tbody>
 </table>
 
