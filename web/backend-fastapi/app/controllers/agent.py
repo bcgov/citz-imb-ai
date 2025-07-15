@@ -12,6 +12,7 @@ from fastapi.logger import logger
 router = APIRouter()
 
 
+# Currently unused
 class AgentHistory(BaseModel):
     prompt: str
     response: str
@@ -19,7 +20,7 @@ class AgentHistory(BaseModel):
 
 class AgentRequest(BaseModel):
     prompt: str
-    # chatHistory: List[AgentHistory]
+    # chatHistory: List[AgentHistory] commented out until needed
 
 
 def get_database_schema(labels: list[str] = []):
@@ -102,9 +103,11 @@ async def agentic_chat(request: AgentRequest = None):
     key = os.getenv("AZURE_AI_KEY", "")
     azure = AzureAI(endpoint, key)
 
+    # Max iterations for model to loop if insufficient context is provided
     max_iterations = 10
 
     try:
+        # Establish MCP client connection
         client = Client(agents_mcp)
         async with client:
             raw_tools = await client.list_tools()
@@ -129,6 +132,7 @@ async def agentic_chat(request: AgentRequest = None):
 
             finish_reason = response.get("finish_reason")
             current_iteration = 0
+            # Process the response until we reach a stopping condition
             while finish_reason != "stop" and current_iteration < max_iterations:
                 if finish_reason == "tool_calls":
                     tool_calls = response.get("message").get("tool_calls")
