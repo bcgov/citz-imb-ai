@@ -16,7 +16,7 @@ class AzureAI:
             "messages": self.history,
             "max_tokens": self.token_max,
         }
-        print(tools, flush=True)
+
         # Add tools to the request body if provided
         if tools is not None:
             body["tools"] = tools
@@ -62,24 +62,6 @@ class AzureAI:
         """Add a system message to provide context (like database schema)."""
         # System messages should typically be at the beginning
         self.history.insert(0, {"role": "system", "content": content})
-
-    # TODO: Move out of this class
-    def set_initial_context(self, schema_info):
-        """Set database schema information as a system message."""
-        schema_message = f"""
-        You are an AI assistant that helps users answer questions about BC Laws. 
-
-        This is the database schema information you need to know:
-        {schema_info}
-
-        When using the explicit_search tool, generate valid Cypher queries based on this schema.
-        When using the semantic_search tool, help users find relevant information using natural language questions.
-
-        Always consider the schema when constructing queries and provide helpful explanations.
-        Keep your responses concise and relevant to the user's question.
-        """
-
-        self.add_system_message(schema_message)
 
     def clear_history(self):
         self.history = []

@@ -60,8 +60,25 @@ def get_database_schema(labels: list[str] = []):
     Therefore, if I wanted information about a specific document, such as the Motor Vehicle Act, I would search in the document_title field.
     Use this information to construct accurate Cypher queries.
     """
-    # TODO: Close the neo4j worker connection??
     return schema_info
+
+
+def get_initial_context(schema_info):
+    """Set database schema information as a system message."""
+    schema_message = f"""
+    You are an AI assistant that helps users answer questions about Laws in British Columbia.
+    You must utilize the provided list of tools to build enough context to answer the user's question.
+    Keep your responses concise and relevant to the user's question.
+
+    For explicit searches with cypher queries, this is the database schema information you need to know:
+    {schema_info}
+    Utilize this schema to construct accurate Cypher queries when needed.
+    Always specify the node label that you want to search on, as this schema may not contain all labels in the database.
+
+    Tools may be used more than once within a single conversation.
+    You can use the tools to search for information, but you cannot modify the database.
+    """
+    return schema_message
 
 
 @router.post("/test/")
@@ -91,7 +108,6 @@ async def agentic_chat(request: AgentRequest = None):
         client = Client(agents_mcp)
         async with client:
             raw_tools = await client.list_tools()
-            print(raw_tools, flush=True)
             # Convert tools to a format compatible with Azure
             tools = [
                 {
@@ -104,12 +120,13 @@ async def agentic_chat(request: AgentRequest = None):
                 }
                 for tool in raw_tools
             ]
-            # return {"is_connected": client.is_connected(), "tools": data}
+            # Supply with database schema first
+            schema = get_database_schema(["v3"])
+            azure.add_system_message(get_initial_context(schema))
+
             # Continue with the conversation
             response = azure.call_agent_with_history(initial_question, tools=tools)
-            # Supply with database schema first
-            schema = get_database_schema("v3")
-            azure.set_initial_context(schema)
+
             finish_reason = response.get("finish_reason")
             current_iteration = 0
             while finish_reason != "stop" and current_iteration < max_iterations:
@@ -152,8 +169,7 @@ async def agentic_chat(request: AgentRequest = None):
                     print("Unexpected finish reason:", finish_reason, flush=True)
                     break
             response_text = response.get("message").get("content", "").strip()
-            azure.clear_history()  # Clear history after the conversation
-            return response_text
+            return {"response": response_text, "history": azure.history}
             # print("Final response:", response_text)
     except ToolError as e:
         print("Tool error occurred:", str(e))
