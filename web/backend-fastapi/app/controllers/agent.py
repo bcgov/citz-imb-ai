@@ -1,5 +1,4 @@
-from typing import List
-from fastapi import APIRouter, Body, Request, Response
+from fastapi import APIRouter, Response
 from pydantic import BaseModel
 from fastmcp import Client
 from fastmcp.exceptions import ToolError
@@ -8,6 +7,7 @@ from ..models import neo4j
 from ..models.azure import AzureAI
 import os
 import json
+from fastapi.logger import logger
 
 router = APIRouter()
 
@@ -81,7 +81,7 @@ def get_initial_context(schema_info):
     return schema_message
 
 
-@router.post("/test/")
+@router.post("/agent/")
 async def agentic_chat(request: AgentRequest = None):
     if request is None:
         return Response(
@@ -140,21 +140,36 @@ async def agentic_chat(request: AgentRequest = None):
                         # Parse the JSON string to get a Python object
                         try:
                             arguments = json.loads(arguments_str)
-                            print(
+                            logger.info(
                                 f"Calling tool: {tool_name} with arguments: {arguments}",
-                                flush=True,
                             )
                         except json.JSONDecodeError as e:
-                            print(
+                            logger.error(
                                 f"Error parsing arguments: {e}",
-                                level="error",
-                                flush=True,
                             )
                             continue
-                        result = await client.call_tool(tool_name, arguments)
-                        print(f"Tool {tool_name} returned: {result}", flush=True)
-                        # Add the tool response with the correct tool_call_id
-                        azure.add_tool_response(tool_call_id, result)
+                        # Handle tool execution with error handling
+                        try:
+                            result = await client.call_tool(tool_name, arguments)
+                            logger.info(f"Tool {tool_name} returned: {result}")
+                            # Add the successful tool response
+                            azure.add_tool_response(tool_call_id, result)
+                        except ToolError as tool_error:
+                            error_message = (
+                                f"Tool error in {tool_name}: {str(tool_error)}"
+                            )
+                            logger.error(error_message)
+                            # Pass the error back to the agent so it can adjust
+                            azure.add_tool_response(
+                                tool_call_id, {"error": error_message}
+                            )
+                        except Exception as e:
+                            error_message = f"Unexpected error in {tool_name}: {str(e)}"
+                            logger.error(error_message)
+                            # Pass the error back to the agent
+                            azure.add_tool_response(
+                                tool_call_id, {"error": error_message}
+                            )
 
                     # Continue the conversation without adding a new user message
                     response = azure.call_agent_with_history(
@@ -163,20 +178,17 @@ async def agentic_chat(request: AgentRequest = None):
                     finish_reason = response.get("finish_reason")
                     current_iteration += 1
                 elif finish_reason == "length":
-                    print("Input length exceeded the limit.", flush=True)
+                    logger.warning(
+                        "Input length exceeded the limit. Stopping further processing."
+                    )
                     break
                 else:
-                    print("Unexpected finish reason:", finish_reason, flush=True)
+                    logger.warning("Unexpected finish reason:", finish_reason)
                     break
             response_text = response.get("message").get("content", "").strip()
+            # TODO: Filter out tool calls before returning?
             return {"response": response_text, "history": azure.history}
-            # print("Final response:", response_text)
-    except ToolError as e:
-        print("Tool error occurred:", str(e))
-        return Response(
-            content=f"Tool error: {str(e)}",
-            status_code=500,
-        )
+
     except Exception as e:
-        print("An error occurred:", str(e))
+        logger.error("An error occurred during agent processing:", exc_info=True)
         raise e
