@@ -5,12 +5,14 @@ from ..models.rag_states import get_state_map
 
 semantic_search_mcp = FastMCP(name="SemanticSearchAgent")
 states = get_state_map()
-print(states, flush=True)
 
 
 @semantic_search_mcp.tool(
     name="semantic_search",
-    description=f"""Performs a cosine similarity search against a graph database and returns relevant results.Valid options for the state_key are {[key for key in states.keys()]}.""",
+    description=f"""
+    Performs a cosine similarity search against a graph database and returns relevant results.
+    Valid options for the state_key are {[key for key in states.keys()]}.
+    This is good for questions where you want to find documents with text that is similar to the user's question.""",
 )
 def search(query: str, state_key: str) -> dict:
     f"""
