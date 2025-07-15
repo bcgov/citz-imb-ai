@@ -1,17 +1,43 @@
 from fastmcp import FastMCP
+from ..models.rag import get_full_rag
+from ..models.neo4j import neo4j
+from ..models.rag_states import get_state_map
 
 semantic_search_mcp = FastMCP(name="SemanticSearchAgent")
+states = get_state_map()
+print(states, flush=True)
 
 
-@semantic_search_mcp.tool
-def search(query: str) -> dict:
-    """
-    Performs a cosine similarity search against a graph database and returns relevant results.
+@semantic_search_mcp.tool(
+    name="semantic_search",
+    description=f"""Performs a cosine similarity search against a graph database and returns relevant results.Valid options for the state_key are {[key for key in states.keys()]}.""",
+)
+def search(query: str, state_key: str) -> dict:
+    f"""
     Args:
         query (str): The user's question to perform the cosine similarity search with.
+        state_key (str): The key to identify the state in the RAG system.
     Returns:
-        list: A list that contains the top relevant documents based on the query.
+        top_k: A list that contains the top relevant documents based on the query.
     """
     print(f"Performing semantic search for: {query}")
-    # Actual semantic search logic would go here
-    return {"results": [f"doc1 for {query}", f"doc2 for {query}"]}
+
+    # Get State based on key
+    state = states.get(state_key).get("state", None)
+    if state is None:
+        raise ValueError(
+            f"Invalid state key: {state_key}. Valid options are {[state.tag for state in states.items() if state.type == 'internal']}."
+        )
+    # Run RAG retrieval
+    rag = get_full_rag()
+    top_k = rag.retrieve(
+        query,
+        neo4j(),
+        state,
+    )
+    re_ranked_results = rag.re_rank_reference(
+        top_k,
+        query,
+    )
+    # Tool return type must be a dictionary or None
+    return {"top_k": re_ranked_results}

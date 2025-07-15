@@ -124,13 +124,18 @@ async def agentic_chat(request: AgentRequest = None):
                         try:
                             arguments = json.loads(arguments_str)
                             print(
-                                f"Calling tool: {tool_name} with arguments: {arguments}"
+                                f"Calling tool: {tool_name} with arguments: {arguments}",
+                                flush=True,
                             )
                         except json.JSONDecodeError as e:
-                            print(f"Error parsing arguments: {e}", level="error")
+                            print(
+                                f"Error parsing arguments: {e}",
+                                level="error",
+                                flush=True,
+                            )
                             continue
-                        result = client.call_tool(tool_name, arguments)
-                        print(f"Tool {tool_name} returned: {result}")
+                        result = await client.call_tool(tool_name, arguments)
+                        print(f"Tool {tool_name} returned: {result}", flush=True)
                         # Add the tool response with the correct tool_call_id
                         azure.add_tool_response(tool_call_id, result)
 
@@ -141,11 +146,10 @@ async def agentic_chat(request: AgentRequest = None):
                     finish_reason = response.get("finish_reason")
                     current_iteration += 1
                 elif finish_reason == "length":
-                    print("Response length exceeded the limit.")
-                    print(azure.history)
+                    print("Input length exceeded the limit.", flush=True)
                     break
                 else:
-                    print("Unexpected finish reason:", finish_reason)
+                    print("Unexpected finish reason:", finish_reason, flush=True)
                     break
             response_text = response.get("message").get("content", "").strip()
             azure.clear_history()  # Clear history after the conversation
