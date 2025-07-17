@@ -28,7 +28,7 @@ def search(query: str, state_key: str) -> dict:
     state = states.get(state_key).get("state", None)
     if state is None:
         raise ValueError(
-            f"Invalid state key: {state_key}. Valid options are {[state.tag for state in states.items() if state.type == 'internal']}."
+            f"Invalid state key: {state_key}. Valid options are {list(states.keys())}."
         )
     # Run RAG retrieval
     rag = get_full_rag()
