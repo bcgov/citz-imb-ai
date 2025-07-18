@@ -30,7 +30,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.middleware.authentication import AuthenticationMiddleware
 from app.middleware.logging import LoggingMiddleware
-from app.controllers import feedback, chat_RAG, login, analytics
+from app.controllers import feedback, chat_RAG, login, analytics, agent
 import warnings
 import os
 from dotenv import load_dotenv
@@ -47,6 +47,7 @@ app.include_router(login.router)
 app.include_router(feedback.router)
 app.include_router(chat_RAG.router)
 app.include_router(analytics.router)
+app.include_router(agent.router)
 
 # Register middleware
 app.add_middleware(LoggingMiddleware)

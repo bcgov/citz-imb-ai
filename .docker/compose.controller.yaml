@@ -263,6 +263,8 @@ services:
       NEO4J_PORT: ${NEO4J_PORT:-7687}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AZURE_AI_ENDPOINT: ${AZURE_AI_ENDPOINT}
+      AZURE_AI_KEY: ${AZURE_AI_KEY}
     depends_on:
       - trulens
       - neo4j

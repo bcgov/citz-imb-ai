@@ -2,10 +2,15 @@ from fastmcp import FastMCP
 
 community_detection_mcp = FastMCP(name="CommunityDetectionAgent")
 
+
 @community_detection_mcp.tool
 def detect(query: str) -> dict:
     """
-    Performs a community detection and returns relevant results.
+    Performs a community search and returns relevant results.
+    Args:
+        query (str): The query to perform the community detection on.
+    Returns:
+        results: A list containing search results.
     """
     print(f"Performing community detection for: {query}")
     # Actual community detection logic would go here
