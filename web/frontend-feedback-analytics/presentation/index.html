@@ -81,6 +81,7 @@
 					<h2>What we will cover</h2>
 					<ul>
 						<li class="fragment">Architecture</li>
+						<li class="fragment">HMVC Backend Transformation</li>
 						<li class="fragment">Text Indexing</li>
 						<li class="fragment">Multi-modal Indexing</li>
 						<li class="fragment">Temporal Indexing</li>
@@ -147,6 +148,162 @@
           	style="transform: scale(120%)"
 						src="https://raw.githubusercontent.com/bcgov/citz-imb-ai/main/assets/state_selection.png"
 					/>
+				</section>
+			</section>
+			<!-- HMVC Architecture Transformation Section -->
+			<section>
+				<section>
+					<h2>HMVC Backend Transformation</h2>
+					<h3>From Monolithic to Modular Architecture</h3>
+				</section>
+				<section>
+					<h3>Why HMVC? The Challenge</h3>
+					<ul>
+						<li class="fragment">Growing complexity in FastAPI backend</li>
+						<li class="fragment">Feature coupling causing breaking changes</li>
+						<li class="fragment">Multiple developers stepping on each other's work</li>
+						<li class="fragment">Difficult to test individual features</li>
+						<li class="fragment">Scaling concerns with new feature additions</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Traditional MVC vs HMVC</h3>
+					<div style="display: flex; justify-content: space-between;">
+						<div style="width: 45%; font-size: 0.8em;">
+							<h4>Traditional MVC</h4>
+							<pre><code>app/
+??? controllers/
+?   ??? login.py
+?   ??? chat_RAG.py
+?   ??? agent.py
+?   ??? analytics.py
+?   ??? feedback.py
+??? models/
+?   ??? user.py
+?   ??? chat.py
+?   ??? analytics.py
+??? views/
+	??? responses/</code></pre>
+						</div>
+						<div style="width: 45%; font-size: 0.8em;">
+							<h4>HMVC Architecture</h4>
+							<pre><code>app/modules/
+??? auth/
+?   ??? controllers/
+?   ??? models/
+?   ??? views/
+?   ??? services/
+??? chat/
+?   ??? controllers/
+?   ??? models/
+?   ??? views/
+?   ??? services/
+??? [other modules...]</code></pre>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h3>Module Breakdown</h3>
+					<ul>
+						<li class="fragment"><strong>Authentication Module:</strong> User login, token management, session validation</li>
+						<li class="fragment"><strong>Chat Module:</strong> RAG processing, conversation management, TruLens integration</li>
+						<li class="fragment"><strong>Agent Module:</strong> MCP agent orchestration, multi-agent coordination</li>
+						<li class="fragment"><strong>Analytics Module:</strong> Usage tracking, session analytics</li>
+						<li class="fragment"><strong>Feedback Module:</strong> User feedback collection and processing</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Why HMVC is Essential for Agent Systems</h3>
+					<div style="font-size: 0.9em;">
+						<p>As AI systems become more complex, architectural changes become necessary:</p>
+						<ul>
+							<li class="fragment"><strong>Agent Isolation:</strong> Each agent type has distinct capabilities and requirements</li>
+							<li class="fragment"><strong>Independent Development:</strong> Developers can work on specialized functionality without conflicts</li>
+							<li class="fragment"><strong>Scalable Orchestration:</strong> Complex multi-agent workflows require modular architecture</li>
+							<li class="fragment"><strong>Future Agent Types:</strong> Easy to add analysis, specialized, or domain-specific agents</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h3>Agent Architecture Benefits</h3>
+					<div style="font-size: 0.8em;">
+						<p>The modular approach enables sophisticated agent coordination:</p>
+						<ul>
+							<li class="fragment"><strong>Hierarchical Structure:</strong> Orchestrator agents can coordinate multiple specialized agents</li>
+							<li class="fragment"><strong>Capability Tracking:</strong> System maintains registry of what each agent can accomplish</li>
+							<li class="fragment"><strong>Error Isolation:</strong> Agent failures are contained within their modules</li>
+							<li class="fragment"><strong>Independent Testing:</strong> Each agent can be tested in isolation with mock dependencies</li>
+							<li class="fragment"><strong>Resource Management:</strong> Different agents can have different computational requirements</li>
+						</ul>
+					</div>
+					<pre class="fragment"><code style="font-size: 0.6em;">app/modules/agent/agents/
+??? orchestrator/    # High-level coordination
+??? search/         # Search capabilities  
+??? analysis/       # Future analysis agents
+??? specialized/    # Domain-specific agents</code></pre>
+				</section>
+				<section>
+					<h3>Benefits Realized</h3>
+					<div style="display: flex; justify-content: space-between;">
+						<div style="width: 48%;">
+							<h4>Development Efficiency</h4>
+							<ul style="font-size: 0.6em;">
+								<li class="fragment">Developers can work on separate modules independently</li>
+								<li class="fragment">Faster feature development cycles</li>
+								<li class="fragment">Parallel development workflows</li>
+							</ul>
+							<h4>Maintainability</h4>
+							<ul style="font-size: 0.6em;">
+								<li class="fragment">Issues isolated to specific modules</li>
+								<li class="fragment">Easier debugging and testing</li>
+								<li class="fragment">Cleaner, more organized code structure</li>
+								<li class="fragment">Simplified dependency management</li>
+							</ul>
+							<h4>Testing</h4>
+							<ul style="font-size: 0.6em;">
+								<li class="fragment">Reduced test complexity</li>
+								<li class="fragment">Independent module testing</li>
+								<li class="fragment">Better test isolation and coverage</li>
+							</ul>
+						</div>
+						<div style="width: 48%;">
+							<h4>Scalability</h4>
+							<ul style="font-size: 0.6em;">
+								<li class="fragment">Easy to add or remove modules</li>
+								<li class="fragment">Modules can become microservices</li>
+								<li class="fragment">Infrastructure can scale per module needs</li>
+							</ul>
+							<h4>Deployment Flexibility</h4>
+							<ul style="font-size: 0.6em;">
+								<li class="fragment">Modules can be separated into individual containers</li>
+								<li class="fragment">Easy pickup and drop-in for container orchestration</li>
+								<li class="fragment">Independent deployment and scaling per module</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h3>HMVC Transformation Summary</h3>
+					<div style="display: flex; justify-content: space-between;">
+						<div style="width: 48%;">
+							<h4>Key Achievements</h4>
+							<ul style="font-size: 0.7em;">
+								<li class="fragment">Transformed monolithic MVC into feature-based HMVC modules</li>
+								<li class="fragment">Built foundation for complex multi-agent AI workflows</li>
+								<li class="fragment">Enabled parallel development with reduced conflicts</li>
+								<li class="fragment">Designed modules for easy container separation</li>
+							</ul>
+						</div>
+						<div style="width: 48%;">
+							<h4>What This Enables</h4>
+							<ul style="font-size: 0.7em;">
+								<li class="fragment">Independent agent development and deployment</li>
+								<li class="fragment">Sophisticated AI orchestration capabilities</li>
+								<li class="fragment">Flexible infrastructure scaling per module</li>
+								<li class="fragment">Improved developer experience and maintainability</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 			</section>
 				<section>
