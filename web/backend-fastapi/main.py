@@ -30,31 +30,28 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.middleware.authentication import AuthenticationMiddleware
 from app.middleware.logging import LoggingMiddleware
-from app.controllers import feedback, chat_RAG, login, analytics, agent
+from app.modules.module_registry import module_registry
 import warnings
 import os
 from dotenv import load_dotenv
 
 from fastmcp import FastMCP
-from app.mcp_agents import agents_mcp
+from app.modules.agent.agents import agent_registry
 
 warnings.filterwarnings("ignore")
 
 app = FastAPI(root_path="/api")
 
-# Include API routers
-app.include_router(login.router)
-app.include_router(feedback.router)
-app.include_router(chat_RAG.router)
-app.include_router(analytics.router)
-app.include_router(agent.router)
+# Register all HMVC modules
+module_registry.register_all_modules(app)
 
 # Register middleware
 app.add_middleware(LoggingMiddleware)
 app.add_middleware(AuthenticationMiddleware)
 
 # Get the ASGI-compliant app from your main MCP server instance
-mcp_asgi_app = agents_mcp.http_app(path="/mcp", stateless_http=True, json_response=True)
+combined_mcp = agent_registry.get_combined_mcp()
+mcp_asgi_app = combined_mcp.http_app(path="/mcp", stateless_http=True, json_response=True)
 
 # Mount the MCP app at the '/agents' endpoint
 # Critical step: MUST pass the lifespan from the FastMCP app to FastAPI.
