@@ -3,7 +3,10 @@ from fastmcp import FastMCP
 community_detection_mcp = FastMCP(name="CommunityDetectionAgent")
 
 
-@community_detection_mcp.tool
+@community_detection_mcp.tool(
+    name="community_detection",
+    description="Performs community detection analysis on the graph database to find related document clusters"
+)
 def detect(query: str) -> dict:
     """
     Performs a community search and returns relevant results.
