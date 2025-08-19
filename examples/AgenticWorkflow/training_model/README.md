@@ -39,7 +39,7 @@ python generate_questions_from_data.py
 ```
 
 This script is currently set to generate 5000 examples.
-If you'd rather re-use the examples in the initial test of training, find them in our S3 bucket and put them in the `generated_questions` folder.
+If you'd rather re-use the examples in the initial test of training, find them in our S3 bucket and put them in the `data/ml_training/gemma_tool_selection/generated_questions` folder.
 
 ### 3. Train the Model
 
@@ -51,6 +51,8 @@ python train_gemma_simple.py
 
 This task can take a long time. On a system with an M1 processor with 32GB of RAM, it took roughly 41 hours.
 You must insert your HuggingFace token in this file before you can download the `gemma-2b` model.
+
+If you'd like to skip this step, get the fine-tuned model from the `data/ml_training/gemma_tool_selection/gemma-2b-search-classifier` folder in the S3 bucket.
 
 ### 4. Test the Trained Model
 
