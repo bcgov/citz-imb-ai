@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Gemma 7B Fine-tuning Setup Script
+# Gemma 2B Fine-tuning Setup Script
 echo "Gemma 2B Fine-tuning Setup"
 echo "============================="
 
