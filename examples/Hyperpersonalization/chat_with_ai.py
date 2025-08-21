@@ -50,13 +50,24 @@ with psycopg.connect(
 
         # Add user's info to the chat chain
         user_summary = (my_user["summary"] or "").strip()
+        user_preferences = my_user.get("preferences", {})
+        print("User Summary:", user_summary)
+        print("User Preferences:", user_preferences)
         user_context_chat_obj = {
             "role": "system",
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "content": (
-                f"Here is some infor about the user: {user_summary}"
-                if user_summary
-                else "No user summary provided."
+                f"""Here is some info about the user's past chats: 
+                {user_summary if user_summary
+                else "No user summary provided."}
+                Here are the user's preferences: 
+                {json.dumps(user_preferences, indent=2) if user_preferences else "No user preferences provided."}
+                
+                You must use this information to tailor your responses to the user unless asked to do otherwise.
+                If the user asks about their preferences, you can refer to the preferences provided.
+                If the user asks about their past chats, you can refer to the summary provided.
+                If the user requests that you do something that goes against their preferences, follow their instructions.
+            """
             ),
         }
         # Start Chat with AI
