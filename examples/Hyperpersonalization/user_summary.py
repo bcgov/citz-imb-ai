@@ -2,11 +2,10 @@
 # Uses Azure OpenAI and gets/saves data to Postgres.
 
 from AzureSimple import AzureAI
-from datetime import datetime, timezone
 import os
 import psycopg
 from psycopg.rows import dict_row
-from sample_preferences import default_preferences, preference_definitions
+from sample_preferences import preference_definitions
 
 # Azure Connection
 endpoint = os.getenv("AZURE_AI_ENDPOINT", "")
