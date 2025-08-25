@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 
 
+# TODO: Remove this?
 class AgentHistory(BaseModel):
     prompt: str
     response: str
@@ -9,7 +10,7 @@ class AgentHistory(BaseModel):
 
 class AgentRequest(BaseModel):
     prompt: str
-    # chatHistory: List[AgentHistory] commented out until needed
+    chat_id: Optional[str] = None
 
 
 class AgentResponse(BaseModel):

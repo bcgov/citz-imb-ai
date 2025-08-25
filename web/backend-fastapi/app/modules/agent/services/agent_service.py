@@ -16,20 +16,20 @@ class AgentService:
         self.keycloak_endpoint = os.getenv("AZURE_AI_ENDPOINT", "")
         self.azure_key = os.getenv("AZURE_AI_KEY", "")
         self.max_iterations = 10
-    
+
     def get_database_schema(self, labels: list[str] = []) -> DatabaseSchema:
         """Get the database schema dynamically from Neo4j."""
         neo4j_worker = neo4j.neo4j()
-        
+
         # Get comprehensive schema information
         schema_query = """
         CALL apoc.meta.schema()
         YIELD value
         RETURN value
         """
-        
+
         schema = neo4j_worker.query(schema_query)
-        
+
         # Filter the schema to only include desired node labels and relationship types
         if len(labels) > 0:
             schema_obj = schema[0].get("value", {})
@@ -40,7 +40,7 @@ class AgentService:
                 if label in labels
             }
             schema = filtered_nodes
-        
+
         # Format the schema information
         schema_info = f"""
         COMPREHENSIVE DATABASE SCHEMA:
@@ -56,9 +56,9 @@ class AgentService:
         Therefore, if I wanted information about a specific document, such as the Motor Vehicle Act, I would search in the document_title field.
         Use this information to construct accurate Cypher queries.
         """
-        
+
         return DatabaseSchema(schema_info=schema_info, labels=labels)
-    
+
     def get_initial_context(self, schema_info: str) -> str:
         """Set database schema information as a system message."""
         schema_message = f"""
@@ -75,23 +75,22 @@ class AgentService:
         You can use the tools to search for information, but you cannot modify the database.
         """
         return schema_message
-    
-    async def process_agent_chat(self, request: AgentRequest) -> AgentResponse:
+
+    async def process_agent_chat(self, request: AgentRequest, user) -> AgentResponse:
         """Process agent chat request"""
         if request is None:
             raise HTTPException(status_code=400, detail="No request body provided")
-        
+
         if not isinstance(request, AgentRequest):
             raise HTTPException(
-                status_code=400, 
-                detail="Input should be a valid AgentRequest object"
+                status_code=400, detail="Input should be a valid AgentRequest object"
             )
-        
+
         initial_question = request.prompt
-        
+
         # Azure Configuration
         azure = AzureAI(self.keycloak_endpoint, self.azure_key)
-        
+
         try:
             # Get combined MCP from agent registry
             combined_mcp = agent_registry.get_combined_mcp()
@@ -111,26 +110,28 @@ class AgentService:
                     }
                     for tool in raw_tools
                 ]
-                
+
                 # Supply with database schema first
                 schema = self.get_database_schema(["v3"])
                 azure.add_system_message(self.get_initial_context(schema.schema_info))
-                
+
                 # Continue with the conversation
                 response = azure.call_agent_with_history(initial_question, tools=tools)
-                
+
                 finish_reason = response.get("finish_reason")
                 current_iteration = 0
-                
+
                 # Process the response until we reach a stopping condition
-                while finish_reason != "stop" and current_iteration < self.max_iterations:
+                while (
+                    finish_reason != "stop" and current_iteration < self.max_iterations
+                ):
                     if finish_reason == "tool_calls":
                         tool_calls = response.get("message").get("tool_calls")
                         for tool_call in tool_calls:
                             tool_call_id = tool_call.get("id")  # Get the tool call ID
                             tool_name = tool_call.get("function").get("name")
                             arguments_str = tool_call.get("function").get("arguments")
-                            
+
                             # Parse the JSON string to get a Python object
                             try:
                                 arguments = json.loads(arguments_str)
@@ -142,7 +143,7 @@ class AgentService:
                                     f"Error parsing arguments: {e}",
                                 )
                                 continue
-                            
+
                             # Handle tool execution with error handling
                             try:
                                 result = await client.call_tool(tool_name, arguments)
@@ -159,13 +160,15 @@ class AgentService:
                                     tool_call_id, {"error": error_message}
                                 )
                             except Exception as e:
-                                error_message = f"Unexpected error in {tool_name}: {str(e)}"
+                                error_message = (
+                                    f"Unexpected error in {tool_name}: {str(e)}"
+                                )
                                 logger.error(error_message)
                                 # Pass the error back to the agent
                                 azure.add_tool_response(
                                     tool_call_id, {"error": error_message}
                                 )
-                        
+
                         # Continue the conversation without adding a new user message
                         response = azure.call_agent_with_history(
                             "", tools=tools, role="user"
@@ -180,11 +183,11 @@ class AgentService:
                     else:
                         logger.warning("Unexpected finish reason:", finish_reason)
                         break
-                
+
                 response_text = response.get("message").get("content", "").strip()
                 # TODO: Filter out tool calls before returning?
                 return AgentResponse(response=response_text, history=azure.history)
-        
+
         except Exception as e:
             logger.error("An error occurred during agent processing:", exc_info=True)
             raise e
