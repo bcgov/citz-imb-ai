@@ -16,4 +16,3 @@ CREATE TABLE chat (
 );
 
 CREATE INDEX idx_chat_user_id ON chat (user_id);
-CREATE INDEX idx_chat_id_user_id ON chat (id, user_id);
