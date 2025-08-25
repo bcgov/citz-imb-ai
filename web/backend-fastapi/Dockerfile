@@ -1,4 +1,5 @@
-FROM python:3.11-slim
+# Base stage with common dependencies
+FROM python:3.11-slim AS base
 
 # Update the package list and install dos2unix
 RUN apt-get update && apt-get install -y dos2unix
@@ -23,8 +24,6 @@ RUN pip install --no-cache-dir --upgrade -r /backend/requirements.txt
 # Install gunicorn
 RUN pip install gunicorn
 
-COPY ./ /backend/
-
 # Copy the entrypoint script into the container
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
@@ -37,10 +36,20 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Set the entrypoint
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-#CMD ["python", "main.py"]
+# Development stage
+FROM base AS dev
 
-# Use Uvicorn to run the FastAPI app with multiple workers
-#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000", "--workers", "8"]
+# Copy source code (this will be overridden by volume mount in dev)
+COPY ./ /backend/
+
+# Use uvicorn with reload for development
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000", "--reload"]
+
+# Production stage (default)
+FROM base AS prod
+
+# Copy all source code
+COPY ./ /backend/
 
 # Use gunicorn to run the FastAPI app with uvicorn workers
 CMD ["gunicorn","-w", "4", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:10000", "--timeout", "120", "main:app"]

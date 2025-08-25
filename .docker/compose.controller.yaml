@@ -276,6 +276,37 @@ services:
       - zuba
   ######################## End WEB BACKEND ############################################
 
+  ########################## WEB BACKEND DEV ############################################
+  web_backend_dev:
+    container_name: citz-imb-ai-backend-dev
+    build:
+      context: ../web/backend-fastapi
+      dockerfile: Dockerfile
+      target: dev
+    environment:
+      TRULENS_USER: ${TRULENS_USER:-postgres}
+      TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
+      TRULENS_DB: ${TRULENS_DB:-trulens}
+      TRULENS_PORT: ${TRULENS_PORT:-5432}
+      TRULENS_HOST: trulens
+      NEO4J_USERNAME: ${NEO4J_USER:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
+      NEO4J_DB: ${NEO4J_DB:-neo4j}
+      NEO4J_PORT: ${NEO4J_PORT:-7687}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AZURE_AI_ENDPOINT: ${AZURE_AI_ENDPOINT}
+      AZURE_AI_KEY: ${AZURE_AI_KEY}
+      FASTAPI_ENV: development
+    ports:
+      - "10000:10000"
+    volumes:
+      - ../web/backend-fastapi:/backend
+      - ../web/backend-fastapi/analytics_data:/backend/analytics_data/
+    networks:
+      - zuba
+  ######################## End WEB BACKEND DEV ############################################
+
   ########################## trulens ############################
   trulens_dashboard:
     container_name: citz-imb-ai-trulens-dashboard-svc
