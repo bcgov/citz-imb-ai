@@ -10,6 +10,7 @@ from app.shared.models import neo4j
 from app.shared.models.azure import AzureAI
 from ..models.agent_model import AgentRequest, AgentResponse, DatabaseSchema
 from app.shared.utils.user_utils import UserInfo
+from app.shared.models.postgres import get_pg_connection
 
 
 class AgentService:
@@ -88,6 +89,18 @@ class AgentService:
             raise HTTPException(
                 status_code=400, detail="Input should be a valid AgentRequest object"
             )
+        with get_pg_connection() as conn:
+            with conn.cursor() as db:
+                db.execute(
+                    f"""
+                    SELECT * 
+                    FROM "user" 
+                    WHERE id = '{user.id}'
+                    """
+                )
+                my_user = db.fetchone()
+                if my_user is None:
+                    raise HTTPException(status_code=400, detail="User not found")
 
         initial_question = request.prompt
 

@@ -6,6 +6,8 @@ from starlette.exceptions import HTTPException
 import requests
 from requests.exceptions import RequestException
 import os
+from fastapi.logger import logger
+from app.shared.models.postgres import get_pg_connection
 
 
 class AuthenticationMiddleware(BaseHTTPMiddleware):
@@ -60,8 +62,32 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
                         },
                     )
                 # Add user info to request state for downstream use
-                request.state.user_id = user_info.get("sub").split("@")[0]
+                user_id = user_info.get("sub").split("@")[0]
+                request.state.user_id = user_id
                 request.state.user_roles = user_roles
+                # Add this user to the user table if they don't already exist
+                with get_pg_connection() as conn:
+                    with conn.cursor() as db:
+                        db.execute(
+                            f"""
+                          SELECT * 
+                          FROM "user" 
+                          WHERE id = '{user_id}'
+                          """
+                        )
+                        my_user = db.fetchone()
+                        if my_user is None:
+                            db.execute(
+                                f"""
+                              INSERT INTO "user" (id)
+                              VALUES ('{user_id}')
+                              RETURNING *
+                              """
+                            )
+                            my_user = db.fetchone()
+                            logger.info("User inserted")
+                        else:
+                            logger.info("User found")
                 # Authentication and role validation successful, proceed to the next middleware or endpoint handler
                 return await call_next(request)
             else:

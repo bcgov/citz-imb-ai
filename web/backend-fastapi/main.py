@@ -32,15 +32,28 @@ from app.middleware.authentication import AuthenticationMiddleware
 from app.middleware.logging import LoggingMiddleware
 from app.modules.module_registry import module_registry
 import warnings
-import os
 from dotenv import load_dotenv
+from contextlib import asynccontextmanager
+from app.shared.models.postgres import init_db_pool, close_db_pool
 
 from fastmcp import FastMCP
 from app.modules.agent.agents import agent_registry
 
+
 warnings.filterwarnings("ignore")
 
-app = FastAPI(root_path="/api")
+
+@asynccontextmanager
+async def pg_lifespan(app: FastAPI):
+    """Lifespan context manager for FastAPI to manage Postgres connection pool."""
+    # Startup
+    init_db_pool()
+    yield
+    # Shutdown
+    close_db_pool()
+
+
+app = FastAPI(root_path="/api", lifespan=pg_lifespan)
 
 # Register all HMVC modules
 module_registry.register_all_modules(app)
@@ -51,7 +64,9 @@ app.add_middleware(AuthenticationMiddleware)
 
 # Get the ASGI-compliant app from your main MCP server instance
 combined_mcp = agent_registry.get_combined_mcp()
-mcp_asgi_app = combined_mcp.http_app(path="/mcp", stateless_http=True, json_response=True)
+mcp_asgi_app = combined_mcp.http_app(
+    path="/mcp", stateless_http=True, json_response=True
+)
 
 # Mount the MCP app at the '/agents' endpoint
 # Critical step: MUST pass the lifespan from the FastMCP app to FastAPI.
