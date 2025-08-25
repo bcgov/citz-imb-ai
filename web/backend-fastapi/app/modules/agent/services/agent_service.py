@@ -9,6 +9,7 @@ from ..agents import agent_registry
 from app.shared.models import neo4j
 from app.shared.models.azure import AzureAI
 from ..models.agent_model import AgentRequest, AgentResponse, DatabaseSchema
+from app.shared.utils.user_utils import UserInfo
 
 
 class AgentService:
@@ -76,7 +77,9 @@ class AgentService:
         """
         return schema_message
 
-    async def process_agent_chat(self, request: AgentRequest, user) -> AgentResponse:
+    async def process_agent_chat(
+        self, request: AgentRequest, user: UserInfo
+    ) -> AgentResponse:
         """Process agent chat request"""
         if request is None:
             raise HTTPException(status_code=400, detail="No request body provided")

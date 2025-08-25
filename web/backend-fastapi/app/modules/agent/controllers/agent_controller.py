@@ -3,7 +3,7 @@ from ..services.agent_service import AgentService
 from ..services.orchestrator_service import OrchestratorService
 from ..views.agent_views import AgentViews
 from ..models.agent_model import AgentRequest, OrchestrationRequest
-from app.shared.utils.user_utils import get_user_info
+from app.shared.utils.user_utils import UserInfo
 
 
 class AgentController:
@@ -19,7 +19,7 @@ class AgentController:
 
         @self.router.post("/agent/")
         async def agentic_chat(
-            request: AgentRequest = None, user: str = Depends(get_user_info)
+            request: AgentRequest = None, user: UserInfo = Depends(UserInfo)
         ):
             result = await self.agent_service.process_agent_chat(request, user)
             return self.agent_views.agent_response(result)
