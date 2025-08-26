@@ -290,6 +290,7 @@ services:
       TRULENS_DB: ${TRULENS_DB:-trulens}
       TRULENS_PORT: ${TRULENS_PORT:-5432}
       TRULENS_HOST: trulens
+      APP_DB: ${APP_DB:-postgres}
       NEO4J_USERNAME: ${NEO4J_USER:-neo4j}
       NEO4J_PASSWORD: ${NEO4J_PASSWORD:-12345678}
       NEO4J_DB: ${NEO4J_DB:-neo4j}

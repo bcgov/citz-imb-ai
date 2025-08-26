@@ -11,9 +11,9 @@ _pool = None
 
 def init_db_pool():
     global _pool
-    
+
     _pool = ConnectionPool(
-        f"host={os.getenv("TRULENS_HOST")} dbname={os.getenv("APP_DB")} user={os.getenv("TRULENS_USER")} password={os.getenv("TRULENS_PASSWORD")} port={os.getenv("TRULENS_PORT")}",
+        f"""host={os.getenv("TRULENS_HOST")} dbname={os.getenv("APP_DB")} user={os.getenv("TRULENS_USER")} password={os.getenv("TRULENS_PASSWORD")} port={os.getenv("TRULENS_PORT")}""",
         kwargs={"row_factory": dict_row},
         min_size=1,
         max_idle=60 * 5,  # in seconds, so 5 minutes
