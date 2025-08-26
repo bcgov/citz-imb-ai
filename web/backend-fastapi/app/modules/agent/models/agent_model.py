@@ -1,11 +1,6 @@
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
-
-
-# TODO: Remove this?
-class AgentHistory(BaseModel):
-    prompt: str
-    response: str
+import uuid
 
 
 class AgentRequest(BaseModel):
@@ -13,9 +8,11 @@ class AgentRequest(BaseModel):
     chat_id: Optional[str] = None
 
 
+# Includes chat_id as uuid
 class AgentResponse(BaseModel):
     response: str
     history: List[Dict[str, Any]]
+    chat_id: uuid.UUID
 
 
 class DatabaseSchema(BaseModel):
