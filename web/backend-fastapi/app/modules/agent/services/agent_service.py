@@ -158,6 +158,14 @@ class AgentService:
                         raise HTTPException(
                             status_code=404, detail="Requested chat not found"
                         )
+                    # Does this user even have access to this chat?
+                    # User id coming from postgres has hyphens, user.id does not
+                    plain_user_id = str(chat_record["user_id"]).replace("-", "")
+                    if plain_user_id != user.id:
+                        raise HTTPException(
+                            status_code=403,
+                            detail="This chat does not belong to requesting user",
+                        )
 
                 # Azure Configuration
                 azure = AzureAI(self.keycloak_endpoint, self.azure_key)
