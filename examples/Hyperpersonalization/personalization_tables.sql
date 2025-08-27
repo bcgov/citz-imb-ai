@@ -6,13 +6,13 @@ CREATE TABLE "user" (
 );
 
 CREATE TABLE chat (
-    id UUID PRIMARY KEY,
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID,
     CONSTRAINT FK_ChatUser FOREIGN KEY (user_id) REFERENCES "user"(id),
     created_at timestamp DEFAULT now(),
+    updated_at timestamp,
     chat_chain jsonb,
-    summary text,
-    is_active BOOLEAN
+    summary text
 );
 
 CREATE INDEX idx_chat_user_id ON chat (user_id);
