@@ -93,6 +93,7 @@ class AgentService:
               {json.dumps(user_preferences, indent=2) if user_preferences else "No user preferences provided."}
               
               You must use this information to tailor your responses to the user unless asked to do otherwise.
+              Make sure to follow the user's preferences closely in every response.
               If the user asks about their preferences, you can refer to the preferences provided.
               If the user asks about their past chats, you can refer to the summary provided.
               If the user requests that you do something that goes against their preferences, follow their instructions.
@@ -111,6 +112,7 @@ class AgentService:
             raise HTTPException(
                 status_code=400, detail="Input should be a valid AgentRequest object"
             )
+
         with get_pg_connection() as conn:
             with conn.cursor() as db:
                 db.execute(
@@ -246,9 +248,7 @@ class AgentService:
                                     }
                                 )
                                 for tool_call in tool_calls:
-                                    tool_call_id = tool_call.get(
-                                        "id"
-                                    )  # Get the tool call ID
+                                    tool_call_id = tool_call.get("id")
                                     tool_name = tool_call.get("function").get("name")
                                     arguments_str = tool_call.get("function").get(
                                         "arguments"
