@@ -113,6 +113,9 @@ class AgentService:
                 status_code=400, detail="Input should be a valid AgentRequest object"
             )
 
+        # Azure Configuration
+        azure = AzureAI(self.keycloak_endpoint, self.azure_key)
+
         with get_pg_connection() as conn:
             with conn.cursor() as db:
                 db.execute(
@@ -133,13 +136,29 @@ class AgentService:
                 # Chat ID is generated in the database
                 if chat_id is None:
                     timestamp = datetime.now(timezone.utc).isoformat()
+                    # Generate a short title for the chat based on the initial question
+                    title_response = azure.call_agent_external_history(
+                        [
+                            {
+                                "role": "system",
+                                "content": "Generate a concise title (max 5 words) for the user's chat based on their initial question. The title should be descriptive and capture the essence of the question.",
+                            },
+                            {
+                                "role": "user",
+                                "content": initial_question,
+                            },
+                        ]
+                    )
+                    chat_title = (
+                        title_response.get("message", {}).get("content", "").strip()
+                    )
                     db.execute(
                         """
-                        INSERT INTO chat (user_id, created_at, updated_at)
-                        VALUES (%s, %s, %s)
+                        INSERT INTO chat (user_id, created_at, updated_at, title)
+                        VALUES (%s, %s, %s, %s)
                         RETURNING *
                         """,
-                        (user.id, timestamp, timestamp),
+                        (user.id, timestamp, timestamp, chat_title),
                     )
                     chat_record = db.fetchone()
                     if chat_record is None:
@@ -168,9 +187,6 @@ class AgentService:
                             status_code=403,
                             detail="This chat does not belong to requesting user",
                         )
-
-                # Azure Configuration
-                azure = AzureAI(self.keycloak_endpoint, self.azure_key)
 
                 try:
                     # Get combined MCP from agent registry
@@ -363,6 +379,7 @@ class AgentService:
                             response=response_text,
                             history=chat_chain,
                             chat_id=chat_record["id"],
+                            chat_title=chat_record.get("title", "Untitled Chat"),
                         )
 
                 except Exception as e:

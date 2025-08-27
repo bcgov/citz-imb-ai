@@ -13,6 +13,7 @@ class AgentResponse(BaseModel):
     response: str
     history: List[Dict[str, Any]]
     chat_id: uuid.UUID
+    chat_title: str
 
 
 class DatabaseSchema(BaseModel):
