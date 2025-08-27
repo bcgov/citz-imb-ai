@@ -12,7 +12,8 @@ CREATE TABLE chat (
     created_at timestamp DEFAULT now(),
     updated_at timestamp,
     chat_chain jsonb,
-    summary text
+    summary text, 
+    title text
 );
 
 CREATE INDEX idx_chat_user_id ON chat (user_id);
