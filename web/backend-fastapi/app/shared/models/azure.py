@@ -8,7 +8,27 @@ class AzureAI:
         self.history = []  # Conversation history. Max input is roughly 120000 tokens.
         self.token_max = token_output_max  # Azure-imposed max is about 16000.
 
-    def call_agent_with_history(self, query, tools=None, role="user"):
+    def call_agent_external_history(self, history, tools=None, role="user"):
+        headers = {"Content-Type": "application/json", "api-key": self.key}
+        body = {
+            "messages": history,
+            "max_tokens": self.token_max,
+        }
+
+        # Add tools to the request body if provided
+        if tools is not None:
+            body["tools"] = tools
+            body["tool_choice"] = "auto"  # Let the model choose when to use tools
+
+        response = requests.post(self.endpoint, headers=headers, json=body, timeout=30)
+
+        if response.status_code == 200:
+            choice = response.json().get("choices")[0]
+            return choice
+        else:
+            raise Exception(f"Error: {response.status_code}, {response.text}")
+
+    def call_agent_internal_history(self, query, tools=None, role="user"):
         """Supported values for role: 'system', 'assistant', 'user', 'function', 'tool', and 'developer'"""
         self.history.append({"role": role, "content": query})
         headers = {"Content-Type": "application/json", "api-key": self.key}

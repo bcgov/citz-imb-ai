@@ -1,20 +1,19 @@
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
-
-
-class AgentHistory(BaseModel):
-    prompt: str
-    response: str
+import uuid
 
 
 class AgentRequest(BaseModel):
     prompt: str
-    # chatHistory: List[AgentHistory] commented out until needed
+    chat_id: Optional[str] = None
 
 
+# Includes chat_id as uuid
 class AgentResponse(BaseModel):
     response: str
     history: List[Dict[str, Any]]
+    chat_id: uuid.UUID
+    chat_title: str
 
 
 class DatabaseSchema(BaseModel):
