@@ -167,14 +167,17 @@ def update_chat_summaries(**context):
                 context["task_instance"].xcom_push(key="user_ids", value=user_ids_list)
 
 
-def create_user_summary(chat_summaries):
+def create_user_summary(chat_summaries, existing_summary):
     # Create a combined summary prompt
-    combined_summary_prompt = """
-                    Based on the following chat summaries, create a concise user profile summary.
-                    Include the user's interests, their common topics, and any other aspects that may
-                    be useful in later chats.
-
-                    Here are the chat summaries:
+    combined_summary_prompt = f"""
+                    Based on the following chat summaries and previous user summary, create a concise user profile summary.
+                    Include the user's interests, their common topics, and any other aspects that may be useful in later chats.
+                    Prioritize recent information over older information.
+                    
+                    Previous user summary:
+                    {existing_summary}
+                    
+                    Here are the most recent chat summaries:
                     """ + "\n".join(
         [f"- {chat['summary']}" for chat in chat_summaries]
     )
@@ -249,17 +252,19 @@ def update_users(**context):
                     )
                     return
                 print(f"Processing updates for user ID: {user_id}")
-                new_summary = create_user_summary(chat_summaries)
-                # Get existing preferences
+                # Get existing user info
                 db.execute(
                     """
-                    SELECT preferences
+                    SELECT preferences, summary
                     FROM "user"
                     WHERE id = %s
                     """,
                     (user_id,),
                 )
-                existing_preferences = db.fetchone().get("preferences", {})
+                user_record = db.fetchone()
+                existing_summary = user_record.get("summary", "")
+                existing_preferences = user_record.get("preferences", {})
+                new_summary = create_user_summary(chat_summaries, existing_summary)
                 new_preferences = create_user_preferences(
                     chat_summaries, existing_preferences
                 )
