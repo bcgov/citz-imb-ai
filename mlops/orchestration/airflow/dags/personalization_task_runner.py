@@ -10,6 +10,7 @@ import os
 import json
 
 
+# Simple connection class for Azure OpenAI
 class AzureAI:
     def __init__(self, endpoint, key, response_token_max=1000):
         self.endpoint = endpoint
@@ -17,7 +18,6 @@ class AzureAI:
         self.token_max = response_token_max
 
     def call(self, chat_chain):
-        """Supported values for role: 'system', 'assistant', 'user', 'function', 'tool', and 'developer'"""
         headers = {"Content-Type": "application/json", "api-key": self.key}
         body = {
             "messages": chat_chain,
@@ -38,6 +38,10 @@ endpoint = os.getenv("AZURE_AI_ENDPOINT", "")
 key = os.getenv("AZURE_AI_KEY", "")
 azure = AzureAI(endpoint, key)
 
+# For later Postgres connection
+pg_connection_string = f"""host={os.getenv("TRULENS_HOST")} dbname={os.getenv("APP_DB")} user={os.getenv("TRULENS_USER")} password={os.getenv("TRULENS_PASSWORD")} port={os.getenv("TRULENS_PORT")}"""
+
+# These definitions are just examples to help the model understand what preferences could entail.
 preference_definitions = {
     "communication_style": {
         "tone": "The overall mood and style of communication (e.g., casual, formal, professional, humorous, empathetic)",
@@ -94,7 +98,7 @@ def update_chat_summaries(**context):
     user_ids_to_update = set()
     # Postgres connection
     with psycopg.connect(
-        f"""host={os.getenv("TRULENS_HOST")} dbname={os.getenv("APP_DB")} user={os.getenv("TRULENS_USER")} password={os.getenv("TRULENS_PASSWORD")} port={os.getenv("TRULENS_PORT")}""",
+        pg_connection_string,
         row_factory=dict_row,
     ) as conn:
         with conn.cursor() as db:
@@ -156,8 +160,7 @@ def update_chat_summaries(**context):
                     (summary_text, chat["id"]),
                 )
                 user_id = db.fetchone()["user_id"]
-                if user_id not in user_ids_to_update:
-                    user_ids_to_update.add(user_id)
+                user_ids_to_update.add(user_id)
                 print(f"Chat ID {chat['id']} updated with new summary.")
                 print(f"{len(user_ids_to_update)} unique users require update.")
 
@@ -173,7 +176,7 @@ def create_user_summary(chat_summaries, existing_summary):
                     Based on the following chat summaries and previous user summary, create a concise user profile summary.
                     Include the user's interests, their common topics, and any other aspects that may be useful in later chats.
                     Prioritize recent information over older information.
-                    
+
                     Previous user summary:
                     {existing_summary}
                     
@@ -230,7 +233,7 @@ def update_users(**context):
     for user_id in user_ids:
         # Get the user's chat summaries
         with psycopg.connect(
-            f"""host={os.getenv("TRULENS_HOST")} dbname={os.getenv("APP_DB")} user={os.getenv("TRULENS_USER")} password={os.getenv("TRULENS_PASSWORD")} port={os.getenv("TRULENS_PORT")}""",
+            pg_connection_string,
             row_factory=dict_row,
         ) as conn:
             with conn.cursor() as db:
@@ -264,6 +267,7 @@ def update_users(**context):
                 user_record = db.fetchone()
                 existing_summary = user_record.get("summary", "")
                 existing_preferences = user_record.get("preferences", {})
+                # Generate new summary and preferences
                 new_summary = create_user_summary(chat_summaries, existing_summary)
                 new_preferences = create_user_preferences(
                     chat_summaries, existing_preferences
@@ -272,7 +276,7 @@ def update_users(**context):
                 db.execute(
                     """
                     UPDATE "user"
-                    SET summary = %s, preferences = %s, last_change = NOW()
+                    SET summary = %s, preferences = %s, updated_at = NOW()
                     WHERE id = %s
                     """,
                     (new_summary, new_preferences, user_id),
