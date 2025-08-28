@@ -2,7 +2,9 @@ CREATE TABLE "user" (
     id UUID PRIMARY KEY,
     summary text,
     preferences jsonb,
-    last_change timestamp
+    created_at timestamp DEFAULT now(),
+    updated_at timestamp,
+    last_login timestamp DEFAULT now(),
 );
 
 CREATE TABLE chat (
