@@ -4,7 +4,7 @@ CREATE TABLE "user" (
     preferences jsonb,
     created_at timestamp DEFAULT now(),
     updated_at timestamp,
-    last_login timestamp DEFAULT now()
+    last_access timestamp DEFAULT now()
 );
 
 CREATE TABLE chat (

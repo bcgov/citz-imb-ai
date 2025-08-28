@@ -90,7 +90,7 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
                             db.execute(
                                 f"""
                               UPDATE "user" 
-                              SET last_login = NOW()
+                              SET last_access = NOW()
                               WHERE id = '{user_id}';
                               """
                             )
