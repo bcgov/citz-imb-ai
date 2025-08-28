@@ -20,7 +20,7 @@ This has a major benefit of maintaining a maximum context size. As the chat cont
 
 There are some drawbacks to this approach as well. The details of the conversation will be lost during summary. In some cases, the summaries may even contain incorrect interpretations of the chat. This can make it difficult to know what was actually said between the user and the assistant roles.
 
-There's also an added cost to this approach. Rather than updating a summary occasionally, the summary must be updated after every exchange to ensure this new information is captured in context for the next prompt. A rapid chat between user and assistant could result in many additional calls to the AI model. Even a prompt every minute, not unlikely in a chat bot scenario, could mean performing 60 additional summaries every hour for just one user.
+There's also an added cost to this approach. Rather than updating a summary occasionally, the summary must be updated after every exchange to ensure this new information is captured in context for the next prompt. A rapid chat between user and assistant could result in many additional calls to the AI model. Even a prompt every minute, not unlikely in a chat bot scenario, could mean performing 60 additional summaries every hour for just one user. If you're familiar with token costs, you might already know that the *output* tokens are more expensive than the *input* tokens, so we can deal with the costs of a bigger input context easier than the costs of more frequent generations.
 
 ## Why Full History is Sufficient Here
 
