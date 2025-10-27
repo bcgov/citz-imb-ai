@@ -87,6 +87,13 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
                             my_user = db.fetchone()
                             logger.info("User inserted")
                         else:
+                            db.execute(
+                                f"""
+                              UPDATE "user" 
+                              SET last_access = NOW()
+                              WHERE id = '{user_id}';
+                              """
+                            )
                             logger.info("User found")
                 # Authentication and role validation successful, proceed to the next middleware or endpoint handler
                 return await call_next(request)

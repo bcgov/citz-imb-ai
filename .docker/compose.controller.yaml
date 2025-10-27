@@ -140,6 +140,14 @@ services:
       S3_ENDPOINT_URL: ${S3_ENDPOINT_URL}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AZURE_AI_ENDPOINT: ${AZURE_AI_ENDPOINT}
+      AZURE_AI_KEY: ${AZURE_AI_KEY}
+      TRULENS_USER: ${TRULENS_USER:-postgres}
+      TRULENS_PASSWORD: ${TRULENS_PASSWORD:-root}
+      TRULENS_PORT: ${TRULENS_PORT:-5432}
+      TRULENS_HOST: trulens
+      TRULENS_DB: ${TRULENS_DB:-trulens}
+      APP_DB: ${APP_DB:-postgres}
     volumes:
       - ../mlops/orchestration/airflow/dags:/opt/airflow/dags
       - ../mlops/orchestration/airflow/logs:/opt/airflow/logs
