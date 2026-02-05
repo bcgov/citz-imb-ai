@@ -1,0 +1,135 @@
+# ╔═══════════════════════════════════════════════════════════════════════╗
+# ║  llama.cpp LLM Server - Intel oneAPI MKL Optimized                  ║
+# ║  Multi-model server with OpenAI-compatible API (/v1/chat/completions)║
+# ║  Target: 5th Gen Intel Xeon (AVX-512 + AMX)                         ║
+# ╚═══════════════════════════════════════════════════════════════════════╝
+#
+# Build:
+#   docker compose -f .docker/compose.controller.yaml build llm_server
+#
+# Run:
+#   docker compose -f .docker/compose.controller.yaml up llm_server
+#
+# Override models at runtime:
+#   MODELS=1,6 docker compose -f .docker/compose.controller.yaml up llm_server
+#
+# Build for a different CPU arch (default targets 5th Gen Xeon / Sapphire Rapids+):
+#   docker build --build-arg TARGET_ARCH=native ...    # detect at build time
+#   docker build --build-arg TARGET_ARCH=skylake-avx512 ...  # older Xeon
+#
+
+# ─── Stage 1: Build llama.cpp with Intel oneAPI MKL ─────────────────────────────
+FROM ubuntu:22.04 AS builder
+
+ARG DEBIAN_FRONTEND=noninteractive
+ARG LLAMA_CPP_VERSION=master
+
+# Target CPU microarchitecture for the Intel compiler (-march flag).
+# "sapphirerapids" covers 4th/5th Gen Xeon with AVX-512 + AMX.
+# Set to "native" if building directly on the target machine.
+# Common values: sapphirerapids, emeraldrapids, graniterapids, skylake-avx512, native
+ARG TARGET_ARCH=sapphirerapids
+
+# Install build tools + Intel oneAPI compilers and MKL
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl gnupg ca-certificates git cmake build-essential pkg-config \
+    && curl -fsSL https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB \
+       | gpg --dearmor -o /usr/share/keyrings/intel-oneapi-archive-keyring.gpg \
+    && echo "deb [signed-by=/usr/share/keyrings/intel-oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" \
+       > /etc/apt/sources.list.d/oneAPI.list \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+       intel-oneapi-compiler-dpcpp-cpp-2025.0 \
+       intel-oneapi-mkl-devel-2025.0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Clone llama.cpp
+RUN git clone --depth 1 --branch ${LLAMA_CPP_VERSION} \
+    https://github.com/ggml-org/llama.cpp.git /build/llama.cpp
+
+WORKDIR /build/llama.cpp
+
+# Build with:
+#   - Intel icx/icpx compilers targeting ${TARGET_ARCH}
+#   - Intel MKL BLAS for optimized matrix math
+#   - All AVX-512 extensions (F, VBMI, VNNI, BF16)
+#   - All AMX extensions (TILE, INT8, BF16) for 4th/5th Gen Xeon
+#   - GGML_NATIVE=OFF because we cross-compile for a different CPU than the build host
+SHELL ["/bin/bash", "-c"]
+RUN source /opt/intel/oneapi/setvars.sh && \
+    cmake -B build \
+      -DCMAKE_C_COMPILER=icx \
+      -DCMAKE_CXX_COMPILER=icpx \
+      -DCMAKE_C_FLAGS="-march=${TARGET_ARCH}" \
+      -DCMAKE_CXX_FLAGS="-march=${TARGET_ARCH}" \
+      -DCMAKE_BUILD_TYPE=Release \
+      \
+      -DGGML_NATIVE=OFF \
+      \
+      -DGGML_BLAS=ON \
+      -DGGML_BLAS_VENDOR=Intel10_64lp \
+      \
+      -DGGML_AVX=ON \
+      -DGGML_AVX2=ON \
+      -DGGML_AVX512=ON \
+      -DGGML_AVX512_VBMI=ON \
+      -DGGML_AVX512_VNNI=ON \
+      -DGGML_AVX512_BF16=ON \
+      \
+      -DGGML_AMX_TILE=ON \
+      -DGGML_AMX_INT8=ON \
+      -DGGML_AMX_BF16=ON \
+      \
+      -DGGML_CPU_REPACK=ON \
+    && cmake --build build --config Release -j $(nproc) --target llama-server
+
+
+# ─── Stage 2: Runtime ───────────────────────────────────────────────────────────
+FROM ubuntu:22.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+# Install Intel MKL runtime + huggingface-cli for model downloads
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl ca-certificates gnupg python3 python3-pip procps \
+    && curl -fsSL https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB \
+       | gpg --dearmor -o /usr/share/keyrings/intel-oneapi-archive-keyring.gpg \
+    && echo "deb [signed-by=/usr/share/keyrings/intel-oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" \
+       > /etc/apt/sources.list.d/oneAPI.list \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+       intel-oneapi-runtime-mkl-2025.0 \
+    && pip3 install --no-cache-dir "huggingface_hub[cli]" \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Set MKL library path
+ENV LD_LIBRARY_PATH="/opt/intel/oneapi/mkl/latest/lib/intel64:${LD_LIBRARY_PATH}"
+
+# Copy llama-server binary from builder
+COPY --from=builder /build/llama.cpp/build/bin/llama-server /usr/local/bin/llama-server
+RUN chmod +x /usr/local/bin/llama-server
+
+# Copy entrypoint and model config
+COPY llm/entrypoint.sh /entrypoint.sh
+COPY llm/models.conf /etc/llm/models.conf
+RUN chmod +x /entrypoint.sh
+
+# Model storage (persisted via Docker volume)
+VOLUME /models
+
+# Expose ports for all 7 models
+EXPOSE 8090 8091 8092 8093 8094 8095 8096
+
+# ─── Configuration via environment variables ─────────────────────────────────────
+# MODELS         Comma-separated model IDs to run (default: "1,6")
+#                  1=Qwen2.5-3B  2=Qwen3VL-4B  3=GLM4.6V  4=KimiVL
+#                  5=Devstral24B  6=Qwen2-0.5B  7=Qwen3-8B
+# CONTEXT_SIZE   Context window size (default: 4096)
+# THREADS        Threads per model, empty = auto (default: "")
+# HF_TOKEN       HuggingFace token for gated models (optional)
+ENV MODELS="1,6" \
+    CONTEXT_SIZE=4096 \
+    THREADS="" \
+    HF_TOKEN=""
+
+ENTRYPOINT ["/entrypoint.sh"]
