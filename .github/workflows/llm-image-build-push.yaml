@@ -1,0 +1,47 @@
+# GitHub Actions workflow for building and tagging images on PR
+name: Build and Push on PR
+
+on:
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - ready_for_review
+    branches:
+    - main
+    paths:
+      - .docker/llm/**
+
+jobs:
+  # Job to build, tag, and push the image
+  build-tag-push:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+
+    # Login to BC Gov OCP ImageStream
+    - name: Login to OCP
+      run : |
+        docker login ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_TOOLS_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+
+    # Build the image
+    - name: Build Image
+      run: |
+        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build llm_server
+
+    # Tag the image
+    - name: Tag Image
+      run: |
+        docker tag docker-llm_server ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/llm-server-imagestream:${{github.event.pull_request.number}}
+
+    # Push the image
+    - name: Push Image
+      run: |
+        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/llm-server-imagestream:${{ github.event.pull_request.number }}
+

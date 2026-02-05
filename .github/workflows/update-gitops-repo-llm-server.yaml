@@ -1,0 +1,64 @@
+name: Update Image Tag in GitOps Repo
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+      - .docker/llm/**
+
+jobs:
+  update-gitops-image-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get PR Number
+      id: get-pr-number
+      uses: actions/github-script@v5
+      with:
+        script: |
+          const { data: pulls } = await github.rest.pulls.list({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'all',
+          });
+          const pr = pulls.find(pr => pr.merge_commit_sha === process.env.GITHUB_SHA);
+          if (pr) {
+            return pr.number
+          } else {
+            return ''
+          }
+        result-encoding: string
+
+      # Install yaml parser
+    - name: Install yq
+      run: |
+        curl -Lo yq "https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64"
+        chmod +x yq
+        mv yq /home/runner/bin
+
+      # Add deploy key to runner
+    - name: Setup SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.MANIFEST_REPO_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+      # Make changes to image tag in values.yaml within GitOps repo
+    - name: Clone, Update, and Commit Changes
+      run: |
+        git clone git@github.com:bcgov-c/tenant-gitops-b875cc.git
+        cd tenant-gitops-b875cc
+
+        FILE_PATH="citz-imb-ai/values.dev.yaml"
+        NEW_TAG="${{ steps.get-pr-number.outputs.result }}"
+
+        yq e ".llm_server.image.tag = \"$NEW_TAG\"" -i "$FILE_PATH"
+
+        git config user.email "brandon.bouchard@gov.bc.ca"
+        git config user.name "Bottle7"
+
+        git add "$FILE_PATH"
+        git commit -m "Update LLM Server image tag to $NEW_TAG"
+        git push
+
