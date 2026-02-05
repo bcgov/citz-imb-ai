@@ -5,21 +5,21 @@
 # ╚═══════════════════════════════════════════════════════════════════════╝
 #
 # Build:
-#   docker compose -f .docker/compose.controller.yaml build llm_server
+#   docker build -f .docker/Dockerfile.llamacpp -t llamacpp-server .
 #
 # Run:
-#   docker compose -f .docker/compose.controller.yaml up llm_server
+#   docker run -p 8090:8090 llamacpp-server
 #
 # Override models at runtime:
-#   MODELS=1,6 docker compose -f .docker/compose.controller.yaml up llm_server
+#   MODELS=1,6 docker run -p 8090:8090 llamacpp-server
 #
 # Build for a different CPU arch (default targets 5th Gen Xeon / Sapphire Rapids+):
-#   docker build --build-arg TARGET_ARCH=native ...    # detect at build time
-#   docker build --build-arg TARGET_ARCH=skylake-avx512 ...  # older Xeon
-#
+#   docker build --build-arg TARGET_ARCH=native -t llamacpp-server .
+#   docker build --build-arg TARGET_ARCH=skylake-avx512 -t llamacpp-server .
 
-# ─── Stage 1: Build llama.cpp with Intel oneAPI MKL ─────────────────────────────
-FROM ubuntu:22.04 AS builder
+
+# ─── Stage 1: Build llama.cpp with Intel oneAPI ─────────────────────────────
+FROM intel/oneapi-basekit:2025.3 AS builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LLAMA_CPP_VERSION=master
@@ -30,17 +30,9 @@ ARG LLAMA_CPP_VERSION=master
 # Common values: sapphirerapids, emeraldrapids, graniterapids, skylake-avx512, native
 ARG TARGET_ARCH=sapphirerapids
 
-# Install build tools + Intel oneAPI compilers and MKL
+# Install build tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl gnupg ca-certificates git cmake build-essential pkg-config \
-    && curl -fsSL https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB \
-       | gpg --dearmor -o /usr/share/keyrings/intel-oneapi-archive-keyring.gpg \
-    && echo "deb [signed-by=/usr/share/keyrings/intel-oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" \
-       > /etc/apt/sources.list.d/oneAPI.list \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
-       intel-oneapi-compiler-dpcpp-cpp-2025.0 \
-       intel-oneapi-mkl-devel-2025.0 \
+    git cmake pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone llama.cpp
@@ -85,24 +77,17 @@ RUN source /opt/intel/oneapi/setvars.sh && \
 
 
 # ─── Stage 2: Runtime ───────────────────────────────────────────────────────────
-FROM ubuntu:22.04
+FROM intel/oneapi-basekit:2025.3-runtime
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Install Intel MKL runtime + huggingface-cli for model downloads
+# Install huggingface-cli for model downloads
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl ca-certificates gnupg python3 python3-pip procps \
-    && curl -fsSL https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB \
-       | gpg --dearmor -o /usr/share/keyrings/intel-oneapi-archive-keyring.gpg \
-    && echo "deb [signed-by=/usr/share/keyrings/intel-oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" \
-       > /etc/apt/sources.list.d/oneAPI.list \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
-       intel-oneapi-runtime-mkl-2025.0 \
+    curl python3 python3-pip procps \
     && pip3 install --no-cache-dir "huggingface_hub[cli]" \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Set MKL library path
+# Set MKL library path (pre-configured in oneapi-basekit runtime)
 ENV LD_LIBRARY_PATH="/opt/intel/oneapi/mkl/latest/lib/intel64:${LD_LIBRARY_PATH}"
 
 # Copy llama-server binary from builder
