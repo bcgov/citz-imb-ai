@@ -77,7 +77,7 @@ RUN source /opt/intel/oneapi/setvars.sh && \
 
 
 # ─── Stage 2: Runtime ───────────────────────────────────────────────────────────
-FROM intel/oneapi-basekit:2025.3-runtime
+FROM intel/oneapi-basekit:2025.3
 
 ARG DEBIAN_FRONTEND=noninteractive
 
