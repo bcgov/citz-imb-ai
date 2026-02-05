@@ -1,0 +1,47 @@
+# GitHub Actions workflow for building and tagging the LLM image on PR
+name: Backend Build and Push on PR
+
+on:
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - ready_for_review
+    branches:
+    - main
+    paths:
+      - web/backend-fastapi/**
+
+jobs:
+  # Job to build, tag, and push the API image
+  build-tag-push:
+    environment: dev
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+
+    # Login to BC Gov OCP ImageStream
+    - name: Login to OCP
+      run : |
+        docker login ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }} -u ${{ secrets.OPENSHIFT_SA_TOOLS_NAME }} -p ${{ secrets.OPENSHIFT_SA_TOOLS_TOKEN }}
+
+    # Build the image
+    - name: Build Image
+      run: |
+        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build web_backend
+
+    # Tag the image
+    - name: Tag Image
+      run: |
+        docker tag docker-web_backend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-fastapi-imagestream:${{github.event.pull_request.number}}
+
+    # Push the image
+    - name: Push Image
+      run: |
+        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-fastapi-imagestream:${{ github.event.pull_request.number }}
+
