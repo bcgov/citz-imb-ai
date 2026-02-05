@@ -1,5 +1,5 @@
-# GitHub Actions workflow for building and tagging the LLM image on PR
-name: Backend Build and Push on PR
+# GitHub Actions workflow for building and tagging images on PR
+name: Build and Push on PR
 
 on:
   pull_request:
@@ -10,10 +10,10 @@ on:
     branches:
     - main
     paths:
-      - web/backend-fastapi/**
+      - .docker/llm/**
 
 jobs:
-  # Job to build, tag, and push the API image
+  # Job to build, tag, and push the image
   build-tag-push:
     environment: dev
     runs-on: ubuntu-latest
@@ -33,15 +33,15 @@ jobs:
     # Build the image
     - name: Build Image
       run: |
-        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build web_backend
+        docker compose -f ${{ vars.COMPOSE_FILE_NAME }} build llm_server
 
     # Tag the image
     - name: Tag Image
       run: |
-        docker tag docker-web_backend ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-fastapi-imagestream:${{github.event.pull_request.number}}
+        docker tag docker-llm_server ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/llm-server-imagestream:${{github.event.pull_request.number}}
 
     # Push the image
     - name: Push Image
       run: |
-        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/ai-fastapi-imagestream:${{ github.event.pull_request.number }}
+        docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/llm-server-imagestream:${{ github.event.pull_request.number }}
 
