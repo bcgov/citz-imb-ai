@@ -19,7 +19,7 @@
 
 
 # ─── Stage 1: Build llama.cpp with Intel oneAPI ─────────────────────────────
-FROM intel/oneapi-basekit:2025.3 AS builder
+FROM intel/oneapi-basekit:latest AS builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LLAMA_CPP_VERSION=master
@@ -77,7 +77,7 @@ RUN source /opt/intel/oneapi/setvars.sh && \
 
 
 # ─── Stage 2: Runtime ───────────────────────────────────────────────────────────
-FROM intel/oneapi-basekit:2025.3
+FROM intel/oneapi-basekit:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
