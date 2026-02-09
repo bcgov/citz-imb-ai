@@ -1,12 +1,14 @@
 #!/bin/bash
 #
 # llama.cpp multi-model entrypoint
-# Downloads GGUF models from HuggingFace if not present, then starts llama-server
-# instances with OpenAI-compatible API on configured ports.
+# Starts llama-server instances using GGUF files already present in /models.
 #
 set -euo pipefail
 
-MODELS_DIR="/models"
+MODEL_SOURCE_DIR="${MODEL_SOURCE_DIR:-/models}"
+DOWNLOAD_MODELS="${DOWNLOAD_MODELS:-false}"
+DOWNLOAD_ONLY="${DOWNLOAD_ONLY:-false}"
+REQUIRE_AVX512="${REQUIRE_AVX512:-true}"
 CONFIG_FILE="/etc/llm/models.conf"
 PIDS=()
 
@@ -30,6 +32,12 @@ cleanup() {
     exit 0
 }
 trap cleanup SIGTERM SIGINT
+
+is_true() {
+    local v
+    v=$(echo "${1:-false}" | tr '[:upper:]' '[:lower:]')
+    [[ "$v" == "1" || "$v" == "true" || "$v" == "yes" || "$v" == "on" ]]
+}
 
 # ─── CPU feature detection ────────────────────────────────────────────────────────
 check_cpu() {
@@ -63,12 +71,15 @@ check_cpu() {
         echo -e "  AVX2:    ${RED}NO${NC}"
     fi
 
-    # Hard fail if AVX-512 is missing (binary will SIGILL)
-    if ! $has_avx512; then
+    # Hard fail only when explicitly required by runtime config.
+    if is_true "$REQUIRE_AVX512" && ! $has_avx512; then
         echo -e ""
         echo -e "${RED}FATAL: This binary requires AVX-512 (compiled with -march=sapphirerapids).${NC}"
         echo -e "${RED}This CPU does not support AVX-512. Rebuild with a compatible TARGET_ARCH.${NC}"
         exit 1
+    elif ! $has_avx512; then
+        echo -e ""
+        echo -e "${YELLOW}WARNING:${NC} AVX-512 not present; continuing because REQUIRE_AVX512=${REQUIRE_AVX512}."
     fi
 
     echo ""
@@ -86,32 +97,69 @@ echo ""
 check_cpu
 
 echo -e "Selected models: ${YELLOW}${SELECTED_MODELS[*]}${NC}"
+echo -e "Model source:    ${YELLOW}${MODEL_SOURCE_DIR}${NC}"
 echo -e "Context size:    ${YELLOW}${CONTEXT_SIZE:-4096}${NC}"
 echo -e "Threads/model:   ${YELLOW}${THREADS:-auto}${NC}"
+echo -e "Download mode:   ${YELLOW}${DOWNLOAD_MODELS}${NC}"
+echo -e "Download only:   ${YELLOW}${DOWNLOAD_ONLY}${NC}"
+echo -e "Require AVX-512: ${YELLOW}${REQUIRE_AVX512}${NC}"
 echo ""
 
-# ─── HuggingFace auth ───────────────────────────────────────────────────────────
-if [[ -n "${HF_TOKEN:-}" ]]; then
-    echo -e "${CYAN}Authenticating with HuggingFace...${NC}"
-    huggingface-cli login --token "$HF_TOKEN" --add-to-git-credential 2>/dev/null || true
-fi
+# ─── Validate and start each model ───────────────────────────────────────────────
+require_file() {
+    local filename="$1"
+    local path="${MODEL_SOURCE_DIR}/${filename}"
+    if [[ ! -f "$path" ]]; then
+        echo -e "  ${RED}Missing${NC} ${filename} in ${MODEL_SOURCE_DIR}"
+        return 1
+    fi
+    echo -e "  ${GREEN}Found${NC} ${filename}"
+}
 
-# ─── Download and start each model ──────────────────────────────────────────────
 download_file() {
-    local repo="$1"
+    local source="$1"
     local filename="$2"
-    local dest="${MODELS_DIR}/${filename}"
+    local explicit_url="${3:-}"
+    local out="${MODEL_SOURCE_DIR}/${filename}"
+    local tmp="${out}.part"
+    local url=""
 
-    if [[ -f "$dest" ]]; then
-        echo -e "  ${GREEN}Found${NC} ${filename}"
-        return 0
+    if [[ -n "$explicit_url" ]]; then
+        url="$explicit_url"
+    elif [[ "$source" =~ ^https?:// ]]; then
+        url="$source"
+    else
+        url="https://huggingface.co/${source}/resolve/main/${filename}?download=true"
     fi
 
-    echo -e "  ${YELLOW}Downloading${NC} ${filename} from ${repo}..."
-    huggingface-cli download "$repo" "$filename" \
-        --local-dir "$MODELS_DIR" \
-        --local-dir-use-symlinks False \
-        --quiet
+    mkdir -p "$MODEL_SOURCE_DIR"
+    echo -e "  ${YELLOW}Downloading${NC} ${filename} from ${url}"
+    rm -f "$tmp"
+
+    # Prefer wget (matches successful host behavior), fallback to curl.
+    if [[ -n "${HF_TOKEN:-}" ]]; then
+        if ! wget --tries=5 --waitretry=2 --header="Authorization: Bearer ${HF_TOKEN}" -O "$tmp" "$url"; then
+            curl -fL --retry 5 --retry-delay 2 \
+                -H "Authorization: Bearer ${HF_TOKEN}" \
+                -o "$tmp" "$url"
+        fi
+    else
+        if ! wget --tries=5 --waitretry=2 -O "$tmp" "$url"; then
+            curl -fL --retry 5 --retry-delay 2 \
+                -o "$tmp" "$url"
+        fi
+    fi
+
+    # Guard against tiny HTML/error responses.
+    local size
+    size=$(stat -c%s "$tmp" 2>/dev/null || echo 0)
+    if [[ "$size" -lt 1048576 ]]; then
+        echo -e "  ${RED}Download failed${NC}: ${filename} is only ${size} bytes (expected model file)."
+        rm -f "$tmp"
+        return 1
+    fi
+
+    mv "$tmp" "$out"
     echo -e "  ${GREEN}Downloaded${NC} ${filename}"
 }
 
@@ -123,25 +171,49 @@ for model_id in "${SELECTED_MODELS[@]}"; do
         continue
     fi
 
-    IFS='|' read -r id port hf_repo filename extra_args <<< "$config_line"
+    IFS='|' read -r id port model_source filename extra_args <<< "$config_line"
 
     echo -e "${YELLOW}[Model ${id}]${NC} Port :${port} - ${filename}"
 
-    # Download main model file
-    download_file "$hf_repo" "$filename"
-
+    # Main model file should exist in MODEL_SOURCE_DIR (or be downloaded if enabled)
+    if ! require_file "$filename"; then
+        if is_true "$DOWNLOAD_MODELS"; then
+            download_file "$model_source" "$filename"
+        fi
+    fi
+    if ! require_file "$filename"; then
+        echo -e "  ${YELLOW}Skipping model ${id} due to missing file after download attempt.${NC}"
+        echo ""
+        continue
+    fi
     # Download mmproj file if specified in extra_args
     if [[ "$extra_args" == *"--mmproj"* ]]; then
-        mmproj_file=$(echo "$extra_args" | grep -oP '(?<=--mmproj )\S+')
+        mmproj_file=$(echo "$extra_args" | sed -n 's/.*--mmproj \([^ ]*\).*/\1/p')
+        mmproj_url=$(echo "$extra_args" | sed -n 's/.*--mmproj-url \([^ ]*\).*/\1/p')
         if [[ -n "$mmproj_file" ]]; then
-            download_file "$hf_repo" "$mmproj_file"
+            if ! require_file "$mmproj_file"; then
+                if is_true "$DOWNLOAD_MODELS"; then
+                    download_file "$model_source" "$mmproj_file" "$mmproj_url"
+                fi
+            fi
+            if ! require_file "$mmproj_file"; then
+                echo -e "  ${YELLOW}Skipping model ${id}; missing mmproj file after download attempt.${NC}"
+                echo ""
+                continue 2
+            fi
         fi
+    fi
+
+    if is_true "$DOWNLOAD_ONLY"; then
+        echo -e "  ${GREEN}Ready${NC} files for model ${id}; download-only mode so not starting server."
+        echo ""
+        continue
     fi
 
     # Build server command
     cmd=(
         llama-server
-        -m "${MODELS_DIR}/${filename}"
+        -m "${MODEL_SOURCE_DIR}/${filename}"
         --host 0.0.0.0
         --port "$port"
         -c "${CONTEXT_SIZE:-4096}"
@@ -156,7 +228,7 @@ for model_id in "${SELECTED_MODELS[@]}"; do
     # Add extra args (e.g., --mmproj)
     if [[ -n "${extra_args:-}" ]]; then
         # Prepend models dir to mmproj path
-        local_extra=$(echo "$extra_args" | sed "s|--mmproj |--mmproj ${MODELS_DIR}/|g")
+        local_extra=$(echo "$extra_args" | sed "s|--mmproj |--mmproj ${MODEL_SOURCE_DIR}/|g" | sed "s|--mmproj-url [^ ]*||g")
         # shellcheck disable=SC2206
         cmd+=($local_extra)
     fi
@@ -167,6 +239,11 @@ for model_id in "${SELECTED_MODELS[@]}"; do
     echo -e "  PID: $!"
     echo ""
 done
+
+if is_true "$DOWNLOAD_ONLY"; then
+    echo -e "${GREEN}Download-only mode complete.${NC}"
+    exit 0
+fi
 
 # ─── Wait for servers to become healthy ──────────────────────────────────────────
 echo -n "Waiting for models to load"
@@ -196,7 +273,7 @@ echo -e "${GREEN}Server Status:${NC}"
 for model_id in "${SELECTED_MODELS[@]}"; do
     config_line=$(grep "^${model_id}|" "$CONFIG_FILE" || true)
     [[ -z "$config_line" ]] && continue
-    IFS='|' read -r id port hf_repo filename extra_args <<< "$config_line"
+    IFS='|' read -r id port model_source filename extra_args <<< "$config_line"
     if curl -sf "http://localhost:${port}/health" > /dev/null 2>&1; then
         echo -e "  :${port} ${GREEN}Online${NC} - ${filename}"
     else

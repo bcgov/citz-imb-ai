@@ -10,7 +10,9 @@ on:
     branches:
     - main
     paths:
+      - .docker/Dockerfile.llamacpp
       - .docker/llm/**
+      - .docker/compose.controller.yaml
 
 jobs:
   # Job to build, tag, and push the image
@@ -44,4 +46,3 @@ jobs:
     - name: Push Image
       run: |
         docker push ${{ secrets.OPENSHIFT_IMAGE_REPOSITORY }}/llm-server-imagestream:${{ github.event.pull_request.number }}
-
