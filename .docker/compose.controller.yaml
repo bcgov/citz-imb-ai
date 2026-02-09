@@ -375,6 +375,7 @@ services:
   # Models:
   #   1=Qwen2.5-3B(:8090) 2=Qwen3VL-4B(:8091) 3=GLM4.6V(:8092)
   #   4=KimiVL(:8093) 5=Devstral24B(:8094) 6=Qwen2-0.5B(:8095) 7=Qwen3-8B(:8096)
+  #   8=Qwen3VL-8B(:8097)
   #
   # API: http://localhost:<port>/v1/chat/completions
   llm_server:
@@ -382,10 +383,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.llamacpp
+      args:
+        BUILD_PRESET: ${LLM_BUILD_PRESET:-portable}
     environment:
-      MODELS: ${LLM_MODELS:-1,6}
+      MODELS: ${LLM_MODELS:-8}
       CONTEXT_SIZE: ${LLM_CONTEXT_SIZE:-4096}
       THREADS: ${LLM_THREADS:-}
+      DOWNLOAD_MODELS: ${LLM_DOWNLOAD_MODELS:-true}
+      MODEL_SOURCE_DIR: /models
+      REQUIRE_AVX512: ${LLM_REQUIRE_AVX512:-false}
       HF_TOKEN: ${HF_TOKEN:-}
     ports:
       - "8090:8090"
@@ -395,10 +401,11 @@ services:
       - "8094:8094"
       - "8095:8095"
       - "8096:8096"
+      - "8097:8097"
     volumes:
       - llm_models:/models
     healthcheck:
-      test: ["CMD-SHELL", "curl -sf http://localhost:8090/health || curl -sf http://localhost:8095/health || exit 1"]
+      test: ["CMD-SHELL", "for p in 8090 8091 8092 8093 8094 8095 8096 8097; do curl -sf \"http://localhost:$${p}/health\" && exit 0; done; exit 1"]
       interval: 30s
       timeout: 10s
       start_period: 120s

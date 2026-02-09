@@ -1,34 +1,53 @@
 # ╔═══════════════════════════════════════════════════════════════════════╗
 # ║  llama.cpp LLM Server - Intel oneAPI MKL Optimized                  ║
 # ║  Multi-model server with OpenAI-compatible API (/v1/chat/completions)║
-# ║  Target: 5th Gen Intel Xeon (AVX-512 + AMX)                         ║
+# ║  Target: x86_64 servers with AVX-512 + AMX                          ║
 # ╚═══════════════════════════════════════════════════════════════════════╝
 #
-# Build:
-#   docker build -f .docker/Dockerfile.llamacpp -t llamacpp-server .
+# Build (from repo root):
+#   docker build -f .docker/Dockerfile.llamacpp -t llamacpp-server .docker
 #
 # Run:
-#   docker run -p 8090:8090 llamacpp-server
+#   docker run -p 8090:8090 -v llm_models:/models llamacpp-server
 #
 # Override models at runtime:
-#   MODELS=1,6 docker run -p 8090:8090 llamacpp-server
+#   docker run -e MODELS=1,6 -p 8090:8090 -v llm_models:/models llamacpp-server
 #
-# Build for a different CPU arch (default targets 5th Gen Xeon / Sapphire Rapids+):
-#   docker build --build-arg TARGET_ARCH=native -t llamacpp-server .
-#   docker build --build-arg TARGET_ARCH=skylake-avx512 -t llamacpp-server .
+# Build high-performance image (default: AVX-512 + AMX enabled):
+#   docker build -f .docker/Dockerfile.llamacpp -t llamacpp-server .docker
+#
+# Build for local testing on a CPU without AVX-512 (e.g., 12th Gen Core):
+#   docker build -f .docker/Dockerfile.llamacpp \
+#     --build-arg BUILD_PRESET=portable \
+#     -t llamacpp-server-local .docker
+#
+# Build high-performance explicitly (AVX-512 + AMX):
+#   docker build -f .docker/Dockerfile.llamacpp \
+#     --build-arg BUILD_PRESET=performance \
+#     -t llamacpp-server-perf .docker
+#
+# Build for a different Xeon generation:
+#   docker build --build-arg TARGET_ARCH=emeraldrapids -t llamacpp-server .docker
+#   docker build --build-arg TARGET_ARCH=skylake-avx512 -t llamacpp-server .docker
 
 
 # ─── Stage 1: Build llama.cpp with Intel oneAPI ─────────────────────────────
-FROM intel/oneapi-basekit:2025.3 AS builder
+FROM intel/oneapi-basekit:latest AS builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LLAMA_CPP_VERSION=master
 
-# Target CPU microarchitecture for the Intel compiler (-march flag).
-# "sapphirerapids" covers 4th/5th Gen Xeon with AVX-512 + AMX.
-# Set to "native" if building directly on the target machine.
-# Common values: sapphirerapids, emeraldrapids, graniterapids, skylake-avx512, native
-ARG TARGET_ARCH=sapphirerapids
+# Build preset:
+#   performance -> AVX-512 + AMX enabled binary (default)
+#   portable    -> AVX2-only binary (runs on most local/dev hosts)
+ARG BUILD_PRESET=performance
+
+# Optional explicit overrides. Leave empty to use preset defaults.
+ARG TARGET_ARCH=
+
+# AVX-512 / AMX toggle overrides. Leave empty to use preset defaults.
+ARG GGML_AVX512=
+ARG GGML_AMX=
 
 # Install build tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -45,10 +64,23 @@ WORKDIR /build/llama.cpp
 #   - Intel icx/icpx compilers targeting ${TARGET_ARCH}
 #   - Intel MKL BLAS for optimized matrix math
 #   - All AVX-512 extensions (F, VBMI, VNNI, BF16)
-#   - All AMX extensions (TILE, INT8, BF16) for 4th/5th Gen Xeon
+#   - All AMX extensions (TILE, INT8, BF16) for AMX-capable servers
 #   - GGML_NATIVE=OFF because we cross-compile for a different CPU than the build host
 SHELL ["/bin/bash", "-c"]
-RUN source /opt/intel/oneapi/setvars.sh && \
+RUN source /opt/intel/oneapi/setvars.sh --force >/dev/null && \
+    if [[ "${BUILD_PRESET}" == "performance" ]]; then \
+      DEF_TARGET_ARCH="sapphirerapids"; \
+      DEF_GGML_AVX512="ON"; \
+      DEF_GGML_AMX="ON"; \
+    else \
+      DEF_TARGET_ARCH="x86-64-v3"; \
+      DEF_GGML_AVX512="OFF"; \
+      DEF_GGML_AMX="OFF"; \
+    fi && \
+    TARGET_ARCH="${TARGET_ARCH:-${DEF_TARGET_ARCH}}" && \
+    GGML_AVX512="${GGML_AVX512:-${DEF_GGML_AVX512}}" && \
+    GGML_AMX="${GGML_AMX:-${DEF_GGML_AMX}}" && \
+    echo "Build preset=${BUILD_PRESET} arch=${TARGET_ARCH} avx512=${GGML_AVX512} amx=${GGML_AMX}" && \
     cmake -B build \
       -DCMAKE_C_COMPILER=icx \
       -DCMAKE_CXX_COMPILER=icpx \
@@ -63,36 +95,37 @@ RUN source /opt/intel/oneapi/setvars.sh && \
       \
       -DGGML_AVX=ON \
       -DGGML_AVX2=ON \
-      -DGGML_AVX512=ON \
-      -DGGML_AVX512_VBMI=ON \
-      -DGGML_AVX512_VNNI=ON \
-      -DGGML_AVX512_BF16=ON \
+      -DGGML_AVX512=${GGML_AVX512} \
+      -DGGML_AVX512_VBMI=${GGML_AVX512} \
+      -DGGML_AVX512_VNNI=${GGML_AVX512} \
+      -DGGML_AVX512_BF16=${GGML_AVX512} \
       \
-      -DGGML_AMX_TILE=ON \
-      -DGGML_AMX_INT8=ON \
-      -DGGML_AMX_BF16=ON \
+      -DGGML_AMX_TILE=${GGML_AMX} \
+      -DGGML_AMX_INT8=${GGML_AMX} \
+      -DGGML_AMX_BF16=${GGML_AMX} \
       \
       -DGGML_CPU_REPACK=ON \
     && cmake --build build --config Release -j $(nproc) --target llama-server
 
 
 # ─── Stage 2: Runtime ───────────────────────────────────────────────────────────
-FROM intel/oneapi-basekit:2025.3
+FROM intel/oneapi-basekit:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Install huggingface-cli for model downloads
+# Runtime utilities only (no Python/pip needed)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl python3 python3-pip procps \
-    && pip3 install --no-cache-dir "huggingface_hub[cli]" \
+    curl wget procps ca-certificates \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Set MKL library path (pre-configured in oneapi-basekit runtime)
-ENV LD_LIBRARY_PATH="/opt/intel/oneapi/mkl/latest/lib/intel64:${LD_LIBRARY_PATH}"
+# Set runtime library paths for oneAPI and llama.cpp shared libs
+ENV LD_LIBRARY_PATH="/usr/local/lib:/opt/intel/oneapi/compiler/latest/lib:/opt/intel/oneapi/compiler/latest/lib/intel64_lin:/opt/intel/oneapi/tbb/latest/lib/intel64/gcc4.8:/opt/intel/oneapi/mkl/latest/lib/intel64:${LD_LIBRARY_PATH}"
 
 # Copy llama-server binary from builder
 COPY --from=builder /build/llama.cpp/build/bin/llama-server /usr/local/bin/llama-server
-RUN chmod +x /usr/local/bin/llama-server
+# Copy llama.cpp shared libraries required by llama-server
+COPY --from=builder /build/llama.cpp/build/bin/lib*.so* /usr/local/lib/
+RUN chmod +x /usr/local/bin/llama-server && ldconfig
 
 # Copy entrypoint and model config
 COPY llm/entrypoint.sh /entrypoint.sh
@@ -102,19 +135,25 @@ RUN chmod +x /entrypoint.sh
 # Model storage (persisted via Docker volume)
 VOLUME /models
 
-# Expose ports for all 7 models
-EXPOSE 8090 8091 8092 8093 8094 8095 8096
+# Expose ports for all configured models
+EXPOSE 8090 8091 8092 8093 8094 8095 8096 8097
 
 # ─── Configuration via environment variables ─────────────────────────────────────
 # MODELS         Comma-separated model IDs to run (default: "1,6")
 #                  1=Qwen2.5-3B  2=Qwen3VL-4B  3=GLM4.6V  4=KimiVL
-#                  5=Devstral24B  6=Qwen2-0.5B  7=Qwen3-8B
+#                  5=Devstral24B  6=Qwen2-0.5B  7=Qwen3-8B  8=Qwen3VL-8B
 # CONTEXT_SIZE   Context window size (default: 4096)
 # THREADS        Threads per model, empty = auto (default: "")
-# HF_TOKEN       HuggingFace token for gated models (optional)
+# MODEL_SOURCE_DIR  Source directory for GGUF files (default: /models)
+# DOWNLOAD_MODELS  true|false (default: false). Download missing model files from HF_REPO.
+# DOWNLOAD_ONLY  true|false (default: false). Download files and exit without starting servers.
+# HF_TOKEN  Optional HF token for gated/private model repos.
 ENV MODELS="1,6" \
     CONTEXT_SIZE=4096 \
     THREADS="" \
+    MODEL_SOURCE_DIR="/models" \
+    DOWNLOAD_MODELS="false" \
+    DOWNLOAD_ONLY="false" \
     HF_TOKEN=""
 
 ENTRYPOINT ["/entrypoint.sh"]
