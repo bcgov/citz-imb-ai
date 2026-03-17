@@ -85,6 +85,13 @@ check_cpu() {
     echo ""
 }
 
+# ─── API key guard ────────────────────────────────────────────────────────────
+if ! is_true "$DOWNLOAD_ONLY" && [[ -z "${LLM_API_KEY:-}" ]]; then
+    echo -e "${RED}FATAL: LLM_API_KEY is not set. Refusing to start without authentication.${NC}"
+    echo -e "Set LLM_API_KEY in your .env file or pass it as an environment variable."
+    exit 1
+fi
+
 # ─── Parse selected models ──────────────────────────────────────────────────────
 IFS=',' read -ra SELECTED_MODELS <<< "${MODELS:-1,6}"
 
@@ -218,6 +225,7 @@ for model_id in "${SELECTED_MODELS[@]}"; do
         --port "$port"
         -c "${CONTEXT_SIZE:-4096}"
         --metrics
+        --api-key "${LLM_API_KEY}"
     )
 
     # Add threads if specified
