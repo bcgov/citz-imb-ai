@@ -393,6 +393,7 @@ services:
       MODEL_SOURCE_DIR: /models
       REQUIRE_AVX512: ${LLM_REQUIRE_AVX512:-false}
       HF_TOKEN: ${HF_TOKEN:-}
+      LLM_API_KEY: ${LLM_API_KEY}
     ports:
       - "8090:8090"
       - "8091:8091"
