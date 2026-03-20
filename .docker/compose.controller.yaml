@@ -369,8 +369,8 @@ services:
   # Uses llama.cpp built with Intel oneAPI MKL for AVX-512/AMX acceleration
   #
   # Usage:
-  #   docker compose -f .docker/compose.controller.yaml up llm_server
-  #   MODELS=1,7 docker compose -f .docker/compose.controller.yaml up llm_server
+  #   docker compose -f .docker/compose.controller.yaml up llm-server
+  #   MODELS=1,7 docker compose -f .docker/compose.controller.yaml up llm-server
   #
   # Models:
   #   1=Qwen2.5-3B(:8090) 2=Qwen3VL-4B(:8091) 3=GLM4.6V(:8092)
@@ -378,7 +378,7 @@ services:
   #   8=Qwen3VL-8B(:8097)
   #
   # API: http://localhost:<port>/v1/chat/completions
-  llm_server:
+  llm-server:
     container_name: citz-imb-ai-llm-svc
     build:
       context: .
@@ -426,12 +426,12 @@ services:
   #
   # Usage:
   #   docker compose -f .docker/compose.controller.yaml up llm_proxy
-  #   (automatically starts llm_server as a dependency)
+  #   (automatically starts llm-server as a dependency)
   llm_proxy:
     container_name: citz-imb-ai-llm-proxy
     image: docker.litellm.ai/berriai/litellm:main-stable
     depends_on:
-      llm_server:
+      llm-server:
         condition: service_healthy
     ports:
       - "8080:8080"

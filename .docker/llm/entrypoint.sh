@@ -296,7 +296,7 @@ for model_id in "${SELECTED_MODELS[@]}"; do
     config_line=$(grep "^${model_id}|" "$CONFIG_FILE" || true)
     [[ -z "$config_line" ]] && continue
     port=$(echo "$config_line" | cut -d'|' -f2)
-    echo "  http://llm_server:${port}/v1/chat/completions"
+    echo "  http://llm-server:${port}/v1/chat/completions"
 done
 echo ""
 echo "Health checks:"
@@ -304,7 +304,7 @@ for model_id in "${SELECTED_MODELS[@]}"; do
     config_line=$(grep "^${model_id}|" "$CONFIG_FILE" || true)
     [[ -z "$config_line" ]] && continue
     port=$(echo "$config_line" | cut -d'|' -f2)
-    echo "  http://llm_server:${port}/health"
+    echo "  http://llm-server:${port}/health"
 done
 echo -e "${CYAN}══════════════════════════════════════════════════════════════${NC}"
 
