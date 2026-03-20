@@ -403,6 +403,8 @@ services:
       - "8095:8095"
       - "8096:8096"
       - "8097:8097"
+      - "8098:8098"
+      - "8099:8099"
     volumes:
       - llm_models:/models
     healthcheck:
