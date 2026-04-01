@@ -403,6 +403,8 @@ services:
       - "8095:8095"
       - "8096:8096"
       - "8097:8097"
+      - "8098:8098"
+      - "8099:8099"
     volumes:
       - llm_models:/models
     healthcheck:
@@ -416,34 +418,36 @@ services:
       - zuba
   ######################## End LLM SERVER ##########################################
 
-  ######################## LLM PROXY (Caddy reverse proxy) ######################
-  # TLS-terminating reverse proxy for public LLM API access
-  # Routes: https://{LLM_DOMAIN}/{model-name}/v1/chat/completions
-  # Info:   https://{LLM_DOMAIN}/models (no auth, lists available models)
+  ######################## LLM PROXY (LiteLLM) ##################################
+  # OpenAI-compatible proxy that routes by model name in the request body.
+  # TLS is terminated at the OpenShift router (edge termination).
+  #
+  # Endpoints:
+  #   POST https://<openshift-route>/v1/chat/completions  (auth: Bearer <LITELLM_MASTER_KEY>)
+  #   GET  https://<openshift-route>/v1/models            (auth: Bearer <LITELLM_MASTER_KEY>)
   #
   # Usage:
   #   docker compose -f .docker/compose.controller.yaml up llm_proxy
   #   (automatically starts llm_server as a dependency)
   llm_proxy:
     container_name: citz-imb-ai-llm-proxy
-    image: caddy:latest
+    image: docker.litellm.ai/berriai/litellm:main-stable
     depends_on:
       llm_server:
         condition: service_healthy
     ports:
-      - "443:443"
-      - "80:80"
-    environment:
-      LLM_DOMAIN: ${LLM_DOMAIN}
+      - "8080:8080"
     volumes:
-      - ./llm/Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./llm/models.json:/srv/models.json:ro
-      - caddy_data:/data
-      - caddy_config:/config
+      - ./llm/litellm_config.yaml:/app/config.yaml:ro
+    environment:
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY}
+      LLM_API_KEY: ${LLM_API_KEY}
+    command: ["--config", "/app/config.yaml", "--port", "8080"]
     restart: unless-stopped
     networks:
       - zuba
   ######################## End LLM PROXY #########################################
+
 
 ########################### Networks Definition ################################
 networks:
@@ -463,6 +467,4 @@ volumes:
   airflow_logs:
   analytics_data:
   llm_models:
-  caddy_data:
-  caddy_config:
 ########################### End Volumes Definition ##########################

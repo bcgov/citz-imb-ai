@@ -1,0 +1,78 @@
+# ─── LiteLLM Proxy Configuration ─────────────────────────────────────────────
+#
+# OpenAI-compatible proxy that routes requests to llama-server backends
+# by the "model" field in the request body.
+#
+# Usage:
+#   POST https://<openshift-route>/v1/chat/completions
+#     { "model": "qwen25-3b", "messages": [...] }
+#   GET  https://<openshift-route>/v1/models
+#
+# Auth:
+#   Client → LiteLLM:    Authorization: Bearer <LITELLM_MASTER_KEY>
+#   LiteLLM → llama-server: Authorization: Bearer <LLM_API_KEY>
+#
+# ──────────────────────────────────────────────────────────────────────────────
+
+model_list:
+  # ── Model 1: Qwen 2.5 3B - Fast text generation ───────────────────────────
+  - model_name: qwen25-3b
+    litellm_params:
+      model: openai/qwen25-3b
+      api_base: http://llm-server-svc:8090/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 2: Qwen3 VL 4B - Vision + OCR ───────────────────────────────────
+  - model_name: qwen3-vl-4b
+    litellm_params:
+      model: openai/qwen3-vl-4b
+      api_base: http://llm-server-svc:8091/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 3: GLM 4.1V 9B - Vision + Thinking ─────────────────────────────
+  - model_name: glm-41v-9b
+    litellm_params:
+      model: openai/glm-41v-9b
+      api_base: http://llm-server-svc:8092/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 4: Kimi VL A3B - Vision + Thinking + OCR ────────────────────────
+  - model_name: kimi-vl-a3b
+    litellm_params:
+      model: openai/kimi-vl-a3b
+      api_base: http://llm-server-svc:8093/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 5: Devstral 24B - Code specialist ───────────────────────────────
+  - model_name: devstral-24b
+    litellm_params:
+      model: openai/devstral-24b
+      api_base: http://llm-server-svc:8094/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 6: Qwen2 0.5B - Ultra-fast tiny model ──────────────────────────
+  - model_name: qwen2-05b
+    litellm_params:
+      model: openai/qwen2-05b
+      api_base: http://llm-server-svc:8095/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 7: Qwen3 8B - Balanced general purpose ─────────────────────────
+  - model_name: qwen3-8b
+    litellm_params:
+      model: openai/qwen3-8b
+      api_base: http://llm-server-svc:8096/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 8: Qwen3 VL 8B - Vision + OCR ──────────────────────────────────
+  - model_name: qwen3-vl-8b
+    litellm_params:
+      model: openai/qwen3-vl-8b
+      api_base: http://llm-server-svc:8097/v1
+      api_key: os.environ/LLM_API_KEY
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+
+litellm_settings:
+  drop_params: true
