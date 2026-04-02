@@ -71,6 +71,20 @@ model_list:
       api_base: http://llm-server-svc:8097/v1
       api_key: os.environ/LLM_API_KEY
 
+  # ── Model 9: Qwen3.5 9B - Long-context general purpose ───────────────────
+  - model_name: qwen35-9b
+    litellm_params:
+      model: openai/qwen35-9b
+      api_base: http://llm-server-svc:8098/v1
+      api_key: os.environ/LLM_API_KEY
+
+  # ── Model 10: Qwen3 Coder 30B - Code specialist ──────────────────────────
+  - model_name: qwen3-coder-30b
+    litellm_params:
+      model: openai/qwen3-coder-30b
+      api_base: http://llm-server-svc:8099/v1
+      api_key: os.environ/LLM_API_KEY
+
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
 
