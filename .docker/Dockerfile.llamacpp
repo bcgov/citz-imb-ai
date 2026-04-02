@@ -136,12 +136,13 @@ RUN chmod +x /entrypoint.sh
 VOLUME /models
 
 # Expose ports for all configured models
-EXPOSE 8090 8091 8092 8093 8094 8095 8096 8097
+EXPOSE 8090 8091 8092 8093 8094 8095 8096 8097 8098 8099
 
 # ─── Configuration via environment variables ─────────────────────────────────────
 # MODELS         Comma-separated model IDs to run (default: "1,6")
 #                  1=Qwen2.5-3B  2=Qwen3VL-4B  3=GLM4.6V  4=KimiVL
 #                  5=Devstral24B  6=Qwen2-0.5B  7=Qwen3-8B  8=Qwen3VL-8B
+#                  9=Qwen3.5-9B  10=Qwen3-Coder-30B
 # CONTEXT_SIZE   Context window size (default: 4096)
 # THREADS        Threads per model, empty = auto (default: "")
 # MODEL_SOURCE_DIR  Source directory for GGUF files (default: /models)

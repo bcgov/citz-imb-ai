@@ -375,7 +375,7 @@ services:
   # Models:
   #   1=Qwen2.5-3B(:8090) 2=Qwen3VL-4B(:8091) 3=GLM4.6V(:8092)
   #   4=KimiVL(:8093) 5=Devstral24B(:8094) 6=Qwen2-0.5B(:8095) 7=Qwen3-8B(:8096)
-  #   8=Qwen3VL-8B(:8097)
+  #   8=Qwen3VL-8B(:8097) 9=Qwen3.5-9B(:8098) 10=Qwen3-Coder-30B(:8099)
   #
   # API: http://localhost:<port>/v1/chat/completions
   llm_server:
@@ -408,7 +408,7 @@ services:
     volumes:
       - llm_models:/models
     healthcheck:
-      test: ["CMD-SHELL", "for p in 8090 8091 8092 8093 8094 8095 8096 8097; do curl -sf \"http://localhost:$${p}/health\" && exit 0; done; exit 1"]
+      test: ["CMD-SHELL", "for p in 8090 8091 8092 8093 8094 8095 8096 8097 8098 8099; do curl -sf \"http://localhost:$${p}/health\" && exit 0; done; exit 1"]
       interval: 30s
       timeout: 10s
       start_period: 120s
